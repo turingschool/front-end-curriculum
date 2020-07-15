@@ -1,5 +1,5 @@
 ---
-title: Intro to DOM Manipulation
+title: "JS: Intro to the DOM"
 length: 120
 tags: javascript, dom, browser
 ---

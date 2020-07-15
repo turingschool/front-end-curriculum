@@ -1,5 +1,5 @@
 ---
-title: "Intro to CSS"
+title: "CSS: Fundamentals"
 length: 90
 tags: css, box model, syntax
 ---

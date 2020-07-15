@@ -1,5 +1,5 @@
 ---
-title: Pseudocoding
+title: "Dev Skills: Pseudocoding"
 length: 90
 tags: js, introduction, pseudocoding, articulation, problem solving
 ---
