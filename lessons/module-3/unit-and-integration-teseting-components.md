@@ -1,5 +1,5 @@
 ---
-title: Unit and Integration Testing React Components
+title: Unit and Integration Testing Components
 module: 3
 length: 180
 tags: react, testing

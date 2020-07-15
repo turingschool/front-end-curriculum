@@ -1,5 +1,5 @@
 ---
-title: React III - Advanced data management
+title: "React III: Advanced data management"
 length: 180
 tags: react, ideabox, lifecycle methods, prop types, conditional rendering
 module: 3
