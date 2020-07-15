@@ -1,5 +1,5 @@
 ---
-title: Intro to Network Requests
+title: Network Requests: GETs and POSTs
 length: 180 minutes
 tags: javascript, browser, network requests, fetch, ajax, xhr
 ---
