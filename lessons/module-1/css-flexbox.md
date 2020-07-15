@@ -1,5 +1,5 @@
 ---
-title: Intro to Flexbox - Self-Guided
+title: "CSS: Flexbox"
 length: 90
 tags: css, flexbox, layout
 ---
