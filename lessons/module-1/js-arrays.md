@@ -1,5 +1,5 @@
 ---
-title: Arrays
+title: JS: Arrays
 length: 60
 tags: javascript, foundation, arrays
 ---
