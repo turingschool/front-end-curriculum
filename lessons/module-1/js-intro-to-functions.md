@@ -1,5 +1,5 @@
 ---
-title: JS: Intro to Functions
+title: "JS: Intro to Functions"
 length: 120
 tags: javascript, introduction, foundation, variables
 ---

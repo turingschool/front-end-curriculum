@@ -1,5 +1,5 @@
 ---
-title: JS: Data Types, Variables, Conditionals
+title: "JS: Data Types, Variables, Conditionals"
 length: 90
 tags: javascript, introduction, foundation, variables
 ---

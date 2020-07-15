@@ -1,5 +1,5 @@
 ---
-title: JS: Object Literals
+title: "JS: Object Literals"
 length: 120
 tags: js, introduction, object literals, dot notation
 ---
