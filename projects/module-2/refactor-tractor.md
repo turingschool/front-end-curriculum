@@ -85,9 +85,8 @@ You will no longer be receiving your data from a hardcoded data file, but rather
 | Hydration Data | GET | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/hydration/hydrationData |  
 
 #### Add new sleep, activity, and hydration data (POST)
-For the currently displayed user, you must be able to add a new sleep, hydration and activity data entry for that user.
 
-For example, if the currently displayed user has an ID of 50, and you want to add a new sleep entry for that user, you would want to send a JSON object through with your POST request that looks like:
+For the currently displayed user, you must be able to add a new sleep, hydration and activity data entry for that user.
 
 | Data Type | Verb | URL | Required Body |  
 |---|---|---|---|  
