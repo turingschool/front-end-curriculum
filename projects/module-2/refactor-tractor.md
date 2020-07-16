@@ -1,5 +1,5 @@
 ---
-title: Refactor Tractor
+title: Refactor Tractor - FitLit
 tags: javascript, oop, mocha, chai, testing
 ---
 
