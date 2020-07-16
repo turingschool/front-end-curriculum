@@ -90,9 +90,9 @@ For the currently displayed user, you must be able to add a new sleep, hydration
 
 | Data Type | Verb | URL | Required Body |  
 |---|---|---|---|  
-| Sleep Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/sleep/sleepData | `{"userId": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
-| Activity Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/activity/activityData | `{"userId": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
-| Hydration Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/hydration/hydrationData | `{"userId": integer, "date": string, "numOunces": integer}` | 
+| Sleep Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/sleep/sleepData | `{"userID": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
+| Activity Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/activity/activityData | `{"userID": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
+| Hydration Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/hydration/hydrationData | `{"userID": integer, "date": string, "numOunces": integer}` | 
 
 
 ### Pull Requests
