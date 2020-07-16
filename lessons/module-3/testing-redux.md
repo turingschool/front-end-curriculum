@@ -73,7 +73,7 @@ Action Creators are functions that return a plain object. When testing Action Cr
 Take for example our `addTodo()` action.  
 
 ```js
-export const addTodo = (text) => {
+export const addTodo = (text, id) => {
   return {
     type: 'ADD_TODO',
     text,
@@ -82,7 +82,7 @@ export const addTodo = (text) => {
 };
 ```
 
-Given a string as text, (let's say "Go to Brothers"), we expect it to return an object with a type of `'ADD_TODO'` and the text "Go to Brothers".  
+Given a string as text, (let's say "Go to Brothers"), with an `id` of `21`,  we expect it to return an object with a type of `'ADD_TODO'` and the text "Go to Brothers" with an id of `21`.  
 
 ### Action Creator Tests
 `actions/todos.test.js`  
