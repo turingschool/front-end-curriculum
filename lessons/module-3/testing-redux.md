@@ -76,7 +76,8 @@ Take for example our `addTodo()` action.
 export const addTodo = (text) => {
   return {
     type: 'ADD_TODO',
-    text
+    text,
+    id
   }
 };
 ```
