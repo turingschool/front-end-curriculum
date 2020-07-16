@@ -134,7 +134,7 @@ For the currently displayed user, you must be able to add a new sleep, hydration
 
 
 ## Strategies for Success
-* Make sure you are reviewing the original "FitLit" spec so you have a good idea for what the project and its requirements are. 
+* Make sure you are reviewing the original ["FitLit" spec](https://frontend.turing.io/projects/fitlit.html) so you have a good idea for what the project and its requirements are. 
 * Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well. 
 * Every group member must fully understand and be able to speak to all of the code changes that have been made. 
 
