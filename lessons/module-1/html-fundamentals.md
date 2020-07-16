@@ -1,5 +1,5 @@
 ---
-title: Intro to HTML
+title: "HTML: Fundamentals"
 length: 90
 tags: html, introduction, practice
 ---

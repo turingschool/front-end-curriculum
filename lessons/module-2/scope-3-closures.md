@@ -1,5 +1,5 @@
 ---
-title: Scope
+title: Scope III: Closures
 tags: javascript, scope, closure, iife, lexical scope
 module: 2
 ---

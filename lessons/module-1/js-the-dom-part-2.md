@@ -1,5 +1,5 @@
 ---
-title: DOM Manipulation II
+title: "JS: The DOM Part II"
 length: 60
 tags: javascript, dom, browser
 ---

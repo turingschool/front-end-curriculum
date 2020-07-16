@@ -1,5 +1,5 @@
 ---
-title: Intro to Responsive Layouts
+title: "CSS: Responsive Layouts"
 length: 60
 tags: html, css
 ---

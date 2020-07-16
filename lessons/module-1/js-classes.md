@@ -1,5 +1,5 @@
 ---
-title: `this`, Classes, & Object Instances
+title: "JS: Classes"
 length: 120
 tags: js, introduction, constructor functions, this, classes, objects
 ---
