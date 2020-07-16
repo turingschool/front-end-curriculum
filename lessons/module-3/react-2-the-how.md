@@ -1,5 +1,5 @@
 ---
-title: "React II: the How - building IdeaBox"
+title: "React II: The How"
 length: 3 hours
 tags: react, ideabox
 module: 3

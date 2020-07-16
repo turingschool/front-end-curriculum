@@ -1,5 +1,5 @@
 ---
-title: Array Prototypes
+title: "JS: Array Prototype Methods"
 length: 90
 tags: javascript, arrays, prototypes, mutator, accessor
 ---

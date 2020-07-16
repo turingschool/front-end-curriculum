@@ -1,5 +1,5 @@
 ---
-title: "React I: the What & the Why"
+title: "React I: The What & the Why"
 length: 3 hours
 tags: javascript, react
 module: 3
