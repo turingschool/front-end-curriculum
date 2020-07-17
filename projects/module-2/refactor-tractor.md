@@ -1,5 +1,5 @@
 ---
-title: Refactor Tractor
+title: Refactor Tractor - FitLit
 tags: javascript, oop, mocha, chai, testing
 ---
 
@@ -133,11 +133,15 @@ For the currently displayed user, you must be able to add a new sleep, hydration
 * Implement an animation using CSS and SASS 
 
 
-### Strategies for Success
-* Make sure you are reviewing the original "FitLit" spec so you have a good idea for what the project and its requirements are. 
+## Strategies for Success
+* Make sure you are reviewing the original ["FitLit" spec](https://frontend.turing.io/projects/fitlit.html) so you have a good idea for what the project and its requirements are. 
 * Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well. 
 * Every group member must fully understand and be able to speak to all of the code changes that have been made. 
 
+## Important Dates
+Thursday July 16th, EOD - Submit links to your DTR and Project Board to Will & Bob  
+Thursday July 23rd - Project Check Ins  
+Tuesday July 28th - Project is due by 9PM. [Submit here](https://docs.google.com/spreadsheets/d/1SbUtNaFZ4TGu_NvPMqzcuK0WrXvBRWjlGyjZMw9ux_Y/edit#gid=685056282)
 
 # Project Requirements Rubric
 ## Functional Expectiations

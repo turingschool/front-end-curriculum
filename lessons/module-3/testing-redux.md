@@ -26,6 +26,14 @@ git checkout begin-testing
 npm i
 ```
 
+### Breaking Down a Container
+
+A container refers to a component that is connected to the Redux store. Before we determine how/what to test for this container, it is important to understand how the component is connected and how data flows to and from the component.
+
+With a partner, annotate the `AddToDoForm.js` component and any relevant files that interact with this container. Use your experiences from the Crate project to help you track down what files need to be annotated.
+
+<!-- The above has been added for a quick workshop in Mod 4 around Redux testing. -->
+
 ### Unit Testing
 
 Unit tests aim to test individual pieces of code as throughly as possible. In React apps, these targeted pieces include classes, functions, components, and helper functions. Unit testing makes your life easier as a developer, and makes it simpler to refactor your code. When testing in Redux, most of our tests will be unit tests.
@@ -34,13 +42,12 @@ Unit tests aim to test individual pieces of code as throughly as possible. In Re
 
 In order to test Redux, we need to first consider the pieces that will require testing.
 
-<section class="call-to-action"> 
 ### When it comes to redux, what do you think we need to test?
 
 Take a look at the <a href="https://redux.js.org/recipes/writing-tests/" target="_blank">Redux docs</a> and come up with an answer.
 </section>
 
-<section class="answer">
+
 ### What we'll test:
  We'll need:
 - Action Creator tests
@@ -48,8 +55,7 @@ Take a look at the <a href="https://redux.js.org/recipes/writing-tests/" target=
 - Container tests
 - Tests for any Redux Middleware we may be using
 
- For this lesson, we're just going to focus on the first three.
-</section>
+For this lesson, we're just going to focus on the first three.
 
 
 Testing in Redux can actually be a very pleasant experience, because all the functions you'll be writing while using Redux are *pure*. This means that given the same inputs for a function, we'll always get back the same output. For more explanation of pure functions, check out [this post](http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/).
@@ -73,15 +79,16 @@ Action Creators are functions that return a plain object. When testing Action Cr
 Take for example our `addTodo()` action.  
 
 ```js
-export const addTodo = (text) => {
+export const addTodo = (text, id) => {
   return {
     type: 'ADD_TODO',
-    text
+    text,
+    id
   }
 };
 ```
 
-Given a string as text, (let's say "Go to Brothers"), we expect it to return an object with a type of `'ADD_TODO'` and the text "Go to Brothers".  
+Given a string as text, (let's say "Go to Brothers"), with an `id` of `21`,  we expect it to return an object with a type of `'ADD_TODO'` and the text "Go to Brothers" with an id of `21`.  
 
 ### Action Creator Tests
 `actions/todos.test.js`  
