@@ -120,6 +120,10 @@ The JavaScript language that we know and love is loosely typed - meaning a varia
 
 You can add TypeScript in React! This is a big shift in writing JavaScript like you have been, so be sure to keep your MVP small and then you can add on as you go. To get started with TypeScript and `create-react-app`, [start here](https://create-react-app.dev/docs/adding-typescript/).
 
+#### Building a Backend
+
+Not feeling excited about any of the free data APIs? Build your own! If you choose this category, you would be responsible for building your own server in Express, connecting it to a PostgreSQL database, and hosting it on Heroku. You would not use a separate data API (at least in your MVP).
+
 #### Miscellaneous
 
 If you choose from this category, then you must pick at least two of these options:
