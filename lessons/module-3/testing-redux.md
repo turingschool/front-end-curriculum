@@ -26,11 +26,11 @@ git checkout begin-testing
 npm i
 ```
 
-### Breaking Down a Connected Component
+### Breaking Down a Container
 
-A connected component refers to a component that is connected to the Redux store. Before we determine how/what to test for this component, it is important to understand how the component is connected and how data flows to and from the component.
+A container refers to a component that is connected to the Redux store. Before we determine how/what to test for this container, it is important to understand how the component is connected and how data flows to and from the component.
 
-With a partner, annotate the `AddToDoForm.js` component and any relevant files that interact with this component. Use your experiences from the Crate project to help you track down what files need to be annotated.
+With a partner, annotate the `AddToDoForm.js` component and any relevant files that interact with this container. Use your experiences from the Crate project to help you track down what files need to be annotated.
 
 <!-- The above has been added for a quick workshop in Mod 4 around Redux testing. -->
 
