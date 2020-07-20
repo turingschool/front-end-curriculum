@@ -1,5 +1,5 @@
 ---
-title: Intro to Grid - Self-Guided
+title: "CSS: Grid Tutorial"
 length: 120
 tags: css, layout, grid
 ---

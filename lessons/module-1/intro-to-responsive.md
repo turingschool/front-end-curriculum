@@ -85,7 +85,7 @@ Review the two media queries written below. Predict the result of this code. Be 
 }
 ```
 
-Above is an example of the syntax for a media query with a breakpoint set for screens 900px and larger. We also have a breakpoint set for screens 700px and smaller. When the screen size is 900px or greater, the body should have a magenta background. When it is 700px or less, it should have a teal background. When it is in between, it will be the background color specified in CSS or white, if it was not specified.
+Above is an example of the syntax for a media query with a breakpoint set for screens 55em (approximately 900px) and larger. We also have a breakpoint set for screens 40em (approximately 700px) and smaller. When the screen size is 55em or greater, the body should have a magenta background. When it is 40em or less, it should have a teal background. When it is in between, it will be the background color specified in CSS or white, if it was not specified.
 
 <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="css,result" data-user="turing-school" data-slug-hash="RwwWoqO" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Media Queries Demo">
   <span>See the Pen <a href="https://codepen.io/turing-school/pen/RwwWoqO">

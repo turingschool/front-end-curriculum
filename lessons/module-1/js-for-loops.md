@@ -1,5 +1,5 @@
 ---
-title: For Loops
+title: "JS: For Loops"
 length: 90
 tags: javascript, foundation, arrays, loops
 ---

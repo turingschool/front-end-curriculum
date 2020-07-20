@@ -78,7 +78,6 @@ In addition to an API, you must choose a new technology (or set of technologies)
 As apps begin to grow and grow, state management via `this.state` and passing props down through dozens of components gets kind of tangled, messy, and confusing. There are some tools invented to alleviate that issue:
 
 * Redux
-* MobX
 * React's built-in Context API
 
 Companies with large apps are likely to be using a state management tool like the ones listed above. If you're interested in this, you should pick _one_ tool from the list and use it within your React app.
@@ -120,6 +119,10 @@ Some apps allow you to sign in using your Google, Facebook, or Twitter account -
 The JavaScript language that we know and love is loosely typed - meaning a variable that you make can hold a string, and then you can change the value to a number and JS has no problem with that. TypeScript says once a variable is a string, it must stay a string, amongst other features. It's increasingly popular and some employers are seeking TypeScript experience.
 
 You can add TypeScript in React! This is a big shift in writing JavaScript like you have been, so be sure to keep your MVP small and then you can add on as you go. To get started with TypeScript and `create-react-app`, [start here](https://create-react-app.dev/docs/adding-typescript/).
+
+#### Building a Backend
+
+Not feeling excited about any of the free data APIs? Build your own! If you choose this category, you would be responsible for building your own server in Express, connecting it to a PostgreSQL database, and hosting it on Heroku. You would not use a separate data API (at least in your MVP).
 
 #### Miscellaneous
 

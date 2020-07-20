@@ -1,6 +1,5 @@
 ---
-title: Introduction to Unit Testing with JavaScript
-length: 150
+title: "JS: Intro to Unit Testing"
 tags: javascript, testing, tdd, mocha, chai
 ---
 

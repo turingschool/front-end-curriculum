@@ -1,5 +1,5 @@
 ---
-title: DOM Manipulation II
+title: "JS: The DOM Part II"
 length: 60
 tags: javascript, dom, browser
 ---
@@ -7,6 +7,7 @@ tags: javascript, dom, browser
 ## Learning Goals
 
 * Learn how to utilize `document.querySelectorAll()` and utilize our knowledge of iteration
+* Understand the Data Model as your single source of truth for managing the data of your website
 
 ## document.querySelectorAll();
 
