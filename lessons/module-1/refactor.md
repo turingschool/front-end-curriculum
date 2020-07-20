@@ -47,6 +47,6 @@ With the repo you select based on the level of heat you want, take these steps:
 - Once you feel like you are done, ensure that the app is behaving as it originally was in the browser. Make sure to clean up any old comments, old code, whitespace, etc.
 
 **Mild:** Clone down [this repo](https://github.com/turingschool-examples/num-guess-refactor).
-**Medium:** Use your Number Guesser repo
-**Spicy:** Ask another group for the link to the repo
+**Medium:** Use your Hang in There repo
+**Spicy:** Ask another group for the link to their repo
 </section>
