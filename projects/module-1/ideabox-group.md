@@ -58,8 +58,6 @@ Full mobile layout with open navigation:
 
 After you have completed Iterations 0-1, your Project Manager will provide you with the next iteration.
 
-<!-- Everything below will be commented out, only for Instructors to see -->
-<!--
 ### Architecture
 
 For this project, we'll be increasingly thinking about the "data model" and "DOM model" as separate entities. We'll be using:
@@ -206,7 +204,7 @@ As a user,
 
 As a user,
 - When I comment on an idea card, then refresh the page,
-- That comment is still on the idea card -->
+- That comment is still on the idea card
 
 
 ## Rubric
