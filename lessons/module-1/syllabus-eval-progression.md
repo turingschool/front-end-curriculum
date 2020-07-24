@@ -122,14 +122,14 @@ For each of the subject matter areas of focus, we've applied these levels with a
 
 #### Git
 
-|Novice             | Can use commits and can articulate what a commit is and why we use them. Makes large, infrequent commits directly to master branch. |
+|Novice             | Can use commits and can articulate what a commit is and why we use them. Makes large, infrequent commits directly to main branch. |
 |Advanced Beginner  | Can create branches and willingly attempts to incorporate branches into their workflow. Commits, while infrequent, are increased in volume and show improvements in description. |
-|Proficient         | Commits changes frequently with detailed commit messages. Uses feature branches to keep master branch free of incomplete features or bugs.|
+|Proficient         | Commits changes frequently with detailed commit messages. Uses feature branches to keep main branch free of incomplete features or bugs.|
 |Exceptional        | Knows how to reset to previous commits, rebase large sets of small commits, if applicable, and other advanced Git maneuvers. |
 
 #### Github
 
-|Novice             | Can articulate what GitHub is, how it is different from Git, and why it is important. Can comfortably push and/or pull changes from master.|
+|Novice             | Can articulate what GitHub is, how it is different from Git, and why it is important. Can comfortably push and/or pull changes from main.|
 |Advanced Beginner  | Can execute basic pull requests with context about changes in description. Can keep local and GitHub repositories in sync.|
 |Proficient         | Is comfortable with resolving merge conflicts. Asks for review/merge of their pull requests from teammates. Is comfortable editing code based on review feedback from a pull request and resubmitting the branch code.|
 |Exceptional        | Uses issues as resource for project management. There are comments on specific lines of pull requests with discussion about the implementation.|

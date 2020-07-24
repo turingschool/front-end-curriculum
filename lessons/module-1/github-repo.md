@@ -75,10 +75,10 @@ GitHub pages is a free service provided by GitHub that allows you to deploy your
 
 1. From the main repository page, click "Settings"
 2. Scroll about 80% of the way down, until you see the "GitHub Pages" section
-3. From the "Source" dropdown, select "master"
+3. From the "Source" dropdown, select "main"
 4. When the page refreshes, scroll back down. In the light blue header section of the "GitHub Pages" section, you will be given a URL. That is the link to your deployed project. You may click on it and see a 404 for the first few minutes or hours depending on how busy GitHub is. Don't panic. This is why we require you to set up GitHub Pages immediately!
 
-From now on, when you push a change up to your master branch, GitHub pages will automatically read those updates and update your live link as soon as possible. Keep in mind those changes sometimes take a few hours.
+From now on, when you push a change up to your main branch, GitHub pages will automatically read those updates and update your live link as soon as possible. Keep in mind those changes sometimes take a few hours.
 
 <img class="medium" src="./assets/images/github-repo/settings.png">
 
