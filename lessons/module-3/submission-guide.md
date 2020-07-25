@@ -5,7 +5,6 @@ Below is a submission guide from your instructional team. All weekly due dates f
 ## Professional Development Resources
 - [Career Development Curriculum Site](https://careerdev.turing.io/module_three/)
 - [Career Journal Prompts](https://github.com/turingschool/career-development-curriculum-site/blob/master/module_three/mod3_career_journal_prompts.md)
-- [
 
 ## Deliverables by Week:
 ### Week 1
