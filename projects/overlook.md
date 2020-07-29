@@ -22,7 +22,6 @@ For this project, you will be building a hotel management tool for hotel custome
 ## Technologies
 
 * **the fetch API** to retrieve and add data
-* **jQuery** for making the DOM easier to handle
 * **Sass** for getting fancy with your CSS
 
 ## Initial Setup
