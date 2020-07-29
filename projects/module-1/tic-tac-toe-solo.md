@@ -43,7 +43,10 @@ Here is a video demonstrating most functionality of the game (the only functiona
 
 In this project, we will not be providing detailed iterations. We want you to exercise your skills in planning out work!
 
-Note: No need to match colors or icons, but the overall layout should be the same.
+Notes: 
+* A timeout is used after a completed game to reset the board.
+* YOU DO NOT NEED TO DISPLAY EACH INDIVIDUAL WIN BOARD. WE ONLY NEED TO SEE NUMBER OF WINS. 
+* No need to match colors or icons, but the overall layout should be the same.
 
 ### Architecture
 

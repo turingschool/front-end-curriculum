@@ -30,21 +30,11 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 
 ## Progression
 
-### Iteration 0 - Desktop Layout
+### Iteration 0 - Mobile Layout
 
-Plan then write the HTML and CSS so that your application matches this comp. Based on what you are building, you can anticipate that the Idea "cards" will not always be there on page load, but for now, they should.
+Plan to write the HTML and CSS so that your application matches this comp. Based on what you are building, you can anticipate that the Idea "cards" will not always be there on page load, but for now, they should.
 
 Use the same text on your cards that is used in the spec so you can ensure your spacing/sizing is accurate.
-
-![Desktop Layout](./assets/ideabox-group/desktop.jpg)
-![Colors](./assets/ideabox-group/colors.jpg)
-![Colors](./assets/ideabox-group/icons.jpg)
-
-You will need the `svg` files for the star, delete, and menu icons. [Here's the link to download the `svg` icons.](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing)
-
-### Iteration 1 - Mobile Layout
-
-Now that your Desktop Layout is in place, it's time to write some media queries so this is a responsive site.
 
 Full mobile layout:
 
@@ -54,12 +44,21 @@ Full mobile layout with open navigation:
 
 ![Mobile Layout with Dropdown](./assets/ideabox-group/mobile-dropdown.jpg)
 
+You will need the `svg` files for the star, delete, and menu icons. [Here's the link to download the `svg` icons.](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing)
+
+![Colors](./assets/ideabox-group/colors.jpg)
+![Icons](./assets/ideabox-group/icons.jpg)
+
+### Iteration 1 - Desktop Layout
+
+Now that your Mobile Layout is in place, it's time to write some media queries so this is a responsive site.
+
+![Desktop Layout](./assets/ideabox-group/desktop.jpg)
+
 ### Iteration 2 and beyond
 
-After you have completed Iterations 0-1, your Project Manager will provide you with the next iteration.
+We strongly recommend that you complete Iterations 0-1 before moving on to the next iterations!
 
-<!-- Everything below will be commented out, only for Instructors to see -->
-<!--
 ### Architecture
 
 For this project, we'll be increasingly thinking about the "data model" and "DOM model" as separate entities. We'll be using:
@@ -206,7 +205,7 @@ As a user,
 
 As a user,
 - When I comment on an idea card, then refresh the page,
-- That comment is still on the idea card -->
+- That comment is still on the idea card
 
 
 ## Rubric

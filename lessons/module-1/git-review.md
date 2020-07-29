@@ -9,8 +9,8 @@ tags: git, workflow
 - `git init`
 - `git add <filename>` ♻️
 - `git commit -m "Message here"` ♻️
-- `git push origin master` ☁
-- `git pull origin master` 💻
+- `git push origin main` ☁
+- `git pull origin main` 💻
 
 ## Cloning a Repo
 
