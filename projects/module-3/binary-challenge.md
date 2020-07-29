@@ -8,7 +8,7 @@ tags: react, javascript, api
 
 This project will challenge you to use the technology you've become familiar with over the course of Mod 3, as well as force you to work inside some constraints. Everyone will be working with (at least) one API and one audience.
 
-Choose an open API to work with where the data sounds interesting to you. A good place to start looking is [this repo with a list of free/open APIs](https://github.com/public-apis/public-apis). Choose an API where you could make an application based on the data from the API. _Do not choose an API that requires "OAuth or OAuth 2.0"_, which is a more complicated authentication scheme. Also, be wary of APIs that have "CORS" value of "yes."
+Choose an open API to work with where the data sounds interesting to you. A good place to start looking is [this repo with a list of free/open APIs](https://github.com/public-apis/public-apis). Choose an API where you could make an application based on the data from the API. _Do not choose an API that requires "OAuth or OAuth 2.0"_, which is a more complicated authentication scheme. Also, be wary of APIs that have "CORS" value of "no."
 
 APIs that require an `apikey` are usually easy to deal with, and some APIs don't require an `apikey`. If the API you want to use relies on an API key, be sure to request on ASAP!
 
@@ -38,7 +38,7 @@ There are a lot of different tools you can use for this, including just plain ol
 
 ### Day-1 Deliverables
 
-By noon of day 1, send your instructional project manager the plans for you API, specific audience, and a general overview of what the application will do. Have a backup API/audience ready just in case.
+By 2PM of day 1, send your instructional project manager the plans for you API, specific audience, and a general overview of what the application will do. Have a backup API/audience ready just in case.
 
 If you have wireframes ready to go, send those along too. You can send your wireframes to your project manager at any time to get feedback.
 
