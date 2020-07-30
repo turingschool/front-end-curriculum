@@ -130,7 +130,7 @@ We still expect you to use good workflow practices! Atomic commits, use of branc
   - Branches are used. Most commits are formatted correctly. 
   - The README is formatted well and contains:
     - Overview of project and goals
-    - Overview of technologies used, challenges, wins, and any other reflections
+    - Overview of technologies used, your code architecture, challenges, wins, and any other reflections
     - Screenshots/gifs of your app
 
 * **2:** 
