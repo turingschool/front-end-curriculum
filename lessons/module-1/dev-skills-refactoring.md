@@ -1,5 +1,5 @@
 ---
-title: Refactor Workshop
+title: "Dev Skills: Refactoring"
 tags: refactor, JavaScript, DRY, clean code
 length: 60
 ---

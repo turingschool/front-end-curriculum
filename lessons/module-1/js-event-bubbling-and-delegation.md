@@ -1,5 +1,5 @@
 ---
-title: Event Bubbling and Delegation
+title: "JS: Event Bubbling and Delegation"
 length: 180
 tags: javascript, dom, browser, events, bubbling
 ---
