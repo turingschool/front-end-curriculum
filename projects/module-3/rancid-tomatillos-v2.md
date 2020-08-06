@@ -63,6 +63,8 @@ Create a dynamic route for a "show page" for each movie. A show page is a app pa
 
 Don't forget to account for handling non-2xx-level responses from the server.
 
+<!-- Week 2: -->
+
 ### Iteration 4 - Show and Add Ratings
 
 A user should be able to see their own movie ratings only when they are _logged in_ to the app. Otherwise, they should only see only the movie's average rating. Everywhere a movie is shown, including the movie's show page, the app should display the movie's average rating and also the user's rating for each movie that they have rated if they are logged in.
@@ -103,6 +105,9 @@ Adding in Router is likely to break your tests. Make sure to update those to kee
 Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Deeper_dive) to learn more about URL anatomy. 
 
 </section>
+
+
+<!-- Week 3: -->
 
 ### Iteration 7 - Make a microservice (complete together)
 
