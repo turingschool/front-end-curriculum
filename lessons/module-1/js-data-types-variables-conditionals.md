@@ -30,25 +30,6 @@ In this lesson we'll cover:
 - `Evaluate/Evaluation` 
 - `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
 
-## Warm Up
-
-Wanted to start with a quick message about a common mistake people make:
-
-Java and JavaScript are COMPLETELY and UTTERLY unrelated. 
-
-### History of JavaScript
-
-Way back in the early days of the web, Brendan Eich created JavaScript. Legend has it that he wrote it in 10 days in 1995 while was was working as an engineer at Netscape. The language was first released with Netscape 2 in 1996. The name 'JavaScript' was a oh-so-clever marketing push to try to pick up on the momentum of Sun Microsystem's popular language Java, but instead it lead to years of confusion about the names of these two mostly unrelated programming languages. If you'd like to learn more about where JS came from, take a look [here](http://speakingjs.com/es5/ch04.html).
-
-If you wanna shorten JavaScript, do so by saying/writing "JS" - not "Java". 
-
-Think of it like this: **Java is to JavaScript, as Ham is to Hamster.**
-
-With your partner...
-- Ham 🙅‍♀Hamster
-- Mile 🙅‍♀️ Miley Cyrus
-- Come up with 2 mores
-
 ## What is JavaScript and Why?
 
 JavaScript was created to make the web more dynamic. It is an object-oriented scripting language (we'll learn about objects soon) made to run inside a host environment - like a web browser! It provides programatic control over the objects in that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
@@ -108,12 +89,6 @@ When you declare a variable (similar to declaring a function), you're creating a
 var myVariableName;
 ```
 
-When we write a very simple variable like this, it's called _declaring_ the variable.
-
-We see that we have the variable keyword, and we've set the variable name to `myVariableName`.
-
-Under the hood, when we run JavaScript in the browser, we're naming a tiny piece of memory. It's like putting a label on an empty box. In the future, when we use the variable name in our code, we're saying "Use whatever is inside this labeled box"!
-
 <section class="call-to-action">
 ### Console Practice
 
@@ -135,17 +110,13 @@ Then, **call** each variable by typing out its name, then hitting `return`. What
 
 ### Variables: Assigning Values
 
-Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value! Remember - the little box of memory is empty. 
+Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value!
 
 Let's learn how to add a value. Create a `bestInstagram` variable and assign a value to it all at once:
 
 ```javascript
 var bestInstagram = "mrpokee";
 ```
-
-Notice after our `var` keyword and our variable name, we have an equals sign, `=`. This is called the _assignment operator_, because we use it to _assign_ a value to our variable declaration.  Without the assignment operator and providing a specific value, the value of the variable is _undefined_.
-
-Let's test these additions in our console!
 
 - **Step 1**: declare a variable and assign it a value
 - **Step 2**: call the variable
