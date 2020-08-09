@@ -64,7 +64,7 @@ Let's find out by running/calling/invoking our function!
 makePizza();
 ```
 
-When this code is read, `makePizza()` is "invoked", all 5 statements within the function's body (the space between those curly braces) get run, one line at a time, in order.  What do you think will happen if we swap the 4th and 5th statements?
+When this code is read, `makePizza()` is "invoked," all 5 statements within the function's body (the space between those curly braces) get run, one line at a time, in order.  What do you think will happen if we swap the 4th and 5th statements?
 
 <section class="call-to-action">
 ### Your Turn
@@ -96,7 +96,7 @@ createDreamCar("Audi", "R8");
 
 ### Getting A Value from A Function
 
-Some functions return information to the code that called them. Wait - what? When a function performs a calculation, like 2 + 2, it will return the "answer" of 4, right?
+Some functions return information to the code that called them. When a function performs a calculation, like 2 + 2, it will return the "answer" of 4, right?
 
 <section class="call-to-action">
 ### Try it out
@@ -155,7 +155,7 @@ return x + y / 3;
 ```
 
 <section class="call-to-action">
-### You Do
+### Solo Practice
 * Create a function called `saySomething` that requires no parameters. This function should return a message of your choice.
 * Create a function called `showFavorites` that requires three parameters - a food, a movie, and an animal. Your function should return a string that uses either concatenation or interpolation to return the three favorite things in a string.</
 * Create a function called `calculateAge` that takes a single parameter - a year. Your function should return the difference in years from the birth year from our current year, 2019.
