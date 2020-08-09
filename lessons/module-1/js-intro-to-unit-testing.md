@@ -22,7 +22,7 @@ tags: javascript, testing, tdd, mocha, chai
 <section class="call-to-action">
 ## Warm Up
 
-Read [this article](https://techcrunch.com/2020/02/04/iowa-caucus-app-disaster/). When everyone has had time to read, discuss the following questions with your table of 3-4:
+Read [this article](https://techcrunch.com/2020/02/04/iowa-caucus-app-disaster/). When everyone has had time to read, and be prepared to discuss the following questions:
 
 - What were the consequences of this app not working as expected?
 - What kind of pressure can you imagine the engineering team who built this were under, while developing the app?
