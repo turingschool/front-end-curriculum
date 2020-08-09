@@ -8,7 +8,7 @@ tags: javascript, testing, tdd, mocha, chai
 * Understand what testing is, why it is important, and the various types of tests
 * Recognizing the importance of Test Driven Development (TDD)
 * Ability to read/create tests
-* Understanding how to import/export files specifically for testing
+* Understand how to import/export files specifically for testing
 
 ## Vocabulary
 
@@ -69,9 +69,6 @@ The bulk of your tests for an application are likely to be unit tests. **Unit te
 
 Test-Driven Development (TDD) is one of those things that is deceptively simple to explain and incredibly hard to do. The basic premise is that we write our test for a piece of required functionality _before_ writing any implementation code. The test should fail when its first run, and then, you write the code to make it pass. Once the test passes, you can then safely refactor your code.
 
-If you think about it, this is not too far off from how you're already thinking about code. You have some idea of what you want to happen and then you go ahead and (try) to make it happen—with some amount of cursing and flailing around wildly in the middle. You manually test your application by checking for the results that you expect in your console or the browser.
-
-With TDD, we're basically automating this process. You're forcing yourself to write down assertions about how the code should work _before_ trying to make said assertions into code. One of the main advantages of TDD is that if you're diligent and stay on the path, then almost all of your code will be covered by tests and you can rest better at night. If a change to one part of your code base breaks some other part of your code base, then you'll know it immediately and be able to fix it quickly.
 
 ## The Testing Cycle
 
