@@ -6,10 +6,8 @@ tags: javascript, foundation, arrays
 
 ## Learning Goals
 
-In this lesson we'll cover:
-
-* Array literals  
-* Adding/changing values to arrays via their indices  
+* Understand array literals  
+* Add and change values to arrays via their indices  
 
 ## Vocabulary
 
@@ -18,14 +16,6 @@ In this lesson we'll cover:
 - `Element` A single item stored in an array. An element can be of any data type.
 - `Bracket Notation` How we access individual elements of an array. Either to
   express the element, or assign a new element.
-
-## Warm Up
-
-Each person should have one post-it note available at your table.
-- If you have pink, write the name of a pet, as a string. Do not assign it to a variable.
-- If you have yellow, write the age of a pet, as a number. Do not assign it to a variable.
-
-[Instructor Resource](https://github.com/turingschool/front-end-keys/blob/master/module-1/lesson-plans/array-loops.md)
 
 ## Arrays
 
@@ -114,10 +104,10 @@ var listOfNames = combineNames("Luna", "Bey", "Sunny");
 listOfNames;
 // => ["Luna", "Bey", "Sunny"]
 
-var modOneInstructors = combineNames["Scott", "Casey", "Hannah"];
+var modOneInstructors = combineNames["Scott", "Will", "Hannah"];
 
 modOneInstructors;
-// => ["Scott", "Casey", "Hannah"]
+// => ["Scott", "Will", "Hannah"]
 
 ```
 
