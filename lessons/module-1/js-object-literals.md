@@ -19,14 +19,6 @@ tags: js, introduction, object literals, dot notation
 - `Method` A function on an object
 - `Dot Notation` Notation to access a value on an object, explicitly specifies the key
 
-<section class="call-to-action">
-## Warm Up
-Fill in the blanks on the worksheet at your table, nice a BIG, CLEAR handwriting!
-
-We are pretending that we are making an order at a coffee shop.
-<p><a href="https://docs.google.com/document/d/1KxGBgK_1RPjaxlkbXxHqmFn3TabvAkfGzDdqV1aT-eM/edit">Instructor Resource</a></p>
-</section>
-
 ## Objects
 
 Objects are a type of collection, or complex data type in JavaScript. We can think of objects as a representation of real world things in computer programming.
@@ -116,26 +108,6 @@ Choose a driver and a navigator. The driver should start by forking [this repl.i
 Together, complete each exercise listed in the comments below the two object literals. Write the code with a given direction directly below it, and do not delete code as you go.
 </section>
 
-<!-- There is also bracket notation:
-
-```js
-var schoolName = school["name"];
-var schoolCapacity = school["capacity"];
-```
-
-Bracket notation is usually used when the name of the property is stored in a variable or parameter.  This can make it dynamic, since the value in a variable can _vary_.
-
-```js
-function getSchoolValue(prop) {
-  return school[prop];
-}
-
-getSchoolValue("name");
-```
-
-Another example can be seen [here](https://github.com/turingschool-examples/javascript/tree/master/es5#properties).
-
-Default to using Dot Notation unless you need to access properties with a variable/parameter.   -->
 
 ### Adding a Property
 
