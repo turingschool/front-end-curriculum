@@ -4,12 +4,12 @@ tags: TDD, unit testing, mocha, chai
 mod: 2
 ---
 
-## Game Plan:
+## Learning Goals:
 
-- Talk through the what and why of Test Driven Development  
-- Look at the structure of a test and the testing lifecycle  
-- Discuss Mocha and Chai
-- Write some tests!
+- Review the what and why of test driven development
+- Examine the structure of a test
+- Discuss the testing lifecycle  
+- Practice writing tests
 
 ## Vocab
 
@@ -20,44 +20,11 @@ mod: 2
 - `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
 - `Test Phases` A test that is organized into the phases [Setup, Execution, Assertion, Teardown*
 
-## Review: What is TDD?
+## Why TDD?
+
+What is TDD?
 
 TDD, or Test Driven Development, is the concept of writing a series of assertions in a test file BEFORE writing any of the applicable code that supports the tested functionality.
-
-Think back to some of your module 1 projects, the workflow probably looked something like this:
-* Read project spec and feel kind of panicky  
-* Start randomly throwing code into an `index.js` file to implement the first feature  
-* Open Chrome  
-* Stuff is broken, randomly add some other code into your `index.js` file  
-* Refresh Chrome  
-* Stuff is still broken. Randomly add more code.  
-* Refresh Chrome  
-* Stuff works!    
-* Add some more code for the second feature  
-* Refresh Chrome  
-* New stuff works, old stuff is broken  
-* Throw computer in the river.  
-
-Building an application without tests is similar to building a house without blueprints. Just because this one column looks good, once you build the second column how do you know it's going to be the same height and hold up the roof with the first column? You don't.  
-
-Take a look at the workflow when you start with testing:
-* Read project spec and feel kind of panicky  
-* Find the smallest piece of functionality you can implement first  
-* Write a test that implements that specific functionality  
-* Watch the test fail  
-* Implement the functionality  
-* Watch the test pass/fail  
-* Either fix code, or refactor code based on pass/fail status  
-* Determine next smallest piece of functionality  
-* Write a test that implements that specific functionality  
-* Watch the test fail  
-* Implement the functionality  
-* Watch both tests pass/fail  
-* Repeat.  
-
-The primary difference between the two, is that with a test driven approach you have a small chunk of code that is keeping an eye on any previous functionality you have already written. This means that when you refactor, or add new features, or accidentally remove existing features, those tests are still watching for specific behavior with a simple terminal command - you no longer have to refresh Chrome and navigate through every button/input field/form/interaction on the DOM.  
-
-## Why TDD?
 
 The main **benefits** of writing tests are:
 
@@ -139,16 +106,6 @@ function reverseWord(word) {
 reverseWord('turing'); // gnirut
 ```
 </section>
-
-<!--
-
-describe('reverseWord', () => {
-  it('should return the given word in reverse order', () => {
-    expect(reverse('javascript')).to.equal('tpircsavaj');
-  });
-});
-
--->
 
 ## Testing Framework: Mocha  
 
