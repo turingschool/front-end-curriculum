@@ -6,10 +6,8 @@ tags: javascript, foundation, arrays, loops
 
 ## Learning Goals
 
-In this lesson we'll cover:
-
-* how to write `for` loops
-* how to iterate through arrays using loops
+* Practice writing `for` loops
+* Practice iterating through arrays using loops
 
 ## Vocabulary
 
@@ -128,7 +126,7 @@ function listFruits() {
 You can see that instead of using a hardcoded number, we are using `fruits.length` in our condition. This means we will continue to loop over the array as long as the counter is less than the total number of elements in the array. That's pretty handy!
 
 <section class="call-to-action">
-### You Do
+### Solo Practice
 
 #### Medium Heat 🔥🔥: Annoying Zoo Kid
 
