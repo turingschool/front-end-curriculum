@@ -5,9 +5,7 @@ tags: javascript, execution, creation, hoisting
 module: 2
 ---
 
-## Goals
-
-By the end of this lesson, you will be able to:
+## Learning Goals
 
 * Understand the order of execution for JavaScript code and why it matters
 * Explain what an execution context is and describe what happens in both of its phases
@@ -90,9 +88,6 @@ Let's look at another example:
 
 What would we expect to be logged when line 7 executes? Why? Is the actual behavior different than you expected?
 </section>
-
-Based on our previous example, where we received `NaN` because our variable hadn't been assigned a value yet, we might expect this new example to throw some sort of error as well. But it appears to work just fine! We get back `Animal Sound: Moooo!` when line 7 is executed.
-
 
 ### Hoisting & The Creation Phase
 
