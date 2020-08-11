@@ -6,8 +6,6 @@ tags: javascript, introduction, foundation, variables
 
 ## Learning Goals
 
-In this lesson we'll cover:
-
 * JavaScript primitive data types
 * What a variable is and how to use it
 * Adding variables to strings (concatenation and interpolation)
