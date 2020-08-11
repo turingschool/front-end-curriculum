@@ -22,7 +22,7 @@ tags: javascript, foundation, arrays, loops
 In a repl or in your browser console, create and name an array filled with objects! Some ideas:
 
 - A grocery list
-- A list of Hpgwarts students
+- A list of Hogwarts students
 - A list of Batman villains
 
 Or, if you're not feeling creative, you can use this one:
