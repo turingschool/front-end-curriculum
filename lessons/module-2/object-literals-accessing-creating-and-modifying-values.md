@@ -7,8 +7,6 @@ module: 2
 
 ## Learning Goals
 
-By the end of this lesson, you will:
-
 * Understand the difference between dot notation and bracket notation
 * Recognize scenarios that require bracket notation
 * Be able to access and create key value pairs on complex data types
