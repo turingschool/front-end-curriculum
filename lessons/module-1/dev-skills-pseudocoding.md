@@ -26,33 +26,9 @@ In your notebook, journal about the following prompts:
 - Although it may feel easy now, or like something you've always been good at, push yourself to describe the work you had to put in to achieve proficiency!
 </section>
 
-## Problem Solving
-
-There is a common misconception about what it takes to be a "good" developer. Actually, there are a lot of misconceptions!
-
-Maybe you can catch yourself thinking some of these things:
-
-- "She's such a great coder, she's so fast!"
-- "He's really strong; he never has to ask questions."
-- "Wow, they stayed up all night grinding away on one problem until they solved it! So cool and dedicated."
-- "Ugh, my code is so buggy. I'm not cut out for this."
-- "Oh man, they always have the right answer in class."
-- "Sorry, I can't help you - I don't know what I'm doing!!"
-- "I just need to do every code challenge so I'll know how to solve them during an interview."
-
-Let's take a look at all those statements. What do they have in common? They all seem to paint a picture of a developer who never produces bugs, who knows exactly how to solve everything before they even start, who doesn't need anyone else and never needs to ask for help, who has all the answers and can teach everyone else, who both works fast and also grinds at all hours????
-
-**LOOK AT ALL THESE LIES!**
-
-A strong developer doesn't have mastery over every possible code problem.
-
-Instead, a strong developer has mastery over their problem solving tools! A strong developer is someone who can look at a tough problem, and slowly, with mistakes and bugs, _work their way closer to a solution_. 
-
-A strong developer isn't someone who knows everything. They're someone who can _figure things out_.
+## So what is pseudocoding?
 
 One of the greatest tools in your developer toolbelt is **pseudocoding**.
-
-## So what is pseudocoding?
 
 Pseudocoding is the secretly-complex skill of writing down what you want your code to do, without writing any code.
 
