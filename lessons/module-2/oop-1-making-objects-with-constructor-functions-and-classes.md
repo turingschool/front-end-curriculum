@@ -7,8 +7,6 @@ module: 2
 
 ## Learning Goals
 
-By the end of this lesson, you will be able to:
-
 * Define OOP and its benefits
 * Describe how classes allow us to reuse code and create encapsulation
 * Understand and describe what `this` is in JavaScript
@@ -49,7 +47,7 @@ In all programs, there are two primary components:
 | **Focal Point** | Functions | Instructions | Objects |
 | **Data/Behavior** | Separate: distinctly different| Global: shared by functions| Encapsulated: single location|
 
-You can read more about the differemces in these paradigms <a href="https://levelup.gitconnected.com/functional-object-oriented-procedural-programming-644feda5bcfc" target="\__blank">here</a>.
+You can read more about the differences in these paradigms <a href="https://levelup.gitconnected.com/functional-object-oriented-procedural-programming-644feda5bcfc" target="\__blank">here</a>.
 
 # OOP
 Object Oriented Programming (OOP) will be our primary focus for this lesson - which is an approach that structures your code around objects rather than functions and procedures. *(Functional and procedural programming are beyond the scope of this lesson.)*
