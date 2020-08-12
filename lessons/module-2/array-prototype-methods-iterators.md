@@ -6,21 +6,19 @@ module: 2
 
 ## Lesson Goals
 
-Students should be able to:
-
 * Articulate the difference between arrays and objects, and understand when you would use each one
 * Define what a prototype method is and what it allows you to do
 * List several prototype methods for both arrays and objects
 * Understand how to manipulate arrays and objects, and the use-cases for different prototype methods
 
+## Vocab
+- `prototype` A model of something and how it should look or behave
+- `method` A function that is defined on an object
+- `callback function` A function passed into another function as an argument, which is then invoked inside the outer function
+
 ## Arrays & Objects
 
-Arrays and objects are the more complex data types that are available to us in JavaScript. What are all the data types you know of?
-
-<!-- <section class="call-to-action">
-**In Your Notebook**
-Write down everything you know about arrays. Think about when you've used them in the past, where you've seen them, and what you've done with them.
-</section> -->
+Arrays and objects are the more complex data types that are available to us in JavaScript. How is an array different from an object?
 
 An array is essentially a comma-separated list of related values. For example:
 
@@ -42,19 +40,6 @@ let lunch = [
   }
 ];
 ```
-
-<!-- An object is a set of data stored in key-value pairs that provide a little additional specificity and context to the information. For example:
-
-```js
-let pizza = {
-  crust: 'thin',
-  sauce: 'tomato',
-  size: 14,
-  extraCheese: true,
-  toppings: ['tomato', 'cheese', 'pepperoni']
-};
-``` -->
-
 
 ## A Review of `for` Loops
 
@@ -85,7 +70,7 @@ You might already be familiar with some of the following prototype methods:
 Which other ones can you name?
 
 
-## Array Iteration Methods (Prototypes)
+## Array Iteration Prototype Methods
 
 What are they? Why are they useful? They loop through an existing array and apply a callback function to each element that might mutate each element and return a new value. 
 
@@ -311,14 +296,6 @@ getWordLengths() // { fantastic: 9, amazing: 7, childish: 8 }
 ## Paired Practice
 
 <a href="https://github.com/turingschool-examples/iterator-methods-stations" target="\__blank">https://github.com/turingschool-examples/iterator-methods-stations</a>
-
-<!-- ## What About Objects?
-
-How do we iterate through objects?... Hint: `Object.keys()` or `Object.values()`. Go over to the docs (MDN maybe), and read about what these do and when you might use them.
-
-Notice the different style of how these methods are used. How are these methods used for a given object?
-
-Try using these methods to refactor the country exercises to work with the whole <a href="https://github.com/turingschool-examples/iterator-methods-stations/blob/master/data.json" target="\__blank">dataset</a> -->
 
 ## Homework
 
