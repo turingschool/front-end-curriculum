@@ -201,7 +201,7 @@ Choose one or more of these extensions for this iteration.
 _Note: Solving some of these problems may require modifying pre-existing code that was given to you_
 
 ***Use a project board to guide your workflow***
-Use a tool like GitHub pages or Trello to split up iteration items into small tasks. 
+Use a tool like GitHub pages or Trello to split up iteration items into small tasks.
 
 ***Build out another study/flashcards dataset***
 Create a new dataset that is structured similarily to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file.. Update your application so that once the first `Round` is over (and thus, the `Game` is over), a new `Round` starts with the new dataset that you've created.
@@ -224,12 +224,32 @@ At the beginning of the game, give options for choosing to study different subje
 ***CYOE (Choose Your Own Extension)***  
 Collaborate with instructors to personalize an extension for this project
 
+## Evaluation Rubric
+
+### Functional Expectations
+* 4: Application fulfills all expectations of iterations 1 - 4 (at least one extension) with no bugs, crashes, or missing functionality.
+* 3: Application fulfills expectations of iterations 1 - 3 with no bugs, crashes, or missing functionality.
+* 2: Application is usable but has some missing functionality.
+* 1: Application crashes during normal usage.
+
+### Fundamental JavaScript & Style
+* 4: Application demonstrates excellent knowledge of Javascript syntax, style, and refactoring.
+* 3: Application shows strong effort towards organization, content, and refactoring.
+* 2: Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.
+* 1: Application generates syntax error or crashes during execution.
+
+### Test-Driven Development
+* 4: Application is broken into components which are well tested in both isolation and integration using appropriate data.
+* 3: Application is well tested but does not balance isolation and integration tests, using only the data necessary to test the functionality.
+* 2: Application makes some use of tests, but the coverage is insufficient given project requirements.
+* 1: Application does not demonstrate strong use of TDD.
+
 ## Repeaters
 - Must create a brand new repo and start the project fresh
 - Should aim to complete at least one extension
 
 # Evaluations / Submission
 
-This project will be evaluated remotely by your instructors over the weekend. We will send you written feedback on your project by Sunday afternoon / Monday. 
+This project will be evaluated remotely by your instructors over the weekend. We will send you written feedback on your project by Sunday afternoon / Monday.
 
 Submit your GH Repo <a href="https://docs.google.com/spreadsheets/d/1SbUtNaFZ4TGu_NvPMqzcuK0WrXvBRWjlGyjZMw9ux_Y/edit#gid=0" target="_blank">here</a> by __9PM on Thursday, July 2nd__.
