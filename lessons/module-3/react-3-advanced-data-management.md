@@ -5,9 +5,6 @@ tags: react, ideabox, lifecycle methods, prop types, conditional rendering
 module: 3
 ---
 
-<!--
-  Khalid's lesson plan: https://www.notion.so/khalidwilliams/Copy-of-React-III-Lifecycles-20c6e30b365642808ee70c008bedafe6
- -->
 ## Learning Goals
 
 * Understand the component lifecycle
