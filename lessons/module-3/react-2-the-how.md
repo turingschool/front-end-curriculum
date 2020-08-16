@@ -13,7 +13,7 @@ module: 3
 * Create a controlled form
 * Use JSX
 
-## Create React App
+## Warm Up
 
 For this lesson, we will be using [`create-react-app`](https://facebook.github.io/create-react-app/). This is a single command line that sets up a boilerplate React application for us. Out of the box, it comes with some handy scripts (such as `start` and `test`).
 
@@ -86,7 +86,8 @@ Happy hacking!
 
 As the instructions say, let's change directories into our new ideabox application and run `npm start` to see our new boilerplate application!
 
-### Exploring the boilerplate
+<section class="call-to-action">
+### Turn and Explore
 
 Take a few minutes and look around the boilerplate. Hint: start at the `src/` folder!
 
@@ -100,10 +101,7 @@ You'll also notice an `index.js` file. What is going on in there?
 ```js
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
-
-This is the React magic happening. You can read more about what's happening [here](https://reactjs.org/docs/react-dom.html), but in a nutshell: at our HTML element with an ID of "root", we're rendering a React element onto the browser DOM.
-
-Okay. Enough with the nitty gritty. Let's get to building our IdeaBox application!
+</section>
 
 ## Ideabox
 
@@ -218,11 +216,15 @@ Failed to compile.
 
 Let's figure out what this error is saying. "Adjacent JSX elements must be wrapped in an enclosing tag."
 
-If we think about this logically, it makes sense! The method `render` is just a function - a regular old class method. And how many things can a function return at once? Just one! So: in order to return multiple JSX elements, we have to wrap them in a single JSX element!
+If we think about this logically, it makes sense! The method `render` is just a function - a regular old class method. And how many things can a function return at once? Just one! So in order to return multiple JSX elements, we have to wrap them in a single JSX element!
 
 Since this is our App component, let's wrap everything in a `<main>` tag!
 
-_NOTE: If you're just looking for an unflavored container for your elements (aka they are not semantically related to one another, and the best element to use would be a `<div>`), then instead, use a `<React.Fragment>`! You can read more about Fragments [here](https://reactjs.org/docs/fragments.html)._
+<section class="note">
+###NOTE  
+
+If you're just looking for an unflavored container for your elements (aka they are not semantically related to one another, and the best element to use would be a `<div>`), then instead, use a `<React.Fragment>`! You can read more about Fragments [here](https://reactjs.org/docs/fragments.html)._
+</section>
 
 ```js
 import React, { Component } from 'react';
@@ -266,11 +268,14 @@ Okay. Let's come back to our App constructor method and create state.
   }
 ```
 
-Let's review. What is the keyword `this` doing here? What is "state"?
+<section class="call-to-action">
+### On your own
 
-Just like any other class, the keyword `this` refers to the instance of App that will be created when the constructor method is invoked! So: `this.state` is merely an instance variable for the App component. State is an object that will hold whatever information we want it to hold!
+* What is the keyword `this` doing here? 
+* What is "state"?
+</section>
 
-In our case, we want to create a list (aka an array) of ideas!
+For our application, we want to create a list (aka an array) of ideas.
 
 Let's start out with a couple of default ideas, just so we can have something to look at when we begin building out the rest of our components.
 
@@ -308,13 +313,17 @@ In general, function-based components are lighter than class-based components. Y
 
 ## Ideas.js
 
-Let's skip the Form component for now. We'll come back to it later! Let's focus on getting our two ideas to render!
+Next, let's focus on getting our two ideas to render!
 
 We already said that we want to have a container for all of our idea Cards. So let's create that component! In your terminal, touch two new files: `$ touch src/Ideas.js src/Ideas.css`.
 
-_Okay. Hang on. Our App component was capitalized, and now our Ideas component is capitalized, too. Why do you think this is? What did you learn about the naming conventions for JS classes in Mod 2?_
+<section class="note">
+### Note
 
-_It's convention to capitalize class names so that, at a glance, a developer knows they are dealing with a class. This is good for developer empathy. It is also important to note that when an element starts with a lowercase letter, it refers to (and will be treated as) a built-in component like `<div>` or `<span>`, which can lead to silent errors or unexpected side-effects._
+You may have noticed that our App component was capitalized. And now our Ideas component is capitalized, too. Why do you think this is? What did you learn about the naming conventions for JS classes in Mod 2?  
+
+When an element starts with a lowercase letter, it refers to (and will be treated as) a built-in component like `<div>` or `<span>`, which can lead to silent errors or unexpected side-effects. It's also import to note that capitalizing class names makes for good developer empathy. Now, at a glance, a dev knows they are dealing with a class. 
+</section>
 
 Will this Ideas component need to have state? What do you think?
 
