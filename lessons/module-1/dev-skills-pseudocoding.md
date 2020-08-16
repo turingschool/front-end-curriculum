@@ -21,7 +21,7 @@ tags: js, introduction, pseudocoding, articulation, problem solving
 
 In your notebook, journal about the following prompts:
 
-- What skill do you have that you are proud of? Perhaps a recipe you're good at, or a sick kick flip on a skateboard, or maybe you're very good at remembering people's names, or you plan an instrument.
+- What skill do you have that you are proud of? Perhaps a recipe you're good at, or a sick kick flip on a skateboard, or maybe you're very good at remembering people's names, or you play an instrument.
 - Do you remember what it was like when you first began learning the skill?
 - Although it may feel easy now, or like something you've always been good at, push yourself to describe the work you had to put in to achieve proficiency!
 </section>
