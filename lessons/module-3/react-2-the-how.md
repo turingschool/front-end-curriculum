@@ -13,7 +13,7 @@ module: 3
 * Create a controlled form
 * Use JSX
 
-## Warm Up
+## Create React App
 
 For this lesson, we will be using [`create-react-app`](https://facebook.github.io/create-react-app/). This is a single command line that sets up a boilerplate React application for us. Out of the box, it comes with some handy scripts (such as `start` and `test`).
 
