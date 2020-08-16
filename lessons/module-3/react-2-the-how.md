@@ -186,7 +186,7 @@ Save this code and go check your browser. What do you see?
 Let's take a minute and examine that return statement in our `render` method.
 
 <section class="note">
-### Understanding JSX**  
+### Understanding JSX 
 
 It looks like our `render` method is returning some HTML! Very easy to read, right?  
 
@@ -221,9 +221,9 @@ If we think about this logically, it makes sense! The method `render` is just a 
 Since this is our App component, let's wrap everything in a `<main>` tag!
 
 <section class="note">
-###NOTE  
+### NOTE  
 
-If you're just looking for an unflavored container for your elements (aka they are not semantically related to one another, and the best element to use would be a `<div>`), then instead, use a `<React.Fragment>`! You can read more about Fragments [here](https://reactjs.org/docs/fragments.html)._
+If you're just looking for an unflavored container for your elements (aka they are not semantically related to one another, and the best element to use would be a `<div>`), then instead, use a `<React.Fragment>`! You can read more about Fragments [here](https://reactjs.org/docs/fragments.html).
 </section>
 
 ```js
