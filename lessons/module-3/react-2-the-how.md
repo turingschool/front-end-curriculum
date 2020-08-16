@@ -5,9 +5,6 @@ tags: react, ideabox
 module: 3
 ---
 
-<!--
-  Khalid's lesson plan: https://www.notion.so/khalidwilliams/React-II-Making-Idea-Box-14802516d9b34e70a3df4aac8b77fdd2
- -->
 ## Learning Goals
 
 * Create class components
