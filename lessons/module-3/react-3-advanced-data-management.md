@@ -5,9 +5,6 @@ tags: react, ideabox, lifecycle methods, prop types, conditional rendering
 module: 3
 ---
 
-<!--
-  Khalid's lesson plan: https://www.notion.so/khalidwilliams/Copy-of-React-III-Lifecycles-20c6e30b365642808ee70c008bedafe6
- -->
 ## Learning Goals
 
 * Understand the component lifecycle
@@ -77,7 +74,11 @@ constructor(props) {
 Without passing the props down into this method, `this.props` will return as `undefined` **within the `constructor` method**.  
 This is bad because the constructor method is the first function called when your component is instantiated as a class - knowing the context of `this` from the get go can be a big deal.   
 
-Note that whether or not you have a constructor method has no effect on `this` or `this.props` within the `render()` method (or any other method you create for that matter) - the `render()` method defines its own context.  
+<section class="note">
+### Note  
+
+Whether or not you have a constructor method has no effect on `this` or `this.props` within the `render()` method (or any other method you create for that matter) - the `render()` method defines its own context.  
+</section>
 
 Per [the docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class), class components should always pass props to the base constructor (this is why we pass them into the `super()` method). However there is some debate as to why this is suggested, since React will automatically set the props for you once the constructor has fired.
 

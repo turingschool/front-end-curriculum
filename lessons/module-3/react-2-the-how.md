@@ -5,9 +5,6 @@ tags: react, ideabox
 module: 3
 ---
 
-<!--
-  Khalid's lesson plan: https://www.notion.so/khalidwilliams/React-II-Making-Idea-Box-14802516d9b34e70a3df4aac8b77fdd2
- -->
 ## Learning Goals
 
 * Create class components
@@ -89,7 +86,8 @@ Happy hacking!
 
 As the instructions say, let's change directories into our new ideabox application and run `npm start` to see our new boilerplate application!
 
-### Exploring the boilerplate
+<section class="call-to-action">
+### Turn and Explore
 
 Take a few minutes and look around the boilerplate. Hint: start at the `src/` folder!
 
@@ -103,10 +101,7 @@ You'll also notice an `index.js` file. What is going on in there?
 ```js
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
-
-This is the React magic happening. You can read more about what's happening [here](https://reactjs.org/docs/react-dom.html), but in a nutshell: at our HTML element with an ID of "root", we're rendering a React element onto the browser DOM.
-
-Okay. Enough with the nitty gritty. Let's get to building our IdeaBox application!
+</section>
 
 ## Ideabox
 
@@ -128,19 +123,17 @@ Let's figure out what should be a component in our app.
 
 ![IdeaBox wireframe](https://i.imgur.com/2bSfaXK.jpg)
 
-We have an App component. That should probably hold onto our list of ideas.
+- We have an App component. That should probably hold onto our list of ideas.  
 
-We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.
+- We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.  
 
-We need a Card component to display our ideas.
+- We need a Card component to display our ideas.  
 
-And let's create an Ideas component to hold all of our Cards.
+- We can create an Ideas component to hold all of our Cards.  
 
 ![IdeaBox wireframe with component boxes](https://i.imgur.com/xWggABx.jpg)
 
 ### App.js
-
-Let's bring back some code.
 
 Because we want App to hold onto our list of ideas, let's think about how we're going to store that information.
 
@@ -160,7 +153,7 @@ class App extends Component {
 export default App;
 ```
 
-When we save that, our error now says "TypeError: instance.render is not a function". This is because React expects our class-based component to have a method called "render"!
+When we save that, our error now says "TypeError: instance.render is not a function". Why are we getting this error?
 
 The class method `render` comes from the parent class, Component.
 
@@ -192,18 +185,20 @@ Save this code and go check your browser. What do you see?
 
 Let's take a minute and examine that return statement in our `render` method.
 
-> **Understanding JSX**  
->
-> It looks like our `render` method is returning some HTML! Very easy to read, right?  
->
-> What we're actually writing here is known as JSX. It's an abstraction that makes React easier to write!  
->
-> JSX is "JavaScript and XML" - it's a handy mashup language that allows us to write HTML with a bit of JavaScript injected in. You can read more on it [here](https://reactjs.org/docs/introducing-jsx.html) (and a bit more in depth [here](https://reactjs.org/docs/jsx-in-depth.html)). But in the meantime, we'll see how JSX makes our lives easier throughout this lesson!
+<section class="note">
+### Understanding JSX 
+
+It looks like our `render` method is returning some HTML! Very easy to read, right?  
+
+What we're actually writing here is known as JSX. It's an abstraction that makes React easier to write!  
+
+JSX is "JavaScript and XML" - it's a handy mashup language that allows us to write HTML with a bit of JavaScript injected in. You can read more on it [here](https://reactjs.org/docs/introducing-jsx.html) (and a bit more in depth [here](https://reactjs.org/docs/jsx-in-depth.html)). But in the meantime, we'll see how JSX makes our lives easier throughout this lesson!
+</section>
 
 Okay. Now try to add a paragraph tag. What happened?
 
-If you saw this error, don't panic!
 
+You should receive this error:
 ```
 Failed to compile.
 
@@ -221,11 +216,15 @@ Failed to compile.
 
 Let's figure out what this error is saying. "Adjacent JSX elements must be wrapped in an enclosing tag."
 
-If we think about this logically, it makes sense! The method `render` is just a function - a regular old class method. And how many things can a function return at once? Just one! So: in order to return multiple JSX elements, we have to wrap them in a single JSX element!
+If we think about this logically, it makes sense! The method `render` is just a function - a regular old class method. And how many things can a function return at once? Just one! So in order to return multiple JSX elements, we have to wrap them in a single JSX element!
 
 Since this is our App component, let's wrap everything in a `<main>` tag!
 
-_NOTE: If you're just looking for an unflavored container for your elements (aka they are not semantically related to one another, and the best element to use would be a `<div>`), then instead, use a `<React.Fragment>`! You can read more about Fragments [here](https://reactjs.org/docs/fragments.html)._
+<section class="note">
+### NOTE  
+
+If you're just looking for an unflavored container for your elements (aka they are not semantically related to one another, and the best element to use would be a `<div>`), then instead, use a `<React.Fragment>`! You can read more about Fragments [here](https://reactjs.org/docs/fragments.html).
+</section>
 
 ```js
 import React, { Component } from 'react';
@@ -254,8 +253,6 @@ export default App;
 
 You'll notice that instead of "`class`", we're using a "`className`" attribute on our `<main>` element. Why do you think this is?
 
-The answer lies with JSX: because we're writing JavaScript + XML, and not true HTML, we can't use "`class`" because "`class`" is already a reserved JavaScript word! So, we're using "`className`" instead.
-
 ### App.js state
 
 Okay. Let's come back to our App constructor method and create state.
@@ -269,11 +266,14 @@ Okay. Let's come back to our App constructor method and create state.
   }
 ```
 
-Let's review. What is the keyword `this` doing here? What is "state"?
+<section class="call-to-action">
+### On your own
 
-Just like any other class, the keyword `this` refers to the instance of App that will be created when the constructor method is invoked! So: `this.state` is merely an instance variable for the App component. State is an object that will hold whatever information we want it to hold!
+* What is the keyword `this` doing here? 
+* What is "state"?
+</section>
 
-In our case, we want to create a list (aka an array) of ideas!
+For our application, we want to create a list (aka an array) of ideas.
 
 Let's start out with a couple of default ideas, just so we can have something to look at when we begin building out the rest of our components.
 
@@ -311,13 +311,17 @@ In general, function-based components are lighter than class-based components. Y
 
 ## Ideas.js
 
-Let's skip the Form component for now. We'll come back to it later! Let's focus on getting our two ideas to render!
+Next, let's focus on getting our two ideas to render!
 
 We already said that we want to have a container for all of our idea Cards. So let's create that component! In your terminal, touch two new files: `$ touch src/Ideas.js src/Ideas.css`.
 
-_Okay. Hang on. Our App component was capitalized, and now our Ideas component is capitalized, too. Why do you think this is? What did you learn about the naming conventions for JS classes in Mod 2?_
+<section class="note">
+### Note
 
-_It's convention to capitalize class names so that, at a glance, a developer knows they are dealing with a class. This is good for developer empathy. It is also important to note that when an element starts with a lowercase letter, it refers to (and will be treated as) a built-in component like `<div>` or `<span>`, which can lead to silent errors or unexpected side-effects._
+You may have noticed that our App component was capitalized. And now our Ideas component is capitalized, too. Why do you think this is? What did you learn about the naming conventions for JS classes in Mod 2?  
+
+When an element starts with a lowercase letter, it refers to (and will be treated as) a built-in component like `<div>` or `<span>`, which can lead to silent errors or unexpected side-effects. It's also import to note that capitalizing class names makes for good developer empathy. Now, at a glance, a dev knows they are dealing with a class. 
+</section>
 
 Will this Ideas component need to have state? What do you think?
 
@@ -451,13 +455,13 @@ const Ideas = ({name}) => {
 }
 ```
 
-React lets us destructure props ON THE WAY IN. Whoa! It's accomplishing the same thing as destructuring on a separate line, like in the previous example.
+We can destructure props ON THE WAY IN. Whoa! It's accomplishing the same thing as destructuring on a separate line, like in the previous example.
 
 ### Mapping over the ideas array
 
 All right. We don't actually want to render an h2 in our Ideas component. We want to render some Cards with some gosh dang IDEAS!
 
-Let's create a Card component to use. Will it be function- or class- based?
+Let's create a Card component to use. Will it be function or class based?
 
 Create your files: `$ touch src/Card.js src/Card.css`
 
@@ -594,24 +598,21 @@ const Card = ({ title, description, id }) => {
 }
 ```
 
-I created a button to delete the Card, but we'll get to that later. For now, high five the people at your table, because we just got this sucker to display some ideas!!
+I created a button to delete the Card, but we'll get to that later. For now, let's celebrate, because we just got this sucker to display some ideas!!
 
 ## Conditional Rendering
 
 Before me move on, lets tighten up the UX here a bit. 
 
 <section class="call-to-action">
-### Try making App.state.ideas an empty array. 
-What happens?
+### On your own  
+
+* Try making App.state.ideas an empty array. 
+* What happens? Why?
+* What would make for a better user experience?
 </section>
 
-Right now if we take the ideas out of state, nothing really renders. That's not a great user experience, so lets give the user some context on what to do.
-
-<section class="note"> 
-  **If** there are no ideas in the App's state, **then** the App should tell the user to add some ideas.
-</section>
-
-This kind of logic is what's known as **Conditional Rendering**.
+To handle the logic for this, we can use **Conditional Rendering**.
 
 Conditional rendering is exactly what it sounds like: telling a component to render something based on a condition. We put some JS into our component's render function, and tell it what to put on the DOM based on some set of conditions. Let's add some here!
 

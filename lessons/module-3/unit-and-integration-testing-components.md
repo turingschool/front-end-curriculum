@@ -16,6 +16,14 @@ tags: react, testing
   - Test class methods using Jest
 - This lesson does not cover how to deal with asynchronous JS (like `fetch`)
 
+## Vocab
+
+- `Unit test` - Unit tests test the smallest unit of functionality, typically a method/function. For example, when you call a specific method on a class, you would likely expect a value to be returned. Unit tests should be focused on one particular feature
+- `Integration test` - Integration tests build on unit tests by combining the units of code and testing that the resulting combination functions correctly
+- `Acceptance test` - (also known as end-to-end tests) Once an application is ready to use, it undergoes testing in a browser by a user (or automated user) to verify that the features behave normally and meet expectations
+- `Jest` - Jest is a JS framework created by Facebook that is included in React and acts as a test runner, assertion library, and mocking library. It can also be used for snapshot testing.
+- `React Testing Library` -
+- `Mock` - Mocks are created in order to replicate the data or functions you would expect to have or be fired, or when we want to set up a function that runs in place of another function
 ## Why Do We Test? What Should We Test?
 
 <section class="call-to-action">
@@ -24,11 +32,6 @@ tags: react, testing
 1. Why do we test? What is the point of writing tests?
 2. What have you been testing in apps so far?
 
-<!--
-### Discuss with a Partner (5 minutes)
-
-Talk with a partner next to you about your reasons to write tests.
--->
 </section>
 
 When testing React apps, or really when testing any kind of application, most of the tests your write will be *unit and integration tests*.
@@ -432,14 +435,6 @@ describe('App', () => {
 1. Integration: Test that you can delete an idea
 </section>
 
-## Vocab
-
-- `Unit test` - Unit tests test the smallest unit of functionality, typically a method/function. For example, when you call a specific method on a class, you would likely expect a value to be returned. Unit tests should be focused on one particular feature
-- `Integration test` - Integration tests build on unit tests by combining the units of code and testing that the resulting combination functions correctly
-- `Acceptance test` - (also known as end-to-end tests) Once an application is ready to use, it undergoes testing in a browser by a user (or automated user) to verify that the features behave normally and meet expectations
-- `Jest` - Jest is a JS framework created by Facebook that is included in React and acts as a test runner, assertion library, and mocking library. It can also be used for snapshot testing.
-- `React Testing Library` -
-- `Mock` - Mocks are created in order to replicate the data or functions you would expect to have or be fired, or when we want to set up a function that runs in place of another function
 
 ## Extra Resources:
 - [@testing-library/user-event](https://testing-library.com/docs/ecosystem-user-event)
