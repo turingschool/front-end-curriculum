@@ -123,19 +123,17 @@ Let's figure out what should be a component in our app.
 
 ![IdeaBox wireframe](https://i.imgur.com/2bSfaXK.jpg)
 
-We have an App component. That should probably hold onto our list of ideas.
+- We have an App component. That should probably hold onto our list of ideas.  
 
-We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.
+- We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.  
 
-We need a Card component to display our ideas.
+- We need a Card component to display our ideas.  
 
-And let's create an Ideas component to hold all of our Cards.
+- We can create an Ideas component to hold all of our Cards.  
 
 ![IdeaBox wireframe with component boxes](https://i.imgur.com/xWggABx.jpg)
 
 ### App.js
-
-Let's bring back some code.
 
 Because we want App to hold onto our list of ideas, let's think about how we're going to store that information.
 
