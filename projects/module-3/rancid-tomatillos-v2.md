@@ -8,9 +8,9 @@ Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a
 
 ## Learning Goals
 
-* Reinforce React fundamentals
-* Reinforce using React Router to create a multi-page user experience
-* Reinforce component and asynchronous JS testing
+* Solidify React fundamentals
+* Solidify using React Router to create a multi-page user experience
+* Solidify component and asynchronous JS testing
 * Work with and navigate a shared, persistent API using GET, POST, and DELETE requests
 
 ## Iterations
@@ -63,7 +63,7 @@ Create a dynamic route for a "show page" for each movie. A show page is a app pa
 
 Don't forget to account for handling non-2xx-level responses from the server.
 
-<!-- Week 2: -->
+<!-- Week 2: 
 
 ### Iteration 4 - Show and Add Ratings
 
@@ -105,9 +105,9 @@ Adding in Router is likely to break your tests. Make sure to update those to kee
 Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Deeper_dive) to learn more about URL anatomy. 
 
 </section>
+-->
 
-
-<!-- Week 3: -->
+<!-- Week 3: 
 
 ### Iteration 7 - Make a microservice (complete together)
 
@@ -150,14 +150,14 @@ Users have been wanting to keep track of their favorite movies. The server is no
 - Add a new POST route to update a collection of favorited movies in `app.locals`. A valid POST request should _at least_ have an `id` property for the movie that's being favorited/unfavorited. If the request is unsuccessful (ie, if a malformed request is sent), send back a helpful response to the user. 
 
 - Add a new GET route to get all currently favorited movies (these will be stored in app.locals).
-
+-->
 ### Extensions
 
 * Once logged in, sort the user's movies by the date they rated the movie (the `created_at` info for a rating might help with this...)
 * Whether or not a user is logged in, give the ability to sort the movies by release date and genre
 * Add the ability to view a movie's trailer(s) from the movie's show page (check out the `/movies/:movie_id/videos` endpoint)
 
-* Deploy your apps (FE and BE) to [Heroku](https://devcenter.heroku.com/categories/deployment)
+* Deploy your apps <!--(FE and BE) --> to [Heroku](https://devcenter.heroku.com/categories/deployment)
 
 Think of some others!
 
@@ -231,6 +231,7 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 * 3 - All components are unit tested in units and integration, and a valid attempt was made to mock async functionality.
 * 4 - All async functionality is mocked. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently. Evaluator has no recommendations for testing.
 
+<!--
 ### Routing
 
 * 1 - Application uses React Router, but does not render/use all routes according to spec. Application does not utilize built in React Router components and manipulates history instead.  UX is challenging and frustrating where multiple pages on the application are missing links to routes.
@@ -238,9 +239,12 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 * 3 - Application uses React Router to display appropriate components based on URL.  UX is clear and set up well so that user has access to previous routes.
 * 4 - React Router components have been refactored for developer empathy and code quality is clean.  Application accounts for undefined routes. UX is excellent and set up well to have links to all routes on all pages.
 
+-->
+<!--
 ### Express
 
 * 1 - No new routes are added to the locally hosted API. No data is being saved on the server.
 * 2 - New routes are added, but no error handling is present (ex: hitting a route always returns a 200, even if the request is malformed). 
 * 3 - New routes are added, and only return successful responses when the request is correctly formatted. Routes are structured in a proper RESTful fashion.
 * 4 - New routes are added, and there is dynamic and meaningful error handling present.
+-->
