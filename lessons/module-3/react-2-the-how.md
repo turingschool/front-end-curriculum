@@ -153,7 +153,7 @@ class App extends Component {
 export default App;
 ```
 
-When we save that, our error now says "TypeError: instance.render is not a function". This is because React expects our class-based component to have a method called "render"!
+When we save that, our error now says "TypeError: instance.render is not a function". Why are we getting this error?
 
 The class method `render` comes from the parent class, Component.
 
@@ -185,18 +185,20 @@ Save this code and go check your browser. What do you see?
 
 Let's take a minute and examine that return statement in our `render` method.
 
-> **Understanding JSX**  
->
-> It looks like our `render` method is returning some HTML! Very easy to read, right?  
->
-> What we're actually writing here is known as JSX. It's an abstraction that makes React easier to write!  
->
-> JSX is "JavaScript and XML" - it's a handy mashup language that allows us to write HTML with a bit of JavaScript injected in. You can read more on it [here](https://reactjs.org/docs/introducing-jsx.html) (and a bit more in depth [here](https://reactjs.org/docs/jsx-in-depth.html)). But in the meantime, we'll see how JSX makes our lives easier throughout this lesson!
+<section class="note">
+### Understanding JSX**  
+
+It looks like our `render` method is returning some HTML! Very easy to read, right?  
+
+What we're actually writing here is known as JSX. It's an abstraction that makes React easier to write!  
+
+JSX is "JavaScript and XML" - it's a handy mashup language that allows us to write HTML with a bit of JavaScript injected in. You can read more on it [here](https://reactjs.org/docs/introducing-jsx.html) (and a bit more in depth [here](https://reactjs.org/docs/jsx-in-depth.html)). But in the meantime, we'll see how JSX makes our lives easier throughout this lesson!
+</section>
 
 Okay. Now try to add a paragraph tag. What happened?
 
-If you saw this error, don't panic!
 
+You should receive this error:
 ```
 Failed to compile.
 
@@ -250,8 +252,6 @@ export default App;
 ```
 
 You'll notice that instead of "`class`", we're using a "`className`" attribute on our `<main>` element. Why do you think this is?
-
-The answer lies with JSX: because we're writing JavaScript + XML, and not true HTML, we can't use "`class`" because "`class`" is already a reserved JavaScript word! So, we're using "`className`" instead.
 
 ### App.js state
 
@@ -455,13 +455,13 @@ const Ideas = ({name}) => {
 }
 ```
 
-React lets us destructure props ON THE WAY IN. Whoa! It's accomplishing the same thing as destructuring on a separate line, like in the previous example.
+We can destructure props ON THE WAY IN. Whoa! It's accomplishing the same thing as destructuring on a separate line, like in the previous example.
 
 ### Mapping over the ideas array
 
 All right. We don't actually want to render an h2 in our Ideas component. We want to render some Cards with some gosh dang IDEAS!
 
-Let's create a Card component to use. Will it be function- or class- based?
+Let's create a Card component to use. Will it be function or class based?
 
 Create your files: `$ touch src/Card.js src/Card.css`
 
@@ -598,24 +598,21 @@ const Card = ({ title, description, id }) => {
 }
 ```
 
-I created a button to delete the Card, but we'll get to that later. For now, high five the people at your table, because we just got this sucker to display some ideas!!
+I created a button to delete the Card, but we'll get to that later. For now, let's celebrate, because we just got this sucker to display some ideas!!
 
 ## Conditional Rendering
 
 Before me move on, lets tighten up the UX here a bit. 
 
 <section class="call-to-action">
-### Try making App.state.ideas an empty array. 
-What happens?
+### On your own  
+
+* Try making App.state.ideas an empty array. 
+* What happens? Why?
+* What would make for a better user experience?
 </section>
 
-Right now if we take the ideas out of state, nothing really renders. That's not a great user experience, so lets give the user some context on what to do.
-
-<section class="note"> 
-  **If** there are no ideas in the App's state, **then** the App should tell the user to add some ideas.
-</section>
-
-This kind of logic is what's known as **Conditional Rendering**.
+To handle the logic for this, we can use **Conditional Rendering**.
 
 Conditional rendering is exactly what it sounds like: telling a component to render something based on a condition. We put some JS into our component's render function, and tell it what to put on the DOM based on some set of conditions. Let's add some here!
 
