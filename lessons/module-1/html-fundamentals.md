@@ -45,7 +45,7 @@ Today, we will build a foundation of HTML knowledge and skills.
 
 ## What is HTML?
 
-HTML is used to create electronic documents (pages) that are displayed on the Web.   
+HTML is used to create electronic documents (pages) that are displayed on the Web.  
 
 HTML ensures the proper formatting of content (text, images, video) so that your internet browser can display them as intended.  As a result, HTML is made up of many elements.  These elements are used to hold our content and define how the browser must format and display the content. The term `markup` refers to the set of tags used to structure a page.
 
