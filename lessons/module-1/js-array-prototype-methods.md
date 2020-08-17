@@ -6,10 +6,9 @@ tags: javascript, arrays, prototypes, mutator, accessor
 
 ## Learning Goals
 
-By the end of this lesson, you'll be able to:
-- read documentation and explore array prototype methods
-- determine if a given method is a mutator or accessor
-- build a process for self-guided learning, and determine which parts are most helpful for _you_
+* Read documentation and explore array prototype methods
+* Determine if a given method is a mutator or accessor
+* Build a process for self-guided learning, and determine which parts are most helpful for _you_
 
 ## Vocabulary
 
@@ -22,12 +21,12 @@ By the end of this lesson, you'll be able to:
 In your notebook, jot down your answers to the following:
 
 ```javascript
-var instructors = ["Casey", "Scott", "Hannah", "Leta"];
+var instructors = ["Will", "Scott", "Hannah", "Casey"];
 ```
 
 For the array above,
 - How would you programmatically find the number of elements?
-- Oops! Leta is not teaching Mod 1 this inning. NO CODE - what are the **instructions** you would want to tell the computer to take in order to remove the string "Leta" from the array?
+- Oops! Casey is not teaching Mod 1 this inning. NO CODE - what are the **instructions** you would want to tell the computer to take in order to remove the string "Casey" from the array?
 
 ### Debrief
 
