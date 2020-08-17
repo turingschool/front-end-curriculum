@@ -10,9 +10,15 @@ tags: html, introduction, practice
 * Identify and use attributes for appropriate elements
 * Understand the importance of writing semantic HTML
 
-## Prep
+## Vocabulary
 
-Students should spend 15-20 minutes reading, watching, and completing the content in the [Chrome Dev Tools](./chrome-dev-tools) resource before attending class.
+- `HTML` HyperText Markup Language
+- `CSS` Cascading Style Sheet
+- `HTML Element` A building block that makes up the structure of a web page. Encompasses tags and content
+- `HTML Tag` Used to create HTML elements. Some elements have an opening and closing tag, others only have an opening tag
+- `Attribute` Additional values that configure HTML elements and adjust their behavior
+- `Hyperlink` A reference to an external resource
+- `Nesting` when an element lives inside of another element
 
 ## Warm Up
 
@@ -48,7 +54,7 @@ Today, we will build a foundation of HTML knowledge and skills.
 
 ## What is HTML?
 
-HTML is used to create electronic documents (pages) that are displayed on the Web.  It was first developed by Tim Berners-Lee and released in 1990.  It was originally created to allow people to publish and exchange scientific documents.  This exchange was possible as a result of `hyperlinks` which allowed pages to have links to other documents.  However, because HTML was so accessible and had the potential to be used for other applications, it moved over to the mainstream in browsers like Netscape and Internet Explorer.  
+HTML is used to create electronic documents (pages) that are displayed on the Web.   
 
 HTML ensures the proper formatting of content (text, images, video) so that your internet browser can display them as intended.  As a result, HTML is made up of many elements.  These elements are used to hold our content and define how the browser must format and display the content. The term `markup` refers to the set of tags used to structure a page.
 
