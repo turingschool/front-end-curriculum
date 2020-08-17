@@ -239,8 +239,8 @@ Collaborate with instructors to personalize an extension for this project
 * 1: Application generates syntax error or crashes during execution.
 
 ### Test-Driven Development
-* 4: Application is broken into components which are well tested in both isolation and integration using appropriate data.
-* 3: Application is well tested but does not balance isolation and integration tests, using only the data necessary to test the functionality.
+* 4: Application is broken into components, good use of own data, good happy and sad path testing.
+* 3: Application is well tested but does not have consistent use of beforeEach to DRY up tests, uses data files instead of creating own data, and not enough sad path testing.
 * 2: Application makes some use of tests, but the coverage is insufficient given project requirements.
 * 1: Application does not demonstrate strong use of TDD.
 
@@ -252,4 +252,4 @@ Collaborate with instructors to personalize an extension for this project
 
 This project will be evaluated remotely by your instructors over the weekend. We will send you written feedback on your project by Sunday afternoon / Monday.
 
-Submit your GH Repo <a href="https://docs.google.com/spreadsheets/d/1SbUtNaFZ4TGu_NvPMqzcuK0WrXvBRWjlGyjZMw9ux_Y/edit#gid=0" target="_blank">here</a> by __9PM on Thursday, July 2nd__.
+Submit your GH Repo <a href="https://docs.google.com/spreadsheets/d/1sezifM_yYe9M7VK0DrnoiTyAnAXsU6d2UaQlSfyH9aQ/edit#gid=0" target="_blank">here</a> by __9PM on Thursday, Aug 20th__.
