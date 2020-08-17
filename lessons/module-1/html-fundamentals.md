@@ -32,15 +32,6 @@ Open up the Chrome Dev Tools in your browser. In your notebook, jot down the ans
 
 Now, share/compare discoveries with your partner. Be ready to share out your answers in the large group.
 
-## Vocabulary
-
-- `HTML` HyperText Markup Language
-- `CSS` Cascading Style Sheet
-- `HTML Element` A building block that makes up the structure of a web page. Encompasses tags and content
-- `HTML Tag` Used to create HTML elements. Some elements have an opening and closing tag, others only have an opening tag
-- `Attribute` Additional values that configure HTML elements and adjust their behavior
-- `Hyperlink` A reference to an external resource
-- `Nesting` when an element lives inside of another element
 
 ## Overview
 
