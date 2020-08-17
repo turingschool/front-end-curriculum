@@ -308,7 +308,7 @@ function sayHi () {
 ```
 
 <section class="answer">
-### Write the above function using an ES6 arrow functions!  Only look below once you have completed!
+### Write the above function as an ES6 arrow function!  Only look below once you have completed!
 
 ```js
 // ES6 "fat arrow" style function
@@ -350,7 +350,7 @@ function sayHi (name) {
 sayHi('Bob');
 ```
 
-Is name a parameter or argument?  What about `'Bob'`?
+Is `name` a parameter or argument?  What about `'Bob'`?
 </section>
 
 <!-- If we want to pass information into a function, we pass in a parameter when we declare/define our function, and we pass in an argument when we invoke/call it. -->
