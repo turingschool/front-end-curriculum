@@ -40,8 +40,6 @@ Throughout most of this lesson, you'll be working in small groups to explore bot
 - some array prototypes
 - different ways to learn new technical concepts, and which you like best
 
-[Instructor resource](https://docs.google.com/document/d/1_X1vhIFuiSM752l25sBntxVPrTWBV50ZZ3wy_kXQ10A/edit)
-
 ### The methods to research
 
 For the rest of this lesson, we will be learning about the following array prototype methods:
@@ -93,8 +91,6 @@ In your new group of 3, make a presentation for your assigned array prototype! I
 After all are complete, each group will do a short presentation on their assigned array prototype. Make sure you decide who is leading the presentaion, or split up sections between the three of you!
 
 If you aren't 100% of something you are about add to your presentation - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates.
-
-<!-- After all poster are made, we will do a "Gallery Walk" - walk around the room and look at each others posters and make sure notes are accurate. If you aren't 100% of something you are about to write on your poster - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates. -->
 
 ## Wrap Up
 
