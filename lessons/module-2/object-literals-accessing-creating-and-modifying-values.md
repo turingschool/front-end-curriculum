@@ -204,7 +204,7 @@ In the above example, note that you can do NESTED bracket notation!
 3. When you've finished, send your completed REPL to your instructor in a Slack DM
 4. Later that evening, your instructor will send you back feedback! 
 </section>
-g
+
 ### Additional Resources
 * [Dots vs. Brackets Instructor Video](https://www.youtube.com/watch?v=DJ0deyVQZPw)
 * [Object.keys() from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
