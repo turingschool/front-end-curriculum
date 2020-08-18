@@ -80,7 +80,7 @@ The `school` object has four properties:
 
 Create a new repl.
 
-Declare a new variable called <code>order</code> that stores an object literal. It should have all the properties that were printed on the handout you got this morning, paired with the values you handwrote in.
+Declare a new variable called <code>yourName</code> that stores an object literal that represents you! It should have all of the following keys: `name`, `age`, `alive`, and `homeTown`. Give each of those keys an appropriate value.
 </section>
 
 ### Access Properties
