@@ -36,8 +36,8 @@ const developer = {
 };
 
 developer[detail] // returns true
-// developer will be evaluated and the interpreter will see
-// that it represents a boolean of 'coverLetter' - so it will then
+// detail will be evaluated and the interpreter will see
+// that it represents a string of 'coverLetter' - so it will then
 // look for a key of coverLetter in the developer object
 ```
 
@@ -65,7 +65,6 @@ const kittens = [
 
 * Given an array of kittens, write out an arrow function that takes an `index` as an argument, and returns the name of that specific kitten.
 * Using the same array of kittens, write out another arrow function that takes an `index` AND a `detail` (i.e. a property) that returns that kitten's specific detail.
-**Note: You will need to use bracket notation for both of these problems.**
 </section>
 
 <section class="answer">
@@ -124,7 +123,7 @@ let rubric = {
   css: 'proficient'
 };
 
-function addSkill(skill, level) {
+const addSkill = (skill, level) => {
   rubric[skill] = level;
 }
 
@@ -143,8 +142,6 @@ In the above example, note that you cannot create a key without assigning it to 
 Let's work through this one together.  Consider the following:
 
 ```js
-// Accessing values with bracket notation when iterating
-
 let dog = {
   name: 'Boris',
   age: 3,
@@ -152,7 +149,7 @@ let dog = {
 };
 ```
 
-We have a `dog` object and we want to iterate through this object, grabbing the keys and values, and log:
+We have a `dog` object and want to iterate through this object, grabbing the keys and values, and log:
 
 ```
 I have a dog and...
@@ -174,7 +171,7 @@ let dog = {
 };
 
 // Object.keys gives us an array of the targeted object's keys
-var dogDetails = Object.keys(dog); // ['name', 'age', 'breed'];
+const dogDetails = Object.keys(dog); // ['name', 'age', 'breed'];
 
 console.log('I have a dog and...');
 
@@ -207,7 +204,7 @@ In the above example, note that you can do NESTED bracket notation!
 3. When you've finished, send your completed REPL to your instructor in a Slack DM
 4. Later that evening, your instructor will send you back feedback! 
 </section>
-
+g
 ### Additional Resources
 * [Dots vs. Brackets Instructor Video](https://www.youtube.com/watch?v=DJ0deyVQZPw)
 * [Object.keys() from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
