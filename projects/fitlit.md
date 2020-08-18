@@ -228,11 +228,11 @@ _Choose at least one_
 ### Timeline
 Dates and deadlines to be aware of:
 
-* **Monday, May 11th** - Submit your project board and planned out class structure to instructors BEFORE beginning to write code! (send this to us via Slack)
-* **Wednesday, May 20th** - Project due at 9PM. 
-* **Thursday, May 21st** - Project evals.
+* **Monday, August 24th** - Submit your project board and planned out class structure to instructors BEFORE beginning to write code! (send this to us via Slack)
+* **Wednesday, September 2nd** - Project due at 9PM.
+* **Thursday, September 3rd** - Project evals.
 
-Please submit your finished projects [here](https://docs.google.com/spreadsheets/d/1N4bLirAEpgNWVCeNJheoM6vnrlSB5Qy9ejsFeSbvxCQ/edit#gid=1401427478) 
+Please submit your finished projects [here](https://docs.google.com/spreadsheets/d/1sezifM_yYe9M7VK0DrnoiTyAnAXsU6d2UaQlSfyH9aQ/edit#gid=1401427478) 
 
 ---
 
