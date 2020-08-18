@@ -97,7 +97,7 @@ var schoolCapacity = school.capacity;
 
 Return to the repl you created with your object.
 
-Practice using dot notation to access each value on your order object.
+Practice using dot notation to access each value on your `you` object.
 </section>
 
 <section class="call-to-action">
@@ -132,8 +132,8 @@ console.log(school);
 <section class="call-to-action">
 
 ### Solo Practice: Reassigning & Adding
-- Go back to the repl about your order, and add a property of "location" to your object. Assign it to a string of any coffee shop location you frequent.
-- Now try re-assigning the **drinkOrder** property to a different string.
+- Go back to the repl about you, and add a property of `currentLocation` to your object. Assign it to a string of any coffee shop location you (used to) frequent.
+- Now try re-assigning the **age** property to a different number.
 - 🤞Remember to call the object or the property on the last line of the file (or in the console), and run the repl to verify the outcome!
 </section>
 
@@ -148,7 +148,7 @@ var objectName = {
   property1: "value1",
   property2: "value2",
   method1: function() {
-    return "I'm a method, because I am a function!";
+    return "I'm a method, because I am a function that belongs to an object!";
   },
 };
 ```
@@ -198,7 +198,7 @@ school.sendWelcomeMessage();
 - When we used dot notation at the start of the lesson, we didn't follow a property name with `()`. Why do you think we are using that here? What does it remind you of? Further, what do you think would happen if we called `school.sendWelcomeMessage`?
 </section>
 
-Let's add a method to our order object.
+Let's add a method to the object representing ourselves. What behaviors or methods should our `you` object have?
 
 <section class="checks-for-understanding">
 ### Stop and Reflect
