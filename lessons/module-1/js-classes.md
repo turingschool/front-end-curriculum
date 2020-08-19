@@ -43,7 +43,7 @@ You may have noticed that we used a familiar word, this, in a strange way in the
 Like `var` and `function`, `this` is a special keyword in JavaScript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is ***dependent on the `context` of where it is referenced***.
 
 <div class="lesson-segment">
-  <h3>Explore <code>this</code></h3>
+  <h3>Warm Up</h3>
   <p>Choose a driver and a navigator. The driver should start by forking <a href="https://repl.it/@ameseee/this">this repl.it</a>.</p>
   <p>Together, un-comment out each <code>console.log</code> one at a time, starting with line 10. Before you run the code, predict what will print out.</p>
 </div>
