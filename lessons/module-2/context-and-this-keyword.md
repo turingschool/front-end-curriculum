@@ -4,8 +4,6 @@ length:
 tags: javascript, js, this, keyword
 ---
 
-<!-- ## [Slides](https://drive.google.com/open?id=1oF5k17fEaN_I4KIQOdBK-eEaNBf_S0_DrZhFzbPrA2w) -->
-
 ### Learning Goals
 
 * Understand and describe what `this` is in JavaScript
@@ -16,12 +14,6 @@ tags: javascript, js, this, keyword
 - `Invoke` / `Execute` To run a function. e.g., "I've invoked the function here"
 - `Declare` To write a function definition. Usually distinct from function execution
 - `Constructor Function` The function called to create a new instance of an object. Usually contains the code to set up the object 
-
-<!-- ### Warm Up
-
-* Write down everything that you know about `this` in JavaScript
-* Where have you seen/utilized the word `this` in your JavaScript projects thus far?
- -->
 
 ## Introduction
 
@@ -40,13 +32,6 @@ With that being said, there are several rules which determine what the value of 
 
 ## Rule 1 - _this_ in function code invoked using the new operator refers to the new instance of that object.
 
-<!-- When we use the new keyword to call our function as a constructor, a few things happen behind the scenes:
-
-1. `this` is set to a new empty object
-2. The prototype property of the constructor function (Unicorn.prototype in the example below) is set as the prototype of the new object, which was set to `this` in the first step
-3. The body of our function runs
-4. Our new object, `this`, is returned from the constructor
- -->
 ```javascript
 class Unicorn {
   constructor(name, color) {
@@ -196,30 +181,6 @@ print(); // What will print here? Why?
 ```
 
 
-<!-- 
-## Rule 4 - When a function is called with either call, apply or bind, _this_ is set to the first argument passed to call, apply or bind
-
-```
-function logThis() {
-  console.log(this);
-}
-
-var voyager1 = {
-  classification: 'Space Probe',
-  title: 'Voyager 1',
-  logThis: function () {
-    console.log(this);
-  }
-}
-
-logThis.call(voyager1);
-logThis.apply(voyager1);
-
-var logVoyager = logThis.bind(voyager1);
-
-logVoyager();
-``` -->
-
 ## The difference between `function () {}` and `() => {}`
 
 ES6 introduced arrow functions, which allow us to write functions with shorter syntax [among other things](http://frontend.turing.io/lessons/module-2/es5-vs-es6.html#arrow-functions). Beside being quicker to write/read, arrow functions also lexically bind the `this` value implicitly:
@@ -266,34 +227,3 @@ vampire.whatDoYouDislike()
 
 * [Scope vs. Context](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
 * [When not to use an arrow function](https://wesbos.com/arrow-function-no-no/)  
-
-
-
-
-<!-- 
-REVIEW PROMPT
-
-_**Context**_
-Prompt for students:
-* What are the most important/significant things someone should know about:
-    * Arrow functions
-    * this
-
-What is the result of the following code? Explain your answer
-```js 
-var fullname = 'Pamela Lovett';
-var foo = {
-   fullName: 'Brittany Storoz',
-   prop: {
-      fullname: 'Robbie McJaeger',
-      getFullname: function() {
-         return this.fullname;
-      }
-   }
-};
-
-var test = foo.prop.getFullname;
-
-console.log(foo.prop.getFullname()); // What will log here? Why?
-console.log(test()); // What will log here? Why?
-```  -->
