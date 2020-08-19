@@ -125,6 +125,10 @@ If you finish this, then look into the different between `getAllBy` queries and 
 ### Finding Elements
 
 This [Queries API docs page](https://testing-library.com/docs/dom-testing-library/api-queries) is a going to be your best friend to help you find how to get the element(s) you're looking for.
+
+#### Using `screen` to get queries
+It's recommended to use [screen](https://testing-library.com/docs/dom-testing-library/api-queries#screen) to get these queries! 
+All queries live as methods on the `screen` object!
 </section>
 
 The good thing about using this library to find elements is that it really pushes us as developers to make our apps accessible. So many of the queries available to us in the library are based around accessibility.
@@ -213,20 +217,20 @@ Next we need to make an assertion. You found the element on the page, but you wa
 
 import React from 'react';
 import Card from './Card';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 describe('Card', () => {
   it('displays correct information in the Card', () => {
-    const { getByText } = render(<Card
-                                  id={1}
-                                  title="New Idea"
-                                  description="Something new I thought of"
-                                  removeIdea={jest.fn()}
-                                  />);
-    expect(getByText("New Idea")).toBeInTheDocument();
-    expect(getByText("Something new I thought of")).toBeInTheDocument();
-    expect(getByText("Delete")).toBeInTheDocument();
+    render(<Card
+              id={1}
+              title="New Idea"
+              description="Something new I thought of"
+              removeIdea={jest.fn()}
+              />);
+    expect(screen.getByText("New Idea")).toBeInTheDocument();
+    expect(screen.getByText("Something new I thought of")).toBeInTheDocument();
+    expect(screen.getByText("Delete")).toBeInTheDocument();
   });
 });
 ```
@@ -259,12 +263,12 @@ Let's setup this test:
 ```js
 it('passes the correct id to the removeIdea function', () => {
     const mockRemoveIdea = jest.fn();
-    const { getByText } = render(<Card
-            id={1}
-            title="New Idea"
-            description="Something new I thought of"
-            removeIdea={mockRemoveIdea}
-            />);
+    render(<Card
+      id={1}
+      title="New Idea"
+      description="Something new I thought of"
+      removeIdea={mockRemoveIdea}
+      />);
 
     // Execute the code by clicking the button
 
@@ -288,14 +292,14 @@ Hint: assertions/expectations/matchers for mocked functions can be found [here](
 ```js
 it('passes the correct id to the removeIdea function', () => {
     const mockRemoveIdea = jest.fn();
-    const { getByText } = render(<Card
+    render(<Card
             id={1}
             title="New Idea"
             description="Something new I thought of"
             removeIdea={mockRemoveIdea}
             />);
 
-    fireEvent.click(getByText("Delete"));
+    fireEvent.click(screen.getByText("Delete"));
     expect(mockRemoveIdea).toHaveBeenCalledWith(1);
   })
 });
@@ -329,17 +333,17 @@ Use `debug()` along the way to see the progress of your components.
 
 import React from 'react';
 import Form from './Form';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 
 describe('Form', () => {
   it('sends the correct data up to app via addIdea', () => {
     const mockAddIdea = jest.fn();
 
-    const {getByPlaceholderText, getByText} = render(<Form addIdea={mockAddIdea} />);
+    render(<Form addIdea={mockAddIdea} />);
 
-    fireEvent.change(getByPlaceholderText('title'), {target: {value: 'Best!'}});
-    fireEvent.change(getByPlaceholderText('description'), {target: {value: 'Idea!'}});
-    fireEvent.click(getByText('Submit!'));
+    fireEvent.change(screen.getByPlaceholderText('title'), {target: {value: 'Best!'}});
+    fireEvent.change(screen.getByPlaceholderText('description'), {target: {value: 'Idea!'}});
+    fireEvent.click(screen.getByText('Submit!'));
 
     expect(mockAddIdea).toHaveBeenCalledWith({id: Date.now(), title: "Best!", description: "Idea!"});
   });
@@ -356,11 +360,11 @@ it('sends the correct data up to app via addIdea', () => {
   const mockAddIdea = jest.fn();
   Date.now = jest.fn().mockImplementation(() => 1584585306565);
 
-  const {getByPlaceholderText, getByText} = render(<Form addIdea={mockAddIdea} />);
+  render(<Form addIdea={mockAddIdea} />);
 
-  fireEvent.change(getByPlaceholderText('title'), {target: {value: 'Best!'}});
-  fireEvent.change(getByPlaceholderText('description'), {target: {value: 'Idea!'}});
-  fireEvent.click(getByText('Submit!'));
+  fireEvent.change(screen.getByPlaceholderText('title'), {target: {value: 'Best!'}});
+  fireEvent.change(screen.getByPlaceholderText('description'), {target: {value: 'Idea!'}});
+  fireEvent.click(screen.getByText('Submit!'));
 
   expect(mockAddIdea).toHaveBeenCalledWith({id: 1584585306565, title: "Best!", description: "Idea!"});
 });
@@ -399,7 +403,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 it('renders without crashing', () => {
@@ -410,17 +414,17 @@ it('renders without crashing', () => {
 
 describe('App', () => {
   it('can add a new idea', () => {
-    const {getByPlaceholderText, getByText} = render(<App />);
+    render(<App />);
 
-    fireEvent.change(getByPlaceholderText('title'), {target: {value: 'Best!'}});
-    fireEvent.change(getByPlaceholderText('description'), {target: {value: 'Idea!'}});
-    fireEvent.click(getByText('Submit!'));
+    fireEvent.change(screen.getByPlaceholderText('title'), {target: {value: 'Best!'}});
+    fireEvent.change(screen.getByPlaceholderText('description'), {target: {value: 'Idea!'}});
+    fireEvent.click(screen.getByText('Submit!'));
 
-    expect(getByPlaceholderText('title').value).toEqual('');
-    expect(getByPlaceholderText('description').value).toEqual('');
+    expect(screen.getByPlaceholderText('title').value).toEqual('');
+    expect(screen.getByPlaceholderText('description').value).toEqual('');
 
-    expect(getByText("Best!")).toBeInTheDocument();
-    expect(getByText("Idea!")).toBeInTheDocument();
+    expect(screen.getByText("Best!")).toBeInTheDocument();
+    expect(screen.getByText("Idea!")).toBeInTheDocument();
   });
 });
 
