@@ -316,6 +316,3 @@ Here is an example of the second task:
 ![Custom CSS Color Box](https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/custom-css-modifier.gif)
 
 </section>
-
-<!-- <section class="checks-for-understanding">
-</section> -->
