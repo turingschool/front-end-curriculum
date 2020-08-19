@@ -5,34 +5,24 @@ tags: workflow, git, github, collaboration, code review
 module: 2
 ---
 
-## Goals
-
-By the end of this lesson, students should be able to:
+## Learning Goals
 
 * Give professional and actionable feedback through code reviews
 * Recognize what makes a README useful
 * File and organize issues with labels, that are closed through PRs
 
-
--------------------------------------------------------------
-
-
-## Writing READMEs
-
-A README is often the first thing people will see when they visit an open source project. It's vital that this document provides visitors with the information they need in a clear and efficient manner. Often times, the README determines whether or not people will work with or explore your project further.
-
-#### Research and Talk
+### Warm Up
 
 Take a few minutes to read through your assigned article. We will come back together as a group to discuss what you find. Here are some questions to consider as you read:
 
- - What do you agree with? What do you disagree with?
- - What is confusing?
- - What stands out?
+- What do you agree with? What do you disagree with?
+- What is confusing?
+- What stands out?
 
-* [Article 1](https://dbader.org/blog/write-a-great-readme-for-your-github-project)
-* [Article 2](https://www.giacomodebidda.com/how-to-write-a-killer-readme/)
-* [Article 3](https://thejunkland.com/blog/how-to-write-good-readme.html)
-* [Article 4](https://ponyfoo.com/articles/readme-driven-development)
+- [Article 1](https://dbader.org/blog/write-a-great-readme-for-your-github-project)
+- [Article 2](https://www.giacomodebidda.com/how-to-write-a-killer-readme/)
+- [Article 3](https://thejunkland.com/blog/how-to-write-good-readme.html)
+- [Article 4](https://ponyfoo.com/articles/readme-driven-development)
 
 ### Writing READMEs at Turing
 
@@ -59,11 +49,7 @@ Who would you hire from these READMES?
 * [Club Reads](https://github.com/lindsaywparker/club-reads-frontend) <!-- high, text needs some formatting help, but pretty good -->
 </section>
 
-
-
-
 -------------------------------------------------------------
-
 
 ## Filing Issues
 
@@ -225,20 +211,6 @@ Asking questions if something doesn't make sense to you is an important skill to
 Take a few minutes to read through [this Twitter thread](https://twitter.com/brittanystoroz/status/1049675860309991425) about the PR process. What are some things you can take away from this based on the experience of others? We will come back together as a group to discuss.
 </section>
 
-<!-- Whiteboard student answers
-
-Some bullet points to consider noting:
-Be careful of your tone
-- include positive comments
-- make sure critical feedback is actionable
-- framing suggestions as questions
-
-Acknowledge the effort
- - Positive words! Thanks
-
-Keep the code review two-sided rather than dominating it
-  Not a list of demands -->
-
 <section class="note">
 #### Merge Conflicts
 
@@ -253,38 +225,16 @@ When getting ready to make a UI:
 
 </section>
 
-
-
 ##### Code Review Examples
 
 *GOOD*
 * [Pop Motion](https://github.com/Popmotion/popmotion/pull/276) (click ‘show outdated’ links to expand to see the conversations).
 
-<!-- Good! Lots of acknowledgement for the effort with thank yous and compliments, lots of suggestions phrased as questions (though not always!), and a thorough discussion of potential problems -->
-
 *AVERAGE*
 * [Bytenik](https://github.com/bytenik/Seq.App.Slack/pull/27)
 
-<!-- Average: Lots of the feedback is just little nitpicks here and there, stylistic things, which are important - but don’t add a ton of learning for either person. Some acknowledgment and thanks for the effort put in. Some really terse/short questions from the reviewer, which could potentially come off as harsh, but balanced out with lots of smiley faces. (Emojis are fair game!) -->
-
 *BAD*
 * [Bootstrap](https://github.com/twbs/bootstrap/issues/3057) (This is actually an issue, not a PR, but the same concepts still apply.)
-
-<!-- Bad: Douglas Crockford (a glorified techie) starts the conversation using a lot of aggressive and insulting language which sets the tone for the rest of the comments going forward and allows it to spiral out of control. -->
-
-
-<!-- ### Practice Time
-
-Let's practice good code review on some **bad** code. Just for fun.
-
-We're going to dive into the <a href="https://github.com/turingschool/front-end-curriculum" target="\__blank">FE Curriculum repo</a> and take a look at this workflow in action.
-
-<section class="note">
-#### Side Note:
-
-Our site is open source! You're always welcome to submit a PR.
-</section>
- -->
 
 <section class="checks-for-understanding">
 ### Summary
