@@ -7,8 +7,6 @@ module: 2
 
 ## Goals
 
-By the end of this lesson, you will be able to:
-
 * Describe the differences between `var`, `let` and `const` and when to use each
 * Predict how variables will behave when multiple scopes are involved
 * Understand how the scope chain is initialized and utilized to resolve variables
@@ -146,7 +144,11 @@ If we want to use values created by functions, we must return those values out o
 
 `const number = makeNumber();` could be one way; assigning the returned value of the function to a new variable allows us to "store" or "capture" the value to be used elsewhere.
 
-##### Parent scopes do not have access to child scopes BUT child scopes do have access to their parent scope
+<section class="note">
+### Note
+
+Parent scopes do not have access to child scopes BUT child scopes do have access to their parent scope
+</section> 
 
 In the example below, the `console.log` fails because parent scopes do not have access to variables declared in child scopes. However, the child has access to the variables declared in the parent scope (`array`). Think of this like tinted windows in a car -- if you're inside the car, you can see **out**, but if you're outside of the car, you cannot see in.
 
@@ -206,13 +208,12 @@ getIndex("Khalid"); // What will log and what will return?
 
 If they are not found within the context of a block statement, then `let` and `const` will be functionally scoped, like `var`.
 
-#### Journal
-
-Complete the following prompts in your journal:
-
-Describe "scope" in your own words. What are the similarities and differences between `var`, `let`, and `const`?
-
-What might be a metaphor or analogy for scope? Draw or diagram it out.
+<section class="call-to-action">
+### Journal
+- Describe "scope" in your own words.
+- What are the similarities and differences between `var`, `let`, and `const`?
+- What might be a metaphor or analogy for scope? Draw or diagram it out.
+</section>
 
 ## Scope Chain
 
@@ -307,137 +308,4 @@ console.log(`D: Hello ${givenName}`);
 Using your journal, take a few minutes to answer the following:
 
 - Why is it important to understand scope?
-
-
-
-<!-- ## Exercises
-
-**Exercise 1**
-
-```js
-let number = 10;
-
-function foo () {
-  number = 20;
-  console.log(number);  // 1 - what will log here?
-}
-
-console.log(number);    // 2 - what will log here?
-
-foo()
-
-console.log(number);    // 3 - what will log here?
-```
-
-**Exercise 2**
-
-```js
-let number = 10;
-
-function foo () {
-  let number = 20;
-  console.log(number);  // 1 - what will log here?
-}
-
-console.log(number);    // 2 - what will log here?
-
-foo()
-
-console.log(number);    // 3 - what will log here?
-```
-
-**Exercise 3**
-
-```js
-function foo () {
-  var localNumber = 20;
-  number = localNumber;  
-}
-
-foo()
-
-console.log(number);  // what will log here?
-```
-
-**Exercise 4**
-
-```js
-var name = "Nathaniel Foster";
-
-function printGreeting(name) {
-  console.log("Hello " + name);
-}
-
-printGreeting("Danger");  // what will log here?
-printGreeting();      // what will log here?
-```
-
-**Exercise 5**
-
-```js
-let array = [];
-
-for (var i = 0; i < 10; i++) {
-  array[i] = function () {
-    console.log('You clicked: ' + i);
-  };
-}
-
-array[5]()  // what will log here?
-```
-
-**Exercise 6**
-
-```js
-let array = [];
-
-for (let i = 0; i < 10; i++) {
-  array[i] = function () {
-    console.log('You clicked: ' + i);
-  };
-}
-
-array[5]()  // what will log here?
-``` -->
-
-
-
-
-
-
-<!--
-====================================================
-====================================================
-====================================================
-
-
-## Review Prompt
-
-_**Scope**_
-Prompt for students:
-
-What is the result of each `console.log()`? Explain your answer.
-```js
-var alarmTime = 8;
-
-function testAlarm() {
-   let alarmTime = 22;
-   if (alarmTime > 10) {
-     console.log('A', alarmTime);
-     console.log('Wake up!');
-   }
-}
-
-console.log('B', alarmTime);
-
-for (let i=0; i<5; i++) {
-   alarmTime++;
-}
-
-console.log('C', alarmTime);
-
-testAlarm();
-
-console.log('D', alarmTime);
-```
- -->
+- What is the scope chain? What does it do?
