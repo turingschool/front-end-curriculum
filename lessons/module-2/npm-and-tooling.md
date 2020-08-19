@@ -13,20 +13,17 @@ mod: 2
     em { font-size: 0.85em; }
 </style>
 
+## Learning Goals
 
-### Vocab
+* Explain what NPM is, why we use it and what it does for us
+* Identify packages and dependencies
+
+## Vocab
 
 * `Package Manager` - a registry where developers can publish small, reusable pieces of code that they've written and would like others to be able to incorporate into their projects
 * `Package` - small, independent piece of reusable code that often solves a commonplace problem
 * `Dependency` - a package that your project relies on in order to function properly
 * `Configuration File` - a file that allows you to define how a particular tool you're using should interact with your codebase
-
-### Goals
-
-By the end of this lesson, you will be able to:
-
-* explain what NPM is, why we use it and what it does for us
-* define packages and dependencies
 
 
 ## Tooling for Complex Apps
@@ -69,7 +66,6 @@ Looking at the top-level, root directory of our boilerplate, we already have qui
   <p>Based on the files in our root, what tools are we going to be using to facilitate the development of our application?</p>
 </section>
 
-<!-- eslint, git, NPM, mocha/chai -->
 
 * `.eslintrc` - defines our rules for stylistic conventions we want our code to follow
 * `.gitignore` - tells git not to push certain files to our remote repo
@@ -78,21 +74,6 @@ Looking at the top-level, root directory of our boilerplate, we already have qui
 * `package.json` - describes our application to NPM and what dependencies we need in order to use and develop the app
 
 With the exception of the `README.md` file, each of these is some sort of configuration file. A **configuration file** is a file that allows you to define how a particular tool you're using should interact with your codebase.
-
-<!-- At this point, I do some live coding so that they can actually see the package.json getting generated and be able to make that connection. All of their future projects are set up for them, so they aren't getting to npm init a project for the first time. Here's what I did:
-
-1. create a new (arbitrary) directory 
-2. run npm init and talk through what is happening in each step
-3. look at the package json and compare it to the paired project package.json from before 
-4. run npm install chai --save-dev and mocha
-5. talk about all the different dependancies and the lock file 
-  - difference between dependency and devDependency
-6. add a gitignore and put node modules 
-7. open up node modules and look at chai
-
-
-lots of this bleeds into the next sections, so you might want to reference back to it 
- -->
 
 ## NPM
 
@@ -138,8 +119,6 @@ Let's search for a familiar package, like Chai or Mocha. What things do we notic
   </ol>
   
 </section>
-
-<!-- NPM is more for publishing code that is solving a very tiny, common problem that many developers will face. Other developers will download a package from NPM when they want to take advantage of its functionality in their project. GitHub is for publishing entire projects (that may or may not rely on NPM packages). Other developers will only download your project from GitHub if they want to contribute to it. That said, NPM packages are still published to GitHub for version control purposes, but full-blown GitHub projects have no real reason to be published to NPM. Think about idea-box from mod 1. You wouldn't publish that to NPM because most people aren't building projects that need an ideabox inside of them. -->
 
 
 ### Examining the package.json
@@ -207,7 +186,3 @@ Think back to the filter example code from earlier. Imagine the developer who cr
   <h4>Reading</h4>
   <p>Read through the following <a href="https://semver.org/">documentation</a>. What do each of the numbers in a version number represent?</p>
 </section>
-
-
-
-<!-- I discuss semver here but at a high-level, very briefly. -->
