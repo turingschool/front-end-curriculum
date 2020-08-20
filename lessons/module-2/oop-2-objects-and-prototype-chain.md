@@ -14,9 +14,9 @@ By the end of this lesson, you will be able to:
 
 ## Vocab
 
-`prototype` A special object which is assigned to functions that you make in JavaScript  
-`[[prototype]]` A hidden link on every object that links objects to one another, allowing objects to share behaviors    
-`__proto__` Also called "dunder-proto", this allows us to access the `[[prototype]]` 
+* `prototype` A special object which is assigned to functions that you make in JavaScript  
+* `[[prototype]]` A hidden link on every object that links objects to one another, allowing objects to share behaviors    
+* `__proto__` Also called "dunder-proto", this allows us to access the `[[prototype]]` 
 
 
 # Prototype
