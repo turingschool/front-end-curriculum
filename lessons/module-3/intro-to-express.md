@@ -4,19 +4,13 @@ length: 2 hours
 tags: node, express, back-end, server, http
 ---
 
-### Pre-reqs
-
-* Download the [Postman desktop app](https://app.getpostman.com/app/download/osx64)
-
-### Goals
-
-By the end of this lesson, you will:
+## Learning Goals
 
 * Understand when and why to use Express.js (Express) in the back-end of an application
 * Know how Express abstracts difficult server-side logic and makes it easier to write endpoints
 * Create a simple Express app that implements all of the basic CRUD methods
 
-### Vocabulary
+## Vocabulary
 
 * HTTP request/response cycle
 * server
@@ -25,6 +19,9 @@ By the end of this lesson, you will:
 * route
 * route handler
 * CRUD
+
+### Prework
+Download the [Postman desktop app](https://app.getpostman.com/app/download/osx64)
 
 ## What is Express?
 Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify and organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features.
@@ -387,7 +384,3 @@ For more details on how to update your other scripts to use babel, check out thi
 ### Extra Repository
 
 - [Dino Express](https://github.com/Alex-Tideman/dino_express)
-
-### Instructor Resources
-
-* [Complete Express Example](https://github.com/turingschool/complete-express-example)
