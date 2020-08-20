@@ -4,7 +4,7 @@ length: 2 hours
 module: 3
 ---
 
-### Goals
+## Learning Goals
 
 By the end of this lesson, you will:
 
@@ -14,7 +14,7 @@ By the end of this lesson, you will:
 * Know what REST is and what some alternatives are
 * Understand a little more about the language and terminology of back-end developers
 
-### Vocab
+## Vocab
 
 * Static Asset
 * Endpoint
@@ -47,7 +47,11 @@ Therefore if you were to write documentation for the example endpoint above, you
   2. GET `/api/v1/users` - just the path (assuming we know the domain)
   3. GET `users` - specific part of the path that changes (assuming we know the base url including the api structure info)
 
-*Note on HTTP: It is simply the protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.*
+<section class="note">
+### Note on HTTP
+
+It is simply the protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.
+</section>
 
 ### Some Introspection
 Take 5 minutes to think about API endpoints that you've used before. How were they structured? Did you have to use different HTTP methods? Write down some URLs that you had to use to make API requests.
