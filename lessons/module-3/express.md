@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Express JS"
+title: "Express"
 length: 2 hours
 tags: node, express, back-end, server, http
 ---
