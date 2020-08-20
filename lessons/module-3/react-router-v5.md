@@ -4,10 +4,6 @@ length: 3 hours
 tags: React, Router
 module: 3
 ---
-<!-- 
-FOR INSTRUCTORS:
-- There are solutions to each exercise commented down below. Feel free to uncomment them after the lesson
--->
 
 ## Learning Goals:
 * Understand and articulate the need for routing 
@@ -383,7 +379,7 @@ The new route could look something like this:
 Uncomment the code blocks inside of the Unit Test portion of `App.test.js`
 
 <section class="call-to-action">
-### Take 10 minutes and figure out why the tet are failing. Using the doccs, try and make them pass
+### Take 10 minutes and figure out why the tests are failing. Using the docs, try and make them pass
 
 </section>
 <section class="note">
