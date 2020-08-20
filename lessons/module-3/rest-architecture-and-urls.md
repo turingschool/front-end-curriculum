@@ -1,5 +1,5 @@
 ---
-title: "Rest architecture and Urls"
+title: "REST architecture and URLs"
 length: 2 hours
 module: 3
 ---
