@@ -63,7 +63,7 @@ Create a dynamic route for a "show page" for each movie. A show page is a app pa
 
 Don't forget to account for handling non-2xx-level responses from the server.
 
-<!-- Week 2: 
+<!-- Week 2: -->
 
 ### Iteration 4 - Show and Add Ratings
 
@@ -81,11 +81,7 @@ The only way to change a rating is to delete the old rating and submit a new rat
 
 Don't forget to account for handling non-2xx-level responses from the server.
 
-## Part 2: New Features
-
-For the next part of the project, you'll continue working on the same codebase, but will be dividing and conquering a few separate features. All the following iterations are required, but not all are expected to be completed individually. Again, you'll be contrubuting to the same codebase, so your workflow will be especially important here. 
-
-### Iteration 6 - Router (complete together)
+### Iteration 6 - Router 
 
 It's time to add in Router! So far the application has worked like a single page applicaiton. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes. We're going to be using [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) to conditionally render our views based on the URL's location. 
 
@@ -105,9 +101,13 @@ Adding in Router is likely to break your tests. Make sure to update those to kee
 Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Deeper_dive) to learn more about URL anatomy. 
 
 </section>
--->
+
 
 <!-- Week 3: 
+## Part 2: New Features
+
+For the next part of the project, you'll continue working on the same codebase, but will be dividing and conquering a few separate features. All the following iterations are required, but not all are expected to be completed individually. Again, you'll be contrubuting to the same codebase, so your workflow will be especially important here. 
+
 
 ### Iteration 7 - Make a microservice (complete together)
 
@@ -231,7 +231,6 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 * 3 - All components are unit tested in units and integration, and a valid attempt was made to mock async functionality.
 * 4 - All async functionality is mocked. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently. Evaluator has no recommendations for testing.
 
-<!--
 ### Routing
 
 * 1 - Application uses React Router, but does not render/use all routes according to spec. Application does not utilize built in React Router components and manipulates history instead.  UX is challenging and frustrating where multiple pages on the application are missing links to routes.
@@ -239,7 +238,7 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 * 3 - Application uses React Router to display appropriate components based on URL.  UX is clear and set up well so that user has access to previous routes.
 * 4 - React Router components have been refactored for developer empathy and code quality is clean.  Application accounts for undefined routes. UX is excellent and set up well to have links to all routes on all pages.
 
--->
+
 <!--
 ### Express
 
