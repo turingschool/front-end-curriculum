@@ -64,6 +64,17 @@ Create a dynamic route for a "show page" for each movie. A show page is a app pa
 Don't forget to account for handling non-2xx-level responses from the server.
 
 <!-- Week 2: -->
+<section class="note">
+### Weekend Deliverable
+
+By Sunday evening at 5pm, please tag your instructors in one PR demonstrating at least one of the following:
+- A new feature being added
+- Tests being written
+
+Do not wait on code review from us to merge these PRs in. We will get everyone code review by the start of next week. 
+*Our GH usernames can be found in our slack profiles*
+
+</section>
 
 ### Iteration 4 - Show and Add Ratings
 
