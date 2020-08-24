@@ -17,7 +17,7 @@ People say that romance novels are formulaic. Well ... maybe that's true. We're 
 
 To begin, choose ONE PARTNER to do the following:
 
-1. Fork the boilerplate repository found [here](https://github.com/turingschool-examples/romcom/).
+1. Fork the boilerplate repository found [here](https://github.com/turingschool-examples/romcom/), and set it to **private**
 2. Clone down your new, forked repo
 3. `cd` into the repository
 4. Open it in your text editor
@@ -40,11 +40,11 @@ By the end of the day, complete the following tasks:
 * As a team, read the entire project spec and rubric
 * As a team, create a rough timeline to follow 
 * As a team, create a public document for your DTR (instructions can be found [here](https://github.com/turingschool/career-development-curriculum/blob/master/module_one/dtr_guidelines_memo.md))
-* Make sure all teammates are added as collaborators to the forked repository
-* Create a private Slack channel with all members of the project AND your assigned instructor and share links to:
+* Make sure all teammates (and assigned instructor) are added as collaborators to the forked repository
+* As a team, send a Slack message to your assigned instructor (PM) with:
   - the forked GitHub repo
   - the GitHub Pages deployed site
-    - Under your repo's settings, scroll down to GitHub Pages and set it up to deploy your master branch
+    - Under your repo's settings, scroll down to GitHub Pages and set it up to deploy your main branch
   - the DTR
 
 ## Progression
@@ -108,12 +108,16 @@ _Hint: go check out the HTML and CSS files to see how the form and saved covers 
 - When a user clicks the "View Saved Covers" button, we should see the saved covers section
 - All the covers in the `savedCovers` array should be displayed in the saved covers section
 
+_Note: None of this needs to persist on page load_
+
 ## Iteration 5 - Deleting Saved Covers
 
 - From the saved covers view, if a user double clicks a saved poster, it will be deleted
 
 _Hint: How will you update the data model to achieve this?_
 _Hint: Look into [this user event](https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event)_
+_Note: None of this needs to persist on page load_
+
 
 ## Optional Extensions - Gettin' fancy
 
@@ -144,24 +148,24 @@ To earn a given score, an application must meet the requirements listed in that 
   - Team uses a PR template
   - Team habitually conducts thorough code reviews in the GitHub GUI to document the progress of the application
   - Team has sought out code reviews from one or more mentors
-  - README is well formatted and descriptive with screenshots or gifs of the application in action
+  - README is well formatted and descriptive with screenshots or gifs of the application in action.
 * **3:** 
   - Commits are atomic and frequent, effectively documenting the evolution/progression of the application
   - Commit messages are consistent, descriptive, and concise
   - Team uses PRs to screen/verify code before adding it to the master branch
-  - There is no more than a 10% disparity in code contributions between teammates
+  - There is no more than a 10% disparity in project contributions between teammates
   - README is well formatted and gives good context about the project, including links to both contributors' GitHub profiles, and to the deployed GitHub Pages site
 * **2:** 
   - Commits are large and do not effectively communicate the progression of the application
   - Team uses PRs but do not review code before merging into the master branch
   - All teammates can speak to the purpose and functionality of any/every line of code
-  - There is a 20% disparity in code contributions between teammates
+  - There is a 20% disparity in project contributions between teammates
   - README is brief and does not provide context for the project
 * **1:** 
   - Teammates do not understand the purpose and functionality of every line of code
   - Some commits are pushed directly to the master branch
   - PRs are used inconsistently
-  - There is a 50% disparity in code contributions between teammates
+  - There is a 50% disparity in project contributions between teammates
   - There is no README, or README is insufficient
 
 ### JavaScript Style & Implementation
