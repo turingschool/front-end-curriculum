@@ -170,6 +170,23 @@ Users have been wanting to keep track of their favorite movies. The server is no
 - Add a new POST route to update a collection of favorited movies in `app.locals`. A valid POST request should _at least_ have an `id` property for the movie that's being favorited/unfavorited. If the request is unsuccessful (ie, if a malformed request is sent), send back a helpful response to the user. 
 
 - Add a new GET route to get all currently favorited movies (these will be stored in app.locals).
+
+### Iteration 8c - Watch Again
+
+Users have been wanting to keep track of the movies they've already seen. The server is not currently set up to store and return this information, so we'll be modifying both sides of the application for this feature. 
+
+**Front End**:
+- Update the homepage so that users can mark if they've watched a movie already by clicking an icon. They should be able to unmark the movie as watched if they clicked it by accident.
+
+- Update the movie show page view so that users can mark a movie watched or unwatched a movie by clicking an icon.
+
+- Add a way to view only already-watched movies from the homepage. When viewing watched movies, the user should be taken to a new page (`/watch-again`). If no movies have been marked as watched, there should be a message stating that the user hasn't marked any movies as watched (dont just render an empty page!). 
+
+**Back End**
+- Add a new POST route to update a collection of watched movies in `app.locals`. A valid POST request should _at least_ have an `id` property for the movie that's being marked watched/ununwatched. If the request is unsuccessful (ie, if a malformed request is sent), send back a helpful response to the user. 
+
+- Add a new GET route to get all currently watched movies (these will be stored in app.locals).
+
 -->
 ### Extensions
 
