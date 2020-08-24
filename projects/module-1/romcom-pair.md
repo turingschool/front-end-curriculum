@@ -7,7 +7,6 @@ title: RomCom - Pair
 * Write clean, DRY JavaScript to store our data
 * Use a provided class by creating object instances using the `new` keyword
 * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
-* Begin to understand how to write effective, clean HTML & CSS
 
 ## Overview
 
@@ -172,12 +171,13 @@ To earn a given score, an application must meet the requirements listed in that 
 
 * **4:** 
   - There are no global variables aside from query selectors, `currentCover` and `savedCovers`.
+  - Application uses event delegation correctly on dynamic elements
   - All functions strictly adhere to [SRP](http://knnthvu.weebly.com/srp-and-dry.html) and - with few exceptions - are around 10 lines of code or less
   - All functions and variables are semantically and concisely named
   - Uses logical operators instead of if/else statements where applicable
   - Code contains no antipatterns
 * **3:** 
-  - Application uses event delegation correctly on dynamic elements
+  - Demonstrate understanding of DOM manipulation by adding, removing, and updating elements on the DOM, after the page has loaded
   - Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and observe [SRP](http://knnthvu.weebly.com/srp-and-dry.html)
   - Functions make use of parameters and arguments in order to be more dynamic
 * **2:** 
