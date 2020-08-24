@@ -79,7 +79,7 @@ With the exception of the `README.md` file, each of these is some sort of config
 
 **The NPM Files:** `package.json` and `package-lock.json`
 
-NPM stands for **Node Package Manager**. A package manager is a registry where developers can publish reusable pieces of code that they've written (a package), and allow other developers to download it directly into their projects (as a dependency). NPM is not the only package manager - you may see others such as Yarn or Bower. 
+NPM stands for **Node Package Manager**. A package manager is a registry where developers can publish reusable pieces of code that they've written (a package), and allow other developers to download it directly into their projects (as a dependency). NPM is not the only package manager - you may see others such as Yarn or Bower.
 
 With this definition, there are two more words we'll run into that should be clarified:
 
@@ -107,7 +107,7 @@ Instead of having us all re-invent the wheel, and waste time writing the same pi
 
 [https://www.npmjs.com/](https://www.npmjs.com/)
 
-Let's search for a familiar package, like Chai or Mocha. What things do we notice on the page? 
+Let's search for a familiar package, like Chai or Mocha. What things do we notice on the page?
 
 <section class="call-to-action">
   <h4>Paired Practice: Choosing a NPM package.</h4>
@@ -117,7 +117,7 @@ Let's search for a familiar package, like Chai or Mocha. What things do we notic
     <li>Which package would you want to use in a project?</li>
     <li>Seeing that both of these packages are also on GitHub, what is the difference between NPM and GitHub?</li>
   </ol>
-  
+
 </section>
 
 
@@ -158,9 +158,9 @@ We can see the types of dependencies we might have for our project by looking at
 * eslint
 * mocha and chai
 
-If a user is viewing our application in their browser, it's unlikely they're trying to run our tests or lint the code we've written. So these dependencies are specifically for us, as developers, to enhance our development experience.
+If a user is using our application in their browser, it's unlikely they're trying to run our tests or lint the code we've written. So these dependencies are specifically for us, as developers, to enhance our development experience.
 
-Regular dependencies that will need to be included in our application for our users might be things like `jQuery` -- without jQuery, our DOM interactions would be broken. The users viewing our app in the browser would not be able to click on buttons or interact with forms, etc.
+Regular dependencies that will need to be included in our application might be things like `moment js`.  Moment is a time library that helps makes time calculations and normalization easier.  This would be considered a regular dependency since it is included in our code base.
 
 As we determine that our project needs certain dependencies, we install them by running something like: `npm install <packageName>` in our terminal. This will automatically add that package to our `dependencies` section of the `package.json`. If we only need a development dependency, we can specify for NPM to store it in our `devDependencies` by modifying the command slightly: `npm install <packageName --save-dev`
 
