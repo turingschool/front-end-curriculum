@@ -57,8 +57,8 @@ Now, let's practice getting information out of our array and objects!
 
 In the console:  
 - access the first element in your array
-- access a value from the second element (an object) in your array
-- update a value from a different object
+- access a value from the second element (an object) in the array
+- update a value from the third element in the array
 </section>
 
 Now, let's suppose that we need to use information from every single one of our objects. How could we accomplish this?
