@@ -13,10 +13,10 @@ module: 2
 
 ### Warm Up
 
-At Turing, we focus a lot on strongly documenting your projects through READMEs, GH issues, PRs, and other workflows.  But why?  It's certainly requires a lot of work and time when we *could* be using that time to write more code.  Let's focus on the **why** in this lesson, starting first with READMEs.
+At Turing, we focus a lot on strongly documenting your projects through READMEs, GH issues, PRs, and other workflows.  But why?  It certainly requires a lot of work and time when we *could* be using that time to write more code.  Let's focus on the **why** in this lesson, starting first with READMEs.
 
 <section class="call-to-action">
-#### 
+#### In Your Journals
 
 1. What is the purpose of READMEs?  How is it beneficial to you as a developer?  Your team?  Employers?
 2. Skim through the following examples of READMEs past students have created and note what stands out to you.  What is helpful?  What is missing?  Write down *at least* one thing you would like to do in your next README.
@@ -42,32 +42,32 @@ GH issues are a great way to keep track of tasks, enhancements, and bugs for you
 
 Filing issues is an important part of the workflow process. It allows you to:
 
-* keep track of what type of work needs to be done
+* Keep track of what type of work needs to be done:
   _common issues include bugs, security vulnerabilities, nice-to-haves_
-* how that work should be prioritized
+* How that work should be prioritized:
   _setting deadlines_
-* who is responsible for that work
+* Who is responsible for that work:
   _keep all team members 'in the know' about who is handling what_
 
 <section class="note">
 ### Keeping your issues up to date!
 
-Having an up-to-date list of issues indicates to potential employers that you're aware of what could be improved, and you plan on continuing to maintain the project in the future.  Keep this in mind as you continue to build out projects.  If there are bugs or future features you want to build out, include them as GH issues!
+Having an up-to-date list of issues indicates to potential employers that you're aware of what could be improved, and that you plan on continuing to maintain the project in the future.  Keep this in mind as you continue to build out projects at Turing.  If there are bugs or future features you want to build out, include them as GH issues!
 </section>
 
 
 <section class="call-to-action">
 ### Your Turn
 
-GH issues are often a great place to start (before you even start to code!) when deciding what to work on, especially after you have setup a project board.  Let's get some practice!
+GH issues are often a great place to start when deciding what to work on, especially after you have setup a project board.  Ideally, you should do this before you even start to code!  Let's get some practice!
 
-1. Open up your current project repo, click on the `Issues` tab, and finally click green `New Issue` button on the right.
+1. Open up your current project repo, click on the `Issues` tab, and then click the green `New Issue` button on the right.
 2. Think about a feature/bug that needs to be added.  (Think of a specific small piece as opposed to a gigantic feature)
   * Keep the title short and descriptive!
 3. Create a user story to determine what should happen.  (Focus on the *What*, *WHY*, and *WHO* and less on the *HOW*)
   * A good structure to follow with this is `As a __, When I visit __, I want to __, so that I can __.`
   * Depending on the feature, you might even include **Happy Path** and **Sad Path** user stories!
-4.  Think about if there is any additional information needed.  This can included resources such as helpful links or pertaining wireframes.
+4.  Think about any additional information that might be needed.  This can included resources such as helpful links or relevant wireframes.
 </section>
 
 <section class="checks-for-understanding">
@@ -87,7 +87,7 @@ Issue tagging with labels are an important part of keeping engineering and produ
 <section class="call-to-action">
 ### On Your Own
 
-Take a few minutes to skim through [this example](https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/) of an internal tagging system used at *Robin*!  Take note of the categories and use of color coding that can help a team filter issues.
+Take a few minutes to skim through [this example](https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/) of an internal tagging system used at *Robin*.  Take note of the categories and use of color coding that can help a team filter issues.
 
 **Follow up:** Add some labels to the issue you were previously working on.   
 </section>
@@ -107,7 +107,7 @@ Assigning a person to an issue and linking an issue to a project board can again
 
 * *Assign* yourself to your GH issue. (You should see your name next to the issue)
 * Link the issue to your GH project.  (You should now see the issue as a ticket on your project board!)
-**Note:** These can be accessed on the right hand side of the issue near the `Labels` section.
+* **Note:** These can be accessed on the right hand side of the issue near the `Labels` section.
 </section>
 
 <section class="note">
@@ -125,11 +125,11 @@ The code review process, when done well (or even poorly!), can be one of the mos
 <section class="call-to-action">
 ### Shout em out!
 
-What are pull requests?  What is their purpose?  Any rules that apply?
+What are pull requests?  What are their purpose?  Are there any rules that come to mind?
 </section>
 
 <section class="answer">
-### Benefits  
+### Benefits Of PRs
 
 ##### Multiple people are responsible for that code that is written.
 If `Developer A` submits a bug and then `Developer B` merges it, they are both at fault. PRs can help catch these things before they happen
