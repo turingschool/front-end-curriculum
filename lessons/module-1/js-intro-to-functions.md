@@ -6,9 +6,9 @@ tags: javascript, introduction, foundation, variables
 
 ## Learning Goals
 
-* How to declare functions with and without parameters
-* How to call functions with and without parameters
-* How to make function expressions evaluate to something other than `undefined`
+* Be able to declare functions with and without parameters
+* Understand how to call functions with and without parameters
+* Make function expressions evaluate to something other than `undefined` using `return`
 
 ## Vocab
 
