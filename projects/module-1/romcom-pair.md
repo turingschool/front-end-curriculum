@@ -151,18 +151,18 @@ To earn a given score, an application must meet the requirements listed in that 
 * **3:** 
   - Commits are atomic and frequent, effectively documenting the evolution/progression of the application
   - Commit messages are consistent, descriptive, and concise
-  - Team uses PRs to screen/verify code before adding it to the master branch
+  - Team uses PRs to screen/verify code before adding it to the main branch
   - There is no more than a 10% disparity in project contributions between teammates
   - README is well formatted and gives good context about the project, including links to both contributors' GitHub profiles, and to the deployed GitHub Pages site
 * **2:** 
   - Commits are large and do not effectively communicate the progression of the application
-  - Team uses PRs but do not review code before merging into the master branch
+  - Team uses PRs but do not review code before merging into the main branch
   - All teammates can speak to the purpose and functionality of any/every line of code
   - There is a 20% disparity in project contributions between teammates
   - README is brief and does not provide context for the project
 * **1:** 
   - Teammates do not understand the purpose and functionality of every line of code
-  - Some commits are pushed directly to the master branch
+  - Some commits are pushed directly to the main branch
   - PRs are used inconsistently
   - There is a 50% disparity in project contributions between teammates
   - There is no README, or README is insufficient
@@ -185,7 +185,7 @@ To earn a given score, an application must meet the requirements listed in that 
   - Uses named functions instead of anonymous functions as event handlers in event listeners
   - Correctly uses if/else statements to handle multiple paths of logic & error handling
 * **1:** 
-  - Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
+  - Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
 
 
 ### Functional Expectations
