@@ -203,26 +203,10 @@ HTML5 has a variety of _semantic tags_, or HTML tags that provide additional mea
 
 <img class="medium" src="/assets/images/htmlsemantic.jpg" alt="html 4 vs html 5">
 
-Before we had semantic tags like `<main>`, `<section>` and more, developers would use `<div>` tags to organize content. `<div>`'s are still really usefully elements, but we should aim to use more semantic tags for organizing large blocks of your HTML code. 
+Before we had semantic tags like `<main>`, `<section>` and more, developers would use `<div>` tags to organize content. `<div>`'s are still really useful elements, but we should aim to use more semantic tags for organizing large blocks of your HTML code. 
 
 - [Non-Semantic Page](https://codepen.io/hannahhch/pen/rNeywpQ)
 - [Semantic Page](https://codepen.io/hannahhch/pen/OJNpJxm)
-
-For your assigned list of semantic tags, do a little research on your own. Then, you'll move into a small group, ask/answer any questions and make sure everyone is one the same page, then make an anchor chart with your findings.
-
-Consider:
-- When should this tag be used?
-- What does this tag do for us?
-- How many of these tags might we see on a given site?
-
-Assignments:
-- Group 1: nav, header, footer
-- Group 2: section, article, aside
-- Group 3: mark, em, strong, time, address
-
-Here's an example of an anchor chart, for the `<main>` tag:
-
-<img class="small" src="./assets/images/html/main-anchor-chart.jpg">
 
 ## Refactoring Some HTML
 
