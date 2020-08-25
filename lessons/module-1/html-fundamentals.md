@@ -221,8 +221,10 @@ Now that you know what clean, correctly indented HTML looks like, and some of th
 - Then, look for at least 3 opportunities to improve readability and accessibility by changing tags to be more semantic. Once you and you partner agree, make those changes.
 </section>
 
+## Wrap Up
+
 <section class="call-to-action">
-### Journal
+### Solo Journaling
 
 - How would you describe HTML to someone who has never heard of it before?
 - What is an HTML attribute and why would you use one?
@@ -235,6 +237,7 @@ Now that you know what clean, correctly indented HTML looks like, and some of th
 ## Additional Resources
 
 * [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
+* [8 Best Practices to Write Clean HTML Code](https://medium.com/@sergimarquez/8-best-practices-to-write-clean-html-code-1cd407e2a7ec)
 * [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
 * [MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
