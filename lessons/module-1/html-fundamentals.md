@@ -221,6 +221,17 @@ Now that you know what clean, correctly indented HTML looks like, and some of th
 - Then, look for at least 3 opportunities to improve readability and accessibility by changing tags to be more semantic. Once you and you partner agree, make those changes.
 </section>
 
+<section class="call-to-action">
+### Journal
+
+- How would you describe HTML to someone who has never heard of it before?
+- What is an HTML attribute and why would you use one?
+- Why is it important to be consistent with your use of white space and indentation when writing HTML?
+- What is the purpose of semantic HTML?
+- What questions do you still have about HTML?
+
+</section>
+
 ## Additional Resources
 
 * [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
