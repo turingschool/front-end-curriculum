@@ -26,22 +26,19 @@ Spend 15-20 minutes reading, watching, and completing the content in the [Chrome
 
 ## Warm Up
 
-Open up the Chrome Dev Tools in your browser. In your notebook, jot down the answers to the following as you explore:
-- How did you open the Dev Tools?
-- How do you move the Dev Tools "dock" to the bottom or side?
-- How do you increase the size of the font in the Dev Tools?
-- How do you open the inspector tool?
+Open up the Chrome Dev Tools in your browser on the lesson plan page. 
+- Open up the "Elements" tab
+- Find a `<ul>`. What is nested inside of it?
 - How can you search for a specific HTML element in the HTML document? For example, `<nav>`.
-- How can you change the Dev Tool to dark or light mode?
-
-Now, share/compare discoveries with your partner. Be ready to share out your answers in the large group.
+- Search for `.highlighter-rouge`. What do you think this is?
+- What else do you notice in this elements view?
 
 
 ## Overview
 
 The front-end of the web is based on three major technologies:
 
-* __HTML aka "STRUCTURE"__:  HyperText Markup Language (HTML) defines the structure and semantics of web pages on the web.
+* __HTML aka "STRUCTURE"__:  HyperText Markup Language (HTML) defines the structure, content and semantics of web pages on the web.
 * __CSS aka "PRESENTATION"__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
 * __JavaScript aka "BEHAVIOR"__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
 
@@ -200,8 +197,16 @@ Nested inside the `<main>` element is a `<section>`. Nested inside the `<section
 Because so much nesting occurs in HTML, it is absolutely essential that you write clean, easy-to-read code with consistent use of white-space and indentation.
 
 ## Semantic HTML
+HTML5 has a variety of _semantic tags_, or HTML tags that provide additional meaning through descriptive naming, available for us to use. They don't provide any visual difference, but do have benefits in other areas:
+- They can make our code more understandable and clear to other developers (and our future selves) by organizing content 
+- They incorporate basic accessibility into your HTML for users who may need to access your website in non-traditional ways (ie: provide a verbal roadmap for users utilizing screen reader software).
 
-HTML5 has a variety of _semantic tags_, or HTML tags that provide additional meaning through descriptive naming, available for us to use. These tags are an easy way to not only make our code more understandable and clear to other developers (and our future selves), but they are also a great way to incorporate basic accessibility into your HTML for users who may need to access your website in non-traditional ways.
+<img class="medium" src="/assets/images/htmlsemantic.jpg" alt="html 4 vs html 5">
+
+Before we had semantic tags like `<main>`, `<section>` and more, developers would use `<div>` tags to organize content. `<div>`'s are still really usefully elements, but we should aim to use more semantic tags for organizing large blocks of your HTML code. 
+
+- [Non-Semantic Page](https://codepen.io/hannahhch/pen/rNeywpQ)
+- [Semantic Page](https://codepen.io/hannahhch/pen/OJNpJxm)
 
 For your assigned list of semantic tags, do a little research on your own. Then, you'll move into a small group, ask/answer any questions and make sure everyone is one the same page, then make an anchor chart with your findings.
 
