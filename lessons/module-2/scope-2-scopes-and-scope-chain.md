@@ -197,11 +197,11 @@ function getSecondNumber () {
   return secondNumber;
 }
 
-getFirstNumber(); // this works, why?
-getSecondNumber(); // this works, why?
+getFirstNumber();
+getSecondNumber();
 
 console.log(secondNumber);
-console.log(firstNumber);  // why can we access secondNumber, but not firstNumber?
+console.log(firstNumber);
 ```
 
 * Run the `getFirstNumber` either in a Repl or your console.  What happens & why?
