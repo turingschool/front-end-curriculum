@@ -17,37 +17,43 @@ module: 2
 
 ## Scope
 
-Now that we understand the order of execution a bit, we can dive deeper into the concept of scope. Scope is the place in which a variable or value can be accessed.
+Now that we understand the order of execution a bit, we can dive deeper into the concept of scope. **Scope** is the place in which a variable or value can be accessed.
 
-At the most basic level, variables can be either globally or locally scoped. Take the following example:
+<section class="call-to-action">
+### Warmup
+
+Variables often are described as having either global scope or local scope.
+
+* How would you describe the differences between a *globally* vs *locally* scoped variable?
+* Looking at the below example, does our `makeNoise` function have access to the `cowNoise` and `catNoise` variables? 
+* What about outside of our function?  Do we have access to `cowNoise` and `catNoise` here as well?   
 
 ```js
 var cowNoise = 'moo';
 
 function makeNoise() {
   var catNoise = 'meow';
-  console.log('Cow Noise inside Function: ', cowNoise);
-  console.log('Cat Noise inside Function: ', catNoise);
+  console.log('Cow Noise inside of Function: ', cowNoise);
+  console.log('Cat Noise inside of Function: ', catNoise);
 }
 
 makeNoise();
 
-console.log('Cow Noise outside Function: ', cowNoise);
-console.log('Cat Noise outside Function: ', catNoise);
+console.log('Cow Noise outside of Function: ', cowNoise);
+console.log('Cat Noise outside of Function: ', catNoise);
 ```
-
-Our variable of `cowNoise` can be accessed and changed from anywhere in our code base because it is globally scoped. Our variable `catNoise` is limited to the scope of `makeNoise` and is thus said to be scoped locally.
-
+</section>
 
 ### Global, Functional, and Block Scope
 
-We have several scopes available to us: global, function, block, and eval (the latter won't be covered in this lesson - but you can read more on it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
+We have several scopes available to us: global, local (also known as function), block, and eval (the latter won't be covered in this lesson - but you can read more on it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
 
-**Global scope:**
-- Global scope is the default.
-- Everyone and everything has access to the global scope.
-- Functions and variables in the global scope are "vulnerable" because they can be accessed by everything and potentially mutated (changed).
-- `var`, `let`, and `const` can be globally scoped.
+#### Global scope
+
+<section class="call-to-action">
+### In Your Notebook
+
+Here is an example that uses *globally* scoped variables.  What rules apply to them?
 
 ```js
 var one = "one";
@@ -62,15 +68,24 @@ function showNumbers () {
     console.log("In if block: ", one, two, three);
   }
 }
-
-
-// The three global variables are accessible everywhere
 ```
+</section>
 
-**Function scope:**
-- Variables declared in the function (using `var`, `let`, or `const`) can only be accessed by the other code inside the function.
-- You control what's in the function scope, it cannot be meddled with by anyone or anything else.
-- The global scope cannot access function scope.
+<section class="answer">
+### Global Scope Takeaways  
+
+- Global scope is the default.
+- Everyone and everything has access to the global scope.
+- Functions and variables in the global scope are "vulnerable" because they can be accessed by everything and potentially mutated (changed).
+- `var`, `let`, and `const` can be globally scoped.
+</section>
+
+#### Function scope
+
+<section class="call-to-action">
+### In Your Notebook
+
+Here is an example that uses *locally* scoped variables.  What rules apply to them?
 
 ```js
 function readWords() {
@@ -87,14 +102,26 @@ function readWords() {
 
 readWords();
 
+// Am I able to access the variables here?
 console.log(greeting + question + response);
-
-
 ```
+</section>
 
-**Block scope:**
-- Variables declared in the [block statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block) (`if` blocks, `for` loops, etc) using `let` or `const` can only be accessed by other code inside the block.
-- Variables declared in block statements using `var` will not be scoped within the block (as this is a special feature of `let` and `const`). Variables declared with `var` will "leak out"
+<section class="answer">
+### Local Scope Takeaways  
+
+- Variables declared in the function (using `var`, `let`, or `const`) can only be accessed by the other code inside the function.
+- You control what's in the function scope, it cannot be meddled with by anyone or anything else.
+- The global scope cannot access function scope.
+</section>
+
+
+#### Block scope:
+
+<section class="call-to-action">
+### In Breakout Groups
+
+Here is an example that uses *block* scoped variables.  What rules apply to them?
 
 ```js
 function readWords() {
@@ -114,15 +141,25 @@ function readWords() {
 
 readWords();
 ```
+</section>
 
+<section class="answer">
+### Block Scope Takeaways  
 
+- Variables declared in the [block statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block) (`if` blocks, `for` loops, etc) using `let` or `const` can only be accessed by other code inside the block.
+- Variables declared in block statements using `var` will not be scoped within the block (as this is a special feature of `let` and `const`). Variables declared with `var` will "leak out"
+</section>
 
-*Important things to know when dealing with scope and code execution*
-
+## Scope & Scope Execution Practice
 
 ##### Returning values
 
-To make use of variables declared inside function scope while OUTSIDE that scope, the value must be returned out of the function.
+Let's review how we can capture/store variables declared within a function and use them in the global scope:
+
+<section class="call-to-action">
+### Problem #1
+
+Review the example below and answer the following questions:
 
 ```js
 function makeNumber () {
@@ -131,26 +168,21 @@ function makeNumber () {
   return number;
 };
 
-makeNumber();
-
-console.log(number); // undefined
-console.log(makeNumber); // function () {...}
-console.log(makeNumber()); // 5
+console.log(number);
+console.log(makeNumber);
+console.log(makeNumber());
 ```
 
-It's **important to note** that the variable name does not come with the returned value. Above, you can see that when we run the function `makeNumber()`, the variable `number` is not visible to the global scope. However, when we run the function in the last `console.log`, the function evaluates to 5.
+* What do we get we logging the value of `number`?
+* What do we get we logging the value of `makeNumber`?
+* What do we get we logging the value of `makeNumber()`?
+* **Bonus:** How can we store the value returned from `makeNumber()` to use later? 
+</section>
 
-If we want to use values created by functions, we must return those values out of the function. Additionally, if that value needs to be used elsewhere in our code, we must capture it with a variable.
+<section class="call-to-action">
+### Problem #2
 
-`const number = makeNumber();` could be one way; assigning the returned value of the function to a new variable allows us to "store" or "capture" the value to be used elsewhere.
-
-<section class="note">
-### Note
-
-Parent scopes do not have access to child scopes BUT child scopes do have access to their parent scope
-</section> 
-
-In the example below, the `console.log` fails because parent scopes do not have access to variables declared in child scopes. However, the child has access to the variables declared in the parent scope (`array`). Think of this like tinted windows in a car -- if you're inside the car, you can see **out**, but if you're outside of the car, you cannot see in.
+Review the example below and answer the following questions:
 
 ```js
 const array = [ 5, 4, 3, 2, 1 ];
@@ -172,25 +204,41 @@ console.log(secondNumber);
 console.log(firstNumber);  // why can we access secondNumber, but not firstNumber?
 ```
 
-##### Let and const are block scoped
+* Run the `getFirstNumber` either in a Repl or your console.  What happens & why?
+* Do the same for `getSecondNumber` and explain similarly what happens & why.
+* Finally, log `secondNumber` and `firstNumber`.  Note what happens when doing one vs the other.
+</section>
 
-Variables declared with the keyword `let` or `const` will be block scoped if declared within a block. This means that they are scoped to the block statement (`if`, `for`...) in which they are declared. When you see `{` and `}`, those curly brackets are likely creating a scope, - as with `function`, `if`, and `for`.
+<section class="note">
+### Review Note:
+
+Parent scopes do not have access to child scopes BUT child scopes do have access to their parent scope.
+</section> 
+
+##### Block Scoped Variable Practice
+
+As we discussed earlier, variables declared with the keyword `let` or `const` will be block scoped if declared within a block. This means that they are scoped to the block statement (`if`, `for`...) in which they are declared. When you see `{` and `}`, those curly brackets are likely creating a scope, - as with `function`, `if`, and `for`.
+
+<section class="call-to-action">
+### Answer the following:
+
+Run the following examples in your Repl/console:
 
 ```js
+// Example #1:
 let message = 'You are doing great!';
 
 if (message.length > 0) {
   let message = 'I think you are amazing!';
 
-  console.log(message);
+  console.log('Inside of conditional:', message);
 }
 
-console.log(message);
+console.log('Outside of conditional:', message);
 ```
 
-Another fun example:
-
 ```js
+// Example #2
 function getIndex(searchQuery) {
   const names = ["Brittany", "Khalid", "Robbie"];
 
@@ -206,38 +254,49 @@ function getIndex(searchQuery) {
 getIndex("Khalid"); // What will log and what will return?
 ```
 
-If they are not found within the context of a block statement, then `let` and `const` will be functionally scoped, like `var`.
+* Be prepared to explain what is happening and why.  If you have time, replace `let` with `var` in **Example #2** and note what happens!
+</section>
 
-<section class="call-to-action">
-### Journal
+<section class="checks-for-understanding">
+### In Your Notebook
+
 - Describe "scope" in your own words.
 - What are the similarities and differences between `var`, `let`, and `const`?
 - What might be a metaphor or analogy for scope? Draw or diagram it out.
 </section>
 
+-------------------------------------------------------------
+
 ## Scope Chain
 
-Whenever a variable is used, the JavaScript interpreter traverses the `scope chain` until it finds an entry for that variable. Traversal on the scope chain always starts in the most immediate (local) scope and moves towards the global space. Remember that the scope chain is initialized during the "creation phase" of the interpreter running through the code. This is important to note, as the scope chain (e.g. "What is the parent scope for this variable? The grandparent scope?") is determined by where functions are _defined_ in the code base.... not where functions are _invoked_.
+Whenever a variable is used, the JavaScript interpreter traverses the `scope chain` until it finds an entry for that variable. Traversal on the scope chain always starts in the most immediate (local) scope and moves towards the global space. Note that the scope chain is initialized during the "creation phase" of the interpreter running through the code.  Let's see an example of this in action!
 
-Every time a variable is initialized, the interpreter will first look in its own scope to see if the label can be found. If it is not found, it will look "up" the scope chain to the parent scope to try to resolve the variable in the parent context. It will climb up the scope chain examining every scope, looking for a match to the variable name. If that name is never found, the interpreter will declare it globally on the window and the variable will be scoped as such.
+<section class="call-to-action">
+### In Breakout Groups
 
+Consider the following example and explain what is happening:
 
 ```js
-1  let number = 10;
-2
-3  function foo () {
-4    number = 20;
-5    console.log('A', number);  // prints 'A', 20
-6  }
-7
-8  console.log('B', number);  // prints 'B', 10
-9  
-10  foo();
-11
-12  console.log('C', number);    // prints 'C', 20
+let number = 10;
+
+function foo () {
+  number = 20;
+  console.log('A', number);
+}
+
+console.log('B', number);
+
+foo();
+
+console.log('C', number);
 ```
 
-##### Scope chain at work
+* Before running the code, what do you think the value of `number` is in each of the logs?
+* Now run it and take note of what happens.  Allow each person in the group to explain what they think is happening. 
+</section>
+
+<section class="answer">
+### What is happening here?  
 
 1. `foo` and its definition as well as the declaration `number` are stored in global memory
 2. Line 1 - `number` is assigned the value of 10
@@ -246,10 +305,26 @@ Every time a variable is initialized, the interpreter will first look in its own
 5. Line 4 - A variable is declared without the keyword `var` and assigned a value. The interpreter searches in the current execution context to see where this variable was defined. Because it doesn't find it declared in the current scope, it looks up the scope chain to the parent scope, which happens to be the global scope. The interpreter understands that this is to be treated as a re-assignment and assigned the value of `number` to 20, both locally and globally.
 6. Line 5 - prints `A 20` to the console
 7. Line 12 - prints `C 20` to the console
+</section>
 
-**It is important to note that the interpreter moving up the scope chain to resolve variable values is _NOT_ hoisting. Which bears repeating. The process of traversing the scope chain is *NOT* hoisting. Remember that the JS interpreter hoists declarations (storing them in memory) during the creation phase, not when the code itself is being executed.**
+<section class="note">
+### Major Takeaways
 
-#### Turn and Talk
+* The scope chain (e.g. "What is the parent scope for this variable? The grandparent scope?") is determined by where functions are _defined_ in the code base.... not where functions are _invoked_.
+
+* Every time a variable is initialized, the interpreter will first look in its own scope to see if the label can be found. If it is not found, it will look "up" the scope chain to the parent scope to try to resolve the variable in the parent context. 
+
+* If that label is never found, the interpreter will declare it globally on the window and the variable will be scoped as such.
+</section>
+
+<section class="note">
+### Clarification between Scope Chain & Hoisting
+
+It is important to note that the interpreter moving up the scope chain to resolve variable values is *NOT* hoisting.  Remember that the JS interpreter hoists declarations (storing them in memory) during the creation phase, not when the code itself is being executed.
+</section>
+
+<section class="call-to-action">
+### More Examples
 
 With a partner, take turns walking through the following code examples:
 
@@ -302,10 +377,14 @@ console.log(`D: Hello ${givenName}`);
 
 // What logs at each letter?
 ```
+</section>
 
-#### Closing
+<section class="checks-for-understanding">
+### Final Reflections
+
 
 Using your journal, take a few minutes to answer the following:
 
 - Why is it important to understand scope?
 - What is the scope chain? What does it do?
+</section>
