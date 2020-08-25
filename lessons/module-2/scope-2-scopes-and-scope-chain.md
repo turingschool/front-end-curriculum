@@ -179,6 +179,10 @@ console.log(makeNumber());
 * **Bonus:** How can we store the value returned from `makeNumber()` to use later? 
 </section>
 
+##### Parent vs. Child Scopes
+
+Let's look at another example and compare how scopes work between the parent and child.
+
 <section class="call-to-action">
 ### Problem #2
 
