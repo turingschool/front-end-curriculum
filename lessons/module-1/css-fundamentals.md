@@ -28,10 +28,14 @@ Read through [Intro to CSS Pre-Work document](./intro-to-css-prework.html) and a
 
 ## Warm Up
 
+<section class="call-to-action">
 Answer the following questions in your notebook. Be ready to share out your answer as if you were in an interview.
+
 - What is the difference between HTML and CSS?
 - List at least two ways an element can be targeted in CSS, and write out the syntax.
 - List at least three CSS properties and explain what they do.
+</section>
+
 
 ## What is CSS?
 
@@ -82,9 +86,9 @@ Directly from the CSS pane, we can edit the CSS and see the changes reflected im
 Let's make the following edits on [kodewithklossy.com](https://www.kodewithklossy.com/):
 
 * Change the background color of the div that holds the mission to `rebeccapurple`
-* Change the text color of all the nav items to `orange`.
+* Change the background color of the nav to `orange`.
 * Change the "Kode With Klossy" logo in the nav bar to have a height of 90px and a width of 320px
-* Hide the element that contains the content under the sub header "In The News"
+* Experiment with deselecting a few CSS styles. What happens?
 
 **Finished Early?** Find the Turing logo in the footer of the site. Inspect it. What HTML element created it? What attributes does it have? In the Styles Pane, toggle off and on various CSS properties to explore the outcome. Now, scroll down in that pane - you'll see a rule that targets: `#comp-jxczctmainlineContent-gridContainer > *`. Do some research to explore what `>` is doing. Lastly, consider this: when you explore elements in larger sites, you'll commonly see very obscure looking class and ID names - if there is such an emphasis on semantics and good naming, why might this be?
 </section>
@@ -104,31 +108,13 @@ This diagram can be found in the CSS Dev Tools and the same color coding is used
 
 ## The Box Model Applied
 
-First, let's flex those command line muscles you've been building:
+Let's get some practice writing CSS! 
 
-* Create a directory called `static-site-playground`
-* Create a file `index.html`, copy and paste in the HTML provided below
-* Create a file `main.css`
-* Open the project in Atom
-* Link the index and main files you just made
+* Fork a copy of this [static-site-playground](https://github.com/turingschool-examples/static-site-playground) directory
+* Clone it down to your machine
+* Open it up in your text editor
 * Test things are working as expected by opening in the browser by running `open index.html` in your terminal
-
-```html
-<!doctype html>
-<html>
-  <head>
-    <title>CSS Playground</title>
-  </head>
-  <body>
-    <h1>Button Practice</h1>
-    <section>
-      <button class="track-package">Track package</button>
-    </section>
-  </body>
-</html>
-```
-
-Next, we'll use this HTML to do some experimenting with Box Model behavior.
+* Explore the code! How is the CSS file linked to the HTML file?
 
 <section class="call-to-action">
 ### Explore Box Model
