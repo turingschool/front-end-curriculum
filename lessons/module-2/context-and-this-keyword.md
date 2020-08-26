@@ -15,68 +15,59 @@ tags: javascript, js, this, keyword
 - `Declare` To write a function definition. Usually distinct from function execution
 - `Constructor Function` The function called to create a new instance of an object. Usually contains the code to set up the object 
 
-## Introduction
+## Defining rules about "this"
 
-The keyword `this` in JavaScript can be confusing. Here are a couple of definitions that might help clarify:
+As we have discussed earlier, the keyword *this* in JavaScript can be confusing.  Depending on where *this* is used, it can refer to different things.  We're going to go through some examples and define a few rules that apply to the keyword *this*.
 
-* `this` refers to the current *context* (or owner) of the code being executed
-* `this` refers to the object on which the current function is called
-* Context is most often determined by how a function is invoked
+<section class="call-to-action">
+### In Pairs
 
-
-Depending on where `this` is used, it can refer to different things. One key thing to remember is **we can only change the value of** `this` **inside of a function**. There are a few ways we can invoke/execute a function to change the value of `this`.
-
-In ES5 functions, the value of this is determined when the function is executed. This is in contrast to arrow functions, where the value of `this` is determined by its lexical scope.
-
-With that being said, there are several rules which determine what the value of `this` is at any given point in time.
-
-## Rule 1 - _this_ in function code invoked using the new operator refers to the new instance of that object.
+Consider the following `Unicorn` class:
 
 ```javascript
 class Unicorn {
   constructor(name, color) {
-    // new empty object will log
+    // What is logged here?
     console.log(this);  
 
     this.name = name;
     this.color = color;
 
-    // object with added properties will log
+    // What changes about "this"?
     console.log(this);  
   }
 
-  says(words) { 
+  says() { 
     console.log('Toilet Sparkle is my favorite pony', this);
   }
 }
 ```
 
-When the `new` keyword is used with our ES6 class, the constructor function is executed and `this` inside the constructor function refers to the newly created instance.
+* Create a `new` instance of the `Unicorn`.  What rule can we infer about *this* when creating a `new` instance?
+* Now try running it's method, `says`.  What does *this* refer to now?  Has it changed?
+</section>
 
-## Rule 2 - When executing a function as a method on an object, _this_ refers to that object.
+<section class="answer">
+### Rule #1  
 
-This is a long rule, another way to think about this rule is if a function is executed and there is a `.` before the name of the function, `this` refers to whatever comes before the `.`. 
+*this* within function code invoked using the `new` operator refers to the new instance of that object.
+</section>
 
-In the following example, since `logThis` function is being executed as a method of the `voyager1` object, `this` will refer to the `voyager1` object.
 
-```javascript
-function logThis() {
-  console.log(this);
-}
+<section class="answer">
+### Rule #2  
 
-const voyager1 = {
-  classification: 'Space Probe',
-  title: 'Voyager 1',
-  logThis: logThis  // adding logThis function to voyager1
-}
+When executing a function as a method on an object, *this* refers to that object.
+</section>
 
-// voyager1 will be logged
-voyager1.logThis();  
-```
+### Let's confirm our theory
 
-One important thing to remember here is that the value of `this` is set when the above ES5 function is executed.
+To confirm our theory, let's try a different example that uses regular objects instead of classes.   
 
-If I move the function to a different object, then execute the function on that object, `this` inside the function will refer to the new object that it is a method of.
+<section class="call-to-action">
+### In your notebook
+
+Consider the following example where we have two objects that have an ES5 function set as the method:
 
 ```javascript
 function logThis() {
@@ -95,20 +86,28 @@ const voyager2 = {
   logThis: logThis
 }
 
-// voyager1 will be logged
 voyager1.logThis(); 
-
-// voyager2 will be logged
 voyager2.logThis();  
 ```
 
-Because of this rule, I can create a function once, add it to whichever objects I want and `this` will always refer to the object I execute the function on.
+* What is the value of *this*?  When is the value of *this* set?
+</section>
 
-Now typically, if we find ourselves creating multiple objects with the same properties and using the same functions it would be better to create a constructor function to create the objects or use ES6's new class constructor
+<section class="answer">
+### Takeaway notes  
 
-#### Turn and Code
+* We can confirm that our previous two rules still apply.
+* The value of `this` is set when the above ES5 function is executed.
+</section>
 
-Taking turns for each prompt in driver/navigator fashion, use the code snippet below and complete the following:
+<section class="note">
+### Another way to think of this:
+
+If a function is executed and there is a `.` before the name of the function, `this` refers to whatever comes before the `.`
+</section>
+
+<section class="call-to-action">
+### More Practice!
 
 ```js
 function logThis() {
@@ -116,7 +115,7 @@ function logThis() {
 }
 
 const denver = {
-   buildings: {
+  buildings: {
     athletic: [
       { name: "Coors Field", floors: 4, completed: 1995, height: 64 },
       { name: "Pepsi Center", floors: 5, completed: 1999, height: 68 }
@@ -133,24 +132,57 @@ const denver = {
 };
 ```
 
-1. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
-      `{buildings: {…}, restaurants: Array(2), logThis: ƒ}`
+Taking turns for each prompt in driver/navigator fashion, use the code snippet below and complete the following:
+
+1. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following: 
+```js
+{ buildings: {…}, restaurants: Array(2), logThis: ƒ}
+```
 2. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
-      `{ name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368, logThis: ƒ}`
+```js
+{ 
+  name: "Swedish Medical Center", 
+  floors: 6, 
+  completed: 1905, 
+  height: 65, 
+  beds: 368, 
+  logThis: ƒ
+}
+```
+</section>
 
+### Are there other rules?
 
-## Rule 3 - Default _this_ refers to the global object
+Here's one more scenario to look at
 
-By default _this_ refers to the global object if you are not running your program in strict mode. This means that in the event that one of the first two rules _don't_ apply... _this_ will refer to the global object. (In a browser, the global object is the window). 
+<section class="call-to-action">
+### In Your Console
 
-#### Strict Mode
+Run the following command!
 
-Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a “strict” operating context. This strict context prevents certain actions from being taken and throws more exceptions. The statement “use strict”; instructs the browser to use the Strict mode, which is a reduced and safer feature set of JavaScript.
+```js
+function logThis() {
+  console.log(this);
+}
 
-If your program is running in strict mode _and_ neither of the first two rules apply, then _this_ will be undefined. 
+logThis();
+```
 
+* What is the value of this?  What is one final rule we can add that applys to *this*?
+</section>
 
-```javascript
+<section class="answer">
+### Rule #3  
+
+By default, *this* refers to the global object (or in the browser, the window).
+</section>
+
+<section class="note">
+### Fun Fact
+
+Although *this* refers to the global object in most scenarios, *this* will change if your program (or function) is running in **strict mode**.  Try out the same example with `"use strict"` added and note what happens!
+
+```js
 "use strict";
 
 function logThis() {
@@ -160,11 +192,20 @@ function logThis() {
 logThis();
 ```
 
-*Note:This is also assuming that we don't explicitly change the value of _this_ using a method like `call`, `apply`, or `bind` to set _this_. This is an additional rule that you will likely see as you research _this_ in JavaScript. For our purposes here, we will only be focusing on the 3 rules covered*
+Strict mode was added in ECMAScript 5 and prevents certain actions while also throwing more exceptions.  You can [read more about it here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode), but just know it provides a safer feature set of JS.
 
-#### Your Turn
+Simply put:
+* If your program is running in **strict mode** *and* neither of the first two rules apply, then *this* will be `undefined`.
+</section>
 
-Using the rules that you've learned thus far, determine the value of `this` when the last two lines execute (without checking in your console). Write your answer in your journal. Check your work.
+### Reviewing our rules
+
+For our purposes here, these are the three main rules that *this* follows.  You might find exceptions out there especially when looking at ways that you can explicity change the value of *this* using methods like `call`, `apply`, or `bind`, but we'll cover this another time!
+
+<section class="call-to-action">
+### On Your Own
+
+Using the rules that you've learned thus far, determine the value of `this` when the last two lines execute:
 
 ```js
 const obj = {
@@ -180,17 +221,17 @@ obj.printThis(); // What will print here? Why?
 print(); // What will print here? Why?
 ```
 
+* Take note of what happens before checking it in your console!
+</section>
 
 ## The difference between `function () {}` and `() => {}`
 
-ES6 introduced arrow functions, which allow us to write functions with shorter syntax [among other things](http://frontend.turing.io/lessons/module-2/es5-vs-es6.html#arrow-functions). Beside being quicker to write/read, arrow functions also lexically bind the `this` value implicitly:
+ES6 introduced arrow functions, which allow us to write functions with shorter syntax [among other things](http://frontend.turing.io/lessons/module-2/es5-vs-es6.html#arrow-functions). Beside being quicker to write/read, the way arrow functions bind `this` is a bit different:
 
-### function () {}
-The value of _this_ is set when the function is *executed*.
+<section class="call-to-action">
+### In Breakout Groups
 
-### () => {}
-The value of _this_ is set when the function is *created*.
-
+Consider the following example:
 
 ```js
 var vampire = {
@@ -201,27 +242,42 @@ var vampire = {
     'stakes'
   ],
   whatDoYouDislike: function() {
-    // console.log(this)
+    console.log(this)
 
     // this.dislikes.forEach(insert callback here);
-    // how should you write your callback function in order
-    // for the following line of code to work:
+
+    // Should the callback be an arrow function or a traditional ES5 function to use the following log?
     // console.log(this.name + ' dislikes ' + item)
-    // as an arrow function or as a traditional ES5 function?
   }
 }
 
 vampire.whatDoYouDislike()
 ```
 
-#### Your Turn
+* Write the callback function inside of the `forEach` in order for the console.log snippet to work appropriately (e.g. each dislike should log `dracula dislikes garlic/crosses/stakes`)
+</section>
 
-- Write the callback function inside of the `forEach` in order for the console.log snippet to work appropriately (e.g. each dislike should log `dracula dislikes garlic/crosses/stakes`)
+<section class="answer">
+### "This" is confusing  
 
-### Closing
+On a high level, here's what to remember:
+
+1. There are three main rules that apply to the keyword *this*.
+* *this* within function code invoked using the `new` operator refers to the new instance of that object.
+* When executing a function as a method on an object, *this* refers to that object.
+* By default, *this* refers to the global object (or in the browser, the window).
+2. When considering using a traditional function vs an arrow function note that:
+*  `function () {}`: The value of _this_ is set when the function is *executed*.
+* `() => {}`: The value of _this_ is set when the function is *created*.
+</section>
+
+<section class="checks-for-understanding">
+### Review these points
 
 * What are the rules for determining `this`?
 * What is `this` in JavaScript?
+</section>
+
 
 ## Further Reading
 
