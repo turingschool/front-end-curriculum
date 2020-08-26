@@ -38,7 +38,7 @@ class Unicorn {
   }
 
   says() { 
-    console.log('Toilet Sparkle is my favorite pony', this);
+    console.log(`${this.name} is my favorite ${this.color} pony`, this);
   }
 }
 ```
