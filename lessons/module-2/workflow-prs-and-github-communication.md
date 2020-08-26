@@ -11,6 +11,11 @@ module: 2
 * File and organize issues with labels and team member assignments
 * Review PRs, pull request templates, and how to give professional/actionable feedback through code reviews
 
+### Vocab
+* `README` - File that reviews what the repo is used for, instructions for setting up repo, snapshot overview of the repo.
+* `Project Board` - Tool used to organize work left to do, in progress, and work that is done for a project.
+* `User Story` - Often a user facing story, that describes a piece of functionality in the app using the `Given, When, Then` syntax. `e.g Given I am on the login screen When I enter my username and password And click on login, Then I expect to be redirected to the home page. ` 
+
 ### Warm Up
 
 At Turing, we focus a lot on strongly documenting your projects through READMEs, GH issues, PRs, and other workflows.  But why?  It certainly requires a lot of work and time when we *could* be using that time to write more code.  Let's focus on the **why** in this lesson, starting first with READMEs.
@@ -95,12 +100,12 @@ Take a few minutes to skim through [this example](https://robinpowered.com/blog/
 <section class="note">
 ### Note
 
-While some of these labels may not apply exactly to your project, use this as inspiration to create some of your own.  Labels can cover all types of things like priority levels, bugs, enhancements, testing, workflow, or even questions & discussions. 
+While some of these labels may not apply exactly to your project, use this as inspiration to create some of your own.  Labels can cover all types of things like priority levels, bugs, enhancements, testing, workflow, or even questions & discussions.
 </section>
 
 ### Assignments and Linking An Issue To Your Project Board
 
-Assigning a person to an issue and linking an issue to a project board can again help in communication across the team on who is working on what at what time. 
+Assigning a person to an issue and linking an issue to a project board can again help in communication across the team on who is working on what at what time.
 
 <section class="call-to-action">
 ### Your Turn
