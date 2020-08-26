@@ -46,10 +46,29 @@ It’s a “style sheet language” that lets you style the HTML elements on you
 ![CSS Rule](/assets/images/css-rule.png)
 
 We can target an HTML element in CSS many ways:
-* via element name
-* via class name
-* via id name
-* via a combination of above
+```css
+// by element name
+h1 {
+  color: red;
+}
+
+// by class name 
+.primary-font {
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+}
+
+// by id name 
+#about-page {
+  background-color: lightgrey;
+}
+
+// by a combination of above
+#about-page p {
+  font-size: 15px;
+  color: darkgrey;
+}
+```
 
 <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="GRRpNBa" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Rules">
   <span>See the Pen <a href="https://codepen.io/turing-school/pen/GRRpNBa">
@@ -67,6 +86,8 @@ With your partner, use the CodePen above to explore. Then, answer the questions 
 * Which class will take precedent?
 * If an element has both a class and an id, and conflicting rules are applied to the class and id, which takes precedent? What about element and class? Element and id?
 </section>
+
+[Read More on the CSS Cascade](https://wattenberger.com/blog/css-cascade)
 
 ## Dev Tools and CSS
 
@@ -97,41 +118,36 @@ Let's make the following edits on [kodewithklossy.com](https://www.kodewithkloss
 
 Each elements content is in a rectangular box. CSS leverages **the box model** to control layout and design. An HTML element is comprised of its content and the padding, borders, and margins surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane.
 
-This diagram can be found in the CSS Dev Tools and the same color coding is used when we hover over elements in the browser with the inspector selected.  You will probably find it extremely helpful!
+This diagram can be found in the CSS Dev Tools and the same color coding is used when we hover over elements in the browser with the inspector selected.
 
 # ![Box Model](/assets/images/box-model.jpg)
 
-### The Docs
-
-* [MDN CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-* [MDN CSS Overview](https://developer.mozilla.org/en-US/docs/Web/CSS)
-
 ## The Box Model Applied
 
-Let's get some practice writing CSS! 
+<section class="call-to-action">
+### Explore Box Model
 
+**Setup**
 * Fork a copy of this [static-site-playground](https://github.com/turingschool-examples/static-site-playground) directory
 * Clone it down to your machine
 * Open it up in your text editor
 * Test things are working as expected by opening in the browser by running `open index.html` in your terminal
 * Explore the code! How is the CSS file linked to the HTML file?
 
-<section class="call-to-action">
-### Explore Box Model
+**Write some CSS!**
+* On your own, take a few minutes to practice writing the syntax of CSS rules and seeing how margin and padding affect an element.
+* A common mantra when working on CSS is "when in doubt, border it out". Apply a border of an obvious color to both the section and button so you are 100% clear on where things are. Hint: Make sure to be researching properties on MDN!
+* Add margin and padding to your button
+* Add margin and padding to the section
 
-On your own, take a few minutes to practice writing the syntax of CSS rules and seeing how margin and padding affect an element.
-- A common mantra when working on CSS is "when in doubt, border it out". Apply a border of an obvious color to both the section and button so you are 100% clear on where things are.
-- Add margin and padding to your button
-- Add margin and padding to the section
-
-With your partner, choose a website you frequently visit. Find a button or box that demonstrates the use of padding. Find a place where margin was probably used to provide breathing room. Be ready to show and share!
+If you have time left, see what else you can change or add with CSS!
 </section>
 
 ## Recreating Comps
 
 We can apply all the margin and padding we want, but when it comes down to it, many times Front End Developers are tasked with re-creating something a designer has provided them with, commonly called "comps". Let's use our tools to build something professional-grade.
 
-The screen shots below are taken from the "Your Orders" page.
+The screen shots below are taken from the "Your Orders" page from Amazon.
 
 <img class="medium" src="./assets/images/css/amazon-order.png">
 <img class="medium" src="./assets/images/css/amazon-buttons.png">
@@ -139,7 +155,7 @@ The screen shots below are taken from the "Your Orders" page.
 <section class="call-to-action">
 ### Recreating Amazon Buttons
 
-With your partner, decide who will drive and who will navigate. The navigator should close their computer.
+With your partner, decide who will drive and who will navigate. 
 
 First, work to recreate the "Track package" button. Since the focus is box model, do not worry about the slight linear gradient in the background color; just use `#f0c14b` and `#846a29` for the border. Things to keep in mind:
   - Approximately what percentage of the button do the words take up on Amazon's button? How closely does yours match that?
@@ -152,71 +168,24 @@ Now, work to recreate the 4 grey buttons. You already have a lot to work with fr
   - How much space is between the yellow and first grey button?
 </section>
 
-## Box-Sizing and the CSS Box Model
-
-In HTML, you can visualize each element as its own rectangular box. There are a number of CSS properties that can affect the final width and height of each of these boxes. The CSS Box Model describes how the final height and width of an element is determined.
-
-We have an `section` element that we gave a `width` of `400` and a `height` of `200`. However, we've also applied several additional properties that are affecting its size and positioning. The `padding` and `border` properties are both adding `20px` to the element's height and width. Now the actual *visible* dimensions of our element are `480x280`. The Dev Tools panel provides a handy graphic of how our section is being rendered.
-
-This is the default behavior for the rendering of block elements in CSS and is due to the `box sizing` property having a default value of `content-box`. The `box-sizing` property allows us to override this behavior and alter how the dimensions of an element are calculated:
-
-```css
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
-```
-
-Setting the `box-sizing` property to `border-box` will alter the model so that the `width` and `height` properties include the content, padding and border. If we were to set `box-sizing: border-box` on our previous example, our element would be rendered at exactly the `400x200` dimensions we specified. It's `padding` and `border` properties would be included within those dimensions, making our content area slightly smaller.
-
-You can read about and see another example [here](https://dev.to/ameseee/meet-border-box-my-best-friend-a56).
+## Wrap Up
 
 <section class="call-to-action">
-### Revisiting Amazon Buttons
+### Solo Journaling
 
-Revisit your Amazon buttons and add the CSS rule shown above that applies the `box-sizing` property to your CSS. How does it change what's rendered in the browser? How is the size of the elements impacted?
+- How does CSS differ from HTML?
+- Explain the Box Model
+- What questions do you still have about CSS?
+
 </section>
 
-## Inline vs. Block
+Next week we will learn how to create layouts using the CSS display property! 
 
-While doing your capstone or in yesterday's Intro to HTML lesson, you may have noticed that some HTML elements behave differently, in terms of whether they are on their own line or not.
-
-Every HTML element has a default `display` property - either `inline` or `block`.
-
-Block elements start on a new line and take up the entire width of the page, even if the content doesn't take up the entire width of the page. Some elements that default to `display: block` are `p`, `h1` and `section`. Open up this CodePen to see this illustrated:
-
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="css,result" data-user="turing-school" data-slug-hash="mddeOGg" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Block Elements">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/mddeOGg">
-  Block Elements</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-Inline elements only take up the space their content requires, so you may see multiple inline elements sitting next to each other. Some elements that default to `display: inline` are `img`, `a`, `input`, and `em`. Open up this CodePen to see this illustrated:
-
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="QWWjGZN" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Inline Elements">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/QWWjGZN">
-  Inline Elements</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-<section class="note">
-### You're not stuck with the default display
-
-While every element has a default, we can modify the `display` of any given element with CSS.
-</section>
-
-<section class="call-to-action">
-### Changing Display
-
-One by one, fork each CodePen. Add a declaration to one rule at a time, changing the value of the display property from its default.
-</section>
-
-We will go into much more detail on how to use the different display properties next week; this is meant to be a high level introduction.
 
 ## Additional Resources
 
+* [MDN Common CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
 * [Turing CSS Style Guide](https://github.com/turingschool-examples/css)
 * [Visual Guide to CSS](http://cssreference.io/)
+* [MDN CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+* [CSS Border Box](https://dev.to/ameseee/meet-border-box-my-best-friend-a56)
