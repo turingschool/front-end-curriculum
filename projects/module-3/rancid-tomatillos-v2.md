@@ -118,6 +118,11 @@ Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_q
 
 For the next part of the project, you'll continue working on the same codebase, but will be dividing and conquering a few separate features. All the following iterations are required, but not all are expected to be completed individually. Again, you'll be contrubuting to the same codebase, so your workflow will be especially important here. 
 
+<section class="note">
+If you're not through iteration 6 yet, that's fine. We would like everyone to take at least the last 2 days of the project (Monday and Tuesday of Week 3) to work on the solo iterations. 
+
+After Sunday night, the solo iterations should be your priority regardless of how far your team is. Remember, the goal here is YOUR learning; we just want to make sure that everyone's getting some individual reps in.
+</section>
 <!--
 ### Iteration 7 - Make a microservice (complete together)
 
@@ -128,6 +133,7 @@ You and your partner should set up a new express app to function as a [microserv
 For this iteration, get a basic express app set up and pushed up to GitHub. Make sure each partner has push rights to repo. 
 -->
 ### Iteration 7 - Divide and Conquer
+
 
 Our users want more interactive features in the application, and we're going to give it to them. Each group member will take a different feature here.
 
@@ -141,6 +147,7 @@ Users have been requesting the ability to comment on movies. The server is not c
 - Update the show page views for each movie. When a user goes to a movie's show page, they should see all comments that have been made on the movie, in addition to the information already viewable. Each comment should at least include the comment itself, as well as who posted it. 
 
 - **If they are logged in**, they should be able to fill out a form and add a comment to the movie. Comments should be sent to the server, and therefore persist across page reloads. 
+
 <!--
 **Back End**:
 - Add a new POST route to your new server that creates a new comment and adds it to `app.locals`. Each comment needs to have _at least_ an `id`, `author` and `comment` property. If the request is unsucessful (ie the client sends a malformed request), send back an appropriate and helpful error (ex: if a request is made without an `author` property, send back a 422 level response with a message like "Unable to process request: missing `author` property"). 
