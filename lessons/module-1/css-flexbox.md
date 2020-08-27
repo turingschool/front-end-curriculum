@@ -9,6 +9,9 @@ tags: css, flexbox, layout
 * Explain the difference between a parent and child element, be able to identify direct children
 * Apply Flexbox to containers in order to achieve a desired layout
 
+## Pre-Work
+Read through [Intro to Layout Pre-Work document](./intro-to-layout-prework.html) and all links provided and complete exercises provided in it. Be prepared to demonstrate your understanding of the concepts in that document when you come to this class.
+
 ## Vocabulary
 
 * parent
