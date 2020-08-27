@@ -172,6 +172,8 @@ Take that for a spin with a bunch of different words where `:id` should go.
 
 Here is the feature we want to implement: when a user requests a pet by its `id`, we want to return that pet's pet and id.
 
+<section class="answer">
+### How can we return the pet that matches the id in the response?
 ```js
 app.get('/api/v1/pets/:id', (request, response) => {
   const { id } = request.params;
@@ -180,9 +182,12 @@ app.get('/api/v1/pets/:id', (request, response) => {
   response.status(200).json(pet);
 });
 ```
+</section>
 
 Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the pet. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser know that the resource was not found.
 
+<section class="answer">
+### With Error Handling
 ```js
 app.get('/api/v1/pets/:id', (request, response) => {
   const { id } = request.params;
@@ -194,6 +199,7 @@ app.get('/api/v1/pets/:id', (request, response) => {
   response.status(200).json(pet);
 });
 ```
+</section>
 
 <section class="note">
 ### Note
@@ -231,7 +237,7 @@ app.post('/api/v1/pets', (request, response) => {
 IMPORTANT NOTE: this approach has a few of flaws.
 
 - We're storing data in memory, which will be wiped out when the server goes down.
-- Multiple pets could have the same time stamp. Something like [shortid](https://github.com/dylang/shortid) would be better for id generation.
+- Multiple pets could have the same time stamp. Something like [nanoid](https://github.com/ai/nanoid/) would be better for id generation.
 
 #### The Sad Path
 
