@@ -251,6 +251,8 @@ Take a minute to look through some of the other available status codes that can 
 
 Status codes are especially important when handling errors for a request. Let's add some error handling to our previous example. We are going to assume that both 'name' and 'type' are required properties when submitting a new pet, and we want to respond with an error if one of them is missing:
 
+<section class="answer">
+### POST with Error Handling
 ```js
 app.post('/api/v1/pets', (request, response) => {
   const id = Date.now();
@@ -269,6 +271,7 @@ app.post('/api/v1/pets', (request, response) => {
   response.status(201).json({ name, type, id });
 });
 ```
+<section>
 
 If either property is missing, we will see an error in the Network tab of our developer tools where the response is highlighted in red and has a status of `422` (client error). The response details will tell us exactly which property we are missing based on the error we sent along with the 422 response.
 
