@@ -119,7 +119,8 @@ Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_q
 
 For the next part of the project, you'll continue working on the same codebase, but will be dividing and conquering a few separate features. All the following iterations are required, but not all are expected to be completed individually. Again, you'll be contrubuting to the same codebase, so your workflow will be especially important here. 
 
-
+-->
+<!--
 ### Iteration 7 - Make a microservice (complete together)
 
 You'll be delivering some new features to your user. However, the current API is not set up to support them. So you're going to make a new one! 
@@ -127,12 +128,15 @@ You'll be delivering some new features to your user. However, the current API is
 You and your partner should set up a new express app to function as a [microservice](https://en.wikipedia.org/wiki/Microservices), or small application used as part of a bigger product. 
 
 For this iteration, get a basic express app set up and pushed up to GitHub. Make sure each partner has push rights to repo. 
+-->
+<!--
+### Iteration 7 - Divide and Conquer
 
-### Iteration 8 - Divide and Conquer
+Our users want more interactive features in the application, and we're going to give it to them. Each group member will take a different feature here.
 
-Our users want more interactive features in the application, and we're going to give it to them. Each group member will take a different feature here:
+To make each of these features, you'll utilize a microservice that you'll run locally. The server can be found [here](https://github.com/turingschool-examples/rancid-tomatillos-microservice)
 
-#### Iteration 8a - Commenting
+#### Iteration 7a - Commenting
 
 Users have been requesting the ability to comment on movies. The server is not currently set up to store and return comments, so we'll be modifying both sides of the application for this feature. 
 
@@ -140,13 +144,16 @@ Users have been requesting the ability to comment on movies. The server is not c
 - Update the show page views for each movie. When a user goes to a movie's show page, they should see all comments that have been made on the movie, in addition to the information already viewable. Each comment should at least include the comment itself, as well as who posted it. 
 
 - **If they are logged in**, they should be able to fill out a form and add a comment to the movie. Comments should be sent to the server, and therefore persist across page reloads. 
-
+-->
+<!--
 **Back End**:
 - Add a new POST route to your new server that creates a new comment and adds it to `app.locals`. Each comment needs to have _at least_ an `id`, `author` and `comment` property. If the request is unsucessful (ie the client sends a malformed request), send back an appropriate and helpful error (ex: if a request is made without an `author` property, send back a 422 level response with a message like "Unable to process request: missing `author` property"). 
 
 - Add a new GET route to your new server that GETs all existing comments for a given movie.  
+-->
 
-### Iteration 8b - Favoriting and Filtering
+<!--
+### Iteration 7b - Favoriting and Filtering
 
 Users have been wanting to keep track of their favorite movies. The server is not currently set up to store and return favorites, so we'll be modifying both sides of the application for this feature. 
 
@@ -157,6 +164,8 @@ Users have been wanting to keep track of their favorite movies. The server is no
 
 - Add a way to view only favorited movies from the homepage. When viewing favorites, the user should be taken to a new page (`/favorites`). If no movies are currently favorited, there should be some indication for the user to add favorites (dont just render an empty page!). 
 
+-->
+<!--
 **Back End**
 - Add a new POST route to update a collection of favorited movies in `app.locals`. A valid POST request should _at least_ have an `id` property for the movie that's being favorited/unfavorited. If the request is unsuccessful (ie, if a malformed request is sent), send back a helpful response to the user. 
 
