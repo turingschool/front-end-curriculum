@@ -67,7 +67,7 @@ With a partner, walk through the code execution above.
 </section>
 
 <section class="answer">
-There's nothing really new here that we don't already know about how scope (specifically the scope chain) works:
+### How is this code executing? What details did you note?
 
 1.  When we get to the console log for `firstName`, the JS interpreter first looks in its current scope (within `displayName`) for a `firstName` variable that it can grab the value from.
 2. It doesn't find it, so it traverses up the scope chain to the parent scope (`greet`) and again looks for a `firstName` variable to reference.
