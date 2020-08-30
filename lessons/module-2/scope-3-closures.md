@@ -4,13 +4,10 @@ tags: javascript, scope, closure, iife, lexical scope
 module: 2
 ---
 
-## Goals
-
-By the end of this lesson, you will be able to: 
+## Learning Goals
 
 * Describe and speak to lexical scoping in JavaScript
 * Understand and implement closures
-
 
 ## Vocab
 
@@ -63,13 +60,19 @@ function greet() {
 
 greet(); 
 ```
+<section class="call-to-action">
+### Turn and talk
 
+With a partner, walk through the code execution above.
+</section>
+
+<section class="answer">
 There's nothing really new here that we don't already know about how scope (specifically the scope chain) works:
 
 1.  When we get to the console log for `firstName`, the JS interpreter first looks in its current scope (within `displayName`) for a `firstName` variable that it can grab the value from.
 2. It doesn't find it, so it traverses up the scope chain to the parent scope (`greet`) and again looks for a `firstName` variable to reference.
 3. It finds it here, with a value of `Alan`, so the log will say `Alan`.
-
+</section>
 
 Now let's modify this example a bit. Instead of invoking `displayName` right away within our `greet` function, we'll return it:
 
@@ -150,79 +153,6 @@ In the previous example, you'll notice we could still technically change those g
 
 Use the closure pattern to create a "private" counter. The counter variable should be protected by an outter function. The outter function should return an object of methods that allow a user to `incrementCounter`, `decrementCounter` and `getCounterValue`. 
 </section>
-
-<!-- 
-
-```js 
-1  function makeCounter () {  
-2    var count = 0; 
-3   
-4    return { 
-5     add: function () {  
-6     count++;  
-7    }, 
-8    getCount: function () {  
-9     return count; 
-10   }  
-11  };  
-12 }  
-13  
-14 var counter = makeCounter(); 
-15  
-16 console.log(counter) 
-17 console.log(counter.getCount()); // 0  
-18 counter.add(); 
-19 console.log(counter.getCount()); // 1  
-``` 
-
-
-
-## IIFE (immediately invoked function expressions)
-
-```js
-(function myScope () {
-  var functionScopedVariable = "Safety!"
-})();
-
-console.log(functionScopedVariable); // undefined
-console.log(myScope) // undefined
-```
-
-Take a look at the code above. Neither the function-scoped variable `functionScopedVariable`, nor the named function `myScope` are available in the global scope. Why is this? What do you notice about the syntax of this code?
-
-The function `myScope` is wrapped in parentheses, and then a pair of parentheses is added onto the end. We know in Javascript, we invoke a function with those parentheses. This function is being invoked as soon as it is created, which means the function itself is enclosed in function scope and unavailable to the global scope.
-
-**JavaScript Module Pattern:**
-
-We can make use of IIFEs to create modules.
-
-```js
-window.myStringModule = (function () {
-  var allCapsString = "SAFETY!"
-
-  function setString (newString) {
-    allCapsString = newString.toUpperCase();
-  }
-  
-  function getString () {
-    return allCapsString;
-  }
-
-  return {
-    setString: setString,
-    getString: getString
-  };
-})();  
-```
-
-Looking at this code, what do you think is happening?
-
-You can read more about the module pattern here:
-Read more about the JS Module Pattern:
-- [http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html)
-- [https://toddmotto.com/mastering-the-module-pattern/](https://toddmotto.com/mastering-the-module-pattern/)
-
--->
 
 <section class="checks-for-understanding">
 ### Checks for Understanding 
