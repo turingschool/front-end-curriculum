@@ -4,21 +4,18 @@ length: 120
 tags: html, ARIA, accessibility
 ---
 
+### Learning Goals
+
+* Define accessibility and explain why it's important to us as developers
+* Identify different user groups we should be developing for
+* Gain some insight into how others might interact with the web that's different than the way we do
+
 ## Vocab
 
 - `Accessibility` Broadly, creating an experience that is available to anyone and everyone
 - `VoiceOver` A screen reader that is built into apple computers
 
-### Learning Goals
-
-By the end of this lesson, you will know/be able to:
-
-* define accessibility and explain why it's important to us as developers
-* identify different user groups we should be developing for
-* gain some insight into how others might interact with the web that's different than the way we do
-
-
-##  What is accessibility
+##  What is accessibility?
 
 Accessibility on the web is all about creating a user experience that is available to anyone and everyone. We want to enable as many people as possible to use our applications, even when those users may be limited in some way.
 
@@ -45,21 +42,12 @@ Let's talk about some types of limitations our users might have. We can categori
 * cognitive
 * mobility
 
-
 For each of these types of limitations:
 * discuss a potential limitation
 * what kind of web content or devices might they have difficulty interacting with?
 * how might you adjust your web content to alleviate that issue?
 
-
-<!-- 
-**Temporary Disabilities** - broken arm, lost glasses
-**Situational Limitations** - forgot your headphones -->
-
-
-
 ## Station One
-
 
 <section class="call-to-action">
 ### Using a Screen Reader
