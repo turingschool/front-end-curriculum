@@ -75,7 +75,6 @@ The verbs that are used are
   * PUT / PATCH
   * DELETE
 
-
 ## What about a response?
 
 So just like any sort of conversation there needs to be some sort of response from the server. Once a request is received by the server it issues an appropriate response. That response is sent back to the client.
@@ -94,9 +93,10 @@ Now the response codes that you'll typically run into are
 
 If you want to see all the type of server responses check out [http status dogs](https://httpstatusdogs.com/)
 
+<section class="call-to-action">
 #### Your Turn
 
-Turn to person next to you and discuss the following things
+Turn to the person next to you and discuss the following things:
 
 1) What goes into a `client-request`?
 2) What are some examples of:
@@ -104,6 +104,7 @@ Turn to person next to you and discuss the following things
   * A POST request in slack?
   * A PUT/PATCH request in slack?
   * A DELETE request in slack?
+</section>
 
 Once you're done discussing please visit `idea-box-jhun.herokuapp.com` with your partner and open up your dev tools. Once you're in the dev tools I would like you to go to the network tab. Once you are there please complete the following tasks.
 
@@ -118,7 +119,6 @@ Once you're done discussing please visit `idea-box-jhun.herokuapp.com` with your
 
 * Delete an Idea
   * According to the network tab what verb was used?
-
 
 ## DNS
 
