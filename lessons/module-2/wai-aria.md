@@ -4,6 +4,13 @@ length: 90
 tags: html, ARIA, accessibility
 ---
 
+## Learning Goals
+
+* Speak to why website accessibility is important
+* Implement Semantic HTML to make websites more accessible
+* Implement ARIA to make websites more accessible
+* Learn basic VoiceOver screen reader commands to test accessibility
+
 ## Vocab
 
 - `Accessibility` Broadly, creating an experience that is available to anyone and everyone
@@ -11,15 +18,6 @@ tags: html, ARIA, accessibility
 - `Role` The function an element serves on the page
 - `State` The state of an element on a page (e.g., expanded, disabled)
 - `Property` Additional information about an element or other elements its related to
-
-### Learning Goals
-
-By the end of this lesson, you will know/be able to:
-
-* Speak to why website accessibility is important
-* Implement Semantic HTML to make websites more accessible
-* Implement ARIA to make websites more accessible
-* Learn basic VoiceOver screen reader commands to test accessibility
 
 # Accessibility
 
@@ -350,45 +348,6 @@ You can use the `aria-label` below to define a label, but remember to use semant
 ## Your Challenge
 
 Now that you have the basics of accessibility under your belt, we will be spending the remainder of class making our current applications more accessible. Find your project partner/s and start implementing!
-
-
-<!-- The challenge below would be good to use for review the next morning  -->
-
-<!--
-Take the following HTML snippet and make it accessible using explicit semantic HTML, ARIA roles, and attributes.
-
-```html
-<div>
-  <p>Main Title</p>
-    <form action="/" method="get">
-      <input type="search">
-      <input type="submit">
-    </form>
-</div>
-<ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/products">About</a></li>
-  <li><a href="/about">Contact</a></li>
-</ul>
-<div>
-  <div>
-    <p>Content Title Subject One</p>
-    <p>This is the content of this important section</p>
-  </div>
-  <div>
-    <p>Content Title Subject Two</p>
-    <p>This is the content of the section important section</p>
-  </div>
-  <div>
-    <img src="mountain.jpg">
-  </div>
-</div>
-<div>
-  <span>Copyright &amp;copy; Aurelio De Rosa 2014</span>
-</div>
-```
- -->
-<!-- solution: http://codepen.io/team/turing/pen/PWKMga?editors=1000 -->
 
 ## Perfect is the enemy of good
 
