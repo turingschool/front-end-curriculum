@@ -46,12 +46,12 @@ Express is a small framework built on top of the web server functionality provid
 integer 3000.
 
 <section class="call-to-action">
-### What is `app.listen()`?
+### What is app.listen()?
 
 Now, let's drop down to the bottom of the file and break down this line of code:
 
 ```js
-app.listen(port, () => console.log(`Listening on port ${3000}`)
+app.listen(port, () => console.log(`Listening on port ${port}`)
 ```
 
 - Based on the previous lesson, [how the web works](https://frontend.turing.io/lessons/module-2/how-the-web-works.html){:target='blank'}, what do you think the app is listening for? 
@@ -66,7 +66,7 @@ Running `node index.js` will start up the server to wait for incoming connection
 </section>
 
 <section class="answer">
-### Reviewing `app.listen()`  
+### Reviewing what app.listen() does 
 
 Let's start by reviewing what a server does. A server is waiting for requests to come in from clients. `app.listen` is the method that tells our Express application to start listening for those requests.  Without this line, our server would never start!
 
@@ -144,7 +144,7 @@ response handlers:
 <section class="checks-for-understanding">
 ### Reviewing Key Takeaways
 
-* What would you use the library Express for?
+* What would you use the library, **Express**, for?
 * What is it called when a client sends a message to a server?
 * What is it called when a server sends a message to a client?
 </section>
