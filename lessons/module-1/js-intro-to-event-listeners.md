@@ -53,14 +53,14 @@ Let's take a look at the syntax and then we'll talk about what's happening.
 <section class="call-to-action">
 ### Pair Practice
 
-Go back into your Report Card CodePen.
-* Create a function called `changeMessage` that updates the content inside of the element with the class `message`. You can choose the message!
-* Add a `<button>` to the HTML markup of the page.
-* Attach an event listener to that button.
-* When the button is clicked, have your `changeMessage` function fire!
+Look at your notes for the Greeting App.  
+* What element or elements would require an event listener? 
+* What is the first argument that you would pass into the event listener?
+* What do you want to happen when the event occurs?
 
-**Extra Time?**
-* Create a second button, function, and event listener, that work together to change the paragraph at the bottom of the page. _Hint: You many need to add a class attribute to that element._
+**Extra Time?**  
+* Begin coding it out! Don't worry about styling - just create a basic version of the Greeting App.
+* Don't forget to pseudocode and plan!
 </section>
 
 ### Style Change on Button Click
@@ -78,14 +78,25 @@ To do this, we need to combine what we just learned about event listeners with w
 
 We are putting a few pieces together now, so this may seem a bit more challenging. That's when it is especially important to pseudo-code, or write human-readable notes that give you a roadmap for the code you will later write.
 
-Your task is to add a new button the the Report Card markup. When the button is clicked on, the CSS rule on lines 15 should be applied to the `section` that wraps all the content in the HTML.
+Your task is to create a single `div` that is gray. Then, when it is clicked, it turns pink!
 
 In your notebook:
 * List the directions, as specially as possible, that you want to give to the computer.
 * What are the DOM elements that this program will need to know about? What variable names will you use for them?
+* What CSS styles might you need to create?
 
 Now, implement your ideas in code.
+
+**Extra Time?**
+
+If you have extra time, think about and pseudcode what you would need to do to build out the full CodePen heart:   
+- when clicked, the gray `div` turns pink
+- then on another click it turns deeper pink
+- then when clicked again, it turns red
+- then when clicked again, it returns to being gray
 </section>
+
+Now, get together with another group and discuss your approaches. This is not a time to share "solutions" or "answers", but instead to talk about how you went about breaking down the problem. Did you pseudocode? Did you look up any documentation? What did you google?
 
 ### Get User Input
 
@@ -143,14 +154,15 @@ Here is an example of the second task:
 
 ## Wrap Up
 
-Open up a webpage that you often visit. Maybe it's a social media page, maybe it's your bank's website, maybe it's a news site.
+Take a look back at your Greeting App notes and the CodePen you and your partner began creating earlier in the lesson.
 
-Take a few minutes and list all the event listeners that you think might be on that page! What do they do? 
+What else do you need to research? What methods would you look up? Add to your previous notes, and spend some time thinking about how else you might refine your problem-solving-process.
 
 ### Suggested re-teaching practice
 
 When you study event listeners, here are some suggested exercises:
 
+- Open up a webpage that you often visit. Maybe it's a social media page, maybe it's your bank's website, maybe it's a news site. Take a few minutes and list all the event listeners that you think might be on that page! What do they do? 
 - Look up what some common event listener types are (you've already seen `click`!)
 - Read up on the [event listener documentation](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 - Create a codepen with some HTML elements, and make up some event listeners for them! Try turning a red square green when it gets clicked. Try getting the data from an input field and displaying it on the page.
