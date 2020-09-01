@@ -15,10 +15,11 @@ Read through [Intro to Layout Pre-Work document](./intro-to-layout-prework.html)
 
 ## Vocabulary
 
-- `flexbox` a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces
-- `display` a css property that sets whether an element is treated as a block or inline element and the layout used for its children, such as grid or flex
+- `flexbox` - a layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces
+- `display` - a css property that sets whether an element is treated as a block or inline element and the layout used for its children, such as grid or flex
 - `flex parent` or `flex container` - Any HTML element that has been given the `display: flex` declaration
 - `flex child` or `flex item` - Any _direct descendants_ of a flex parent
+- `main axis` – the primary axis along which flex items are laid out. It can be horizontal or vertical, and is defined by the direction set by the `flex-direction` property.
 
 <section class="checks-for-understanding">
 ## Warm Up
@@ -35,7 +36,7 @@ Flexbox is a part of CSS that provides a more efficient way to lay out, align an
 
 ## Parents and Children
 
-As we start working with Flexbox, a very important distinction should be pointed out. We need to be careful about the CSS rules we apply to a parent element vs. those to a child element. A **parent** element wraps other elements, a **child** is nested inside the parent.
+As we start working with flexbox, a very important distinction should be pointed out. We need to be careful about the CSS rules we apply to a parent element vs. those to a child element. A **parent** element wraps other elements, a **child** is nested inside the parent.
 
 Let's look an some HTML to make sure we are all on the same page. Which element is the parent and which are its children?
 
@@ -90,32 +91,6 @@ When we use Flexbox, we will make the parent elements `flex containers` and the 
     - `align-items: center`
 </div>
 
-**NOTE:** Many of the examples used in this document contain a set of colored boxes. However, you won't find the styles for those boxes in the CSS. They are loaded in the CSS Pen settings, thanks to whoever made [this](https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/flexbox-playground.css)!
-
-## Creating a Flex Container
-
-Let's see another example of this! Without flexbox, 10 colorful `article`s might look like this:
-
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="jOObVJM" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Normal Blocks Els">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/jOObVJM">
-  Flexbox: Normal Blocks Els</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-<br>
-
-But with flexbox, we can start having some control over them:
-
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="eYYpBXG" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Creating a Container">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/eYYpBXG">
-  Flexbox: Creating a Container</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-<br>
-
-After applying `display: flex;` to the container, we observe that the items are now aligned in a horizontal row.
-
 <section class="note">
 ### Note
 
@@ -133,53 +108,66 @@ Another CSS property with flexbox is `flex-direction`. This property takes one o
 
 ## Justify Content
 
-We frequently see white space (margin or padding) used, and the content is **centered** on the screen. We can use flexbox to center content:
+`justify-content` allows us to define the alignment of items (flex children) along the *main axis*, and is incredibly useful for centering elements.  
 
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="xxxwRBz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Justify Content">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/xxxwRBz">
-  Flexbox: Justify Content</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+- `flex-start` (default): items are packed toward the start line
+- `flex-end`: items are packed toward to end line
+- `center`: items are centered along the line
+- `space-between`: items are evenly distributed in the line; first item is on the start line, last item on the end line
+- `space-around`: items are evenly distributed in the line with equal space around them
+- `space-evenly`: items are distributed so that the spacing between any two adjacent alignment subjects, before the first alignment subject, and after the last alignment subject is the same
+
+<img class="medium" src="./assets/images/flexbox/flexbox-axis.svg" alt="flexbox parent axis">
+
+
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="css-tricks" data-slug-hash="zzJMGJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox &amp;amp; justify-content">
+  <span>See the Pen <a href="https://codepen.io/team/css-tricks/pen/zzJMGJ">
+  Flexbox &amp; justify-content</a> by CSS-Tricks (<a href="https://codepen.io/css-tricks">@css-tricks</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-<br>
 
-But the items are still all crunched together. They might need some breathing room too, which can be achieved with margin!
-
-<div class="call-to-action">
-  <h2>Try It: Justify Content</h2>
-  <p>On the container's CSS rule, change the code to: <code class="try-it-code">justify-content: space-between;</code>. What happens?</p>
-  <p>Now try: <code class="try-it-code">justify-content: space-around;</code>. What is the difference between space-around and space-between?</p>
-  <p>Finished early? Learn about even more values that we can provide to <code class="try-it-code">justify-content</code> with <a target="blank" href="https://css-tricks.com/almanac/properties/j/justify-content/">CSS Tricks</a>.</p>
-</div>
-
-The `justify-content` property allows us to control how our content sits _on the main axis_.
+_The above Codepen is an example from CSS Tricks_
 
 <div class="call-to-action">
-  <h2>Try It: Justify Content</h2>
-  <p>On the container's CSS rule, change the code to: <code class="try-it-code">flex-direction: column; justify-content: center;</code>. What happens? Why do you think that is?</p>
+### Partner Practice
+- In your previous "Flexbox Playground" codepen, make sure the `.wrapper` has the following styles applied:
+  - `flex-direction: column` 
+  - `justify-content: center`
+- What happens? Why do you think that is?
 </div>
 
-In the section above, you should have observed that `justify-content: center;` had a different impact - it centered the items vertically. Since `flex-direction: column;` was applied, the _main axis_ was the vertical axis. `justify-content` will apply it's values to the items along the _main axis_.
+<section class="answer">
+### The Answer
+  In the section above, you should have observed that `justify-content: center;` had a different impact - it centered the items vertically. Since `flex-direction: column;` was applied, the _main axis_ was the vertical axis. `justify-content` will apply it's values to the items along the _main axis_.
+</section>
 
 ## Align Items
 
-Just like we can control how our content sits on the main axis with `justify-content`, we have a tool to control how our content sits _on the cross-axis_. Check out the CodePen below.
+Just like we can control how our content sits on the main axis with `justify-content`, we have a tool to control how our content sits _on the cross-axis_.
 
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="bGGVBJE" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Align-Items">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/bGGVBJE">
-  Flexbox: Align-Items</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-<br>
+- `stretch` (default): stretch to fill the container (still respect min-width/max-width)
+- `flex-start`: cross-start margin edge of the items is placed on the cross-start line
+- `flex-end`: cross-end margin edge of the items is placed on the cross-end line
+- `center`: items are centered in the cross-axis
+- `baseline`: items are aligned such as their baselines align
 
-Since `display: flex;` was applied and no further declarations were made for the direction, the default direction is row, or horizontal. So, `align-items: center;` centered the items in relation to the vertical axis, or the _cross-axis_.
+<img src="./assets/images/flexbox/flex-align.svg" alt="flex align values">
 
-If we add the declaration `flex-direction: column`, we will see the items center themselves along the vertical axis, or _cross-axis_.
+<section class="call-to-action">
+### Partner Practice
+- In your previous "Flexbox Playground" codepen, make sure the `.wrapper` has the following styles applied:
+  - `align-items: center`
+- Play around with and without `flex-direction: column` 
+</section>
 
+<section class="note">
+### Note
 
-## Partner Challenge
+These properties will get you far enough for now, but they're just scratching the surface at what flex can do! If you want more, check out this [extensive guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) from CSS tricks.
+</section>
 
+## Additional Partner Practice
 
 <section class="call-to-action">
 ### Instructions
@@ -196,7 +184,6 @@ If we add the declaration `flex-direction: column`, we will see the items center
 ## Additional Resources
 
 - [Flex Cheatsheet](https://yoksel.github.io/flex-cheatsheet/)
-- [CSS Tricks - Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [MDN Documentation](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 - [freeCodeCamp Blog Post](https://www.freecodecamp.org/news/learn-css-flexbox-in-5-minutes-b941f0affc34/)
 - [Scrimba Video that accompanies blog post above](https://scrimba.com/g/gflexbox)
