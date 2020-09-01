@@ -195,6 +195,9 @@ You'll notice that our method takes two arguments:
 
 - `actual`: The actual JS code that you want to run from the codebase
 - `expected`: The expected output that should be _returned_ based on test requirements
+
+You can learn more about the various methods available on the `assert` object
+[here](https://www.chaijs.com/guide/styles/#assert)
 </section>
 
 ## Importing/Exporting Files
