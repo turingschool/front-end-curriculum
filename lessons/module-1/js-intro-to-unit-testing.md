@@ -197,7 +197,7 @@ You'll notice that our method takes two arguments:
 - `expected`: The expected output that should be _returned_ based on test requirements
 
 You can learn more about the various methods available on the `assert` object
-[here](https://www.chaijs.com/guide/styles/#assert)
+[here](https://www.chaijs.com/guide/styles/#assert){:target="_blank"}
 </section>
 
 ## Importing/Exporting Files
