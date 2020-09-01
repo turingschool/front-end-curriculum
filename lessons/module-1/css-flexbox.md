@@ -1,11 +1,12 @@
 ---
-title: "CSS: Flexbox"
+title: "CSS Layout: Flexbox"
 length: 90
 tags: css, flexbox, layout
 ---
 
 ## Learning Goals
 
+* Explain what flexbox is and why its an important tool for creating layouts
 * Explain the difference between a parent and child element, be able to identify direct children
 * Apply Flexbox to containers in order to achieve a desired layout
 
@@ -14,45 +15,44 @@ Read through [Intro to Layout Pre-Work document](./intro-to-layout-prework.html)
 
 ## Vocabulary
 
-* parent
-* child
-* container
-* item
-* Flexbox
-* property
-* value
+- `flexbox` a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces
+- `display` a css property that sets whether an element is treated as a block or inline element and the layout used for its children, such as grid or flex
+- `flex parent` or `flex container` - Any HTML element that has been given the `display: flex` declaration
+- `flex child` or `flex item` - Any _direct descendants_ of a flex parent
 
-## What is FlexBox?
+<section class="checks-for-understanding">
+## Warm Up
 
-Flexbox is a part of CSS that provides a more efficient way to lay out, align and distribute space among items in a container. It helps us when we have those silly block elements, that even with `display: inline-block`, can be hard to do just what we want them to do.
+- With a partner, fork [this codepen](https://codepen.io/hannahhch/pen/zYqdVyp)
+- Explore the CSS that's already present. Without googling, what do you think `:nth-child` means?
+- In your CSS, add the property of "display" with a value of "flex" to the `.wrapper` selector. What happened? Which elements visually changed?
+</section> 
 
-## Self Guided Learning
+## What is Flexbox?
 
-You've been provided with a chunk of time to dedicate to learning and practicing Flexbox. If the lesson format is helpful, you can continue reading and use this as you main resource! If you prefer starting with documentation, blog posts, of different tutorials, you can absolutely do that. We've provided you with some links to start with.
+Flexbox is a part of CSS that provides a more efficient way to lay out, align and distribute space among items in a container. It helps us when we have those silly block elements, that even with `display: inline-block`, can be hard to do just what we want them to do. Before flexbox became popular, it was a real challenge to center elements. We would use something called a `float`, which could behave unpredictably at times. 
 
-- [CSS Tricks - Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [MDN Documentation](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [freeCodeCamp Blog Post](https://www.freecodecamp.org/news/learn-css-flexbox-in-5-minutes-b941f0affc34/)
-- [Scrimba Video that accompanies blog post above](https://scrimba.com/g/gflexbox)
-- [Flexbox Froggy - great practice!](https://flexboxfroggy.com/)
-- [Flexbox Defense - more practice!](http://www.flexboxdefense.com/)
 
 ## Parents and Children
 
 As we start working with Flexbox, a very important distinction should be pointed out. We need to be careful about the CSS rules we apply to a parent element vs. those to a child element. A **parent** element wraps other elements, a **child** is nested inside the parent.
 
-Let's look an some HTML to make sure we are all on the same page:
+Let's look an some HTML to make sure we are all on the same page. Which element is the parent and which are its children?
 
 ```html
 <section>
+  <h1></h1>
   <article></article>
   <article></article>
   <article></article>
 </section>
 ```
+<section class="answer">
+### The Answer
+In the code above, the `section` is the parent element, the `<h1>` and the 3 `article`s are all children elements because they are directly nested inside of that `section`. Proper indentation is really helpful here!
+</section>
 
-In the code above, the `section` is the parent element, and the 3 `article`s are all children elements because they are directly nested inside of that `section`. Let's looks at one more example:
-
+What about in this block of HTML? 
 ```html
 <section>
   <article>
@@ -66,10 +66,12 @@ In the code above, the `section` is the parent element, and the 3 `article`s are
   </article>
 </section>
 ```
+<section class="answer">
+### The Answer
+In the code above, we now have these `h2` elements nested inside of each `article`. It's important to know that `h2` is **not** a direct child of the `section`. It is technically a grandchild, and a child of `article`. The idea of **direct child** is really important to understand as we work with Flexbox.
 
-In the code above, we now have these `h2` elements nested inside of the `article`s. It's important to know that `h2` is **not** a direct child of the `section`. It is technically a grandchild, and a child of `article`. The idea of **direct child** is really important to understand as we work with Flexbox.
-
-When we use Flexbox, we will make the parent elements `flex containers` and the children elements `flex items`. There isn't really a difference between the two, but you'll need to know that vocabulary to successfully navigate documentation.
+When we use Flexbox, we will make the parent elements `flex containers` and the children elements `flex items`. 
+</section>
 
 <img class="small" src="./assets/images/flexbox/parent-container.svg" alt="graphic of parent/container">
 <img class="small" src="./assets/images/flexbox/child-item.svg" alt="graphic of child/item">
@@ -77,15 +79,22 @@ When we use Flexbox, we will make the parent elements `flex containers` and the 
 (Graphics from <a target="blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" >CSS Tricks</a>)
 
 <div class="call-to-action">
-  <h3>Explore Flexbox</h3>
-  <p>Fork <a href="https://codepen.io/ameseee/pen/PrQObO">this</a> CodePen to your account. One-by-one, uncomment lines 3, 4, 12, 13, and 14. Take note of what impact each "uncomment" has. Identify the containers and items each time Flexbox is used. After you make predictions about what each declaration does, read up on them on <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Tricks</a>. Do <strong>not</strong> read about every single thing on the page; use <code>cmd + f</code> to search for specific properties!</p>
+### Partner Practice
+  - Go back to your codepen from the warm up
+  - Experiment adding the "justify-content" property to your `.wrapper`. Add the following values (one at a time), and note what changes:
+    - `center`
+    - `space-around`
+    - `space-between`
+  - Delete or comment out your justify-content declaration. Add the following to your `.wrapper`, and note what changes;:
+    - `flex-direction: column`
+    - `align-items: center`
 </div>
 
 **NOTE:** Many of the examples used in this document contain a set of colored boxes. However, you won't find the styles for those boxes in the CSS. They are loaded in the CSS Pen settings, thanks to whoever made [this](https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/flexbox-playground.css)!
 
 ## Creating a Flex Container
 
-Without Flexbox, 10 colorful `article`s might look like this:
+Let's see another example of this! Without flexbox, 10 colorful `article`s might look like this:
 
 <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="jOObVJM" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Normal Blocks Els">
   <span>See the Pen <a href="https://codepen.io/turing-school/pen/jOObVJM">
@@ -95,7 +104,7 @@ Without Flexbox, 10 colorful `article`s might look like this:
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 <br>
 
-But with Flexbox, we can start having some control over them:
+But with flexbox, we can start having some control over them:
 
 <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="eYYpBXG" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Creating a Container">
   <span>See the Pen <a href="https://codepen.io/turing-school/pen/eYYpBXG">
@@ -107,9 +116,15 @@ But with Flexbox, we can start having some control over them:
 
 After applying `display: flex;` to the container, we observe that the items are now aligned in a horizontal row.
 
+<section class="note">
+### Note
+
+Most flexbox-related properties have _default_ values. We don't see them in our CSS, but can know that they are being applied! These properties can always be changed by us. You'll see some default values indicated below.
+</section>
+
 ## Flex Direction
 
-Another CSS property with Flexbox is `direction`. This property takes one of four values:
+Another CSS property with flexbox is `flex-direction`. This property takes one of four values:
 
 - `row` (default): left-to-right
 - `row-reverse`: opposite of row (right-to-left)
@@ -118,7 +133,7 @@ Another CSS property with Flexbox is `direction`. This property takes one of fou
 
 ## Justify Content
 
-We frequently see white space (margin or padding) used, and the content is **centered** on the screen. We can use Flexbox to center content:
+We frequently see white space (margin or padding) used, and the content is **centered** on the screen. We can use flexbox to center content:
 
 <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="xxxwRBz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Justify Content">
   <span>See the Pen <a href="https://codepen.io/turing-school/pen/xxxwRBz">
@@ -162,50 +177,28 @@ Since `display: flex;` was applied and no further declarations were made for the
 
 If we add the declaration `flex-direction: column`, we will see the items center themselves along the vertical axis, or _cross-axis_.
 
-<section class="call-to-action">
-## Put It All Together
 
-Now that you have had a chance to play around with some of properties of flexbox - let's solidify our learning. Please complete the [Flexbox Froggy](https://flexboxfroggy.com/) exercises before moving on to the Practice section!
-</section>
+## Partner Challenge
 
-<!-- ## Practice
-
-You will be assigned a portion of the Dog Party comp to recreate - but with Flexbox this time! You'll be given a starter kit with the HTML you should use and _some_ CSS. Follow the protocol below:
-
-* Fork each CodePen to your account.
-* Navigator - use notes from this lesson and navigate your driver towards implementing Flexbox!
-* Once you've achieved the comp, the driver should explain what each new line of CSS is doing.
-
-Dog Party Starter Kits:
-- [Nav](https://codepen.io/ameseee/pen/MMVEym)
-- [Top Section](https://codepen.io/ameseee/pen/zVWEEa)
-- [Bottom Section](https://codepen.io/ameseee/pen/PrRJaZ) -->
-
-## Solo Challenge
-
-**NOTE:** This is optional if you are following this as a self-guided tutorial.
-
-Now that you have had some experience implementing Flexbox on a comp that you have encountered, it's time to apply these skills to a new comp! We have selected a few common design layouts that you can implement with Flexbox. Follow the steps below for implementation:
 
 <section class="call-to-action">
 ### Instructions
 
-1. Create a new repo on GitHub called `Flexbox Comp Challenges`
-2. Create the following files: `collection-grid.html`, `pricing-table.html`, `collection-styles.css`, and `pricing-styles.css`
-3. Re-create the following comps using Flexbox - work on making small, atomic commits! Feel free to take creative liberty on color schemes, fonts, placeholder images/logos, etc.
-4. Once you have finished, submit your GH repo link in the Submission Form!
+1. Create a new repo on GitHub
+2. Create the following file: `index.html` and `styles.css` (don't forget to link your css to your html file!!)
+3. Re-create the following comp using flexbox - work on making small, atomic commits! Feel free to take creative liberty on color schemes, fonts, placeholder images/logos, etc.
 </section>
 
-#### Collection Grid
-<img class="medium-large" src="./assets/images/flexbox/collection.png">
 
 #### Pricing Table
 <img class="medium-large" src="./assets/images/flexbox/pricing.png">
 
-## Further Exploration
+## Additional Resources
 
-While you may not use the following properties as frequently, it's working reading through some documentation on them should you have a use-case in the future:
-
-* `flex-wrap`
-* `flex-grow`
-* `align-contents`
+- [Flex Cheatsheet](https://yoksel.github.io/flex-cheatsheet/)
+- [CSS Tricks - Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [MDN Documentation](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- [freeCodeCamp Blog Post](https://www.freecodecamp.org/news/learn-css-flexbox-in-5-minutes-b941f0affc34/)
+- [Scrimba Video that accompanies blog post above](https://scrimba.com/g/gflexbox)
+- [Flexbox Froggy - great practice!](https://flexboxfroggy.com/)
+- [Flexbox Defense - more practice!](http://www.flexboxdefense.com/)
