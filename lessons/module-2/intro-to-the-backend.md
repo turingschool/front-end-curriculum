@@ -91,7 +91,7 @@ app.get('/welcome', (request, response) => {
 })
 ```
 
-This is known as a **response handler**.  Let's break this down and explore what is happening here:
+This is known as a **request handler**.  Let's break this down and explore what is happening here:
 
 *  How would you describe `app.get` using JavaScript terminology?  What do you think this is doing?
 * What arguments does `app.get` take? 
@@ -133,7 +133,7 @@ client.
 ### Time to experiment further!
 
 Using what you've learned so far as a template, see if you can create three
-response handlers:
+request handlers:
 * The first should use the path `/date`, and should respond to the client with the
   current date
 * Next use the path `/myName`, and respond to the client with your own name
