@@ -172,9 +172,11 @@ These properties will get you far enough for now, but they're just scratching th
 <section class="call-to-action">
 ### Instructions
 
-1. Create a new repo on GitHub
-2. Create the following file: `index.html` and `styles.css` (don't forget to link your css to your html file!!)
+1. Fork [this repo](https://github.com/turingschool-examples/flex-comp-boilerplate) 
+2. Examine the HTML, taking note of parent and child elements
 3. Re-create the following comp using flexbox - work on making small, atomic commits! Feel free to take creative liberty on color schemes, fonts, placeholder images/logos, etc.
+
+*NOTE: The HTML has been provided for you, but you are free to make changes if needed (ie: adding divs, classnames, etc.)*
 </section>
 
 
