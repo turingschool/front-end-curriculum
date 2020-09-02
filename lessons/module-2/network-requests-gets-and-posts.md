@@ -17,12 +17,24 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 * `AJAX` Updating a webpage based on data from the network without reloading the whole thing
 
 ## What is a network request?
+Let's start by reviewing what a network request is and see it in action!
 
-Open up your dev tools and navigate to the Network tab. Refresh the page and watch what happens.
+<section class="call-to-action">
+### Warmup
+
+Open up your dev tools and navigate to the Network tab. Refresh the page and watch what happens.  You should see something like this:
 
 ![network dev tool example](https://i.imgur.com/C5brbyU.png)
 
-Each item on a webpage is coming from some server somewhere. The link tags in your HTML connecting your stylesheets and JavaScript files prompt network requests.
+* In your notebook, write down what a network request is in your own words.
+* Based on the data that shows up, take note of the different columns and what they refer to?
+</section>
+
+<section class="note">
+### What is happening here?
+
+Each item listed is a request for a file from some server somewhere. The one on the top is the initial HTML file, and then the link tags in your HTML prompt network requests for the stylesheets and JavaScript files necessary.  Cool!
+</section>
 
 ### Types of Requests
 
@@ -35,32 +47,27 @@ The HTTP protocol defines a variety of types of requests we can make. These incl
 * `PUT` - send information to a server, updating entire resources
 * `PATCH` - send informatin to a server, updating partial resources
 * `DELETE` - remove information from a server
-* And <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="\__blank"> many others </a>
+* And [many others](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods){:target='blank'}
 
-
-While getting comfortable with network requests, we're going to focus on **GET** and **POST** requests.
+Today we'll be focusing on how to do **GET** and **POST** requests on the frontend side.
 
 ### Responses
 
-Every request we make, successful or not, will receive a response.
+Every request we make, successful or not, will receive a response.  When looking at the **Network** tab in the dev tools, you might have noticed some requests had different respond codes. The HTTP protocol lays a series of [Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target='blank'} to give more information on the status of a request.
 
-Take another look at the **Network** tab in the dev tools.
+<section class="call-to-action">
+### Reviewing status code levels
 
-<img src="../../assets/images/network-requests-response-statuses.png" alt="network request response codes in dev tools">
+What do each of the status codes mean on a high level?
+- 1XX
+- 2XX
+- 3XX
+- 4XX
+- 5XX
+</section>
 
-We can see that each request has a different response code. The HTTP protocol lays a series of <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="\__blank">Response Codes</a> to give more information on the status of a request.
-
-Here's a high level overview of different statuses:
-
-```
-1XX status codes have informational (in progress) purposes
-2XX indicates success
-3XX is for redirection
-4XX represent client-side errors
-5XX indicate problems on the server side
-```  
-
-#### Common statuses:
+<section class="answer">
+### Here's a few common status codes 
 
 * `200 OK` -- successful request
 * `201 Created`-- successful POST request
@@ -68,146 +75,75 @@ Here's a high level overview of different statuses:
 * `404 Not Found` -- The request was correctly structured, but specified a non-existent resource
 * `500 Internal Server Error` -- Something wrong happened on the server's side of things
 
+![google 500 error](https://i0.wp.com/s3.amazonaws.com/production-wordpress-assets/blog/wp-content/uploads/2016/11/29074529/500-internal-server-error.png?fit=604%2C237&ssl=1)
+</section>
 
-## Making a request
+## Making A Request
 
-Remember, every resource we use on our webpages has to get requested from some server.
+Each network request takes time - they're *expensive*. Imagine if you had to wait for a webpage to load one thing at a time! It would not make for a great user experience.
 
-Why is it important to keep this in mind?
-
-Each network request takes time - they're _expensive_. Imagine if you had to wait for a webpage to load one thing at a time! It would not make for a great user experience.
-
-Network requests are expensive no matter what we do. However, we can run them _asynchronously_, saving some time.
+Network requests are expensive no matter what we do. However, we can run them *asynchronously*, saving some time.
 
 `Asynchronous` operations refer to things that can happen outside the normal order of execution. Network requests can be `synchronous` or `asynchronous`, but most modern applications do them `asynchronously` to improve performance / the user experience.
 
-We'll come back to this idea, but know that when we make requests, we typically do them asynchronously. For now, lets look at how to actually make a request.
+<section class="note">
+### Multiple ways of making requests
 
-**AJAX**
+Note that there are a few ways to make a request.  One way you might see is through a process called AJAX, or [**A**synchronous **J**avaScript **A**nd **X**ML](https://developer.mozilla.org/en-US/docs/AJAX){:target='blank'}. AJAX was a huge advancement for the web, as it allowed developers to update part of a webpage without reloading the entire thing.
 
-One of the more common ways to make a request is through a process called AJAX, or [**A**synchronous **J**avaScript **A**nd **X**ML](https://developer.mozilla.org/en-US/docs/AJAX). AJAX was a huge advancement for the web, as it allowed developers to update part of a webpage without reloading the entire thing.
+Traditionally, AJAX requests have been made via the [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest){:target='blank'} object. However, the process is a little clunky, with developers transitioning over to a more streamlined way using the **fetch API**.  This is much more commonly used by developers nowadays and will be the primary way we make network requests at Turing.
 
-Traditionally, Ajax requests have been made via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="\__blank"> XMLHttpRequest object </a>. However, the process is a little clunky, so developers made a more streamlined way to do the same thing: the `fetch API`.
-
-<!-- Cool, but really, what is it?
-
-_“the method of exchanging data with a server, and updating parts of a web page – without reloading the entire page.”_
-
-Once we get a response from the server with the data, we can work with data and display it on the page.
-
-### How?
-
-1. An event occurs in a web page (the page is loaded, or maybe a button is clicked)
-2. An XMLHttpRequest object is created by JavaScript
-3. The XMLHttpRequest object sends a request to a web server
-4. The server processes the request
-5. The server sends a response back to the web page
-6. The response is read by JavaScript
-7. Proper action (like page update) is performed by JavaScript
-
-Using the `XMLHttpRequest` object, developers can `GET` information to/from remote servers (among other tasks you'll learn more about in future mods). Depending on how the information is transmitted, the server should respond back with a [status code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). Here is a high-level summary of the status code ranges:
-
-```
-1XX status codes have informational purposes
-2XX indicates success
-3XX is for redirection
-4XX represent client-side errors
-5XX indicate problems on the server side
-```  
-
-
-##### Here are a few of the popular players:
-
-* **200 - OK**
-	* Typically the response you're hoping for when trying to get information from an API
-* **400 - Bad Request**
-   * The server did not comprehend the request
-* **404 - Not Found**
-	* The server did not match any of the parameters you requested
-* **500 - Internal Server Error**
-	* It's the server's fault
-
-![google 500 error](https://i0.wp.com/s3.amazonaws.com/production-wordpress-assets/blog/wp-content/uploads/2016/11/29074529/500-internal-server-error.png?fit=604%2C237&ssl=1)
-
----
-
-### Practice Time!
-Open up your console and walk through these steps:
-
-First create a new instance of an XMLHttpRequest Object:
-
-```js
-var xhttp = new XMLHttpRequest();
-```
-
-Next let's initialize the request using the [`open()`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open) method.
-
-We will hit this [trivia API](https://opentdb.com/api_config.php). We'll need to use the `GET` method, define our endpoint, and provide a 3rd argument of `TRUE` which tells the request to be asynchronous:
-
-```js
-xhttp.open("GET", "https://opentdb.com/api.php?amount=10&category=27&type=multiple", true);
-```
-
-Now let's send the request:
-
-```js
-xhttp.send();
-```
-
-If it worked, you should be able to type `xhttp` and see the results in your XMLHttpRequest object with a status of `200` as well as some responseText containing the specific trivia returned.
-
---- -->
+The great thing about using the fetch API is that we can use it "for free" with ES6 (as opposed to `$.get` which requires us to bring in jQuery or *axios* which is a separate npm package)!
+</section>
 
 ## ES6: fetch()
 
-Another great tool to help with network requests is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="\__blank">fetch API</a>. This is what we'll focus on in Mod 2, since we can use it "for free" with ES6 (as opposed to `$.get` which requires us to bring in jQuery or *axios* which is a separate npm package)!
+Speaking of using the fetch API, let's take a look at the docs on what it is!
 
-_It's important to note that not every browser supports the fetch api; polyfills are available, but many legacy codebases use other apis that are supported by older browsers, such as Axios or Superagent._
+<section class="call-to-action">
+### In Breakout Groups
 
-From the docs:
+Using the [fetch API docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API){:target='blank'}, answer the following questions.
 
-_The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a promise that resolves to the Response to that request, whether it is successful or not._
-
-
-<section class="note">
-Fetch will **always** return a promise
+* What arguments does the `fetch` method take?  Clarify which ones are mandatory and optional.
+* What does `fetch` always return?  If the term is new to you, read further on what it is. 
 </section>
 
-`fetch` takes only one mandatory argument: the url of the resource we are requesting.
+<section class="note">
+### Not all browsers support fetch
 
-For example:
+It's important to note that not every browser supports the fetch api; polyfills are available, but many legacy codebases use other apis that are supported by older browsers, such as `Axios` or `Superagent`.  You can see what [browsers support fetch here](https://caniuse.com/#search=fetch){:target='blank'}!
+</section>
 
-```js
-fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
-```
-This make a basic `GET` request to the <a href="https://opentdb.com/api_config.php" target="\__blank"> Trivia API</a>.
+<section class="answer">
+### Key Takeaways  
 
-`fetch` can also take an optional `init` object as its second argument.
-
-### `fetch` syntax
+- The `fetch()` method takes one mandatory argument, the path to the resource you want to fetch.
+- It can take an optional options object to get more specific about the `method`, `body`, and `headers`.
 
 ```js
 fetch(resourceUrl, {/*init object with `method`, `body`, and other optional properties*/});
 // Returns a promise
 ```
 
-Let's dive deeper into fetch by looking at how we can make different requests with it
+- `fetch` will *always* return a promise that either *resolves* or *rejects*.
+</section>
 
 ### GET with fetch
 
 By default, fetch performs a `GET` request. This means that if we only add a resource url to the fetch call, we'll try and `GET` information the resource leads us to.
 
-Try typing this in your console and see what we get back:
+<section class="call-to-action">
+### Try it out!
+
+Try typing this in your console and see what you get back:
 
 ```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
 ```
 
-If we put this in the console, we'll see something like this:
-
-```
-Promise {<pending>};
-```
+* This is a basic `GET` request to the [Trivia API](https://opentdb.com/api_config.php){:target='blank'} to send us back a random trivia question.  Does it return what you expect?
+</section>
 
 <section class="note">
 #### Promises - the quick version
@@ -220,6 +156,9 @@ We don't need to worry too much about them now. Just know that a Promise will ei
 * `.catch()` runs upon the rejection of a failed promise. Used for error handling
 </section>
 
+<section class="call-to-action">
+### What do I do with this "Promise {<pending>}"?
+
 Diving into the returned promise reveals some information, such as its status and value, but nothing that's too immediately useful. Instead we have to resolve it:
 
 ```js
@@ -227,13 +166,18 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .then(response => console.log(response))
 ```
 
-If you plug the code above into your console, you should see the Response object come back!
+* What do you get when you log the response object?  Take note of the properties there.
+* There's one problem: we can't seem to get the data we want from the Response.body.  How is data sent through requests and responses?  Think back to `localStorage` in mod 1 and what you had to do in order to access data.
+</section>
 
-However, there's one problem: we can't seem to get the data we want from the Response.body. There's one more step to parse the data (much like you do when pulling things from localStorage). We'll need to use the **`Body.json()`** method that comes with fetch to parse it and call another `.then()`. (See code snippet below)
+<section class="answer">
+### Parsing our response  
 
-From the docs, the `.json()` method returns "A promise that resolves with the result of parsing the body text as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number..."
+Similar to what you did with localStorage, we'll need to parse our response!  We'll need to use the **`Body.json()`** method that comes with fetch to parse it and call another `.then()`.
 
-In short, it gives us access to the data!
+From the docs, the `.json()` method returns "A promise that resolves with the result of parsing the body text as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number.
+
+Let's try it out!
 
 ```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
@@ -249,10 +193,12 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .then(data => console.log(data))
   .catch(err => /* do something else */);
 ```
+</section>
 
 <section class="call-to-action">
-### Practice
-Using the <a href="https://opentdb.com/api_config.php" target="\__blank"> Trivia API</a>, do the following in your console:
+### Getting practice
+
+Using the [Trivia API](https://opentdb.com/api_config.php){:target='blank'}, do the following in your console:
 
 - Fetch 10 science questions using fetch and console.log the entire response
 - Fetch 20 geography questions and for each trivia object console.log the answer only
