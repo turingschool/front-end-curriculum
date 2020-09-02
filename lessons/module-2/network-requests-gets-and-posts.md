@@ -27,7 +27,7 @@ Open up your dev tools and navigate to the Network tab. Refresh the page and wat
 ![network dev tool example](https://i.imgur.com/C5brbyU.png)
 
 * In your notebook, write down what a network request is in your own words.
-* Based on the data that shows up, take note of the different columns and what they refer to?
+* Based on the data that shows up in the Network tab, what are each of the columns referring to?  (totally okay to take an educated guess)
 </section>
 
 <section class="note">
@@ -43,7 +43,7 @@ Network requests can be made to **GET** information from a server, but it's not 
 The HTTP protocol defines a variety of types of requests we can make. These include:
 
 * `GET` - retrieve information from a server
-* `POST` - send information to a server, creating / updating resources
+* `POST` - send information to a server, creating resources
 * `PUT` - send information to a server, updating entire resources
 * `PATCH` - send informatin to a server, updating partial resources
 * `DELETE` - remove information from a server
@@ -131,7 +131,7 @@ fetch(resourceUrl, {/*init object with `method`, `body`, and other optional prop
 
 ### GET with fetch
 
-By default, fetch performs a `GET` request. This means that if we only add a resource url to the fetch call, we'll try and `GET` information the resource leads us to.
+By default, fetch performs a `GET` request. This means that if we only add a resource url to the fetch call, we'll try and `GET` information from that resource.
 
 <section class="call-to-action">
 ### Try it out!
