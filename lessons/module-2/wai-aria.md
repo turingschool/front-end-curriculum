@@ -28,13 +28,19 @@ __Good News!__ _A great deal of web content can be made accessible just by makin
 
 Most production websites are not very accessible. This is a great way to set yourself apart from other candidates in the job hunt and add value to teams early.
 
+
+<section class="answer">
+
+### History of accessibility technology
 Let's watch the first ten minutes of [this video](https://www.youtube.com/watch?v=qdB8SRhqvFc) to see how far accessible technologies in web development have come.
 
-<section class="call-to-action">
-  While you watch, think about these questions:
-  * What has changed about web accessibility in recent years?
-  * What is the accessibility tree?
-  * How can developers make webpages more accessible?
+  <section class="call-to-action">
+    While you watch, think about these questions:
+    * What has changed about web accessibility in recent years?
+    * What is the accessibility tree?
+    * How can developers make webpages more accessible?
+  </section>
+
 </section>
 
 ## Ways to Make Your Websites More Accessible
@@ -61,14 +67,17 @@ __Side Note__: Documentation is your friend when developing a website. Here are 
 
 ### CSS/Styling
 
+<section class="answer">
+
+## On removing focus rings
 ***PLEASE NOTE***
 
 DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
 
 This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options. And [this article](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) also has some alternatives to use to get rid of the focus ring while still keeping things accessible.
 
-A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles. 
-
+A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles.
+</section>
 
 ### WAI-ARIA
 
@@ -92,7 +101,7 @@ An important point about WAI-ARIA attributes is that they don't affect the appea
 #### Rules of ARIA Use
 The core rules to keep in mind when using ARIA are:
 
-If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time, and will annoy your screen reader users. Many "accessibility flags" come from developers _overusing_ ARIA. 
+If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time, and will annoy your screen reader users. Many "accessibility flags" come from developers _overusing_ ARIA.
 
 ### Aria Roles, States, and Properties
 
@@ -167,7 +176,7 @@ let button = document.getElementById("menu-button");
 
 button.addEventListener("click", function() {
   let attr = button.getAttribute("aria-expanded");
-  
+
   if (attr === 'true') {
      button.setAttribute("aria-expanded", false);
   } else {
@@ -257,6 +266,9 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 
 __Below are some low hanging fruit that you should always incorporate in lessons__
 
+<section class="answer">
+### Low hanging fruit
+
 ### Alt Attributes for Yo Images!
 
 * Hugely important
@@ -334,13 +346,15 @@ Note: you should _really_ be providing labels with all of your input fields, lik
 
 ```
 
-You can use the `aria-label` below to define a label, but remember to use semantic, native elements whenever possible. 
+You can use the `aria-label` below to define a label, but remember to use semantic, native elements whenever possible.
 
 * `aria-label`: property that defines a short title for an element
 
 ```html
 <input type="text" aria-label="First name" placeholder="Hannah">
 ```
+
+</section>
 
 
 -------------------------------------------------
