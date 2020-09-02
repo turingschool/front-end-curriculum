@@ -7,7 +7,7 @@ tags: css, flexbox, layout
 ## Learning Goals
 
 * Explain what flexbox is and why its an important tool for creating layouts
-* Explain the difference between a parent and child element, be able to identify direct children
+* Explain the difference between a parent and child element, be able to identify immediate children
 * Apply Flexbox to containers in order to achieve a desired layout
 
 ## Pre-Work
@@ -18,7 +18,7 @@ Read through [Intro to Layout Pre-Work document](./intro-to-layout-prework.html)
 - `flexbox` - a layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces
 - `display` - a css property that sets whether an element is treated as a block or inline element and the layout used for its children, such as grid or flex
 - `flex parent` or `flex container` - Any HTML element that has been given the `display: flex` declaration
-- `flex child` or `flex item` - Any _direct descendants_ of a flex parent
+- `flex child` or `flex item` - Any _immediate descendants_ of a flex parent
 - `main axis` – the primary axis along which flex items are laid out. It can be horizontal or vertical, and is defined by the direction set by the `flex-direction` property.
 
 <section class="checks-for-understanding">
@@ -31,7 +31,7 @@ Read through [Intro to Layout Pre-Work document](./intro-to-layout-prework.html)
 
 ## What is Flexbox?
 
-Flexbox is a part of CSS that provides a more efficient way to lay out, align and distribute space among items in a container. It helps us when we have those silly block elements, that even with `display: inline-block`, can be hard to do just what we want them to do. Before flexbox became popular, it was a real challenge to center elements. We would use something called a `float`, which could behave unpredictably at times. 
+Flexbox is a part of CSS that provides an efficient way to lay out, align and distribute space among items in a container. Before flexbox became popular, it was a real challenge to center elements. We would use something called `float`, which could behave unpredictably at times. 
 
 
 ## Parents and Children
@@ -69,7 +69,7 @@ What about in this block of HTML?
 ```
 <section class="answer">
 ### The Answer
-In the code above, we now have these `h2` elements nested inside of each `article`. It's important to know that `h2` is **not** a direct child of the `section`. It is technically a grandchild, and a child of `article`. The idea of **direct child** is really important to understand as we work with Flexbox.
+In the code above, we now have these `h2` elements nested inside of each `article`. It's important to know that `h2` is **not** a aimmediate child of the `section`. It is technically a grandchild, and a child of `article`. The idea of **immediate child** is really important to understand as we work with Flexbox.
 
 When we use Flexbox, we will make the parent elements `flex containers` and the children elements `flex items`. 
 </section>
@@ -167,7 +167,7 @@ Just like we can control how our content sits on the main axis with `justify-con
 These properties will get you far enough for now, but they're just scratching the surface at what flex can do! If you want more, check out this [extensive guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) from CSS tricks.
 </section>
 
-## Additional Partner Practice
+## Additional Practice
 
 <section class="call-to-action">
 ### Instructions
