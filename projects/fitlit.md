@@ -232,7 +232,7 @@ Dates and deadlines to be aware of:
 * **Wednesday, September 2nd** - Project due at 9PM.
 * **Thursday, September 3rd** - Project evals.
 
-Please submit your finished projects [here](https://docs.google.com/spreadsheets/d/1sezifM_yYe9M7VK0DrnoiTyAnAXsU6d2UaQlSfyH9aQ/edit#gid=1401427478) 
+Please submit your finished projects [here](https://docs.google.com/spreadsheets/d/1sezifM_yYe9M7VK0DrnoiTyAnAXsU6d2UaQlSfyH9aQ/edit#gid=1401427478)
 
 ---
 
@@ -240,7 +240,7 @@ Please submit your finished projects [here](https://docs.google.com/spreadsheets
 
 ### Functional Expectations
 * 4: Application fulfills all expectations of iterations 1 - 5 with no bugs or missing functionality *as well as* an extension.
-* 3: Application fulfills expectations of iterations 1 - 5 with no bugs or missing functionality.
+* 3: Application fulfills expectations of iterations 1 - 4 with no bugs or missing functionality.
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage.
 
