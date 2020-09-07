@@ -15,11 +15,10 @@ length: 60
 - `refactor` Rewriting working code for readability, maintainability, or performance without changing it's behavior
 
 <section class="call-to-action">
-### Turn + Talk
+### Turn and Talk
 
-Talk with your partner: If someone says, "this needs to be refactored", what might they see that makes them say that?
+Talk with your partner: If someone says, "this needs to be refactored", what might they see that makes them say that? Be ready to share your list!
 
-Then, scroll through [this `main.js` for a Number Guesser project](https://github.com/turingschool-examples/num-guess-refactor/blob/master/main.js) (do NOT clone it down right now), and take note of 2-3 opportunities for refactoring.
 </section>
 
 ## Modeling a Refactor
@@ -47,6 +46,6 @@ With the repo you select based on the level of heat you want, take these steps:
 - Once you feel like you are done, ensure that the app is behaving as it originally was in the browser. Make sure to clean up any old comments, old code, whitespace, etc.
 
 **Mild:** Clone down [this repo](https://github.com/turingschool-examples/num-guess-refactor).
-**Medium:** Use your Hang in There repo
-**Spicy:** Ask another group for the link to their repo
+**Medium:** Use your pair project repo
+**Spicy:** Ask another pair for the link to their repo
 </section>
