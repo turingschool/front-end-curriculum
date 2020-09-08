@@ -18,7 +18,9 @@ You'll be building an application that allows a user to set goals for their heal
 
 ## Set Up
 
-Create a new directory called `intention-timer`. It should contain:
+Create a new directory called `intention-timer`.You'll need to initialize git in your local repo. You can brush up on that process with [this article](https://guides.github.com/introduction/git-handbook/).
+
+It should contain:
 - `index.html`
 - `styles.css`
 - `activity.js`
@@ -99,6 +101,7 @@ Make sure that you link this file in your `index.html` using a `script` tag, abo
 
 - When the user refreshes the page,
   - Their past activities are still displayed!
+  - Hint: localStorage could come in handy here...
 
 ## Optional Extensions
 
@@ -116,6 +119,9 @@ Remember, do not move on to any of these extensions if functionality from the pr
 
 - **Option 3:** Pausing the Timer
   - After the timer begins, a user should be able to pause the timer and resume an activity when they wish
+
+- **Option 4:** Animate the Timer
+  - Animate the border around the timer in a way that communicates how much time is left.
 
 **Consider the user experience:** the actions a user needs to take should be intuitive for someone who has never seen this application before. [Smashing Magazine](https://www.smashingmagazine.com/) contains great resources and articles, but their homepage also has some great examples of classy animations and hover states that convey something to the user.
 
@@ -141,12 +147,7 @@ Active (color-coded) and non-active (white) icons are all stored [here](https://
 
 ### Fonts
 
-[Montserrat](https://fonts.google.com/?query=mont&selection.family=Montserrat:300,400), both 300 and 400 weights are used in the comp
-
-### Mobile Layouts
-
-<img src="./assets/intention-timer/mobile-1.png" style="height: 400px;">
-<img src="./assets/intention-timer/mobile-2.png" style="height: 400px;">
+[Montserrat](https://fonts.google.com/?query=mont&selection.family=Montserrat:300,400), both 300 and 400 weights are used in the comp. You'll need to link this in the HTML.
 
 ## Rubric
 
@@ -161,13 +162,39 @@ Scores land in a range between 1 and 4. Below is a breakdown of what those numbe
 
 To earn a given score, an application must meet the requirements listed in that score explanation and all scores lower.
 
+### Professionalism
+
+* **4:** 
+  - Team uses a PR template
+  - Team habitually conducts thorough code reviews in the GitHub GUI to document the progress of the application
+  - Team has sought out code reviews from one or more mentors
+  - README is well formatted and descriptive with screenshots or gifs of the application in action.
+* **3:** 
+  - Commits are atomic and frequent, effectively documenting the evolution/progression of the application
+  - Commit messages are consistent, descriptive, and concise
+  - Team uses PRs to screen/verify code before adding it to the main branch
+  - There is no more than a 10% disparity in project contributions between teammates
+  - README is well formatted and gives good context about the project, including links to both contributors' GitHub profiles, and to the deployed GitHub Pages site
+* **2:** 
+  - Commits are large and do not effectively communicate the progression of the application
+  - Team uses PRs but do not review code before merging into the main branch
+  - All teammates can speak to the purpose and functionality of any/every line of code
+  - There is a 20% disparity in project contributions between teammates
+  - README is brief and does not provide context for the project
+* **1:** 
+  - Teammates do not understand the purpose and functionality of every line of code
+  - Some commits are pushed directly to the main branch
+  - PRs are used inconsistently
+  - There is a 50% disparity in project contributions between teammates
+  - There is no README, or README is insufficient
+
 ### Comp Recreation
 
 * **4:** 
   - Application implements all major comp details accurately and correctly on desktop **and** mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. 
-  - Additional elements that have been added match the visuals established in the comps.
+  - Additional elements and animations  have been added that match the visuals established in the comps.
 * **3:** 
-  - Application implements **all** major comp details accurately and correctly on desktop and **most** comp details on mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. 
+  - Application implements **all** major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment,  etc).
   - If additional elements were added, they generally match the visuals established in the comps, but may be slightly awkward. 
   - Careful attention was given to the little details like spacing, alignment, and hover states.
 * **2:** 
@@ -175,61 +202,46 @@ To earn a given score, an application must meet the requirements listed in that 
 * **1:** 
   - Crafts markup according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
 
-### HTML - Style and Implementation
+### HTML && CSS - Style and Implementation
+* **4:**
+  * Application adds to the requirements of the Proficient category by using [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes
+  * Application fully implements HTML that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/aria-accessibility.html).
 
-* **4:** 
-  - Application fully implements HTML that is accessible for folks with visual disabilities. 
-  - Reference [this lesson plan](http://frontend.turing.io/lessons/floating/aria-accessibility.html)
-* **3:** 
-  - Application has markup that is easy to read and follows across naming conventions
-  - Application minimizes extraneous elements
-* **2:** 
-  - Application adds to the above with HTML that incorporates semantic HTML elements whenever possible
-  - Application has a simple, clean HTML structure
-* **1:** 
-  - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
-* **0:**
-  - HTML is not formatted properly
 
-### CSS - Style and Implementation
+* **3:**
+  * Application utilizes good naming conventions for HTML classes and IDs
+  * CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles
 
-* **4:** 
-  - Application adds to the requirements of the Proficient category by using [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes
-* **3:** 
-  - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle
-  - Application has 3 or fewer media queries for responsiveness
-* **2:** 
-  - Application adds organizational conventions for the whole stylesheet
-  - Application has 5 or fewer media queries for responsiveness
-* **1:** 
-  - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
-* **0:**
-  - CSS is not formatted properly
-  - Application is not responsive
+* **2:**
+  * Application adds to the above with HTML that incorporates semantic HTML elements whenever possible
+  * Application has a simple, clean HTML structure
+  * Application utilizes organizational conventions for the whole CSS stylesheet
+
+* **1:**
+  * Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
+  * Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html) 
 
 ### JavaScript - Style and Implementation
 
 * **4:**
   * Functions and code are well-refactored and show developer empathy
   * There are no global variables aside from query selectors, `pastActivities` and `currentActivity`.
-  * Functions strictly observe [SRP](http://knnthvu.weebly.com/srp-and-dry.html) and do not exceed 10 lines
   * Uses logical operators instead of if/else statements wherever applicable
   * There are no nested if/else statements
 * **3:**
   * Application uses event delegation correctly on dynamic elements
-  * Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with a focus on [SRP](http://knnthvu.weebly.com/srp-and-dry.html)
+  * Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with a focus on [SRP](http://knnthvu.weebly.com/srp-and-dry.html). No function is more than 10 lines (this does not include functions that insert html)
   * Application demonstrates full separation of data-model and presentational logic (there is no DOM logic in the `Activity` class)
   * Application makes use of arguments and parameters to make functions more dynamic/reusable
   * Application correctly uses `localStorage` to persist data
 * **2:**
   * There are no extraneous or unnecessary parameters in functions
   * Application uses function declarations over anonymous functions in event listeners
-  * Application uses if/else statements to handle multiple paths of logic/error handling
+  * Application uses appropriate number of if/else statements to handle multiple paths of logic/error handling
   * Application fails to fully separate data-model and presentational logic (DOM) - example: there is DOM logic in the `Activity` class
 * **1:** 
   * Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
-* **0:**
-  * JS is not formatted properly
+
 
 ### Functional Expectations
 
