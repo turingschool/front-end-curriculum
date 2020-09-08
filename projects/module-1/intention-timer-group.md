@@ -191,7 +191,6 @@ To earn a given score, an application must meet the requirements listed in that 
 ### Comp Recreation
 
 * **4:** 
-  - Application implements all major comp details accurately and correctly on desktop **and** mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. 
   - Additional elements and animations  have been added that match the visuals established in the comps.
 * **3:** 
   - Application implements **all** major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment,  etc).
