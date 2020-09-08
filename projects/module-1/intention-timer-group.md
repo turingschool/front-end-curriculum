@@ -230,7 +230,7 @@ To earn a given score, an application must meet the requirements listed in that 
   * There are no nested if/else statements
 * **3:**
   * Application uses event delegation correctly on dynamic elements
-  * Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with a focus on [SRP](http://knnthvu.weebly.com/srp-and-dry.html). No function is more than 10 lines (this does not include functions that insert html)
+  * Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with a focus on [SRP](http://knnthvu.weebly.com/srp-and-dry.html). No function is more than 10 lines (this does not include functions that insert html). Remember that you shouldn't sacrifice the legibility of your code to shorten the number of lines.
   * Application demonstrates full separation of data-model and presentational logic (there is no DOM logic in the `Activity` class)
   * Application makes use of arguments and parameters to make functions more dynamic/reusable
   * Application correctly uses `localStorage` to persist data
