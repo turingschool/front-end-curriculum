@@ -72,7 +72,7 @@ So how else can we listen for events on dynamic content?  Let's dive into how ev
 
 Event propagation is an important yet misunderstood topic/term when talking about events. Event propagation is an _overarching term_ that includes the three different phases of DOM Events: capturing, targeting, and bubbling. Event propagation is bi-directional (starts at the window... goes to the target... and ends at the window) and is often improperly used as a synonym for event bubbling. Every time an event occurs, event propagation is occurring behind the scenes.
 
-![Graphical representation of an event dispatched in a DOM tree using the DOM event flow](/assets/images/eventpropagation.png)
+![Graphical representation of an event dispatched in a DOM tree using the DOM event flow](/assets/images/propagation-diagram.png)
 
 * **Event capture phase** - When an event occurs in the DOM, notification of the event is passed starting at the top of the DOM tree and passing down through all parent element nodes all the way to the target node where the event occurred.
 * **Event target phase** - After the capturing phase occurs, the Target phase occurs. The target phase only includes a notification of Node where the event took place.
