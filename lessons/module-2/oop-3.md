@@ -136,8 +136,8 @@ When used in a constructor, the `super` keyword appears alone and must be used b
 
 With a partner, think about an arcade game such as Frogger, Galaga, Centipede, or Snake and come up with what parts could be templated with a class.
 
-- What properties and methods might it have? 
-- Come up with a subclass that could inherit from it and either add new behaviors, or override existing ones. 
+- What properties and methods might our **parent class** have? 
+- Come up with a **sub class** that could inherit from it and either add new behaviors or override existing ones. 
 - Create a Repl and build out atleast one **parent class** and two **sub classes**!
 </section>
 
