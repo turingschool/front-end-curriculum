@@ -34,21 +34,29 @@ A common obstacle that many JavaScript developers struggle with is understanding
 ### Experiment
 
 Clone [this](https://github.com/wvmitchell/eventPractice) repository to your
-local machine, and open up example1/index.html.
+local machine, and open up example1/index.html in your browser. Additionally, open up the example1/script.js and example1/index.html in your text editor, side by side. 
 
 <section class="call-to-action">
 ### Your Turn
 
 You should see three buttons labeled "Click me!" as well as a button for adding new buttons to the page.
 
-1. Click each of the "Click me!" buttons and verify that each one fires an `alert` notifying you that the button has in fact been clicked.
-2. Add an additional button using the "Add a new button below." button.
-3. Click on your new button and observe the results.
+1. Spend some time reading through the code in script.js. 
+2. After you've read every line,  ask yourself: 
+    * Which elements are we capturing with `querySelector`'s?
+    * Which elements are we adding `eventListeners` to?
+    * What happens when the user clicks the `addNewButton`? 
+
+3. In the browser, click each of the "Click me!" buttons and verify that each one fires an `alert` notifying you that the button has in fact been clicked.
+4. Add an additional button using the "Add a new button below." button.
+5. Click on your new button and observe the results.
 </section>
 
 What did you notice?
 
-The event listeners are only bound to the buttons that were present when the page code was first loaded. The buttons we added later were not around when we added the listeners.
+*The event listeners are only bound to the buttons that were present when the page code was first loaded.* 
+
+The buttons we added later (using the `createButton` function) were not around when we added the listeners. Even though the newly created buttons are given the same class name that we are targeting with the `eventListener`, they didn't exist at the time the listeners were attached, so they aren't able to listen for those clicks, and thus they can't call any functions at all.
 
 Could we modify the function that adds new buttons so that it adds an event listener to the element before it appends to the page?  Yes we can, but unfortunately this isn't preferred for reasons below.
 
@@ -78,7 +86,7 @@ Take a couple minutes to create an analogy and visual representation of event pr
 
 ## Event Bubbling
 
-Now we've talked about the fundamentals of events, let's turn our attention to **event bubbling**, which refers to the ability of events set on DOM nodes to "bubble up" and also apply to ancestors of those nodes.
+Now we've talked about the fundamentals of events, let's turn our attention to the **event bubbling phase**, which refers to the ability of events that occur on DOM nodes to "bubble up" and also apply to ancestors of those nodes.
 
 Many people question why more attention isn't paid to the capturing phase. Simply put, it's unlikely that you'll have to use it. IE < 9 uses only event bubbling, whereas IE9+ and all major browsers support both.
 
@@ -89,20 +97,20 @@ Legend has it that back in the day, Netscape Navigator and Internet Explorer had
 
 Using [this repo](https://github.com/wvmitchell/eventPractice) `open example2/index.html` for this pair practice, and modify `script.js`
 
-* Add a click event to the button, that logs the element that was clicked on using `this`.
-* Move the event listener to the `.parent` element. What is the result when you click on the button?
-* Move the event listener from the first step to the `.grandparent` element.
+* Add a click event to the button, that logs the element that was clicked on using the keyword `this`.
+* Move the event listener to the `.parent` element. Which element is logged when you click on the button?
+* Move the event listener to the `.grandparent` element.
   * What is the result when you click on the button?
   * What is is the result when you click the `.parent` element?
 </section>
 
 ### Discussion
 
-You may have noticed that the event listeners on a parent element are fired whenever the action occurs on one of its children.
+You may have noticed that the event listeners on a parent element are fired whenever the action occurs on one of its children. Even though the click happens on the child node, the parent and grandparent nodes still "hear" it. 
 
 When an event occurs, the browser checks the element to see if there are any event listeners registered. After it checks the element where the event occurred, the browser works its way up the DOM tree to see if any of the parents have a listener registered, then grandparents, and so on. It checks every element all the way up to the root. This process is known as _event bubbling_.
 
-Try out the following code in the example CodePen:
+Try out the following code by copying it into example2/script.js, saving and then reloading your browser:
 
 ```js
   var grandParent = document.querySelector('.grandparent');
@@ -175,7 +183,7 @@ button.addEventListener('click', function(event) {
 <section class="call-to-action">
 ### Pair Practice
 
-Modify the code above to log the event itself (as opposed to the `target` property on the event). What other properties on the event object look particularly useful or interesting?
+Modify the code above to log the event itself (as opposed to the `target` property on the event). In that console.log, you should be able to open up the whole `event` object. What other properties on the event object look particularly useful or interesting?
 </section>
 
 ## Event Delegation
