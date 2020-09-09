@@ -21,9 +21,9 @@ By the end of this lesson, you will be able to:
 One of the biggest hurdles with front-end testing, and why it can be so complex, is that your tests are running in a different environment than your app. Your app runs in the **browser**, and your tests run in the **terminal**.
 
 <section class="call-to-action">
-### Brainstorm
-- What are some web APIs and technologies that our apps rely on in the browser?
-- Are these defined in the terminal environment?
+### Brainstorm  
+- What are some [web APIs](https://developer.mozilla.org/en-US/docs/Web/API) and technologies that our apps rely on in the browser?
+- Are these defined/available in the terminal environment? How could you find out?
 </section>
 
 This environmental difference means that we can't test functionality that's dependent on the browser. The terminal does not have access to all of the objects and web APIs that we have in the browser, and will therefore not understand things like:
@@ -226,3 +226,17 @@ will store that data correctly.
 In your journal, write about the other web APIs and libraries 
 you'll be using in your projects. Where might spies help you? What will be your strategy?
 </section>
+
+## Wrap Up
+
+In your journals, let's reflect on what we just learned. Look back at the code we used to create our spies, and write down:
+
+- Why are each of the 3 arguments passed into `chai.spy.on` necessary?
+- What does each one "do"?
+
+Finally, spend some time thinking about your current project.
+
+- What pieces of functionality is code you DID NOT CREATE (like localStorage and its setter/getter methods)?
+- How would you write the spies for those pieces?
+- What questions do you still have?
+- What might you do to find answers to your questions? (Who would you talk with, what documentation would you research?)
