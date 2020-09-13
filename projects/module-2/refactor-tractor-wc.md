@@ -152,7 +152,7 @@ For example, if the currently displayed user has an ID of 50, and you want to _a
 
 ```json
 {
-  "userId": 50,
+  "userID": 50,
   "ingredientID": 123,
   "ingredientModification": 3
 }
@@ -161,7 +161,7 @@ For example, if the currently displayed user has an ID of 50, and you want to _a
 If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON that looks like this:
 ```json
 {
-  "userId": 50,
+  "userID": 50,
   "ingredientID": 123,
   "ingredientModification": -3
 }
