@@ -158,9 +158,15 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
 
+<section class="call-to-action">
+  <h3>Wrap Up</h3>
+  - Explain the difference between client-side and server-side storage.
+  - Define JSON in your own words.
+  - Describe a situation where you would use localStorage instead of server-side storage.
+</section>
+
 
 ## Dig Deeper
 * [JSON Mozilla Tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
 * [JSON Validator](https://jsonlint.com/)
 * [Mozilla Docs on Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-* [Google Docs on Storing/Caching Data in Chrome](https://developers.google.com/web/tools/chrome-devtools/manage-data/local-storage)
