@@ -77,16 +77,6 @@ Open up the developer tools on this page and try the following. Make sure to tak
 - Check out the docs. What other methods are available to you when using localStorage?
 </section>
 
-<!-- ### localStorage in Action
-
-How can we improve the functionality of the following CodePen with local storage?
-
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="css,result" data-user="turing-school" data-slug-hash="PoozazK" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="localStorage in Action - Save Info Form">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/PoozazK">
-  localStorage in Action - Save Info Form</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
 
 ## What is JSON?
 
@@ -149,17 +139,17 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 </section>
 
 
-<!-- ### JSON in Action
+<section class="checks-for-understanding">
+### Your Turn
+  Clone [this repo](https://github.com/turingschool-examples/localstorage-playground) and build out the following functionality with your partner:
+- When a user clicks the "Add Contact" button, their name and email should be stored as an object in localStorage
+- When a user click the "Display Contact" button, their name and email should be pulled from localStorage, and displayed in the `.display-area` section (NOTE: The HTML structure for this is up to you!)
+- BONUS: How could you add and display multiple users instead of just one?
+</section>
 
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="rNNLKLg" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="JSON in Action - Contact Form">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/rNNLKLg">
-  JSON in Action - Contact Form</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
 
 <section class="call-to-action">
-  <h3>Wrap Up</h3>
+  <h3>Journal Wrap Up</h3>
   - Explain the difference between client-side and server-side storage.
   - Define JSON in your own words.
   - Describe a situation where you would use localStorage instead of server-side storage.
