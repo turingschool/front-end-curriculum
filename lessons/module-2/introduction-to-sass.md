@@ -43,7 +43,7 @@ Let's compare the same code written in Sass and SCSS syntax.
 * [Sass Codepen Example](https://codepen.io/hannahhch/pen/eYmdpLj){:target="_blank"}
 * [SCSS Codepen Example](https://codepen.io/hannahhch/pen/MWYjKWP){:target="_blank"}
 
-For anotheer example of SCSS, take a look at [this codepen](https://codepen.io/the_ruther4d/pen/ormbi){:target="_blank"}.
+For another example of SCSS, take a look at [this codepen](https://codepen.io/the_ruther4d/pen/ormbi){:target="_blank"}.
 
 * Write down any syntactical similarities and differences you notice between SCSS and and the plain CSS you're familiar with.
 </section>
@@ -66,7 +66,7 @@ SCSS stands for Sassy CSS (...seriously). In May, 2010 `SCSS` was introduced wit
 
 Although you *may* see the Sass syntax in the wild, movement has shifted significantly toward SCSS for several reasons:
 
-1. All modern CSS is valid SCSS. That means that you can rename an entire `.css` file `.scss` and nothing will yell at you. This not the case for pure Sass with the `.sass` file extension.
+1. All modern CSS is valid SCSS. That means that you can rename an entire `.css` file `.scss` and nothing will yell at you. This is not the case for pure Sass with the `.sass` file extension.
 2. There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you'll make your teachers cry, BUT through our tears, your stylesheet will still function properly.
 
 <section class="note">
@@ -147,7 +147,7 @@ CSS can now support variables _without_ the use of a preprocessor. In fact, ther
 
 Fork a copy of [this codepen sandbox page](https://codepen.io/hannahhch/pen/bGVJvJz){:target="_blank"} and work on the following:
 
-* Take note of which styles get reused, and work with a partner to add in some variables.  ***Note: You will need to add Sass to your codepen!***
+* Take note of which styles get reused, and work with a partner to add in some variables.
 </section>
 
 <hr />
@@ -242,7 +242,7 @@ In the world of Sass, the [`@import`](https://sass-lang.com/documentation/at-rul
 * Note: Adding an `@import` for the same file more than once will still cause performance issues.
 
 <section class="note">
-A note about @import
+### A note about @import
 
 *2020 Update:* SASS no longer encourages developers to use `@import` and they will gradually phase it out over time.  You can read some of the reasons [here in the docs](https://sass-lang.com/documentation/at-rules/import). Instead they encourage you to use `@use`. This fixes some issues, and gives us new, exciting features. With `@use`, the files are only imported once by default, no matter how many times you add it with `@use`. We get *namespaces* that help us to know where our imports are coming from. Here is a [helpful article](https://css-tricks.com/introducing-sass-modules/) with more information on the features `@use` brings.
 </section>
@@ -304,7 +304,7 @@ To use:
 ##### SCSS
 
 ```scss
-/ Example
+// Example
 @mixin rounded-corners($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -403,7 +403,7 @@ Compiles to:
 ```
 
 <section class="note">
-### @extend vs @mixing
+### @extend vs @mixin
 
 You may have noticed that `@extend` and `@mixin` can be seen as accomplishing the same thing in a different way since they are both geared towards reusing styles across your project. A common question developers have with Sass is when you should choose to use one over the other, and why.
 </section>
