@@ -4,8 +4,6 @@ length: 1 week
 tags: javascript, oop, testing, jquery
 ---
 
-1 week solo project for FE Mod 2 (Week 6)
-
 ## Background and Description
 
 For this project, you will be creating an application to manage and track different trips for users and a travel agency.
@@ -28,14 +26,6 @@ For this project, you will be creating an application to manage and track differ
 ## Initial Setup
 
 For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) repo. Setup instructions are in the README
-
-## Datasets
-
-You will use the following endpoints for fetching your data:
-
-* [Travelers](https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/travelers/travelers)
-* [Trips](https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips)
-* [Destinations](https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/destinations/destinations)
 
 ### Endpoints
 
@@ -63,30 +53,61 @@ Below are all the endpoints set up for this project. You may not use all of them
 
 ## Iterations
 
-### 1. Login
+### 1. Dashboard
 
-Your app should support two different types of users: a traveler and the travel agency. When first arriving at the site, a user should be able to log in with a username and password.
+**As a traveler:**
+- I should see a dashboard page that shows me:
+    - All of my trips (past, present, upcoming and pending)
+    - Total amount I have spent on trips this year. This should be calculated from the trips data and include a travel agent's 10% fee
 
-If it is the **travel agency** logging in, they should log in with the following credentials:
+### 2. Traveler Interaction
 
-```
-username: agency
-password: travel2020
-```
+**As a traveler:**
+- I should be able to make a trip request:
+    - I will select a date, duration, number of travelers and choose from a list of destinations
+    - After making these selections, I should see an estimated cost (with a 10% travel agent fee) for the trip.
+    - Once I submit the trip request, it will show on my dashboard as "pending" so that the travel agency can approve or deny it. 
 
-If it is a **traveler** logging in, they should log in with the following credentials:
+**Refer to the "Add new trip" section from the endpoints table above!** 
+
+<section class="note">
+### Note!
+
+If you haven't already, focus on accessibility at this point.  Before moving to iteration 3, please **create a branch and push it up to GH** so instructors can run *Lighthouse* and check your dashboard for it's accessibility audit.
+</section>
+
+### 3. Login
+
+When first arriving at the site, a user should be able to log in with a username and password.
+
+**As a traveler:** 
+- I should be able to login:
+  - I will see a login page when I first visit the site:
+  - I can log in with the following credentials:
 
 ```
 username: traveler50 (where 50 is the ID of the user)
 password: travel2020
 ```
 
-### 2. Dashboard
+  - Upon successfully loggin in, I should see my dashboard.
 
-**As a traveler, upon logging in:**
-- I should see a dashboard page that shows me:
-    - All of my trips (past, present, upcoming and pending)
-    - Total amount I have spent on trips this year. This should be calculated from the trips data and include a travel agent's 10% fee
+**Refer to the "Get single traveler" section from the endpoints table above!** 
+
+### 4. Agent Interaction
+
+Your app should now support two different types of users.  In addition to having a traveler, you will now add a travel agency. 
+
+
+**As a travel agent:**
+- I should be able to login:
+  - I will see a login page when I first visit the site:
+  - I can log in with the following credentials:
+
+```
+username: agency
+password: travel2020
+```
 
 **As a travel agent, upon logging in:**
 - I should see a dashboard page that shows me:
@@ -94,64 +115,23 @@ password: travel2020
     - Total income generated this year (should be 10% of user trip cost)
     - Travelers on trips for today's date (number, names, however you want to display this!)
 
-### 3. Traveler Interaction
-
-**As a traveler:**
-- I should be able to make a trip request
-    - I will select a date, duration, number of travelers and choose from a list of destinations
-    - After making these selections, I should see an estimated cost (with a 10% travel agent fee) for the trip.
-    - Once I submit the trip request, it will show on my dashboard as "pending" so that the travel agency can approve or deny it. 
-
-Submitting a trip request will require a POST request to the trips endpoint, like so:
-
-**Trips: [https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips](https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips)**
-
-Refer to the "Add new trip" section from the endpoints table above! 
-
-### 4. Agent Interaction
-
-**As an agent:**
+**As a travel agent:**
 - I should be able to see and approve / deny trip requests
 - I should be able to search for any user by name and:
     - View their name, a list of all of their trips, and the total amount they’ve spent (including 10% agent cut)
     - Approve a trip request for that user
     - Delete an upcoming trip for that user
 
-Approving a trip will require a POST - changing the trip status from "pending" to "approved", like so:
-
-```js
-{
-   "id": 92829,
-   "status": "approved"
-}
-```
-- This is an example of what to send the server if you wanted to approve trip 92829  
-- Refer to the "Modify single trip" section of the endpoints table above!
-
-Deleting an upcoming booking will require a DELETE request to the bookings endpoint, like so:
-
-```js
-{
-  "id": 92829
-}
-```
-- This is an example of what to send the server if you wanted to delete trip 92829  
-- Refer to the "Delete single trip	" section of the endpoints table above!
+**Refer to the endpoints table above for *modifying* and *deleting* a single trip**
 
 ## Testing
-You should be testing your the correctness of your code throughout your project. Each JavaScript class file in your project should have its own test file.
+You should be testing the correctness of your code throughout your project. Each JavaScript class file in your project should have its own test file.
 
 Your testing suite should test all of the functionality of the application, including the following:
 
 * Class default properties
 * Class methods
 * Anything that updates class properties
-
-Keep in mind your use-cases for Spies:
-
-- Mocking out a fetch call and testing your applications reaction to the response
-- Spying on methods that call other methods which are already tested elsewhere
-- Spying on any functions that do DOM manipulation in response to the result of a fetch request/instance updating
 
 ## Workflow
 You will be assigned one workflow buddy to submit PRs to:
@@ -173,16 +153,16 @@ It is up to you to decide what changes warrant a PR – remember we want to subm
 
 ## Due Date
 
-Make sure you turn in your project [here](https://docs.google.com/spreadsheets/d/1N4bLirAEpgNWVCeNJheoM6vnrlSB5Qy9ejsFeSbvxCQ/edit#gid=1963824141) by **Tuesday, June 9th at 9pm**
+Make sure you turn in your project [here](https://docs.google.com/spreadsheets/d/1sezifM_yYe9M7VK0DrnoiTyAnAXsU6d2UaQlSfyH9aQ/edit#gid=1963824141) by **Tuesday, September 22nd at 9pm**
 
 # Rubric
 
 ## Specification Adherence
 
-* [ ]  Novice - The application is missing multiple features/requirements outlined above.
-* [ ]  Advanced Beginner - The application is in a usable state, but is missing part of one or more of the technologies outlined above.
-* [ ]  Proficient - The application uses the above technologies to a professional level.
-* [ ]  Exceptional - Meets all expectations of `Proficient`. In addition, the application has additional features/extensions implemented that go above and beyond the project requirements.
+* [ ]  Novice - The application completes only the first iteration, displaying the user's data, but has no additional functionality.
+* [ ]  Advanced Beginner -The application completes the first 2 iterations and is in a usable state, but has some miscellaneous bugs.
+* [ ]  Proficient - The application completes the first 3 iterations above without error.
+* [ ]  Exceptional - The application completes all iterations above and implements one or more of the extensions.
 
 ## UI/UX & Accessibility
 
@@ -198,10 +178,10 @@ Make sure you turn in your project [here](https://docs.google.com/spreadsheets/d
 * [ ] Proficient - Application is thoughtfully put together with some duplication. Developers can speak to choices made in the code and knows what every line of code is doing. Application is organized into classes (and correctly uses inheritance) with some misplaced logic. Business-logic code is mostly separated from view-related code.
 * [ ] Exceptional - Meets all requirements of `Proficient`. In addition, application has exceptionally well-factored code with little or no duplication. SRP (single responsibility principle) and DRY (don't repeat yourself) principles are utilized. There are _zero_ instances where an instructor would recommend taking a different approach. There are no instances where instructor would suggest moving logic or data to another class. The business-logic code driving functionality is cleanly separated from rendering, view-related code.
 
-## CSS/Sass Style
+## CSS/SASS Style
 
-* [ ] Novice -  There are several (10+) instances of duplication. Code is written with unnecessary selectors or tags which do not increase clarity. No SASS, or VERY minimal SASS is utilized.
-* [ ] Advanced Beginner - There is some duplication (5-10 instances) in the codebase, and there may be some unnecessary selectors or tags. Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only a few variables have been used.
+* [ ] Novice -  The application makes little to no use of SASS and is not separated into logical stylesheets. There are many instances of duplication
+* [ ] Advanced Beginner - Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
 * [ ] Proficient - The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
 * [ ] Exceptional - Application fulfills all requirements of the proficient level, and has SASS functionality that goes above and beyond an MVP.
 
@@ -209,5 +189,5 @@ Make sure you turn in your project [here](https://docs.google.com/spreadsheets/d
 
 * [ ] Novice - There is little or no evidence of testing in the application.
 * [ ] Advanced Beginner - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
-* [ ] Proficient - Project has a running test suite that tests multiple levels but fails to cover some features.
-* [ ] Exceptional - Project has a running test suite that utilizes spies. The test suite covers almost all aspects of the application.
+* [ ] Proficient - Project has a running test suite that tests multiple levels but fails to cover some features and only tests for happy paths.
+* [ ] Exceptional - The test suite covers almost all aspects of the application and covers both happy/sad paths.
