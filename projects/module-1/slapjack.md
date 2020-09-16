@@ -31,9 +31,8 @@ We want to see YOUR work.
 
 - Create a **private** repository and add your assigned instructor as a collaborator. (You cannot deploy private repositories to GitHub Pages; that's ok.)
 - Create a project board or other planning gist where you will outline your anticipated progress through functionality
-- Begin wireframing your application and planning out the architecture of your HTML (in your notebook is fine)
 
-By EOD on Kick Off Day: DM your assigned instructor with two links: Project Board/Planning Gist & Repo, and include photographs/screenshots of your wireframes
+By EOD on Kick Off Day: DM your assigned instructor with two links: Project Board/Planning Gist & Repo
 
 ### Functionality
 
@@ -105,7 +104,7 @@ In a game like SlapJack, it is tempting to manipulate the DOM first. Remember th
 
 This workflow is not required, but may help you meet the overall requirements of the project.
 
-1. Plan out the HTML layout (colors and fonts do not need to match, but overall layout should closely match the demo video)
+1. Plan out the HTML layout (colors and fonts do not need to match, but overall layout should closely match the demo video). It might be helpful to sketch out a [wireframe](https://careerfoundry.com/en/blog/ux-design/what-is-a-wireframe-guide/) to help you with your layout.
 2. Create the Player class
 3. Create the Game class
 4. Make game fully playable without the DOM (manually invoking instances of Game, Players, and running methods, etc, from your console) to force yourself to think data-model-first
