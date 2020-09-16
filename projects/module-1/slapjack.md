@@ -202,9 +202,9 @@ We still expect you to use good workflow practices! Atomic commits, use of branc
 
 ------------------------------------------------------------------
 
-### Functional Expectations
+### Functional Expectations && Application Interface
 
-* **4:** Application is fully complete (matches all functionality from demo, without bugs), and implements additional functionality devised by the student
-* **3:** Application is fully complete (matches all functionality from demo, and player win counts persist across refreshes, a new game starts automatically)
-* **2:** Able to play an entire game successfully (dealing, slaps, win, displayed player wins count updates as needed)
-* **1:** Unable to play an entire game successfully
+* **4:** Application is fully complete (matches all functionality from demo, without bugs), and implements additional functionality devised by the student. The interface has additional elements devised by the student that add to the overall theme. 
+* **3:** Application is fully complete (matches all functionality from demo, and player win counts persist across refreshes, a new game starts automatically). The interface is fully usuable, does not contain bugs, and an instructor can interact with it without guidance from the student. 
+* **2:** Able to play an entire game successfully (dealing, slaps, win, displayed player wins count updates as needed). The interface is usuable but contains bugs and/or an instructor might need some guidance in how to interact with it. 
+* **1:** Unable to play an entire game successfully, and/or the interface is unusable.
