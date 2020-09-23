@@ -189,7 +189,7 @@ We still expect you to use good workflow practices! Atomic commits, use of branc
 * **2:**
 
   - Arguments and parameters are used to limit global variables.
-  - The **event object** is used correctly, and is not accepted as a parameter if it is not necessary.
+  - The **event object** is used correctly, and is only accepted as a parameter when the function calls on it directly.
   - Developer can speak to **how the event object is utilized** for any given event handler.
   - **Function and variable names** describe their role in the program. 
     - Examples: The name of the data type should not ever be in a variable name (ex: "petArray"); the name itself should be clear enough to indicate the type of data it holds (ex: "allPets").
