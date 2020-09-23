@@ -128,7 +128,7 @@ Overall rubric scores will be **averaged**. Here is what the average score means
 * **4:** - Student will complete module if prior project work, attendance, and final assessment corroborate readiness
 * **3+:** - Student will complete module if prior project work, attendance, and final assessment corroborate readiness
 * **2+:** - Student might complete module if prior project work, attendance, and final assessment corroborate readiness
-* **>2:** - Student needs more time with concepts and work covered in module
+* **<2:** - Student needs more time with concepts and work covered in module
 
 
 ------------------------------------------------------------------
