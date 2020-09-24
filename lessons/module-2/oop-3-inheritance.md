@@ -7,8 +7,6 @@ module: 2
 
 ## Learning Goals
 
-By the end of this lesson, you will be able to:
-
 * Understand and describe OOP and its benefits
 * Implement and structure a basic program around objects
 * Understand prototypal inheritance
