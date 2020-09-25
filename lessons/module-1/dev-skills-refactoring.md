@@ -15,7 +15,7 @@ length: 60
 - `refactor` Rewriting working code for readability, maintainability, or performance without changing it's behavior
 
 <section class="call-to-action">
-### Turn and Talk
+### Warm Up
 
 Talk with your partner: If someone says, "this needs to be refactored", what might they see that makes them say that? Be ready to share your list!
 
@@ -25,7 +25,6 @@ Talk with your partner: If someone says, "this needs to be refactored", what mig
 
 As you watch a real person refactor in real time, take note of the questions they ask themselves and the things they consider.
 
-[Instructor Resource](https://github.com/turingschool/front-end-keys/blob/master/module-1/lesson-plans/refactoring.md)
 
 <section class="note">
 ### It's Not A Race
