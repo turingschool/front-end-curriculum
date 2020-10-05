@@ -42,6 +42,7 @@ Browsers give developers a set of handy tools, aptly named **Developer Tools**. 
 To open the console in Chrome, either:
 * Or use the hotkeys `command + option + j` or `command + option + i`
 * Click `View` > `Developer` > `Javascript Console`
+* Right click, `inspect`, `console`
 </section>
 
 ## Data Types
