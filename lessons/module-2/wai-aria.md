@@ -66,9 +66,7 @@ __Side Note__: Documentation is your friend when developing a website. Here are 
 
 
 ### CSS/Styling
-
 <section class="answer">
-
 ## On removing focus rings
 ***PLEASE NOTE***
 
