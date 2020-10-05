@@ -49,25 +49,26 @@ To open the console in Chrome, either:
 There are different data types in JavaScript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
 
 Javascript has six primitive data types:
-- `null`
-- `undefined`
 - Boolean
+- `undefined`
+- `null`
 - Number
 - String
 - Symbol (new in ECMAScript 6; we won't focus on this in Mod 1)
+
+**Pro Tip**: Remember these with the acronym _BUNNSS_
 
 <section class="call-to-action">
 ### Data Types Jigsaw
 
 You're going to do some research on one of the 5 data types we are focusing on, then share out with the class. We'll follow this protocol:
-- **2 min:** independent research
-- **2 min:** table groups discuss findings, ask/answer questions
-- **3 min:** table group makes anchor chart to share takeaways
+- **2 min:** [independent research using MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+- **2 min:** group discuss findings, ask/answer questions
+- **3 min:** group [makes chart](https://excalidraw.com/) to share takeaways
   - Keep in mind: What are possible values? Examples? Does this data type get commonly confused with something else? Why/when would developers use it? Provide an example of it being used in code!
-- **30 sec - 1 min:** each table group presents to the class, while not presenting, you are taking notes on what you're learning from other groups
+- **30 sec - 1 min:** each group presents to the class, while not presenting, you are taking notes on what you're learning from other groups
 </section>
 
-Without much context of _how_ to use this, this can feel a little abstract. Soon, we'll have a way to use these different data types, and having this vocabulary as a foundation will prove helpful.
 
 ## Saving and Naming Information with Variables
 
@@ -106,10 +107,10 @@ Then, **call** each variable by typing out its name, then hitting `return`. What
 
 Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value!
 
-Let's learn how to add a value. Create a `bestInstagram` variable and assign a value to it all at once:
+Let's learn how to add a value. Create a `bestTVShow` variable and assign a value to it all at once:
 
 ```javascript
-var bestInstagram = "mrpokee";
+var bestTVShow = "Great British Baking Show";
 ```
 
 - **Step 1**: declare a variable and assign it a value
@@ -128,7 +129,7 @@ var bestInstagram = "mrpokee";
 
 ### Variables: Re-assigning Values
 
-In the introduction to variables, the lesson said "`Variable` is a good name for this concept because it indicates the stored data can change (or _vary_) each time a script is run."
+`Variable` is a good name for this concept because it indicates the stored data can change (or _vary_) each time a script is run.
 
 At times, you will want to change the value a variable holds. One real-world example is a users age. When a user signs up for the app and provides their birthday and age, they don't expect to have to go back in every year to inform the app they have reached their birthday and turned another year older; they expect the app to "know" that.
 
@@ -197,8 +198,6 @@ var creatureCount = `I have ${quantity} very fancy ${mythicalCreature}`;
 ```
 
 This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and add the data from our variable.
-
-One important thing to keep in mind is that template literals are not as widely [supported](https://caniuse.com/#feat=template-literals) as concatenation.
 
 ## Statements
 
