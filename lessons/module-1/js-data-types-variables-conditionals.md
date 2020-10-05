@@ -6,16 +6,15 @@ tags: javascript, introduction, foundation, variables
 
 ## Learning Goals
 
-* JavaScript primitive data types
-* What a variable is and how to use it
-* Adding variables to strings (concatenation and interpolation)
-* Operators and how to use them
-* Conditionals and when to use them
+* Be able to list the primitive data types used in JavaScript
+* Create and use variables to store values
+* Be able to add variables to strings (concatenation and interpolation)
+* Understand and use operators and conditionals
 
 ## Vocabulary
 
 - `Data Type` A kind of data, defined by the values it can hold and the operations that can be done on it
-- `Primitive type` A kind of data type. Primitives in Javascript are [string, number, boolean, null, undefined, symbol]
+- `Primitive type` A kind of data type. Primitives in Javascript are [string, number, boolean, null, undefined, symbol]. Also know as a `simple` data type
 - `Variable` A container for a value. The main building block for all programming
 - `Declare` Creating a new variable (distinct from assignment)
 - `Assignment` Assigning a value to a variable
@@ -23,20 +22,17 @@ tags: javascript, introduction, foundation, variables
 - `Interpolation` The process of injecting a variable directly into a string.
 - `Template literal` Template literals are string literals that provide an easy way to interpolate a variable or expression into a string.
 - `Operator` Symbols that are used to assign, compare, and perform operations
-- `Statement` A single piece of code that accomplishes one task
-- `Expression` A statement that represents a value
-- `Evaluate/Evaluation` 
+- `Statement` A single piece of code that accomplishes one task or action
+- `Expression` A statement that produces a value
 - `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
 
-## What is JavaScript and Why?
+## What is JavaScript?
 
-JavaScript was created to make the web more dynamic. It is an object-oriented scripting language (we'll learn about objects soon) made to run inside a host environment - like a web browser! It provides programatic control over the objects in that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
+JavaScript was created to make the web more dynamic. It is a scripting language made to run inside a host environment - like a web browser! It provides programatic control over the objects in that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
 
 JavaScript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces (e.g. browsers) as well as handle the server-side extensions that connect with a database.
 
 It's a highly versatile and flexible language, favoring configuration over convention. This means that, when you're working in JavaScript, there are TONS of different ways to accomplish the same task. Sometimes one is better than another, but often there's not One Right Way to do something. JavaScript has become the most commonly used language of the web! 
-
-Now that we know a little bit about JavaScript, let's talk about how to actually use it!
 
 <section class="note">
 ### The Console
