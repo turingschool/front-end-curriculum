@@ -405,7 +405,7 @@ For example, let's say we have a file `hello.txt` with the content `Hello World!
 
 Now the `aloha.txt` file has the contents `Hello World!`.
 
-## Customizing Your Terminal
+<!-- ## Customizing Your Terminal
 
 A little bit of increased efficiency in your use of the Unix environment and your editor can pay significant dividends over time. Let's experiment with customizing and adding to your terminal and editor.
 
@@ -475,4 +475,4 @@ alias gd="git diff --patience --ignore-space-change"
 alias gh="git log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short"
 alias gc="git checkout"
 alias gs="git status"
-```
+``` -->
