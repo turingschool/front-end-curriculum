@@ -62,7 +62,7 @@ At this point, you should have your testing suite up and going. Get tests runnin
 Create a dynamic route for a "show page" for each movie. A show page is a app page that shows only one particular item. In this case, the show page is for a particular movie. This page should show all information available about the movie.
 
 Don't forget to account for handling non-2xx-level responses from the server.
-
+<!--
 <!-- Week 2: -->
 <section class="note">
 ### Weekend Deliverable
@@ -189,13 +189,14 @@ Users have been wanting to keep track of the movies they've already seen. The se
 - Add a new GET route to get all currently watched movies (these will be stored in app.locals).
 
 -->
+-->
 ### Extensions
 
 * Once logged in, sort the user's movies by the date they rated the movie (the `created_at` info for a rating might help with this...)
 * Whether or not a user is logged in, give the ability to sort the movies by release date and genre
 * Add the ability to view a movie's trailer(s) from the movie's show page (check out the `/movies/:movie_id/videos` endpoint)
 
-* Deploy your apps <!--(FE and BE) --> to [Heroku](https://devcenter.heroku.com/categories/deployment)
+* Deploy your app to [Heroku](https://devcenter.heroku.com/categories/deployment)
 
 Think of some others!
 
