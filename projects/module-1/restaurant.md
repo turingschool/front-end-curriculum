@@ -2,8 +2,6 @@
 title: JS Fun at a Restaurant
 ---
 
-# JS Fun at a Restaurant
-
 ## Overview
 
 In front end web development, the programming language you will encounter most
