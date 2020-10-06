@@ -7,7 +7,7 @@ tags: javascript, introduction, foundation, variables
 ## Learning Goals
 
 * Be able to declare functions with and without parameters
-* Understand how to call functions with and without parameters
+* Understand how to call functions with and without arguments
 * Make function expressions evaluate to something other than `undefined` using `return`
 
 ## Vocab
@@ -27,7 +27,7 @@ To create a function, you must give it a name and then write the statements requ
 ### Anatomy of a Function:
 
 ```javascript
-function nameOfFunction(/* parameters go here if needed */) {
+function displayFunctionSkeleton(/* parameters go here if needed */) {
   // statements go here
 }
 ```
@@ -69,9 +69,12 @@ When this code is read, `makePizza()` is "invoked," all 5 statements within the 
 
 Try creating your own functions in the console!
 
-* Write a function that logs to the console a message of "YO!", and then logs a sum of five different integers.
+* Write a function that logs to the console a message of "Let's add!", and then logs a sum of five different integers.
 * Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.
-* Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a [random number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) to the console.
+* Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name. 
+* Write a function that logs a [random number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) to the console.
+
+_Make sure you're thinking about your naming conventions!_
 </section>
 
 ### Passing Information to a Function:
@@ -82,13 +85,15 @@ Its a subtle difference. Basically, when you declare a function, and you stipula
 
 ```javascript
 // parameters named on declaration of function
-function createDreamCar(make, model) {
-  return "My dream car is a " + make + " " + model;
+function bakeCake(flavor, frosting, decoration) {
+  return `I am baking a ${flavor} cake with ${frosting}. It will be decorated with ${decoration}.`
 }
 
-// arguments "Audi" and "R8" passed into a called function
-createDreamCar("Audi", "R8");
+// arguments passed into a called function
+bakeCake("carrot", "cream cheese icing", "walnuts");
 ```
+
+What is returned? Could I call this function again but with different arguments?
 
 ## Functions, part II
 
@@ -99,18 +104,27 @@ Some functions return information to the code that called them. When a function 
 <section class="call-to-action">
 ### Try it out
 
-Open up a browser window, and head to the console.
-* Write a function called `simpleMath` that adds 2 + 2
-* Invoke `simpleMath` - what happened?
-* What if you needed to use the result of `simpleMath` somewhere else in your code? For example, what if you needed to concatenate the result into a string: `"I need " + simpleMath() + " pizzas!"`
+Open up a browser window, and head to the console
+* Write a function called `performSimpleMath` that adds 2 + 2
+* Invoke `performSimpleMath` - what happened?
+* What if you needed to use the result of `performSimpleMath` somewhere else in your code? For example, what if you needed to concatenate the result into a string: `"I need " + performSimpleMath() + " pizzas!"`
 * Try it out and see what happens
 * Journal some ideas about why this is happening!
 
 </section>
 
-I still need the keyword _return_ in order to return that value back from a function. Let's work with some return statements in functions with parameters in the console:
+<section class="answer">
+### Why This is Happening
+
+We still need the keyword _return_ in order to return that value back from a function. Let's work with some return statements in functions with parameters in the console next!
+</section>
+
+### The Return Statement
+
 
 ```javascript
+// take note of what is returned or logged when each function is invoked!
+
 function addTwoNumbers(num1, num2) {
   num1 + num2;
 }
@@ -128,15 +142,10 @@ function buildAHouse(material, cost) {
   return "My house is made of " + material + " and cost me $" + cost;
   console.log("I'm building a house!");
 }
+
+// how many times can we "return" in a function?
 ```
 
-Notice in the last example that when the `return` statement is called in a function, it ends function execution (the following lines do not run), and it specifies a value to be returned to the function caller. Here is the basic structure:
-
-```javascript
-// This is the formula:
-return [expression];
-// The expression to return. If the return is omitted, undefined is returned instead. The [] are meant to show that the expression is dynamic.
-```
 <section class="note">
 ### Note
 If the expression is omitted/there is no return statement, `undefined` is returned instead.
@@ -150,15 +159,33 @@ return true;
 return false;
 return x;
 return x + y / 3;
+return "We've stopped executing!";
+
+// and so many more!
 ```
 
 <section class="call-to-action">
-### Solo Practice
-* Create a function called `saySomething` that requires no parameters. This function should return a message of your choice.
-* Create a function called `showFavorites` that requires three parameters - a food, a movie, and an animal. Your function should return a string that uses either concatenation or interpolation to return the three favorite things in a string.</
-* Create a function called `calculateAge` that takes a single parameter - a year. Your function should return the difference in years from the birth year from our current year, 2019.
+### Practice
+1. Create a function called `saySomething` that requires no parameters. This function should return a message of your choice. 
+2. Create a function called `showFavorites` that requires three parameters - a food, a movie, and an animal. Your function should return a string that uses either concatenation or interpolation to return the three favorite things in a string.
+3. Create a function called `calculateAge` that takes a single parameter - a year. Your function should return the difference in years from the birth year from our current year, 2020.
+4. Go back to #1 and change your function so that it takes in a parameter that lets us pass in the message as an argument.
 
-If you finish early, try writing tackling [these functions](https://www.teaching-materials.org/javascript/exercises/functions)!
+If you finish early, try tackling [these functions](https://www.teaching-materials.org/javascript/exercises/functions)!
+</section>
+
+### Wrap Up
+
+We've worked through a lot of content - some of which may be new, some is review. Let's take a minute to reflect.
+
+<section class="checks-for-understanding">
+### In Your Journal
+
+1. Write down a few examples of function names that follow best-practice naming conventions.
+2. How do we pass in information to a function?
+3. What is the difference between a parameter and an argument?
+4. How do you get values out of functions?
+5. What is the different between a console log and a return statement? When would you use one over the other?
 </section>
 
 ### Additional Resources & Practice
