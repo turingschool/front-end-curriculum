@@ -62,7 +62,9 @@ At this point, you should have your testing suite up and going. Get tests runnin
 Create a dynamic route for a "show page" for each movie. A show page is a app page that shows only one particular item. In this case, the show page is for a particular movie. This page should show all information available about the movie.
 
 Don't forget to account for handling non-2xx-level responses from the server.
+
 <!-- Week 2: -->
+
 <!--
 <section class="note">
 ### Weekend Deliverable
