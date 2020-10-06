@@ -113,7 +113,7 @@ var listOfNames = combineNames("Luna", "Bey", "Sunny");
 listOfNames;
 // => ["Luna", "Bey", "Sunny"]
 
-var modOneInstructors = combineNames["Scott", "Will", "Hannah"];
+var modOneInstructors = combineNames("Scott", "Will", "Hannah");
 
 modOneInstructors;
 // => ["Scott", "Will", "Hannah"]
