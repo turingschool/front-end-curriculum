@@ -181,7 +181,7 @@ Once you are set up, you can visit `http://localhost:3001/api/v1/ideas` and you 
   </section>
   <section class="answer">
 ### What does `.then()` do? What is the method called on? What does it return?
-`.then()` is a promise prototype method that runs when the promise object it is chanined to successfully resolves. It returns a new promise object. 
+`.then()` is a promise prototype method that runs when the promise object it is chained to successfully resolves. It returns a new promise object. 
   </section>
   <section class="answer">
 ### What does `.catch()` do? What is the method called on? What does it return?
@@ -216,7 +216,7 @@ Then inside of your catch, set the error message in state. Now, let's _do_ somet
 
 We don't want an error message showing all the time. So ... let's make use of conditional rendering! Let's take a look at our current `render()` method:
 
-```js
+```jsx
 // App.js
 
 render() {
@@ -235,7 +235,7 @@ render() {
 
 If we wanted to add an `h2` that would show up if we had an error, what would we write?
 
-```js
+```jsx
 // App.js
 
 render() {
@@ -287,7 +287,7 @@ $ npm install prop-types
 
 In React, `PropTypes` are declared like this:
 
-```js
+```jsx
 // Card.js
 
 import React from 'react';
@@ -365,7 +365,7 @@ these particular methods when you are done.
 
 Just like when writing functions, React also allows us to provide a default value for props. [defaultProps](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#default-prop-values) let you ensure that a value will be passed through. This helps eliminate some of the incessant ternaries that either render the prop or an empty string, for instance.  
 
-```js
+```jsx
 const Card = ({ id, title, description, removeIdea, isFavorite }) => {
   const favoriteClass = isFavorite ? 'favorite' : 'card'
 
@@ -385,7 +385,7 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   removeIdea: PropTypes.func.isRequired,
-  isFavorite: PropTypes.bool.isRequiredd,
+  isFavorite: PropTypes.bool.isRequired,
 };
 
 Card.defaultProps = {
