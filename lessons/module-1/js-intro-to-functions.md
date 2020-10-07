@@ -166,12 +166,7 @@ return "We've stopped executing!";
 
 <section class="call-to-action">
 ### Practice
-1. Create a function called `saySomething` that requires no parameters. This function should return a message of your choice. 
-2. Create a function called `showFavorites` that requires three parameters - a food, a movie, and an animal. Your function should return a string that uses either concatenation or interpolation to return the three favorite things in a string.
-3. Create a function called `calculateAge` that takes a single parameter - a year. Your function should return the difference in years from the birth year from our current year, 2020.
-4. Go back to #1 and change your function so that it takes in a parameter that lets us pass in the message as an argument.
-
-If you finish early, try tackling [these functions](https://www.teaching-materials.org/javascript/exercises/functions)!
+Work through [this practice REPL] with a partner(https://repl.it/repls/LegalCadetblueAddresses)
 </section>
 
 ### Wrap Up
