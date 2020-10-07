@@ -166,7 +166,7 @@ return "We've stopped executing!";
 
 <section class="call-to-action">
 ### Practice
-Work through [this practice REPL] with a partner(https://repl.it/repls/LegalCadetblueAddresses)
+Work through <a href="https://repl.it/repls/LegalCadetblueAddresses">this practice REPL</a> with a partner
 </section>
 
 ### Wrap Up
