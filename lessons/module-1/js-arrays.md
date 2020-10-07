@@ -17,6 +17,17 @@ tags: javascript, foundation, arrays
 - `Bracket Notation` How we access individual elements of an array. Either to
   express the element, or assign a new element.
 
+<section class="call-to-action">
+### Warm Up
+
+With a partner
+* Explore [this repl](https://repl.it/@letakeane/03-arrays#index.js), questions 1 through 4.
+* If you encounter a prompt that you are not sure how to solve - come back to this lesson, or do some googlin'.
+* If you have extra time,  attempt the 5th *spicy* prompt.
+* Make note of any questions that come up, or any clarifications you need. We'll talk through these when we come back!
+* Remember - the goal is not completion. The goal is understanding.
+</section>
+
 ## Arrays
 
 An array is a complex data type. Instead of storing just one value, it stores an ordered list of values. Each value is referred to as an `element`. You should consider using an array whenever you are working with a collection of values of the same data type, or values that are related to one another. 
@@ -113,10 +124,10 @@ var listOfNames = combineNames("Luna", "Bey", "Sunny");
 listOfNames;
 // => ["Luna", "Bey", "Sunny"]
 
-var modOneInstructors = combineNames("Scott", "Will", "Hannah");
+var modOneInstructors = combineNames("Scott", "Kayla", "Hannah");
 
 modOneInstructors;
-// => ["Scott", "Will", "Hannah"]
+// => ["Scott", "Kayla", "Hannah"]
 
 ```
 
