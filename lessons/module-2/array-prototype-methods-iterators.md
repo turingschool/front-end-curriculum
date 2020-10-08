@@ -63,7 +63,6 @@ In order to understand what a prototype method is, let's break down the terms in
 Prototype methods are functions that allow you to manipulate the value of a particular data type or class. JavaScript comes with several built-in data types that each have their own prototype methods, that allow you to interact with them in certain ways. For example, you might want to add or remove an item from an array. Or inspect the properties on an object. Prototype methods allow you to perform these actions and manipulate your values.
 
 You might already be familiar with some of the following prototype methods:
-- `.length()`
 - `.pop()`
 - `.push()`
 
@@ -72,13 +71,13 @@ Which other ones can you name?
 
 ## Array Iteration Prototype Methods
 
-What are they? Why are they useful? They loop through an existing array and apply a callback function to each element that might mutate each element and return a new value. 
+What are they? Why are they useful? They loop through an existing array and apply a callback function to each element that might mutate each element and return a new value.
 
 WAIT. Can't we already iterate through arrays with a for loop?!
 
 In Javascript, there are often many different ways to solve something, and maybe different tools to choose from. Yes, we can often accomplish the same thing using a for loop, but the array iteration methods do provide some good benefits!
 - Cleaner syntax and easier to read
-- DRYs up code 
+- DRYs up code
 - More modern way of writing Javascript
 
 There are _occassional_ times when it makes more sense to use a for loop over something like a forEach. You can read more about why to use one over the other [here](https://alligator.io/js/foreach-vs-for-loops/).
@@ -86,7 +85,7 @@ There are _occassional_ times when it makes more sense to use a for loop over so
 
 ### Callback Functions
 
-All the methods we'll talk about today will take a `callback function`. You've likely seen these before (think about event listeners). 
+All the methods we'll talk about today will take a `callback function`. You've likely seen these before (think about event listeners).
 
 From MDN - "A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action."
 
@@ -103,19 +102,19 @@ Since these prototype methods were introduced as part of ES6, most of the time y
 ```js
 someArrayData.somePrototypeMethod((mandatoryParameter [,optionalParameters... ]) => {
   // some statements
-  // often a return statement 
+  // often a return statement
 })
 ```
 
 #### More on Callbacks
 
-Many callbacks require a return statement. Remember that these statements determine what the CALLBACK returns, **not** what the METHOD returns. The method may return something different, and this value may need to be captured (in a variable, another return statement...). 
+Many callbacks require a return statement. Remember that these statements determine what the CALLBACK returns, **not** what the METHOD returns. The method may return something different, and this value may need to be captured (in a variable, another return statement...).
 
 **You will often need *TWO* return statements when working with iterator methods!**
 
 You can find more information on different prototype methods and their callbacks <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods" target="\__blank">here</a>.
 
-There are many array prototype methods out there, but we are going to focus on some of these iterator methods: 
+There are many array prototype methods out there, but we are going to focus on some of these iterator methods:
 * `forEach()`
 * `map()`
 * `find()`
@@ -152,8 +151,8 @@ function displayLoudWords() {
 
 displayLoudWords() // ['HELLO', 'WORLD']
 ```
-We can push our element data into an array and return that, but the array MUST exist outside of the forEach. 
-While this is valid code, there is a better method we can use to achieve this. 
+We can push our element data into an array and return that, but the array MUST exist outside of the forEach.
+While this is valid code, there is a better method we can use to achieve this.
 
 
 
@@ -182,7 +181,7 @@ displayLoudWords() // ['HELLO', 'WORLD']
 What is the purpose of each `return` statements in the `map()` example above?
 </section>
 
-*Another Example* 
+*Another Example*
 ```js
 let evenNumbers = [2, 4, 6, 8, 10];
 
@@ -234,7 +233,7 @@ Note: See the notes for `.find` above.
 
 Gotchas with `find` and `filter`:
 - They are SO similar, its easy to forget that `find` always returns one element and `filter` always returns an array
-- We're used to writing `if` statements for conditionals, but `find` and `filter` are doing this for us! 
+- We're used to writing `if` statements for conditionals, but `find` and `filter` are doing this for us!
 
 
 ```js
@@ -282,7 +281,7 @@ let adjectives = ['fantastic', 'amazing', 'childish'];
 function getWordLengths() {
   return adjectives.reduce((acc, adjective) => {
     acc[adjective] = adjective.length;
-    
+
     return acc;
   }, {})
 }
