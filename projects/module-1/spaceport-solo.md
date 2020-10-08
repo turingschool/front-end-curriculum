@@ -18,7 +18,7 @@ problem.
 
 ## Learning goals
 
-  - Understand what JavaScript primatives are, and how/when to use them
+  - Understand what JavaScript primitives are, and how/when to use them
   - Understand how to declare variables and assign data to them
   - Practice using objects
   - Practice defining and creating classes
