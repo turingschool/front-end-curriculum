@@ -7,6 +7,7 @@ tags: javascript, testing, tdd, mocha, chai
 
 * Understand what testing is, why it is important, and the various types of tests
 * Recognizing the importance of Test Driven Development (TDD)
+* Understand the red/green testing workflow
 * Ability to read/create tests
 * Understand how to import/export files specifically for testing
 
@@ -16,18 +17,20 @@ tags: javascript, testing, tdd, mocha, chai
 - `Assertion` An expression containing some testable logic
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
+- `Red/Green Testing` - a workflow for testing your code, in which we write *and* fail tests (red) before we write any implementation code to pass the test (green)
 
 ## Part I: Strategies, Tools, and Functions
 
 <section class="call-to-action">
 ## Warm Up
 
-Read [this article](https://techcrunch.com/2020/02/04/iowa-caucus-app-disaster/). When everyone has had time to read, and be prepared to discuss the following questions:
-
-- What were the consequences of this app not working as expected?
-- What kind of pressure can you imagine the engineering team who built this were under, while developing the app?
-- What lessons do you think the company and engineering team learned from this?
-- Do you have any idea what software testing could or should look like?
+Open [this repository](https://github.com/turingschool-examples/first-unit-tests), then:
+* Read the README, and follow the `Getting Started` steps.
+* Run the `npm test` command in your terminal and explore at the result. 
+* Open up the `functions-test.js` file, and read every line, out loud, using all of the terms of art that you can.
+* What do you notice about this file? What does it seem like this file is doing?
+* What peices of code are clear in their purpose? What is unclear?
+* What sort of functionality is being tested?
 </section>
 
 ## What does it mean to test your code?
@@ -50,7 +53,7 @@ The bulk of your tests for an application are likely to be unit tests. **Unit te
 
 **Integration tests** test the interaction between two units to make sure that they play together nicely and work the way we expect them to work. You will get many opportunities to experiment with this type of test at Turing (including Mod 1) and in the work environment as well.  
 
-#### Benefits
+#### Benefits of Testing
 
 * Unit & Integration tests are a safety net that helps developers find software bugs early
 * Unit & Integration tests provide documentation by telling a living story about your application
@@ -60,14 +63,24 @@ The bulk of your tests for an application are likely to be unit tests. **Unit te
 <section class="call-to-action">
 ### Think - Pair - Share
 
-* What is one piece of functionality (think back to the Warm Up) that you could test from your assigned application?
+Consider an application that you use regularly.
+
+* What is one piece of functionality that you could test from your  application?
 * Would that be a unit or integration test? Why?
 * What would the consequences for the company be if this piece of functionality broke?
 </section>
 
 ## What is Test-Driven Development?
 
-Test-Driven Development (TDD) is one of those things that is deceptively simple to explain and incredibly hard to do. The basic premise is that we write our test for a piece of required functionality _before_ writing any implementation code. The test should fail when its first run, and then, you write the code to make it pass. Once the test passes, you can then safely refactor your code.
+Test-Driven Development (TDD) is one of those things that is deceptively simple to explain and incredibly hard to do. The basic premise is that we write our test for a piece of required functionality _before_ writing any implementation code. 
+
+Ideally, we'd follow **Red/Green Testing**. This means we would write the test, the, *fail* the test, and then finally write the code to *pass* the test. Once the test passes, you can then safely refactor your code to optimize your solution.
+
+<section class="call-to-action">
+## Think
+
+* What's the purpose of failing the test *before* we write the code to pass the test?
+</section>
 
 
 ## The Testing Cycle
@@ -112,20 +125,16 @@ When we are testing code, it's usually best to have the implementation code pull
 
 <img src="./assets/images/testing/setup.png" alt="Screen shot of two panes in Atom text editor">
 
-- Our `implementation` file refers to the code we are actually testing. This will be a class.
+- Our `implementation` file refers to the code we are actually testing. This will be generally be a class file.
 - Our `test` file will be the automated tests that we write, that verify our class does what it should. This is where we will create object instances, and verify that they do what they should.
-- It is important to keep scope in mind: variables declared in the `test` file are not available in the `implementation` file. And in the `implementation` file, the only way we can call properties declared in the class is if we call them on an object created from that class.
+- It is important to keep scope in mind: **variables declared in the `test` file are not available in the `implementation` file.** And in the `implementation` file, the only way we can call properties declared in the class is if we call them on an object instance created from that class.
 
-## Implementing functions using tests
+## Testing Functions
 
-Eventually, we'll be writing our own tests, but for now so we can see how the
-process works a bit, and to get some practice reading error messages, we'll
-start with some prewritten tests.
+Eventually, we'll be writing our own tests, but for now we'll
+start with some prewritten tests. This allows us to see the process, and get some practice reading error messages
 
-Head over to [this repository](https://github.com/turingschool-examples/first-unit-tests)
-and follow the instructions in the README to get some practice implementing
-functions based on test conditions.
-
+Head over to [that same repository](https://github.com/turingschool-examples/first-unit-tests) and begin to folow the TDD workflow - fail the tests, then write the code to pass 'em!
 
 ## Part II: Testing Classes
 
@@ -159,7 +168,7 @@ describe('Tweet', function() {
 });
 ```
 
-* We make a human-readable statement about our code with the `it()` block.
+* We make a human-readable statement about what we want to test with the `it()` block.
 
 ```js
 // describe('Tweet', function() {
@@ -188,7 +197,7 @@ describe('Tweet', function() {
 Below is the general syntax for assertions for most of the methods available:
 
 ```js
-  assert.method(actual, expected)
+  assert.method(the result of our, expected)
 ```
 
 You'll notice that our method takes two arguments:
@@ -219,7 +228,7 @@ The `module.exports` allows us to export a piece of functionality.  In this inst
 *tweet-test.js*
 
 ```js
-var Tweet = require('./tweet.js');
+var Tweet = require('./tweet.js'); //  './tweet.js' is the file path to the file we want to import from.
 
 describe('Tweet', function() {
   it('has a sender', function() {
@@ -253,12 +262,19 @@ It takes some time to build out solid habits when testing.  Often we'll see some
 <section class="checks-for-understanding">
 ### Wrap Up
 
-In your Pair Project channel, share your answers to the following with the group:
-* Why is testing your code important? ⬅️ _Popular Interview Question!_
-* What is the TDD process?
-* In the Paired Project project:
-  - What are the smallest pieces of functionality?
-  - How could you write tests for that functionality?
+In your journal or notebook, reflect on the following:
 
-**Note:** You are not required to test anything on the Paired Project, this is just an exercise to push your thinking on how it _can_ be applied.
+* What are the benefits to testing your code?
+* What is the Red/Green testing workflow? Why do we use this process?
+* What is Mocha? What is Chai? Write an example of the code that comes from Chai.
+* How do we export something from a file for testing?
+* How do we import something into another file for testing?
+
 </section>
+
+## Extra Stuff
+If your curiosity is piqued - read [this article](https://techcrunch.com/2020/02/04/iowa-caucus-app-disaster/). 
+
+- What were the consequences of this app not working as expected?
+- What kind of pressure can you imagine the engineering team who built this were under, while developing the app?
+- What lessons do you think the company and engineering team learned from this?
