@@ -74,7 +74,7 @@ Consider an application that you use regularly.
 
 Test-Driven Development (TDD) is one of those things that is deceptively simple to explain and incredibly hard to do. The basic premise is that we write our test for a piece of required functionality _before_ writing any implementation code. 
 
-Ideally, we'd follow **Red/Green Testing**. This means we would write the test, the, *fail* the test, and then finally write the code to *pass* the test. Once the test passes, you can then safely refactor your code to optimize your solution.
+Ideally, we'd follow **Red/Green Testing**. This means we would write the test, then *fail* the test, and then finally write the code to *pass* the test. Once the test passes, you can then safely refactor your code to optimize your solution.
 
 <section class="call-to-action">
 ## Think
