@@ -6,7 +6,7 @@ tags: git, github
 ## Learning Goals
 - [Be able to use git and GitHub to collaborate on code with another developer](https://frontend.turing.io/lessons/module-1/dev-skills-git-team-workflow.html)
 - Be able to submit and respond to a pull request
-- Understand the importantance of code review
+- Understand the importance of code review
 - Understand how to prevent and resolve merge conflicts
 
 
