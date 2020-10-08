@@ -34,15 +34,15 @@ Sometimes we need to access information about an array or certain elements in ou
 
 In other cases, we will want to change the data our array holds. **Mutator** methods actually mutate, or change, the data in the array. If we needed to remove an instructor element from the `instructors` array, we'd need to use a mutator method.
 
-## Protocol
+<!-- ## Protocol
 
 Throughout most of this lesson, you'll be working in small groups to explore both
 - some array prototypes
-- different ways to learn new technical concepts, and which you like best
+- different ways to learn new technical concepts, and which you like best -->
 
 ### The methods to research
 
-For the rest of this lesson, we will be learning about the following array prototype methods:
+You will be learning about the following array prototype methods:
 
 - push
 - pop
@@ -53,14 +53,14 @@ For the rest of this lesson, we will be learning about the following array proto
 - includes
 - concat
 
-During the course of our research, we will practice different modes of learning! This is in order to help us gain a better understanding of how we individually learn, and furnish us with some strategies we can fall back on when we get stuck!
+During the course of your research, you will practice different modes of learning! This is in order to help you gain a better understanding of how you individually learn, and furnish you with some strategies you can fall back on when you get stuck!
 
 <section class="call-to-action">
 For each array prototype method, follow this protocol carefully:
 
 1. Read the documentation on MDN.
-2. Talk through your understanding of it together.
-3. Visually represent the method using a copy of [this Jamboard](https://jamboard.google.com/d/1FQ8dDURIkf43XTq2S6Eb2rvoiPlUihnW6NQxnzcJ7No/viewer?f=0), or make your own!
+2. Rubber duck through your understanding of it.
+3. Visually represent the method using sticky notes, drawings in your notebook, or using an online tool like [Jamboard](https://jamboard.google.com/)
 <!-- 3. Make a visual representation of the method with your candies and paper. -->
 4. Think: What is **returned** from the method?
 5. Think: Does the method mutate the original array?
@@ -70,7 +70,7 @@ For each array prototype method, follow this protocol carefully:
 </section>
 
 <!-- ## Gallery Walk -->
-## Presentations
+<!-- ## Presentations
 
 - *Group 1:* push
 - *Group 2:* pop
@@ -90,7 +90,7 @@ In your new group of 3, make a presentation for your assigned array prototype! I
 
 After all are complete, each group will do a short presentation on their assigned array prototype. Make sure you decide who is leading the presentaion, or split up sections between the three of you!
 
-If you aren't 100% of something you are about add to your presentation - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates.
+If you aren't 100% of something you are about add to your presentation - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates. -->
 
 ## Wrap Up
 
@@ -109,7 +109,7 @@ It's not a good use of time to attempt to memorize every array prototype and its
 <section class="checks-for-understanding">
 ## Reflection
 
-1. What from this morning helped you learn? Talking with your partner? Spending time in the docs? Playing with a method in `repl.it`? Visualizing it without code (using jamboard sticky notes)?
-2. Discuss your best learning techniques with your table/partner.
-3. Open your notebooks to the last page, and write "When I'm stuck, I will:" and then add the learning strategies that worked best for you!
+1. Which method helped you learn the best? Rubber ducking? Spending time in the docs? Playing with a method in `repl.it`? Visualizing it without code?
+2. Open your notebooks to the last page, and write "When I'm stuck, I will:" and then add the learning strategies that worked best for you!
+3. Put any remaining questions you have about these methods in a Slack thread.
 </section>
