@@ -56,6 +56,7 @@ You will be learning about the following array prototype methods:
 During the course of your research, you will practice different modes of learning! This is in order to help you gain a better understanding of how you individually learn, and furnish you with some strategies you can fall back on when you get stuck!
 
 <section class="call-to-action">
+### Research
 For each array prototype method, follow this protocol carefully:
 
 1. Read the documentation on MDN.
@@ -68,6 +69,12 @@ For each array prototype method, follow this protocol carefully:
 7. Back to documentation - verify your predictions from steps 3 and 4.
 8. Document any remaining questions!
 </section>
+
+<section class="checks-for-understanding">
+### Practice
+Work through the exercises in <a target="_blank" href="https://repl.it/@letakeane/02-array-methods#index.js">this REPL</a>.
+</section>
+
 
 <!-- ## Gallery Walk -->
 <!-- ## Presentations
