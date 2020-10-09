@@ -65,7 +65,6 @@ Don't forget to account for handling non-2xx-level responses from the server.
 
 <!-- Week 2: -->
 
-<!--
 <section class="note">
 ### Weekend Deliverable
 
@@ -115,6 +114,7 @@ Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_q
 
 </section>
 
+<!--
 
 ## Part 2: New Features
 
@@ -125,7 +125,9 @@ If you're not through iteration 6 yet, that's fine. We would like everyone to ta
 
 After Sunday night, the solo iterations should be your priority regardless of how far your team is. Remember, the goal here is YOUR learning; we just want to make sure that everyone's getting some individual reps in.
 </section>
+
 -->
+
 <!--
 ### Iteration 7 - Make a microservice (complete together)
 
@@ -201,7 +203,7 @@ Users have been wanting to keep track of the movies they've already seen. The se
 * Whether or not a user is logged in, give the ability to sort the movies by release date and genre
 * Add the ability to view a movie's trailer(s) from the movie's show page (check out the `/movies/:movie_id/videos` endpoint)
 
-* Deploy your app to [Heroku](https://devcenter.heroku.com/categories/deployment)
+* [Deploy your app](https://blog.heroku.com/deploying-react-with-zero-configuration) to [Heroku](https://devcenter.heroku.com/categories/deployment)
 
 Think of some others!
 
