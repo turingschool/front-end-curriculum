@@ -397,30 +397,31 @@ Just wrap the App in a router, and you're good to go:
 // App.test.js
 import React from "react";
 import App from "./App";
-import { render, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from '@testing-library/user-event';
 import "@testing-library/jest-dom";
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 
 describe("App", () => {
   describe("Unit Tests", () => {
     it("Should render the heading", () => {
-      const { getByRole } = render(
-        <BrowserRouter>
+      render(
+        <MemoryRouter>
           <App />
-        </BrowserRouter>
+        </MemoryRouter>
       );
-      const heading = getByRole("heading", { name: "Puppies or Sharks" });
+      const heading = screen.getByRole("heading", { name: "Puppies or Sharks" });
 
       expect(heading).toBeInTheDocument();
     });
 
     it("Should render a nav", () => {
-      const { getByRole } = render(
-        <BrowserRouter>
+      render(
+        <MemoryRouter>
           <App />
-        </BrowserRouter>
+        </MemoryRouter>
       );
-      const navigation = getByRole("navigation");
+      const navigation = screen.getByRole("navigation");
 
       expect(navigation).toBeInTheDocument();
     });
@@ -485,7 +486,8 @@ So our final solution to the Integration Test could look like this:
 ```jsx
 import React from 'react';
 import App from './App';
-import { render, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
@@ -494,21 +496,21 @@ describe('App', () => {
   describe('Integration Tests', () => {
     it('Should render 9 puppies on click', () => {
       const history = createMemoryHistory();
-      const { getByRole, getAllByRole } = render(
+      render(
         <Router history={history}>
           <App />
         </Router>
       );
-      const puppiesLink = getByRole('link', { name: 'Puppies'});
-      const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
+      const puppiesLink = screen.getByRole('link', { name: 'Puppies'});
+      const welcomeMessage = screen.getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
 
       expect(welcomeMessage).toBeInTheDocument();
 
-      fireEvent.click(puppiesLink);
+      userEvent.click(puppiesLink);
 
       expect(welcomeMessage).not.toBeInTheDocument();
 
-      const images = getAllByRole('img');
+      const images = screen.getAllByRole('img');
 
       expect(images).toHaveLength(9);
 
@@ -516,17 +518,17 @@ describe('App', () => {
 
     it('Should render 9 sharks on click', () => {
       const history = createMemoryHistory();
-      const { getByRole, getAllByRole } = render(
+      render(
         <Router history={history}>
           <App />
         </Router>
       );
-      const sharksLink = getByRole('link', { name: 'Sharks'});
-      const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
+      const sharksLink = screen.getByRole('link', { name: 'Sharks'});
+      const welcomeMessage = screen.getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
 
       expect(welcomeMessage).toBeInTheDocument();
 
-      fireEvent.click(sharksLink);
+      userEvent.click(sharksLink);
 
       expect(welcomeMessage).not.toBeInTheDocument();
 
@@ -556,41 +558,42 @@ Alternatively, we can use a different kind of Router that doesn't get informatio
 ```jsx
 import React from 'react';
 import App from './App';
-import { render, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 
 describe('App', () => {
   describe('Integration Tests', () => {
     it('Should render 9 puppies on click', () => {
-      const { getByRole, getAllByRole } = render(<MemoryRouter><App /></MemoryRouter>);
-      const puppiesLink = getByRole('link', { name: 'Puppies'});
-      const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
+      render(<MemoryRouter><App /></MemoryRouter>);
+      const puppiesLink = screen.getByRole('link', { name: 'Puppies'});
+      const welcomeMessage = screen.getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
 
       expect(welcomeMessage).toBeInTheDocument();
 
-      fireEvent.click(puppiesLink);
+      userEvent.click(puppiesLink);
 
       expect(welcomeMessage).not.toBeInTheDocument();
 
-      const images = getAllByRole('img');
+      const images = screen.getAllByRole('img');
 
       expect(images).toHaveLength(9);
 
     });
 
     it('Should render 9 sharks on click', () => {
-      const { getByRole, getAllByRole } = render(<MemoryRouter><App /></MemoryRouter>);
-      const sharksLink = getByRole('link', { name: 'Sharks'});
-      const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
+      render(<MemoryRouter><App /></MemoryRouter>);
+      const sharksLink = screen.getByRole('link', { name: 'Sharks'});
+      const welcomeMessage = screen.getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
 
       expect(welcomeMessage).toBeInTheDocument();
 
-      fireEvent.click(sharksLink);
+      userEvent.click(sharksLink);
 
       expect(welcomeMessage).not.toBeInTheDocument();
 
-      const images = getAllByRole('img');
+      const images = screen.getAllByRole('img');
 
       expect(images).toHaveLength(9);
 
