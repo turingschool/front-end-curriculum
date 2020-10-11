@@ -140,10 +140,10 @@ it('Can view all the ideas when the app loads', () => {
 ```js
 it('Can view all the ideas when the app loads', () => {
   // Render the App component (this component fetches data from an external back-end API)
-  const { getByText } = render(<App />);
+  render(<App />);
   // Check that there is a container element on the page
-  const ideasContainer = getByText("Ideas Component");
-  const idea = getByText("Sweaters for pugs");
+  const ideasContainer = screen.getByText("Ideas Component");
+  const idea = screen.getByText("Sweaters for pugs");
   // Check that there are ideas on the page
   expect(ideasContainer).toBeInTheDocument();
   expect(idea).toBeInTheDocument();
@@ -190,11 +190,11 @@ The reason behind this is listed as a breaking change in [these release notes](h
 describe('App', () => {
   it('Can view all the ideas when the app loads', async () => {
     // Render the App component (this component fetches data from an external back-end API)
-    const { getByText } = render(<App />);
+    render(<App />);
     // Check that there is a container element on the page
-    const ideasContainer = getByText("Ideas Component");
+    const ideasContainer = screen.getByText("Ideas Component");
     // Wait for an idea to appear on the page
-    const idea = await waitFor(() => getByText("Sweaters for pugs"));
+    const idea = await waitFor(() => screen.getByText("Sweaters for pugs"));
     // Check that there are ideas on the page
     expect(ideasContainer).toBeInTheDocument();
     expect(idea).toBeInTheDocument();
@@ -289,7 +289,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-import { render, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import { getIdeas } from '../apiCalls';
@@ -303,11 +303,11 @@ describe('App', () => {
       {id: 3, title: 'A game show called Ether/Or', description: 'When you lose you get chloroformed'},
     ]);
 
-    const { getByText } = render(<App />);
+    render(<App />);
 
-    const ideaContainer = getByText('Ideas Component');
+    const ideaContainer = screen.getByText('Ideas Component');
 
-    const idea = await waitFor(() => getByText('Sweaters for pugs'));
+    const idea = await waitFor(() => screen.getByText('Sweaters for pugs'));
 
     expect(ideaContainer).toBeInTheDocument();
     expect(idea).toBeInTheDocument();
