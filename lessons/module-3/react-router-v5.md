@@ -113,7 +113,7 @@ We'll come back to this later in the lesson...
 </section>
 
 <section class="answer">
-### The first step is importing react router:
+### The first step is installing react router:
 ```bash
 npm install react-router-dom
 ``` 
@@ -122,7 +122,7 @@ npm install react-router-dom
 <section class="answer">
 ### Once you have React Router installed, import your chosen Router.
 
-```javascript
+```jsx
 // index.js
 
 import React from 'react';
@@ -140,7 +140,7 @@ ReactDOM.render(router, document.getElementById('root'));
 <section class="answer">
 ### Finally, add a Route for the `Home`  component into your `App`
 
-```javascript
+```jsx
 import React, { Component } from 'react';
 import './App.css';
 import puppies from '../data/puppy-data.js';
@@ -190,6 +190,7 @@ Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. T
 
 <section class="answer">
 ### Solution
+
 ```jsx
 / App.js 
 
@@ -276,6 +277,7 @@ Get the sharks link working as well!
 
 <section class="answer">
 ### Solution
+
 ```jsx
 // App.js
 import './App.css';
@@ -362,8 +364,8 @@ The new route could look something like this:
 ```jsx
 // App.js
         <Route
-          path="/puppies/:id"
-          exact
+           exact
+          path="/puppies/:id"      
           render={({match}) => {
             const { id } = match.params;
             const creatureToRender = puppies.find(creature => creature.id === parseInt(id));   
