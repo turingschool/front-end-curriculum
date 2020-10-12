@@ -4,7 +4,7 @@ length: 90
 tags: html, introduction, practice
 ---
 
-## Learning Goals - Test
+## Learning Goals
 
 * Understand what HTML stands for and it's purpose
 * Identify and use attributes for appropriate elements
@@ -24,14 +24,18 @@ Spend 15-20 minutes reading, watching, and completing the content in the [Chrome
 - `Hyperlink` A reference to an external resource
 - `Nesting` when an element lives inside of another element
 
-## Warm Up
+<section class="call-to-action">
+### Warm Up
 
-Open up the Chrome Dev Tools in your browser on the lesson plan page.
-- Open up the "Elements" tab
-- Find a `<ul>`. What is nested inside of it?
+Go the the [Turing Home Page](turing.io) and open up your Dev Tools.
+- Click on the "Elements" tab. Stay in the "Elements" tab throughout this Warm Up.
+- Dig into the `<main>`. What are some things you see nested inside of this element? Can you associate any of the things you see in the code to what you see on the page?
+- In many of the elements, you'll notice a `class`. What do you think those are used for?
+- Towards the end of the `<body>` element, you'll see a `<script>` element. What do you think that might be?
 - How can you search for a specific HTML element in the HTML document? For example, `<nav>`.
-- Search for `.highlighter-rouge`. What do you think this is?
-- What else do you notice in this elements view?
+- Click around a bit more. What else do you notice in the "Elements" view of the Dev Tools?
+</section>
+
 
 
 ## Overview
@@ -54,29 +58,9 @@ HTML ensures the proper formatting of content (text, images, video) so that your
 
 Elements are created with either one or more tags and are used to describe and hold our content. These tags are created by using angle brackets `<>`.  Most elements consist of an opening and closing tag which wraps content like text.
 
-Elements which are created with only one tag are called [empty elements](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) (also known as self-closing elements) and cannot have any child elements. Examples of this are `<img>` and `<input>`.
-
 Elements which can contain child elements are created with an opening and closing tag which surround the child elements and/or text content. `<h1>Text Content</h1>`
 
-### Example
-
-Let's say that we had some text and we wanted to denote that this text was a paragraph.
-
-```
-This is an example paragraph. We should probably place this inside of a tag. If we place it in a tag it will be easier to access and style.
-```
-
-We'd wrap the text in paragraph tags.
-
-```html
-<p>This is an example paragraph. We should probably place this inside of a tag. If we place it in a tag it will be easier to access and style.</p>
-```
-
-### Anatomy of a Tag
-
-![Anatomy of an HTML Tag](/assets/images/html-tag.jpg)
-
-We use `<p>` to signal to the browser that everything that's about to follow is part of a paragraph and `</p>` to let the browser know that this paragraph is done. When a user visits our application, the browser loads up the HTML and parses it into the elements that will eventually make up our user interface.
+Elements which are created with only one tag are called [empty elements](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) (also known as self-closing elements) and cannot have any child elements. Examples of this are `<img>` and `<input>`.
 
 <section class="note">
 ### Pro Tip
@@ -84,20 +68,44 @@ We use `<p>` to signal to the browser that everything that's about to follow is 
 Type both opening and closing tags before typing content to avoid making silly mistakes that are hard to hunt down later.
 </section>
 
-Here is an example of a slightly more robust document:
+## Elements & Tags Example
 
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="oNNjYqM" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Very Basic HTML Page">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/oNNjYqM">
-  Very Basic HTML Page</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+Let's start by looking at this page:
+![unmarked page](../module-1/assets/images/html/unmarked_html.png)
 
+Notice all of the HTML elements that exist on the page:
+![annotated page](../module-1/assets/images/html/annotated_html.png)
+
+Now, let's look at what that HTML looks like:
+```html
+<nav>
+  <img src="./turing-school-logo" alt="Turing School logo" />
+  <ul>
+    <li>Programs</li>
+    <li>Try Coding</li>
+    <li>Outcomes</li>
+    <li>Team</li>
+    <li>Hire</li>
+    <li>FAQs</li>
+    <li>Perspectives</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+<main>
+  <h1>Hire A Turing Grad</h1>
+  <p>Need to hire...</p>
+  <p>Join 200+ tech industry partners...</p>
+  <button type="button" name="browse-button">BROWSE GRADS FOR HIRE</button>
+</main>
+```
 <section class="call-to-action">
-### Turn & Talk
-- What makes an HTML element different than an HTML tag?
-- What is the difference between a “regular” element and a self-closing, or empty element?
-- What will the browser do if it doesn't see a closing tag for a given element?
+### Partner Practice
+
+Discuss the following questions with your partner:
+- Do you notice any empty elements?
+- What is a `<ul>` element? What are `<li>` elements?
+- What do you notice about the indentation of all of the elements?
+- Are there any elements in the HTML that are not visible on the actual page? Why do you think we have those elements?
 </section>
 
 ## HTML Attributes
