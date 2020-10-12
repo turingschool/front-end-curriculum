@@ -108,15 +108,28 @@ Discuss the following questions with your partner:
 - Are there any elements in the HTML that are not visible on the actual page? Why do you think we have those elements?
 </section>
 
+## Nesting HTML Elements
+
+Before we move on, it's important to be familiar with vocabulary and certain patterns. Specifically, around nested HTML elements.
+
+As sites become more complex, more elements are used, and more are used in relation to each other. Let's look at the example from the above section.
+
+The `<nav>` and `<main>` elements are on the same level - or __sibling__ elements. We know this because they sit on the same indentation line, and they are not wrapped around one another.
+
+Nested inside the `<main>` element is an `<h1>`, 2 `<p>` elements, and a `<button>`. We can communicate these relationships with the following terms:
+- The `<h1>` and `<button>` elements are __siblings__ to each other.
+- The `<h1>` is a __child__ of the `<main>`.
+- The `<main>` is a __parent__ of the two `<p>` elements.
+
+Because so much nesting occurs in HTML, it is absolutely essential that you write clean, easy-to-read code with consistent use of white-space and indentation.
+
 ## HTML Attributes
 
 Any HTML element can have attributes. An attribute provides additional information about an element. It must be specified in the opening tag of an element, and usually come in name/value pairs. A `class` is a commonly used attribute:
 
-```html
-<p class="paragraph"></p>
-```
+<img class="medium" src="../module-1/assets/images/html/attribute_value.png" alt="attribute and value display">
 
-The name of the attribute in the example above is class, and the value is `"paragraph"`. The are separated by a single `=`, and no spaces.
+The name of the __attribute__ in the example above is class, and the __value__ is `"paragraph"`. The are separated by a single `=`, and no spaces.
 
 Attribute names are determined for us by HTML; we must comply with the list of available names to use. The values are determined by us as developers. Different attributes are used for different purposes; we will explore some of those today, and continue learning the use-cases for others as we move into CSS and JavaScript.
 
@@ -132,13 +145,12 @@ Consider the following:
 
 Our browser is more than happy to load up an image, but we need to tell it where that image is located. Our `<img>` tag needs extra information to know which image to display. That's where the `src` attribute comes in. The `alt` attribute provides alternative text in the case the user is not able to view the image.
 
-<img class="medium" src="/assets/images/html-tag-anatomy.png" alt="Labeled HTML tag">
-
 ### Attributes in Hyperlinks
 
 Another important tag is the `<a>` tag. These are the tags we use for creating hyperlinks. You might have noticed that the `<a>` tag behaves a little differently than the `<h1>`, `<h2>`, and `<p>` tags. We can use the `<a>` tag to mark up a few words, while the other tags denote a big section - what we might call a "block" — of our page.
 
-Consider the following example:
+#### Consider the following example:  
+Welcome to the [Turing School of Software and Design](http://turing.io).
 
 ```html
 <p>
@@ -149,10 +161,10 @@ Consider the following example:
 In this case, the `<a>` tag needs to know which url it should be linked to. We use the `href` attribute to set the links destination. `href` is an abbreviation for "hypertext reference."
 
 <section class="call-to-action">
-### Turn & Talk
+### Stop & Reflect
 
 - What are HTML attributes?
-- Which attributes have you seen used before, and what was the purpose of each of those?
+- Why are HTML attributes useful?
 </section>
 
 ## Thinking Bigger Picture
@@ -175,34 +187,6 @@ Every page that is built with HTML needs to have the following four elements to 
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-## Nesting HTML Elements
-
-Before we really start putting what we've learned into practice, it's important to be familiar with vocabulary and certain patterns. Specifically, around nested HTML elements.
-
-As sites become more complex, more elements are used, and more are used in relation to each other. Let's take a look at this example below:
-
-```html
-<nav>
-  <ul>
-    <li><a href="home">Latte</a></li>
-    <li><a href="about">Cappucino</a></li>
-  </ul>
-</nav>
-<main>
-  <section>
-    <h2>Coffee Ipsum</h2>
-    <p>Variety, half and half, trifecta medium arabica froth percolator. Mug brewed aromatic that sit to go latte. Cup, skinny cup, as blue mountain turkish, pumpkin spice.</p>
-    <p>Pumpkin spice americano java coffee doppio and sweet mug java saucer variety aromatic. Flavour, cappuccino macchiato et at, latte french press cream rich con panna barista single origin.</p>
-  </section>
-</main>
-```
-
-The `<nav>` and `<main>` elements are on the same level - or sibling elements. We know this because they sit on the same indentation line, and they are not wrapped around one or another.
-
-Nested inside the `<main>` element is a `<section>`. Nested inside the `<section>` is an `<h2>`, `<p>` and another `<p>`. We can communicate the same relationship by saying "the `<section>` is wrapped around the `<h2>` and both `<p>`s."
-
-Because so much nesting occurs in HTML, it is absolutely essential that you write clean, easy-to-read code with consistent use of white-space and indentation.
 
 ## Semantic HTML
 HTML5 has a variety of _semantic tags_, or HTML tags that provide additional meaning through descriptive naming, available for us to use. They don't provide any visual difference, but do have benefits in other areas:
