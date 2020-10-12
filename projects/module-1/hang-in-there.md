@@ -152,7 +152,7 @@ To earn a given score, an application must meet the requirements listed in that 
 
 * **3:**
   - Demonstrate understanding of DOM manipulation by adding, removing, and updating elements on the DOM, after the page has loaded
-  - Functions are[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and observe [SRP](http://knnthvu.weebly.com/srp-and-dry.html) - and most are around 10 lines of code or less 
+  - Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and observe [SRP](http://knnthvu.weebly.com/srp-and-dry.html) - and most are around 10 lines of code or less 
   - Most functions and variables are semantically and concisely named. Functions should start with a verb, array names should be plural, etc. Function and variable names describe their role in the program. Examples: The name of the data type should not ever be in a variable name (ex: “petArray”); the name itself should be clear enough to indicate the type of data it holds (ex: “allPets” or “pets”).
   - An event handler should not have the word “handler” in the name (ex: “clickHandler”); the name should indicate the handler’s purpose (ex: “addNewPet”).
   - Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused. 
