@@ -4,7 +4,7 @@ length: 90
 tags: html, introduction, practice
 ---
 
-## Learning Goals
+## Learning Goals - Test
 
 * Understand what HTML stands for and it's purpose
 * Identify and use attributes for appropriate elements
@@ -26,7 +26,7 @@ Spend 15-20 minutes reading, watching, and completing the content in the [Chrome
 
 ## Warm Up
 
-Open up the Chrome Dev Tools in your browser on the lesson plan page. 
+Open up the Chrome Dev Tools in your browser on the lesson plan page.
 - Open up the "Elements" tab
 - Find a `<ul>`. What is nested inside of it?
 - How can you search for a specific HTML element in the HTML document? For example, `<nav>`.
@@ -198,12 +198,12 @@ Because so much nesting occurs in HTML, it is absolutely essential that you writ
 
 ## Semantic HTML
 HTML5 has a variety of _semantic tags_, or HTML tags that provide additional meaning through descriptive naming, available for us to use. They don't provide any visual difference, but do have benefits in other areas:
-- They can make our code more understandable and clear to other developers (and our future selves) by organizing content 
+- They can make our code more understandable and clear to other developers (and our future selves) by organizing content
 - They incorporate basic accessibility into your HTML for users who may need to access your website in non-traditional ways (ie: provide a verbal roadmap for users utilizing screen reader software).
 
 <img class="medium" src="/assets/images/htmlsemantic.jpg" alt="html 4 vs html 5">
 
-Before we had semantic tags like `<main>`, `<section>` and more, developers would use `<div>` tags to organize content. `<div>`'s are still really useful elements, but we should aim to use more semantic tags for organizing large blocks of your HTML code. 
+Before we had semantic tags like `<main>`, `<section>` and more, developers would use `<div>` tags to organize content. `<div>`'s are still really useful elements, but we should aim to use more semantic tags for organizing large blocks of your HTML code.
 
 - [Non-Semantic Page](https://codepen.io/hannahhch/pen/rNeywpQ)
 - [Semantic Page](https://codepen.io/hannahhch/pen/OJNpJxm)
