@@ -36,8 +36,6 @@ Go the the [Turing Home Page](turing.io) and open up your Dev Tools.
 - Click around a bit more. What else do you notice in the "Elements" view of the Dev Tools?
 </section>
 
-
-
 ## Overview
 
 The front-end of the web is based on three major technologies:
@@ -137,7 +135,7 @@ Attribute names are determined for us by HTML; we must comply with the list of a
 
 We use HTML tags to mark up text to show its semantic meaning. The browser uses these tags to structure the document. As we talked about earlier in this lesson, _most_ tags have an opening and closing tag, but a few do not. For example, images defined using the `<img>` tag do not have a closing tag.
 
-Consider the following:
+#### Consider the following:
 
 ```html
 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/turing.png" alt="Turing Logo">
@@ -181,24 +179,32 @@ Every page that is built with HTML needs to have the following four elements to 
 * `<head></head>` tag wraps elements that shouldn't be rendered - information about the page and how to process it
 * `<body></body>` tag wraps elements that should be displayed - the actual content that will appear in the browser
 
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="oNNjYdM" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Required Structure of HTML">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/oNNjYdM">
-  Required Structure of HTML</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<section class="call-to-action">
+### Partner Practice
+
+- Go to [this repository](https://github.com/kaylaewood/htm_css_fundamentals). No need to fork or clone it!
+- Click on the `index.html` file to view its code.
+- What two sibling elements are nested inside of `<html>`?
+- Use Google to determine what the attributes in `line 2` mean.
+- What type of information exists in the `<head>` element? Why isn't this information in `<body>`?
+- What do you think `line 5` is doing? What about `line 29`?
+</section>
 
 ## Semantic HTML
 HTML5 has a variety of _semantic tags_, or HTML tags that provide additional meaning through descriptive naming, available for us to use. They don't provide any visual difference, but do have benefits in other areas:
 - They can make our code more understandable and clear to other developers (and our future selves) by organizing content
 - They incorporate basic accessibility into your HTML for users who may need to access your website in non-traditional ways (ie: provide a verbal roadmap for users utilizing screen reader software).
 
-<img class="medium" src="/assets/images/htmlsemantic.jpg" alt="html 4 vs html 5">
+<img src="/assets/images/htmlsemantic.jpg" alt="html 4 vs html 5">
 
 Before we had semantic tags like `<main>`, `<section>` and more, developers would use `<div>` tags to organize content. `<div>`'s are still really useful elements, but we should aim to use more semantic tags for organizing large blocks of your HTML code.
 
-- [Non-Semantic Page](https://codepen.io/hannahhch/pen/rNeywpQ)
-- [Semantic Page](https://codepen.io/hannahhch/pen/OJNpJxm)
+<section class="call-to-action">
+### Solo Investigation
+Take some time to notice the differences between these two codepens:  
+- [Non-Semantic Page](https://codepen.io/kaylaewood/pen/QWEjbZM)
+- [Semantic Page](https://codepen.io/kaylaewood/pen/NWrGqmv)
+</section>
 
 ## Refactoring Some HTML
 
@@ -208,7 +214,7 @@ Now that you know what clean, correctly indented HTML looks like, and some of th
 ### Partner Practice
 
 - Choose a driver and a navigator.
-- The driver should fork [this CodePen](https://codepen.io/turing-school/pen/KKKdNeM).
+- The driver should fork [this CodePen](https://codepen.io/kaylaewood/pen/YzWyyPw).
 - First, fix the indentation to make this more readable and maintainable
 - Then, look for at least 3 opportunities to improve readability and accessibility by changing tags to be more semantic. Once you and you partner agree, make those changes.
 </section>
