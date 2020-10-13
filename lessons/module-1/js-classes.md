@@ -18,9 +18,18 @@ tags: js, introduction, constructor functions, this, classes, objects
 - `Method` A function on an Object
 - `Dot Notation` Notation to access a Value on an Object, explicitly specifies the Key
 - `Bracket Notation` Notation to access a Value on an Object, usually specifies a Key via a variable
-- `this` A variable that changes depending on the context in which it's used
+- `this` A JavaScript keyword with a value that changes depending on the context in which it's used
 - `Class` A constructor that allows us to create multiple instances
 - `Object Instance` Objects that contain the data and functionality defined in the class
+
+<section class="Call to Action">
+### Reconnecting with previous learning
+In your notebook, or wherever you take notes, reflect on the following:
+- What do I already know about classes?
+- What do I already know about instances?
+
+After you've thought about those prompts - discuss them with a partner and add your thoughts to [this Jamboard](https://jamboard.google.com/d/1N_G69-A-4XGHYsJEKC0hfEfWxxGFWpO9lUJmvx_t8SA/edit?usp=sharing)
+</section>
 
 ## Introduction to `this`
 
@@ -153,11 +162,6 @@ human.getName();
 **KEY TAKEAWAY:** The context of this within a function will be determined by _what object the function gets called on_.
 </section>
 
-<div class="lesson-segment">
-  <h3>Explore: <code>this</code> and the DOM</h3>
-  <p>Visit <a href="">this CodePen</a>. Make sure the CodePen console is opened. Enter something in the input then click submit. What logs to the console?</p>
-  <p>Before talking with your partner, try to reason through why the value of <code>this</code> is what it is.</p>
-</div>
 <br>
 
 ## Classes and Object Instances
