@@ -85,7 +85,7 @@ npm start
 You're also welcome to use the code sand box template, found <a href="https://codesandbox.io/s/github/turingschool-examples/react-router-v5?file=/src/App/App.js" target="_blank">here</a>.
 </section>
 
-The App is not fully put together. It has a series of components that will serve as building blocks of the final component. You won't be building out new components, but you will be editting existing ones. 
+The App is not fully put together. It has a series of components that will serve as building blocks of the final component. You won't be building out new components, but you will be editing existing ones. 
 
 ### Setting up Router
 
@@ -160,7 +160,7 @@ export default class App extends Component {
           <a href="/sharks" className="nav">Sharks</a>
         </nav>
         <h1>Puppies or Sharks?</h1>
-        <Route exact path="/" render={ Home }/>
+        <Route path="/" component={ Home }/>
       </main>
     );
   }
@@ -211,7 +211,7 @@ export default class App extends Component {
           <NavLink to="/sharks" className="nav">Sharks</NavLink>
         </nav>
         <h1>Puppies or Sharks?</h1>
-        <Route exact path="/" render={() => <Home />}/>
+        <Route path="/" component={ Home }/>
         <Route path="/puppies" render={() => <Creatures name="puppies" data={puppies} />} />
       </main>
     );
@@ -223,7 +223,7 @@ export default class App extends Component {
 
 ### Render `exact` matches
 
-Check out what happens when you take the [`exact`](https://reacttraining.com/react-router/web/api/Route/exact-bool) prop out of one of your Routes. Why do you think everything is rendering at `/puppies`?
+Check out what happens when you take the [`exact`](https://reacttraining.com/react-router/web/api/Route/exact-bool) prop out of one of your Routes. Why do you think the `Home` page is rendering at `/puppies`?
 
 The `exact` prop can be used to make sure that partial matches of a URL don\'t trigger a render. 
 
@@ -329,19 +329,24 @@ The `match` gives us information about how and why the application matched. And 
 #### `match.params`
 The `params` property of the match prop gives us an object with key value pairs of dynamic url parameters, and any strings that match them. 
 
-For instance, but changing our Puppies Route to this:
+For instance, we could make our routes for animals more dynamic by doing this:
+
 ```jsx
 <Route
-          path="/:animal"
-          render={({match}) => <Creatures {...match} name="puppies" data={puppies} />}
-        />
+  exact
+  path="/:animal"
+  render={({ match }) => {
+    const whichAnimal = match.params.animal === 'sharks' ? sharks : puppies
+    return <Creatures name={`I love ${match.params.animal}`} data={whichAnimal} />
+  }}
+/>
 ```
 
-and then navigating to `/puppies`, we can see that the `<Creatures />` component is recieving a `params` props with a value of `{animal: puppies}`
+and then navigate to either `/puppies` or `/sharks`, we can see that the `<Creatures />` component is rendering the correct data based on the `params` from the url.
 
 **`params` allows us to define shapes of a url that will cause a match, then access the data from that url in our components**.
 
-This is great for dynamically rendering content based on things in the url, like an id. Let's do that 
+This can be great for dynamically rendering content based on things in the url, like an id. Let's do that! 
 
 ## Exercise #3: Dynamic Routing
 ---
@@ -364,7 +369,7 @@ The new route could look something like this:
 ```jsx
 // App.js
         <Route
-           exact
+          exact
           path="/puppies/:id"      
           render={({match}) => {
             const { id } = match.params;
@@ -392,15 +397,93 @@ Uncomment the code blocks inside of the Unit Test portion of `App.test.js`
 <section class="answer">
 ### Solution
 
-We need to wrap the App inside of a Router! In the browser, this is handled at the entry point (index.js), but in the tests we're rendering the App on its own. 
-Just wrap the App in a router, and you're good to go:
+We need to wrap the App inside of a Router! In the browser, this is handled at the entry point (index.js), but in the tests we're rendering the App on its own.  
+
+We can do one of two things depending on which docs you use:
+1. Create a [custom history object and pass it to a Router](https://testing-library.com/docs/example-react-router) (NOT a BrowserRouter)
+2. Use a [Memory Router](https://reacttraining.com/react-router/web/api/MemoryRouter)
+
+Let's look at both of these solutions.
+
+<section class="answer">
+### Option 1: Creating a new history object
+
+For this solution, we have to look into the [history package](https://github.com/ReactTraining/history) from React Training. 
+
+Routers use this package to manage their session history. BrowserRouter creates a history object under the hood, which gets its current location from the browser ([jsdom](https://www.npmjs.com/package/jsdom) in the case of jest's testing environment), and updates the browser history via a few methods that you can [read more about if you're interested](https://github.com/ReactTraining/history/blob/master/docs/Navigation.md).
+
+We can also [create our own history object](https://github.com/ReactTraining/history/blob/master/docs/GettingStarted.md).
+
+However, BrowserRouter CANNOT receive a custom history object, so if we want to make an manipulate our own history, we'll have to wrap our component in a [Router](https://reacttraining.com/react-router/web/api/Router). So we can use that history object to overwrite the Router's default history. This allows us to instantiate a new Router at a specific location (url) of our choosing.
+
+```jsx
+import { createMemoryHistory } from 'history';
+import { Router } from 'react-router-dom';
+
+// Make a new blank history object
+const customHistory = createMemoryHistory();
+
+// Overwrite the history of the Router:
+const routerWithCustomHistory = <Router history={customHistory}></Router>
+```
+
+So our final solution to the Unit Test could look like this:
+
+```jsx
+import React from 'react';
+import App from './App';
+import { fireEvent, render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { createMemoryHistory } from 'history'
+import { Router } from 'react-router-dom'
+
+
+describe('App', () => {
+  describe('Unit Tests', () => {
+    it('Should render the heading', () => {
+      const history = createMemoryHistory();
+      render(
+        <Router history={history}>
+          <App />
+        </Router>
+      );
+      const heading = screen.getByRole('heading', { name: 'Puppies or Sharks?' })
+
+      expect(heading).toBeInTheDocument();
+    });
+
+    it('Should render a nav', () => {
+      const history = createMemoryHistory();
+      render(
+        <Router history={history}>
+          <App />
+        </Router>
+      );
+      const navigation = screen.getByRole('navigation');
+
+      expect(navigation).toBeInTheDocument();
+    });
+  });
+});
+```
+
+**Note** This techniques comes from [React Testing Library](https://testing-library.com/docs/example-react-router)
+</section>
+
+<section class="answer">
+### Option 2: Using a MemoryRouter
+
+Alternatively, we can use a different kind of Router that doesn't get information about history from the DOM. 
+
+**MemoryRouter** doesn't read or write to the address bar. As such, it's useful for tests and non-browser environments like React Native.
+
+**MemoryRouter WILL NOT WORK IN YOUR BROWSER CODE**
 
 ```jsx
 // App.test.js
 import React from "react";
 import App from "./App";
-import { render, screen } from "@testing-library/react";
-import userEvent from '@testing-library/user-event';
+import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter } from "react-router-dom";
 
@@ -430,66 +513,38 @@ describe("App", () => {
   });
 });
 ```
+
+</section>
 </section>
 
 ---
 
 ## Exercise #5: Integration Testing the App
 
-Uncomment the code in the Integration Test portion of `App.test.js` 
+Uncomment the code in the Integration Test portion of `App.test.js`. 
 
 <section class="call-to-action">
 ### Take 10 minutes and answer the following:
 - What are the tests trying to do?
-- Why is one test failing, while the other passes?
 - Try and get to the bottom of the error
 
 </section>
 <section class="note">
 ### Hint:
-- Once again, flex those Googling muscles. What issue are you seeing? Which library's docs might be helpful?
+- Once again, flex those Googling muscles. What issue are you seeing? Use what you learned from the unit tests to help you with your solution.
 </section>
 
 <section class="answer">
 ### Solution
-The Router's history is getting out of sync from jest-dom's history. 
-
-We can do one of two things:
-1. Create a custom history object and pass it to a Router (NOT a BrowserRouter)
-2. Use a [Memory Router](https://reacttraining.com/react-router/web/api/MemoryRouter)
-
-Let's look at both of these solutions.
-
+Once again, we have two options based on whether we pass it to `Router` and use a custom history object or we use `Memory Router`.
 
 <section class="answer">
 ### Option 1: Creating a new history object
 
-For this solution, we have to look into the [history package](https://github.com/ReactTraining/history) from React Training. 
-
-Routers use this package to manage their session history. BrowserRouter creates a history object under the hood, which gets its current location from the browser ([jsdom](https://www.npmjs.com/package/jsdom) in the case of jest's testing environment), and updates the browser history via a few methods that you can [read more about if you're interested](https://github.com/ReactTraining/history/blob/master/docs/Navigation.md).
-
-We can also [create our own history object](https://github.com/ReactTraining/history/blob/master/docs/GettingStarted.md).
-
-However, BrowserRouter CANNOT receive a custom history object, so if we want to make an manipulate our own history, we'll have to wrap our component in a [Router](https://reacttraining.com/react-router/web/api/Router). So we can use that history object to overwrite the Router's default history. This allows us to instantiate a new Router at a specific location (url) of our choosing.
-
-```jsx
-import { createMemoryHistory } from 'history';
-import { Router } from 'react-router-dom';
-
-// Make a new blank history object
-const customHistory = createMemoryHistory();
-
-// Overwrite the history of the Router:
-const routerWithCustomHistory = <Router history={customHistory}></Router>
-```
-
-So our final solution to the Integration Test could look like this:
-
 ```jsx
 import React from 'react';
 import App from './App';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
@@ -508,7 +563,7 @@ describe('App', () => {
 
       expect(welcomeMessage).toBeInTheDocument();
 
-      userEvent.click(puppiesLink);
+      fireEvent.click(puppiesLink);
 
       expect(welcomeMessage).not.toBeInTheDocument();
 
@@ -530,7 +585,7 @@ describe('App', () => {
 
       expect(welcomeMessage).toBeInTheDocument();
 
-      userEvent.click(sharksLink);
+      fireEvent.click(sharksLink);
 
       expect(welcomeMessage).not.toBeInTheDocument();
 
@@ -544,24 +599,15 @@ describe('App', () => {
 });
 ```
 
-**Note** This techniques comes from [React Testing Library](https://testing-library.com/docs/example-react-router)
-
 </section>
 
 <section class="answer">
 ### Option 2: Using a MemoryRouter
 
-Alternatively, we can use a different kind of Router that doesn't get information about history from the DOM. 
-
-[MemoryRouter](https://reacttraining.com/react-router/web/api/MemoryRouter) doesn't read or write to the address bar. As such, it's useful for tests and non-browser environments like React Native.
-
-**MemoryRouter WILL NOT WORK IN YOUR BROWSER CODE**
-
 ```jsx
 import React from 'react';
 import App from './App';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
 
