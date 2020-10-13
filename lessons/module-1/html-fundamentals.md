@@ -53,9 +53,9 @@ HTML ensures the proper formatting of content (text, images, video) so that your
 
 ## Elements & Tags
 
-Elements are created with either one or more tags and are used to describe and hold our content. These tags are created by using angle brackets `<>`.  Most elements consist of an opening and closing tag which wraps content like text.
+Elements are created with either one or more tags and are used to describe and hold our content. These tags are created by using angle brackets `<>`.  
 
-Elements which can contain child elements are created with an opening and closing tag which surround the child elements and/or text content. `<h1>Text Content</h1>`
+Most elements are created using an opening and closing tag which surround the child elements and/or text content. `<h1>Text Content</h1>`
 
 Elements which are created with only one tag are called [empty elements](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) (also known as self-closing elements) and cannot have any child elements. Examples of this are `<img>` and `<input>`.
 

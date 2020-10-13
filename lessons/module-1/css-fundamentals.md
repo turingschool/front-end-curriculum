@@ -52,27 +52,27 @@ h1 {
   color: red;
 }
 
-// by class name 
+// by class name
 .primary-font {
   font-family: "Montserrat", sans-serif;
   font-size: 45px;
 }
 
-// by id name 
+// by id name
 #about-page {
   background-color: lightgrey;
 }
 
 // by a combination of above
-#about-page p {
+.primary-font p {
   font-size: 15px;
   color: darkgrey;
 }
 ```
 
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="GRRpNBa" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Rules">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/GRRpNBa">
-  CSS Rules</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="kaylaewood" data-slug-hash="mdEexwR" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Rules">
+  <span>See the Pen <a href="https://codepen.io/kaylaewood/pen/mdEexwR">
+  CSS Rules</a> by Kayla Wood (<a href="https://codepen.io/kaylaewood">@kaylaewood</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -80,11 +80,10 @@ h1 {
 <section class="call-to-action">
 ### Explore
 
-With your partner, use the CodePen above to explore. Then, answer the questions below:
-
-* Can you add two classes to an element? What is the syntax?
-* Which class will take precedent?
-* If an element has both a class and an id, and conflicting rules are applied to the class and id, which takes precedent? What about element and class? Element and id?
+With your partner, use the CodePen above to explore.
+* Uncomment each line in the CSS file at a time (starting at the top). Before you uncomment, make a prediction about what you will see on the page.
+* Do you notice a pattern for what styling is taking precedent?
+* Write down any questions that come up!
 </section>
 
 [Read More on the CSS Cascade](https://wattenberger.com/blog/css-cascade)
@@ -111,7 +110,8 @@ Let's make the following edits on [kodewithklossy.com](https://www.kodewithkloss
 * Change the "Kode With Klossy" logo in the nav bar to have a height of 90px and a width of 320px
 * Experiment with deselecting a few CSS styles. What happens?
 
-**Finished Early?** Find the Turing logo in the footer of the site. Inspect it. What HTML element created it? What attributes does it have? In the Styles Pane, toggle off and on various CSS properties to explore the outcome. Now, scroll down in that pane - you'll see a rule that targets: `#comp-jxczctmainlineContent-gridContainer > *`. Do some research to explore what `>` is doing. Lastly, consider this: when you explore elements in larger sites, you'll commonly see very obscure looking class and ID names - if there is such an emphasis on semantics and good naming, why might this be?
+**Finished Early?**
+- Close the Dev Tools. Mess around with the size of the window. Do you notice any issues with this site's styling? Why might thinking about screen size be important when designing a website?
 </section>
 
 ## The Box Model
@@ -155,7 +155,7 @@ The screen shots below are taken from the "Your Orders" page from Amazon.
 <section class="call-to-action">
 ### Recreating Amazon Buttons
 
-With your partner, decide who will drive and who will navigate. 
+With your partner, decide who will drive and who will navigate.
 
 First, work to recreate the "Track package" button. Since the focus is box model, do not worry about the slight linear gradient in the background color; just use `#f0c14b` and `#846a29` for the border. Things to keep in mind:
   - Approximately what percentage of the button do the words take up on Amazon's button? How closely does yours match that?
@@ -179,7 +179,7 @@ Now, work to recreate the 4 grey buttons. You already have a lot to work with fr
 
 </section>
 
-Next week we will learn how to create layouts using the CSS display property! 
+Next week we will learn how to create layouts using the CSS display property!
 
 
 ## Additional Resources
