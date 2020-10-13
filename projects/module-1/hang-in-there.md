@@ -36,10 +36,10 @@ By the end of the day, complete the following tasks:
 * As a team, read the entire project spec and rubric
 * As a team, create a public document for your DTR (instructions can be found [here](https://github.com/turingschool/career-development-curriculum/blob/master/module_one/dtr_guidelines_memo.md))
 * Add all teammates and your assigned instructor as collaborators to your forked repository
-* Create a private Slack channel with all members of the project and your assigned instructor and share links to:
+* In a Slack message to your assigned instructor share links to:
   - the forked GitHub repo
   - the GitHub Pages deployed site
-    - Under your repo's settings, scroll down to GitHub Pages and set it up to deploy your master branch
+    - Under your repo's settings, scroll down to GitHub Pages and set it up to deploy your `main` branch
   - the DTR
 
 ## Progression
