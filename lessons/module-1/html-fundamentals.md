@@ -31,7 +31,6 @@ Go the the [Turing Home Page](https://turing.io/) and open up your Dev Tools.
 - Click on the "Elements" tab. Stay in the "Elements" tab throughout this Warm Up.
 - Dig into the `<main>`. What are some things you see nested inside of this element? Can you associate any of the things you see in the code to what you see on the page?
 - In many of the elements, you'll notice a `class`. What do you think those are used for?
-- Towards the end of the `<body>` element, you'll see a `<script>` element. What do you think that might be?
 - How can you search for a specific HTML element in the HTML document? For example, `<nav>`.
 - Click around a bit more. What else do you notice in the "Elements" view of the Dev Tools?
 </section>
