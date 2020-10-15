@@ -92,7 +92,7 @@ _NOTE: None of this needs to persist on page refresh, unless you also complete t
 
 #### Local Storage 
 - Only do this if you've added the "Favorite a Message" functionality
-- Do some pre-teaching to utilize Local Storage, so that the user's favortie messages will persist, even if they reload the page
+- Do some pre-teaching to utilize Local Storage, so that the user's favorite messages will persist, even if they reload the page.
 
 #### Design your own feature
 - Have an idea of something you'd like to add to the app? Go for it! Just be sure to run the idea by your instructors first!
