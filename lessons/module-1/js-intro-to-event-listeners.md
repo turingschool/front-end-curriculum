@@ -52,6 +52,13 @@ Let's take a look at the syntax and then we'll talk about what's happening.
   - The name of a function that should be called whenever that event happens.
 4. We declare the function that will be called when the button is clicked.
 
+<section class="call-to-action">
+## Explore
+
+Open up a webpage that you often visit. Maybe it's a social media page, maybe it's your bank's website, maybe it's a news site. Take a few minutes and list all the event listeners that you think might be on that page! What do they do?
+
+</section>
+
 ### Style Change on Button Click
 
 Like we mentioned earlier, it's pretty common for a user to experience helpful feedback from an application after they've taken some sort of action.
@@ -154,7 +161,6 @@ Then, fork [this CodePen](https://codepen.io/kaylaewood/pen/ZEOOKOG) and start b
 
 When you study event listeners, here are some suggested exercises:
 
-- Open up a webpage that you often visit. Maybe it's a social media page, maybe it's your bank's website, maybe it's a news site. Take a few minutes and list all the event listeners that you think might be on that page! What do they do?
 - Look up what some common event listener types are (you've already seen `click`!)
 - Read up on the [event listener documentation](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 - Create a codepen with some HTML elements, and make up some event listeners for them! Try turning a red square green when it gets clicked. Try getting the data from an input field and displaying it on the page.
