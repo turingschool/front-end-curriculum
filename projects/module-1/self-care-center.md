@@ -3,7 +3,9 @@ title: Self Care Center
 ---
 
 ## Overview
-How can I care for myself? One way is with affirmations and mantras! You will be building an app that helps users remind themselves of their inherent value!
+How can I care for myself? One way is with affirmations and mantras!
+Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
+Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
 
 This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
 
@@ -14,6 +16,11 @@ This Solo Challenge gives students and instructors the opportunity to get a puls
 - Gain experience building an application that utilizes HTML, CSS and JavaScript
 - Write HTML and CSS to match a provided comp
 - Understand how to listen to and respond to user events
+- Individualize your programming skill set
+
+## Expectations
+- In order to get a good read on your progress during this inning, we'd like to see you complete the MVP (iteration 2) and at least one CYOA feature. If you'd like to complete more CYOA features after that, please do!
+- As for feedback: No news is good news. If we have concerns, we'll let you know so that you can make adjustments before your next project
 
 ## Setup
 
@@ -24,6 +31,18 @@ This Solo Challenge gives students and instructors the opportunity to get a puls
 
 ## Workflow
 Make sure you're utilizing git best practices (branches) and commiting frequently. 
+
+### Day One Deliverable
+- Read the spec sheet closely. 
+
+Reflect on the the following questions in a DM to your Project Manager:
+- What are my strengths as a developer? With which Mod 1 concepts do I feel comfortable?
+- In what areas could I grow? With which Mod 1 concepts do I struggle?
+- Which CYOA features align with my strengths?
+- Which CYOA features align with my areas of growth?
+- Which CYOA features align with what I enjoy about programming?
+- Which CYOA features make the most sense for this application?
+- Which CYOA feature(s) will I aim for?
 
 ### Iteration 0: Build Out Comp
 - Images are below
@@ -44,12 +63,12 @@ Make sure you're utilizing git best practices (branches) and commiting frequentl
 
 ### Choose your own Adventure
 
-In the interest of giving you opportunities to individualize the skills you build, this project's main goal is to provide various different paths you can take. Along these different paths you will encounter different problems and solve them in different ways. As you make choices about which features to add, you should consider which features align with your strengths, and which features would challenge you to grow. Choose one or more of the following features to add. Some of them build on others, so be sure to read them all before choosing.
+In the interest of giving you opportunities to individualize the skills you build, this project's main goal is to provide various different paths you can take. Along these different paths you will encounter different problems and solve them in different ways. As you make choices about which features to add, you should consider which features align with your strengths, which features would challenge you to grow, and which features you'd find to be useful in this application. Choose one or more of the following features to add. Some of them build on others, so be sure to read them all before choosing. 
 
 _NOTE: You should absolutely not be working on this unless your UI is solid and you are 100% sure that your MVP is fully functional and bug free._
 
 #### Error handling and clear button
-- User should not be able to click the "Receive Message" button unless selected a message option.
+- User should not be able to click the "Receive Message" button unless they have selected a message option.
 - The user can click a clear button, which clears the page of any message. 
 - User should only be able to click the clear button if a message is visible. 
 - When the clear button is clicked and the message is removed, the image of the meditation icon should re-appear.
@@ -58,7 +77,7 @@ _NOTE: You should absolutely not be working on this unless your UI is solid and 
 _Note: You can disable these buttons, hide them, or display a message to the user for error handling. The choice is yours!_
 
 #### User can add their own message
-- Add an "Add Message" button in a logical spot
+- Add an "Add Message" button in a logical spot.
 - When the user clicks "Add Message" a form will appear in the message box. The form should contain two inputs - one to specify which type of message is being added, and another to add the text of the message itself. The form should also contain a "Submit" button.
 - If the user doesn't specify the type of message, they should get an error and be unable to submit their message until the type is specified.
 - When the user clicks the "Submit" button and that message will be added to the appropriate list of messages.
@@ -84,15 +103,35 @@ _NOTE: None of this needs to persist on page refresh, unless you also complete t
 
 _NOTE: None of this needs to persist on page refresh, unless you also complete the local storage feature_
 
+#### User never sees a repeated message
+- Use JavaScript to ensure that the user never sees a repeated message until they've seen them all.
+- After they've seen them all they should be notified that they will now start seeing repeat messages.
+
+#### All Messages interface
+- Add a "View All Messages" button.
+- When that button is clicked, the user is taken to a new pages that displays all messages, sorted by message type.
+- On this page, user should have the ability to add/edit/delete messages.
+
 #### Animations
-- Your choice! Add your own ideas for animations, or follow some of the ideas below.
 - Add a loading animation when a user clicks the "Receive Message" button to simulate searching for a message. Hint - You will need to use CSS Keyframes, and a Javascript timeout function for this.
 - Make your buttons grow in size or change color when the user hovers over them, enticing them to click the dang thing.
 - When the message appears, the text should fade in, from white to black to deliver the message in a calming way.
+- Have the background change depending on if a user has selected an affirmation or mantra. Choose a calming secondary gradient for each type of message Remember your user experience and animate this in gradually! 
+
+#### Login Page
+- Refactor your application so that the user lands on a "Login" page
+- The login page should match the style of the application.
+- The login page should contain an input for a user to enter their name, and a button to submit.
+- After the user clicks the submit button, they should be taken to the main application page, and see a personalized greeting that displays their name and some sort of welcome message.
+- The welcome message and name should appear in a logical place of your choosing.
+
+#### Responsive Design
+- Do some research and determine how to make your app respond to the user's screen size.
+- Layout and spacing should adapt to mobile, tablet, desktop and extra large screens.
 
 #### Local Storage 
-- Only do this if you've added the "Favorite a Message" functionality
-- Do some pre-teaching to utilize Local Storage, so that the user's favorite messages will persist, even if they reload the page.
+- Only do this if you've added the "Favorite a Message" functionality.
+- Do some research to utilize Local Storage, so that the user's favorite messages will persist, even if they reload the page.
 
 #### Design your own feature
 - Have an idea of something you'd like to add to the app? Go for it! Just be sure to run the idea by your instructors first!
