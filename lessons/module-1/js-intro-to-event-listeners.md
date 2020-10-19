@@ -26,7 +26,9 @@ Before we can implement functionality like this though, we're going to build a s
 
 On your own, answer the questions associated with each stage of the Greeting App. If you aren't sure - it's ok - but take a try. You'll have time to chat with your partner afterward.
 
-[Instructor Resource](https://docs.google.com/document/d/1NmlZD0IlsInu4zjpCey9MI2GdV-Zd_jlIcnLdcvnTEo/edit)
+[Jamboard](https://jamboard.google.com/d/1iMb2VuJopHXVTa5wRDg6sPDM-bhwpPjFiAL9FGnB-ZY/edit?usp=sharing)
+
+<!-- [Instructor Resource](https://docs.google.com/document/d/1NmlZD0IlsInu4zjpCey9MI2GdV-Zd_jlIcnLdcvnTEo/edit) -->
 
 ## Event Listeners
 
@@ -140,9 +142,11 @@ Here is an example of the second task:
 </section>
 
 <section class="call-to-action">
-## Challenge
+## Greeting App
 
-Fork [this CodePen](https://codepen.io/kaylaewood/pen/ZEOOKOG) and start building out the Greeting App. Start with writing the HTML, then add the functionality. Handle the styling after the app is working as expected.
+Take 5 minutes with your partner to share your jamboards from the Warm Up.
+
+Then, fork [this CodePen](https://codepen.io/kaylaewood/pen/ZEOOKOG) and start building out the Greeting App. Start with writing the HTML, then add the functionality. Handle the styling after the app is working as expected.
 
 </section>
 
