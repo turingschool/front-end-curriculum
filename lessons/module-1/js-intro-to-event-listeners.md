@@ -50,19 +50,6 @@ Let's take a look at the syntax and then we'll talk about what's happening.
   - The name of a function that should be called whenever that event happens.
 4. We declare the function that will be called when the button is clicked.
 
-<section class="call-to-action">
-### Pair Practice
-
-Look at your notes for the Greeting App.  
-* What element or elements would require an event listener? 
-* What is the first argument that you would pass into the event listener?
-* What do you want to happen when the event occurs?
-
-**Extra Time?**  
-* Begin coding it out! Don't worry about styling - just create a basic version of the Greeting App.
-* Don't forget to pseudocode and plan!
-</section>
-
 ### Style Change on Button Click
 
 Like we mentioned earlier, it's pretty common for a user to experience helpful feedback from an application after they've taken some sort of action.
@@ -152,17 +139,18 @@ Here is an example of the second task:
 
 </section>
 
-## Wrap Up
+<section class="call-to-action">
+## Challenge
 
-Take a look back at your Greeting App notes and the CodePen you and your partner began creating earlier in the lesson.
+Fork [this CodePen](https://codepen.io/kaylaewood/pen/ZEOOKOG) and start building out the Greeting App. Start with writing the HTML, then add the functionality. Handle the styling after the app is working as expected.
 
-What else do you need to research? What methods would you look up? Add to your previous notes, and spend some time thinking about how else you might refine your problem-solving-process.
+</section>
 
 ### Suggested re-teaching practice
 
 When you study event listeners, here are some suggested exercises:
 
-- Open up a webpage that you often visit. Maybe it's a social media page, maybe it's your bank's website, maybe it's a news site. Take a few minutes and list all the event listeners that you think might be on that page! What do they do? 
+- Open up a webpage that you often visit. Maybe it's a social media page, maybe it's your bank's website, maybe it's a news site. Take a few minutes and list all the event listeners that you think might be on that page! What do they do?
 - Look up what some common event listener types are (you've already seen `click`!)
 - Read up on the [event listener documentation](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 - Create a codepen with some HTML elements, and make up some event listeners for them! Try turning a red square green when it gets clicked. Try getting the data from an input field and displaying it on the page.
