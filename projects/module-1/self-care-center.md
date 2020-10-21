@@ -19,7 +19,7 @@ This Solo Challenge gives students and instructors the opportunity to get a puls
 - Individualize your programming skill set
 
 ## Expectations
-- In order to get a good read on your progress during this inning, we'd like to see you complete the MVP (iteration 2) and at least one CYOA feature. If you'd like to complete more CYOA features after that, please do!
+- In order to get a good read on your progress during this inning, we'd like to see you complete the MVP (iteration 1) and at least one CYOA feature. If you'd like to complete more CYOA features after that, please do!
 - As for feedback: No news is good news. If we have concerns, we'll let you know so that you can make adjustments before your next project
 
 ## Setup
