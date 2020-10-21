@@ -34,6 +34,7 @@ Make sure you're utilizing git best practices (branches) and commiting frequentl
 
 ### Day One Deliverable
 - Read the spec sheet closely. 
+- Send the link to your forked repo to your Project Manager
 
 Reflect on the the following questions in a DM to your Project Manager:
 - What are my strengths as a developer? With which Mod 1 concepts do I feel comfortable?
