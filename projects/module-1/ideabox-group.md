@@ -263,18 +263,20 @@ To earn a given score, an application must meet the requirements listed in that 
 ### JavaScript - Style and Implementation
 
 * **4:**
-  * All loops are refactored into the proper array prototype iteration methods
-  * Uses logical operators instead of if/else statements where applicable
+  * All functions strictly adhere to the Single Responsibility Principle (SRP) and are all 10 lines of code or less
   * When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
 * **3:**
   * Application uses the Data Model exclusively to track changes to the ideas,
     and display of ideas happens after the Data Model has been updated
-  * DRY and SRP practices are demonstrated in codebase and students can speak to implementation decisions
-  * All functions are less than 10 lines
+  * Functions are DRY and observe SRP - and most are around 10 lines of code or less
   * There are no nested if/else statements
   * There are no global variables aside from query selectors and an array for your to-dos
   * Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a to-do urgent
-* **2:** Application correctly implements data model for the `Idea` class including all required methods
+  * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
+* **2:** 
+  * Application correctly implements data model for the `Idea` class including all required methods. Example: There should not be any DOM manipulation in class files.
+  * Inconsistently uses parameters and arguments to craft short and reusable functions. There might be parameters or arguments in functions that are unused.
+  * Most console logs, debuggers and comments are removed from code before submitting.
 * **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 
 ### Functional Expectations
@@ -287,7 +289,7 @@ One or both team members do not understand every single line of code
 One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
 A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
 
-* **4:** Application meets all of the expectations from Iteration 4 and most functionality from Iteration 5.
-* **3:** Application meets all of the expectations from Iteration 4.
-* **2:** Application meets all of the expectations of Iteration 3.
-* **1:** Application meets all of the expectations of Iteration 2.
+* **4:** Application meets all of the expectations from Iteration 4 and most functionality from Iteration 5 without bugs.
+* **3:** Application meets all of the expectations from Iteration 4 without bugs.
+* **2:** Application meets all of the expectations of Iteration 3 without bugs.
+* **1:** Application meets all of the expectations of Iteration 2 without bugs.
