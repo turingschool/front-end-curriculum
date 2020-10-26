@@ -138,7 +138,7 @@ If you choose from this category, then you must pick at least two of these optio
 
 ### Day 1
 
-Create a private Slack channel with your team members and instructor project manager. Submit the following by **noon** of day 1:
+Create a private Slack channel with your team members and instructor project manager. Submit the following by **3PM** of day 1:
 
 * MVP summary with a description the problem you are solving and your audience
 * The API you will use
@@ -194,6 +194,6 @@ Share your app progress with the class for Show and Tell! Be prepared to tell th
 ### Testing
 
 * 4 - All async functionality is mocked. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently. Evaluator has no recommendations for testing.
-* 3 - All Redux functionality is tested (actions and reducers), all components are unit tested in units and integration, and a valid attempt was made to mock async functionality.
+* 3 - All Redux functionality (if using redux) is tested (actions and reducers), all components are unit tested in units and integration, and a valid attempt was made to mock async functionality.
 * 2 - Nearly all unit tests are in place. React components are well tested with a diverse set of tests including but not limited to unit testing display of the component, event simulation tests, and unit tests for functions passed as props. There are tests in place for actions and reducers. No attempt to test async functionality was made.
 * 1 - A valid attempt to test this application was made, but there are obvious gaps with missing unit tests for Redux and React.  
