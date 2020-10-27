@@ -274,8 +274,7 @@ To earn a given score, an application must meet the requirements listed in that 
   * Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a to-do urgent
   * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
 * **2:** 
-  * Application correctly implements data model for the `Idea` class including all required methods. Example: There should not be any DOM manipulation in class files.
-  * Inconsistently uses parameters and arguments to craft short and reusable functions. There might be parameters or arguments in functions that are unused.
+  * Data model is built to the specifications detailed in the spec sheet and is fully separated from the DOM. Example: There should not be any DOM manipulation in class files.
   * Most console logs, debuggers and comments are removed from code before submitting.
 * **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 
