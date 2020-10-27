@@ -282,10 +282,10 @@ Functionality is the least important piece of the rubric. It’s included becaus
 
 This means, we DO NOT want to see:
 
-Code that completes iterations but is sloppy
-One or both team members do not understand every single line of code
-One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
-A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
+* Code that completes iterations but is sloppy
+* One or both team members do not understand every single line of code
+* One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
+* A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
 
 * **4:** Application meets all of the expectations from Iteration 5 without bugs.
 * **3:** Application meets all of the expectations from Iteration 4 without bugs.
