@@ -11,7 +11,7 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 ## Learning Goals
 
 * Gain an understanding of how to write clean HTML and CSS to match a provided comp
-* Understand how to implement client-side data persistence using `localStorage`
+* Understand how to implement client-side data persistence using `localStorage` and JSON
 * Understand what it looks like to have a separate data model (using a class) and DOM model
 * Incorporate & iterate over arrays in order to filter what is being displayed
 * Craft code with clean style, using small functions that show trends toward DRYness and SRP
@@ -209,13 +209,12 @@ To earn a given score, an application must meet the requirements listed in that 
 
 ### Professionalism
 * **4:**
-  - Team uses a PR template
+  - Team uses a PR template for every pull request
   - Team habitually conducts thorough code reviews in the GitHub GUI to document the progress of the application
   - Team has sought out code reviews from one or more mentors
-  - README is well formatted and descriptive with screenshots or gifs of the application in action.
 * **3:**
   - Commits are atomic and frequent, effectively documenting the evolution/progression of the application
-  - Commit messages are consistent, descriptive, and concise
+  - Commit messages are consistent, descriptive, and concise and begin with a verb and capital letter
   - Team uses PRs to screen/verify code before adding it to the main branch
   - There is no more than a 10% disparity in project contributions between teammates
   - README is well formatted and gives good context about the project, including links to both contributors’ GitHub profiles, and to the deployed GitHub Pages site
@@ -230,12 +229,12 @@ To earn a given score, an application must meet the requirements listed in that 
   - Some commits are pushed directly to the main branch
   - PRs are used inconsistently
   - There is a 50% disparity in project contributions between teammates
-  - There is no README, or README is insufficient
+  - There is no README, or the “boilerplate” README is left in the project.
 
 ### Comp Recreation
 
 * **4:** 
-  - Additional elements and animations have been added that match the visuals established in the comps.
+  - Additional elements and animations have been added that match the visuals established in the comps, and/or design is responsive across small, medium and large breakpoints.
 * **3:** 
   - Application implements all major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment, etc).
   - If additional elements were added, they generally match the visuals established in the comps, but may be slightly awkward.
@@ -247,15 +246,14 @@ To earn a given score, an application must meet the requirements listed in that 
 
 ### HTML && CSS - Style and Implementation
 * **4:**
-  - Application adds to the requirements of the Proficient category by using [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes
-  - Application fully implements HTML that is accessible for individuals with visual disabilities.
+  - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
+  - Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using Chrome DevTools [Lighthouse](https://developers.google.com/web/tools/lighthouse) audit tool, and a score of 100% is required. 
 * **3:**
-  - Application utilizes good naming conventions for HTML classes and IDs 
-  - CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles
+  - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly. 
+  - CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles. There is evidence of reused styles in the application. 
 * **2:**
-  - Application adds to the above with HTML that incorporates semantic HTML elements whenever possible
-  - Application has a simple, clean HTML structure
-  - Application utilizes organizational conventions for the whole CSS stylesheet
+  - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). Semantic elements like `<button>`, `<li>`, etc. are used instead of `<div>`. If `<div>` elements are used, they are only for styling purposes.
+  - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together. 
 * **1:**
   - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
   - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
@@ -264,18 +262,19 @@ To earn a given score, an application must meet the requirements listed in that 
 
 * **4:**
   * All functions strictly adhere to the Single Responsibility Principle (SRP) and are all 10 lines of code or less
+  * There are no nested if/else statements
   * When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
 * **3:**
   * Application uses the Data Model exclusively to track changes to the ideas,
     and display of ideas happens after the Data Model has been updated
+  * There are no nested for loops
   * Functions are DRY and observe SRP - and most are around 10 lines of code or less
-  * There are no nested if/else statements
   * There are no global variables aside from query selectors and an array for your to-dos
   * Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a to-do urgent
   * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
 * **2:** 
   * Data model is built to the specifications detailed in the spec sheet and is fully separated from the DOM. Example: There should not be any DOM manipulation in class files.
-  * Most console logs, debuggers and comments are removed from code before submitting.
+  * All console logs, debuggers and comments are removed from code before submitting.
 * **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 
 ### Functional Expectations
@@ -288,7 +287,7 @@ One or both team members do not understand every single line of code
 One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
 A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
 
-* **4:** Application meets all of the expectations from Iteration 4 and most functionality from Iteration 5 without bugs.
+* **4:** Application meets all of the expectations from Iteration 5 without bugs.
 * **3:** Application meets all of the expectations from Iteration 4 without bugs.
 * **2:** Application meets all of the expectations of Iteration 3 without bugs.
 * **1:** Application meets all of the expectations of Iteration 2 without bugs.
