@@ -263,14 +263,14 @@ To earn a given score, an application must meet the requirements listed in that 
 * **4:**
   * All functions strictly adhere to the Single Responsibility Principle (SRP) and are all 10 lines of code or less
   * There are no nested if/else statements
-  * When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
+  * When 'Filtering and Searching by Text' and 'Viewing Starred Ideas', ideas that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
 * **3:**
   * Application uses the Data Model exclusively to track changes to the ideas,
     and display of ideas happens after the Data Model has been updated
   * There are no nested for loops
   * Functions are DRY and observe SRP - and most are around 10 lines of code or less
-  * There are no global variables aside from query selectors and an array for your to-dos
-  * Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a to-do urgent
+  * There are no global variables aside from query selectors and an array for your idea
+  * Uses event delegation correctly on dynamic elements for deleting, and starring an idea
   * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
 * **2:** 
   * Data model is built to the specifications detailed in the spec sheet and is fully separated from the DOM. Example: There should not be any DOM manipulation in class files.
