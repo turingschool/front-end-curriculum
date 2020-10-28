@@ -33,17 +33,17 @@ A common obstacle that many JavaScript developers struggle with is understanding
 
 ### Experiment
 
-Clone [this](https://github.com/wvmitchell/eventPractice) repository to your
-local machine, and open up example1/index.html in your browser. Additionally, open up the example1/script.js and example1/index.html in your text editor, side by side. 
+Clone [this](https://github.com/turingschool-examples/eventPractice) repository to your
+local machine, and open up `example1/index.html` in your browser. Additionally, open up the `example1/script.js` and `example1/index.html` in your text editor, side by side. 
 
 <section class="call-to-action">
 ### Your Turn
 
 You should see three buttons labeled "Click me!" as well as a button for adding new buttons to the page.
 
-1. Spend some time reading through the code in script.js. 
+1. Spend some time reading through the code in script.js. You might want to add some of your own pseudocode.  
 2. After you've read every line,  ask yourself: 
-    * Which elements are we capturing with `querySelector`'s?
+    * Which elements are we selecting with `querySelector`'s?
     * Which elements are we adding `eventListeners` to?
     * What happens when the user clicks the `addNewButton`? 
 
@@ -64,7 +64,7 @@ Could we modify the function that adds new buttons so that it adds an event list
 
 Setting event listeners on specific newly created DOM nodes is one way to set event listeners. However, if you're not careful, you may end up setting multiple listeners on the same node.
 
-Also, you can cause a [memory leak](http://javascript.crockford.com/memory/leak.html) if an event listeners are not unbound from an element when it is removed from the DOM. See also, [memory management and garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management), and [4 Types of Memory Leaks in Javascript and How to Get Rid of Them](https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/).
+Also, you can cause a [memory leak](http://crockford.com/javascript/memory/leak.html) if an event listeners are not unbound from an element when it is removed from the DOM. See also, [memory management and garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management), and [4 Types of Memory Leaks in Javascript and How to Get Rid of Them](https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/).
 
 So how else can we listen for events on dynamic content?  Let's dive into how events work a little more first and then come back to this question.
 
@@ -79,16 +79,20 @@ Event propagation is an important yet misunderstood topic/term when talking abou
 * **Event bubbling phase** - This is the final phase to occur, although many people think this is the first phase. In the bubbling phase a notice is passed from the target Node up through all of the parent Nodes all the way back to the top root of the DOM.
 
 <section class="call-to-action">
-### Your Turn
+### On Your Own
 
-Take a couple minutes to create an analogy and visual representation of event propagation to show how these event phases occur behind the scenes.
+- Create your own visual representation of event propagation. 
+
+### With a Partner
+
+- Create an analogy to show how these event phases occur behind the scenes.
 </section>
 
 ## Event Bubbling
 
 Now we've talked about the fundamentals of events, let's turn our attention to the **event bubbling phase**, which refers to the ability of events that occur on DOM nodes to "bubble up" and also apply to ancestors of those nodes.
 
-Many people question why more attention isn't paid to the capturing phase. Simply put, it's unlikely that you'll have to use it. IE < 9 uses only event bubbling, whereas IE9+ and all major browsers support both.
+Many people question why more attention isn't paid to the capturing phase. Simply put, it's VERY unlikely that you'll have to use it. IE < 9 uses only event bubbling, whereas IE9+ and all major browsers support both.
 
 Legend has it that back in the day, Netscape Navigator and Internet Explorer had different, incompatible ways of propagating events to multiple handlers; Netscape "captured" while Internet Explorer "bubbled." W3C has very sensibly decided to take a middle position in this dispute. According to the W3C event model, any event taking place is first captured until it reaches the target element... and then bubbles up again.
 
