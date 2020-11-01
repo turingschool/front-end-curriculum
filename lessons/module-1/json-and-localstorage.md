@@ -57,7 +57,7 @@ The web storage API is a secure way your browser can store key value pairs that 
 
 <section class="checks-for-understanding">
 
-### Paired Practice
+### Practice
 
 Open up the developer tools on this page and try the following. Make sure to take note of your observations through each step. 
 
