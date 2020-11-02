@@ -34,6 +34,7 @@ Then, as a team:
 By the end of the day, complete the following tasks:
 
 * As a team, read the entire project spec and rubric
+* As a team, create a rough timeline to follow 
 * As a team, create a public document for your DTR (instructions can be found [here](https://github.com/turingschool/career-development-curriculum/blob/master/module_one/dtr_guidelines_memo.md))
 * Add all teammates and your assigned instructor as collaborators to your forked repository
 * In a Slack message to your assigned instructor share links to:
@@ -165,7 +166,7 @@ To earn a given score, an application must meet the requirements listed in that 
   - Most console logs, debuggers and comments are removed from code before submitting. 
 
 * **1:** 
-  - Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
+  - Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
 
 
 ### Functional Expectations
