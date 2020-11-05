@@ -83,7 +83,7 @@ This workflow is not required, but will help you meet the overall requirements o
 6. Connect Game data model to the DOM
 7. Display the Player data in the sidebars
 8. Automatically reset the game board to allow for a new game to be played after the previous game is won
-9. Persist Player data using local storage (number of wins and mini-boards displaying won games should persist across page refreshes)
+9. Persist Player data using local storage (number of wins should persist across page refreshes)
 
 ## Rubric
 
@@ -119,7 +119,7 @@ Here is what the final score means in terms of completing the module:
 * **4:**
 
   - Code is well refactored, DRY, follows SRP, and demonstrates developer empathy. There are multiple examples of reusable functions. There are no instances of repetitive code.
-  - No global variables are used aside from query selectors, start time, and instance of `Game`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor.
+  - No global variables are used aside from query selectors and instance of `Game`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor.
 
 * **3:**
 
