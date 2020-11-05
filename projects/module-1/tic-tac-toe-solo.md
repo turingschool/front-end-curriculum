@@ -146,7 +146,11 @@ Here is what the final score means in terms of completing the module:
 * **4:**
 
   - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
-  - Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using Chrome DevTools [Lighthouse](https://developers.google.com/web/tools/lighthouse) audit tool, and a score of 100% is required.
+  - Application fully implements HTML that is accessible for individuals with visual disabilities. Note: Typically, this is checked using Chrome DevTools [Lighthouse](https://developers.google.com/web/tools/lighthouse) audit tool, but unfortunately, Lighthouse does only work if your site is hosted. Instead, we will be using an accessibility extension called [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh). We will be looking for 0 Errors and 0 Contrast Errors. To get WAVE to work on local files, you'll need to do these steps after installing it:
+    - Right click the WAVE extension
+    - Click "Manage Extensions"
+    - Flip the "Allow access to file URLs" switch
+    - Success!
 
 * **3:**
 
@@ -178,6 +182,7 @@ Here is what the final score means in terms of completing the module:
 * **2:**
 
   - Developer makes attempts to write DRY CSS by having at least 1 example of using a class to apply a styling rule block to multiple elements.
+  - There is no use of the `!important` tag. One exception may be for a `.hidden` class.
   - The design of the page does not match the overall layout provided in the comp.
 
 * **1:**
