@@ -57,7 +57,7 @@ The web storage API is a secure way your browser can store key value pairs that 
 
 <section class="checks-for-understanding">
 
-### Paired Practice
+### Practice
 
 Open up the developer tools on this page and try the following. Make sure to take note of your observations through each step. 
 
@@ -73,8 +73,8 @@ Open up the developer tools on this page and try the following. Make sure to tak
 10. `localStorage.getItem('somethingComplicated');`
 
 #### Finished early?
-- Experiement storing different types of data. Take note of what gets logged! Is there anything we can't store?
-- Check out the docs. What other methods are available to you when using localStorage?
+- Experiment storing different types of data. Take note of what gets logged! Is there anything we can't store?
+- Is there a way we can use the Dev Tools to see everything that's currently stored in localStorage?
 </section>
 
 
@@ -85,6 +85,7 @@ JSON stands for "JavaScript Object Notation" and is a method for representing co
 JSON has the following rules:
 
 - Keys must be double quoted.
+- No trailing comma.
 - Values must be one of the following types:
     - Strings (double quoted)
     - Numbers
@@ -92,13 +93,14 @@ JSON has the following rules:
     - Arrays
     - Objects
 
-**What does JSON look like?**
+**What does JSON look like? Have we seen JSON anywhere else?**
 ```
 { 
   "commonName": "Swiss Cheese Plant",
   "classification": "Monstera",  
   "family": "Araceae",
   "maxHeightInFeet": 30,
+  "flower": true,
   "scientificName": "Monstera Deliciosa"
 }
 ```

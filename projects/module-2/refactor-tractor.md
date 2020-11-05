@@ -12,7 +12,7 @@ tags: javascript, oop, mocha, chai, testing
 * Ensure your app is following best practices for accessibility
 * Leverage Sass to DRY up your CSS
 * Incorporate Webpack to streamline your workflow process
-* Leverage Chai Spies to verify that your DOM manipulation is happening 
+* Leverage Chai Spies to verify that your DOM manipulation is happening
 
 In this project, you will be building on top of somebody else's pre-existing FitLit codebase. It's uncommon that you'll be starting an application from scratch when you get on the job; more frequently, you're entering into a large codebase that other developers have been working on for years. It can be intimidating at first, and may take some time for you to learn your way around. Take this project as an opportunity to get comfortable doing this!
 
@@ -25,11 +25,11 @@ In this project, you will be building on top of somebody else's pre-existing Fit
 ## Set Up
 
 1. Download your assigned repo
-2. Move the zip file into the folder where you want the project to live 
-3. cd into the directory with your zip file 
-4. run `unzip [filename]` 
-5. cd into the newly unziped directory 
-6. On GitHub, make a new repo for your project 
+2. Move the zip file into the folder where you want the project to live
+3. cd into the directory with your zip file
+4. run `unzip [filename]`
+5. cd into the newly unziped directory
+6. On GitHub, make a new repo for your project
 7. Copy the new repo's url
 8. In your terminal:
     - remove the old remote `git remote remove origin`
@@ -57,11 +57,11 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 
 - Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages)
 
-## Requirements 
+## Requirements
 
 ### Sass
 
-Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an `index.scss` file that imports your partials, and a `variables.scss` file that contains any of your Sass variables or function definitions. Identify common/re-used elements on your page to determine the remaining partials you might want. 
+Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an `index.scss` file that imports your partials, and a `variables.scss` file that contains any of your Sass variables or function definitions. Identify common/re-used elements on your page to determine the remaining partials you might want.
 
 Your Sass should be making use of:
 
@@ -92,7 +92,7 @@ For the currently displayed user, you must be able to add a new sleep, hydration
 |---|---|---|---|  
 | Sleep Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/sleep/sleepData | `{"userID": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
 | Activity Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/activity/activityData | `{"userID": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
-| Hydration Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/hydration/hydrationData | `{"userID": integer, "date": string, "numOunces": integer}` | 
+| Hydration Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/hydration/hydrationData | `{"userID": integer, "date": string, "numOunces": integer}` |
 
 
 ### Pull Requests
@@ -127,52 +127,52 @@ For the currently displayed user, you must be able to add a new sleep, hydration
 ## Extensions
 
 * Deploy your updates to GH pages
-* Create and implement a new feature for your application (run this by instructors first). 
+* Create and implement a new feature for your application (run this by instructors first).
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
-* Create a video of your team navigating through your app via a keyboard and screen reader. 
-* Implement an animation using CSS and SASS 
+* Create a video of your team navigating through your app via a keyboard and screen reader.
+* Implement an animation using CSS and SASS
 
 
 ## Strategies for Success
-* Make sure you are reviewing the original ["FitLit" spec](https://frontend.turing.io/projects/fitlit.html) so you have a good idea for what the project and its requirements are. 
-* Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well. 
-* Every group member must fully understand and be able to speak to all of the code changes that have been made. 
+* Make sure you are reviewing the original ["FitLit" spec](https://frontend.turing.io/projects/fitlit.html) so you have a good idea for what the project and its requirements are.
+* Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well.
+* Every group member must fully understand and be able to speak to all of the code changes that have been made.
 
 ## Important Dates
-Thursday July 16th, EOD - Submit links to your DTR and Project Board to Will & Bob  
-Thursday July 23rd - Project Check Ins  
-Tuesday July 28th - Project is due by 9PM. [Submit here](https://docs.google.com/spreadsheets/d/1SbUtNaFZ4TGu_NvPMqzcuK0WrXvBRWjlGyjZMw9ux_Y/edit#gid=685056282)
+Friday October 23rd, EOD - Submit links to your DTR and Project Board to Will & Bob  
+Wednesday October 28th - Project Check Ins  
+Monday November 2nd  - Project is due by 9PM. [Submit here](https://docs.google.com/spreadsheets/u/1/d/1TbHvKMGjt-hJhJzP98_ED41utNE2Zk_wYeABXfVWrg4/edit?usp=sharing)
 
 # Project Requirements Rubric
 ## Functional Expectiations
 * Novice: Application crashes during normal usage.
 * Advanced Beginner: Application is usable, but has some missing functionality.
-* Proficient: Application fulfills all requirements. 
+* Proficient: Application fulfills all requirements.
 * Exceptional: Application fulfills all requirements, and has functionality that goes above and beyond an MVP.
 
 
 ## Testing
 * Novice - There is little or no evidence of testing in the application.
 * Advanced Beginner - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
-* Proficient - Project has a running test suite that tests multiple levels but fails to cover some features. Chai spies have been attempted with some success. 
+* Proficient - Project has a running test suite that tests multiple levels but fails to cover some features. Chai spies have been attempted with some success.
 * Exceptional - Project has a running test suite that utilizes spies well. The test suite covers almost all aspects of the application.
 
 ## SASS
 * Novice - There are several (10+) instances of duplication. Code is written with unnecessary selectors or tags which do not increase clarity. No SASS, or VERY minimal SASS is utilized .
-* Advanced Beginner - There is some duplication (5-10 instances) in the codebase, and there may be some unnecessary selectors or tags. Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only a few variables have been used. 
-* Proficient - The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well. 
-* Exceptional - Application fulfills all requirements of the proficient level, and has SASS functionality that goes above and beyond an MVP (see extensions). 
+* Advanced Beginner - There is some duplication (5-10 instances) in the codebase, and there may be some unnecessary selectors or tags. Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only a few variables have been used.
+* Proficient - The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
+* Exceptional - Application fulfills all requirements of the proficient level, and has SASS functionality that goes above and beyond an MVP (see extensions).
 
 ## Accessibility
-* Novice - Two or more accessibility areas have not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML. 
-* Advanced Beginner - One accessibility area has not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML. 
+* Novice - Two or more accessibility areas have not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML.
+* Advanced Beginner - One accessibility area has not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML.
 * Proficient - All accessibility areas have been considered and tested. An accessibility audit with a score of at least 95%.  
 * Exceptional - Meets all requirements for proficient, with an audit score of 100% and has gone above and beyond accessibility requirements (see extensions).
 
 ## User Testing / UI
 * Novice - The application is confusing or difficult to use. The UI is incomplete, and the app is not responsive.
 * Advanced Beginner - The application may be confusing or difficult to use at times. The application shows some effort in the interface, but the result is not effective because UX and/or UI still present an application that is incomplete or difficult to use. The UI is incomplete, and the app is not responsive.
-* Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX. New features match the style of the existing project, and appropriate error handling messages are displayed. 
+* Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX. New features match the style of the existing project, and appropriate error handling messages are displayed.
 * Exceptional - Meets all expectations for Proficient. In addition, the application has clearly had special consideration around usability on devices.
 
 ## JavaScript
@@ -185,7 +185,7 @@ Tuesday July 28th - Project is due by 9PM. [Submit here](https://docs.google.com
 * Novice - The team committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 * Advanced Beginner - The team makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. The team does not utilize a planning tool or equitable pairing practices. One or both members do not contribute meaningfully to the application.
 * Proficient - The team makes a series of small, atomic commits that document the evolution of their application. The team conducts a DTR (define the relationship) and utilizes GitHub issues and best pairing practices. Team members utilize a kanban-style project board (we recommend Github Project) and git branches. The team effectively uses Git branches and pull requests for meaningful code review. The evolution of the project is evident through conversation done via code reviews and pull requests.
-* Exceptional - All requirements for proficient have been met, and the team has consistently delivered meaningful code review. This may look like: multiple comments on every PR across the team, with specific code comments. 
+* Exceptional - All requirements for proficient have been met, and the team has consistently delivered meaningful code review. This may look like: multiple comments on every PR across the team, with specific code comments.
 
 
 # Technical Evaluation Rubric

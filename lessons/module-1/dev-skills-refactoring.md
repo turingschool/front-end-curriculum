@@ -12,6 +12,7 @@ length: 60
 ## Vocabulary
 
 - `DRY` Don't Repeat Yourself!
+- `WET` Write Everything Twice
 - `refactor` Rewriting working code for readability, maintainability, or performance without changing it's behavior
 
 <section class="call-to-action">
@@ -32,6 +33,8 @@ As you watch a real person refactor in real time, take note of the questions the
 Refactoring is more of an art. It should not be rushed.
 
 You should be following the red-green-refactor flow, just as you do with TDD. Refactoring is the step we take after things work. The code is _ok_, but the goal of this process is to make it _great_. To do this well, great developers are methodical and thorough.
+
+Just because you spot a change you *could* make, doesn't mean it's a good or necessary refactor. For example - changing every if/else statement into a ternary would be a waste of your time, and would actually make your code harder to read. Be selective about the code you choose to refactor.
 </section>
 
 <section class="checks-for-understanding">
@@ -47,4 +50,12 @@ With the repo you select based on the level of heat you want, take these steps:
 **Mild:** Clone down [this repo](https://github.com/turingschool-examples/num-guess-refactor).
 **Medium:** Use your pair project repo
 **Spicy:** Ask another pair for the link to their repo
+</section>
+
+<section class="checks-for-understanding">
+### Wrap Up
+
+In your notes, reflect on the following prompts:
+- How can I spot a potential refactor?
+- When I elect to refactor something, what is my goal?
 </section>

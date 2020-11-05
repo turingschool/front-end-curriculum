@@ -177,7 +177,7 @@ Let's see how this changes the assertion logic of our test:
 
 ```js
 describe('saveDetails', function() {
-  beforeEach(function() {
+  before(function() {
     global.localStorage = {}
     chai.spy.on(localStorage, ['setItem', 'getItem'], () => {})
   })
@@ -191,7 +191,7 @@ describe('saveDetails', function() {
 
     // expectation
     expect(localStorage.setItem).to.have.been.called(1);
-    expect(localStorage.setItem).to.have.been.called.with('box', { width: 100, height: 100 });
+    expect(localStorage.setItem).to.have.been.called.with('box', JSON.stringify({ width: 100, height: 100 }));
 });
 ```
 
@@ -206,10 +206,10 @@ passes now.
 
 ```js
 saveDetails() {
-  localStorage.setItem('box', {
+  localStorage.setItem('box', JSON.stringify({
     height: this.height,
     width: this.width
-  });
+  }));
 }
 ```
 
