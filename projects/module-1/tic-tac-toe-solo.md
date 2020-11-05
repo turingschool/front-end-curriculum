@@ -30,10 +30,9 @@ We want to see YOUR work.
 ## Set Up & Submission
 
 - Create a **private** repository and add your assigned instructor as a collaborator. (You cannot deploy private repositories to GitHub Pages; that's ok.)
-- Create a project board or other planning gist where you will outline your anticipated progress through functionality
-- Begin wireframing your application and planning out the architecture of your HTML (in your notebook is fine)
+- Create a planning document where you outline your anticipated progress through the project. You can choose any format for this planning doc: Google Docs, a Gist, GitHub Projects, etc. You can add anything to this doc that will help you stay organized throughout the completion of this project. At minimum, it should include a timeline for when you'd like to complete each piece of functionality for the project.
 
-By EOD on Kick Off Day: DM your assigned instructor with two links: Project Board/Planning Gist & Repo, and include photographs of your wireframing
+By EOD on Kick Off Day: DM your assigned instructor with two links: Your repo & the planning doc.
 
 ### Functionality
 
@@ -43,9 +42,9 @@ Here is a video demonstrating most functionality of the game (the only functiona
 
 In this project, we will not be providing detailed iterations. We want you to exercise your skills in planning out work!
 
-Notes: 
+Notes:
 * A timeout is used after a completed game to reset the board.
-* YOU DO NOT NEED TO DISPLAY EACH INDIVIDUAL WIN BOARD. WE ONLY NEED TO SEE NUMBER OF WINS. 
+* YOU DO NOT NEED TO DISPLAY EACH INDIVIDUAL WIN BOARD. WE ONLY NEED TO SEE NUMBER OF WINS.
 * No need to match colors or icons, but the overall layout should be the same.
 
 ### Architecture
@@ -57,7 +56,7 @@ Your entire application will consist of one HTML page or template. You will have
 		1. `constructor` - properties should include: `id` (ex: `'one'`), `token` (ex: `'⭐️'`), `wins` (ex: `[]`)
 		2. `saveWinsToStorage`
 		3. `retrieveWinsFromStorage`
-2. A `game.js` file that contains a Game class. 
+2. A `game.js` file that contains a Game class.
   * A `Game` should include:
       - Two `Player` instances
       - A way to keep track of the data for the game board
@@ -116,32 +115,32 @@ Overall rubric scores will be averaged. Here is what the average score means in 
 
 We still expect you to use good workflow practices! Atomic commits, use of branches and PRs (you will be merging these PRs yourself).
 
-* **4:** 
+* **4:**
 
-  - A PR template was used. 
+  - A PR template was used.
   - A code review was requested and completed by a mentor
   - developer can speak to how the feedback in code review was implemented (and point to the commit(s) that implemented the feedback).
   - Developer is ready to clearly present the evolution of this app during the eval - from architecture decisions made in the planning process, to wins and challenges throughout.
 
-* **3:** 
+* **3:**
 
-  - Developer is able to clearly answer questions regarding the evolution of this app during the eval - from architecture decisions made in the planning process, to wins and challenges throughout. 
-  - A project board/planning document is used and updated throughout the project. 
-  - Branches are used. Most commits are formatted correctly. 
+  - Developer is able to clearly answer questions regarding the evolution of this app during the eval - from architecture decisions made in the planning process, to wins and challenges throughout.
+  - A project board/planning document is used and updated throughout the project.
+  - Branches are used. Most commits are formatted correctly.
   - The README is formatted well and contains:
     - Overview of project and goals
     - Overview of technologies used, your code architecture, challenges, wins, and any other reflections
     - Screenshots/gifs of your app
 
-* **2:** 
+* **2:**
 
-  - Developer is able to answer questions regarding the evolution of the app, but may need some prompts to clearly articulate or provide enough context. 
-  - More than a few commits are formatted incorrectly. 
+  - Developer is able to answer questions regarding the evolution of the app, but may need some prompts to clearly articulate or provide enough context.
+  - More than a few commits are formatted incorrectly.
   - The README is formatted well but may be lacking in detail.
 
-* **1:** 
+* **1:**
 
-  - Developer struggles to answer questions regarding the evolution of the app. 
+  - Developer struggles to answer questions regarding the evolution of the app.
   - **OR:** Commit and PR history does not tell a story of the application
   - **OR:** A README has not been created/has minimal information.
 
@@ -170,7 +169,7 @@ We still expect you to use good workflow practices! Atomic commits, use of branc
   - Arguments and parameters are used to limit global variables.
   - The **event object** is used correctly, and is not accepted as a parameter if it is not necessary.
   - Developer can speak to **how the event object is utilized** for any given event handler.
-  - **Function and variable names** describe their role in the program. 
+  - **Function and variable names** describe their role in the program.
     - Examples: The name of the data type should not ever be in a variable name (ex: "petArray"); the name itself should be clear enough to indicate the type of data it holds (ex: "allPets").
   - An event handler should not have "handler" in the name (ex: "clickHandler"); the name should indicate the handler's purpose (ex: "addNewPet").
 
