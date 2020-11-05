@@ -166,18 +166,18 @@ Here is what the final score means in terms of completing the module:
 
 * **4:**
 
-  - CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles.
+  - CSS is DRY, utilizing classes/rules to cut down on repetitive styles.
   - Microinteractions such as hover states and animations have been thoughtfully added to improve the user experience.
   - Design is responsive across small, medium and large breakpoints.
 
 * **3:**
 
-  - Developer makes attempts to write DRY CSS by having at least 1 example of using a class to apply a styling rule block to multiple elements.
+  - CSS includes several examples of using a class to apply a styling rule block to multiple elements.
   - The design of the page is cohesive and ensures an intuitive user experience. Any user could navigate the application without any guidance from the developer.
 
 * **2:**
 
-  - CSS contains several instances of repetitive code, showing no real attempt to make code DRY.
+  - Developer makes attempts to write DRY CSS by having at least 1 example of using a class to apply a styling rule block to multiple elements.
   - The design of the page does not match the overall layout provided in the comp.
 
 * **1:**
