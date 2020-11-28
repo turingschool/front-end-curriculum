@@ -201,7 +201,6 @@ Think of some others!
 
 ### Setup
 
-
 There is no setup! You are not going to run an API locally to start this project. The API was created by your instructors and it lives on Heroku. The API you'll be working with lets you make GET, POST, and DELETE requests.
 
 ### API Documentation
