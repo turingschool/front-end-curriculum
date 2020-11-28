@@ -80,7 +80,7 @@ The information about the API we are using is located
 
 There is no setup! You are not going to run an API locally to start this project. The API was created by your instructors and it lives on Heroku. The API you'll be working with lets you make GET, POST, and DELETE requests.
 
-### API Documentation
+#### API Documentation
 
 All API endpoints (also known as "routes") are prefixed with `https://rancid-tomatillos.herokuapp.com/api/v2`. Also, wherever you see a `:user_id` or `:rating_id` in the endpoint documentation, that would be replaced by the ID _value_ in your request, like `5`, for instance. Here are the endpoints available:
 
