@@ -38,6 +38,8 @@ In that DM, please share the following:
 
 You may also create your React repo (we will be using [Create-React-App](https://frontend.turing.io/lessons/module-3/react-2-the-how.html)) and share the link in the DM, but you can also wait until tomorrow to do this.
 
+---
+
 ### Iteration 1 - Displaying movies
 
 For this first iteration, we will use mock data to display the movies (we will later refactor our project to consume an API). The purpose of this is to allow us to focus purely on React for now.
@@ -51,6 +53,8 @@ For now, you will import this information into your `App.js` file and use this a
 
 **Suggested completion date**  
 - End of Day 2
+
+---
 
 ### Iteration 2 - Displaying an individual movie
 
@@ -68,6 +72,8 @@ For the second iteration, we'll use [`conditional rendering`](https://frontend.t
 - Unit tests are pseudocoded
 - Integration tests are pseudocoded
 - A few unit tests are written & passing
+
+---
 
 ### Iteration 3 - Network Requests & Async JS
 
@@ -111,6 +117,8 @@ If you are sending information in the body of a request, you will need to set th
 - Unit & integration tests are written & passing
 - Asynchronous testing is completed
   - Asynchronous functions are mocked properly
+  
+---
 
 ### FIRST WEEKEND DELIVERABLES
 
@@ -132,6 +140,8 @@ DO NOT wait on code review from us to merge these PRs in. We will conduct code r
 
 The point of these code reviews is to get you familiar with common code review practices, and to model the level of detail with which we expect you to be reviewing each others' PRs!
 </section>
+
+---
 
 ### Iteration 4 - Refactoring with Router
 
@@ -170,6 +180,8 @@ Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_q
   - Tests have been updated to accommodate Router
 - Asynchronous testing is completed
 - Router testing is completed
+
+---
 
 ### Iteration 5 - Choose your own adventure
 
@@ -225,6 +237,8 @@ You are welcome to come up with your own ideas, too.
 **Suggested completion date**  
 - Deliverables due Thursday of Week 2
 - Complete by end of Monday of Week 3 (aim to leave final day for polishing the project, not building out features!)
+
+---
 
 ### PROJECT DUE DATE: 9pm Tuesday of Week 3
 
