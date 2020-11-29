@@ -1,9 +1,3 @@
-
-
-
-
-
-
 ---
 title: "JS: Dot and Bracket Notation"
 length: 60
