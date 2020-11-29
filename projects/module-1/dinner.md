@@ -4,7 +4,7 @@ title: What's For Dinner?
 
 ## Overview
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+What's for dinner? The ultimate question. You will be building an app that helps users choose a dish and put together meals. 
 
 This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
 
@@ -15,6 +15,11 @@ This Solo Challenge gives students and instructors the opportunity to get a puls
 - Gain experience building an application that utilizes HTML, CSS and JavaScript
 - Write HTML and CSS to match a provided comp
 - Understand how to listen to and respond to user events
+- Individualize your programming skill set
+
+## Expectations
+- In order to get a good read on your progress during this inning, we'd like to see you complete the MVP (iteration 1) and at least one CYOA feature. If you'd like to complete more CYOA features after that, please do!
+- As for feedback: No news is good news. If we have concerns, we'll let you know so that you can make adjustments before your next project
 
 ## Setup
 
@@ -24,35 +29,53 @@ This Solo Challenge gives students and instructors the opportunity to get a puls
 - Read this README thoroughly, then begin working!
 
 ## Workflow
-Make sure you're utilizing git best practices and commiting frequently. 
+Make sure you're utilizing git best practices (branches) and commiting frequently. 
+
+### Day One Deliverables
+- Read the spec sheet closely. 
+- Send the link to your forked repo to your Project Manager
+
+Reflect on the the following questions in a DM to your Project Manager:
+- What are my strengths as a developer? With which Mod 1 concepts do I feel comfortable?
+- In what areas could I grow? With which Mod 1 concepts do I struggle?
+- Which CYOA features align with my strengths?
+- Which CYOA features align with my areas of growth?
+- Which CYOA features align with what I enjoy about programming?
+- Which CYOA features make the most sense for this application?
+- Which CYOA feature(s) will I aim for?
 
 ### Iteration 0: Build Out Comp
 - Images are below
 - An assets directory is provided in the repo, and colors are provided in the CSS file.
+- Don't worry about the "Add a Recipe" button and "Entire Meal" radio button for now.
 
 <img class="medium-large" src="./assets/dinner/dinner_0.png" alt="iteration 0 comp">
 <hr/>
 
-### Iteration 1: Add Random Side, Main and Dessert Functionality
+### Iteration 1: Minimum Viable Product (MVP) - Add Random Side, Main and Dessert Functionality
 
-- When a user selects a dish option (don't worry about "Entire Meal" yet) and then clicks the "Let's Cook!" button, the user sees a random dish from the list of possible dishes for that category
+- When a user selects a dish option (don't worry about "Entire Meal") and then clicks the "Let's Cook!" button, the user sees a random dish from the list of possible dishes for that category
 - When the dish name appears, the cookpot icon disappears
 
 <img class="medium-large" src="./assets/dinner/dinner_1.png" alt="iteration 1 comp">
 <hr/>
 
+### Choose your own Adventure
 
-### Iteration 2: Entire Meal Funcitonality
+In the interest of giving you opportunities to individualize the skills you build, this project's main goal is to provide various different paths you can take. Along these different paths you will encounter different problems and solve them in different ways. As you make choices about which features to add, you should consider which features align with your strengths, which features would challenge you to grow, and which features you'd find to be useful in this application. Choose one or more of the following features to add. Some of them build on others, so be sure to read them all before choosing. 
+
+_NOTE: You should absolutely not be working on this unless your UI is solid and you are 100% sure that your MVP is fully functional and bug free._
+
+#### Entire Meal Functionality
 
 - When the user selects the "Entire Meal" option and then clicks the "Let's Cook!" button, the user sees a message with a side, main and dessert option from the lists of possible dishes for all categories
 - When the meal items appear, the cookpot icon disappears
 
-<img class="medium-large" src="./assets/dinner/dinner_2.png" alt="iteration 2 and 3 comp">
+<img class="medium-large" src="./assets/dinner/dinner_2.png" alt="entire meal comp">
 <hr/>
 
 
-### Iteration 3: Error Handling and Clear Button
-
+#### Error Handling and Clear Button
 - The user can click a clear button, which clears the page of any message. User should only be able to click the clear button if a food is visible. When the clear button is clicked and the food is removed, the image of the cookpot should re-appear.
 - User should not be able to click the "Let's Cook" button for a recipe unless they have selected an option.
 
@@ -62,33 +85,81 @@ _Note: You can disable these buttons, hide them, or display a message to the use
 <hr/>
 
 
-### Iteration 4: Adding a Recipe
+#### User can add a recipe
 
 - The user can click an "Add a Recipe" button, which will display a form to add a new recipe at the bottom of the page
 - The user can add a type and a name, click the "Add New" recipe and that recipe will be added to the appropriate list
 - When a new recipe is added, that recipe should automatically display instead of the cookpot icon
+- When a user tries to add to a recipe type that does not exist, we see an error message, OR the new category gets added!
 
-_NOTE: None of this needs to persist on page refresh_
 
 <img class="medium-large" src="./assets/dinner/dinner_4.png" alt="iteration 4 comp">
 <hr/>
 
-### Iteration 5: BONUS ROUND (Ideas for Extensions)
-
-_NOTE: This round is not required, and you should absolutely not be working on this unless your UI is solid and you are 100% sure that all of Iterations 1-4 are fully functional and bug free._
-
-- Add a loading animation when a user clicks the "Let's Cook" button to simulate searching for a recipe. Hint - You will need to use CSS Keyframes, and a Javascript timeout function for this.
-- When a user tries to add to a recipe type that does not exist, we see an error message, OR the new category gets added!
-- Add the ability to delete a recipe (ie: when a recipe shows up, show a button that says "I don't like this recipe" (or something similar), and remove it from the array so that it will not show up any more (does not need to persist on page load). Make sure to alert the user in some way that the recipe has been removed. 
-- Make sure that the same recipe (single item or entire meal) won't be generated more than once. Make sure to add error handling for when a user "runs out of recipes." (does not need to persist on page load)
-- Additional functionality for entire meal -> add the ability to swap out meal items. Note: Make sure your design for this matches the theme
-- CYOA Extension! Make sure you run your idea by instructors
+#### Login Page
+- Refactor your application so that the user lands on a "Login" page
+- The login page should match the style of the application.
+- The login page should contain an input for a user to enter their name, and a button to submit.
+- After the user clicks the submit button, they should be taken to the main application page, and see a personalized greeting that displays their name and some sort of welcome message.
+- The welcome message and name should appear in a logical place of your choosing.
 <hr/>
 
-### Food Lists (Feel free to use your own instead!)
+
+#### User can favorite a recipe
+
+- When a recipe appears, it should appear with a "Favorite" button.
+- When the "Favorite" button is clicked, that recipe should be added to a new list of favorite recipes.
+- Users should be able to view their favorites by clicking a "View Favorites" button that exists somewhere on the page
+- When the "View Favorites" button is clicked, users should be taken to a new page that displays all of their favorite recipes.
+- Users should be able to navigate back to the main page by clicking a button.
+- Users should be able to remove a recipe from their list of favorites, by clicking a button.
+- As you add these new elements to the page, be sure to match the style of existing elements.
+<hr/>
+
+#### User can delete a recipe
+- Add the ability to delete a recipe (ie: when a recipe shows up, show a button that says "I don't like this recipe" (or something similar), and remove it from the list so that it will not show up any more. Make sure to alert the user in some way that the recipe has been removed. 
+
+
+<hr/>
+
+#### User never sees a repeated recipe
+- Use JavaScript to ensure that the user never sees a repeated recipe until they've seen them all.
+- After they've seen them all they should be notified that they will now start seeing repeat recipes.
+<hr/>
+
+#### All recipes interface
+- Add a "View All Recipes" button.
+- When that button is clicked, the user is taken to a new pages that displays all recipe, sorted by recipe type.
+- On this page, user should have the ability to add/edit/delete recipe.
+<hr/>
+
+#### Animations
+- Add a loading animation when a user clicks the "Let's Cook" button to simulate searching for a recipe. Hint - You will need to use CSS Keyframes, and a Javascript timeout function for this.
+- Make your buttons grow in size or change color when the user hovers over them, enticing them to click the dang thing.
+- When the recipe appears, the text should fade in.
+
+Remember your user experience and animate these things in gradually. Timing is everything!
+<hr/>
+
+#### Responsive Design
+- Do some research and determine how to make your app respond to the user's screen size.
+- Layout and spacing should adapt to mobile, tablet, desktop and extra large screens.
+<hr/>
+
+#### Local Storage 
+- Only do this if you've added the "Favorite a dish" functionality.
+- Do some research to utilize `localStorage`, so that the user's favorite recipes will persist, even if they reload the page.
+- `localStorage` could also be utilized for the "User can delete a recipe" CYOA to make sure that the recipes a user has deleted stay gone after page reload. 
+<hr/>
+
+#### Design your own feature
+- Have an idea of something you'd like to add to the app? Go for it! Just be sure to run the idea by your instructors first!
+
+<hr/>
+
+### Example Food Lists (Feel free to use your own instead!)
 
 #### Sides
-
 Miso Glazed Carrots  
 Coleslaw  
 Garden Salad  
