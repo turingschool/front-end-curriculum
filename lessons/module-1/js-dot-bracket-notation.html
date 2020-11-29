@@ -1,0 +1,177 @@
+
+
+
+
+
+
+---
+title: "JS: Dot and Bracket Notation"
+length: 60
+tags: javascript, foundation, arrays, objects, bracket, dot, notation
+---
+
+## Learning Goals
+
+* Use dot and bracket notation to access objects
+* Compare expressions in dot and bracket notation and identify equivalent expressions
+* Determine appropriate use cases for each notation
+* Apply our knowledge of each notation to gain a deeper understanding about a familiar concept
+
+## Vocabulary
+
+- `Object` An unordered collection of related data in the form of key value pairs. JavaScript provides two notations for accessing object properties...
+- `Dot Notation` A property in an object is accessed by giving the object’s name, followed by a period, followed by the property name (Example: `user.name`)
+- `Bracket Notation` The object name is followed by a set of square brackets, with the property name specified as a string inside the brackets (Example: `user['name']`)
+
+<section class="call-to-action">
+### Warm Up
+
+* Independently, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt1#main.js).
+* When you finish, use the zoom chat to **DM** me your answer to this question:
+    Which of the following expressions is equivalent to `car.brand` ?
+    A. `car[brand]`
+    B. `car['brand']`
+</section>
+
+
+## Equivalent Expressions
+Objects are a key piece of working with JavaScript. In order for objects to be helpful for us, we have to be able to access the information inside of the objects. To do this, we can use **dot notation** or **bracket notation**.
+
+### Here are some examples of <strong>dot notation</strong>:</p>
+  `house.address`
+  `student.gradeLevel`
+  `school.classroom.teacher`
+
+### Here are equivalent expressions in <strong>bracket notation</strong>:</p>
+  `house[‘address’]`
+  `student[‘gradeLevel’]`
+  `school[‘classroom’][‘teacher’]`
+
+<section class="checks-for-understanding">
+  ### Stop and Think
+
+  * In the zoom chat, answer this question:
+    What differences do you notice in the way each notation is written?
+</section>
+
+<section class="note">
+### Key Point #1
+
+You can write equivalent expressions using dot and bracket notation. For example: `object.property` is equivalent to `object['property']`.
+</section>
+
+## Chaining
+
+As you have seen in a couple of examples today, you can chain multiple properties onto an expression in order to dig in deeper on an object. Let’s take this object, for example:
+
+```js
+  var user = {
+    email: ‘jonathan@email.com’,
+    name: ‘Jonathan’,
+    contactInfo: {
+      phone: 123456789
+      address: {
+        street: ‘1234 Main Street’,
+        city: ‘Denver’
+        state: ‘CO’
+        zip: 80206
+     }
+   }
+}
+```
+If we wanted to access this user’s zip code using **dot notation**, we could write: `user.contactInfo.address.zip`
+
+In order to access their zip using **bracket notation**, we would write: `user[‘contactInfo’][‘address’][‘zip’]`.
+
+You can also mix and match! We could write something like this and it would work: `user.contactInfo[‘address’].zip`.
+
+Notice how each block is formatted:
+  user  .contactInfo  [‘address’]  .zip
+
+<section class="call-to-action">
+### Independent Practice
+
+* Independently, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt2#main.js).
+* When you finish, use the zoom chat to **DM** me your answer to this question:
+    In your opinion, which notation is easier to read and write?
+</section>
+
+<section class="note">
+### Key Point #2
+
+Whenever it is possible, we will default to using dot notation.
+</section>
+
+## Bracket Notation & Variables
+
+Dot notation only works if you have access to the exact property name. Dot notation interprets the expression literally. Meaning, it will look for the actual property that is passed in. Let’s take, for example, [this code block](https://repl.it/@kaylaewood/bracketVsDotlesson1):
+
+```js
+  var phrases = {
+    greeting: 'hello',
+    departing: 'goodbye'
+  }
+
+  var lookupField = 'greeting';
+</code>
+```
+
+If we ran the  command below, we would get undefined. This is because the JavaScript interpreter is looking for a property that is literally called “lookupField” and it does not exist:
+```js
+  console.log(phrases.lookupField);
+  //output: undefined
+```
+
+The same would happen in this case:
+```js
+  console.log(phrases['lookupField']);
+  //output: undefined
+```
+
+We can use bracket notation in our favor, by passing in the variable, like the example below. In this case, the interpreter will register `lookupField` as a variable and then pass in it’s value of `‘greeting’` to get the output of `‘hello’`:
+```js
+  console.log(phrases[lookupField]);
+  //output: ‘hello’
+```
+
+If we reassigned the value of lookupField and then ran the same command as above, we’d get a new output:
+```js
+  lookupField = 'leaving';
+
+  console.log(phrases[lookupField]);
+  //output: 'goodbye'
+```
+
+Bracket notation gives us the ability to use variables to look up values in an object. This is especially helpful with the value of the variable changes.
+
+<section class="note">
+  ### Key Point #3
+
+  Whenever we are accessing an object's property using a variable, we must use bracket notation.
+</section>
+
+## Applying What We've learned
+
+Even if these concepts are new to you, you've actually been putting them into practice for awhile now! Let's take a deeper look into something familiar to you: **for loops**.
+
+<section class="call-to-action">
+### Paired Practice
+
+* In a breakout room, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt4#main.js).
+* Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can disucss as a group!
+</section>
+
+<section class="checks-for-understanding">
+  ### Reflect
+
+  * In your notebook, answer the following questions:
+  * When should you use dot notation? Bracket notation?
+  * What is a limitation of using dot notation? How does bracket notation address this?
+</section>
+
+<section class="call-to-action">
+### Extra Practice
+
+* Complete the code challenges found on [this repl](https://repl.it/@kaylaewood/bracketVsDotHomework). Stuck? Look  [here](https://repl.it/@kaylaewood/bracketVsDotHomeworkAnswers#main.js).
+* Answer the questions found in the JavaScript section of [this codepen](https://codepen.io/kaylaewood/pen/wvGrQxV?editors=1010).
+</section>
