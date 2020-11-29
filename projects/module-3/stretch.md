@@ -37,7 +37,6 @@ Create a summary (MVP) of what your application will do and who your application
 
 Here is a list of some data APIs that are open to the public:
 
-* [Harry Potter](https://www.potterapi.com/)
 * [Thesaurus](https://words.bighugelabs.com/site/api)
 * [Jokes](https://jokes.one/api/joke/)
 * [Pokemon](https://pokeapi.co/)

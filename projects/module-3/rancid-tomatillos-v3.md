@@ -1,0 +1,379 @@
+---
+title: Rancid Tomatillos
+module: 3
+tags: react,  testing, javascript, api
+---
+
+Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a rancid tomatillo at the screen!" Or maybe you loved the movie and you could really go for a nice, fresh tomatillo salsa to enjoy the moment. Well it's your lucky day. In this project, you'll build a movie rating site where a user can login and rate the movies they loved or hated.
+
+## Learning Goals
+
+* Gain competency with React fundamentals
+* Learn how to test React components & asynchronous JS
+* Practice refactoring
+* Create a multi-page UX using Router
+
+## Iterations
+
+<section class="note">
+
+### Note
+You are expected to test the functionality you write in each iteration. Don't save testing for the last minute!
+
+</section>
+
+### Iteration 0 - Day 1 Deliverables
+
+Create a group Slack DM with both project partners and both instructors.
+
+In that DM, please share the following:  
+* Layouts/Wireframes sketches of your user interface
+* Group DTR
+* Project management tool (GitHub Projects, Trello, etc.) - be sure this is public so your instructors can view it
+* PR template your group agrees to follow for every PR submitted ([here are some instructions from GitHub on how to create this](https://help.github.com/en/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository))
+* An initial plan:
+  - What components do you envision needing?
+  - Where will data be stored?
+  - How will information be passed around?
+
+You may also create your React repo (we will be using [Create-React-App](https://frontend.turing.io/lessons/module-3/react-2-the-how.html)) and share the link in the DM, but you can also wait until tomorrow to do this.
+
+---
+
+### Iteration 1 - Displaying movies
+
+For this first iteration, we will use mock data to display the movies (we will later refactor our project to consume an API). The purpose of this is to allow us to focus purely on React for now.
+
+In your project repo, create a new file in the src folder. Copy in the data found in [this gist](https://gist.github.com/letakeane/d11a3c3c9f3fbcaf105c0b214f5fb754).
+
+For now, you will import this information into your `App.js` file and use this as your source of information!
+
+**User Story**  
+- When a user visits the app, all movies should be displayed
+
+**Suggested completion date**  
+- End of Day 2
+
+---
+
+### Iteration 2 - Displaying an individual movie
+
+For the second iteration, we'll use [`conditional rendering`](https://frontend.turing.io/lessons/module-3/react-3-advanced-data-management.html) to show a single movie's details.
+
+**User Story**  
+- When a user clicks a movie, that movie's details should be rendered
+- When a movie's details are displayed, none of the other movies will be visible; it should just be that movie's details (header/footer/etc can still be visible, of course!)
+- When a movie's details are displayed, the user should have a way to return to the main view of all movies
+
+**Suggested completion date**  
+- End of Day 4
+
+**Suggested testing progress by end of iteration**  
+- Unit tests are pseudocoded
+- Integration tests are pseudocoded
+- A few unit tests are written & passing
+
+---
+
+### Iteration 3 - Network Requests & Async JS
+
+For the third iteration, we'll refactor our application to use actual data from the database (information is below) instead of our mocked `movieData` file.
+
+The information about the API we are using is located 
+
+<section class="answer">
+### API setup and documentation
+
+There is no setup! You are not going to run an API locally to start this project. The API was created by your instructors and it lives on Heroku. The API you'll be working with lets you make GET, POST, and DELETE requests.
+
+#### API Documentation
+
+All API endpoints (also known as "routes") are prefixed with `https://rancid-tomatillos.herokuapp.com/api/v2`. Also, wherever you see a `:user_id` or `:rating_id` in the endpoint documentation, that would be replaced by the ID _value_ in your request, like `5`, for instance. Here are the endpoints available:
+
+
+| Purpose | URL | Verb | Request Body | Sample Response (Happy Path) |
+|---------|-----|------|--------------|------------------------------|
+| Get all movies | `/movies` | GET | N/A | All movies in database with average rating: `{"movies": [{id: 1, title: "Movie Title", poster_path: "someURL", backdrop_path: "someURL", release_date: "2019-12-04", overview: "Some overview", average_rating: 6 }, ...]}` |
+| Get a single movie | `/movies/:movie_id` | GET | N/A | The movie corresponding to the id sent in the URL: `{"movie": {id: 1, title: "Movie Title", poster_path: "someURL", backdrop_path: "someURL", release_date: "2019-12-04", overview: "Some overview", average_rating: 6, genres: [{id: 18, name:"Drama"}], budget:63000000, revenue:100853753, runtime:139, tagline: "Movie Tagline" }}` |
+| Get a single movie's videos | `/movies/:movie_id/videos` | GET | N/A | An array of available videos corresponding to the movie whose id is in the URL; this may be an empty array: `[]` or `[id: 1, movie_id: 1, key:"SUXWAEX2jlg", site: "YouTube", type:"Trailer"]` |
+| Login a user | `/login` | POST | `{email: <String>, password: <String>}` | A user's login session information: `{user: {id: 1, name: "Alan", email: "alan@turing.io"}}` |
+| Get all the ratings a user has submitted | `/users/:user_id/ratings` | GET | N/A | A user's ratings for all movies: `{"ratings": [{id: 1, user_id: 1, movie_id: 1, rating: 6, created_at: "someDate", updated_at: "someDate"},...]}` |
+| Submit a new movie rating for a user | `/users/:user_id/ratings` | POST | `{ movie_id: <Integer>, rating: <Integer between 1 and 10> }` | The rating that was successfully created: `{rating: {user_id: 2, movie_id: 19, rating: 5}}` |
+| Delete an existing user's rating for a movie | `/users/:user_id/ratings/:rating_id` | DELETE | N/A | 204 status code (NO CONTENT in response body) |
+
+All resources are given a unique ID in the database. For instance, every user has an `id` property, like `1` or `5`. Similarly, every movie has a unique ID called `id`, and every rating has a unique ID called `id`. The IDs are used to reference each item (user, movie, or rating) uniquely. If you need to delete a rating, then you need to know which rating to delete, which is identified by its unique `id` value.
+
+If you are sending information in the body of a request, you will need to set the request header of `Content-Type` to `application/json`.
+
+Please note: the server occasionally returns a 500 error. You will need to build in FE functionality to handle this possibility.
+</section>
+
+**User Story**  
+- When the server returns a 500 error, the user will see proper error handling
+- No other new features required
+- We're mostly refactoring in this iteration!
+
+**Suggested completion date**  
+- End of first weekend
+
+**Suggested testing progress by end of iteration**  
+- Unit & integration tests are written & passing
+- Asynchronous testing is completed
+  - Asynchronous functions are mocked properly
+  
+---
+
+### FIRST WEEKEND DELIVERABLES
+
+By the time class begins in Week 2, these items should be completed:  
+1. Iterations 0-3
+2. Application is fully tested (unit, integration, asynchronous)
+2. Instructors have been tagged in one PR (see below)
+
+<section class="note">
+### Weekend Deliverable
+
+By Sunday evening at 5pm, please tag your instructors in one PR demonstrating at least one of the following:
+- A feature being refactored
+- Tests being written
+
+DO NOT wait on code review from us to merge these PRs in. We will conduct code reviews in the first few days of Week 2.
+
+**Our GH usernames can be found in our Slack profiles**
+
+The point of these code reviews is to get you familiar with common code review practices, and to model the level of detail with which we expect you to be reviewing each others' PRs!
+</section>
+
+---
+
+### Iteration 4 - Refactoring with Router
+
+In the fourth iteration, we will be refactoring our application to use [Router](https://frontend.turing.io/lessons/module-3/react-router-v5.html) instead of conditional rendering to change the view! 
+
+So far the application has worked like a single page applicaiton. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes. 
+
+To crete a better UX, we're going to be using [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) to conditionally render our views based on the URL. 
+
+This iteration is all about refactoring. Use the table below to add in appropriate routes.
+
+| View | URL Path  |
+|:-----|:---------|
+| Homepage, logged in or not (from iteration 1) | `/` |
+| Movie show page (from iteration 3) | `/:movieId`, where `movieId` is the `id` of the movie being displayed |
+
+As you refactor, continue to rely on your test suite to ensure that no functionality is being lost/destroyed as you add in Router!
+
+Adding in Router is likely to break your tests at first. Make sure to [update those](https://frontend.turing.io/lessons/module-3/react-router-testing.html) to keep everything passing.
+
+<section class="note">
+
+Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Deeper_dive) to learn more about URL anatomy. 
+
+</section>
+
+**User Story**  
+- When a user clicks on a movie and the details page is rendered, the URL updates to reflect that movie's unique ID as well
+- The user can click the browser forward & back arrows to navigate
+
+**Suggested completion date**  
+- End of Thursday in Week 2
+
+**Suggested testing progress by end of iteration**  
+- Unit & integration tests are written & passing
+  - Tests have been updated to accommodate Router
+- Asynchronous testing is completed
+- Router testing is completed
+
+---
+
+### Iteration 5 - Choose your own adventure
+
+The final days (last weekend and beginning of Week 3) of this project are designed to give you agency over your learning goals! As a team, consider your learning goals:  
+* What will best serve your team- and individual- learning goals?
+* What areas/concepts are still unclear?
+* What areas/concepts fit in with your professional goals?
+
+Here is a list of concepts (including some push-yourself learning goals):  
+- React
+- Router
+- Asynchronous JS
+- Testing
+  - React testing (unit & integration)
+  - Async JS testing (mocking, async/await)
+  - Router testing
+- Express (server-side JavaScript)
+- Deployment
+
+Decide as a team what to focus on. 
+
+<section class="note">
+### A word of warning!
+
+Be realistic. Exercise compassion. Create the safety to be vulnerable with each other!
+
+If one partner wants to push ahead to new shiny fancy concepts, but another partner is still feeling shaky with React fundamentals, it is more important and better for everyone involved to use the remaining project time to solidify those React fundamentals!
+
+**BEWARE THE LURE OF SHINY NEW THINGS!**
+
+It is _far_ more important to be very, very solid on the project stated learning goals (React, testing).
+</section>
+
+Once you have decided on the area to continue learning, decide on a new feature or refactor.
+
+**DELIVERABLE**  
+On Friday of Week 2, send a specific outline of features/work/goals to your instructors in the group DM. Please include user stories, too. Do not begin work until you get the go-ahead from an instructor. (We may help you make your goal more specific or achievable.)
+
+Here are some ideas: 
+* **More React and/or Router practice:** 
+  - Add a search/filtering functionality for movies
+* **More testing practice:**
+  - Update your test script (in the `package.json` file) to read `"test:coverage": "CI=true npm test -- --env=jsdom --coverage"` 
+  - and aim for 90%+ test coverage of each component
+* **Push yourself** (extra learning if every member of the team feels SUPER CONFIDENT in everything React, Router, and testing)**:**
+  - Create your own Express microservice to store user ratings for movies; build FE functionality to use and display that service
+  - Create your own Express microservice to store user favorites; build FE functionality to use and display that service
+  - Create your own Express microservice to store which movies the user has watched; build FE functionality to use and display that service
+  - Deploy your React app (to GitHub Pages or Heroku)
+
+You are welcome to come up with your own ideas, too.
+
+**Suggested completion date**  
+- Deliverables due Thursday of Week 2
+- Complete by end of Monday of Week 3 (aim to leave final day for polishing the project, not building out features!)
+
+---
+
+### PROJECT DUE DATE: 9pm Tuesday of Week 3
+
+On Tuesday, instructors will post a link to a gist in the cohort slack channel. Please add a comment to that gist with:
+
+- Both project partners' names
+- A link to your project repo
+- If applicable: any links to additional repos/deployed site
+
+---
+
+## Rubric
+
+Remember: scores are an indicator of your progress in specific areas. Use them to inform/update your future study patterns!
+
+Score key:  
+- **4:** above and beyond expectations; team did self-teaching
+- **3:** right on track; team is exactly where instructors expect them to be
+- **2:** a little behind; be sure to devote study & practice time to this area in order to accelerate growth/understanding
+- **1:** very behind; strongly recommend team reaches out to instructors to create a plan to catch up in this area
+
+### Project Professionalism
+
+The goal of this rubric section is to continue to gauge your readiness and prepare you for workplace standards. As you ramp up your job hunt, it becomes increasingly important to demonstrate to future employers that you are not sloppy and take care with the details of your work and processes!
+
+* **4:**
+  - README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
+  - README links to all user GitHub profiles and any applicable repos/deployed sites
+  - Team uses a rebase workflow
+  - Git commits are atomic, with concise and precise descriptions of the change made
+  - PRs have full, consistent descriptions
+  - Team members do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging
+  - Evolution of the project (decisions made, etc) are fully and clearly documented in the git history and PRs
+  - When the project is run locally, the terminal shows no errors or warnings
+* **3:**
+  - README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
+  - README links to all user GitHub profiles and any applicable repos/deployed sites
+  - Git commits are atomic, with concise and precise descriptions of the change made
+  - PRs have full, consistent descriptions
+  - Team members do some code reviews of PRs, but are not always thorough or consistent
+  - Evolution of the project (decisions made, etc) is documented in the git history and PRs but is sometimes unclear
+  - When the project is run locally, the terminal shows no errors and fewer than 5 warnings
+* **2:**
+  - README concisely communicates the team's individual and joint learning goals and the evolution of the project, but does not use Markdown formatting to aid readability
+  - README links to all user GitHub profiles and any applicable repos/deployed sites
+  - Git commits are mostly atomic but sometimes document changesets that are too large
+  - PRs do not have thorough descriptions
+  - Team members mostly do not do code reviews on PRs
+  - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
+  - When the project is run locally, the terminal shows no errors and more than 5 warnings
+* **1:** 
+  - README does not document the team's individual and joint learning goals, the evolution of the project, and is poorly formatted (hindering readability)
+  - README does not include links to team member's GitHub profiles
+  - Git commits are not atomic and document changesets that are too large
+  - PRs do not have thorough descriptions, and no code reviews are conducted, merging bugs into the main branch
+  - When the project is run locally, the terminal shows errors and more than 5 warnings
+
+### React Architecture
+
+* **4:**
+  - A consistent, modular file structure is used
+  - A clear understanding of class components vs function components is demonstrated
+  - Only the data that a child component _needs_ is passed down as props
+  - Logic is kept out of `return` statements; `return` statements are as readable as possible, only communicating what will be displayed
+  - Fetch calls have been refactored to be reusable for multiple queries
+  - Frontend data (state) always matches the backend data
+  - Data fetched from API is run through a cleaning function (which is defined in a separate `utilities` file)
+  - Implements excellent error handling if movie database server is down or fetch fails (this includes loading images as well as error messages on the frontend)
+* **3:** 
+  - A consistent, modular file structure is used
+  - A clear understanding of class components vs function components is demonstrated
+  - Only the data that a child component _needs_ is passed down as props
+  - Logic is kept out of return statements; return statements are as readable as possible, only communicating what will be displayed
+  - There are some issues with the asynchronous JS where the frontend is not matching with the backend
+  - There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
+  - Data fetched from API is not cleaned before being set to state
+* **2:** 
+  - The file structure is inconsistent and/or not modular
+  - There is some confusion about when to use a class or function component, but it does not strongly hinder functionality
+  - Unnecessary data is passed down to child components as props
+  - `return` statements contain logic that should be refactored out for the sake of readability and performance
+  - There are methods that are being created inside of functional components that should be passed down through props from a parent class component
+  - API calls have not been broken out into their own file
+* **1:**
+  - Project shows little understanding of React and significant refactoring is required, including but not limited to:
+    - component structure is inconsistent or buggy
+    - a class component is used when a function component is preferable, and/or vice versa
+    - props are being passed or accessed incorrectly
+    - props are being mutated
+    - state is directly mutated
+  - File structure is not modular.
+
+### Testing
+
+* **4:** 
+  - Team has successfully achieved 90%+ test coverage of all components
+  - All async functionality is mocked
+  - Async tests cover happy & sad paths
+  - All unit tests are in place, including conditional rendering
+  - All integration tests are in place, tested from the correct component
+* **3:** 
+  - All unit tests are in place & passing, including any conditional rendering
+  - All integration tests are in place, tested from the correct component
+  - Happy path async functionality is tested
+* **2:**
+  - Most unit tests are in place & passing
+  - A valid attempt is made at integration testing; some integration tests may be in the wrong place (aka, attempted to be done by a component that cannot actually "see"/access all the necessary functionality/data)
+  - Little or no attempt at async testing was made
+* **1:** 
+  - Many unit tests are missing/failing
+  - Little or no attempt is made at integration testing
+  - Little or no attempt is made at async testing
+  - There are obvious, large gaps in testing app functionality
+
+### Routing
+
+* **4:**
+  - Application has been refactored to use Router without leaving artifacts of the prior code (no odd workarounds remaining)
+  - Use of Router shows developer empathy (readability, maintainability)
+  - Application uses React Router components and does not manipulate the `history` object 
+  - A 404 page handles undefined routes
+  - UX is excellent; routes are consistent and navigation is clear
+* **3:**
+  - Application uses Router to display appropriate components based on URL
+  - Refactoring was clean; there may be a few code smells showing the existence of the prior code, but there are no major bugs indicating a lack of understanding of Router
+  - Application uses React Router components and does not manipulate the `history` object
+  - UX is clear and set up so the user has access to previous routes
+* **2:**
+  - Application uses Router but does not display the appropriate components when navigating throughout the app
+  - Refactoring is messy; there are remnants of the previous code or other code smells that indicate that Router is not clearly understood
+  - There are 1+ issues with the UX; access to routes is unclear or not fully implemented
+* **1:**
+  - Application uses Router but fails to properly display all necessary routes
+  - Application does not use built-in React Router components and instead directly manipulates the `history` object
+  - UX is challenging; multiple pages are missing links to routes, or browser Back/Forward arrow navigation does not work
