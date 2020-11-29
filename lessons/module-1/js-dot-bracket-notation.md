@@ -22,30 +22,30 @@ tags: javascript, foundation, arrays, objects, bracket, dot, notation
 
 * Independently, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt1#main.js).
 * When you finish, use the zoom chat to **DM** me your answer to this question:
-    Which of the following expressions is equivalent to `car.brand` ?
-    A. `car[brand]`
-    B. `car['brand']`
+- Which of the following expressions is equivalent to `car.brand` ?
+- A. `car[brand]`
+- B. `car['brand']`
 </section>
 
 
 ## Equivalent Expressions
 Objects are a key piece of working with JavaScript. In order for objects to be helpful for us, we have to be able to access the information inside of the objects. To do this, we can use **dot notation** or **bracket notation**.
 
-### Here are some examples of <strong>dot notation</strong>:</p>
-  `house.address`
-  `student.gradeLevel`
-  `school.classroom.teacher`
+### Here are some examples of **dot notation**:  
+  `house.address`  
+  `student.gradeLevel`  
+  `school.classroom.teacher`  
 
-### Here are equivalent expressions in <strong>bracket notation</strong>:</p>
-  `house[‘address’]`
-  `student[‘gradeLevel’]`
-  `school[‘classroom’][‘teacher’]`
+### Here are equivalent expressions in **bracket notation**:  
+  `house[‘address’]`  
+  `student[‘gradeLevel’]`  
+  `school[‘classroom’][‘teacher’]`  
 
 <section class="checks-for-understanding">
-  ### Stop and Think
+### Stop and Think
 
-  * In the zoom chat, answer this question:
-    What differences do you notice in the way each notation is written?
+* In the zoom chat, answer this question:
+- What differences do you notice in the way each notation is written?
 </section>
 
 <section class="note">
@@ -87,7 +87,7 @@ Notice how each block is formatted:
 
 * Independently, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt2#main.js).
 * When you finish, use the zoom chat to **DM** me your answer to this question:
-    In your opinion, which notation is easier to read and write?
+- In your opinion, which notation is easier to read and write?
 </section>
 
 <section class="note">
@@ -107,7 +107,6 @@ Dot notation only works if you have access to the exact property name. Dot notat
   }
 
   var lookupField = 'greeting';
-</code>
 ```
 
 If we ran the  command below, we would get undefined. This is because the JavaScript interpreter is looking for a property that is literally called “lookupField” and it does not exist:
@@ -139,9 +138,9 @@ If we reassigned the value of lookupField and then ran the same command as above
 Bracket notation gives us the ability to use variables to look up values in an object. This is especially helpful with the value of the variable changes.
 
 <section class="note">
-  ### Key Point #3
+### Key Point #3
 
-  Whenever we are accessing an object's property using a variable, we must use bracket notation.
+Whenever we are accessing an object's property using a variable, we must use bracket notation.
 </section>
 
 ## Applying What We've learned
@@ -159,12 +158,12 @@ Even if these concepts are new to you, you've actually been putting them into pr
   ### Reflect
 
   * In your notebook, answer the following questions:
-  * When should you use dot notation? Bracket notation?
-  * What is a limitation of using dot notation? How does bracket notation address this?
+  - When should you use dot notation? Bracket notation?
+  - What is a limitation of using dot notation? How does bracket notation address this?
 </section>
 
 <section class="call-to-action">
-### Extra Practice
+### Homework
 
 * Complete the code challenges found on [this repl](https://repl.it/@kaylaewood/bracketVsDotHomework). Stuck? Look  [here](https://repl.it/@kaylaewood/bracketVsDotHomeworkAnswers#main.js).
 * Answer the questions found in the JavaScript section of [this codepen](https://codepen.io/kaylaewood/pen/wvGrQxV?editors=1010).
