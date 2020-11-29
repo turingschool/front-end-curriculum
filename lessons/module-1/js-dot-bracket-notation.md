@@ -81,7 +81,7 @@ You can also mix and match! We could write something like this and it would work
 `user.contactInfo[‘address’].zip`
 
 Notice how each block is formatted:  
-  user      .contactInfo       [‘address’]      .zip
+  `user`      `.contactInfo`       `[‘address’]`      `.zip`
 
 <section class="call-to-action">
 ### Paired Practice
