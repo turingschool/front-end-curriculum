@@ -73,7 +73,7 @@ You're going to do some research on one of the 5 data types we are focusing on, 
 
 ## Saving and Naming Information with Variables
 
-As we're writing code, there are many times when we want to be able to store a value so that we have the ability to reuse it in multiple places. Writing the same thing over and over is a pain, and it's common to need to have access to the same information more than once. A variable lets us do that!
+As we're writing code, there are many times when we want to be able to store a value so that we have the ability to reuse it in multiple places. Writing the same thing over and over is a pain, and it's common to need to have access to the same information more than once. A variable allows us to do that!
 
 ### What is a variable?
 
@@ -84,6 +84,17 @@ When you declare a variable (similar to declaring a function), you're creating a
 ```javascript
 var myVariableName;
 ```
+
+<section class="note">
+
+### Various Variables
+
+JavaScript recognizes a few different types of variables: `var`, `let`, and `const`.  They each behave a little differently, so it's important to understand the differences. If you don't, you might run into some errors.
+
+In your first module, you'll mostly see `var`. It's the ES5 (ECMAScript 5) version of a variable. It's still used in production code to this day, but newer versions of JavaScript gave us `let` and `const`.
+
+As you move through the program, you'll work with `let` and `const` more and more. If you'd like to just stick with `var` for now, that's perfectly fine. If you'd like to use `let` and `const` - go right ahead. Just make sure to [do your research first.](https://codeburst.io/difference-between-var-let-and-const-in-javascript-fbce2fba7b4)
+</section>
 
 <section class="call-to-action">
 ### Console Practice
@@ -155,6 +166,16 @@ var creatureCount = quantity + mythicalCreature;
 ```
 
 We have a variable called "creatureCount" and assign the value as our quantity and our mythicalCreature. Looking at creatureCount, we'll notice the value is `"3 unicorns"`. The reason this works even though the first value is a number and the second is a string, is a result of **type coercion**. JavaScript is essentially trying to help us by converting the number into a string so we can combine the two together.
+
+<section class="note">
+
+### Variables and Data Types
+
+Variables are so flexible and so powerful! If you name them accurately and you have a good grasp of what they contain, they'll be your best friend. However, that's easier said than done when you start your programming journey. A common pitfall we see students struggling with is forgetting what data type is contained in the variable - and how to best interact with that data type.
+
+When you are working with variables, it's always a good idea to take a moment to think about the data type it contains. 
+
+</section>
 
 ### Adding Variable Values to Strings
 
