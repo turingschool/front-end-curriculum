@@ -21,10 +21,9 @@ tags: javascript, foundation, arrays, objects, bracket, dot, notation
 ### Warm Up
 
 * Independently, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt1#main.js).
-* When you finish, use the zoom chat to **DM** me your answer to this question:
-- Which of the following expressions is equivalent to `car.brand` ?
-- A. `car[brand]`
-- B. `car['brand']`
+* When you finish, use the zoom chat to **DM** me your answer to this question: *Which of the following expressions is equivalent to `car.brand`?*  
+A. `car[brand]`  
+B. `car['brand']`  
 </section>
 
 
@@ -44,8 +43,7 @@ Objects are a key piece of working with JavaScript. In order for objects to be h
 <section class="checks-for-understanding">
 ### Stop and Think
 
-* In the zoom chat, answer this question:
-- What differences do you notice in the way each notation is written?
+* In the zoom chat, answer this question: *What differences do you notice in the way each notation is written?*
 </section>
 
 <section class="note">
@@ -73,21 +71,24 @@ As you have seen in a couple of examples today, you can chain multiple propertie
    }
 }
 ```
-If we wanted to access this user’s zip code using **dot notation**, we could write: `user.contactInfo.address.zip`
+If we wanted to access this user’s zip code using **dot notation**, we could write:  
+`user.contactInfo.address.zip`
 
-In order to access their zip using **bracket notation**, we would write: `user[‘contactInfo’][‘address’][‘zip’]`.
+In order to access their zip using **bracket notation**, we would write:  
+`user[‘contactInfo’][‘address’][‘zip’]`.
 
-You can also mix and match! We could write something like this and it would work: `user.contactInfo[‘address’].zip`.
+You can also mix and match! We could write something like this and it would work:  
+`user.contactInfo[‘address’].zip`.
 
-Notice how each block is formatted:
-  user  .contactInfo  [‘address’]  .zip
+Notice how each block is formatted:  
+  user      .contactInfo       [‘address’]      .zip
 
 <section class="call-to-action">
-### Independent Practice
+### Paired Practice
 
-* Independently, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt2#main.js).
-* When you finish, use the zoom chat to **DM** me your answer to this question:
-- In your opinion, which notation is easier to read and write?
+* In a breakout room, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt2#main.js).
+* When you finish, discuss this question with your partner: *In your opinion, which notation is easier to read and write?*
+* Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
 
 <section class="note">
@@ -151,15 +152,15 @@ Even if these concepts are new to you, you've actually been putting them into pr
 ### Paired Practice
 
 * In a breakout room, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt4#main.js).
-* Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can disucss as a group!
+* Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
 
 <section class="checks-for-understanding">
-  ### Reflect
+### Reflect
 
-  * In your notebook, answer the following questions:
-  - When should you use dot notation? Bracket notation?
-  - What is a limitation of using dot notation? How does bracket notation address this?
+In your notebook, answer the following questions:
+* When should you use dot notation? Bracket notation?
+* What is a limitation of using dot notation? How does bracket notation address this?
 </section>
 
 <section class="call-to-action">
