@@ -104,11 +104,14 @@ All API endpoints (also known as "routes") are prefixed with `https://rancid-tom
 All resources are given a unique ID in the database. For instance, every user has an `id` property, like `1` or `5`. Similarly, every movie has a unique ID called `id`, and every rating has a unique ID called `id`. The IDs are used to reference each item (user, movie, or rating) uniquely. If you need to delete a rating, then you need to know which rating to delete, which is identified by its unique `id` value.
 
 If you are sending information in the body of a request, you will need to set the request header of `Content-Type` to `application/json`.
+
+Please note: the server occasionally returns a 500 error. You will need to build in FE functionality to handle this possibility.
 </section>
 
 **User Story**  
-- No additions or changes to functionality! 
-- We're purely refactoring in this iteration!
+- When the server returns a 500 error, the user will see proper error handling
+- No other new features required
+- We're mostly refactoring in this iteration!
 
 **Suggested completion date**  
 - End of first weekend
