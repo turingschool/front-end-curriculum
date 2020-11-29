@@ -43,7 +43,7 @@ Objects are a key piece of working with JavaScript. In order for objects to be h
 <section class="checks-for-understanding">
 ### Stop and Think
 
-* In the zoom chat, answer this question: *What differences do you notice in the way each notation is written?*
+* What differences do you notice in the way each notation is written?
 </section>
 
 <section class="note">
@@ -75,10 +75,10 @@ If we wanted to access this user’s zip code using **dot notation**, we could w
 `user.contactInfo.address.zip`
 
 In order to access their zip using **bracket notation**, we would write:  
-`user[‘contactInfo’][‘address’][‘zip’]`.
+`user[‘contactInfo’][‘address’][‘zip’]`
 
 You can also mix and match! We could write something like this and it would work:  
-`user.contactInfo[‘address’].zip`.
+`user.contactInfo[‘address’].zip`
 
 Notice how each block is formatted:  
   user      .contactInfo       [‘address’]      .zip
