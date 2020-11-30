@@ -239,8 +239,8 @@ Gotchas with `find` and `filter`:
 ```js
 let pets = [
   { name: 'harvey', age: 1 },
-  { name: 'julius', age: 5 },
-  { name: 'mishu', age: 5 },
+  { name: 'julius', age: 3 },
+  { name: 'mishu', age: 3 },
 ];
 
 function findThreeYearOldPets() {
