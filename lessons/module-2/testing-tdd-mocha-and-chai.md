@@ -29,10 +29,10 @@ TDD, or Test Driven Development, is the concept of writing a series of assertion
 The main **benefits** of writing tests are:
 
 * *Computers can test things faster and more accurately than humans:* testing things manually in the browser is tedious, error prone and slow
-* *Forces you to slow down and pseudocode:* which helps you think more thoroughly about potential pitfalls *before* you write your code; it's much easier to course-correct yourself before you right any code than to refactor broken code after it's been written
+* *Forces you to slow down and pseudocode:* which helps you think more thoroughly about potential pitfalls *before* you write your code; it's much easier to course-correct yourself before you write any code than to refactor broken code after it's been written
 * *Provides a blueprint for new developers to see how the codebase should work:* if your tests are thorough and well-written, a new developer should be able to hop directly into the test folder and get a solid understanding of how each piece of the codebase works
 * *Provides future integrity for your code as you iterate on your application:* applications are never done and can always be improved, added to, pivoted, etc. Tests ensure that as we make these changes, we won't accidentally introduce new bugs
-* *Forces you to write more module, SRP-style code:* often times you'll only recognize opportunities to refactor as you go to write tests for you code and find that it's not testable
+* *Forces you to write more module, SRP-style code:* often times you'll only recognize opportunities to refactor as you go to write tests for your code and find that it's not testable
 
 Some very minimal **downsides** of TDD are:
 
@@ -130,7 +130,7 @@ The code above simply indicates that we want to test a piece of functionality th
 
 ## Assertion Library: Chai  
 
-An assertion is the crucial piece of the test that actually checks that when certain pieces of are code are executed, what we're getting back is what we expect.  
+An assertion is the crucial piece of the test that actually checks that when certain pieces of our code are executed, what we're getting back is what we expect.  
 
 In english, here are a few examples of things we might want to assert:  
 
