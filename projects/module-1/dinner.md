@@ -64,6 +64,8 @@ Reflect on the the following questions in a DM to your Project Manager:
 
 In the interest of giving you opportunities to individualize the skills you build, this project's main goal is to provide various different paths you can take. Along these different paths you will encounter different problems and solve them in different ways. As you make choices about which features to add, you should consider which features align with your strengths, which features would challenge you to grow, and which features you'd find to be useful in this application. Choose one or more of the following features to add. Some of them build on others, so be sure to read them all before choosing. 
 
+When you choose a feature, you **must** complete all bullet points!
+
 _NOTE: You should absolutely not be working on this unless your UI is solid and you are 100% sure that your MVP is fully functional and bug free._
 
 #### Entire Meal Functionality
@@ -133,17 +135,17 @@ _Note: You can disable these buttons, hide them, or display a message to the use
 - On this page, user should have the ability to add/edit/delete recipe.
 <hr/>
 
-#### Animations
+#### Intermediate CSS
+
+- Do some research and determine how to make your app respond to the user's screen size.
+- Layout and spacing should adapt to mobile, tablet, desktop and extra large screens.
 - Add a loading animation when a user clicks the "Let's Cook" button to simulate searching for a recipe. Hint - You will need to use CSS Keyframes, and a Javascript timeout function for this.
 - Make your buttons grow in size or change color when the user hovers over them, enticing them to click the dang thing.
 - When the recipe appears, the text should fade in.
 
 Remember your user experience and animate these things in gradually. Timing is everything!
-<hr/>
 
-#### Responsive Design
-- Do some research and determine how to make your app respond to the user's screen size.
-- Layout and spacing should adapt to mobile, tablet, desktop and extra large screens.
+
 <hr/>
 
 #### Local Storage 
