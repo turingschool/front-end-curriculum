@@ -32,7 +32,7 @@ This Solo Challenge gives students and instructors the opportunity to get a puls
 ## Workflow
 Make sure you're utilizing git best practices (branches) and commiting frequently. 
 
-### Day One Deliverable
+### Day One Deliverables
 - Read the spec sheet closely. 
 - Send the link to your forked repo to your Project Manager
 

@@ -35,7 +35,7 @@ Your README should include the following, in this order:
 
 ## Testing
 
-You should be using the prompts below to develop tests that will drive your implementation of code. Each JavaScript file in your project should have its own test file. (e.g. Your `Game.js` class file should have a corresponding testing file called `Game-test.js`)
+You should be using the prompts below to develop tests that will drive your implementation of code. Each JavaScript file in your project should have its own test file. (e.g. Your `Turn.js` class file should have a corresponding testing file called `Turn-test.js`)
 
 Your testing suite should test all of the functionality of the game, including the following:
 
@@ -52,11 +52,13 @@ Your testing suite should test all of the functionality of the game, including t
 - A `Card` represents a single flashcard
 - Each card has an id, a question, possible answers, and a correct answer
 
-For example:
+<section class="answer">
+### For Example  
 
 ```js
 const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
 ```
+</section>
 
 ***Turns***
 
@@ -67,7 +69,9 @@ const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug
   - `evaluateGuess`: method that returns a boolean indicating if the user's guess matches the correct answer on the card
   - `giveFeedback` - method that returns either 'incorrect!' or 'correct!' based on whether the guess is correct or not.
 
-For example:
+<section class="answer">
+### For Example  
+
 
 ```js
 const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
@@ -88,6 +92,7 @@ turn.evaluateGuess();  // => false
 
 turn.giveFeedback();   // => incorrect!
 ```
+</section>
 
 ## Iteration 2:
 
@@ -95,7 +100,9 @@ turn.giveFeedback();   // => incorrect!
 
 Your `Deck` class should be initialized with an array of `Card` objects and should have an accompanying test file. It should know how many `Cards` are in the `Deck`.
 
-For example:
+<section class="answer">
+### For Example  
+
 
 ```js
 const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
@@ -106,6 +113,7 @@ const deck = new Deck([card1, card2, card3]);
 
 deck.countCards(); // => 3
 ```
+</section>
 
 ***Round***
 
@@ -124,7 +132,8 @@ Your `Round` class will be the object that takes in responses and records these 
   - `calculatePercentCorrect`: method that calculates and returns the percentage of correct guesses
   - `endRound`: method that prints the following to the console: '****** Round over! ****** You answered <>% of the questions correctly!'
 
-For example:
+<section class="answer">
+### For Example  
 
 ```js
 const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
@@ -163,6 +172,7 @@ round.returnCurrentCard();    // => { id: 12,
 
 round.calculatePercentCorrect(); // => 50
 ```
+</section>
 
 ## Iteration 3:
 
@@ -185,14 +195,20 @@ As you may have noticed, your `Game` class has two methods fleshed out already: 
 
     _Note: The helper functions are all fleshed out and fit to work with classes/methods that meet the requirements in the past iterations._
 
-For example:
+<section class="answer">
+### For Example  
 
 ```js
 game.currentRound; // => Round {...} (The new Round object that has been instatiated)
 ```
+</section>
 
-**HINT**
-- Look at the file being  run when we want to start the game. Think about where you need to invoke your `Game.start` method.
+<section class="note">
+### HINT
+
+Look at the file being  run when we want to start the game. Think about where you need to invoke your `Game.start` method.
+</section>
+
 
 ## Iteration 4:
 
@@ -252,4 +268,4 @@ Collaborate with instructors to personalize an extension for this project
 
 This project will be evaluated remotely by your instructors over the weekend. We will send you written feedback on your project by Sunday afternoon / Monday.
 
-Submit your GH Repo <a href="https://docs.google.com/spreadsheets/d/1TbHvKMGjt-hJhJzP98_ED41utNE2Zk_wYeABXfVWrg4/edit#gid=1963824141" target="_blank">here</a> by __9PM on Thursday, October 8th__.
+Submit your GH Repo [here](https://forms.gle/dTjaDmgDog9U8dGn6) by **9PM on Thursday of Week 1**.

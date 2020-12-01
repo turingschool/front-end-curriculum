@@ -19,6 +19,13 @@ tags: js, introduction, object literals, dot notation
 - `Method` A function on an object
 - `Dot Notation` Notation to access a value on an object, explicitly specifies the key
 
+<section class="call-to-action">
+## Warm Up
+Respond to the following questions on [this Jamboard](https://jamboard.google.com/d/13-bFjFETJ28KBZRIar4wl0bGbKcDfNiAHwvbP--o2FU/viewer?f=0)
+- What do you already know about Objects from M0?
+- What feels fuzzy or do you have questions about?
+</section>
+
 ## Objects
 
 Objects are a type of collection, or complex data type in JavaScript. We can think of objects as a representation of real world things in computer programming.
@@ -123,9 +130,6 @@ console.log(school);
 //   capacity: 250,
 //   languageImmersion: true,
 //   currentStudents: 75,
-//   sendWelcomeMessage: function() {
-//      return "Welcome to International School of Denver!"
-//   },
 //   address: "7701 E 1st Pl, Denver, CO 80230"
 // }
 ```
@@ -207,13 +211,4 @@ Let's add a method to the object representing ourselves. What behaviors or metho
 - How do you create an object using literal notation?
 - What is an object and what is it made up of?
 - When we assign a function as the value of a key inside an object, what do we call it?
-
-**Then:** Turn to your neighbor and explain the above object-related questions to each other. Practice makes perfect, so make sure you both get to explain!
 </section>
-
-<section class="call-to-action">
-### Final Practice: Access and Update
-
-Start by forking [this repl.it](https://repl.it/@ameseee/Partner-Practice). Complete each exercise listed in the comments below the provided object literal. Write the code with a given direction directly below it, and **do not delete code as you go**.
-</section>
-<br>
