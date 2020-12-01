@@ -122,8 +122,8 @@ reverseWord('turing'); // gnirut
 <section class="call-to-action">
 ### In Your Notebook
 
-* What is the difference between Mocha and Chai?  What are each of their responsibilities?
-* 
+* What is the difference between Mocha and Chai? 
+* What are each of their responsibilities?
 </section>
 
 <section class="answer">
@@ -133,7 +133,7 @@ reverseWord('turing'); // gnirut
 
 **Mocha:**
 * Mocha runs on Node.js in your terminal, and can also be run in your browser window
-* Mocha itself is the framework that runs the tests and dictates the syntax of the test block as a whole. This is separate from the assertion library Chai that we will talk about in a minute.
+* Mocha itself is the framework that runs the tests and dictates the syntax of the test block as a whole. This is separate from the assertion library Chai.
 
 ```js
 describe('unicorn', function() {
@@ -146,11 +146,10 @@ describe('unicorn', function() {
 **Chai:**
 * An assertion is the crucial piece of the test that actually checks that when certain pieces of are code are executed, what we're getting back is what we expect. 
 * Although Chai can be inserted into many different testing frameworks, it works seamlessly with Mocha.
-* Chai provides multiple syntax options:
 </section>
 
 <section class="note">
-### Note
+### A note about the multiple syntax options provided by Chai
 
 ![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png) 
 
