@@ -71,7 +71,7 @@ Try creating your own functions in the console!
 
 * Write a function that logs to the console a message of "Let's add!", and then logs a sum of five different integers.
 * Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.
-* Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name. 
+* Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name.
 * Write a function that logs a [random number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) to the console.
 
 _Make sure you're thinking about your naming conventions!_
@@ -165,8 +165,20 @@ return "We've stopped executing!";
 ```
 
 <section class="call-to-action">
-### Practice
+### Paired Practice
 Work through <a href="https://repl.it/repls/LegalCadetblueAddresses">this practice REPL</a> with a partner
+</section>
+
+### ES5 vs ES6 Functions
+So far in this lesson, we've only looked at regular functions, also known as **ES5 functions**. This refers to ECMAScript 2009, also known as ES5, which was the first major revision to JavaScript. ECMAScript 2015, also known as ES6, was the second major revision to JavaScript. With ES6 came **ES6 functions**, also called **arrow functions**.  
+
+**In Mod 1, we will focus on ES5 functions.** Arrow functions are really cool, but they can sometimes cause unexpected behavior if you're not careful. The concepts surrounding this behavior will be covered in Mod 2. That said, we want to show you some arrow functions now as a preview!
+
+<section class="call-to-action">
+### Paired Practice
+
+* In a breakout room, complete the exercise found on [this repl](https://repl.it/@kaylaewood/functionsPractice#index.js).
+* Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
 
 ### Wrap Up
@@ -187,4 +199,3 @@ We've worked through a lot of content - some of which may be new, some is review
 
 * [JS Style Guide](https://github.com/turingschool-examples/javascript)
 * [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
-
