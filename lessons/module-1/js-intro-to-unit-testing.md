@@ -138,9 +138,9 @@ When we are testing code, it's usually best to have the implementation code pull
 
 <img src="./assets/images/testing/setup.png" alt="Screen shot of two panes in Atom text editor">
 
-- Our `implementation` file refers to the code we are actually testing. This will be generally be a class file.
-- Our `test` file will be the automated tests that we write, that verify our class does what it should. This is where we will create object instances, and verify that they do what they should.
-- It is important to keep scope in mind: **variables declared in the `test` file are not available in the `implementation` file.** And in the `implementation` file, the only way we can call properties declared in the class is if we call them on an object instance created from that class.
+- Our `implementation` file refers to the code we are actually testing. 
+- Our `test` file will be the automated tests that we write, that verify our class or functions do what they should. 
+- It is important to keep scope in mind: **variables declared in the `test` file are not available in the `implementation` file.**
 
 ## Testing Functions
 
