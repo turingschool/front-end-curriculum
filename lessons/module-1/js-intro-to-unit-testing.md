@@ -15,9 +15,11 @@ tags: javascript, testing, tdd, mocha, chai
 
 - `TDD` Test Driven Development / Design
 - `Assertion` An expression containing some testable logic
-- `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
-- `Testing Framework` A library that determines how tests are organized and executed
+- `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`. Chai is an example. 
+- `Testing Framework` A library that determines how tests are organized and executed. Mocha is an example.
 - `Red/Green Testing` - a workflow for testing your code, in which we write *and* fail tests (red) before we write any implementation code to pass the test (green)
+- `Unit Test` A test that tests one function or one object in isolation to make sure that it behaves the way we were expecting it to behave
+- `Integration test` A test that tests the interaction between two units to make sure that they play together nicely and work the way we expect them to work. 
 
 ## Part I: Strategies, Tools, and Functions
 
@@ -53,12 +55,16 @@ The bulk of your tests for an application are likely to be unit tests. **Unit te
 
 **Integration tests** test the interaction between two units to make sure that they play together nicely and work the way we expect them to work. You will get many opportunities to experiment with this type of test at Turing (including Mod 1) and in the work environment as well.  
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0GypdsJulKE?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 #### Benefits of Testing
 
 * Unit & Integration tests are a safety net that helps developers find software bugs early
 * Unit & Integration tests provide documentation by telling a living story about your application
 * Unit tests foster simplicity by forcing you to write code that is decoupled, flexible, and configurable
 * Integration tests allow us to be confident that all those small pieces are working together as expected
+* Tests can prevent users from breaking your application (example: think about a website that auctions off items like EBay. What happens if a user tries to bid on an item that has already been sold? Are they able to? Does the app break or do they get a nice error page?) Testing helps plan for error states. 
 
 <section class="call-to-action">
 ### Think - Pair - Share
@@ -118,6 +124,14 @@ In Mod 1, we will be using the Mocha testing framework along with the assertion 
 * [Mocha](https://mochajs.org/) is a testing framework that runs on `Node.js` in your terminal. This is what allows us to organize and execute our tests.
 
 * [Chai](http://www.chaijs.com/) is an assertion library that plugs into Mocha. The assertion library is what actually runs the specs and determines whether any given condition is valid or not.
+
+<section class="note">
+#### On NPM 
+When we ran `npm install` we brought Mocha and Chai into the first-unit-tests warm up repo! You'll learn about `npm` in depth in M2, but for now it allows us to install packages like Mocha and Chai.
+
+You won't need to run this every time, just when you initially clone a new repo that utilizes packages.  
+</section>
+
 
 ## Set Up
 
