@@ -5,10 +5,11 @@ tags: javascript, testing, tdd, mocha, chai
 
 ## Learning Goals
 
-* Understand what testing is, why it is important, and the various types of tests
-* Recognizing the importance of Test Driven Development (TDD)
+* Understand what testing is and why it is important
+* Learn a few of the various types of tests
+* Recognize the importance of Test Driven Development (TDD)
 * Understand the red/green testing workflow
-* Ability to read/create tests
+* Gain the ability to read and write tests
 
 ## Vocabulary
 
@@ -25,12 +26,15 @@ tags: javascript, testing, tdd, mocha, chai
 <section class="call-to-action">
 ## Warm Up
 
+**On Your Own**
 Open [this repository](https://github.com/turingschool-examples/first-unit-tests), then:
 * Read the README, and follow the `Getting Started` steps.
 * Run the `npm test` command in your terminal and explore at the result. 
-* Open up the `functions-test.js` file, and read every line, out loud, using all of the terms of art that you can.
+* Open up the `functions-test.js` file, and read every line, using all of the terms of art that you can.
+
+**Discuss With Your Group:**
 * What do you notice about this file? What does it seem like this file is doing?
-* What peices of code are clear in their purpose? What is unclear?
+* Which pieces of code are clear in their purpose? What is unclear?
 * What sort of functionality is being tested?
 </section>
 
