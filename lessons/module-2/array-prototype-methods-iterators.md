@@ -200,7 +200,7 @@ let pets = [
 ### Major Takeaways  
 
 * Useful for when you need to find a specific item in an array that matches a given condition.
-* Always will return the first element where the callback function returns true.  (even if the are other matches)
+* Always will return the first element where the callback function returns *true*.  (even if there are other matches)
 
 <section class="note">
 ### Note
@@ -251,7 +251,7 @@ Note that the `reduce` method is slightly different than the previous iterator m
 
 _Callback Function_ - Within the callback, we have access to the accumulator, the current element in the iteration, the current element's index, and the original array we are looping over
 
-_Initial Value_ - The initial value to be used as the accumulator (the first argument to the first call of the callback). The accumulator is the 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.
+_Initial Value_ - The initial value to be used as the accumulator (the first argument to the first call of the callback). The accumulator is the *single value* that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.
 
 <section class="call-to-action">
 ### In Pairs
