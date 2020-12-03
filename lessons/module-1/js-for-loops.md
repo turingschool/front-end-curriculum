@@ -125,7 +125,21 @@ function listFruits() {
 ```
 You can see that instead of using a hardcoded number, we are using `fruits.length` in our condition. This means we will continue to loop over the array as long as the counter is less than the total number of elements in the array. That's pretty handy!
 
+<section class='note'>
+### Iterator Methods
+
+`for` loops are not the only way to loop over an array. When pairing with a mentor you might see some of the following methods:
+- `.forEach()`
+- `.map()`
+- `.find()`
+- `.filter()`
+- `.reduce()`
+
+These are known as *iterator methods* and they each have their own uses and behaviors. During your time in mod 1, we'd like you to **only** use `for` loops when you need to iterate over an array. This is not to needlessly make your life harder. The main reason for this request is so that the logic that is applied during each step of the loop must be written explicitly by you, instead of letting the architects of those methods do that work for you. Everything in Mod 1 can be completed with your pal `for` loop! You will get plenty of experience with those iterator methods down the line, I promise.
+</section>
+
 <section class="call-to-action">
+
 ### Solo Practice
 
 #### Medium Heat 🔥🔥: Annoying Zoo Kid
@@ -134,6 +148,15 @@ You can see that instead of using a hardcoded number, we are using `fruits.lengt
 2. Create a function called `nameAnimals`.
 3. Within your function, create a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
 4. With your array (and - if needed - with your knowledge of parameters), invoke your function to ensure it is working correctly!
+
+#### Connecting with previous knowledge
+
+1. Use the array of pets below.
+2. Declare a function called `logValuesByKey` that takes two parameters: an array, and a key
+3. Inside of that function, write a `for` loop that logs the value of the provided key for each object in the array. Hint: Consider which object notation to use.
+4. Invoke the  function, passing it the pets array and the key of 'type'.
+5. Repeat, but send through a different key.
+6. Dang! You just wrote a flexible, powerful, dynamic function. *Very* tite.
 
 #### Spicy 🔥🔥🔥: Pet Paragraph
 
@@ -170,6 +193,8 @@ var pets = [
 6. Outside the `for` loop (but still inside the function), return the updated `paragraph` variable.
 7. Invoke your new function, passing in the `pets` array, and save it's returned value into a new variable.
 8. Console log that new variable.
+9. Give yourself a high five!
+
 </section>
 
 ### Loops and Performance Issues
