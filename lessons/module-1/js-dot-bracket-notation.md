@@ -11,6 +11,9 @@ tags: javascript, foundation, arrays, objects, bracket, dot, notation
 * Determine appropriate use cases for each notation
 * Apply our knowledge of each notation to gain a deeper understanding about a familiar concept
 
+## Pre-Work
+Watch [this video](https://www.youtube.com/watch?v=DJ0deyVQZPw) about dot and bracket notation.
+
 ## Vocabulary
 
 - `Object` An unordered collection of related data in the form of key value pairs. JavaScript provides two notations for accessing object properties...
@@ -165,7 +168,6 @@ In your notebook, answer the following questions:
 
 <section class="call-to-action">
 ### Homework
-
-* Complete the code challenges found on [this repl](https://repl.it/@kaylaewood/bracketVsDotHomework). Stuck? Look  [here](https://repl.it/@kaylaewood/bracketVsDotHomeworkAnswers#main.js).
+* Complete the code challenges found on [this repl](https://repl.it/@kaylaewood/bracketVsDotHomework). These are tough! Do what you can. Stuck? Look [here](https://repl.it/@kaylaewood/bracketVsDotHomeworkAnswers#main.js).
 * Answer the questions found in the JavaScript section of [this codepen](https://codepen.io/kaylaewood/pen/wvGrQxV?editors=1010).
 </section>
