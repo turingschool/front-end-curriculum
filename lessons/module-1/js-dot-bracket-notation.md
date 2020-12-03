@@ -12,7 +12,7 @@ tags: javascript, foundation, arrays, objects, bracket, dot, notation
 * Apply our knowledge of each notation to gain a deeper understanding about a familiar concept
 
 ## Pre-Work
-Watch [this video](https://www.youtube.com/watch?v=DJ0deyVQZPw) about dot and bracket notation.
+Watch the first 7 minutes of [this video](https://www.youtube.com/watch?v=DJ0deyVQZPw) about dot and bracket notation. If you want to watch the whole thing, go ahead! Just know that it covers some Mod 2 concepts that may be a little intimidating at this point :)
 
 ## Vocabulary
 
