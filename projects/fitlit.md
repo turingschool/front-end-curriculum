@@ -31,7 +31,7 @@ The image above is *not* a comp. We expect you to design your own dashboard layo
 ## Timeline
 Dates and deadlines to be aware of:
 
-* **Monday, December 2nd** - Submit the following to your PM BEFORE beginning to write code via Slack:
+* **Monday, December 7th** - Submit the following to your PM BEFORE beginning to write code via Slack:
 1. DTR (be specific about learning goals, schedules, and communication expectations ) 
 1. Project board
 1. Planned out class structure
