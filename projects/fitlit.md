@@ -35,6 +35,7 @@ Dates and deadlines to be aware of:
 1. DTR (be specific about learning goals, schedules, and communication expectations ) 
 1. Project board
 1. Planned out class structure
+1. Wireframes
 1. 3 design inspirations (Please include links)
 
 * **Thursday, December 17th** - Project due at 9PM.
