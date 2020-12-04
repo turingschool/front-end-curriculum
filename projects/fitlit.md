@@ -20,13 +20,29 @@ In this project, you will be given data from an activity tracker for many users 
 
 The image above is *not* a comp. We expect you to design your own dashboard layout that is relevant to the data that was logged or calculated for a user or group of users. Use inspiration from Fitbit and other fitness/activity apps, but do not copy an app directly.
 
-**You pull 3 inspirations from 3 different apps that you want to implement in your application**
+**You must pull 3 inspirations from 3 different apps that you want to implement in your application**
 * Be specific about what piece you are trying to re-create
-* This may include how how elements are organized from desktop to mobile views
+* This may include how elements are organized from desktop to mobile views
 * You may also pull inspirations from other sites such as [Dribbble](https://dribbble.com/)
-
-Keep the displays simple for now and make them fancy later. Do not use and additional 3rd-party libraries to display information on the page unless you get instructor approval first. This rule goes for other iterations as well.
 </section>
+
+---
+
+## Timeline
+Dates and deadlines to be aware of:
+
+* **Monday, December 2nd** - Submit the following to your PM BEFORE beginning to write code via Slack:
+1. DTR (be specific about learning goals, schedules, and communication expectations ) 
+1. Project board
+1. Planned out class structure
+1. 3 design inspirations (Please include links)
+
+* **Thursday, December 17th** - Project due at 9PM.
+* **Friday, December 18th** - Project evals.
+
+Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6)
+
+---
 
 ## Requirements
 
@@ -34,7 +50,7 @@ Keep the displays simple for now and make them fancy later. Do not use and addit
 
 For this project, you need to use this [FitLit Starter Kit](https://github.com/turingschool-examples/fitlit-starter-kit) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up, follow the instructions to verify it is setup correctly.
 
-## Testing Setup
+### Testing Setup
 
 There is no boilerplate for testing in the starter-kit repo. You will need to set up all of the tests yourself. Although, if you have run `npm install` in the setup instructions, then the tooling you need to start testing is already installed (`mocha` and `chai`). Refer to the testing lesson from week 1 as a guide to get started as well as the [mocha](https://mochajs.org/) and [chai](https://www.chaijs.com/) documentation pages.
 
@@ -54,7 +70,7 @@ There are different activity files that have ALL users' data for many days
 
 ## Project Iterations
 
-CEach iteration has a "Data" section and "Dashboard" section. Data deals with using the data to calculate something meaningful for the user. The Dashboard section deals with what to display on the page. Unlike your week-1 project, the classes and method names are not completely drawn out for you.
+Each iteration has a "Data" section and "Dashboard" section. Data deals with using the data to calculate something meaningful for the user. The Dashboard section deals with what to display on the page. Unlike your week-1 project, the classes and method names are not completely drawn out for you.
 
 Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on class structure and the calculation methods, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there.
 
@@ -64,11 +80,17 @@ Don't get too caught up with polishing your dashboard too early. You'll want to 
 For this dataset, when "today" is referenced in iterations, it is the last date in the data. The latest week is the most recent 7 days in the data.
 </section>
 
+<section class="note">
+### 3rd Party Libraries
+
+Please get instructor approval first before using additional 3rd-party libraries.  You may use [Moment.js](https://www.npmjs.com/package/moment) to help with manipulating / formatting dates.
+</section>
+
 ---
 
 ### Iteration 1 - Get Familiar with the Data and Users
 
-##### Data
+#### Data
 Go look into the `data` directory and explore the data (there is also an outline of the structure of the data in the README of the starter kit repo). Get a sense of what each property is and what the data nesting is like.
 
 Once you have looked over each data file, start with the `users.js` data file. To work with this data, this is the class structure you should start out with:
@@ -98,7 +120,7 @@ new User(userData);
   * Return a user's first name only
 
 
-##### Dashboard
+#### Dashboard
 Use the `scripts.js` file to add information to the DOM. This JS file should call methods from your classes to retrieve information. There should not be any DOM manipulation within the _User_ or _UserRepository_ class files.
 
 To develop this dashboard, first choose a user at random - someone with a randomly generated name that speaks to you. On the dashboard for a user:
@@ -111,7 +133,7 @@ To develop this dashboard, first choose a user at random - someone with a random
 
 ### Iteration 2 - Hydration
 
-**Data:**
+#### Data
 Create classes and methods that can calculate:
 
 * For a user (identified by their `userID` - this is the same for all methods requiring a specific user's data), the average fluid ounces consumed per day for all time
@@ -120,7 +142,7 @@ Create classes and methods that can calculate:
 
 You have to decide which classes should contain each method. Think about whose responsibility it is to own the method.
 
-**Dashboard:**
+#### Dashboard
 For your user (or any user you choose), add:
 
 * A display to show how much water they have consumed today (these displays are often called "widgets" in the FE tech world)
@@ -130,7 +152,7 @@ For your user (or any user you choose), add:
 
 ### Iteration 3 - Sleep
 
-**Data:**
+#### Data
 Create classes and methods that can calculate:
 
 * For a user (identified by their `userID`), the average number of hours slept per day
@@ -143,7 +165,7 @@ Create classes and methods that can calculate:
 * Find all users who average a sleep quality greater than `3` for a given week (7 days) - you should be able to calculate this for any week, not just the latest week
 * For a given day (identified by the date), find the users who slept the most number of hours (one or more if they tied)
 
-**Dashboard:**
+#### Dashboard
 Items to add to the dashboard:
 
 * For a user, their sleep data for the latest day (hours slept and quality of sleep)
@@ -154,7 +176,7 @@ Items to add to the dashboard:
 
 ### Iteration 4 - Activity
 
-**Data:**
+#### Data
 Create classes and methods that can calculate:
 
 * For a specific day (specified by a date), return the miles a user has walked based on their number of steps (use their `strideLength` to help calculate this)
@@ -168,7 +190,7 @@ Create classes and methods that can calculate:
   * steps taken for a specific date
   * minutes active for a specific date
 
-**Dashboard:**
+#### Dashboard
 Items to add to the dashboard:
 
 * For a user, the number of steps for the latest day
@@ -181,11 +203,11 @@ Items to add to the dashboard:
 
 ### Extensions
 _Choose at least one_
-1. Design a step challenge between friends. Assign your user a few friends from the user data file. Add the methods you need and a display on the dashboard to see their friends step count for a whole week, and then show who had the most steps for that week.
-1. Calculate and display this trend: for a user, what days had increasing steps for 3 or more days?
-1. Drag-and-drop widgets (if you did not go with a widget theme, then add some widgets for this extension). You can use a 3rd-party library to help you accomplish this.
-1. Priority stats - give the user the ability to select the widgets they always want to see at the top of the page. This is a customization the user would want to make, and you would want to save this customization to `localStorage`.
-1. **Admin** view. Modify your HTML page, or create a new HTML page that is an admin dashboard display. The admin would want to see views of data from all users. What are the trends of all users? How can you display data from all users in a meaningful way?
+* Design a step challenge between friends. Assign your user a few friends from the user data file. Add the methods you need and a display on the dashboard to see their friends step count for a whole week, and then show who had the most steps for that week.
+* Calculate and display this trend: for a user, what days had increasing steps for 3 or more days?
+* Drag-and-drop widgets (if you did not go with a widget theme, then add some widgets for this extension). You can use a 3rd-party library to help you accomplish this.
+* Priority stats - give the user the ability to select the widgets they always want to see at the top of the page. This is a customization the user would want to make, and you would want to save this customization to `localStorage`.
+* **Admin** view. Modify your HTML page, or create a new HTML page that is an admin dashboard display. The admin would want to see views of data from all users. What are the trends of all users? How can you display data from all users in a meaningful way?
 
 ---
 
@@ -223,22 +245,6 @@ if (typeof module !== 'undefined') {
 
 ---
 
-### Timeline
-Dates and deadlines to be aware of:
-
-* **Monday, December 2nd** - Submit the following to your PM BEFORE beginning to write code via Slack:
-1. DTR (be specific about learning goals, schedules, and communication expectations ) 
-1. Project board
-1. Planned out class structure
-1. 3 design inspirations (Please include links)
-
-* **Thursday, December 17th** - Project due at 9PM.
-* **Friday, December 18th** - Project evals.
-
-Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6)
-
----
-
 ## Rubric
 
 ### Functional Expectations
@@ -255,7 +261,7 @@ Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6)
 
 ### Test-Driven Development
 * 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.
-* 3: All classes and methods are tested. Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.
+* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.
 * 2: Application makes some use of tests, but the coverage is insufficient given project requirements.
 * 1: Application does not demonstrate strong use of TDD.
 
