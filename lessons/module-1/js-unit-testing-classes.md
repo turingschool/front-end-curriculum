@@ -67,7 +67,7 @@ describe('Tweet', function() {
 Below is the general syntax for assertions for most of the methods available:
 
 ```js
-  assert.method(the result of our, expected)
+  assert.method(actual, expected)
 ```
 
 You'll notice that our method takes two arguments:
