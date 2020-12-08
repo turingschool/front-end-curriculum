@@ -14,7 +14,7 @@ tags: js, introduction, constructor functions, this, classes, objects
 - `Object` A bundle of behavior (methods) and state (properties)
 - `Key` The name used to reference a Value on an Object
 - `Value` The data referenced by a Key
-- `Property` Another word for the 'Key' portion of a key-value pair on an object
+- `Property` Another word for a key-value pair on an object
 - `Method` A function on an Object
 - `Dot Notation` Notation to access a Value on an Object, explicitly specifies the Key
 - `Bracket Notation` Notation to access a Value on an Object, usually specifies a Key via a variable
