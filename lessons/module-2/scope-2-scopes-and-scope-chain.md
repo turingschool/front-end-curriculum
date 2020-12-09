@@ -46,7 +46,7 @@ console.log('Cat Noise outside of Function: ', catNoise);
 
 ### Global, Functional, and Block Scope
 
-We have several scopes available to us: global, local (also known as function), block, and eval (the latter won't be covered in this lesson - but you can read more on it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
+We have several scopes available to us: global, local (also known as function), and block scope.
 
 #### Global scope
 
