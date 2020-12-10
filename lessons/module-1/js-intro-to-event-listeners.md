@@ -125,7 +125,6 @@ Let's break down what's happening in the CodePen above:
   - Declare a variable, `color` that takes the value the user selected and stores it
   - Applies an inline style, `backgroundColor` with that newly selected color
 
-
 ## Anonymous and Helper Functions
 Examine [this code](https://codepen.io/kaylaewood/pen/eYddjBL) and think about the following questions:
 1. Why is "Summer" appearing in the screen, when "Fall" is in the original HTML?
@@ -141,12 +140,13 @@ button.addEventListener('click', function() {
 ```
 
 2. You can use a **helper function**:
-```js
-button.addEventListener('click', runFunction);
 
-function runFunction() {
-  doSomething('some argument');
-};
+```js
+button.addEventListener('click', runMyFunction);
+
+function runMyFunction() {
+  doSomething();
+}
 ```
 
 For now, we recommend using **helper functions**, rather than **anonymous functions**. Sticking to helper functions will help you cement your understanding of defining and invoking functions.
