@@ -260,7 +260,7 @@ app.post('/api/v1/pets', (request, response) => {
 
   for (let requiredParameter of ['name', 'type']) {
     if (!pet[requiredParameter]) {
-      return response
+      response
         .status(422)
         .send({ error: `Expected format: { name: <String>, type: <String> }. You're missing a "${requiredParameter}" property.` });
     }
