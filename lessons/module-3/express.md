@@ -260,7 +260,7 @@ app.post('/api/v1/pets', (request, response) => {
 
   for (let requiredParameter of ['name', 'type']) {
     if (!pet[requiredParameter]) {
-      return response
+      response
         .status(422)
         .send({ error: `Expected format: { name: <String>, type: <String> }. You're missing a "${requiredParameter}" property.` });
     }
@@ -271,11 +271,12 @@ app.post('/api/v1/pets', (request, response) => {
   response.status(201).json({ name, type, id });
 });
 ```
-<section>
 
 If either property is missing, we will see an error in the Network tab of our developer tools where the response is highlighted in red and has a status of `422` (client error). The response details will tell us exactly which property we are missing based on the error we sent along with the 422 response.
 
 It's important to handle errors and write descriptive error messages so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response pet is the best way to write a user-friendly API.
+
+</section>
 
 ### Using Postman
 Postman is a super cool tool for sending requests to endpoints. You can use Postman to add, edit, or delete data if there isn't a UI to do so. In our case, it's handy to add pets, edit a specific pet, or delete a pet. Get familiar with Postman because it will be your best friend for all things API from here on out.
