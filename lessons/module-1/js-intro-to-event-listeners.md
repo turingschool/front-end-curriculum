@@ -22,13 +22,10 @@ Before we can implement functionality like this though, we're going to build a s
 - `Event Listener` A function invoked on a DOM node which fires the `event handler` when a specified event occurs on the node or its children
 - `Event Handler` A function that will run when a specific event occurs
 
-## Warm Up
-
-On your own, answer the questions associated with each stage of the Greeting App. If you aren't sure - it's ok - but take a try. You'll have time to chat with your partner afterward.
-
-[Jamboard](https://jamboard.google.com/d/1iMb2VuJopHXVTa5wRDg6sPDM-bhwpPjFiAL9FGnB-ZY/edit?usp=sharing)
-
-<!-- [Instructor Resource](https://docs.google.com/document/d/1NmlZD0IlsInu4zjpCey9MI2GdV-Zd_jlIcnLdcvnTEo/edit) -->
+<section class="call-to-action">
+### Warm Up
+Take turns with your partner talking through the code found [here](https://codepen.io/turing-school/pen/MWWzMre). Practice using technical vocabulary. It's okay to mess up! This takes practice. If you need help, look below!
+</section>
 
 ## Event Listeners
 
@@ -36,21 +33,22 @@ Changing stuff on the page with JavaScript is great, but you might as well have 
 
 This power emerges when we start **listening for user events**. This is the crux of front-end engineering. We present a user interface and then as the user interacts with the UI, we change and update what they see.
 
-Let's take a look at the syntax and then we'll talk about what's happening.
+Let's start by working on [this codepen](https://codepen.io/kaylaewood/pen/OJRREYN).
 
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="js,result" data-user="turing-school" data-slug-hash="MWWzMre" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="A First Event Listener">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/MWWzMre">
-  A First Event Listener</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<section class="call-to-action">
+### Talk It out
+Take turns with your partner talking through the code found [here](https://codepen.io/turing-school/pen/MWWzMre). Practice using technical vocabulary. It's okay to mess up! This takes practice. If you need help, look below!
+</section>
 
+<section class="answer">
+### Need Help?
 1. We're querying for all of the elements we need and we're storing them in variables.
 2. We're adding an event listener to the `<button>` with the class of `.change-text`.
 3. We're passing `addEventListener()` two arguments:
   - The type of event we're interested in listening for.
   - The name of a function that should be called whenever that event happens.
 4. We declare the function that will be called when the button is clicked.
+</section>
 
 <section class="call-to-action">
 ## Explore
@@ -67,7 +65,7 @@ Take for example the "heart" icon on CodePen. CodePen has 4 levels of "love" - 0
 
 <img class="medium" src="./assets/images/dom-manipulation-1/codepen-heart-click.gif">
 
-To do this, we need to combine what we just learned about event listeners with what we learned about changing styles programmatically earlier in this lesson.
+To do this, we need to combine what we just learned about event listeners with what we learned about changing styles programmatically earlier [this week](https://frontend.turing.io/lessons/module-1/js-intro-to-the-dom.html).
 
 <section class="call-to-action">
 ### Pair Challenge
@@ -79,7 +77,6 @@ Your task is to create a single `div` that is gray. Then, when it is clicked, it
 In your notebook:
 * List the directions, as specially as possible, that you want to give to the computer.
 * What are the DOM elements that this program will need to know about? What variable names will you use for them?
-* What CSS styles might you need to create?
 
 Now, implement your ideas in code.
 
@@ -134,28 +131,31 @@ Let's break down what's happening in the CodePen above:
   - Declare a variable, `color` that takes the value the user selected and stores it
   - Applies an inline style, `backgroundColor` with that newly selected color
 
-<section class="call-to-action">
-## Solo Practice
 
-Fork [this CodePen](https://codepen.io/turing-school/pen/abbQeoG) and implement these two features:
-* When the user clicks on the "Change Text!" button, the `innerText` of the `h1` should change to be the contents of the input field.
-* When the user clicks the "Change Styles!" button, it should adjust that property on the box.
-<br>
+### Anonymous and Helper Functions
+Examine [this code](https://codepen.io/kaylaewood/pen/eYddjBL) and think about the following questions:
+1. Why is "Summer" appearing in the screen, when "Fall" is in the original HTML?
+2. Why isn't the button working?
 
-Here is an example of the second task:
+Remember that the second argument the `addEventListener` accepts is a function name, not an invoked function. This presents challenges when we need to pass parameters to that function. There are two options for how to approach this issue.
 
-![Custom CSS Color Box](https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/custom-css-modifier.gif)
+1. You can use an **anonymous function**:
+```js
+  button.addEventListener('click', function() {
+    doSomething('some argument');
+  });
+```
 
-</section>
+2. You can use a **helper function**:
+```js
+  button.addEventListener('click', runFunction);
 
-<section class="call-to-action">
-## Greeting App
+  function runFunction() {
+    doSomething('some argument');
+  }
+```
 
-Take 5 minutes with your partner to share your jamboards from the Warm Up.
-
-Then, fork [this CodePen](https://codepen.io/kaylaewood/pen/ZEOOKOG) and start building out the Greeting App. Start with writing the HTML, then add the functionality. Handle the styling after the app is working as expected.
-
-</section>
+For now, we recommend using **helper functions**, rather than **anonymous functions**. Sticking to helper functions will help you cement your understanding of defining and invoking functions.
 
 ### Suggested re-teaching practice
 
