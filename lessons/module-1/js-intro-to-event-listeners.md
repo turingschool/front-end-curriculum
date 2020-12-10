@@ -139,7 +139,7 @@ Remember that the second argument the `addEventListener` accepts is a function n
 You can use an **anonymous function**:  
 ```js
 button.addEventListener('click', function() {
-  changeColor('blue');
+  changeSeason('fall');
 });
 ```
 
@@ -148,7 +148,7 @@ Or you can use a **helper function**:
 button.addEventListener('click', updatePage);
 
 function updatePage() {
-  changeColor('blue');
+  changeSeason('fall');
 }
 ```
 
