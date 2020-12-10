@@ -136,14 +136,14 @@ Examine [this code](https://codepen.io/kaylaewood/pen/eYddjBL) and talk about th
 
 Remember that the second argument the `addEventListener` accepts is a function name, not an invoked function. This presents challenges when we need to pass parameters to that function. There are two options for how to approach this issue.
 
-1. You can use an **anonymous function**:  
+You can use an **anonymous function**:  
 ```js
 button.addEventListener('click', function() {
   changeColor('blue');
 });
 ```
 
-2. Or you can use a **helper function**:  
+Or you can use a **helper function**:  
 ```js
 button.addEventListener('click', updatePage);
 
