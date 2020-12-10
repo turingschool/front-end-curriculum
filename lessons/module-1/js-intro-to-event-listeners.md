@@ -152,7 +152,7 @@ function updatePage() {
 }
 ```
 
-For now, we recommend using **helper functions**, rather than **anonymous functions**. Sticking to helper functions will help you cement your understanding of defining and invoking functions. Also, the overuse of anonymous functions can make code very hard to follow.
+Both approaches have pros and cons. Helper functions can seem like too much code for a simple issue, while too many anonymous functions can lead to unclear and hard to follow code. The important thing to remember is that you should only be reaching for one of these options when you need it. **If there are no arguments to be passed in, you don't need a helper function or an anonymous function.**
 
 ## Suggested re-teaching practice
 
