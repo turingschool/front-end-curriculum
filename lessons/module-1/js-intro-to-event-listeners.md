@@ -126,25 +126,29 @@ Let's break down what's happening in the CodePen above:
   - Applies an inline style, `backgroundColor` with that newly selected color
 
 ## Anonymous and Helper Functions
-Examine [this code](https://codepen.io/kaylaewood/pen/eYddjBL) and think about the following questions:
-1. Why is "Summer" appearing in the screen, when "Fall" is in the original HTML?
+
+<section class="call-to-action">
+### Paired Practice
+Examine [this code](https://codepen.io/kaylaewood/pen/eYddjBL) and talk about the following questions:
+1. Why do you think "Summer" appearing in the screen, when "Fall" is in the original HTML?
 2. Why isn't the button working?
+</section>
 
 Remember that the second argument the `addEventListener` accepts is a function name, not an invoked function. This presents challenges when we need to pass parameters to that function. There are two options for how to approach this issue.
 
 1. You can use an **anonymous function**:  
 ```js
 button.addEventListener('click', function() {
-  doSomething('some argument');
+  changeColor('blue');
 });
 ```
 
 2. You can use a **helper function**:  
 ```js
-button.addEventListener('click', runMyFunction);
+button.addEventListener('click', updatePage);
 
-function runMyFunction() {
-  doSomething();
+function updatePage() {
+  changeColor('blue');
 }
 ```
 
