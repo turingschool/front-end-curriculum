@@ -144,12 +144,12 @@ button.addEventListener('click', function() {
 ```
 
 2. Or you can use a **helper function**:  
-```js  
+```js
 button.addEventListener('click', updatePage);
 
 function updatePage() {
   changeColor('blue');
-}  
+}
 ```
 
 For now, we recommend using **helper functions**, rather than **anonymous functions**. Sticking to helper functions will help you cement your understanding of defining and invoking functions. Also, the overuse of anonymous functions can make code very hard to follow.
