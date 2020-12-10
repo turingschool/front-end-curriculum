@@ -67,7 +67,7 @@ describe('Tweet', function() {
 Below is the general syntax for assertions for most of the methods available:
 
 ```js
-  assert.method(the result of our, expected)
+  assert.method(actual, expected)
 ```
 
 You'll notice that our method takes two arguments:
@@ -114,7 +114,7 @@ By adding `require('./tweet')` to our test file, we are importing that function 
 <section class="call-to-action">
 ## Let's practice
 
-Enough talk about testing. Let's actually write some tests to see this in action! We'll do some together and then you'll do some on your own.
+Enough talk about testing. Let's actually pass some tests to see this in action! We'll do some together and then you'll do some on your own.
 
 Check out [this repository](https://github.com/turingschool-examples/intro-js-testing) to get your hands dirty.
 </section>

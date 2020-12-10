@@ -149,15 +149,6 @@ These are known as *iterator methods* and they each have their own uses and beha
 3. Within your function, create a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
 4. With your array (and - if needed - with your knowledge of parameters), invoke your function to ensure it is working correctly!
 
-#### Connecting with previous knowledge
-
-1. Use the array of pets below.
-2. Declare a function called `logValuesByKey` that takes two parameters: an array, and a key
-3. Inside of that function, write a `for` loop that logs the value of the provided key for each object in the array. Hint: Consider which object notation to use.
-4. Invoke the  function, passing it the pets array and the key of 'type'.
-5. Repeat, but send through a different key.
-6. Dang! You just wrote a flexible, powerful, dynamic function. *Very* tite.
-
 #### Spicy 🔥🔥🔥: Pet Paragraph
 
 Use the following code:
@@ -194,6 +185,15 @@ var pets = [
 7. Invoke your new function, passing in the `pets` array, and save it's returned value into a new variable.
 8. Console log that new variable.
 9. Give yourself a high five!
+
+#### Connecting with previous knowledge - Extra Spicy 🔥🔥🔥🔥
+
+1. Use the array of pets above.
+2. Declare a function called `logValuesByKey` that takes two parameters: an array, and a key
+3. Inside of that function, write a `for` loop that logs the value of the provided key for each object in the array. Hint: Consider which object notation to use.
+4. Invoke the  function, passing it the pets array and the key of 'type'.
+5. Repeat, but send through a different key.
+6. Dang! You just wrote a flexible, powerful, dynamic function. *Very* tite.
 
 </section>
 

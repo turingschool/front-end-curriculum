@@ -53,7 +53,7 @@ In the real world, you're going to see codebases that contain many more files, o
 
 You can expect the apps you work on in the future to be much closer to this size and structure than the simple 5-file, 3-folder structure you've started out with. It's important that we feel comfortable navigating large codebases and understand the how and why they require the complexity that we see here.
 
-In order to demystify some of the complex structure we'll see in the future, let's explore the [Paired Project Starter Kit](https://github.com/turingschool-examples/whats-cookin-starter-kit) repo.
+In order to demystify some of the complex structure we'll see in the future, let's explore the [Paired Project Starter Kit](https://github.com/turingschool-examples/fitlit-starter-kit) repo.
 
 
 ## Configuration Files
@@ -68,7 +68,7 @@ Looking at the top-level, root directory of our boilerplate, we already have qui
 
 
 * `.eslintrc` - defines our rules for stylistic conventions we want our code to follow
-* `.gitignore` - tells git not to push certain files to our remote repo
+* `.gitignore` - tells git not to add certain files to our repo
 * `README.md` - allows us to describe our application and provide any instructions to people trying to use or contribute to it
 * `package-lock.json` - builds a dependency tree of any third-party code we are relying on and what versions of those packages our app is using
 * `package.json` - describes our application to NPM and what dependencies we need in order to use and develop the app

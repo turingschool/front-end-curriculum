@@ -34,15 +34,7 @@ Make sure you're utilizing git best practices (branches) and commiting frequentl
 ### Day One Deliverables
 - Read the spec sheet closely. 
 - Send the link to your forked repo to your Project Manager
-
-Reflect on the the following questions in a DM to your Project Manager:
-- What are my strengths as a developer? With which Mod 1 concepts do I feel comfortable?
-- In what areas could I grow? With which Mod 1 concepts do I struggle?
-- Which CYOA features align with my strengths?
-- Which CYOA features align with my areas of growth?
-- Which CYOA features align with what I enjoy about programming?
-- Which CYOA features make the most sense for this application?
-- Which CYOA feature(s) will I aim for?
+- Fill out [this reflection form](https://docs.google.com/forms/d/e/1FAIpQLSdMyfyHn83EMUqzFtn1M0qE5iac350_Oh3-vNNnexSvgc8l5g/viewform)
 
 ### Iteration 0: Build Out Comp
 - Images are below
