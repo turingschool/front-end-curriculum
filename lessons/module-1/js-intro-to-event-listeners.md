@@ -18,7 +18,7 @@ tags: javascript, dom, events, event listener, event handler
 
 <section class="call-to-action">
 ### Warm Up
-*****
+Complete the tasks listed in the JS file on [this codepen](https://codepen.io/kaylaewood/pen/OJRREYN).
 </section>
 
 ## Event Listeners
@@ -27,7 +27,7 @@ Changing stuff on the page with JavaScript is great, but you might as well have 
 
 This power emerges when we start **listening for user events**. This is the crux of front-end engineering. We present a user interface and then as the user interacts with the UI, we change and update what they see.
 
-Let's start by working on [this codepen](https://codepen.io/kaylaewood/pen/OJRREYN).
+Let's revisit the codepen from the Warm Up and add in an Event Listener.
 
 <section class="call-to-action">
 ### Talk It out
@@ -132,15 +132,14 @@ Examine [this code](https://codepen.io/kaylaewood/pen/eYddjBL) and think about t
 
 Remember that the second argument the `addEventListener` accepts is a function name, not an invoked function. This presents challenges when we need to pass parameters to that function. There are two options for how to approach this issue.
 
-1. You can use an **anonymous function**:
+1. You can use an **anonymous function**:  
 ```js
 button.addEventListener('click', function() {
   doSomething('some argument');
 });
 ```
 
-2. You can use a **helper function**:
-
+2. You can use a **helper function**:  
 ```js
 button.addEventListener('click', runMyFunction);
 
