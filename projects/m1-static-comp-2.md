@@ -3,7 +3,9 @@ title: Static Comp Challenge 2
 ---
 
 ## Specification
-The static comp challenge is a series of three challenges to keep you working that HTML/CSS muscle. :muscle: You will be asked to recreate a static comp, with each growing in complexity. For each challenge, you'll be given a static comp and asked to recreate it. Don't worry, we'll give you a bit of creative license, however the objective is to build something that respects the integrity of the original design. Once you get into the workforce - building out comps that reflect the designer's choice in layout, spacing, font, imagery, and color to the smallest detail is a requirement.
+This exercise is to keep you working that HTML/CSS muscle. Once you get into the workforce - building out comps that reflect the designer's choice in layout, spacing, font, imagery, and color to the smallest detail is a requirement.
+
+This used to be a mod 1 project that students had to do in addition to their main projects. Y'all got this! :muscle:
 
 ### Things to Note
  - We have not provided you with any assets, nor native files. You will have to source assets on your own per the creative license guidelines below.
@@ -25,17 +27,15 @@ You may NOT take liberties with the layout, but your creative license includes:
   - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your version.
   - Push your final work to [github pages](https://pages.github.com/)
 
-## Submission Details
-
-Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1Gfvrp74oj80tCadz4_J0YeQBha92Cf3nWx-ACKssBMw/edit#gid=496549355)
-
 ## PRO-TIP
 
-This is layout that takes a good amount of time to build. Don't wait until the week of to get started.
+This is layout that takes a good amount of time to build. Don't wait until the end of break to get started.
 
 ![static-comp-challenge-3](/assets/images/static-comp-challenge-3.jpg)
 
 ***
+
+Below is the rubric we used to use to grade this static comp
 
 ## HTML
 
