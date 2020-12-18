@@ -76,8 +76,8 @@ In addition to an API, you must choose a new technology (or set of technologies)
 
 As apps begin to grow and grow, state management via `this.state` and passing props down through dozens of components gets kind of tangled, messy, and confusing. There are some tools invented to alleviate that issue:
 
-* Redux
 * React's built-in Context API
+* Redux
 
 Companies with large apps are likely to be using a state management tool like the ones listed above. If you're interested in this, you should pick _one_ tool from the list and use it within your React app.
 
@@ -86,19 +86,16 @@ Companies with large apps are likely to be using a state management tool like th
 Writing bug-free code can be made easier by adding some very common workflow tooling. Here are just a few you will see on the job, and learning these will make you productive in your job sooner. If you're interested in this category, then you must complete all listed here:
 
 * Continuous Integration (using Travis CI or Github Actions)
-* git hooks (add pre-commit hook to check for linter error and forgotten `console.log`s and deny the commit until those are fixed)
 * Deployment to production with Heroku
-* Automatic deployment to Heroku when a PR is merged to `master` on GitHub
+* Automatic deployment to Heroku when a PR is merged to `main` on GitHub
 
 #### Testing
 
-For those who just can't get enough testing, there is another testing subject we haven't touched on: end-to-end testing. This is another type of testing that loads your app in a browser and clicks on buttons/types in forms automatically. The technology we would like to see used here is called Cypress, which is a very popular E2E testing tool.
+For those who just can't get enough testing, there is another testing subject we haven't touched on: end-to-end testing. This is another type of testing that loads your app in a browser and clicks on buttons/types in forms automatically. The technology we would like to see used here is called Cypress, which is a very popular E2E testing tool which is framework-agnostic!
+
+* Cypress
 
 If you choose this, then all of your large/important integration tests should be done with Cypress. Unit tests should still be done using React Testing Library.
-
-#### React Hooks
-
-React "hooks" is a way of writing React components that are all functional - no class components needed. Lifecycle methods and state are wrapped up into hooks. Choosing this means you will create your application in React, and all of your components should be functional. You should be utilizing hooks to manage your state and lifecycle needs.
 
 #### Another Framework
 
@@ -107,11 +104,17 @@ React might not be the framework you end up working with on the job, and employe
 * Vue
 * Svelte
 
-**Some things to note**: Instructors will not be able to give in-depth feedback because most instructors do not have a lot of experience in each of these frameworks, and you will still be required to test the application even though you are choosing a framework other than React. **You will not be able to use React Router with these frameworks, start with a single-page application and add a routing tool once you get moving in the new framework.**
+**Some things to note**: Instructors will not be able to give in-depth feedback because most instructors do not have a lot of experience in each of these frameworks, and you will _still be required to test the application_ even though you are choosing a framework other than React. **You will not be able to use React Router with these frameworks, start with a single-page application and add a routing tool once you get moving in the new framework.**
 
 #### User Authentication
 
-Some apps allow you to sign in using your Google, Facebook, or Twitter account - this is called user authentication. If you made this yourself, you would need a back-end server to store the user's data and it gets complicated, which is too much for this project. Use a third-party library like: PassportJS, Auth0, or Google's Firebase to enable a user to login to your application via Google, Facebook, and/or Twitter. The user should be able to stay logged in even after refreshing the page.
+Some apps allow you to sign in using your Google, Facebook, or Twitter account - this is called user authentication. If you made this yourself, **you will need a back-end server** to store the user's data and it gets complicated, which is too much for this project. Use a third-party library like: 
+
+* Google's Firebase
+* PassportJS
+* Auth0
+
+to enable a user to login to your application via Google, Facebook, and/or Twitter. The user should be able to stay logged in even after refreshing the page.
 
 #### TypeScript
 
@@ -121,7 +124,7 @@ You can add TypeScript in React! This is a big shift in writing JavaScript like 
 
 #### Building a Backend
 
-Not feeling excited about any of the free data APIs? Build your own! If you choose this category, you would be responsible for building your own server in Express, connecting it to a PostgreSQL database, and hosting it on Heroku. You would not use a separate data API (at least in your MVP).
+Not feeling excited about any of the free data APIs? Build your own! If you choose this category, you would be responsible for building your own server in Express, connecting it to a PostgreSQL database, and hosting it on Heroku. You would not be required to use a separate data API.
 
 #### Miscellaneous
 
@@ -131,6 +134,7 @@ If you choose from this category, then you must pick at least two of these optio
 * Localization and Internationalization (would recommend using a library for this like [react-i18next](https://github.com/i18next/react-i18next))
 * GSAP Animations or WebGL Animations
 * 100% passing accessibility testing using an accessibility analyzer like A11y or Axe
+* [Progressive Web Application](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction) (turns a regular web page into a [native app](https://www.techopedia.com/definition/27568/native-mobile-app) with access to device hardware, push notifications, offline use, etc)
 
 
 ## Deliverables
@@ -163,36 +167,117 @@ Share your app progress with the class for Show and Tell! Be prepared to tell th
 
 ## Rubric
 
-### Specification Adherence
-
-* 4: Project has a fully flushed out MVP, and a completed stretch goal (extra stretch tech, stretch feature, etc). Evalutator has no recommendations for design changes. 
-* 3: Project has a fully flushed out MVP. At least one external data API is used, and any stretch-technology dependent MVP features are completed. Users can interact with the data. Evaluator has minimal recommendations for design changes. 
-* 2: Project comes up short of proposed MVP. Stretch technology is not fully implemented.Evaluator has mutliple recommendations for design changes.
-* 1: User interaction is not present in the application. No external API is used. Developers did minial to no styling.
-
 ### Project Professionalism
 
-* 4 - Codebase has zero linter errors/warnings and README is well documented with images of different pages, setup, purpose of application, and group members. Evolution of the project is evident through consitent code review. Issues and project board cards are assigned to group members.
-* 3 - The codebase has less than 5 linter errors and README has been updated with all group members. Project utilized wireframes from the outset and updated them as changes were made. A project management tool was continuously used from the beginning of the project.  All git commits are atomic, made first to branches, and use descriptive and concise commit messages.
-* 2 -  README has been updated but is missing group members, setup, tech used, application images, or etc.  Wireframes are included and a project management tool was started, but are not utilized throughout the entire project. Project has more than 5 linter errors. Project team makes large infrequent git commits.
-* 1 - Either the README is incomplete, wireframes are not used, no project management system was utilized, or more than 10 linter errors are present. Git history does not show evolution of project with many large and inconsistent commits.
+* **4:**
+  - README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
+  - README links to all user GitHub profiles and any applicable repos/deployed sites
+  - Team uses a rebase workflow
+  - Git commits are atomic, with concise and precise descriptions of the change made
+  - PRs have full, consistent descriptions
+  - Team members do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging
+  - Evolution of the project (decisions made, etc) are fully and clearly documented in the git history and PRs
+  - When the project is run locally, the terminal shows no errors or warnings
+* **3:**
+  - README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
+  - README links to all user GitHub profiles and any applicable repos/deployed sites
+  - Git commits are atomic, with concise and precise descriptions of the change made
+  - PRs have full, consistent descriptions
+  - Team members do some code reviews of PRs, but are not always thorough or consistent
+  - Evolution of the project (decisions made, etc) is documented in the git history and PRs but is sometimes unclear
+  - When the project is run locally, the terminal shows no errors and fewer than 5 warnings
+* **2:**
+  - README concisely communicates the team's individual and joint learning goals and the evolution of the project, but does not use Markdown formatting to aid readability
+  - README links to all user GitHub profiles and any applicable repos/deployed sites
+  - Git commits are mostly atomic but sometimes document changesets that are too large
+  - PRs do not have thorough descriptions
+  - Team members mostly do not do code reviews on PRs
+  - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
+  - When the project is run locally, the terminal shows no errors and more than 5 warnings
+* **1:** 
+  - README does not document the team's individual and joint learning goals, the evolution of the project, and is poorly formatted (hindering readability)
+  - README does not include links to team member's GitHub profiles
+  - Git commits are not atomic and document changesets that are too large
+  - PRs do not have thorough descriptions, and no code reviews are conducted, merging bugs into the main branch
+  - When the project is run locally, the terminal shows errors and more than 5 warnings
 
 ### React  / Project Architecture
 
-* 4 - Functions including fetch calls have been refactored to be reusable for multiple queries.  Frontend data always matches the backend data.  Data fetched from API is run through a cleaning function (which lives in a separate file).  Implements excellent error handling if server is down or fetch fails.  This includes loading images as well as error messages on the frontend. All appropriate routes are visible on each page.
-* 3 - React architecture is clean and organized.  Logic is kept out of return statements.  There are some issues with the asynchronous JS where the frontend is not matching with the backend.  There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored. Data fetched from API is not cleaned before being set to state. A router is used for navigation.
-* 2 - Type checking functionality is complete.  There are no unnecessary props being passed down to child components.  However, there are still methods that are being created inside of functional components instead of being passed down through props from a class component.  File structure is modular but API calls have not been broken out into a separate file.  
-* 1 - Type checking (proptypes or otherwise) is substantially unused. Project shows little understanding of React and significant refactoring is required including but not limited to component structure, knowing when to use class vs functional components, mutation of props, or etc.  Unnecessary data is being passed down to child components through props. File structure is not modular.
+* **4:**
+  - A consistent, modular file structure is used
+  - A clear understanding of class components vs function components is demonstrated
+  - Only the data that a child component _needs_ is passed down as props
+  - Logic is kept out of `return` statements; `return` statements are as readable as possible, only communicating what will be displayed
+  - Fetch calls have been refactored to be reusable for multiple queries
+  - Frontend data (state) always matches the backend data
+  - Data fetched from API is run through a cleaning function (which is defined in a separate `utilities` file) before being stored in state
+  - Implements excellent error handling and accounts for all sad paths
+  - All components which receive props implement prop typechecking (proptypes or otherwise)
+* **3:** 
+  - A consistent, modular file structure is used
+  - A clear understanding of class components vs function components is demonstrated
+  - Only the data that a child component _needs_ is passed down as props
+  - Logic is kept out of return statements; return statements are as readable as possible, only communicating what will be displayed
+  - There are some issues with the asynchronous JS where the frontend is not matching with the backend
+  - There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
+  - Data fetched from API is not cleaned before being set to state
+  - All components which receive props implement prop typechecking (proptypes or otherwise)
+* **2:** 
+  - The file structure is inconsistent and/or not modular
+  - There is some confusion about when to use a class or function component, but it does not strongly hinder functionality
+  - Unnecessary data is passed down to child components as props
+  - `return` statements contain logic that should be refactored out for the sake of readability and performance
+  - There are methods that are being created inside of functional components that should be passed down through props from a parent class component
+  - API calls have not been broken out into their own file
+  - Most components which receive props implement prop typechecking (proptypes or otherwise)
+* **1:**
+  - Project shows little understanding of React and significant refactoring is required, including but not limited to:
+    - component structure is inconsistent or buggy
+    - a class component is used when a function component is preferable, and/or vice versa
+    - props are being passed or accessed incorrectly
+    - props are being mutated
+    - state is directly mutated
+  - File structure is not modular.
+  - Prop typechecking (proptypes or otherwise) is substantially underused
 
 ### Stretch Technology 
-* 4: Project demonstrate deep underatanding and sophisticated implementation of chose stretch technology, **and** implements a second new piece of tech. Group members can speak to best practices of chosen technologies. 
-* 3: Project demonstrates deep understanding of chosen stretch technology. Group members can think critically and speak to understood best practices of stretch technology. 
-* 2: Project demonstrates partial implementation of chosen stretch technology. Any stretch-tech-dependent features are functional, despite the MVP not being met.
-* 1 Project demonstrates no implementation of stretch tech, OR stretch-dependent features have major bugs. 
+
+* **4:**
+  - Project implements the chosen stretch tech with a sophisitication that indicates a deep understanding
+  - Project implements a second new tech with equal sophistication
+  - Group members can all individually speak about the chosen techs' best practices
+  - Group members have reflected on the process of learning these technologies and can speak clearly about their learning processes
+* **3:**
+  - Project implements the chosen stretch tech with a sophisitication that indicates a deep understanding
+  - Group members can all individually speak about the stretch tech's best practices
+  - Group members have reflected on the process of learning these technologies and can speak clearly about their learning processes
+* **2:**
+  - Project partially implements the chosen stretch tech
+  - Any features that depend on the stretch technology are functional, even if the MVP is not reached
+  - Group members can all individually speak about the overarching concepts of the stretch tech
+  - Group members have reflected on the process of learning these technologies and can speak clearly about their learning processes
+* **1:**
+  - Project does not successfully implement the chosen stretch tech, OR
+  - Project functionality that depends on the stretch technology have major bugs
 
 ### Testing
 
-* 4 - All async functionality is mocked. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently. Evaluator has no recommendations for testing.
-* 3 - All Redux functionality (if using redux) is tested (actions and reducers), all components are unit tested in units and integration, and a valid attempt was made to mock async functionality.
-* 2 - Nearly all unit tests are in place. React components are well tested with a diverse set of tests including but not limited to unit testing display of the component, event simulation tests, and unit tests for functions passed as props. There are tests in place for actions and reducers. No attempt to test async functionality was made.
-* 1 - A valid attempt to test this application was made, but there are obvious gaps with missing unit tests for Redux and React.  
+* **4:** 
+  - Team has successfully achieved 90%+ test coverage of all components
+  - All async functionality is mocked
+  - Async tests cover happy & sad paths
+  - All unit tests are in place, including conditional rendering
+  - All integration tests are in place, tested from the correct component
+* **3:** 
+  - All unit tests are in place & passing, including any conditional rendering
+  - All integration tests are in place, tested from the correct component
+  - Happy path async functionality is tested
+* **2:**
+  - Most unit tests are in place & passing
+  - A valid attempt is made at integration testing; some integration tests may be in the wrong place (aka, attempted to be done by a component that cannot actually "see"/access all the necessary functionality/data)
+  - A valid attempt is made at async testing; sad paths might not be tested
+* **1:** 
+  - Many unit tests are missing/failing
+  - Little or no attempt is made at integration testing
+  - Little or no attempt is made at async testing
+  - There are obvious, large gaps in testing app functionality
