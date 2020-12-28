@@ -34,7 +34,7 @@ Make sure you're utilizing git best practices (branches) and commiting frequentl
 ### Day One Deliverables
 - Read the spec sheet closely. 
 - Send the link to your forked repo to your Project Manager
-- Fill out [this reflection form](https://docs.google.com/forms/d/e/1FAIpQLSdMyfyHn83EMUqzFtn1M0qE5iac350_Oh3-vNNnexSvgc8l5g/viewform)
+- Fill out [this planning form](https://docs.google.com/forms/d/e/1FAIpQLSdMyfyHn83EMUqzFtn1M0qE5iac350_Oh3-vNNnexSvgc8l5g/viewform)
 
 ### Iteration 0: Build Out Comp
 - Images are below

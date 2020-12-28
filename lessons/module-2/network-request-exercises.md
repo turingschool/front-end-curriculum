@@ -4,9 +4,10 @@ length: 180 minutes
 tags: javascript, network requests, fetch
 ---
 
+<section class="call-to-action">
 ### Setup
 
-Clone down the [network request exercises](https://github.com/turingschool-examples/network-request-exercises) repo.
+Clone down the [network request exercises](https://github.com/turingschool-examples/network-request-exercises){:target='blank'} repo.
 
 **CoWorkers Api**
 ```
@@ -15,10 +16,11 @@ cd network-request-exercises
 npm i
 npm start
 ```
+</section>
 
 ### Practicing Our Network Requests
 
-We are going to be focusing on just writing network requests today working with `GET`, `POST`, and `DELETE`.  A great tool for testing network requests is [Postman](https://www.getpostman.com/downloads/).  Instead of spending time trying to write & debug your code, you can test your post requests and see what you are getting back very quickly.  It's a powerful tool to learn about an api very quickly so you know exactly what you need when writing your `fetch` calls later.
+We are going to be focusing on just writing network requests today working with `GET`, `POST`, and `DELETE`.  A great tool for testing network requests is [Postman](https://www.getpostman.com/downloads/){:target='blank'}.  Instead of spending time trying to write & debug your code, you can test your post requests and see what you are getting back very quickly.  It's a powerful tool to learn about an api very quickly so you know exactly what you need when writing your `fetch` calls later.
 
 ### Passing the Options Argument
 
@@ -108,5 +110,5 @@ Review the API documentation below and work on making `GET`, `POST`, and `DELETE
 <section class="call-to-action">
 ### Next Steps
 
-Now that you are more familiar with your network requests and what data you get back with each endpoint, create a new project using `create-react-app` and practice your fetch requests with either users, sport teams, or animals.  Build out the frontend and incorporate each of the endpoints in an IdeaBox layout.
+Now that you are more familiar with your network requests and what data you get back with each endpoint, create a new project and practice your fetch requests with either users, sport teams, or animals.  Build out the frontend to display the data and then experiment with adding and removing the data with `POST` and `DELETE`!
 </section>
