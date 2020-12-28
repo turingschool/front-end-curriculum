@@ -13,7 +13,7 @@ Make sure you are part of the following channels:
 Create a copy of [this gist](https://gist.github.com/kaylaewood/0fc2aa9c40d6151c67a81c1483667e90).
 
 ## Gear Ups and Professional Development
-Weeks 1 and 5 of Gear Up lessons are optional. All PD sessions are optional. You will have a new set of prompts for your PD Journal. You can find those [here](********).
+Weeks 1 and 5 of Gear Up lessons are optional. All PD sessions (inlcuding the Giving & Receiving Feedback lesson) are optional. You will have a new set of prompts for your PD Journal. You can find those [here](********).
 
 ## Repeater Fam Time
 In lieu of PD, there is `Repeater Fam`  time on the calendar. This is time for repeaters to use as they wish. You can spend that time on a zoom call reflecting on your week. You can spend it working together on mythical creatures. You can use it to play games and get to know each other better. It's your time, do what you want with it! Instructors will not join any of these calls.
@@ -30,9 +30,9 @@ The following lessons are from the first two weeks of mod 1. We want you to feel
 * JS: Event Listeners
 * JS: Classes
 * JS: Unit Testing Classes
-* HTML Fundamentals
 * Dev Skills: Git Workflow
-* Giving & Receiving Feedback  
+* HTML Fundamentals
+* CSS Fundamentals
 
 ## Extra Practice
 Here are some ways you can get in extra practice:
