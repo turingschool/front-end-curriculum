@@ -19,12 +19,12 @@ You'll be building an application that allows a user to set goals for their heal
 - Complete a [DTR](https://github.com/turingschool/career-development-curriculum/blob/master/module_one/dtr_guidelines_memo.md).
 - One person should create a new directory called `intention-timer`.You'll need to initialize git in your local repo. You can brush up on that process with [this article](https://guides.github.com/introduction/git-handbook/).
 
-It should contain:
-- `index.html`
-- `styles.css`
-- `activity.js`
-- `main.js`
-- `assets` (this is a directory that will hold your icon files)
+  It should contain:
+  - `index.html`
+  - `styles.css`
+  - `Activity.js`
+  - `main.js`
+  - `assets` (this is a directory that will hold your icon files)
 
 Make sure both teammates and your assigned instructor are all added as collaborators on the GitHub repository.
 
