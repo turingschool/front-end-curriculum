@@ -2,23 +2,22 @@
 title: Intention Timer - Group
 ---
 
-## Learning Goals
-
-* Develop your skills in writing:
-  * semantic HTML
-  * clean & organized CSS styles
-  * DRY and organized JavaScript
-* Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
-* Understand event bubbling and use event delegation on dynamic elements
-* Persist data across page refreshes by using local storage
-
 ## Overview
 
 You'll be building an application that allows a user to set goals for their health and productivity, tied to an amount of time. Users will select an activity category, set the amount of time they want to spend on that activity, and start the timer. The app will log that activity to keep track of how the user has been spending their time.
 
-## Set Up
+## Learning Goals
 
-Create a new directory called `intention-timer`.You'll need to initialize git in your local repo. You can brush up on that process with [this article](https://guides.github.com/introduction/git-handbook/).
+* Gain an understanding of how to write clean HTML and CSS to match a provided comp
+* Understand how to implement client-side data persistence using `localStorage` and JSON
+* Understand what it looks like to have a separate data model (using a class) and DOM model
+* Incorporate & iterate over arrays in order to filter what is being displayed
+* Craft code with clean style, using small functions that show trends toward DRYness and SRP
+
+## Day One Deliverables
+
+- Complete a [DTR](https://github.com/turingschool/career-development-curriculum/blob/master/module_one/dtr_guidelines_memo.md).
+- One person should create a new directory called `intention-timer`.You'll need to initialize git in your local repo. You can brush up on that process with [this article](https://guides.github.com/introduction/git-handbook/).
 
 It should contain:
 - `index.html`
@@ -28,6 +27,9 @@ It should contain:
 - `assets` (this is a directory that will hold your icon files)
 
 Make sure both teammates and your assigned instructor are all added as collaborators on the GitHub repository.
+
+- Deploy your application to GitHub Pages.
+- In a Slack DM to your assigned instructor, drop the repo link, DTR and GitHub pages link.
 
 ## Progression
 
@@ -163,81 +165,72 @@ Scores land in a range between 1 and 4. Below is a breakdown of what those numbe
 To earn a given score, an application must meet the requirements listed in that score explanation and all scores lower.
 
 ### Professionalism
-
-* **4:** 
-  - Team uses a PR template
+* **4:**
+  - Team uses a PR template for every pull request
   - Team habitually conducts thorough code reviews in the GitHub GUI to document the progress of the application
   - Team has sought out code reviews from one or more mentors
-  - README is well formatted and descriptive with screenshots or gifs of the application in action.
-* **3:** 
+* **3:**
   - Commits are atomic and frequent, effectively documenting the evolution/progression of the application
-  - Commit messages are consistent, descriptive, and concise
+  - Commit messages are consistent, descriptive, and concise and begin with a verb and capital letter
   - Team uses PRs to screen/verify code before adding it to the main branch
   - There is no more than a 10% disparity in project contributions between teammates
-  - README is well formatted and gives good context about the project, including links to both contributors' GitHub profiles, and to the deployed GitHub Pages site
-* **2:** 
+  - README is well formatted and gives good context about the project, including links to both contributors’ GitHub profiles, and to the deployed GitHub Pages site
+* **2:**
   - Commits are large and do not effectively communicate the progression of the application
   - Team uses PRs but do not review code before merging into the main branch
-  - All teammates can speak to the purpose and functionality of any/every line of code
   - There is a 20% disparity in project contributions between teammates
   - README is brief and does not provide context for the project
-* **1:** 
-  - Teammates do not understand the purpose and functionality of every line of code
+* **1:**
   - Some commits are pushed directly to the main branch
   - PRs are used inconsistently
   - There is a 50% disparity in project contributions between teammates
-  - There is no README, or README is insufficient
+  - There is no README, or the “boilerplate” README is left in the project.
 
 ### Comp Recreation
 
 * **4:** 
-  - Additional elements and animations  have been added that match the visuals established in the comps.
+  - Additional elements and animations have been added that match the visuals established in the comps, and/or design is responsive across small, medium and large breakpoints.
 * **3:** 
-  - Application implements **all** major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment,  etc).
-  - If additional elements were added, they generally match the visuals established in the comps, but may be slightly awkward. 
+  - Application implements all major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment, etc).
+  - If additional elements were added, they generally match the visuals established in the comps, but may be slightly awkward.
   - Careful attention was given to the little details like spacing, alignment, and hover states.
 * **2:** 
-  - Application implements most major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment,  etc.).
-* **1:** 
-  - Crafts markup according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
+  - Application implements most major comp details accurately and correctly (colors, fonts, icons, spacing, alignment, etc.).
+* **1:**
+  - Application has a significant mismatch when compared to the provided comp. 
 
 ### HTML && CSS - Style and Implementation
 * **4:**
-  * Application adds to the requirements of the Proficient category by using [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes
-  * Application fully implements HTML that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/aria-accessibility.html).
-
-
+  - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
+  - Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using Chrome DevTools [Lighthouse](https://developers.google.com/web/tools/lighthouse) audit tool, and a score of 100% is required. 
 * **3:**
-  * Application utilizes good naming conventions for HTML classes and IDs
-  * CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles
-
+  - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly. 
+  - CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles. There is evidence of reused styles in the application. 
 * **2:**
-  * Application adds to the above with HTML that incorporates semantic HTML elements whenever possible
-  * Application has a simple, clean HTML structure
-  * Application utilizes organizational conventions for the whole CSS stylesheet
-
+  - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). Semantic elements like `<button>`, `<li>`, etc. are used instead of `<div>`. If `<div>` elements are used, they are only for styling purposes.
+  - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together. 
 * **1:**
-  * Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
-  * Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html) 
+  - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
+  - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
 
 ### JavaScript - Style and Implementation
 
 * **4:**
+  * All functions strictly adhere to the Single Responsibility Principle (SRP)
+  * There are no nested if/else statements
   * Functions and code are well-refactored and show developer empathy
   * There are no global variables aside from query selectors, `pastActivities` and `currentActivity`.
-  * Uses logical operators instead of if/else statements wherever applicable
-  * There are no nested if/else statements
 * **3:**
-  * Application uses event delegation correctly on dynamic elements
-  * Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with a focus on [SRP](http://knnthvu.weebly.com/srp-and-dry.html). No function is more than 10 lines (this does not include functions that insert html). Remember that you shouldn't sacrifice the legibility of your code to shorten the number of lines.
-  * Application demonstrates full separation of data-model and presentational logic (there is no DOM logic in the `Activity` class)
-  * Application makes use of arguments and parameters to make functions more dynamic/reusable
-  * Application correctly uses `localStorage` to persist data
+  * Application uses the Data Model exclusively to track changes to the ideas,
+    and display of ideas happens after the Data Model has been updated
+  * There are no nested for loops
+  * Functions are DRY and observe SRP - and most are around 10 lines of code or less
+  * There are no global variables aside from query selectors and an array for your idea
+  * Uses event delegation correctly on dynamic elements for deleting, and starring an idea
+  * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
 * **2:**
-  * There are no extraneous or unnecessary parameters in functions
-  * Application uses function declarations over anonymous functions in event listeners
-  * Application uses appropriate number of if/else statements to handle multiple paths of logic/error handling
-  * Application fails to fully separate data-model and presentational logic (DOM) - example: there is DOM logic in the `Activity` class
+  * Data model is built to the specifications detailed in the spec sheet and is fully separated from the DOM. Example: There should not be any DOM manipulation in class files. - example: there is no DOM logic in the `Activity` class.
+  * All console logs, debuggers and comments are removed from code before submitting.
 * **1:** 
   * Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 
@@ -247,13 +240,12 @@ To earn a given score, an application must meet the requirements listed in that 
 Functionality is the least important piece of the rubric. It's included because it is another benchmark to gauge proficiency (for example, we can’t grade your JS if there isn’t enough of it written!). However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
 
 This means, we DO NOT want to see:
-- Code that completes iterations but is sloppy
-- One or both team members do not understand every single line of code
-- One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
+* Code that completes iterations but is sloppy
+* One or both team members do not understand every single line of code
+* One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
+* A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
 
-A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
-
-* **4:** Application completes an extension
-* **3:** Application meets all of the expectations of Iteration 5.
-* **2:** Application meets all of the expectations of Iteration 4.
-* **1:** Application meets all of the expectations of Iteration 3.
+* **4:** Application completes an extension without bugs.
+* **3:** Application meets all of the expectations of Iteration 5 without bugs..
+* **2:** Application meets all of the expectations of Iteration 4 without bugs..
+* **1:** Application meets all of the expectations of Iteration 3 without bugs..
