@@ -1,10 +1,11 @@
 ---
-title: Cypress Testing
+title: Intro to Cypress Testing
 length: 3 hours
 tags: Cypress, testing
 module: 3
 ---
 
+<section class="call-to-action">
 ### Prework:
 In this lesson, we're going to be working with a new codebase and testing multiple scenarios to explore the power of end-to-end tests and the tools **Cypress** provides.  To get the most out of this lesson, please clone down the following the repos:
 
@@ -24,19 +25,20 @@ npm i
 npm start
 ```
 
-Once you have application running, experiment with the application and then examine the FE code to see how the application runs.
+Once you have application running, experiment with the application and then examine the FE code to see how the application runs.  It's not important to understand every line of code, but take note of the various user flows and how the various API calls work.
+</section>
 
 ## Learning Goals:
 * Understand what end-to-end tests are
 * Become familiar with what Cypress is and the tools available to it
 * Practice testing a React application with Cypress including:
-  * Testing a user's flow including filling out forms, adding/removing content, & switching routes
-  * Testing asynchronous fetch calls
+  * Filling out forms and switching of routes
+  * Happy and sad path user flows that require network requests
 
 ## What are end-to-end tests?
 `End-to-end` tests add another layer of confidence to your testing by running your entire application including the client, API, database, and other services.  This helps boost a developer's confidence with their app ensuring that the **user flow** works correctly.  Although they can be expensive in the initial setup, they test how a user would interact with an application.
 
-This is the final layer that should be added in addition to `unit` and `integration` tests.  While these tests focus more on the code written and help pinpoint potential errors for the developer, `end-to-end` tests are useful for the end user.  Think about the various happy and sad path user flows your last project encompassed.  This could include displaying a list of movies or adding a movie to their favorites.  Maybe the route changes if a user clicks on a button.  What if the movie has already been favorited?  What if that route doesn't exist?
+This is the final layer that should be added in addition to `unit` and `integration` tests.  While these tests focus more on the code written and help pinpoint potential errors for the developer, `end-to-end` tests are useful for the end user.  Think about the various happy and sad path user flows your last project encompassed.  This could include the *happy paths* of displaying a list of movies or adding a movie to their favorites.  Maybe the route changes if a user clicks on a button.  There are also the *sad paths* to those user flows.  What if the movie has already been favorited?  What if a route doesn't exist?
 
 ##  What is Cypress?
 
@@ -59,7 +61,7 @@ Cypress is an automated testing tool used for the functional aspects of web appl
 
 Although often compared to Selenium, another common automated testing framework that allows you to test your application across multiple browsers, Cypress has some distinct differences that makes it stand out. Below is a list of some key differences:
 
-**Key Differences**
+#### Key Differences
 | | **Cypress** | **Selenium** |
 | Languages Supported | JavaScript | Many popular languages like Java, Python, Ruby, and JavaScript. 
 | Browsers Supported | Chrome, Edge, Firefox(beta) | Chrome, IE, Safari, Edge, Firefox, Opera |
@@ -89,6 +91,7 @@ Let's experiment ourselves and see how great Cypress is firsthand.  Using the ap
 ```
 
 * Add the following to your `package.json`
+
 ```js
 {
   "scripts": {
@@ -104,7 +107,7 @@ Let's experiment ourselves and see how great Cypress is firsthand.  Using the ap
 
 You might be overwhelmed by the number of directories & files added.  For now, let's focus on the newly added `integration` directory living inside of the `Cypress` directory.  You may delete the `examples` directory since these are just examples of the various ways you can test.
 
-Let's a new file to the `integration` directory that will represent our application called `feedback_loop_spec.js`.
+Let's add a new file to the `integration` directory that will represent our application called `feedback_loop_spec.js`.
 
 Inside we'll write a dummy test to make sure things are hooked up correctly.
 
@@ -137,6 +140,7 @@ This is great and all but let's think about what we actually need to test.  Reme
 * As a user, I can select different inputs and fill them out.
 * As a user, I will receive an error message when I click the Submit button without filling out both inputs
 * As a user, I can fill out the `email` and `password` inputs and click the Submit button and be directed to a different URL.  **Happy Path**
+* As a user, I will receive an error message that my email and password don't match if I submit incorrect `email` and `password` inputs.  **Sad Path**
 </section>
 
 <section class="call-to-action">
@@ -144,16 +148,17 @@ This is great and all but let's think about what we actually need to test.  Reme
 
 **User Story:** As a user, I should be able to visit `http://localhost:3000` and see a title & form displayed.
 
-* Write a test that asserts that a user can visit `http://localhost:3000` using the [visit command](https://docs.cypress.io/api/commands/visit.html#Syntax).
-* In the same `it` block, check to make sure that our site can [get](https://docs.cypress.io/api/commands/get.html#Syntax) a form and [contains](https://docs.cypress.io/api/commands/contains.html) the correct text on the page!
+* Write a test that asserts that a user can visit `http://localhost:3000` using the [visit](https://docs.cypress.io/api/commands/visit.html#Syntax) command.
+* In the same `it` block, check to make sure that our site can [get](https://docs.cypress.io/api/commands/get.html#Syntax) a form and that it [contains](https://docs.cypress.io/api/commands/contains.html) the correct text on the page!
 * Take note of any errors that you get in the `Test Body` of the **Command Log**.
-</section>
 
 <section class="note">
 ### Note
 
 You might notice that your test will fail trying to load your site.  This is because Cypress is actually trying to visit your page, but your server is not running.  Make sure your React server is running in a separate tab on your terminal!
 </section>
+</section>
+
 
 <section class="answer">
 ### Possible Solution  
@@ -161,8 +166,8 @@ You might notice that your test will fail trying to load your site.  This is bec
 ```js
 describe('Feedback Loop', () => {
   it('Should be able to visit the page and render the correct elements', () => {
-    cy.visit('http://localhost:3000');
-    cy.contains('Feedback Loop').get('form').contains('Please Sign In');
+    cy.visit('http://localhost:3000')
+      .contains('Feedback Loop').get('form').contains('Please Sign In');
   });
 });
 ```
@@ -223,19 +228,19 @@ In the test runner, you can actually hit `command + option + i` to open up your 
 
 **User Story:** As a user, I can fill out the `email` and `password` inputs and click the Submit button and be directed to a different URL.
 
-* This builds off of what we have done previously, however we now want to test that the we log in successful and visit the new url `http://localhost:3000/dashboard`.  It's okay if the page doesn't display all of the data on the next page, just assert that the url has updated.
+* This builds off of what we have done previously, however we now want to test that the we log in successfully and visit the new url `http://localhost:3000/dashboard`.  It's okay if the page doesn't display all of the data on the next page, just assert that the url has updated.
 
 <section class="note">
 ### Note
 
-Upon filling out the form and submitting, you will likely run into a new error, `Email and password do not match.  Please try again.`  This is because it is trying to access our API.  In order to write a *true* end-to-end test, you could startup the server driving the application the same way a real user would.  These are important around testing your application's *critical paths* especially around **happy paths**.  
+Upon filling out the form and submitting, you will likely run into a new error, `Failed to fetch`.  This is because it is trying to access our API.  In order to write a *true* end-to-end test, you could startup the server driving the application the same way a real user would.  These are important around testing your application's *critical paths* especially around **happy paths**.  
 
 There are some downsides however:
 * Because this is sending real responses, you normally would need to *seed a database* separate from your actual user's info.  (We don't want to be making accidental changes to our user's information and settings.)
 * This can slow the performance of your tests as a result of doing real network requests.
 * It is also more difficult to test edge cases.
 
-For now, experiment with [stubbing](https://docs.cypress.io/guides/guides/network-requests.html#Stub-Responses) and [intercept](https://docs.cypress.io/api/commands/intercept.html#Comparison-to-cy-route) the response.  This is much more common and allows you to control the response body, status, and headers while also being much more performant.
+For now, let's experiment with [stubbing](https://docs.cypress.io/guides/guides/network-requests.html#Stub-Responses) and [intercepting](https://docs.cypress.io/api/commands/intercept.html#Comparison-to-cy-route) the response.  Although both types of tests are important, stubbing is much more common and allows you to control the response body, status, and headers while also making your tests more performant.
 </section>
 </section>
 
@@ -271,15 +276,15 @@ Note that we are just intercepting the `POST` request for logging in and mocking
 <section class="note">
 ### Note
 
-Many of the projects you will be working on often require that you load a significant amount of data.  In the above example, we would need to load a user's teammates.  To help with readability of our tests, it would be good to use [fixtures](https://docs.cypress.io/api/commands/fixture.html#Syntax) to load a fixed set of data from another file. 
+Many of the projects you will be working on often require that you load a significant amount of data.  To take the above example to the next step, we would need to load a user's teammates.  To help with readability of our tests, it would be good to use a [fixture](https://docs.cypress.io/api/commands/fixture.html#Syntax) to load a fixed set of data from another file. 
 </section>
 
 <section class="call-to-action">
-### Testing the Sad Path to Network Requests
+### Testing the Sad Path to a Network Request
 
 **User Story:** As a user, I will receive an error message that my email and password don't match if I submit incorrect `email` and `password` inputs.
 
-* Take what you learned from the exercise to **stub** a `401` response if a user fails to login.
+* Take what you learned from the exercise to **stub** a `401` response if a user fails to login.  Assert that a new error message is displayed.
 </section>
 
 <section class="answer">
@@ -306,19 +311,23 @@ Many of the projects you will be working on often require that you load a signif
   });
 ```
 
-Once again we have intercepted the `POST` request, but this time changed the statusCode to be a 401.  You can follow the functionality in the `signInUser` method of `LoginForm` to confirm.  
+Once again we have intercepted the `POST` request, but this time changed the statusCode to be a 401 along with a body including an error message.  You can follow the functionality in the `signInUser` method of `LoginForm` to confirm.  
 </section>
 
 <section class="note">
 ### Note
 
-When checking the values of an input, we can use `.should('have.value', [some value])`.  With urls, we can use `.should('include', [some url])` and lastly, for other DOM elements we can use `.should('contain', [some text]')`.
+Take note of the different arguments passed through `should` when checking the values of an element on the page.  
+
+* **Input:** `.should('have.value', [some value])`. 
+* **URL:** `.should('include', [some url])` 
+* **Other DOM elements:** `.should('contain', [some text]')`.
 </section>
 
 <section class="call-to-action">
 ### Just the beginning
 
-This is just the beginning to testing with Cypress, but it gives enough context to exploring testing more functionality within this application.  A combination of using the [documentation](https://docs.cypress.io/api/api/table-of-contents.html) and googling of specific questions will help you to become more and more proficient in testing.  With time, you can even drive your implementation through TDD.
+This is just the beginning to testing with Cypress, but hopefully it gives you more context to explore more of the functionality within this application.  The [documentation](https://docs.cypress.io/api/api/table-of-contents.html) Cypress offers is a great place to start as you become more and more proficient in testing.  With time, you can even drive your implementation through TDD with Cypress.
 </section>
 
 <section class="checks-for-understanding">
