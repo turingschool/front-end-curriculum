@@ -17,7 +17,7 @@ npm i
 npm start
 ```
 
-**[Api](https://github.com/turingschool-examples/feedback-loop-api){:target='blank'}**
+**[API](https://github.com/turingschool-examples/feedback-loop-api){:target='blank'}**
 ```bash
 git clone https://github.com/turingschool-examples/feedback-loop-api.git
 cd feedback-loop-api
@@ -45,7 +45,9 @@ This is the final layer that should be added in addition to `unit` and `integrat
 Cypress is an automated testing tool used for the functional aspects of web applications.  It's actually built on *Node.js* and allows you to write tests using JavaScript.  It allows you to test a number of aspects of your application including `integration` and `end-to-end` tests.  It's a bit different from how you may have tested in the past because it actually operates directly in the browser. 
 
 <section class="answer">
-### Here are a list of major features pulled from the [documentation](https://docs.cypress.io/guides/overview/why-cypress.html#Features) 
+### Major Features of Cypress
+
+Here are a list of major features pulled from the [documentation](https://docs.cypress.io/guides/overview/why-cypress.html#Features){:target='blank'}
 
 * **Time Travel:** Cypress takes snapshots as your tests run. Hover over commands in the Command Log to see exactly what happened at each step.
 * **Debuggability:** Stop guessing why your tests are failing. Debug directly from familiar tools like Developer Tools. Our readable errors and stack traces make debugging lightning fast.
@@ -63,7 +65,7 @@ Although often compared to Selenium, another common automated testing framework 
 
 #### Key Differences
 | | **Cypress** | **Selenium** |
-| Languages Supported | JavaScript | Many popular languages like Java, Python, Ruby, and JavaScript. 
+| Languages Supported | JavaScript | Many popular languages like Java, Python, Ruby, and JavaScript. |
 | Browsers Supported | Chrome, Edge, Firefox(beta) | Chrome, IE, Safari, Edge, Firefox, Opera |
 | Frameworks Supported | Supports only Mocha JS | Supports multiple frameworks based on what language is being used (i.e. JUnit for Java, Cucumber for JavaScript, etc.) |
 | Setup Complexity | Setup is simple with no additional downloads required | More complex due to the necessity of download browser-specific drivers |
@@ -119,7 +121,7 @@ describe('Feedback Loop', () => {
 });
 ```
 
-Move over to the [Cypress Test Runner](https://docs.cypress.io/guides/core-concepts/test-runner.html#Overview) and click on the `feedback_loo-spec.js` and prepare to be amazed!  Did it pass?  Look at the [Command Log](https://docs.cypress.io/guides/core-concepts/test-runner.html#Command-Log) and notice the assertion being made.  Then try changing `true` to `false` and see if it fails.
+Move over to the [Cypress Test Runner](https://docs.cypress.io/guides/core-concepts/test-runner.html#Overview){:target='blank'} and click on the `feedback_loo-spec.js` and prepare to be amazed!  Did it pass?  Look at the [Command Log](https://docs.cypress.io/guides/core-concepts/test-runner.html#Command-Log){:target='blank'} and notice the assertion being made.  Then try changing `true` to `false` and see if it fails.
 
 <section class="note">
 ### Note the Similarities
@@ -149,7 +151,7 @@ This is great and all but let's think about what we actually need to test.  Reme
 **User Story:** As a user, I should be able to visit `http://localhost:3000` and see a title & form displayed.
 
 * Write a test that asserts that a user can visit `http://localhost:3000` using the [visit](https://docs.cypress.io/api/commands/visit.html#Syntax) command.
-* In the same `it` block, check to make sure that our site can [get](https://docs.cypress.io/api/commands/get.html#Syntax) a form and that it [contains](https://docs.cypress.io/api/commands/contains.html) the correct text on the page!
+* In the same `it` block, check to make sure that our site can [get](https://docs.cypress.io/api/commands/get.html#Syntax){:target='blank'} a form and that it [contains](https://docs.cypress.io/api/commands/contains.html){:target='blank'} the correct text on the page!
 * Take note of any errors that you get in the `Test Body` of the **Command Log**.
 
 <section class="note">
@@ -186,15 +188,15 @@ Before starting our next test, let's add in the following block:
   });
 ```
 
-This helps to ensure that we start anew before each test.  A [best practice](https://docs.cypress.io/guides/references/best-practices.html#Having-tests-rely-on-the-state-of-previous-tests) is that tests should always be able to run independently from one another and *still pass*.
+This helps to ensure that we start anew before each test.  A [best practice](https://docs.cypress.io/guides/references/best-practices.html#Having-tests-rely-on-the-state-of-previous-tests){:target='blank'} is that tests should always be able to run independently from one another and *still pass*.
 
 **User Story:** As a user, I can select different inputs and fill them out.
 
-* Experiment with [type](https://docs.cypress.io/api/commands/type.html) and [should](https://docs.cypress.io/api/commands/should.html#Syntax) as you write a test that selects the `Email` and `Password` inputs and fills them with the corresponding values, `leta@turing.io` and `keane20`.  Assert that they have the correct values.
+* Experiment with [type](https://docs.cypress.io/api/commands/type.html){:target='blank'} and [should](https://docs.cypress.io/api/commands/should.html#Syntax){:target='blank'} as you write a test that selects the `Email` and `Password` inputs and fills them with the corresponding values, `leta@turing.io` and `keane20`.  Assert that they have the correct values.
 
 **User Story:** As a user, I will receive an error message when I click the Submit button without filling out both inputs. 
 
-* Write another test that asserts an error message is displayed when the Submit button is [clicked](https://docs.cypress.io/api/commands/click.html) without filling both inputs.
+* Write another test that asserts an error message is displayed when the Submit button is [clicked](https://docs.cypress.io/api/commands/click.html){:target='blank'} without filling both inputs.
 </section>
 
 <section class="note">
@@ -240,7 +242,7 @@ There are some downsides however:
 * This can slow the performance of your tests as a result of doing real network requests.
 * It is also more difficult to test edge cases.
 
-For now, let's experiment with [stubbing](https://docs.cypress.io/guides/guides/network-requests.html#Stub-Responses) and [intercepting](https://docs.cypress.io/api/commands/intercept.html#Comparison-to-cy-route) the response.  Although both types of tests are important, stubbing is much more common and allows you to control the response body, status, and headers while also making your tests more performant.
+For now, let's experiment with [stubbing](https://docs.cypress.io/guides/guides/network-requests.html#Stub-Responses){:target='blank'} and [intercepting](https://docs.cypress.io/api/commands/intercept.html#Comparison-to-cy-route){:target='blank'} the response.  Although both types of tests are important, stubbing is much more common and allows you to control the response body, status, and headers while also making your tests more performant.
 </section>
 </section>
 
@@ -276,7 +278,7 @@ Note that we are just intercepting the `POST` request for logging in and mocking
 <section class="note">
 ### Note
 
-Many of the projects you will be working on often require that you load a significant amount of data.  To take the above example to the next step, we would need to load a user's teammates.  To help with readability of our tests, it would be good to use a [fixture](https://docs.cypress.io/api/commands/fixture.html#Syntax) to load a fixed set of data from another file. 
+Many of the projects you will be working on often require that you load a significant amount of data.  To take the above example to the next step, we would need to load a user's teammates.  To help with readability of our tests, it would be good to use a [fixture](https://docs.cypress.io/api/commands/fixture.html#Syntax){:target='blank'} to load a fixed set of data from another file. 
 </section>
 
 <section class="call-to-action">
@@ -327,7 +329,7 @@ Take note of the different arguments passed through `should` when checking the v
 <section class="call-to-action">
 ### Just the beginning
 
-This is just the beginning to testing with Cypress, but hopefully it gives you more context to explore more of the functionality within this application.  The [documentation](https://docs.cypress.io/api/api/table-of-contents.html) Cypress offers is a great place to start as you become more and more proficient in testing.  With time, you can even drive your implementation through TDD with Cypress.
+This is just the beginning to testing with Cypress, but hopefully it gives you more context to explore more of the functionality within this application.  The [documentation](https://docs.cypress.io/api/api/table-of-contents.html){:target='blank'} Cypress offers is a great place to start as you become more and more proficient in testing.  With time, you can even drive your implementation through TDD with Cypress.
 </section>
 
 <section class="checks-for-understanding">
