@@ -6,7 +6,7 @@ Welcome! Please read this entire page completely. Reach out to your instructors 
 
 ## Slack Channels
 Make sure you are part of the following channels:
-* **#mod1_repeater_fam**: The main channel for mod1 repeaters. Instructors will post announcements here!
+* **#mod1_repeater_fam**: The main channel for mod1 repeaters. Instructors will post announcements here so it's important to check this channel daily.
 * **#the_repeaters**: A community of Turing students and alumni who have repeated or are currently repeating a module.
 
 ## Goal Tracking
@@ -36,10 +36,14 @@ The following lessons are from the first two weeks of mod 1. We want you to feel
 
 ## Extra Practice
 Here are some ways you can get in extra practice:
-* [Number Guesser](https://github.com/turingschool/front-end-curriculum/blob/0363dead1ccd862290d395241ec0f785891fc580/projects/archive/number-guesser-doubles-wk1.md)
-* [10 Days of Frontend Development](https://10daysfrontend.netlify.app/)
-* make your own creatures
-* other test suites (oregon trail, skate park, golf)
+* Projects:
+  * [Number Guesser](https://github.com/turingschool/front-end-curriculum/blob/0363dead1ccd862290d395241ec0f785891fc580/projects/archive/number-guesser-doubles-wk1.md) (needs to be audited)
+* Daily Reps:
+  * [10 Days of Frontend Development](https://10daysfrontend.netlify.app/)
+* Test Suites:  
+  * [Oregon Trail](https://github.com/turingschool-examples/oregon-trail) (needs to be audited)
+  * [Skate Park](https://github.com/turingschool-examples/skatepark) (needs to be audited)
+  * [Golf Course](https://github.com/turingschool-examples/golf-course) (needs to be audited)
 
 ## FAQs
 * *Should I delete my mythical creatures repo and start over?* YES
@@ -48,9 +52,15 @@ Here are some ways you can get in extra practice:
 * *Should I get a head start on projects?* NO
 * *How should I navigate partner and group work since I've seen a lot of this material before?*
 * *How can I know if I should skip a class or not?* Read through the lesson completely. If you can complete all of the activities in the lesson without help, you should feel confident skipping that lesson.
+* *If I skip a class, how should I spend that time?* Check out the **Extra Practice** section!
 
 
-<!-- TO DO:
-- complete Q&A
-- find PD link
-- finish Extra Practice section -->
+<!--
+  TO DO:
+  - change example goal in goal tracker
+  - complete Q&A
+  - find PD link
+  - audit Extra Practice section
+  - get feedback from FE Instructors
+  - get feedback from repeaters (Connie, Ben, Sarah)
+-->
