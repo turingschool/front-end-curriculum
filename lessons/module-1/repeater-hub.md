@@ -46,8 +46,8 @@ Below are ways you can get in additional practice throughout the inning. None of
   * [Do you wanna build a snowman?](https://github.com/turingschool-examples/do-you-wanna-build-a-snowman)
   * 🌶 **Create a new Mythical Creature.** Start by making a new test file in the `test` directory and write all of the tests. Then, add in a file in the `exercises` directory and write the code necessary to pass all of the tests you wrote. Send your new creature to your instructors - We may add it into the official test suite!
 * CSS:
-  * [Cookie Comp Recreation](https://github.com/turingschool-examples/cookie-comp)
-  * [Countdown CSS Exploration](https://codepen.io/hannahhch/pen/mdEYqjX)
+  * [Cookie Recipe (Comp Recreation)](https://github.com/turingschool-examples/cookie-comp)
+  * [Countdown (CSS Exploration)](https://codepen.io/hannahhch/pen/mdEYqjX)
 * DOM Maniputation & Event Listeners:
   * [Holiday Card Generator](https://codepen.io/hannahhch/pen/OJXGpxJ)
 * Functions, Loops, & Objects:
