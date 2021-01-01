@@ -36,14 +36,30 @@ The following lessons are from the first two weeks of mod 1. We want you to feel
 
 ## Extra Practice
 Here are some ways you can get in extra practice:
-* Projects:
-  * [Number Guesser](https://github.com/turingschool/front-end-curriculum/blob/0363dead1ccd862290d395241ec0f785891fc580/projects/archive/number-guesser-doubles-wk1.md) (needs to be audited)
 * Daily Reps:
-  * [10 Days of Frontend Development](https://10daysfrontend.netlify.app/)
+  * [Codewars](https://www.codewars.com/): Focus on psuedocoding level 8 katas
 * Test Suites:  
+  * [Skate Park](https://github.com/turingschool-examples/skatepark)
+  * [Golf Course](https://github.com/turingschool-examples/golf-course)
   * [Oregon Trail](https://github.com/turingschool-examples/oregon-trail) (needs to be audited)
-  * [Skate Park](https://github.com/turingschool-examples/skatepark) (needs to be audited)
-  * [Golf Course](https://github.com/turingschool-examples/golf-course) (needs to be audited)
+  * [Ski Lift](https://github.com/turingschool-examples/ski-lift)
+  * [Do you wanna build a snowman?](https://github.com/turingschool-examples/do-you-wanna-build-a-snowman)
+  * 🌶 Create a new Mythical Creature. Start by making a new test file in the `test` directory and write all of the tests. Then, add in a file in the `exercises` directory and write the code necessary to pass all of the tests you wrote. Send your new creature to your instructors - We may add it into the official test suite!
+* CSS:
+  * [Cookie Comp Recreation](https://github.com/turingschool-examples/cookie-comp)
+  * [Countdown CSS Exploration](https://codepen.io/hannahhch/pen/mdEYqjX)
+* DOM Maniputation & Event Listeners:
+  * [Holiday Card Generator](https://codepen.io/hannahhch/pen/OJXGpxJ)
+* Functions, Loops, & Objects:
+  * [Gifts Repl](https://repl.it/@HannahHudson1/AdventDay1#index.js)
+  * [Party Repl](https://repl.it/@HannahHudson1/Advent5#index.js)
+  * [Ugly Sweater Generator](https://repl.it/@HannahHudson1/Advent8)
+* Refactoring:
+  * [Snow Facts Codepen](https://codepen.io/hannahhch/pen/QWEPeKb)
+  * Old project
+* Projects:
+  * [MadLibs](https://github.com/turingschool-examples/winter-mad-libs)
+  * 🌶🌶 [Number Guesser](https://github.com/turingschool/front-end-curriculum/blob/0363dead1ccd862290d395241ec0f785891fc580/projects/archive/number-guesser-doubles-wk1.md) (needs to be audited)
 
 ## FAQs
 * *Should I delete my mythical creatures repo and start over?* YES
@@ -51,9 +67,8 @@ Here are some ways you can get in extra practice:
 * *Should I reference my old projects when working on projects this inning?* NO
 * *Should I get a head start on projects?* NO
 * *How should I navigate partner and group work since I've seen a lot of this material before?*
-* *How can I know if I should skip a class or not?* Read through the lesson completely. If you can complete all of the activities in the lesson without help, you should feel confident skipping that lesson.
+* *How can I know if I should skip a class or not?* If you decide to skip a lesson, you should always read through the lesson on your own. We recommend doing this no later than the day before the lesson is scheduled. If you can complete all of the activities in the lesson without help, you should feel confident skipping that lesson.
 * *If I skip a class, how should I spend that time?* Check out the **Extra Practice** section!
-
 
 <!--
   TO DO:
