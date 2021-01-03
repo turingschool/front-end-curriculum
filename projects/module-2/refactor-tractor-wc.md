@@ -29,9 +29,11 @@ Dates and deadlines to be aware of:
 
 Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
 
+---
+
 ## Set Up
 
-1. Download your assigned repo
+1. Download your assigned repo [wc-a](https://drive.google.com/file/d/1BEc9sHk0nEzDERZ5p9HPeARkT49l9y9S/view?usp=sharing){:target='blank'} or [wc-b](https://drive.google.com/file/d/1DAnwfBNtdcC3ZuMqo8Vo7EejB5qUZcMD/view?usp=sharing){:target='blank'}
 2. Move the zip file into the folder where you want the project to live
 3. cd into the directory with your zip file
 4. run `unzip [filename]`
@@ -41,6 +43,11 @@ Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6)
 8. In your terminal:
     - remove the old remote `git remote remove origin`
     - then add a new remote `git remote add origin [your new repo url]`
+9. To run app:
+    - Run `npm i`
+    - Run `npm start`
+10. To run tests:
+    - Run `npm test`
 
 ### Working with Webpack
 This project is set up to use [Webpack](https://webpack.js.org/guides/getting-started/){:target='blank'}, a module bundler. It will take whatever code we write, and bundle it into a series of more efficient files that the browser can read (allowing us to use things like Sass, npm packages and ES6 `import` / `export` syntax).
@@ -80,14 +87,14 @@ You must complete all of the User Stories outlined in the [What's Cookin Spec](h
 
 ### Endpoints
 
-You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a server. Here are the endpoints setup for this project:
+You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}.  You will need to clone this down and have it running in a separate tab in your terminal each time you run your client.  Here are the endpoints setup for this project:
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
-| Get all users |`https://localhost:3001/api/v1/whats-cookin/1911/users/wcUsersData`| GET  | none | object with `users` property containing an array of all users |
-|Get all ingredients |`https://localhost:3001/api/v1/whats-cookin/1911/ingredients/ingredientsData` | GET  | none | object with `ingredients` property containing an array of all ingredients |
-|Get all recipes | `https://localhost:3001/api/v1/whats-cookin/1911/recipes/recipeData` | GET | none | object with `recipes` property containing an array of all recipes |
-| Add/Remove Ingredients from a pantry |`https://localhost:3001.com/api/v1/whats-cookin/1911/users/wcUsersData`| POST | `{ userID: <number>, ingredientID: <number>, ingredientModification: <number> }` | `{message: '"User # <userID> has 7 units of item # <ingredientID>"' }`|
+| Get all users |`http://localhost:3001/api/v1/users`| GET  | none | An array containing all users |
+|Get all ingredients |`http://localhost:3001/api/v1/ingredients` | GET  | An array containing all ingredients |
+|Get all recipes | `http://localhost:3001/api/v1/recipes` | GET | none | An array containing all recipes |
+| Add/Remove Ingredients from a pantry |`http://localhost:3001/api/v1/users`| POST | `{ userID: <number>, ingredientID: <number>, ingredientModification: <number> }` | `{message: '"User # <userID> has 7 units of item # <ingredientID>"' }`|
 
 <section class="note">
 ### Note about Adding / Removing Ingredients
@@ -117,7 +124,7 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 <section class="note">
 ### Error Handling
 
-Do proper error handling for your users to ensure that they are submitting their POST requests successfully (handle the case where they submit their data and an error message returns from the request, and also validate the input fields on the client-side)
+Do proper error handling for your users to ensure that they are getting data and are submitting their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request.  Also validate the input fields on the client-side.
 </section>
 
 ---
