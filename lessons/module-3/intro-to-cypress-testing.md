@@ -58,12 +58,13 @@ Here are a list of major features pulled from the [documentation](https://docs.c
 * **Cross browser Testing:** Run tests within Firefox and Chrome-family browsers (including Edge and Electron) locally and optimally in a Continuous Integration pipeline.
 </section>
 
-<section class="note">
+<section class="answer">
 ### Is this similar to Selenium?
 
 Although often compared to Selenium, another common automated testing framework that allows you to test your application across multiple browsers, Cypress has some distinct differences that makes it stand out. Below is a list of some key differences:
 
-#### Key Differences
+**Key Differences:**
+
 | | **Cypress** | **Selenium** |
 |-----|-----|-----|
 | Languages Supported | JavaScript | Many popular languages like Java, Python, Ruby, and JavaScript. |
