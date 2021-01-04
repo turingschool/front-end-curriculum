@@ -206,8 +206,6 @@ In addition to your refactoring, you also want to make sure the application is f
 * Make sure you are reviewing the original "What's Cooking" spec so you have a good idea for what the project and its requirements are. 
 * Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well. 
 * Every group member must fully understand and be able to speak to all of the code changes that have been made. 
-
-Please submit projects [here](https://docs.google.com/spreadsheets/d/1sezifM_yYe9M7VK0DrnoiTyAnAXsU6d2UaQlSfyH9aQ/edit#gid=685056282) by **9pm on Tuesday, September 15th.**
 </section>
 
 ---
