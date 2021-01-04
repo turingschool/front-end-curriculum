@@ -1,18 +1,36 @@
 ---
-title: "Intermediate React - Hooks"
-length: 2 hours
+title: Intermediate React - Intro to Hooks
+length: 1.5 hours
 module: 3
+tags: react, hooks
 ---
 
-# Intermediate React
+## Learning Goals
+
+* Understand how to add state to a functional component with `useState`
+* Understand how to perform side effect behavior in a functional component with
+  `useEffect`
+* Be able to migrate a class based component to a functional component
+
+## Vocab
+
+* `useState` - A React Hook which enables us to add state to a functional
+  component
+* `useEffect` - A React Hook which enables us to add side effect behavior to a
+  functional component
 
 ## React Introduces Hooks (v16.8 - February 2019)
 
-**Note - I am using [this repo](https://github.com/christielynam/pet-box-api) as my backend for this lesson and [this repo](https://github.com/christielynam/petbox-hooks) as the client-side starting point**
+Hooks are functions that let you "hook into" React state and lifecycle features from functional components. React gives us some built-in hooks that we'll take a look at shortly, but we can also create our own custom hooks that will allow us to reuse/share stateful logic.
 
-Hooks are functions that let you "hook into" React state and lifecycle features from functional components. React gives us a few built-in hooks that we'll take a look at shortly, but we can also create our own custom hooks that will allow us to reuse/share stateful logic.
+There are a number of different motivations behind adding hooks to React, which
+you can read more about
+[here](https://reactjs.org/docs/hooks-intro.html#motivation). The most important
+take-away for you is that hooks can allow us to remove class based components
+from our applications, and simplify the management of functions that depend on
+the lifecycle of the component.
 
-### Rules
+### Some Important Rules
 
 * **ONLY CALL HOOKS FROM REACT FUNCTIONS** (THEY DON'T WORK INSIDE CLASSES & THEY DON'T WORK OUTSIDE OF REACT)
 * **DON'T CALL HOOKS INSIDE LOOPS, CONDITIONS, OR NESTED FUNCTIONS** 
@@ -25,27 +43,47 @@ Hooks are functions that let you "hook into" React state and lifecycle features 
 * Will likely reduce your bundle size because code using Hooks tends to minify better than equivalent code using classes
 * No breaking changes
 
+
+### Getting started
+
+We're going to be using [this ideabox
+repo](https://github.com/turingschool-examples/react-iii-ideabox) today. Before
+going any further please do the following:
+
+* Clone the repo to your machine
+* Switch to the `using-hooks` branch
+* Run `npm install` in the repo
+* Put a thumbs up in the participants panel of zoom once you're done!
+
 ### State Hook
 
 We call this hook inside a function component to add some local state to it. React will preserve this state between re-renders. `useState` returns a pair: the current state value an a function that lets you update it. `useState` takes 1 argument - the initial state. This value is only used during the first render.
 
-What if your component needs more than 1 piece of state? No worries... you can use the state hook multiple times in a single component. The array destructuring syntax lets us give different names to each piece of state and the functions that update them.
+What if your component needs more than 1 piece of state? No worries... you can use the state hook multiple times in a single component. 
+
+The [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring) syntax lets us give different names to each piece of state and the functions that update them.
 
 ```js
 import React, { useState } from 'react'
-import PetList from './PetList'
 
 function App() {
-  const [pets, setPets] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState('')
+  const [name, setName] = useState('')
+  const [age, setAge] = useState(0)
   
   return (
-    <div className='App'>
-      <h1>PetBox</h1>
-      { error && error }
-      { isLoading ? <div>Loading...</div> : <PetList pets={pets} /> }
-    </div>
+    <form className='Form'>
+      <h1>My Form</h1>
+      <input 
+        title='name'
+        value={name}
+        onChange={(event) => setName(event.target.value)}
+      />
+      <input 
+        title='age'
+        value={age}
+        onChange={(event) => setAge(event.target.value)}
+      />
+    </form>
   )
 }
 export default App
