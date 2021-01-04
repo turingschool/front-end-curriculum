@@ -235,196 +235,52 @@ If you've done everything right, the ideabox should still work exactly as it did
 before!
 </section>
 
-## Sharing Stateful Logic Between Components
+<section class="answer">
+### Here's one way you could do it, don't look until you're done!
 
-There are numerous ways to reuse logic in React apps these days. We can write simple reuseable functions and we also have components (which could be either class-based or functional). The issue with class-based components is that they have to render some UI. This makes them inconvenient for sharing non-visual logic. This is how we end up with complex patterns like render props and higher order components.
-
-### Recent Attempts to Solve the Problem
-
-**TLDR**; Higher Order Components and Render Props are complex patterns that require you to restructure your components when you use them and introduce unnecessary nesting in your component tree. This can become cumbersome and make your code more difficult to read.
-
-#### Higher Order Components
-
-A Higher Order Component is a function that takes in a component and returns a new component. Higher Order Components are an attempt at applying the functional programming concept of Higher Order Functions to React components. They funciton similarly to how Higher Order Funtions pass data via closures. You can imagine in a large app, the same pattern of fetching data and setting state with that data will occur over and over again. Higher Order Components allow us to define this logic in a single place and share it across many components.
-
-```js
-import React, { Component } from 'react'
-
-function withPets(WrappedComponent) {
-  return class extends Component {
-    state = {
-      pets: []
-    }
-
-    getPets = async () => {
-      const url = 'http://localhost:3001/api/v1/pets'
-      const response = await fetch(url)
-      const pets = await response.json()
-      return pets
-    }
-
-    async componentDidMount() {
-      const pets = await this.getPets()
-      this.setState({ pets })
-    }
-
-    render() {
-      const { pets } = this.state
-      return (
-        <WrappedComponent pets={pets} {...this.props} />
-      )
-    }
-  }
-}
-
-export default withPets
-```
-
-Now we can give any component access to the pets. For instance, if we wanted to give `PetList` and `Nav` both access to the pets, we're in luck. `PetListWithPets` and `NavWithPets` are now components that we can use anywhere that have pets as a prop.
-
-```js
-const PetListWithPets = withPets(PetList)
-const NavWithPets = withPets(Nav)
-```
-
-#### Render Props
-
-The Render Props pattern is a way for us to create a component that provides some kind of data to a child component. The basic idea is that we have a component that just perfoms some functionality and serves its result to a child component.  
-
-```js
-function PetList({ pets }) {
-  const displayPets = pets.map(pet => (
-    <PetDetail key={pet.id} {...pet} />
-  ))
-  
-  return (
-    <div>
-      {displayPets}
-    </div>
-  )
-}
-
-<Fetch
-  url='http://localhost:3001/api/v1/pets'
-  render={(pets) => <PetList pets={pets} />} 
-/>
-```
-
-`PetList` should look pretty familiar... it's just a normal presentation component. But let's take a closer look at the `Fetch` component. We have 2 props - a url prop and a **render prop**. This render prop takes a function that receives some data and returns the `PetList` component that gets passed the data as a prop. The whole render-props pattern is about invoking a function in our return method like so.
-
-```js
-class Fetch extends Component {
-  render() {
-	return this.props.render()
-  }
-}
-```
-
-So, we need to pass something into `this.props.render()`. Let's extract the function invocation and take a closer look at it.
-
-```js
-(pets) => <PetList pets={pets} />
-```
-
-We can see that we need a paramater of pets. This is where our `Fetch` component comes in to do some heavy lifting for us (fetching the data).
-
-```js 
-class Fetch extends Component {
-  state = {
-    pets: []
-  }
-  
-  fetchData = async () => {
-    const response = await fetch(this.props.url)
-    cosnt pets = await response.json()
-    this.setState({ pets }) 
-  }
-  
-  componentDidMount() {
-    this.fetchData()
-  }
-  
-  render() {
-    const { pets } = this.state
-    return (
-      <div>
-        {!pets.length ? null : this.props.render(pets)}
-      </div>
-    )  
-  }
-}
-``` 
-
-Let's now switch gears a bit and think about what we would need to do in the event that the url changes. We would need to add an additional lifecycle method to our `Fetch` component.
-
-```js
-componentDidUpdate(prevProps) {
-  if(this.props.url && this.props.url !== prevProps.url) {
-    this.fetchData(this.props.url)
-  }
-}
-```
-
-Ok... GROSS! Both of these complex patterns add additional non-presentational components and unnecessary nesting to our component tree and make our code somewhat difficult to follow. Wouldn't life be easier if there was just one simple, common way to reuse code?!?
-
-### Custom Hooks to the Rescue
-
-We've already talked about a few of the built-in hooks that React gives us access to. Now let's check out how we can create a custom hook that can fetch data (or do whatever you want) that we can reuse in multiple places.
-
-```js
-import { useState, useEffect } from 'react'
-
-function usePets() {
-  const [pets, setPets] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState('')
-
-  const getPets = async () => {
-  const url = 'http://localhost:3001/api/v1/pets'
-    setError('')
-    setIsLoading(true)
-    try {
-      const response = await fetch(url)
-      const pets = await response.json()
-      setPets(pets)
-    } catch(error) {
-      setError(error.message)
-    }
-    setIsLoading(false)
-  }
-
-  useEffect(() => {
-    getPets()
-  }, [])
-
-  return {pets, isLoading, error}
-}
-
-export default usePets
-```
-
-**An important note about the code above...** we have to remember to return all the variables inside the `usePets` function so that we can have access to them in the future. Now we can use the extracted data fetching logic anywhere in our application and give any component access to the pets. 
-
-```js
-import React from 'react';
-import PetList from './PetList'
-import usePets from './usePets'
+```javascript
+import React, { useState, useEffect } from 'react';
+import Ideas from './Ideas';
+import Form from './Form';
+import './App.css';
 
 function App() {
-  const {pets, isLoading, error} = usePets()
-  
-  return (
-    <div className='App'>
-      <h1>PetBox</h1>
-      {error && error}
-      {isLoading ? <div>Loading...</div> : <PetList pets={pets} />}
-    </div>
+  const [ideas, setIdeas] = useState([])
+
+  useEffect(() => {
+    document.title = `Ideabox (${ideas.length})`
+  })
+
+  const addIdea = (newIdea) => {
+    setIdeas([...ideas, newIdea]);
+  }
+
+  const deleteIdea = (id) => {
+    const filteredIdeas = ideas.filter(idea => idea.id !== id);
+
+    setIdeas(filteredIdeas);
+  }
+
+  return(
+    <main className='App'>
+      <h1>IdeaBox</h1>
+      <Form addIdea={addIdea} />
+      <Ideas ideas={ideas} deleteIdea={deleteIdea} />
+    </main>
   )
 }
-export default App	
-```
 
-**Isn't this approach so much cleaner and easier to read than render props and higher order components?!?! No more unnecessary nesting in our component tree!!** 
+export default App;
+```
+</section>
+
+## Checks for Understanding
+
+In your notebooks, respond to the following:
+
+* What does `useState` do? What two things does it give back to us?
+* What does `useEffect` do? What two arguments do we need to pass to it?
+* Why should we consider using React Hooks over class based components?
 
 ## Resources
 
