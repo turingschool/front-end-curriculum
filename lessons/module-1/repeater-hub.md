@@ -42,6 +42,7 @@ Below are ways you can get in additional practice throughout the inning. None of
   * [Skate Park](https://github.com/turingschool-examples/skatepark)
   * [Golf Course](https://github.com/turingschool-examples/golf-course)
   * [Oregon Trail](https://github.com/turingschool-examples/oregon-trail) *(needs to be audited)*
+  * [Crafting](https://github.com/kaylaewood/crafting)
   * [Ski Lift](https://github.com/turingschool-examples/ski-lift)
   * [Do you wanna build a snowman?](https://github.com/turingschool-examples/do-you-wanna-build-a-snowman)
   * 🌶 **Create a new Mythical Creature.** Start by making a new test file in the `test` directory and write all of the tests. Then, add in a file in the `exercises` directory and write the code necessary to pass all of the tests you wrote. Send your new creature to your instructors - We may add it into the official test suite!
@@ -81,4 +82,5 @@ Below are ways you can get in additional practice throughout the inning. None of
   - audit Extra Practice section
   - get feedback from FE Instructors
   - get feedback from repeaters (Connie, Ben, Sarah)
+  John Adams and Jun
 -->
