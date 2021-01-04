@@ -2,7 +2,7 @@
 title: Intermediate React - Intro to Hooks
 length: 1.5 hours
 module: 3
-tags: react, hooks
+tags: react, hooks, useState, useEffect
 ---
 
 ## Learning Goals
