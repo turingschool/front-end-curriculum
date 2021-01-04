@@ -65,6 +65,7 @@ Although often compared to Selenium, another common automated testing framework 
 
 #### Key Differences
 | | **Cypress** | **Selenium** |
+|-----|-----|-----|
 | Languages Supported | JavaScript | Many popular languages like Java, Python, Ruby, and JavaScript. |
 | Browsers Supported | Chrome, Edge, Firefox(beta) | Chrome, IE, Safari, Edge, Firefox, Opera |
 | Frameworks Supported | Supports only Mocha JS | Supports multiple frameworks based on what language is being used (i.e. JUnit for Java, Cucumber for JavaScript, etc.) |
