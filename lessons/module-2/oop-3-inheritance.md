@@ -67,11 +67,11 @@ class Instructor {
     this.traits = traits;
   }
 
-  teachLesson(duration) {
+  teachLesson(duration, lesson) {
     if (duration > 3) {
       return `${this.name} can\'t teach a lesson that long!`;
     } else {
-      return `Gunna teach you all real good about ${this.primaryLesson}`;
+      return `Gunna teach you all real good about ${lesson}.`;
     }
   }
 
