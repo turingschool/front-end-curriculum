@@ -37,7 +37,7 @@ Make sure both teammates and your assigned instructor are all added as collabora
 
 - Build the layout with HTML & CSS
   - Before moving on, the header and left side of the page should match the comp.
-  - The right side of the page should only have the sub-header and not that no activities exist since you do not have past activity card functionality yet!
+  - The right side of the page should only have the sub-header and note that no activities exist since you do not have past activity card functionality yet!
 
 ![Zero State Desktop](./assets/intention-timer/zero-state-desktop.png)
 
