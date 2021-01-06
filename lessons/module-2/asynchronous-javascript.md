@@ -25,7 +25,7 @@ Please note that this class talks about asynchronous JavaScript, _not_ `async aw
 <section class="call-to-action">
 ### Review
 
-On the sticky notes in [this Miro board](https://miro.com/app/board/o9J_lZzVe2k=/), answer the following with your breakout group:
+On the sticky notes in [this Miro board](https://miro.com/welcomeonboard/i40kgO9F0Cv9RGYpBiwCGt82MgfJhFtyVRpYpXgCcmYwzBToKyg2KIXC1vEx5vIG), answer the following with your breakout group:
 - Everything you know about / questions you still have on asynchronous code
 - Everything you know about / questions you still have on fetch
 - Everything you know about / questions you still have on execution contexts & the call stack
