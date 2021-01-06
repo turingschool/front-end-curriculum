@@ -7,6 +7,16 @@ module: 2
 
 [//]: Instructor note (this is a comment in markdown) - This lesson should follow after the fetch lesson.
 
+### Learning goals
+* Understand why we need asynchronous javascript
+* Understand what happens behind the scenes when asynchronous javascript runs and the steps it goes through
+
+## Vocab
+
+- `Execution Call Stack` A data structure for the interpreter to keep track of its place in a script that calls multiple functions. It is single threaded and LIFO (Last In First Out)
+- `Browser APIs` Built in APIs that have a separate execution context from your code (They act as separate threads) examples include `setTimeout` and `fetch`
+- `Event Queue` A data structure that holds functions returned from Browser APIs that are ready to go back on the stack. It is FIFO (First In First Out)
+- `Event Loop` Middleman between event queue and call stack. Checks if call stack is empty and adds functions from the event queue
 
 Let's talk more about JavaScript and it's ability to be asynchronous. What does that mean, and how can we wrangle or take advantage of that fact?
 
@@ -15,12 +25,11 @@ Please note that this class talks about asynchronous JavaScript, _not_ `async aw
 <section class="call-to-action">
 ### Review
 
-On the sticky notes at your tables, respond to one or more of the following at the boards:
+On the sticky notes in [this Miro board](https://miro.com/app/board/o9J_lZzVe2k=/), answer the following with your breakout group:
 - Everything you know about / questions you still have on asynchronous code
 - Everything you know about / questions you still have on fetch
 - Everything you know about / questions you still have on execution contexts & the call stack
 </section>
-
 
 ## Introduction
 
@@ -29,11 +38,8 @@ When we say **single-threaded**, that could be read as doing one thing at a time
 <section class="call-to-action">
 ### On Your Own
 
-Take 15 minutes to read [this article](https://dev.to/steelvoltage/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd){:target="\__blank"} about how JavaScript is asynchronous and also single threaded.
+Take 8 minutes to read [this article](https://dev.to/steelvoltage/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd){:target="\__blank"} about how JavaScript is asynchronous and also single threaded.
 
-### Discuss
-
-With someone next to you, take turns discussing what you just read.
 </section>
 
 Notice that this article does not mention "promises", which is a way to deal with asynchronous JavaScript that we have been using with `fetch`.
@@ -41,7 +47,19 @@ Notice that this article does not mention "promises", which is a way to deal wit
 <section class="call-to-action">
 ### With Your Partner
 
-Create a diagram similar to the article to demonstrate what happens when we use `fetch`. How does `fetch` fit in with the code above and below it?
+Given the following code snippet:
+```javascript
+console.log('ramen');
+
+fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.log(error));
+
+console.log('burrito');
+```
+
+How does `fetch` fit in with the code above and below it? What order will the console logs show up in and why? (It's ok if you're guessing at this point - we'll )
 </section>
 
 
@@ -57,15 +75,15 @@ Let's take a look at [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ){:
 * 10:23-11:46 (asynchronous callbacks - `setTimeout`, what happens to the `setTimout` on the stack?)
 * 11:47-14:50 (intro to the event loop)
 
-As you're watching the video, please fill out [this
-form](https://docs.google.com/forms/d/e/1FAIpQLScEqls1aeHfgO0h5EbK9b4YDWnmQDz3XoHW1J-5zgDeAz7G5A/viewform?usp=sf_link){:target="\__blank"},
-and we'll discuss as a group after you've finished.
+Please take notes and pay special attention to the vocab words at the top of this lesson as you watch
 
 <section class="checks-for-understanding">
 ### Check for Understanding
 
-Let's take this event loop example with `setTimeout` and translate it to what we have seen with `fetch` and promises. Note that the event loop will wait until the call stack is empty to run the `.then` from a fetch call.
+Using the terms of art (vocab) described at the top of the lesson. Explain what happens with each line of code in the previous example from class
 </section>
 
 ### Additional Resources
+* [event loop article](https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript){:target="\__blank"}
 * [Loupe](http://latentflip.com/loupe){:target="\__blank"}
+* [mdn async deep dive](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous){:target="\__blank"}
