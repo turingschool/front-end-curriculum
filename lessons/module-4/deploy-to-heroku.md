@@ -58,7 +58,7 @@ $ git remote -v
 ## Step 5 - Push to Heroku & Open Your App
 
 ```bash
-$ git push heroku master
+$ git push heroku main
 $ heroku open
 ```
 
@@ -126,8 +126,8 @@ Now when our application is running in Heroku, it will recognize that it's in a 
 Commit the changes you've made to your `knexfile.js` and your `server.js`. Push them up to your origin remote and then push them to heroku:
 
 ```bash
-$ git push origin master
-$ git push heroku master
+$ git push origin main
+$ git push heroku main
 ```
 
 ### Step 7e - Migrate Your Production Database
@@ -149,13 +149,13 @@ Note that at this point, your production database will not having anything in it
 
 #### Cannot detect language or buildpack needed to run the application
 
-* Make sure you don't have `node_modules` committed. To fix this, you must first `rm -rf ./node_modules`, commit and push that change to master, then add `/node_modules` to a `.gitignore` file.
+* Make sure you don't have `node_modules` committed. To fix this, you must first `rm -rf ./node_modules`, commit and push that change to main, then add `/node_modules` to a `.gitignore` file.
 
 * Check that you have a Procfile at the root of your application and that the file name is correct and it contains the single line `web: node server.js` with no typos.
 
 #### TypeError: Cannot read property 'client' of undefined
 
-* Make sure there are no typos in the knexfile, and also make sure that you've committed your most recent changes and pushed to master. Often times, students will make all the appropriate changes to add a production environment to their knexfile, but forget to commit them. You can check what the latest commit on Heroku is by looking in the web UI at your application, in the 'Activity' log. Compare the latest SHA on that page with the latest commit SHA on your github.
+* Make sure there are no typos in the knexfile, and also make sure that you've committed your most recent changes and pushed to main. Often times, students will make all the appropriate changes to add a production environment to their knexfile, but forget to commit them. You can check what the latest commit on Heroku is by looking in the web UI at your application, in the 'Activity' log. Compare the latest SHA on that page with the latest commit SHA on your github.
 
 #### ECONNREFUSED 127.0.0.1:5432
 
