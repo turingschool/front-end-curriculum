@@ -37,17 +37,16 @@ The following lessons are from the first two weeks of mod 1. We want you to feel
 ## Extra Practice
 Below are ways you can get in additional practice throughout the inning. None of these exercises are mandatory, but we find that the more unique problem sets students encounter and complete, the better their coding and problem-solving skills become.
 * Daily Reps:
-  * [Codewars](https://www.codewars.com/): Focus on psuedocoding level 8 katas
+  * [Codewars](https://www.codewars.com/): Focus on psuedocoding level 7 and 8 katas
 * Test Suites:  
-  * [Skate Park](https://github.com/turingschool-examples/skatepark)
-  * [Golf Course](https://github.com/turingschool-examples/golf-course)
-  * [Oregon Trail](https://github.com/turingschool-examples/oregon-trail) *(needs to be audited)*
-  * [Crafting](https://github.com/kaylaewood/crafting)
-  * [Ski Lift](https://github.com/turingschool-examples/ski-lift)
-  * [Do you wanna build a snowman?](https://github.com/turingschool-examples/do-you-wanna-build-a-snowman)
-  * 🌶 **Create a new Mythical Creature.** Start by making a new test file in the `test` directory and write all of the tests. Then, add in a file in the `exercises` directory and write the code necessary to pass all of the tests you wrote. Send your new creature to your instructors - We may add it into the official test suite!
-* CSS:
+  * Work through the various test suites found in the [JavaScript Foundations repo](https://github.com/turingschool-examples/javascript-foundations).
+  * **Create a new Mythical Creature.** Start by making a new test file in the `test` directory and write all of the tests. Then, add in a file in the `exercises` directory and write the code necessary to pass all of the tests you wrote. Send your new creature to your instructors - We may add it into the official test suite!
+* HTML + CSS:
+  * [HTML Practice](https://github.com/turingschool-examples/html-warmup-challenges)
+  * [CSS Layout Challenges](https://github.com/turingschool-examples/css-layout-challenges)
   * [Cookie Recipe (Comp Recreation)](https://github.com/turingschool-examples/cookie-comp)
+  * [Comp Recreation 1](https://frontend.turing.io/projects/module-1/m1-static-comp.html)🌶
+  * [Comp Recreation 2](https://frontend.turing.io/projects/module-1/m1-static-comp-2.html)🌶
   * [Countdown (CSS Exploration)](https://codepen.io/hannahhch/pen/mdEYqjX)
 * DOM Maniputation & Event Listeners:
   * [Holiday Card Generator](https://codepen.io/hannahhch/pen/OJXGpxJ)
@@ -57,10 +56,13 @@ Below are ways you can get in additional practice throughout the inning. None of
   * [Ugly Sweater Generator Repl](https://repl.it/@HannahHudson1/Advent8)
 * Refactoring:
   * [Snow Facts](https://codepen.io/hannahhch/pen/QWEPeKb)
-  * **Refactor an old project.** Look back at one of your projects from last inning. Find the feedback that you received on that project from an instructor. Apply some of the recommended refactor opportunities mentioned in your feedback. Can you use parameters to create a reusable function and DRY up your JavaScript? Can you make your HTML more semantic? Can you organize your CSS in a better way?
-* Projects:
+  * **Refactor an old project.** Look back at one of your projects from last inning. Find the feedback that you received on that project from an instructor. Apply some of the recommended refactor opportunities mentioned in your feedback. *Can you use parameters to create a reusable function and DRY up your JavaScript? Can you make your HTML more semantic? Can you organize your CSS in a better way?*
+* Extra Projects:
   * [MadLibs](https://github.com/turingschool-examples/winter-mad-libs)
-  * 🌶🌶 [Number Guesser](https://github.com/turingschool/front-end-curriculum/blob/0363dead1ccd862290d395241ec0f785891fc580/projects/archive/number-guesser-doubles-wk1.md) *(needs to be audited)*
+  * [Build A Bear](https://frontend.turing.io/projects/module-1/build-a-bear-group.html)🌶
+  * [Number Guesser](https://frontend.turing.io/projects/module-1/number-guesser-pair.html)🌶
+  * [Which Beyonce?](https://frontend.turing.io/projects/module-1/which-beyonce-solo.html)🌶
+  * [Check Yo'Self](https://frontend.turing.io/projects/module-1/check-yo-self-solo.html)🌶
 
 ## FAQs
 * **Q:** *Should I delete my mythical creatures repo and start over?*
