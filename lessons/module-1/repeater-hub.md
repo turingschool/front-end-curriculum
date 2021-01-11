@@ -44,16 +44,16 @@ The following lessons are from the first two weeks of mod 1:
 
 ## FAQs
 
-**Q:** *Should I delete my mythical creatures repo and start over?*
+**Q:** *Should I delete my mythical creatures repo and start over?*  
 **A:** Yes! You should delete your old javascript-foundations repo and then clone down a new one and start over. It's important that you approach these problems with a clean slate. Plus, we may have updated the repo since last inning.  
 
-**Q:** *Should I complete mythical creatures over and over?*
+**Q:** *Should I complete mythical creatures over and over?*  
 **A:** No! You should only complete each mythical creature **once** this inning. After you complete all of the creatures, start working through the other test suites in that repo. We find that when students complete the same test suite more than 2 times, memorization and pattern matching kick in (which is not what we want!). These test suites should be improving your problem solving skills. If you feel yourself being able to write code without reading the full test, it's probably time for a new test suite.  
 
-**Q:** *Should I reference my old projects when working on projects this inning?*
+**Q:** *Should I reference my old projects when working on projects this inning?*  
 **A:** This is not a good idea. Remember, the projects are about learning, not completion. We'd rather you productively struggle through the logic on a project than just look back at how you did it last time and copy the answer. Also, this approach isn't fair to your project partner(s) who is seeing this stuff for the first time. We know it's tempting, but remember **it's about process over product**.  
 
-**Q:** *Should I get a head start on projects?*
+**Q:** *Should I get a head start on projects?*  
 **A:** You should not be working on projects before they are officially kicked off. There is plenty for you to work on if you finish a project early (hint: the **Extra Practice** section!). Projects are meant to be completed in the time allotted. Also, instructors make changes to project specs leading up to the kickoff. Finally, one goal of group/paired projects is collaborative learning and communication and that is sacrificed when students work ahead on these projects.
 
 
