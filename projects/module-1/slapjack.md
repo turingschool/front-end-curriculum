@@ -116,95 +116,114 @@ This workflow is not required, but may help you meet the overall requirements of
 
 ## Rubric
 
-Rubric score key:
+The rubric categories are **not** weighted equally. We will be using the following weights in order to determine your final score:
 
-* **4: Over-achievement** - student did self-teaching and accomplished beyond scope of project, _without_ sacrificing code quality in the pursuit of extensions; all code demonstrates strong mastery of DRY principles and SRP conventions
-* **3: Right on track** - student is exactly where we want them to be, has a strong foundation, and demonstrates competency and comfort with the subject
-* **2: A little behind** - student needs to focus study in this area to catch up to where they should be in terms of proficiency
-* **1: Very behind** - student needs intervention to get back on track
+* **Functionality**: 1/3 of final score
+* **JavaScript**: 1/3 of final score
+* **HTML**: 1/6 of final score
+* **CSS**: 1/6 of final score
 
-Overall rubric scores will be **averaged**. Here is what the average score means in terms of completing the module:
+Here is what the final score means in terms of completing the module:
 
 * **4:** - Student will complete module if prior project work, attendance, and final assessment corroborate readiness
 * **3+:** - Student will complete module if prior project work, attendance, and final assessment corroborate readiness
-* **2+:** - Student might complete module if prior project work, attendance, and final assessment corroborate readiness
+* **2+:** - Student may complete module if prior project work, attendance, and final assessment corroborate readiness
 * **<2:** - Student needs more time with concepts and work covered in module
 
+**Please note that a passing project must include a fully playable game.**
 
 ------------------------------------------------------------------
 
-### Professionalism
+### Functional Expectations
 
-We still expect you to use good workflow practices! Atomic commits, use of branches and PRs (you will be merging these PRs yourself).
-
-* **4:** 
-
-  - A PR template was used. 
-  - A code review was requested and completed by a mentor
-  - developer can speak to how the feedback in code review was implemented (and point to the commit(s) that implemented the feedback).
-  - Developer is ready to clearly present the evolution of this app during the eval - from architecture decisions made in the planning process, to wins and challenges throughout.
-
-* **3:** 
-
-  - Developer is able to clearly answer questions regarding the evolution of this app during the eval - from architecture decisions made in the planning process, to wins and challenges throughout. 
-  - A project board/planning document is used and updated throughout the project. 
-  - Branches are used. Most commits are formatted correctly. 
-  - The README is formatted well and contains:
-    - Overview of project and goals
-    - Overview of technologies used, challenges, wins, and any other reflections
-    - Screenshots/gifs of your app
-
-* **2:** 
-
-  - Developer is able to answer questions regarding the evolution of the app, but may need some prompts to clearly articulate or provide enough context. 
-  - More than a few commits are formatted incorrectly. 
-  - The README is formatted well but may be lacking in detail.
-
-* **1:** 
-
-  - Developer struggles to answer questions regarding the evolution of the app. 
-  - **OR:** Commit and PR history does not tell a story of the application
-  - **OR:** A README has not been created/has minimal information.
+* **4:** Application is fully complete (matches all functionality from demo, without bugs), and implements additional functionality devised by the student
+* **3:** Application is fully complete (matches all functionality from demo, and persists across refreshes)
+* **2:** Able to play an entire game successfully (win, draw, displayed player data updates)
+* **1:** Unable to play an entire game successfully
 
 ------------------------------------------------------------------
 
-### JavaScript - Style and Implementation
+### JavaScript
 
 * **4:**
 
-  - **Code is well refactored** and demonstrates developer empathy.
-  - No global variables are used aside from query selectors and an instance of `Game`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor.
-  - There are no instances of repetitive code
-  - No functions are longer than 10 lines
+  - Code is well refactored, DRY, follows SRP, and demonstrates developer empathy. There are multiple examples of reusable functions. There are no instances of repetitive code.
+  - No global variables are used aside from query selectors and instance of `Game`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor.
 
 * **3:**
 
-  - The separation of data model logic and presentational logic is clear and can be explained by developer.
-  - The application correctly **implements a data model** for the `Player` and `Game` classes, including all required methods.
-  - Developer can speak to the **role of each class**.
-  - All DOM manipulation is handled exclusively in `main.js`.
+  - The separation of data model logic and DOM logic is clear. All DOM manipulation is handled exclusively in `main.js`.
+  - The application correctly implements a data model for the `Player` and `Game` classes, including all required methods. The data model is kept up to date.
   - Developer demonstrates understanding and ability to refactor code by having at least 1 example of DRY code that was intentionally reused.
-  - SRP is evidenced by clear, concise function names; each function only does what the name describes.
+  - SRP is evidenced by clear, concise function names, and most functions only do what the name describes.
 
 * **2:**
 
-  - Arguments and parameters are used to limit global variables.
-  - The **event object** is used correctly, and is only accepted as a parameter when the function calls on it directly.
-  - Developer can speak to **how the event object is utilized** for any given event handler.
-  - **Function and variable names** describe their role in the program. 
-    - Examples: The name of the data type should not ever be in a variable name (ex: "petArray"); the name itself should be clear enough to indicate the type of data it holds (ex: "allPets").
-  - An event handler should not have "handler" in the name (ex: "clickHandler"); the name should indicate the handler's purpose (ex: "addNewPet").
+  - Some arguments and parameters are used to limit global variables and repetitive code.
+  - The event object is used correctly, and is only accepted as a parameter when the function calls on it directly.
+  - Function and variable names generally describe their role in the program.
+  - Function declarations are used over anonymous functions in event listeners, unless data needs to be passed in.
 
 * **1:**
 
-  - Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5).
-  - **Function declarations** are used over anonymous functions in event listeners.
+  - Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript).
 
 ------------------------------------------------------------------
 
-### Functional Expectations && Application Interface
+### HTML
 
-* **4:** Application is fully complete (matches all functionality from demo, without bugs), and implements additional functionality devised by the student. The interface has additional elements devised by the student that add to the overall theme. 
-* **3:** Application is fully complete (matches all functionality from demo, and player win counts persist across refreshes, a new game starts automatically). The interface is fully usuable, does not contain bugs, and an instructor can interact with it without guidance from the student. 
-* **2:** Able to play an entire game successfully (dealing, slaps, win, displayed player wins count updates as needed). The interface is usuable but contains bugs and/or an instructor might need some guidance in how to interact with it. 
-* **1:** Unable to play an entire game successfully, and/or the interface is unusable.
+* **4:**
+
+  - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
+  - Application fully implements HTML that is accessible for individuals with visual disabilities. Note: Typically, this is checked using Chrome DevTools [Lighthouse](https://developers.google.com/web/tools/lighthouse) audit tool, but unfortunately, Lighthouse does only work if your site is hosted. Instead, we will be using an accessibility extension called [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh). We will be looking for 0 Errors and 0 Contrast Errors. To get WAVE to work on local files, you'll need to do these steps after installing it:
+    - Right click the WAVE extension
+    - Click "Manage Extensions"
+    - Flip the "Allow access to file URLs" switch
+    - Success!
+
+* **3:**
+
+  - Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly
+
+* **2:**
+
+  - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). Semantic elements like `<button>`, `<li>`, etc. are used instead of `<div>` or `<span>`. If `<div>` or `<span` elements are used, they are only for styling purposes.
+
+* **1:**
+
+  - Style and syntax meets the criteria of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html).
+
+------------------------------------------------------------------
+
+### CSS
+
+* **4:**
+
+  - CSS is DRY, utilizing classes/rules to cut down on repetitive styles.
+  - Microinteractions such as hover states and animations have been thoughtfully added to improve the user experience.
+  - Design is responsive across small, medium and large breakpoints.
+
+* **3:**
+
+  - CSS includes several examples of using a class to apply a styling rule block to multiple elements.
+  - The design of the page is cohesive and ensures an intuitive user experience. Any user could navigate the application without any guidance from the developer.
+
+* **2:**
+
+  - Developer makes attempts to write DRY CSS by having at least 1 example of using a class to apply a styling rule block to multiple elements.
+  - There is no use of the `!important` tag. One exception may be for a `.hidden` class.
+  - The design of the page does not match the overall layout provided in the comp.
+
+* **1:**
+
+  - Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/css).
+
+------------------------------------------------------------------
+
+### Minimum Professionalism Expectations
+  * Commits are atomic and frequent, effectively documenting the evolution/progression of the application
+  * Developer uses PRs from feature branches before adding new code to the main branch.
+  * The README is formatted well and contains:
+      * Overview of project and goals
+      * Overview of technologies used, your code architecture, challenges, wins, and any other reflections
+      * Screenshots/gifs of your app
