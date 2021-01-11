@@ -10,13 +10,13 @@ Make sure you are part of the following channels:
 * **#the_repeaters**: A community of Turing students and alumni who have repeated or are currently repeating a module.
 
 ## Goal Tracking
-Watch [this video](https://www.youtube.com/watch?t=16&v=U4IU-y9-J8Q&feature=youtu.be) on creating SMART Goals. Then, add your name to [this Goals Document](https://docs.google.com/spreadsheets/d/14CnFCMSFyadbPoMP_ii0NnxQRoZnXKDT2JP-n56yZq8/edit?usp=sharing) and fill out your goal for Intermission. We will check in on these goals on the Monday of Week 1. 
+Watch [this video](https://www.youtube.com/watch?t=16&v=U4IU-y9-J8Q&feature=youtu.be) on creating SMART Goals. Then, add your name to [this Goals Document](https://docs.google.com/spreadsheets/d/14CnFCMSFyadbPoMP_ii0NnxQRoZnXKDT2JP-n56yZq8/edit?usp=sharing) and fill out your goal for Intermission. We will check in on these goals on the Monday of Week 1.
 
 ## Gear Ups and Professional Development
 Weeks 1 and 5 of Gear Up lessons are optional. All PD sessions (including the Giving & Receiving Feedback lesson) are optional. You will have a new set of prompts for your PD Journal. You can find the new prompts and more information [here](https://careerdev.turing.io/module_one/m1_PD_repeat_plan).
 
 ## Repeater Fam Time
-In lieu of PD, there is **Repeater Fam** time on the calendar. This is time for repeaters to use as they wish. You can spend that time on a zoom call reflecting on your week. You can spend it working together on mythical creatures. You can use it to play games and get to know each other better. It's your time, do what you want with it! Our only ask is that this time is spent in an intentional and collaborative way. Instructors will not join any of these calls.
+In lieu of PD, there is **Repeater Fam** time on the calendar. During this time, you will join a zoom call to connect with each other, reflect on the past week, and create goals for the current week. Instructors will not join any of these calls. During the calls, we ask that you fill out [this Goals Document](https://docs.google.com/spreadsheets/d/14CnFCMSFyadbPoMP_ii0NnxQRoZnXKDT2JP-n56yZq8/edit?usp=sharing) for the appropriate week.
 
 ## Alternative Learning Opportunities
 We want you to feel empowered to skip some classes if you feel like there is a better way to spend your time. **You can choose to miss up to 3 classes from the first two weeks of the inning.** (See below for list of classes.)
