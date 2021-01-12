@@ -81,7 +81,7 @@ Make sure that you link this file in your `index.html` using a `script` tag, abo
 
 - The user can start the time by clicking `Start`.
 - While timer is running, the user should see it count down by second.
-- When the timer completes, an [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) should appear in the browser, letting the user know that the time is up and the activity has been completed. 
+- When the timer completes, an [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) should appear in the browser, letting the user know that the time is up and the activity has been completed.
 - NOTE: This alert is temporary and is not something we suggest using in a fully built out application.
 
 ### Iteration 4 - Logging Past Activities
@@ -188,16 +188,16 @@ To earn a given score, an application must meet the requirements listed in that 
 
 ### Comp Recreation
 
-* **4:** 
+* **4:**
   - Additional elements and animations have been added that match the visuals established in the comps, and/or design is responsive across small, medium and large breakpoints.
-* **3:** 
+* **3:**
   - Application implements all major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment, etc).
   - If additional elements were added, they generally match the visuals established in the comps, but may be slightly awkward.
   - Careful attention was given to the little details like spacing, alignment, and hover states.
-* **2:** 
+* **2:**
   - Application implements most major comp details accurately and correctly (colors, fonts, icons, spacing, alignment, etc.).
 * **1:**
-  - Application has a significant mismatch when compared to the provided comp. 
+  - Application has a significant mismatch when compared to the provided comp.
 
 ### HTML && CSS - Style and Implementation
 * **4:**
@@ -209,11 +209,11 @@ To earn a given score, an application must meet the requirements listed in that 
     - Flip the "Allow access to file URLs" switch
     - Success!
 * **3:**
-  - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly. 
-  - CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles. There is evidence of reused styles in the application. 
+  - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly.
+  - CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles. There is evidence of reused styles in the application.
 * **2:**
   - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). Semantic elements like `<button>`, `<li>`, etc. are used instead of `<div>`. If `<div>` elements are used, they are only for styling purposes.
-  - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together. 
+  - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together.
 * **1:**
   - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
   - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
@@ -231,12 +231,12 @@ To earn a given score, an application must meet the requirements listed in that 
   * There are no nested for loops
   * Functions are DRY and observe SRP - and most are around 10 lines of code or less
   * There are no global variables aside from query selectors and an array for your activity
-  * Uses event delegation correctly on dynamic elements for deleting, and starring an activity
+  * Uses event delegation correctly on dynamic elements where applicable
   * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
 * **2:**
   * Data model is built to the specifications detailed in the spec sheet and is fully separated from the DOM. Example: There should not be any DOM manipulation in class files. - example: there is no DOM logic in the `Activity` class.
   * All console logs, debuggers and comments are removed from code before submitting.
-* **1:** 
+* **1:**
   * Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 
 
