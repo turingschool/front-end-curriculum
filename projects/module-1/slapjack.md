@@ -73,9 +73,9 @@ Your entire application will consist of one HTML page or template. You will have
 
 1. A `player.js` file that contains a `Player` class.
 	* `Player` methods must include, _but are not limited to_:
-		* `constructor` - properties should include: `id`, `wins`, `hand` (an array to track the player's hand of cards)  
-    * `playCard`  
-		* `saveWinsToStorage`  
+    - `constructor` - properties should include: `id`, `wins`, `hand` (an array to track the player's hand of cards)  
+    - `playCard`  
+	  - `saveWinsToStorage`  
 2. A `game.js` file that contains a Game class.
   * A `Game` should include:
       - Two `Player` instances
