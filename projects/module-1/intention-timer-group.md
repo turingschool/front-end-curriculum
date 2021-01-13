@@ -168,7 +168,7 @@ To earn a given score, an application must meet the requirements listed in that 
 * **4:**
   - Team uses a PR template for every pull request
   - Team habitually conducts thorough code reviews in the GitHub GUI to document the progress of the application
-  - Team has sought out code reviews from one or more mentors
+  - Team has sought out technical code reviews from one or more mentors and documented them in the GitHub GUI
 * **3:**
   - Commits are atomic and frequent, effectively documenting the evolution/progression of the application
   - Commit messages are consistent, descriptive, and concise and begin with a verb and capital letter
