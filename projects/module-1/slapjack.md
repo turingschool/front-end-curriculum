@@ -30,9 +30,9 @@ We want to see YOUR work.
 ## Set Up & Submission
 
 - Create a **private** repository and add your assigned instructor as a collaborator. (You cannot deploy private repositories to GitHub Pages; that's ok.)
-- Create a project board or other planning gist where you will outline your anticipated progress through functionality
+- Create a planning document where you outline your anticipated progress through the project. You can choose any format for this planning doc: Google Docs, a Gist, GitHub Projects, etc. You can add anything to this doc that will help you stay organized throughout the completion of this project. At minimum, it should include a timeline for when you'd like to complete each piece of functionality for the project.
 
-By EOD on Kick Off Day: DM your assigned instructor with two links: Project Board/Planning Gist & Repo
+By EOD on Kick Off Day: DM your assigned instructor with two links: Your repo & the planning doc.
 
 ### Functionality
 
@@ -73,10 +73,10 @@ Your entire application will consist of one HTML page or template. You will have
 
 1. A `player.js` file that contains a `Player` class.
 	* `Player` methods must include, _but are not limited to_:
-		1. `constructor` - properties should include: `id`, `wins`, `hand` (an array to track the player's hand of cards)
-    2. `playCard`
-		3. `saveWinsToStorage`
-2. A `game.js` file that contains a Game class. 
+		* `constructor` - properties should include: `id`, `wins`, `hand` (an array to track the player's hand of cards)  
+    * `playCard`  
+		* `saveWinsToStorage`  
+2. A `game.js` file that contains a Game class.
   * A `Game` should include:
       - Two `Player` instances
       - An array of all the possible cards
