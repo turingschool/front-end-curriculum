@@ -72,15 +72,10 @@ Note: No need to match colors or fonts, but the overall layout should be the sim
 Your entire application will consist of one HTML page or template. You will have three JavaScript files:
 
 1. A `player.js` file that contains a `Player` class.
-	- `Player` methods must include, _but are not limited to_
-    - `playCard`
-    - `saveWinsToStorage`
-  - `constructor` properties should include:
-    - `id`
-    - `wins`
-    - `hand` (an array to track the player's hand of cards)
+	- `Player` methods must include, _but are not limited to_: `playCard` and `saveWinsToStorage`  
+  - `constructor` properties should include: `id`, `wins`, and `hand` (an array to track the player's hand of cards)  
 2. A `game.js` file that contains a Game class.
-  * A `Game` should include:
+  - A `Game` should include:  
       - Two `Player` instances
       - An array of all the possible cards
       - A way to shuffle the deck
