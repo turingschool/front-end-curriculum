@@ -46,30 +46,120 @@ If you have wireframes ready to go, send those along too. You can send your wire
 
 ### Specification Adherence
 
-* 4 - All requirements from 3 are met. The application completes all iterations above and implements one or more of the extensions. And the evaluator has no recommendations for design changes.
-* 3 - The application uses the above technologies to a professional level. The evaluator has minimal recommendations for refactoring or design changes.
-* 2 - The application is in a usable state, but is missing part of one or more of the technologies outlined above. Evaluator has multiple recommendations for design changes.
-* 1 - The application is missing multiple features outlined above. Developer did minimal to no CSS for this project.
+### React Architecture
 
-[10 Essential Usability Guidelines.](https://speckyboy.com/10-essential-web-application-usability-guidelines/)
+* **4:**
+  - A consistent, modular file structure is used
+  - A clear understanding of class components vs function components is demonstrated (if using hooks, a clear understanding of when hooks need to be used is sufficient)
+  - Only the data that a child component _needs_ are passed down as props
+  - Logic is kept out of `return` statements; `return` statements are as readable as possible, only communicating what will be displayed
+  - Fetch calls have been refactored to be reusable for multiple queries
+  - Frontend data (state) always matches the backend data
+  - Data fetched from API is run through a cleaning function (which is defined in a separate `utilities` file)
+  - Implements excellent error handling if movie database server is down or fetch fails (this includes loading images as well as error messages on the frontend)
+* **3:** 
+  - A consistent, modular file structure is used
+  - A clear understanding of class components vs function components is demonstrated (if using hooks, a clear understanding of when hooks need to be used is sufficient)
+  - Only the data that a child component _needs_ is passed down as props
+  - Logic is kept out of return statements; return statements are as readable as possible, only communicating what will be displayed
+  - There are some issues with the asynchronous JS where the frontend is not matching with the backend
+  - There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
+  - Data fetched from API is not cleaned before being set to state
+* **2:** 
+  - The file structure is inconsistent and/or not modular
+  - There is some confusion about when to use a class or function component, but it does not hinder functionality
+  - Unnecessary data is passed down to child components as props
+  - `return` statements contain logic that should be refactored out for the sake of readability and performance
+  - There are methods that are being created inside of functional components that should be passed down through props from a parent class component
+  - API calls have not been broken out into their own file
+* **1:**
+  - Project shows little understanding of React and significant refactoring is required, including but not limited to:
+    - component structure is inconsistent or buggy
+    - a class component is used when a function component is preferable, and/or vice versa
+    - props are being passed or accessed incorrectly
+    - props are being mutated
+    - state is directly mutated
+  - File structure is not modular.
 
 ### Project Professionalism
 
-* 4 - All requirements from 3 met, PropType functionality is complete, codebase has zero linter errors/warnings, and README contains screenshots of application. Project team uses a rebase workflow, taking advantage of GitHub issues to track work. Project shows a complete mastery of React architecture.
-* 3 - PropType functionality is tried but missing for some components, the codebase has less than 5 linter errors, README has been updated with all group members. Project utilized wireframes from the outset. All git commits are atomic, made first to branches, and use descriptive and concise commit messages. Project demonstrates a fundamental understanding of React architecture.
-* 2 - Project are substantially unused, README updates, wireframes, or has more than 5 linter errors. Project team makes large infrequent git commits. Project shows a basic understanding of React.
-* 1 - PropTypes are substantially unused, README is incomplete, wireframes were not used, or more than 10 linter errors are present. Git history does not show evolution of project, with many large and inconsistent commits. Project shows little understanding of React and significant refactoring is required.
+The goal of this rubric section is to continue to gauge your readiness and prepare you for workplace standards. As you ramp up your job hunt, it becomes increasingly important to demonstrate to future employers that you are not sloppy and take care with the details of your work and processes!
+
+* **4:**  
+  - README concisely communicates your learning goals, the evolution of the project, and reflections - while using good formatting to enhance readability
+  - README links to any applicable repos/deployed sites
+  - You use a rebase workflow
+  - Git commits are atomic, with concise and precise descriptions of the change made
+  - PRs have full, consistent descriptions
+  - You lean on cohortmates or a mentor to do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging
+  - Evolution of the project (decisions made, etc) is fully and clearly documented in the git history and PRs
+  - When the project is run locally, the terminal shows no errors or warnings
+  - PropTypes or type-checking of props is complete and specific (all data passed into a component is correctly and specifically identified)
+* **3:**
+  - README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
+  - README links to all applicable repos/deployed sites
+  - Git commits are atomic, with concise and precise descriptions of the change made
+  - PRs have full, consistent descriptions
+  - Evolution of the project (decisions made, etc) is documented in the git history and PRs but is sometimes unclear
+  - When the project is run locally, the terminal shows no errors and fewer than 5 warnings
+  - PropTypes or type-checking of props is mostly complete
+* **2:**
+  - README concisely communicates your learning goals and the evolution of the project, but does not use Markdown formatting to aid readability
+  - README links to any applicable repos/deployed sites
+  - Git commits are mostly atomic but sometimes document changesets that are too large
+  - PRs do not have thorough descriptions
+  - Team members mostly do not do code reviews on PRs
+  - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
+  - When the project is run locally, the terminal shows no errors and more than 5 warnings
+  - PropTypes or type-checking of props is incomplete
+* **1:** 
+  - README does not document your learning goals, the evolution of the project, and is poorly formatted (hindering readability)
+  - README does not include links to team member's GitHub profiles
+  - Git commits are not atomic and document changesets that are too large
+  - PRs do not have thorough descriptions, and no code reviews are conducted, merging bugs into the main branch
+  - When the project is run locally, the terminal shows errors and more than 5 warnings
+  - PropTypes or type-checking of props is not implemented
 
 ### Testing
 
-* 4 - All async functionality is tested, tests are passing and run efficiently (using mount only when appropriate).  Unit tests for snapshots and methods cover not only happy paths but also sad paths.  Evaluator has no recommendations for testing.
-* 3 - Includes testing from levels 1 and 2, and a valid attempt to test asynchronous functionality has been made.  Asynchronous tests cover happy paths as well as multiple sad paths.
-* 2 - Nearly all unit tests are in place. Components are well tested with a diverse set of tests including but not limited to snapshot tests, event simulation tests, and tests on class methods (including `componentDidMount`).  No attempt to test async functionality was made.
-* 1 - There is little or no evidence of testing in the application.  There are some UI tests including snapshot tests, but major gaps in unit testing functionality.
+* **4:** 
+  - Team has successfully achieved 90%+ test coverage of all components
+  - All async functionality is mocked
+  - Async tests cover happy & sad paths
+  - All unit tests are in place, including conditional rendering
+  - All integration tests are in place, tested from the correct component
+* **3:** 
+  - All unit tests are in place & passing, including any conditional rendering
+  - All integration tests are in place, tested from the correct component
+  - Happy path async functionality is tested
+* **2:**
+  - Most unit tests are in place & passing
+  - A valid attempt is made at integration testing; some integration tests may be in the wrong place (aka, attempted to be done by a component that cannot actually "see"/access all the necessary functionality/data)
+  - Little or no attempt at async testing was made
+* **1:** 
+  - Many unit tests are missing/failing
+  - Little or no attempt is made at integration testing
+  - Little or no attempt is made at async testing
+  - There are obvious, large gaps in testing app functionality
 
-### Routing
+### Routing  
 
-* 4 - All requirements from 3 met, and always chooses the correct component for rendering, as well as the correct Route API. Application should account for undefined routes.
-* 3 - Application uses React Router to display appropriate components based on URL.
-* 2 - Application uses React Router, but does not display the appropriate components upon navigating.
-* 1 - Application uses React Router, but does not render/use all routes.
+* **4:**
+  - Application has been refactored to use Router without leaving artifacts of the prior code (no odd workarounds remaining)
+  - Use of Router shows developer empathy (readability, maintainability)
+  - Application uses React Router components and does not manipulate the `history` object 
+  - A 404 page handles undefined routes
+  - UX is excellent; routes are consistent and navigation is clear
+* **3:**
+  - Application uses Router to display appropriate components based on URL
+  - Refactoring was clean; there may be a few code smells showing the existence of the prior code, but there are no major bugs indicating a lack of understanding of Router
+  - Application uses React Router components and does not manipulate the `history` object
+  - UX is clear and set up so the user has access to previous routes
+* **2:**
+  - Application uses Router but does not display the appropriate components when navigating throughout the app
+  - Refactoring is messy; there are remnants of the previous code or other code smells that indicate that Router is not clearly understood
+  - There are 1+ issues with the UX; access to routes is unclear or not fully implemented
+* **1:**
+  - Application uses Router but fails to properly display all necessary routes
+  - Application does not use built-in React Router components and instead directly manipulates the `history` object
+  - UX is challenging; multiple pages are missing links to routes, or browser Back/Forward arrow navigation does not work

@@ -168,7 +168,7 @@ To earn a given score, an application must meet the requirements listed in that 
 * **4:**
   - Team uses a PR template for every pull request
   - Team habitually conducts thorough code reviews in the GitHub GUI to document the progress of the application
-  - Team has sought out code reviews from one or more mentors
+  - Team has sought out technical code reviews from one or more mentors and documented them in the GitHub GUI
 * **3:**
   - Commits are atomic and frequent, effectively documenting the evolution/progression of the application
   - Commit messages are consistent, descriptive, and concise and begin with a verb and capital letter
@@ -224,13 +224,12 @@ To earn a given score, an application must meet the requirements listed in that 
   * All functions strictly adhere to the Single Responsibility Principle (SRP)
   * There are no nested if/else statements
   * Functions and code are well-refactored and show developer empathy
-  * There are no global variables aside from query selectors, `pastActivities` and `currentActivity`.
 * **3:**
   * Application uses the Data Model exclusively to track changes to the activities,
     and display of activities happens after the Data Model has been updated
   * There are no nested for loops
   * Functions are DRY and observe SRP - and most are around 10 lines of code or less
-  * There are no global variables aside from query selectors and an array for your activity
+  * There are no global variables aside from query selectors, an array for your activities and a `currentActivity` variable (if needed). 
   * Uses event delegation correctly on dynamic elements where applicable
   * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
 * **2:**
