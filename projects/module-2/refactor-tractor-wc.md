@@ -225,7 +225,7 @@ In addition to your refactoring, you also want to make sure the application is f
 * 1: Tests have not been updated to reflect changes made in refactor.
 
 ## SASS
-* 4: Application fulfills all requirements of the proficient level, and has SASS functionality that goes above and beyond an MVP.
+* 4: Application fulfills all requirements previously mentioned, and has SASS functionality that goes above and beyond an MVP.
 * 3: The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
 * 2: Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
 * 1: The application makes little to no use of SASS and is not separated into logical stylesheets. There are many instances of duplication

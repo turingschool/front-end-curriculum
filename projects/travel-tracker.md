@@ -25,7 +25,7 @@ For this project, you will be creating an application to manage and track differ
 
 ## Initial Setup
 
-For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) repo. Setup instructions are in the README.  You will also need to clone down this [local server](https://github.com/turingschool-examples/travel-tracker-api){:target='blank'} and have it running in a separate tab in your terminal each time you run your client.
+For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit){:target='blank'} repo. Setup instructions are in the README.  You will also need to clone down this [local server](https://github.com/turingschool-examples/travel-tracker-api){:target='blank'} and have it running in a separate tab in your terminal each time you run your client.
 
 ### Endpoints
 
@@ -42,14 +42,18 @@ Below are all the endpoints set up for this project. You may not use all of them
 | Modify single trip | `http://localhost:3001/api/v1/updateTrip` | POST | `{id: <number>, status:<String of 'approved' or 'pending', suggestedActivities: <Array of strings>}` *Only a status* **or** *a suggestedActivities property is required for a successful request*| `{message: 'Trip #<id> has been modified', updatedTrip: <Object with newly updated data>}`|
 | Delete single trip| `http://localhost:3001/api/v1/trips/<id>`     *where`<id>` will be a number of a trip's id*  | DELETE | none | Trip #<id> has been deleted |
 
-- All POST and DELETE requests should have the following headers:
+<section class="note">
+### Note
+
+* All POST and DELETE requests should have the following headers:
 ```js
 {
   "Content-Type": "application/json"
 }
 ```
 
-- Remember, a `.catch` won't necessarily run on a bad response (ie 4xx level status) from the server. Make sure you're checking your response status codes and messages if something isn't working as expected
+* Remember, a `.catch` won't necessarily run on a bad response (ie 4xx level status) from the server. Make sure you're checking your response status codes and messages if something isn't working as expected
+</section>
 
 ## Iterations
 
@@ -134,7 +138,7 @@ Your testing suite should test all of the functionality of the application, incl
 * Anything that updates class properties
 
 ## Workflow
-You will be assigned one workflow buddy to submit PRs to:
+You will want to submit PRs to your accountabilibuddy to:
 
 * You must give your accountabilibuddy collaboration access to your repo.
 * You must submit _at least_ 2 PRs to your accountabilibuddy for review.
@@ -153,7 +157,7 @@ It is up to you to decide what changes warrant a PR – remember we want to subm
 
 ## Due Date
 
-Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6) by **Tuesday, January 19th at 9pm**
+Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'} by **Tuesday, January 19th at 9pm**
 
 # Rubric
 
@@ -180,7 +184,7 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6) b
 
 ## SASS
 
-* 4: Application fulfills all requirements of the proficient level, and has SASS functionality that goes above and beyond an MVP.
+* 4: Application fulfills all requirements previously mentioned, and has SASS functionality that goes above and beyond an MVP.
 * 3: The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
 * 2: Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
 * 1: The application makes little to no use of SASS and is not separated into logical stylesheets. There are many instances of duplication
