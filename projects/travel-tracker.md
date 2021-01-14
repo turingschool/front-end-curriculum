@@ -25,7 +25,7 @@ For this project, you will be creating an application to manage and track differ
 
 ## Initial Setup
 
-For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) repo. Setup instructions are in the README
+For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) repo. Setup instructions are in the README.  You will also need to clone down this [local server](https://github.com/turingschool-examples/travel-tracker-api){:target='blank'} and have it running in a separate tab in your terminal each time you run your client.
 
 ### Endpoints
 
@@ -33,14 +33,14 @@ Below are all the endpoints set up for this project. You may not use all of them
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
-| Get all travelers|`https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/travelers/travelers`| GET  | none | object with `travelers` property containing an array of all travelers |
-|Get single traveler|`https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/travelers/travelers/<id>`     *where`<id>` will be a number of a traveler's id* | GET  | none | object of single traveler's info |
-|Get all trips| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips` | GET | none | object with `trips` property containing an array of all travelers |
-|Get all destinations| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/destinations/destinations` | GET | none | object with `trips` property containing an array of all travelers |
-| Add new trip |`https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips`| POST | `{id: <number>, userID: <number>, destinationID: <number>, travelers: <number>, date: <string 'YYYY/MM/DD'>, duration: <number>, status: <string 'approved' or 'pending'>, suggestedActivities: <array of strings>}` | `{message: 'Resource with id <id> successfully posted', newResource: <Object with trip info just posted>}`|
-| Add new destination|`https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/destinations/destinations`| POST | `{id: <number>, destination: <string>, estimatedLodgingCostPerDay: <number>, estimatedFlightCostPerPerson: <number>, image: <string>, alt: <string>}` | `{message: 'Resource with id <id> successfully posted', newResource: <Object with destination info just posted>}`|
-| Modify single trip | `https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/updateTrip` | POST | `{id: <number>, status:<String of 'approved' or 'pending', suggestedActivities: <Array of strings>}` *Only a status* **or** *a suggestedActivities property is required for a successful request*| `{message: 'Trip #<id> has been modified', updatedResource: <Object with newly updated data>}`|
-| Delete single trip| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips` | DELETE | `{id: <Number>}` | Trip #<id> has been deleted |
+| Get all travelers|`http://localhost:3001/api/v1/travelers`| GET  | none | object with `travelers` property containing an array of all travelers |
+|Get single traveler|`http://localhost:3001/api/v1/travelers/<id>`     *where`<id>` will be a number of a traveler's id* | GET  | none | object of single traveler's info |
+|Get all trips| `http://localhost:3001/api/v1/trips` | GET | none | object with `trips` property containing an array of all trips |
+|Get all destinations| `http://localhost:3001/api/v1/destinations` | GET | none | object with `destinations` property containing an array of all destinations |
+| Add new trip |`http://localhost:3001/api/v1/trips`| POST | `{id: <number>, userID: <number>, destinationID: <number>, travelers: <number>, date: <string 'YYYY/MM/DD'>, duration: <number>, status: <string 'approved' or 'pending'>, suggestedActivities: <array of strings>}` | `{message: 'Trip with id <id> successfully posted', newTrip: <Object with trip info just posted>}`|
+| Add new destination|`http://localhost:3001/api/v1/destinations`| POST | `{id: <number>, destination: <string>, estimatedLodgingCostPerDay: <number>, estimatedFlightCostPerPerson: <number>, image: <string>, alt: <string>}` | `{message: 'Destination with id <id> successfully posted', newDestination: <Object with destination info just posted>}`|
+| Modify single trip | `http://localhost:3001/api/v1/updateTrip` | POST | `{id: <number>, status:<String of 'approved' or 'pending', suggestedActivities: <Array of strings>}` *Only a status* **or** *a suggestedActivities property is required for a successful request*| `{message: 'Trip #<id> has been modified', updatedTrip: <Object with newly updated data>}`|
+| Delete single trip| `http://localhost:3001/api/v1/trips/<id>`     *where`<id>` will be a number of a trip's id*  | DELETE | none | Trip #<id> has been deleted |
 
 - All POST and DELETE requests should have the following headers:
 ```js
@@ -136,11 +136,11 @@ Your testing suite should test all of the functionality of the application, incl
 ## Workflow
 You will be assigned one workflow buddy to submit PRs to:
 
-* You must give your workflow buddy collaboration access to your repo.
-* You must submit _at least_ 2 PRs to your workflow buddy for review.
-* You must wait for your workflow buddy to review your PRs, and allow THEM to merge any PRs you submit.
+* You must give your accountabilibuddy collaboration access to your repo.
+* You must submit _at least_ 2 PRs to your accountabilibuddy for review.
+* You must wait for your accountabilibuddy to review your PRs, and allow THEM to merge any PRs you submit.
 
-It is up to you to decide what changes warrant a PR – remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you’re struggling with or have questions about or need help with. As a workflow buddy, you are responsible for reviewing at least 2 PRs from your partner.
+It is up to you to decide what changes warrant a PR – remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you’re struggling with or have questions about or need help with. As an accountabilibuddy, you are responsible for reviewing at least 2 PRs from your partner.
 
 **Please also tag your project manager in any PR you make to your buddy.**
 
@@ -153,41 +153,41 @@ It is up to you to decide what changes warrant a PR – remember we want to subm
 
 ## Due Date
 
-Make sure you turn in your project [here](https://docs.google.com/spreadsheets/d/1sezifM_yYe9M7VK0DrnoiTyAnAXsU6d2UaQlSfyH9aQ/edit#gid=1963824141) by **Tuesday, September 22nd at 9pm**
+Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6) by **Tuesday, January 19th at 9pm**
 
 # Rubric
 
 ## Specification Adherence
 
-* [ ]  Novice - The application completes only the first iteration, displaying the user's data, but has no additional functionality.
-* [ ]  Advanced Beginner -The application completes the first 2 iterations and is in a usable state, but has some miscellaneous bugs.
-* [ ]  Proficient - The application completes the first 3 iterations above without error.
-* [ ]  Exceptional - The application completes all iterations above and implements one or more of the extensions.
+* 4: The application completes all iterations above and implements one or more of the extensions.
+* 3: The application completes the first 3 iterations above without error.
+* 2: The application completes the first 2 iterations and is in a usable state, but has some miscellaneous bugs.
+* 1: The application completes only the first iteration, displaying the user's data, but has no additional functionality.
 
 ## UI/UX & Accessibility
 
-* [ ] Novice - The application is confusing or difficult to use. The UI is incomplete, and the app is not responsive. Accessibility has not been considered. 
-* [ ] Advanced Beginner - The application may be confusing or difficult to use at times. The application shows some effort in the interface, but the result is not effective because UX and/or UI still present an application that is incomplete or difficult to use. The UI is incomplete, and the app is not responsive. Accessibility has been considered, but does not have strong accessible features. 
-* [ ] Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX. Lighthouse accessibility audit is at least 90%.
-* [ ] Exceptional - Meets all expectations for `Proficient`. In addition, the application has clearly had special consideration around usability on devices. Lighthouse accessibility audit is at a 100%.
+* 4: Application has clearly had special consideration around accessibility and usability on devices. Lighthouse accessibility audit is at a 100%.
+* 3: Application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance. The application is fully responsive and the UI does not detract from the UX. Lighthouse accessibility audit is at least 90%.
+* 2: The application may be confusing or difficult to use at times.  The UI is incomplete, and the app is not responsive. Accessibility has been considered, but does not have strong accessible features. 
+* 1: Application is confusing or difficult to use. The UI is incomplete, and the app is not responsive. Accessibility has not been considered. 
 
 ## JavaScript Style & OOP
 
-* [ ] Novice - Application is not separated into classes, or methods and properties are illogically assigned to classes. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity. Business-side logic and view-related code are not separated.
-* [ ] Advanced Beginner - Application has a significant amount of duplication. Application is organized into classes that do not display a good understanding of encapsulation, and logic is not well-divided. Developer cannot articulate what each line of code is doing.
-* [ ] Proficient - Application is thoughtfully put together with some duplication. Developers can speak to choices made in the code and knows what every line of code is doing. Application is organized into classes (and correctly uses inheritance) with some misplaced logic. Business-logic code is mostly separated from view-related code.
-* [ ] Exceptional - Meets all requirements of `Proficient`. In addition, application has exceptionally well-factored code with little or no duplication. SRP (single responsibility principle) and DRY (don't repeat yourself) principles are utilized. There are _zero_ instances where an instructor would recommend taking a different approach. There are no instances where instructor would suggest moving logic or data to another class. The business-logic code driving functionality is cleanly separated from rendering, view-related code.
+* 4: Application has exceptionally well-factored code with little or no duplication.  The business-logic code driving functionality is cleanly separated from rendering, view-related code.   Excellent usage of `fetch` and updates DOM based on results of network requests.  Handles all scenarios for error handling.
+* 3: Application is thoughtfully put together with some duplication.  Application is organized into classes with some misplaced logic. Business-logic code is mostly separated from view-related code.  Great usage of `fetch` and updates DOM based on results in most scenarios, but may update DOM before a network request is complete.  Handles some scenarios for error handling.
+* 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has zero error handling and only `logs` errors if a network request fails.
+* 1:  Application generates syntax error or crashes during execution.  Application is not separated into classes and there is no separation of business-side logic and view-related code. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity.
 
-## CSS/SASS Style
+## SASS
 
-* [ ] Novice -  The application makes little to no use of SASS and is not separated into logical stylesheets. There are many instances of duplication
-* [ ] Advanced Beginner - Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
-* [ ] Proficient - The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
-* [ ] Exceptional - Application fulfills all requirements of the proficient level, and has SASS functionality that goes above and beyond an MVP.
+* 4: Application fulfills all requirements of the proficient level, and has SASS functionality that goes above and beyond an MVP.
+* 3: The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
+* 2: Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
+* 1: The application makes little to no use of SASS and is not separated into logical stylesheets. There are many instances of duplication
 
 ## Testing
 
-* [ ] Novice - There is little or no evidence of testing in the application.
-* [ ] Advanced Beginner - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
-* [ ] Proficient - Project has a running test suite that tests multiple levels but fails to cover some features and only tests for happy paths.
-* [ ] Exceptional - The test suite covers almost all aspects of the application and covers both happy/sad paths.
+* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.
+* 3: Application is well tested but fails to cover some features and only tests for happy paths.
+* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
+* 1: There is little or no evidence of testing in the application.
