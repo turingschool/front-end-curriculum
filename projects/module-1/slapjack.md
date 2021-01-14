@@ -69,7 +69,7 @@ Note: No need to match colors or fonts, but the overall layout should be the sim
 
 ### Architecture
 
-Your entire application will consist of one HTML page or template. You will have three JavaScript files:
+Your entire application will consist of one HTML page. You will have three JavaScript files:
 
 1. A `player.js` file that contains a `Player` class.
 	- `Player` methods must include, _but are not limited to_: `playCard` and `saveWinsToStorage`  
