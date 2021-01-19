@@ -127,6 +127,7 @@ To earn a given score, an application must meet the requirements listed in that 
   - Commits are atomic and frequent, effectively documenting the evolution/progression of the application. Remember, a commit should be one “unit” of work.
   - Commit messages are consistent, descriptive, concise and begin with a verb and capital letter
   - Team uses PRs to screen/verify code before adding it to the main branch
+  - Branches are consistently used for individual features
   - There is no more than a 10% disparity in code contributions between teammates. Note: this is checked via the “Insights” and “Contributors” tab in your GitHub repo.
   - README is well formatted and gives good context about the project. At minimum, a sufficient README should contain - contributors, technologies used, instructions for running and viewing the project, deploy link (gh-pages), images/GIFs if necessary, future additions, etc. Think about what a user needs to understand and get the full picture of the application.
 
@@ -134,6 +135,7 @@ To earn a given score, an application must meet the requirements listed in that 
   - Commits are large and do not effectively communicate the progression of the application. 
   - Team uses PRs but do not review code before merging into the main branch
   - During evaluations with PM, all teammates can speak to the purpose and functionality of any/every line of code.  
+  - Branches are sometimes used for individual features
   - There is a 20% disparity in code contributions between teammates
   - README is brief and does not provide full context for the project
 
