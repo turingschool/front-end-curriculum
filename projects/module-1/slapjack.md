@@ -51,9 +51,9 @@ Player 2's keyboard controls:
 Gameplay:
 - Players alternate turns playing cards face-up into the central pile (ex a player can't deal twice in a row)
 - Any player can slap at any time, with several outcomes!
-  - If a player slaps when a Jack is on top of the central pile, the entire central pile is added to the player's hand, and their hand is shuffled automatically.
-  - If a player slaps when a Double or a pair (two cards of the same number - such as two Aces, or two Fives, or two Queens) is on top of the central pile, the entire central pile is added to the player's hand, and their hand is shuffled automatically.
-  - If a player slaps when a Sandwich (two cards of the same number - such as two Aces, or two Fives, or two Queens, separated by a different card in the middle) is on top of the central pile, the entire central pile is added to the player's hand, and their hand is shuffled automatically.
+  - If a player slaps when a Jack is on top of the central pile, the entire central pile is shuffled and then added to the player's hand.
+  - If a player slaps when a Double or a pair (two cards of the same number - such as two Aces, or two Fives, or two Queens) is on top of the central pile, the entire central pile is shuffled and then added to the player's hand.
+  - If a player slaps when a Sandwich (two cards of the same number - such as two Aces, or two Fives, or two Queens, separated by a different card in the middle) is on top of the central pile, the entire central pile is shuffled and then added to the player's hand.
   - If a player slaps when neither a Jack, Double, or Sandwich is on top of the central pile, the player who slapped loses the card on top of their hand and it is added to the bottom of their opponent's hand.
 - If one player loses all their cards, they have one chance to not lose and continue the game:
   - The player with cards left continues to deal from their hand into the central pile (they are now allowed to deal multiple times in a row!)
