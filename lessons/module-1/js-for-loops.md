@@ -142,14 +142,14 @@ These are known as *iterator methods* and they each have their own uses and beha
 
 ### Solo Practice
 
-#### Medium Heat 🔥🔥: Annoying Zoo Kid
+#### Medium Heat 🔥: Annoying Zoo Kid
 
 1. Create an array of four animals called `animals`.
 2. Create a function called `nameAnimals`.
 3. Within your function, create a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
 4. With your array (and - if needed - with your knowledge of parameters), invoke your function to ensure it is working correctly!
 
-#### Spicy 🔥: Pet Sentences
+#### Spicy 🔥🔥: Pet Sentences
 
 Use the following code:
 
