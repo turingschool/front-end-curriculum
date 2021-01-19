@@ -47,6 +47,7 @@ problem.
     - Run `npm test test/book-test.js`  
     - Read the error messages CAREFULLY!  
     - Make the test pass.
+  - Ensure that all of the skips are removed from the test file when you push up to GitHub.
   - Before moving on to the next iteration, take time to refactor your
     solutions. Is this the best approach to solving the problem? Is there a
     different way you could make the tests pass?  
@@ -55,6 +56,7 @@ problem.
 
   - Unskip the first test in `test/shelf-test.js`, and get to work passing the tests
   - Run `npm test test/shelf-test.js`  
+  - Ensure that all of the skips are removed from the test file when you push up to GitHub.
   - Before moving on to the next iteration, take time to refactor your
     solutions. Is this the best approach to solving the problem? Is there a
     different way you could make the tests pass?  
@@ -63,14 +65,17 @@ problem.
 
   - Unskip the first test in `test/library-test.js`, and get to work passing the tests
   - Run `npm test test/library-test.js`  
+  - Ensure that all of the skips are removed from the test file when you push up to GitHub.
   - Before moving on to the next iteration, take time to refactor your
     solutions. Is this the best approach to solving the problem? Is there a
-    different way you could make the tests pass?  
+    different way you could make the tests pass?
+
 
 ### Extension (not part of the project, just stuff to do if you get to it): Complete the Librarian tests
   - Unskip the first test in `test/librarian-test.js`, and get to work passing the tests
   - Run `npm test test/librarian-test.js`  
   - This test involves using a class. It will require self-teaching in order to complete.
+  - Ensure that all of the skips are removed from the test file when you push up to GitHub.
 
 ## Self-Assessment
 
@@ -80,7 +85,7 @@ The value of this project, and every project, lies in the learning that you do a
 
 The skills you will develop over the course of this project are:
 
-- Understanding fundamental JS: 
+- Understanding fundamental JS:
     - functions
     - manipulating arrays
     - manipulating objects

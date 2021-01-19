@@ -44,6 +44,7 @@ problem.
     - Run `npm test test/meal-test.js`  
     - Read the error messages CAREFULLY!  
     - Make the test pass.
+  - Ensure that all of the skips are removed from the test file when you push up to GitHub.
   - Before moving on to the next iteration, take time to refactor your
     solutions. Is this the best approach to solving the problem? Is there a
     different way you could make the tests pass?  
@@ -51,6 +52,7 @@ problem.
 ### 2: Complete the **order** tests
   - Unskip the first test in `test/order-test.js`, and get to work passing the tests
   - Run `npm test test/order-test.js`
+  - Ensure that all of the skips are removed from the test file when you push up to GitHub.
   - Before moving on to the next iteration, take time to refactor your
     solutions. Is this the best approach to solving the problem? Is there a
     different way you could make the tests pass?  
@@ -58,6 +60,7 @@ problem.
 ### 3: Complete the **restaurant** tests
   - Unskip the first test in `test/restaurant-test.js` and get to work passing the tests
   - Run `npm test test/restaurant-test.js`  
+  - Ensure that all of the skips are removed from the test file when you push up to GitHub.
   - Before moving on to the next iteration, take time to refactor your
     solutions. Is this the best approach to solving the problem? Is there a
     different way you could make the tests pass?  
@@ -66,7 +69,7 @@ problem.
   - Unskip the first test in `test/Chef-test.js`, and get to work passing the tests
   - Run `npm test test/Chef-test.js`
   - This test involves using a class. It will require self-teaching in order to complete.
-
+  - Ensure that all of the skips are removed from the test file when you push up to GitHub.
 
 ## Self-Assessment
 
@@ -76,7 +79,7 @@ The value of this project, and every project, lies in the learning that you do a
 
 The skills you will develop over the course of this project are:
 
-- Understanding fundamental JS: 
+- Understanding fundamental JS:
     - functions
     - manipulating arrays
     - manipulating objects
