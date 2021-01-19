@@ -29,11 +29,7 @@ Read through [Intro to CSS Pre-Work document](./intro-to-css-prework.html) and a
 ## Warm Up
 
 <section class="call-to-action">
-Answer the following questions in your notebook. Be ready to share out your answer as if you were in an interview.
-
-- What is the difference between HTML and CSS?
-- List at least two ways an element can be targeted in CSS, and write out the syntax.
-- List at least three CSS properties and explain what they do.
+Add your thoughts and questions to [this google document](https://docs.google.com/document/d/1q0rv8RN5w4ECL0CSOhB-QbqQ2HQsYPRQ-7aCf30bo3g/edit?usp=sharing).
 </section>
 
 
