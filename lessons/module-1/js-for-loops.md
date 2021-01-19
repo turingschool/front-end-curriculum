@@ -149,7 +149,7 @@ These are known as *iterator methods* and they each have their own uses and beha
 3. Within your function, create a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
 4. With your array (and - if needed - with your knowledge of parameters), invoke your function to ensure it is working correctly!
 
-#### Spicy 🔥🔥🔥: Pet Paragraph
+#### Spicy 🔥: Pet Sentences
 
 Use the following code:
 
