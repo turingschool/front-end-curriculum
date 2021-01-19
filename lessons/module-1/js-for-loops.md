@@ -170,30 +170,35 @@ var pets = [
   {
     name: 'Pumpernickel',
     type: 'cat',
-    favoriteTreat: 'kibble',
+    favoriteTreat: 'tuna',
     human: 'Eric'
   }
 ];
 ```
 
 1. Create a function called `getPetNames` that takes one parameter: an array of pet objects.
-2. Within your function, create a variable, `paragraph`, with a value of an empty string.
-3. Within your function, create a `for` loop
-4. Inside the `for` loop, declare a `sentence` variable, whose value uses the pet object's information to create a string (such as "Leta has a pet cat named Tilly who loves cheese. ")
-5. Inside the `for` loop, use the `sentence` variable to add to and reassign the `paragraph` variable.
-6. Outside the `for` loop (but still inside the function), return the updated `paragraph` variable.
-7. Invoke your new function, passing in the `pets` array, and save it's returned value into a new variable.
-8. Console log that new variable.
-9. Give yourself a high five!
+2. Within your function, create a `for` loop
+3. Inside the `for` loop, `console.log` a sentence describing each pet, for example: Leta has a cat named Tilly who eats cheese.
 
 #### Connecting with previous knowledge - Extra Spicy 🔥🔥🔥🔥
 
 1. Use the array of pets above.
 2. Declare a function called `logValuesByKey` that takes two parameters: an array, and a key
 3. Inside of that function, write a `for` loop that logs the value of the provided key for each object in the array. Hint: Consider which object notation to use.
-4. Invoke the  function, passing it the pets array and the key of 'type'.
+4. Invoke the  function, passing it the pets array and the key of 'human'.
 5. Repeat, but send through a different key.
 6. Dang! You just wrote a flexible, powerful, dynamic function. *Very* tite.
+
+**Need a hint?**
+Here is some starter code to get you started!
+```javascript
+  function logValuesByKey(array, key) {
+    // insert code here
+  }
+
+  logValuesByKey(pets, 'human');
+  // expected output: 'Leta', 'Amy', 'Eric'
+```
 
 </section>
 
