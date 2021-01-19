@@ -67,6 +67,7 @@ Make sure that you link this file in your `index.html` using a `script` tag, abo
 - Form Functionality
   - When an activity category is clicked on (`Exercise`, `Meditate`, or `Study`), the associated border and icon should change colors to give a visual indication that it has been selected. Colors are provided in comp.
   - An input field should be provided for `What would you like to accomplish during this time?`, `minutes` and `seconds`. The `minutes` and `seconds` fields should only accept numbers. (Hint: more than one layer should probably be put into place to ensure this. Make sure that `e` cannot be accepted.)
+  - A user should see an error message if they attempt to submit the form without filling out all fields. (Note: The comp shows the error message for forgetting a description - You should mimic this error messaging for all inputs.)
   - A `Start Activity` button is provided to submit the data entered into the form. When the button is clicked, update your data model with an instance of the Activity class.
   - When the `Start Activity` button is clicked, the user should no longer see the form, and instead see a timer clock. The timer clock should display the user-provided minutes and seconds, as well as the description. The category should not appear, but the outline of the circle should match the color associated with the category.
   - If the `Start Activity` button is clicked before the user has entered information into all four inputs, the user will receive an error message, but will not lose any information that was provided.
@@ -229,7 +230,7 @@ To earn a given score, an application must meet the requirements listed in that 
     and display of activities happens after the Data Model has been updated
   * There are no nested for loops
   * Functions are DRY and observe SRP - and most are around 10 lines of code or less
-  * There are no global variables aside from query selectors, an array for your activities and a `currentActivity` variable (if needed). 
+  * There are no global variables aside from query selectors, an array for your activities and a `currentActivity` variable (if needed).
   * Uses event delegation correctly on dynamic elements where applicable
   * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
 * **2:**
