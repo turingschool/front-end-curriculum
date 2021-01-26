@@ -18,15 +18,33 @@ Get set up by cloning down [this repo](https://github.com/turingschool-examples/
 
 **Follow the set up instructions outlined in the repo's README!**
 
-## Project Goals & Requirements:
+## Project Goals:
 
-1. Write **squeaky clean**, well refactored code using ES6 syntax.  
-2. Learn to pass information between components using props.
-3. Learn to write readable JSX (your render methods/return statements should be clean and simple).
-4. Use `propTypes` for every component receiving props.  
-5. Learn how to unit test React components including snapshot testing, methods, and changes in state.
+1. This is NOT graded!
+1. This is a small sandbox for you to begin seeing how React works
+1. Consider this a safe, low-stakes place to mess around and try things out
 
-## Specifications
+## Specification
+
+### Set Up
+
+Clone down this repo.
+
+Because you don't want to be pushing your updates to this boilerplate repository, we're going to have to do a few things to get set up with your own repository.
+
+1. On GitHub, create a new, empty repository and name it something like 'turing-yearbook'.
+2. Update the current remote (called "origin") so that it points at the URL of the repository you just created on GitHub. Read how to do this [here](https://help.github.com/en/articles/changing-a-remotes-url).
+3. Once you've updated the remote, you should run `npm install`, commit, and then push your initial commit to your personal repository. You will need to use the `-u` flag when you push (like this: `git push -u origin main`).
+4. Run `npm start` to start up your React server. (You will see errors!)
+
+### Expectations / Rules
+
+Build a React App that displays Turing front-end staff!
+
+![turing yearbook screenshot](https://raw.githubusercontent.com/turingschool-examples/yearbook/main/screenshot.png)
+
+We want to see good commit habits - atomic commits that log small, focused changesets.
+
 
 ### Iteration 0
 
@@ -50,16 +68,9 @@ In the `yearbook-data.js` file, un-comment-out the "students" information. Get t
 
 Then create a controlled component that allows a user to add a new student.
 
-### Iteration 3 (extension - do not attempt until iterations 0 - 2 are completed)
+### Iteration 3 (optional extension - do not attempt until iterations 0 - 2 are completed)
 
 Add in the functionality so that a user can click and edit a student's information.  A user should be able to update the name, quote, and superlative.  
 
 Lastly, add a delete button on each card that allowers a user to remove students that are no longer attending.
 
-### Iteration 4 (extension - do not attempt until iterations 0 - 3 are completed)
-
-Test all of your components.  This not only includes snapshot tests, but also all of your methods and changes in state.
-
-## Evaluation
-
-Projects will be due on Monday of Week 2 by 8am. The instructors will go through projects that morning and then go over common mistakes we saw as a class.
