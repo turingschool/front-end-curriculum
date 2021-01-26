@@ -135,7 +135,7 @@ By the time class begins in Week 2, these items should be completed:
 3. Each user story includes thorough acceptance criteria
 4. Instructors have been tagged in one PR (see below)
 
-<section class="note">
+<section class="call-to-action">
 ### PR review
 
 By Sunday evening at 5pm, please tag your instructors in one PR demonstrating at least one of the following:
@@ -223,7 +223,8 @@ It is _far_ more important to be very, very solid on the project stated learning
 
 Once you have decided on the area to continue learning, decide on a new feature or refactor.
 
-**DELIVERABLE**  
+<section class="call-to-action">
+### DELIVERABLE  
 On Friday of Week 2, send a specific outline of features/work/goals to your instructors in the group DM. Please include user stories, too. Do not begin work until you get the go-ahead from an instructor. (We may help you make your goal more specific or achievable.)
 
 Here are some ideas: 
@@ -240,6 +241,7 @@ Here are some ideas:
   - Deploy your React app (to GitHub Pages or Heroku)
 
 You are welcome to come up with your own ideas, too.
+</section>
 
 **Suggested completion date**  
 - Iteration 5 Deliverables due Thursday of Week 2
