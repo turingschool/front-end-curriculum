@@ -78,10 +78,6 @@ In the future, when we use the actual API to get individual movie details, the i
 **Suggested completion date**  
 - End of Week 1
 
-**Suggested testing progress by end of iteration**  
-- Tests are planned and pseudocoded
-- A few tests checking static renderings are written and passing
-
 ---
 
 ### Iteration 3 - Network Requests & Async JS
@@ -126,9 +122,8 @@ Please note: the server occasionally returns a 500 error. You will need to build
 - End of first weekend
 
 **Suggested testing progress by end of iteration**  
-- All tests written and passing
-- Asynchronous testing is completed
-  - Asynchronous functions are stubbed properly
+- Project board has been updated so functionality is described as user stories
+- Each user story includes thorough acceptance criteria
   
 ---
 
@@ -136,7 +131,6 @@ Please note: the server occasionally returns a 500 error. You will need to build
 
 By the time class begins in Week 2, these items should be completed:  
 1. Iterations 0-3
-2. Application is fully tested
 2. Instructors have been tagged in one PR (see below)
 
 <section class="note">
@@ -188,10 +182,8 @@ Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_q
 - End of Thursday in Week 2
 
 **Suggested testing progress by end of iteration**  
-- Unit & integration tests are written & passing
-  - Tests have been updated to accommodate Router
-- Asynchronous testing is completed
-- Router testing is completed
+- Application views and user flows are fully tested
+- Asynchronous functions are stubbed
 
 ---
 
@@ -236,8 +228,9 @@ Here are some ideas:
 * **More React and/or Router practice:** 
   - Add a search/filtering functionality for movies
 * **More testing practice:**
-  - Update your test script (in the `package.json` file) to read `"test:coverage": "CI=true npm test -- --env=jsdom --coverage"` 
-  - and aim for 90%+ test coverage of each component
+  - Take time to carefully ensure that you have tested all possible views and user flows
+  - Check to see if you have a test for each user story (using the story's acceptance criteria as a guide)
+  - Supplement your Cypress tests with unit tests and integration tests by using the React Testing Library
 * **Push yourself** (extra learning if every member of the team feels SUPER CONFIDENT in everything React, Router, and testing)**:**
   - Create your own Express microservice to store user ratings for movies; build FE functionality to use and display that service
   - Create your own Express microservice to store user favorites; build FE functionality to use and display that service
@@ -247,7 +240,7 @@ Here are some ideas:
 You are welcome to come up with your own ideas, too.
 
 **Suggested completion date**  
-- Deliverables due Thursday of Week 2
+- Iteration 5 Deliverables due Thursday of Week 2
 - Project should be completed by end of Monday of Week 3 (aim to leave final day for polishing the project, not building out features!)
 
 ---
@@ -259,6 +252,12 @@ On Tuesday, instructors will post a link to a gist in the cohort slack channel. 
 - Both project partners' names
 - A link to your project repo
 - If applicable: any links to back-end repo and/or deployed site
+
+<section class="note">
+### Project Evals
+
+In Mod 3, instructors grade your projects asynchronously, providing thorough notes and feedback, which you will receive before our project evals. During project evals, you will begin building skills of talking about your code and answering technical interview questions through the context of the project.
+</section>
 
 ---
 
