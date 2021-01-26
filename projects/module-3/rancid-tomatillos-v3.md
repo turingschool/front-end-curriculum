@@ -1,7 +1,7 @@
 ---
 title: Rancid Tomatillos
 module: 3
-tags: react,  testing, javascript, api
+tags: react,  testing, javascript, api, cypress
 ---
 
 Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a rancid tomatillo at the screen!" Or maybe you loved the movie and you could really go for a nice, fresh tomatillo salsa to enjoy the moment. Well it's your lucky day. In this project, you'll build a movie rating site where a user can login and rate the movies they loved or hated.
@@ -35,24 +35,26 @@ In that DM, please share the following:
   - What components do you envision needing?
   - Where will data be stored?
   - How will information be passed around?
-
-You may also create your React repo (we will be using [Create-React-App](https://frontend.turing.io/lessons/module-3/react-2-the-how.html)) and share the link in the DM, but you can also wait until tomorrow to do this.
+* The link to your repo (use [Create-React-App](https://frontend.turing.io/lessons/module-3/react-2-the-how.html) to start your project!)
 
 ---
 
 ### Iteration 1 - Displaying movies
 
-For this first iteration, we will use mock data to display the movies (we will later refactor our project to consume an API). The purpose of this is to allow us to focus purely on React for now.
+For this first iteration, we will use mock data to display the movies (we will later refactor our project to consume an API). The purpose of using mock data instead of querying the actual API is to allow us to focus purely on React for now.
 
 In your project repo, create a new file in the src folder. Copy in the data found in [this gist](https://gist.github.com/letakeane/d11a3c3c9f3fbcaf105c0b214f5fb754).
 
-For now, you will import this information into your `App.js` file and use this as your source of information!
+For now, you will import this information into your `App.js` file and use this as your source of information!  
+```js
+import movieData from 'put your filepath here'
+```
 
 **User Story**  
-- When a user visits the app, all movies should be displayed
+- As a user, when I visit the app, all movies should be displayed
 
 **Suggested completion date**  
-- End of Day 2
+- End of Day 2 (Wednesday of Week 1)
 
 ---
 
@@ -69,17 +71,16 @@ In the future, when we use the actual API to get individual movie details, the i
 **OR:** You can also simply use the existing movie data that you already have access to ("id", "title", "poster_path", "backdrop_path", "release_date"), knowing that eventually you will add more information ("overview", "genres", "budget", "revenue", "runtime", and "tagline").
 
 **User Story**  
-- When a user clicks a movie, that movie's details should be rendered
+- As a user, I can click a movie, and see that movie's details
 - When a movie's details are displayed, none of the other movies will be visible; it should just be that movie's details (header/footer/etc can still be visible, of course!)
 - When a movie's details are displayed, the user should have a way to return to the main view of all movies
 
 **Suggested completion date**  
-- End of Day 4
+- End of Week 1
 
 **Suggested testing progress by end of iteration**  
-- Unit tests are pseudocoded
-- Integration tests are pseudocoded
-- A few unit tests are written & passing
+- Tests are planned and pseudocoded
+- A few tests checking static renderings are written and passing
 
 ---
 
@@ -125,9 +126,9 @@ Please note: the server occasionally returns a 500 error. You will need to build
 - End of first weekend
 
 **Suggested testing progress by end of iteration**  
-- Unit & integration tests are written & passing
+- All tests written and passing
 - Asynchronous testing is completed
-  - Asynchronous functions are mocked properly
+  - Asynchronous functions are stubbed properly
   
 ---
 
@@ -135,11 +136,11 @@ Please note: the server occasionally returns a 500 error. You will need to build
 
 By the time class begins in Week 2, these items should be completed:  
 1. Iterations 0-3
-2. Application is fully tested (unit, integration, asynchronous)
+2. Application is fully tested
 2. Instructors have been tagged in one PR (see below)
 
 <section class="note">
-### Weekend Deliverable
+### PR review
 
 By Sunday evening at 5pm, please tag your instructors in one PR demonstrating at least one of the following:
 - A feature being refactored
@@ -171,7 +172,7 @@ This iteration is all about refactoring. Use the table below to add in appropria
 
 As you refactor, continue to rely on your test suite to ensure that no functionality is being lost/destroyed as you add in Router!
 
-Adding in Router is likely to break your tests at first. Make sure to [update those](https://frontend.turing.io/lessons/module-3/react-router-testing.html) to keep everything passing.
+Look into the [Cypress assertions](https://docs.cypress.io/api/commands/location.html#Syntax) which allow us to view our current URL pathname and add those into your tests!
 
 <section class="note">
 
@@ -206,9 +207,9 @@ Here is a list of concepts (including some push-yourself learning goals):
 - Router
 - Asynchronous JS
 - Testing
-  - React testing (unit & integration)
-  - Async JS testing (mocking, async/await)
-  - Router testing
+  - Ensure that every view is tested (including all possible renders when dealing with conditional rendering)
+  - Ensure that all possible user flows are tested (happy and sad paths)
+  - Ensure all asynchronous JS is properly stubbed
 - Express (server-side JavaScript)
 - Deployment
 
@@ -247,7 +248,7 @@ You are welcome to come up with your own ideas, too.
 
 **Suggested completion date**  
 - Deliverables due Thursday of Week 2
-- Complete by end of Monday of Week 3 (aim to leave final day for polishing the project, not building out features!)
+- Project should be completed by end of Monday of Week 3 (aim to leave final day for polishing the project, not building out features!)
 
 ---
 
@@ -257,7 +258,7 @@ On Tuesday, instructors will post a link to a gist in the cohort slack channel. 
 
 - Both project partners' names
 - A link to your project repo
-- If applicable: any links to additional repos/deployed site
+- If applicable: any links to back-end repo and/or deployed site
 
 ---
 
@@ -346,21 +347,21 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
 
 * **4:** 
   - Team has successfully achieved 90%+ test coverage of all components
-  - All async functionality is mocked
+  - All async functionality is stubbed and tested
   - Async tests cover happy & sad paths
-  - All unit tests are in place, including conditional rendering
-  - All integration tests are in place, tested from the correct component
+  - All application views are tested
+  - All user flows are tested
 * **3:** 
-  - All unit tests are in place & passing, including any conditional rendering
-  - All integration tests are in place, tested from the correct component
-  - Happy path async functionality is tested
+  - All application views are tested
+  - All user flows are tested
+  - Happy path async functionality is stubbed and tested
 * **2:**
-  - Most unit tests are in place & passing
-  - A valid attempt is made at integration testing; some integration tests may be in the wrong place (aka, attempted to be done by a component that cannot actually "see"/access all the necessary functionality/data)
+  - Most application views are testeed
+  - A valid attempt is made at testing user flows; some flows may be missing or incomplete
   - Little or no attempt at async testing was made
 * **1:** 
-  - Many unit tests are missing/failing
-  - Little or no attempt is made at integration testing
+  - Many application views tests are missing/failing
+  - Little or no attempt is made at testing user flows
   - Little or no attempt is made at async testing
   - There are obvious, large gaps in testing app functionality
 
