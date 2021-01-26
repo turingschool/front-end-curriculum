@@ -131,7 +131,9 @@ Please note: the server occasionally returns a 500 error. You will need to build
 
 By the time class begins in Week 2, these items should be completed:  
 1. Iterations 0-3
-2. Instructors have been tagged in one PR (see below)
+2. Project board has been updated so functionality is described as user stories
+3. Each user story includes thorough acceptance criteria
+4. Instructors have been tagged in one PR (see below)
 
 <section class="note">
 ### PR review
