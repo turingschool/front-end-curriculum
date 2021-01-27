@@ -1,5 +1,5 @@
 ---
-title: Binary Challenge
+title: Niche Audience
 module: 3
 tags: react, javascript, api
 ---
