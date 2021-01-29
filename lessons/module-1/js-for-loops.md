@@ -267,7 +267,7 @@ Some ideas, but don't feel limited to these:
 - Write-up (think blog post)
 - Series of images/diagrams
 
-You will submit your solution to the code challenge and educational resource as your exit ticket in a private Google Form. We'll ask for volunteers to share out their educational resources when we come back together!
+You will submit your solution to the code challenge and educational resource as your exit ticket in a [private Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeKJc4aGTQ33VThooO0b_0e7SfhJc4zSf99f6vHp427jR1hUw/viewform). We'll ask for volunteers to share out their educational resources when we come back together!
 
 ### Additional Practice  
 
