@@ -59,7 +59,8 @@ The following values are considered **falsy**:
 - `""`
 - `null`
 - `undefined`
-- `NaN`
+- `NaN`  
+
 **All other values are considered truthy!**
 
 This means that the following code is **unnecessary**:
@@ -97,7 +98,7 @@ if (!character) {
 <section class="call-to-action">
 ### Refactor code
 
-Code refactoring is the process of restructuring existing code without changing the code's behavior or output. Go through [this repl](https://repl.it/@kaylaewood/conditionalRefactoring) and find ways to rewrite the existing code so that it does not use unnecessary conditional logic. 
+Code refactoring is the process of restructuring existing code without changing the code's behavior or output. Go through [this repl](https://repl.it/@kaylaewood/conditionalRefactoring) and find ways to rewrite the existing code so that it does not use unnecessary conditional logic.
 </section>
 
 <section class="checks-for-understanding">
