@@ -32,7 +32,7 @@ JavaScript was created to make the web more dynamic. It is a scripting language 
 
 JavaScript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces (e.g. browsers) as well as handle the server-side extensions that connect with a database.
 
-It's a highly versatile and flexible language, favoring configuration over convention. This means that, when you're working in JavaScript, there are TONS of different ways to accomplish the same task. Sometimes one is better than another, but often there's not One Right Way to do something. JavaScript has become the most commonly used language of the web! 
+It's a highly versatile and flexible language, favoring configuration over convention. This means that, when you're working in JavaScript, there are TONS of different ways to accomplish the same task. Sometimes one is better than another, but often there's not One Right Way to do something. JavaScript has become the most commonly used language of the web!
 
 <section class="note">
 ### The Console
@@ -84,17 +84,6 @@ When you declare a variable (similar to declaring a function), you're creating a
 ```javascript
 var myVariableName;
 ```
-
-<section class="note">
-
-### Various Variables
-
-JavaScript recognizes a few different types of variables: `var`, `let`, and `const`.  They each behave a little differently, so it's important to understand the differences. If you don't, you might run into some errors.
-
-In your first module, you'll mostly see `var`. It's the ES5 (ECMAScript 5) version of a variable. It's still used in production code to this day, but newer versions of JavaScript gave us `let` and `const`.
-
-As you move through the program, you'll work with `let` and `const` more and more. If you'd like to just stick with `var` for now, that's perfectly fine. If you'd like to use `let` and `const` - go right ahead. Just make sure to [do your research first.](https://codeburst.io/difference-between-var-let-and-const-in-javascript-fbce2fba7b4)
-</section>
 
 <section class="call-to-action">
 ### Console Practice
@@ -155,6 +144,17 @@ age = 32;
 
 On the first line, we see the variable declaration and initial assignment. Below, we see `age = 31`. Syntactically, there are many similarities. The main difference is, **we do not use the keyword var**.
 
+<section class="note">
+
+### Various Variables
+
+JavaScript recognizes a few different types of variables: `var`, `let`, and `const`.  They each behave a little differently, so it's important to understand the differences. If you don't, you might run into some errors.
+
+In your first module, you'll mostly see `var`. It's the ES5 (ECMAScript 5) version of a variable. It's still used in production code to this day, but newer versions of JavaScript gave us `let` and `const`.
+
+As you move through the program, you'll work with `let` and `const` more and more. If you'd like to just stick with `var` for now, that's perfectly fine. If you'd like to use `let` and `const` - go right ahead. Just make sure to [do your research first.](https://codeburst.io/difference-between-var-let-and-const-in-javascript-fbce2fba7b4)
+</section>
+
 ### Using Variables Together
 
 Now that we know about different data types and have values assigned to both of our variables, let's dive into using them together!
@@ -173,7 +173,7 @@ We have a variable called "creatureCount" and assign the value as our quantity a
 
 Variables are so flexible and so powerful! If you name them accurately and you have a good grasp of what they contain, they'll be your best friend. However, that's easier said than done when you start your programming journey. A common pitfall we see students struggling with is forgetting what data type is contained in the variable - and how to best interact with that data type.
 
-When you are working with variables, it's always a good idea to take a moment to think about the data type it contains. 
+When you are working with variables, it's always a good idea to take a moment to think about the data type it contains.
 
 </section>
 
@@ -188,7 +188,7 @@ Between you and your partner, find out whose birthday comes earlier in the year.
 - Birthday earlier in the year partner: Concatenation
 - Birthday later in the year partner: Interpolation
 
-Take 3 minutes to read through the section you were assigned to, and implement it in your Dev Tools. When the timer goes off, you and your partner will walk each other through the method you read about.
+Take 3 minutes to read through the section you were assigned to, and implement it in your Dev Tools. Then, you and your partner will walk each other through the method you read about.
 </section>
 
 #### 1. Concatenation
@@ -208,7 +208,7 @@ In this instance, we're concatenating multiple values including two strings and 
 
 #### 2. Interpolation
 
-Another way of adding values to strings is through **template literals**.  Template literals are special strings that allow us to _interpolate_ information. They use back ticks instead of normal quotes and use a combination of a dollar sign followed by curly braces. ie. ``${quantity} ${mythicalCreature}``
+Another way of adding values to strings is through **template literals**.  Template literals are special strings that allow us to _interpolate_ information. They use back ticks instead of normal quotes and use a combination of a dollar sign followed by curly braces. ie. ``${quantity} ${mythicalCreature}`` Note: The back tick can be found on the key next to the number 1 on your keyboard (it shares a key with ~).
 
 We can interpolate HTML tags, text, numbers, and variable values. Let's revisit our example above to create a more readable phrase as the value of our creatureCount variable:
 
@@ -252,7 +252,7 @@ Think about the following sentences:
 - "It's raining a lot!"
 - "It's raining cats and dogs!"
 
-Both of these sentences are statements! They declare something. But one of them is an _expression_ - it means something other than what the letters actually spell out. "It's raining cats and dogs" ACTUALLY _means_ "It's raining a lot". 
+Both of these sentences are statements! They declare something. But one of them is an _expression_ - it means something other than what the letters actually spell out. "It's raining cats and dogs" ACTUALLY _means_ "It's raining a lot".
 
 Similarly, consider the following code statements:
 
@@ -310,7 +310,7 @@ Some examples of expressions we could use for a conditional are:
 
 * `myNum < 5`
 * `userCity === "Denver"`
-* `isTired === true`
+* `isTired`
 
 Now for some real conditional examples.
 
