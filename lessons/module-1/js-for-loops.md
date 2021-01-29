@@ -19,6 +19,8 @@ tags: javascript, foundation, arrays, loops
 
 ## Warm Up
 
+### Part 1 - Set Up
+
 In a repl.it, declare a variable that stores an array, and `console.log` it. Your array should contain 3 or more objects as its elements. Some ideas:
 
 - A grocery list
@@ -51,7 +53,7 @@ var pets = [
 ```
 
 <section class="call-to-action">
-### Part 1 - Warm Up, Explore
+### Part 2 - Warm Up, Explore
 
 Once in your breakout room, trade repl.it links with your partner. This way, you are each exposed to a new array that you will work with during activity. You will each need for fork the repl.it.
 
@@ -64,9 +66,9 @@ For each step that follows, make sure to `console.log` the value(s) you are acce
 
 If you finish before your partner, add another object to the array. Log it to the console to make sure it is stored properly.
 
->Before moving on to Part 2, check in with each other and make sure both partners were able to accomplish the task and know what their code is doing.
+_💬 Before moving on to Part 2, check in with each other and make sure both partners were able to accomplish the task and know what their code is doing._
 
-### Part 2 - Collaborate
+### Part 3 - Collaborate
 
 Look back at the `pets` array that is at the top of the Warm Up section. Your task is to write the code that will start with that array, and ultimately print out:
 
