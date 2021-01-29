@@ -145,7 +145,7 @@ function listFruits() {
 The `for` loop is not magically tied to the `fruits` array in the example above. It's important to note that when we want to call a specific fruit, we call the `fruits` array then use bracket notation with the `i` variable to access `fruits[0]`, then `fruits[1]`, then `fruits[2]`.
 
 <section class="call-to-action">
-###Predict & Discover
+### Predict & Discover
 
 First, make a prediction: what if `fruits.length` was replaced with the Number `8` in the example above?
 
