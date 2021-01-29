@@ -77,7 +77,7 @@ Reducers are functions that need an initial/default value (just like state in a 
 export const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return [...state, { id: Date.now(), todo: action.todo, completed: false }];
+      return [...state, { id: Date.now(), text: action.todo, completed: false }];
     default:
       return state;
   }
@@ -89,8 +89,8 @@ Just like our App would likely default with an empty array of todos, we will set
 <section class="call-to-action">
 ### In Your Notebook
 
-Write out the similarities to what we are doing so far compared to how we have already built out Ideaboxes. 
-- What are the differences? 
+Write out the similarities to what we are doing so far compared to how we have already built out Ideaboxes.
+- What are the differences?
 - What are the similarities?
 Then turn and talk to the person next to you and explain what we have done so far.  Remember to use key terms like `actions`, `action creators`, `reducers`, etc.
 </section>
