@@ -1,31 +1,31 @@
 ---
 title: "JS: For Loops"
-length: 90
+length: 180
 tags: javascript, foundation, arrays, loops
 ---
 
 ## Learning Goals
 
-* Practice writing `for` loops
-* Practice iterating through arrays using loops
+* Write `for` loop syntax
+* Understand and explain the components of a `for` loop and how they can be used in conjunction with arrays
 
 ## Vocabulary
 
-- `Array` Used to store a collection of data items/multiple values under a single variable name
-- `Element` A single item stored in an array. An element can be of any data type.
-- `Loops` A quick and easy way to do something repeatedly
-- `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops.
-- `Bracket Notation` How we access individual elements of an array. Either to express the element, or assign a new element.
+- `Array` Used to store a collection of items/multiple values in a single variable
+- `Element` A single item stored in an array. An element can be of any data type
+- `Loops` A quick way to do something repeatedly
+- `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops
+- `Bracket Notation` How we access individual elements of an array. Either to express the element, or assign a new element
 
 ## Warm Up
 
-In a repl or in your browser console, create and name an array filled with objects! Some ideas:
+In a repl.it, declare a variable that stores an array, and `console.log` it. Your array should contain 3 or more objects as its elements. Some ideas:
 
 - A grocery list
+- A list of your friends
 - A list of Hogwarts students
-- A list of Batman villains
 
-Or, if you're not feeling creative, you can use this one:
+Or, if you're not feeling creative, you can take this as a starter and modify it a bit:
 
 ```javascript
 var pets = [
@@ -50,26 +50,44 @@ var pets = [
 ];
 ```
 
-Now, let's practice getting information out of our array and objects!
-
 <section class="call-to-action">
-### Your Turn
+### Part 1 - Warm Up, Explore
 
-In the console:  
-- access the first element in your array
-- access a value from the second element (an object) in the array
-- update a value from the third element in the array
-</section>
+Once in your breakout room, trade repl.it links with your partner. This way, you are each exposed to a new array that you will work with during activity. You will each need for fork the repl.it.
 
-Now, let's suppose that we need to use information from every single one of our objects. How could we accomplish this?
+- Take a moment to familiarize yourself with the array your partner declared
 
-<section class="call-to-action">
-### Turn and Talk
+For each step that follows, make sure to `console.log` the value(s) you are accessing/have changed!
+- Access the first element in the array
+- Access a value from the second element (an object) in the array
+- Update a value from the third element in the array
 
-With a partner, discuss the following:
+If you finish before your partner, add another object to the array. Log it to the console to make sure it is stored properly.
 
-- What's one way to access every element in your array?
-- What are some drawbacks you can think of?
+>Before moving on to Part 2, check in with each other and make sure both partners were able to accomplish the task and know what their code is doing.
+
+### Part 2 - Collaborate
+
+Look back at the `pets` array that is at the top of the Warm Up section. Your task is to write the code that will start with that array, and ultimately print out:
+
+```js
+Tilly
+Sodie
+Pumpernickel
+```
+
+Then, print out:
+
+```js
+Eric
+Amy
+Leta
+// the ordering of the names is not a typo!
+```
+
+You can write the code in the same repl.it or a new one. Be ready to share your code with the whole group!
+
+_(Without using a loop)_ Can you come up with another solution in your code to get the same outcome? If so, be ready to share out. If not, be ready to explain why that was a challenge.
 </section>
 
 ## Loops
@@ -109,9 +127,9 @@ Let's dig into the three statements separated by semicolons that make up or our 
 
 The statement within the curly braces executes each time the loop runs. In this case, we can see we are logging the value of `i` to the console.
 
-### Looping Over Arrays
+### Looping With Arrays
 
-`for` loops are commonly used to iterate over the items in an array. To do this, we use the property `length` and call it on the variable associated with the array we want to iterate over. This property returns the length of, or number of elements in, an array. Let's see what that looks like in practice:
+`for` loops are commonly used to take action on every item in an array. To do this, we can use the initializer and condition to tell the loop to perform the action the same number of times for the number of elements in the array. Typically, we set the initializer at 0, and set the _stop_ condition to the `length` of the array.
 
 ```js
 var fruits = ['apples', 'oranges', 'bananas'];
@@ -121,9 +139,18 @@ function listFruits() {
     console.log("I have some " + fruits[i]);
   }
 }
-
 ```
-You can see that instead of using a hardcoded number, we are using `fruits.length` in our condition. This means we will continue to loop over the array as long as the counter is less than the total number of elements in the array. That's pretty handy!
+The `for` loop is not magically tied to the `fruits` array in the example above. It's important to note that when we want to call a specific fruit, we call the `fruits` array then use bracket notation with the `i` variable to access `fruits[0]`, then `fruits[1]`, then `fruits[2]`.
+
+<section class="call-to-action">
+###Predict & Discover
+
+First, make a prediction: what if `fruits.length` was replaced with the Number `8` in the example above?
+
+Now, type out the function above (yes, actually type it! This is a great opporuntunity for attention to detail and catching your small errors). Replace `8` for `fruits.length`. Run the code and reflect on your prediction.
+
+💡Is something not working? First thing to check - make sure you are invoking the function.
+</section>
 
 <section class='note'>
 ### Iterator Methods
@@ -135,80 +162,81 @@ You can see that instead of using a hardcoded number, we are using `fruits.lengt
 - `.filter()`
 - `.reduce()`
 
-These are known as *iterator methods* and they each have their own uses and behaviors. During your time in mod 1, we'd like you to **only** use `for` loops when you need to iterate over an array. This is not to needlessly make your life harder. The main reason for this request is so that the logic that is applied during each step of the loop must be written explicitly by you, instead of letting the architects of those methods do that work for you. Everything in Mod 1 can be completed with your pal `for` loop! You will get plenty of experience with those iterator methods down the line, I promise.
+These are known as *iterator methods* and they each have their own uses and behaviors. They were all built into the JavaScript language with a `for` loop!
+
+During your time in Mod 1, we'd like you to **only** use `for` loops when you need to iterate over an array. This is not to needlessly make your life harder. The main reason for this request is so that the logic that is applied during each step of the loop must be written explicitly by you, instead of letting the architects of those methods do that work for you. Also, it's not unlikely that in a different language you work in on the job, you won't have such handy methods available. Everything in Mod 1 can be completed with your pal `for` loop! You will get lessons and then extensive practice and experience with the iterator methods in Mods 2-4.
 </section>
 
 <section class="call-to-action">
 
 ### Solo Practice
 
-#### Medium Heat 🔥: Annoying Zoo Kid
+Join the breakout room associated with the problem you are currently working on. This is meant to mainly be done independently (no one should be screen sharing or "leading" anything), but we want you to have a source of support/place to ask questions if needed. 
 
-1. Create an array of four animals called `animals`.
-2. Create a function called `nameAnimals`.
-3. Within your function, create a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
-4. With your array (and - if needed - with your knowledge of parameters), invoke your function to ensure it is working correctly!
+#### Mild Heat ⚡️: Annoying Zoo Kid 1
 
-#### Spicy 🔥🔥: Pet Sentences
+1. Declare a variable that stores an array of four animals called `animals`.
+1. Write a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
+
+#### Medium Heat 🔥: Annoying Zoo Kid 2
+
+1. Declare a variable that stores an array of four animals called `animals`.
+1. Declare a function called `nameAnimals`.
+1. Within your function, create a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
+1. Invoke your function to ensure it is working correctly. Nothing should log to the console if you don't invoke the function.
+
+#### Spicy 🔥🔥: User Sentences
 
 Use the following code:
 
 ```javascript
-var pets = [
+var users = [
   {
-    name: 'Tilly',
-    type: 'cat',
-    favoriteTreat: 'cheese',
-    human: 'Leta'
-  },
-  {
-    name: 'Sodie',
-    type: 'dog',
-    favoriteTreat: 'milkbones',
-    human: 'Amy'
-  },
-  {
-    name: 'Pumpernickel',
-    type: 'cat',
-    favoriteTreat: 'tuna',
-    human: 'Eric'
+    id: 127238,
+    firstName: "Matthew",
+    handle: "@matthewph",
+    lastLoggedIn: 1611937890083,
+    followerCount: 723,
+    recentPost: "This is the first time I've checked the internet since last March."
+  }, {
+    id: 728912,
+    firstName: "Tanisha",
+    handle: "@tdavey",
+    lastLoggedIn: 1611937937749,
+    followerCount: 2319,
+    recentPost: "Wear a mask people, it's not over."
+  }, {
+    id: 409126,
+    firstName: "Megan",
+    handle: "@meg36",
+    lastLoggedIn: 1611937973534,
+    followerCount: 212,
+    recentPost: "OMG Gametime AHHHH!!!!!!"
   }
 ];
 ```
 
-1. Create a function called `getPetNames` that takes one parameter: an array of pet objects.
-2. Within your function, create a `for` loop
-3. Inside the `for` loop, `console.log` a sentence describing each pet, for example: Leta has a cat named Tilly who eats cheese.
+1. Declare a function called `showUserInfo` that takes one parameter: a number
+1. Within your function, write a `for` loop
+1. Inside the `for` loop, `console.log` a sentence using at least 2 of the values in the objects
 
-#### Connecting with previous knowledge - Extra Spicy 🔥🔥🔥🔥
+#### Extra Spicy 🔥🔥🔥: Some User Info
 
-1. Use the array of pets above.
-2. Declare a function called `logValuesByKey` that takes two parameters: an array, and a key
-3. Inside of that function, write a `for` loop that logs the value of the provided key for each object in the array. Hint: Consider which object notation to use.
-4. Invoke the  function, passing it the pets array and the key of 'human'.
-5. Repeat, but send through a different key.
-6. Dang! You just wrote a flexible, powerful, dynamic function. *Very* tite.
-
-**Need a hint?**
-Here is some starter code to get you started!
-```javascript
-  function logValuesByKey(array, key) {
-    // insert code here
-  }
-
-  logValuesByKey(pets, 'human');
-  // expected output: 'Leta', 'Amy', 'Eric'
-```
-
+Use the array of users above
+1. Declare a function called `showImportantPosts` that takes one parameter: a number
+1. Check if each user has a follower count above the number that was passed in. If a user has a high enough follower count, `console.log` their recent post. If a user doesn't have a high enough follower count, don't log their recent post
+1. Invoke the function multiple times, with various numbers for the parameter to ensure it's working as expected
 </section>
+<br>
 
+<section class='note'>
 ### Loops and Performance Issues
 
 It's important to be aware of the potential performance problems that loops can cause. When a browser hits JavaScript, it stops executing anything else on the page until it has processed that script. Since loops can be run on arrays or containers of unknown -- and potentially enormous -- size, it's possible for our loop to make a page much, much slower to load.
 
 Additionally, if the condition of your loop never returns `false`, you will get stuck in what's known as an `infinite loop`. This means that your loop will never stop running. Eventually your browser will run out of memory and your script will break.
 
-Here's an example of an infinite loop. Open a new tab in your browser and run this in your console. What happens?
+Here's an example of an infinite loop. Open a new tab in your browser and run this in your console. Observe what happens.
 
 ```js
 for (var i = 0; i > -1; i++) {
@@ -217,6 +245,27 @@ for (var i = 0; i > -1; i++) {
 ```
 
 We can see that this condition will never return `false` and we'll be stuck in this loop forever (or at least until our page crashes)! Be mindful of the possibility that you could create infinite loops when leveraging loops in your code. They can happen to the best of us, and knowing what they are is the first step to avoiding and correcting them.
+</section>
+
+## Final Practice
+
+You'll complete this section with a partner!
+
+**Step 1:** Pick one of the 4 options linked below as a code challenge. Write a solution and make sure you and your partner both have a full understanding of the solution before moving on.
+
+- [YELLING](https://repl.it/@turingschool/yelling-1#index.js) 🔥
+- [Walking Backwards](https://repl.it/@turingschool/backwards-1#index.js) 🔥
+- [Cacti](https://repl.it/@turingschool/cacti-1) 🔥🔥
+- [School Supplies](https://repl.it/@turingschool/school-supplies-1#index.js) 🔥🔥
+
+**Step 2:** Your next task is to create an educational resource - we can say it's for the next cohort of students - to understand the concepts behind the code, using the code challenge you just solved as an example. If this is a stretch for you, consider how you best learn and what type of resources are helpful for you!
+
+Some ideas, but don't feel limited to these:
+- Video
+- Write-up (think blog post)
+- Series of images/diagrams
+
+You will submit your solution to the code challenge and educational resource as your exit ticket in a private Google Form. We'll ask for volunteers to share out their educational resources when we come back together!
 
 ### Additional Practice  
 
