@@ -28,6 +28,22 @@ module: 3
 - `Props` This is shorthand for properties.  Props is an object that is given from it's parent component down to the child functional/class component.  Props should remain immutable
 - `State` State holds data that represents the actual state of an application.  State can be changed and mutated through user interactions
 
+<section class="note">
+## What do we already know?
+
+Once you are in your breakout room, check the number of the room you are in, and navigate to the corresponding slide on (this Jamboard)[https://jamboard.google.com/d/1gkz6hjViTF2jqJ25XyLCS5QuWVhNSzkzpIzDoG30W2g/viewer?f=8].
+You and your group will pool your existing understanding about React.
+Use the following prompts to help guide your discussion.
+- What is React?
+- Why do we use it?
+- Virtual Dom 
+- JSX
+- Components
+- Props/State
+- Application Data
+- Miscellaneous 
+</section>
+
 ## WHAT is React?
 
 People will define React in many different ways, but at its core, React is:
