@@ -4,7 +4,7 @@ length: 60
 tags: command line, terminal
 ---
 
-<a href="./introduction-to-terminal-presentation.html" target="blank">Slides for class</a>
+<a href="./intro-to-terminal-presentation.html" target="blank">Slides for class</a>
 
 ## Learning Goals
 
