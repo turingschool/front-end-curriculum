@@ -100,7 +100,7 @@ In the above examples, note that you can chain dot notation after bracket notati
 ### In Pairs!
 
 ```js
-let rubric = {
+const rubric = {
   domManipulation: 'advanced beginner',
   html: 'novice',
   css: 'proficient'
@@ -117,7 +117,7 @@ let rubric = {
 // Creating key/value pairs using bracket notation
 // when our parameters represent a key and its value
 
-let rubric = {
+const rubric = {
   domManipulation: 'advanced beginner',
   html: 'novice',
   css: 'proficient'
@@ -142,7 +142,7 @@ In the above example, note that you cannot create a key without assigning it to 
 Let's work through this one together.  Consider the following:
 
 ```js
-let dog = {
+const dog = {
   name: 'Boris',
   age: 3,
   breed: 'Pug'
@@ -164,7 +164,7 @@ Although there are multiple ways of solving this, but let's try one approach tog
 ### The Answer  
 
 ```js
-let dog = {
+const dog = {
   name: 'Boris',
   age: 3,
   breed: 'Pug'
@@ -201,8 +201,8 @@ In the above example, note that you can do NESTED bracket notation!
 
 1. Fork the following [REPL](https://repl.it/repls/TrustyCarpalCalculator)
 2. Spend no more than *40 minutes* working through the problems on your own
-3. When you've finished, send your completed REPL to your instructor in a Slack DM
-4. Later that evening, your instructor will send you back feedback! 
+3. When you've finished, submit your completed repl in [this form](https://forms.gle/PtJKZZhLuWTUrQMm9)
+4. We'll give group feedback in slack, or in the audit tomorrow
 </section>
 
 ### Additional Resources
