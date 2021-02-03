@@ -27,13 +27,19 @@ Pick one person to create the repo. The other person should be watching and advi
 **GitHub Time!!**
 - Click the plus to create a New Repository
 - Run the steps of "…or create a new repository on the command line" starting with `git init` on the command line
+- Invite your partner to collaborate (find this on the repo page under settings, manage access, invite a collaborator)
 </section>
 
 <section class="answer">
 ### Git Commands 
-- **Make a new directory** `mkdir` name-of-directory
-- **Change directories** `cd`
-- **Add a file** `touch` README.md
+- **Make a new directory** 
+  - `mkdir name-of-directory`
+- **Change directories** 
+  - `cd name-of-directory`
+- **Create a new file** 
+  - `touch` README.md
+  - `touch` main.js`
+  - //etc.
 </section>
 
 ## Cloning the Repo
@@ -42,6 +48,7 @@ Pick one person to create the repo. The other person should be watching and advi
 
 **Getting Started**
 - Get the link to your partner's repo
+- Accept the collaborator invitation (you'll probably get an email)
 - Clone it down to your machine
 
 **Working on the App**
@@ -57,11 +64,17 @@ Pick one person to create the repo. The other person should be watching and advi
 
 <section class="answer">
 ### Git Commands 
-- **Clone a repo** `git clone linkToRepoHere`
-- **Create a new branch** `git checkout -b feature/name-of-feature-branch`
-- **Add a file to staging** `git add README.md`
-- **Commit a file (with a message)** `git commit -m "description of work here"`
-- **Push changes** `git push`
+- **Clone a repo** 
+  - `git clone git@github.com:username/repo-name.git`
+  - This link is found on the repo page under the green "Code" button
+- **Create a new branch** 
+  - `git checkout -b feature/name-of-feature-branch`
+- **Add a file to staging** 
+  - `git add README.md`
+- **Commit a file (with a message)** 
+  - `git commit -m "description of work here"`
+- **Push changes** 
+  - `git push`
 </section>
 
 ## Code Review
@@ -71,8 +84,15 @@ Pick one person to create the repo. The other person should be watching and advi
 **GitHub**
 - Check out your partner's pull request on GitHub. Spend some time looking through the interface together. What information can you see about your partner's code? How can you leave comments or request changes?
 - Why do you think its important to be able to review someone else's code in this format?
-- Merge that pull request! 
 
+**Reviewing Code Locally**
+- Checkout your partner's branch
+- Look at their code in your text editor
+  - In a real application, you might be opening it up in the browser, checking for errors, running tests, etc.
+
+**GitHub**
+- Merge that pull request!
+- Why do you think developers shouldn't merge their own pull requests? 
 </section>
 
 
