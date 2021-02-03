@@ -28,6 +28,7 @@ problem.
   - clone the repository to your local machine
   - `cd` into the project
   - run `npm install` to install the necessary dependencies
+  - Send the URL to your forked repo to you Project Manager via slack immediately!
 
 ## Iterations
 
