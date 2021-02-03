@@ -104,17 +104,17 @@ Then you have to tell git what the default branch should be. You can run this co
 - Look at their code in your text editor
   - In a real application, you might be opening it up in the browser, checking for errors, running tests, etc.
 
+**GitHub**
+- Merge that pull request!
+- Why do you think developers shouldn't merge their own pull requests? 
+</section>
+
 <section class="answer">
 ### Git Commands 
 - **Fetch all remote branches** 
   - `git fetch`
 - **Checkout a branch** 
   - `git checkout feature/name-of-partner branch`
-</section>
-
-**GitHub**
-- Merge that pull request!
-- Why do you think developers shouldn't merge their own pull requests? 
 </section>
 
 ## Continuing Work
