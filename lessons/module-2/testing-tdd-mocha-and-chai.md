@@ -108,9 +108,9 @@ In your journal:
 
 ```js
 function reverseWord(word) {
-  let letters = word.split();
+  let letters = word.split('');
   letters.reverse();
-  return letters;
+  return letters.join('');
 }
 
 reverseWord('turing'); // gnirut
