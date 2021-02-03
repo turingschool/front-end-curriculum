@@ -7,8 +7,6 @@ tags: git, github
 - [Be able to use git and GitHub to collaborate on code with another developer](https://frontend.turing.io/lessons/module-1/dev-skills-git-team-workflow.html)
 - Be able to submit and respond to a pull request
 - Understand the importance of code review
-- Understand how to prevent and resolve merge conflicts
-
 
 ## Creating a New Repo
 
@@ -41,6 +39,22 @@ Pick one person to create the repo. The other person should be watching and advi
   - `touch` main.js`
   - //etc.
 </section>
+
+<section class="note">
+### Replacing `master` with `main` 
+
+Historically, the default branch on GitHub has been named `master`. This is something you most likely will still come across, but we (and others) have switched to `main` to promote more inclusivity in tech. 
+
+Read more about this important change [here](https://dev.to/afrodevgirl/replacing-master-with-main-in-github-2fjf)!
+
+To make your local machine’s git default to branch main, you’ll first need to update to the latest version of git. [Follow these steps to do that](https://www.michaelcrump.net/step-by-step-how-to-update-git/).
+
+Then you have to tell git what the default branch should be. You can run this command in your teminal to do that:
+
+`git config --global init.defaultBranch main`
+</section>
+
+
 
 ## Cloning the Repo
 <section class="checks-for-understanding">
@@ -90,11 +104,18 @@ Pick one person to create the repo. The other person should be watching and advi
 - Look at their code in your text editor
   - In a real application, you might be opening it up in the browser, checking for errors, running tests, etc.
 
+<section class="answer">
+### Git Commands 
+- **Fetch all remote branches** 
+  - `git fetch`
+- **Checkout a branch** 
+  - `git checkout feature/name-of-partner branch`
+</section>
+
 **GitHub**
 - Merge that pull request!
 - Why do you think developers shouldn't merge their own pull requests? 
 </section>
-
 
 ## Continuing Work
 <section class="checks-for-understanding">
@@ -103,22 +124,6 @@ Pick one person to create the repo. The other person should be watching and advi
 - Switch to your `main` branch
 - Pull down the changes that have been merged in
 - Why do you think its important to pull down changes before starting the workflow process again?
-
-</section>
-
-## Merge Conflicts
-
-Merge conflicts will happen to you at some point, and its important to learn how to resolve them successfully. A merge conflict happens when two branches change code in the same spot of a file and are attempted to be merged. Git doesn't know which of the changes to keep, and needs our help to resolve the conflict. 
-
-<section class="checks-for-understanding">
-### Partner One
-
-- Make sure you are on your `main` branch
-- DONT pull down the changes that have been merged in (NOTE: This is BAD practice, we're only doing it to trigger a merge conflict)
-- Make a change to the README
-- Add, commit and push those changes to `main` (NOTE: BAD PRACTICE - DONT DO IN REAL LIFE)
-- Resolve merge conflict in your text editor
-
 </section>
 
 ## Common Questions
