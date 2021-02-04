@@ -171,23 +171,23 @@ During your time in Mod 1, we'd like you to **only** use `for` loops when you ne
 
 <section class="call-to-action">
 
-### Solo Practice
+## Solo Practice
 
 Join the breakout room associated with the problem you are currently working on. This is meant to mainly be done independently (no one should be screen sharing or "leading" anything), but we want you to have a source of support/place to ask questions if needed. 
 
-#### Mild Heat ⚡️: Annoying Zoo Kid 1
+### Mild Heat ⚡️: Annoying Zoo Kid 1
 
 1. Declare a variable that stores an array of four animals called `animals`.
 1. Write a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
 
-#### Medium Heat 🔥: Annoying Zoo Kid 2
+### Medium Heat 🔥: Annoying Zoo Kid 2
 
 1. Declare a variable that stores an array of four animals called `animals`.
 1. Declare a function called `nameAnimals`.
 1. Within your function, create a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
 1. Invoke your function to ensure it is working correctly. Nothing should log to the console if you don't invoke the function.
 
-#### Spicy 🔥🔥: User Sentences
+### Spicy 🔥🔥: User Sentences
 
 Use the following code:
 
@@ -222,7 +222,7 @@ var users = [
 1. Within your function, write a `for` loop
 1. Inside the `for` loop, `console.log` a sentence using at least 2 of the values in the objects
 
-#### Extra Spicy 🔥🔥🔥: Some User Info
+### Extra Spicy 🔥🔥🔥: Some User Info
 
 Use the array of users above
 1. Declare a function called `showImportantPosts` that takes one parameter: a number
