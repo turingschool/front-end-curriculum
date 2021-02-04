@@ -66,11 +66,11 @@ For each step that follows, make sure to `console.log` the value(s) you are acce
 
 If you finish before your partner, add another object to the array. Log it to the console to make sure it is stored properly.
 
-_💬 Before moving on to Part 2, check in with each other and make sure both partners were able to accomplish the task and know what their code is doing._
+_💬 Before moving on to Part 3, check in with each other and make sure both partners were able to accomplish the task and know what their code is doing._
 
 ### Part 3 - Collaborate
 
-Look back at the `pets` array that is at the top of the Warm Up section. Your task is to write the code that will start with that array, and ultimately print out:
+For this part, use the `pets` array that is at the top of the Warm Up section. The variable that stores the array needs to be in the repl.it file you are working in. Your task is to write the code that use data from that array to print out (using `console.log`):
 
 ```js
 Tilly
@@ -79,7 +79,6 @@ Pumpernickel
 ```
 
 Then, print out:
-
 ```js
 Eric
 Amy
