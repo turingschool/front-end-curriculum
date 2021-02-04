@@ -21,11 +21,10 @@ tags: javascript, foundation, arrays, loops
 
 ### Part 1 - Set Up
 
-In a repl.it, declare a variable that stores an array, and `console.log` it. Your array should contain 3 or more objects as its elements. Some ideas:
+In a repl.it, declare a variable that stores an array, and `console.log` it. Your array should contain 3 or more JavaScript objects as its elements. Some ideas:
 
-- A grocery list
-- A list of your friends
-- A list of Hogwarts students
+- A list of your friends (and their birthdays or hobbies)
+- A list of Hogwarts students (name, House, "cool" status)
 
 Or, if you're not feeling creative, you can take this as a starter and modify it a bit:
 
@@ -53,6 +52,7 @@ var pets = [
 ```
 
 <section class="call-to-action">
+
 ### Part 2 - Warm Up, Explore
 
 Once in your breakout room, trade repl.it links with your partner. This way, you are each exposed to a new array that you will work with during activity. You will each need for fork the repl.it.
@@ -66,11 +66,11 @@ For each step that follows, make sure to `console.log` the value(s) you are acce
 
 If you finish before your partner, add another object to the array. Log it to the console to make sure it is stored properly.
 
-_💬 Before moving on to Part 2, check in with each other and make sure both partners were able to accomplish the task and know what their code is doing._
+_💬 Before moving on to Part 3, check in with each other and make sure both partners were able to accomplish the task and know what their code is doing._
 
 ### Part 3 - Collaborate
 
-Look back at the `pets` array that is at the top of the Warm Up section. Your task is to write the code that will start with that array, and ultimately print out:
+For this part, use the `pets` array that is at the top of the Warm Up section. The variable that stores the array needs to be in the repl.it file you are working in. Your task is to write the code that use data from that array to print out (using `console.log`):
 
 ```js
 Tilly
@@ -79,7 +79,6 @@ Pumpernickel
 ```
 
 Then, print out:
-
 ```js
 Eric
 Amy
@@ -129,40 +128,40 @@ Let's dig into the three statements separated by semicolons that make up or our 
 
 The statement within the curly braces executes each time the loop runs. In this case, we can see we are logging the value of `i` to the console.
 
-### Looping With Arrays
+📚 _As we talk through these concepts in class, instructors will screen share code in a repl.it and/or diagram on a tablet. Anything we write/draw during that time will be shared in the cohort Slack channel!_
 
-`for` loops are commonly used to take action on every item in an array. To do this, we can use the initializer and condition to tell the loop to perform the action the same number of times for the number of elements in the array. Typically, we set the initializer at 0, and set the _stop_ condition to the `length` of the array.
+## Looping With Arrays
+
+`for` loops are commonly used to take action on every item in an array. To do this, we can use the initializer and condition to tell the loop to perform the action the same number of times for the number of elements in the array. Typically, we set the initializer at 0, and set the _stop_ condition to the `length` of the array. The code in the snippet that follows is also [available in this repl.it](https://repl.it/@turingschool/looping-with-arrays#index.js).
 
 ```js
 var fruits = ['apples', 'oranges', 'bananas'];
 
-function listFruits() {
-  for (var i = 0; i < fruits.length; i++) {
-    console.log("I have some " + fruits[i]);
-  }
+for (var i = 0; i < fruits.length; i++) {
+  console.log("I have some " + fruits[i]);
 }
 ```
-The `for` loop is not magically tied to the `fruits` array in the example above. It's important to note that when we want to call a specific fruit, we call the `fruits` array then use bracket notation with the `i` variable to access `fruits[0]`, then `fruits[1]`, then `fruits[2]`.
+
+The `for` loop is not magically tied to the `fruits` array in the example above. It's important to note that when we want to call a specific fruit, we call the `fruits` array then use bracket notation with the `i` variable to access `fruits[0]`, then `fruits[1]`, then `fruits[2]` - when `i` holds each of those respective values.
+
+📚 _As we talk through these concepts in class, instructors will screen share code in a repl.it and/or diagram on a tablet. Anything we write/draw during that time will be shared in the cohort Slack channel!_
 
 <section class="call-to-action">
+
 ### Predict & Discover
 
-First, make a prediction: what if `fruits.length` was replaced with the Number `8` in the example above?
+**First, make a prediction:** What would happen if `fruits.length` was replaced with the Number `8` in the example above?
 
 Now, type out the function above (yes, actually type it! This is a great opporuntunity for attention to detail and catching your small errors). Replace `8` for `fruits.length`. Run the code and reflect on your prediction.
-
-💡Is something not working? First thing to check - make sure you are invoking the function.
 </section>
 
 <section class='note'>
+
 ### Iterator Methods
 
 `for` loops are not the only way to loop over an array. When pairing with a mentor you might see some of the following methods:
-- `.forEach()`
-- `.map()`
-- `.find()`
-- `.filter()`
-- `.reduce()`
+
+`.forEach()`, `.map()`, `.find()`, `.filter()`, `.reduce()`
 
 These are known as *iterator methods* and they each have their own uses and behaviors. They were all built into the JavaScript language with a `for` loop!
 
@@ -171,23 +170,23 @@ During your time in Mod 1, we'd like you to **only** use `for` loops when you ne
 
 <section class="call-to-action">
 
-### Solo Practice
+## Solo Practice
 
 Join the breakout room associated with the problem you are currently working on. This is meant to mainly be done independently (no one should be screen sharing or "leading" anything), but we want you to have a source of support/place to ask questions if needed. 
 
-#### Mild Heat ⚡️: Annoying Zoo Kid 1
+### Mild Heat ⚡️: Annoying Zoo Kid 1
 
 1. Declare a variable that stores an array of four animals called `animals`.
 1. Write a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
 
-#### Medium Heat 🔥: Annoying Zoo Kid 2
+### Medium Heat 🔥: Annoying Zoo Kid 2
 
 1. Declare a variable that stores an array of four animals called `animals`.
 1. Declare a function called `nameAnimals`.
 1. Within your function, create a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
 1. Invoke your function to ensure it is working correctly. Nothing should log to the console if you don't invoke the function.
 
-#### Spicy 🔥🔥: User Sentences
+### Spicy 🔥🔥: User Sentences
 
 Use the following code:
 
@@ -222,7 +221,7 @@ var users = [
 1. Within your function, write a `for` loop
 1. Inside the `for` loop, `console.log` a sentence using at least 2 of the values in the objects
 
-#### Extra Spicy 🔥🔥🔥: Some User Info
+### Extra Spicy 🔥🔥🔥: Some User Info
 
 Use the array of users above
 1. Declare a function called `showImportantPosts` that takes one parameter: a number
@@ -232,6 +231,7 @@ Use the array of users above
 <br>
 
 <section class='note'>
+
 ### Loops and Performance Issues
 
 It's important to be aware of the potential performance problems that loops can cause. When a browser hits JavaScript, it stops executing anything else on the page until it has processed that script. Since loops can be run on arrays or containers of unknown -- and potentially enormous -- size, it's possible for our loop to make a page much, much slower to load.
@@ -248,6 +248,8 @@ for (var i = 0; i > -1; i++) {
 
 We can see that this condition will never return `false` and we'll be stuck in this loop forever (or at least until our page crashes)! Be mindful of the possibility that you could create infinite loops when leveraging loops in your code. They can happen to the best of us, and knowing what they are is the first step to avoiding and correcting them.
 </section>
+
+<section class="call-to-action">
 
 ## Final Practice
 
@@ -268,6 +270,7 @@ Some ideas, but don't feel limited to these:
 - Series of images/diagrams
 
 You will submit your solution to the code challenge and educational resource as your exit ticket in a [private Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeKJc4aGTQ33VThooO0b_0e7SfhJc4zSf99f6vHp427jR1hUw/viewform). We'll ask for volunteers to share out their educational resources when we come back together!
+</section>
 
 ### Additional Practice  
 
