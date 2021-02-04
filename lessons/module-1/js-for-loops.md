@@ -21,11 +21,10 @@ tags: javascript, foundation, arrays, loops
 
 ### Part 1 - Set Up
 
-In a repl.it, declare a variable that stores an array, and `console.log` it. Your array should contain 3 or more objects as its elements. Some ideas:
+In a repl.it, declare a variable that stores an array, and `console.log` it. Your array should contain 3 or more JavaScript objects as its elements. Some ideas:
 
-- A grocery list
-- A list of your friends
-- A list of Hogwarts students
+- A list of your friends (and their birthdays or hobbies)
+- A list of Hogwarts students (name, House, "cool" status)
 
 Or, if you're not feeling creative, you can take this as a starter and modify it a bit:
 
@@ -53,6 +52,7 @@ var pets = [
 ```
 
 <section class="call-to-action">
+
 ### Part 2 - Warm Up, Explore
 
 Once in your breakout room, trade repl.it links with your partner. This way, you are each exposed to a new array that you will work with during activity. You will each need for fork the repl.it.
@@ -129,32 +129,35 @@ Let's dig into the three statements separated by semicolons that make up or our 
 
 The statement within the curly braces executes each time the loop runs. In this case, we can see we are logging the value of `i` to the console.
 
-### Looping With Arrays
+>As we talk through these concepts in class, instructors will screen share code in a repl.it and/or diagram on a tablet. Anything we write/draw during that time will be shared in the cohort Slack channel!
 
-`for` loops are commonly used to take action on every item in an array. To do this, we can use the initializer and condition to tell the loop to perform the action the same number of times for the number of elements in the array. Typically, we set the initializer at 0, and set the _stop_ condition to the `length` of the array.
+## Looping With Arrays
+
+`for` loops are commonly used to take action on every item in an array. To do this, we can use the initializer and condition to tell the loop to perform the action the same number of times for the number of elements in the array. Typically, we set the initializer at 0, and set the _stop_ condition to the `length` of the array. The code in the snippet that follows is also [available in this repl.it](https://repl.it/@turingschool/looping-with-arrays#index.js).
 
 ```js
 var fruits = ['apples', 'oranges', 'bananas'];
 
-function listFruits() {
-  for (var i = 0; i < fruits.length; i++) {
-    console.log("I have some " + fruits[i]);
-  }
+for (var i = 0; i < fruits.length; i++) {
+  console.log("I have some " + fruits[i]);
 }
 ```
-The `for` loop is not magically tied to the `fruits` array in the example above. It's important to note that when we want to call a specific fruit, we call the `fruits` array then use bracket notation with the `i` variable to access `fruits[0]`, then `fruits[1]`, then `fruits[2]`.
+
+The `for` loop is not magically tied to the `fruits` array in the example above. It's important to note that when we want to call a specific fruit, we call the `fruits` array then use bracket notation with the `i` variable to access `fruits[0]`, then `fruits[1]`, then `fruits[2]` - when `i` holds each of those respective values.
+
+>As we talk through these concepts in class, instructors will screen share code in a repl.it and/or diagram on a tablet. Anything we write/draw during that time will be shared in the cohort Slack channel!
 
 <section class="call-to-action">
+
 ### Predict & Discover
 
-First, make a prediction: what if `fruits.length` was replaced with the Number `8` in the example above?
+**First, make a prediction:** What would happen if `fruits.length` was replaced with the Number `8` in the example above?
 
 Now, type out the function above (yes, actually type it! This is a great opporuntunity for attention to detail and catching your small errors). Replace `8` for `fruits.length`. Run the code and reflect on your prediction.
-
-💡Is something not working? First thing to check - make sure you are invoking the function.
 </section>
 
 <section class='note'>
+
 ### Iterator Methods
 
 `for` loops are not the only way to loop over an array. When pairing with a mentor you might see some of the following methods:
@@ -232,6 +235,7 @@ Use the array of users above
 <br>
 
 <section class='note'>
+
 ### Loops and Performance Issues
 
 It's important to be aware of the potential performance problems that loops can cause. When a browser hits JavaScript, it stops executing anything else on the page until it has processed that script. Since loops can be run on arrays or containers of unknown -- and potentially enormous -- size, it's possible for our loop to make a page much, much slower to load.
@@ -248,6 +252,8 @@ for (var i = 0; i > -1; i++) {
 
 We can see that this condition will never return `false` and we'll be stuck in this loop forever (or at least until our page crashes)! Be mindful of the possibility that you could create infinite loops when leveraging loops in your code. They can happen to the best of us, and knowing what they are is the first step to avoiding and correcting them.
 </section>
+
+<section class="call-to-action">
 
 ## Final Practice
 
@@ -268,6 +274,7 @@ Some ideas, but don't feel limited to these:
 - Series of images/diagrams
 
 You will submit your solution to the code challenge and educational resource as your exit ticket in a [private Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeKJc4aGTQ33VThooO0b_0e7SfhJc4zSf99f6vHp427jR1hUw/viewform). We'll ask for volunteers to share out their educational resources when we come back together!
+</section>
 
 ### Additional Practice  
 
