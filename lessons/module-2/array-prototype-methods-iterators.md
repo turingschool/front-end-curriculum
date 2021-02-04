@@ -74,7 +74,7 @@ someArrayData.somePrototypeMethod((mandatoryParameter [,optionalParameters... ])
 
 Many callbacks require a return statement. Remember that these statements determine what the CALLBACK returns, **not** what the METHOD returns. The method may return something different, and this value may need to be captured (in a variable, another return statement...).
 
-**You will often need *TWO* return statements when working with iterator methods!**
+**You will often need *TWO* return statements in a METHOD (or function) when working with iterator methods!**
 
 You can find more information on different prototype methods and their callbacks [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods){:target='blank'}.
 </section>
@@ -121,7 +121,6 @@ const dogs = [
 
 * `forEach` is useful when you want to perform an operation on every element in an array.
 * Is is the prototype method that is most similar to a `for` loop.
-* We can push element data into another array, but the 
 
 <section class="note">
 ### Important
