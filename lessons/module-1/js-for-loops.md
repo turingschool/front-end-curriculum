@@ -129,7 +129,7 @@ Let's dig into the three statements separated by semicolons that make up or our 
 
 The statement within the curly braces executes each time the loop runs. In this case, we can see we are logging the value of `i` to the console.
 
->As we talk through these concepts in class, instructors will screen share code in a repl.it and/or diagram on a tablet. Anything we write/draw during that time will be shared in the cohort Slack channel!
+📚 _As we talk through these concepts in class, instructors will screen share code in a repl.it and/or diagram on a tablet. Anything we write/draw during that time will be shared in the cohort Slack channel!_
 
 ## Looping With Arrays
 
@@ -145,7 +145,7 @@ for (var i = 0; i < fruits.length; i++) {
 
 The `for` loop is not magically tied to the `fruits` array in the example above. It's important to note that when we want to call a specific fruit, we call the `fruits` array then use bracket notation with the `i` variable to access `fruits[0]`, then `fruits[1]`, then `fruits[2]` - when `i` holds each of those respective values.
 
->As we talk through these concepts in class, instructors will screen share code in a repl.it and/or diagram on a tablet. Anything we write/draw during that time will be shared in the cohort Slack channel!
+📚 _As we talk through these concepts in class, instructors will screen share code in a repl.it and/or diagram on a tablet. Anything we write/draw during that time will be shared in the cohort Slack channel!_
 
 <section class="call-to-action">
 
@@ -161,11 +161,8 @@ Now, type out the function above (yes, actually type it! This is a great opporun
 ### Iterator Methods
 
 `for` loops are not the only way to loop over an array. When pairing with a mentor you might see some of the following methods:
-- `.forEach()`
-- `.map()`
-- `.find()`
-- `.filter()`
-- `.reduce()`
+
+`.forEach()`, `.map()`, `.find()`, `.filter()`, `.reduce()`
 
 These are known as *iterator methods* and they each have their own uses and behaviors. They were all built into the JavaScript language with a `for` loop!
 
