@@ -8,7 +8,7 @@
 - Write modular, reusable code that follows SRP (Single Responsibility Principle)
 - Implement a robust testing suite using TDD
 
-In this project, you will be creating a recipe tracking / meal planning application that allows users to view their favorite recipes and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should be able to view a list of recipes, favorite their own recipes, and choose recipes to cook, and make a shopping list based off of these chosen recipes.
+In this project, you will be creating a recipe tracking / meal planning application that allows users to view their favorite recipes and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should be able to view a list of recipes, favorite their own recipes, and choose recipes to cook.
 
 <section class="note">
 ### Note
@@ -65,14 +65,14 @@ Users will be associated with recipes, which will in turn be associated with ing
 ---
 
 ## Project Iterations
-Each iteration has a "Data" section and "Dashboard" section. Data deals with using the data to calculate something meaningful for the user. The Dashboard section deals with what to display on the page. Unlike your week-1 project, the classes and method names are not completely drawn out for you.
+Each iteration has a "Data" section and "User Stories" section. Data deals with using the data to calculate something meaningful for the user. The user stories section deals with what to display on the page and what the user flow looks like. Unlike your week-1 project, the classes and method names are not completely drawn out for you.
 
 Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on class structure and the calculation methods, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there.
 
 <section class="note">
 ### 3rd Party Libraries
 
-You may choose **ONE** from the following 3rd party libraries to incorporate into your app as an extension if interested.  Your group may want to do a research spike over the first weekend to see what your team would like to experiment with.  Please get instructor approval first before choosing to use additional 3rd-party libraries.  
+You may choose **ONE** of the following 3rd party libraries to incorporate into your app as an extension if interested.  Your group may want to do a research spike over the first weekend to see what your team would like to experiment with.  Please get instructor approval first before choosing to use additional 3rd-party libraries.  
 
 * [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'} 
 * [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
@@ -83,7 +83,7 @@ You may choose **ONE** from the following 3rd party libraries to incorporate int
 
 ### Iteration 1 - Get Familiar with the Data and Recipes
 
-Go look into the `data` directory and explore the data (there is also an outline of the structure of the data in the README of the starter kit repo). Get a sense of what each property is and what the data nesting is like.
+Checkout the `data` directory and explore the data (there is also an outline of the structure of the data in the README of the starter kit repo). Get a sense of what each property is and what the data nesting is like.
 
 Once you have looked over each data file, start with the `recipes.js` data file.
 
@@ -98,7 +98,7 @@ A `RecipeRepository` should hold onto all `Recipe` objects.
 
 A `Recipe` represents one recipe object.
 - It should hold on to all its information (provided in the data file).
-- It should have methods to determine:
+- It should have methods to:
   - Determine the names of ingredients needed
   - Get the cost of its ingredients
   - Return its directions / instructions
@@ -115,8 +115,8 @@ Use the `scripts.js` file to add information to the DOM. This JS file should cal
 
 - As a user, I should be able to view a list of all recipes.
 - As a user, I should be able to click on a recipe to view more information including directions, ingredients needed, and total cost.
-- As a user, I should be able to filter recipes by tag.
-- As a user, I should be able to search recipes by its name or ingredients.
+- As a user, I should be able to filter recipes by multiple tags.
+- As a user, I should be able to search recipes by their name or ingredients.
 
 ---
 
@@ -132,7 +132,7 @@ Create classes and methods that can:
 
 #### User Stories
 
-**On load, a user should be chosen at random**.
+*On load, a user should be chosen at random.*
 
 * As a user, I should be able to favorite / unfavorite recipes that I like and can easily find again.
 * As a user, I should be able to filter my favorited recipes by one or more tags.
@@ -146,14 +146,14 @@ Create classes and methods that can:
 #### Pantry Data
 Create classes and methods that can:
 - Determine whether a user's pantry has enough ingredients to cook a given meal.
-- Determine the amount of ingredients still needed to cook a given meal, based on what's in the user's pantry.
+- Determine the amount of missing ingredients still needed to cook a given meal, based on what's in the user's pantry.
 - Remove the ingredients used to cook a given recipe from a user's pantry.
 
 #### User Stories
 - As a user, I should be able to view what ingredients exist inside of my pantry.
 - As a user, I should be able to check if my pantry has enough ingredients to cook a meal on my list of recipes to cook.
 - As a user, I should be told what ingredients are still needed if I don't have enough ingredients in my pantry to cook the recipe.
-- As a user, I should be able to cook a meal if I do have enough ingredients from in my pantry.  Cooking the meal should remove the required ingredients from my pantry.
+- As a user, I should be able to cook a meal if I do have enough ingredients in my pantry.  As a result, cooking the meal should remove the ingredients from my pantry.
 
 ---
 
@@ -162,12 +162,12 @@ _Choose at least one_
 * Implement one of the listed 3rd party libraries or one of your choosing with instructor approval.
 * Don't have enough ingredients in your pantry to cook a recipe?  Add a form to add the remaining ingredients needed for a recipe!
 * Add functionality so that a user can cook more than one recipe at a time!
-* Favoriting recipes is nice, but implementing a rating system would be even more helpful for a user!  This could include a 5 start rating system, a way to leave reviews, etc!
+* Favoriting recipes is nice, but implementing a rating system would be even more helpful for a user!  This could include a 5 star rating system, a way to leave reviews, etc!
 * You may also collaborate with instructors to personalize an extension for this project.
 
 ---
 
-#### Testing
+### Testing
 
 You should *NOT* use the original data files in the `data` directory for testing. These are big files to begin with, and a real-world dataset would have millions of records. That's far too big to use every time you want to run a test.
 
