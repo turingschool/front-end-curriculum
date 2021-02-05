@@ -2,13 +2,11 @@
 
 ## Goals and Objectives
 
-- Follow the specification below to make a working application
 - Implement ES6 classes that communicate to each other as needed
+- **Use object and array prototype methods to perform data manipulation**
+- Create a user interface that is easy to use and displays information in a clear way **on multiple screens**
 - Write modular, reusable code that follows SRP (Single Responsibility Principle)
 - Implement a robust testing suite using TDD
-- Use object and array prototype methods to perform data manipulation
-- Display information on the page while maintaining ability to test class properties and mehtods
-- Create a user interface that is easy to use and displays information in a clear way
 
 In this project, you will be creating a recipe tracking / meal planning application that allows users to view their favorite recipes and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should be able to view a list of recipes, favorite their own recipes, and choose recipes to cook, and make a shopping list based off of these chosen recipes.
 
@@ -33,10 +31,10 @@ Dates and deadlines to be aware of:
 1. Project board
 1. Planned out class structure
 1. Wireframes
-1. 3 design inspirations (Please include links)
+1. 3 design inspirations (Please include links and details on what you're trying to re-create)
 
-* **Thursday, February 17th** - Project due at 9PM.
-* **Friday, February 18th** - Project evals.
+* **Wednesday, February 17th** - Project due at 9PM.
+* **Thursday, February 18th** - Project evals.
 
 Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
 
@@ -46,7 +44,7 @@ Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6)
 
 ### Initial Setup
 
-For this project, you need to use this [What's Cookin Starter Kit](https://github.com/turingschool-examples/whats-cookin-starter-kit){:target='blank'} repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up, follow the instructions to verify it is setup correctly.
+For this project, you will need to use this [What's Cookin Starter Kit](https://github.com/turingschool-examples/whats-cookin-starter-kit){:target='blank'} repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up, follow the instructions to verify it is setup correctly.
 
 ### Testing Setup
 
@@ -66,37 +64,106 @@ Users will be associated with recipes, which will in turn be associated with ing
 
 ---
 
-## User Stories
+## Project Iterations
+Each iteration has a "Data" section and "Dashboard" section. Data deals with using the data to calculate something meaningful for the user. The Dashboard section deals with what to display on the page. Unlike your week-1 project, the classes and method names are not completely drawn out for you.
 
-### Users
-A `User` holds on to all of a user's data. As a user, I should be able to:
-  - Favorite recipes (add to / remove from the user's `favoriteRecipes`)
-  - Decide to cook a recipe that week (add to my `recipesToCook`)
-  - Filter my `favoriteRecipes` or `recipesToCook` by type
-  - Search any of my saved recipes by name or ingredient
-
-Favorites are meant to be recipes that one can easily find again. When a user decides to cook a recipe, they should be able to determine whether they have sufficient ingredients in their pantry (see Pantry user stories). If they do not, they should be able to see a list of what ingredients they need to buy, and how much it will cost. A user should be able to do this for at least one recipe. Making a list of `recipesToCook` can be implemented at a later time.
-
-### Recipes
-
-Users should be able to view a list of recipes. Specifically:
-- As a user, I should be able to filter recipes by type / tag
-- As a user, I should be able to search recipes by ingredients
-
-A `Recipe` should hold on to all its information (provided in the data file). It should be able to:
-- Get the cost of its ingredients
-- Get its directions / instructions
-
-### Pantries
-Every User should have a pantry. A `Pantry` holds on to all the ingredients its owner has stocked, and the amount of each ingredient they have.
-As a user, I should be able to:
-- Determine whether my pantry has enough ingredients to cook a given meal
-- Determine the amount of ingredients still needed to cook a given meal, based on what's in my pantry
-- Remove the ingredients used for a given meal from my pantry, once that meal has been cooked (only applicable if users have a list of `mealsToCook`; can be considered a stretch goal)
+Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on class structure and the calculation methods, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there.
 
 <section class="note">
-The details outlined above are basic user stories. You may find it useful to create classes that relate to the stories (ex: would it be useful to have classes that hold on to multiple instances of a different class?), but are not specifically outlined above.
+### 3rd Party Libraries
+
+You may choose **ONE** from the following 3rd party libraries to incorporate into your app as an extension if interested.  Your group may want to do a research spike over the first weekend to see what your team would like to experiment with.  Please get instructor approval first before choosing to use additional 3rd-party libraries.  
+
+* [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'} 
+* [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
+* [InteractJS](https://interactjs.io/){:target='blank'}
 </section>
+
+---
+
+### Iteration 1 - Get Familiar with the Data and Recipes
+
+Go look into the `data` directory and explore the data (there is also an outline of the structure of the data in the README of the starter kit repo). Get a sense of what each property is and what the data nesting is like.
+
+Once you have looked over each data file, start with the `recipes.js` data file.
+
+#### Recipe Data
+
+A `RecipeRepository` should hold onto all `Recipe` objects.  
+- It should have a parameter to take in recipe `data`.
+- It should have methods to determine:
+  * A filtered list of recipes based on one or more tags.
+  * A filtered list of recipes based on its name or ingredients.
+
+
+A `Recipe` represents one recipe object.
+- It should hold on to all its information (provided in the data file).
+- It should have methods to determine:
+  - Determine the names of ingredients needed
+  - Get the cost of its ingredients
+  - Return its directions / instructions
+
+<section class="note">
+### Hint
+
+You may find it helpful to have an `Ingredient` class as well as you build your your recipes.  A common theme when dealing with data is not to manipulate the original data, but to create copies / instances to work with.
+</section>
+
+#### User Stories
+
+Use the `scripts.js` file to add information to the DOM. This JS file should call methods from your classes to retrieve information. There should not be any DOM manipulation within your class files.
+
+- As a user, I should be able to view a list of all recipes.
+- As a user, I should be able to click on a recipe to view more information including directions, ingredients needed, and total cost.
+- As a user, I should be able to filter recipes by tag.
+- As a user, I should be able to search recipes by its name or ingredients.
+
+---
+
+### Iteration 2 - Users
+
+#### User Data
+
+Create classes and methods that can:
+- Allow a user to favorite or unfavorite recipes (add to / remove from the user's `favoriteRecipes`)
+- Decide to cook a recipe that week (add to my `recipesToCook`)
+- Filter my `favoriteRecipes` by one or more tags.
+- Filter my `favoriteRecipes` by its name or ingredients.
+
+#### User Stories
+
+**On load, a user should be chosen at random**.
+
+* As a user, I should be able to favorite / unfavorite recipes that I like and can easily find again.
+* As a user, I should be able to filter my favorited recipes by one or more tags.
+* As a user, I should be able to search my favorited recipes by its name or ingredients.
+* As a user, I should be able to add a recipe to a list of recipes to cook.
+
+---
+
+### Iteration 3 - Pantries
+
+#### Pantry Data
+Create classes and methods that can:
+- Determine whether a user's pantry has enough ingredients to cook a given meal.
+- Determine the amount of ingredients still needed to cook a given meal, based on what's in the user's pantry.
+- Remove the ingredients used to cook a given recipe from a user's pantry.
+
+#### User Stories
+- As a user, I should be able to view what ingredients exist inside of my pantry.
+- As a user, I should be able to check if my pantry has enough ingredients to cook a meal on my list of recipes to cook.
+- As a user, I should be told what ingredients are still needed if I don't have enough ingredients in my pantry to cook the recipe.
+- As a user, I should be able to cook a meal if I do have enough ingredients from in my pantry.  Cooking the meal should remove the required ingredients from my pantry.
+
+---
+
+### Extensions
+_Choose at least one_
+* Implement one of the listed 3rd party libraries or one of your choosing with instructor approval.
+* Don't have enough ingredients in your pantry to cook a recipe?  Add a form to add the remaining ingredients needed for a recipe!
+* Add functionality so that a user can cook more than one recipe at a time!
+* Favoriting recipes is nice, but implementing a rating system would be even more helpful for a user!  This could include a 5 start rating system, a way to leave reviews, etc!
+* You may also collaborate with instructors to personalize an extension for this project.
 
 ---
 
@@ -131,6 +198,8 @@ if (typeof module !== 'undefined') {
 }
 ```
 </section>
+
+---
 
 ## Rubric
 
