@@ -151,7 +151,7 @@ Create classes and methods that can:
 
 #### User Stories
 - As a user, I should be able to view what ingredients exist inside of my pantry.
-- As a user, I should be able to check if my pantry has enough ingredients to cook a meal on my list of recipes to cook.
+- As a user, I should be able to check my list of recipes to cook and see if my pantry has enough ingredients to cook a meal.
 - As a user, I should be told what ingredients are still needed if I don't have enough ingredients in my pantry to cook the recipe.
 - As a user, I should be able to cook a meal if I do have enough ingredients in my pantry.  As a result, cooking the meal should remove the ingredients from my pantry.
 
@@ -160,7 +160,7 @@ Create classes and methods that can:
 ### Extensions
 _Choose at least one_
 * Implement one of the listed 3rd party libraries or one of your choosing with instructor approval.
-* Don't have enough ingredients in your pantry to cook a recipe?  Add a form to add the remaining ingredients needed for a recipe!
+* Don't have enough ingredients in your pantry to cook a recipe?  Add a form to add the remaining ingredients needed!
 * Add functionality so that a user can cook more than one recipe at a time!
 * Favoriting recipes is nice, but implementing a rating system would be even more helpful for a user!  This could include a 5 star rating system, a way to leave reviews, etc!
 * You may also collaborate with instructors to personalize an extension for this project.
