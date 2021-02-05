@@ -105,7 +105,7 @@ for ([initialExpression]; [condition]; [incrementExpression]) {
 }
 ```
 
-Which looks like this when we implement it in code:
+[Which looks like this](https://repl.it/@turingschool/js-loops#index.js) when we implement it in code:
 
 ```js
 for (var i = 0; i < 10; i++) {
@@ -228,7 +228,7 @@ Use the array of users above
 1. Check if each user has a follower count above the number that was passed in. If a user has a high enough follower count, `console.log` their recent post. If a user doesn't have a high enough follower count, don't log their recent post
 1. Invoke the function multiple times, with various numbers for the parameter to ensure it's working as expected
 </section>
-<br>
+
 <section class="answer">
 
 ### Solo Practice Solutions
