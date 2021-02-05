@@ -172,7 +172,7 @@ During your time in Mod 1, we'd like you to **only** use `for` loops when you ne
 
 ## Solo Practice
 
-Join the breakout room associated with the problem you are currently working on. This is meant to mainly be done independently (no one should be screen sharing or "leading" anything), but we want you to have a source of support/place to ask questions if needed. 
+Join the breakout room associated with the problem you are _currently_ working on. This is meant to mainly be done independently (no one should be screen sharing or "leading" anything), but we want you to have a source of support/place to ask questions if needed. 
 
 ### Mild Heat ⚡️: Annoying Zoo Kid 1
 
@@ -188,7 +188,7 @@ Join the breakout room associated with the problem you are currently working on.
 
 ### Spicy 🔥🔥: User Sentences
 
-Use the following code:
+Use the following array:
 
 ```javascript
 var users = [
@@ -217,7 +217,7 @@ var users = [
 ];
 ```
 
-1. Declare a function called `showUserInfo` that takes one parameter: a number
+1. Declare a function called `showUserInfo`
 1. Within your function, write a `for` loop
 1. Inside the `for` loop, `console.log` a sentence using at least 2 of the values in the objects
 
@@ -229,6 +229,16 @@ Use the array of users above
 1. Invoke the function multiple times, with various numbers for the parameter to ensure it's working as expected
 </section>
 <br>
+<section class="answer">
+
+### Solo Practice Solutions
+
+- [Solution:](https://repl.it/@turingschool/mild-solution#index.js) Mild Heat ⚡️: Annoying Zoo Kid 1
+- [Solution:](https://repl.it/@turingschool/medium-solution#index.js) Medium Heat 🔥: Annoying Zoo Kid 2
+- [Solution:](https://repl.it/@turingschool/spicy-heat#index.js) Spicy 🔥🔥: User Sentences
+- [Solution:](https://repl.it/@turingschool/extra-spicy-heat#index.js) Extra Spicy 🔥🔥🔥: Some User Info
+
+</section>
 
 <section class='note'>
 
