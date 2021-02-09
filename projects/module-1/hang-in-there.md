@@ -34,7 +34,7 @@ Then, as a team:
 By the end of the day, complete the following tasks:
 
 * As a team, read the entire project spec and rubric
-* As a team, create a rough timeline to follow 
+* As a team, create a rough timeline to follow
 * As a team, create a public document for your DTR (instructions can be found [here](https://github.com/turingschool/career-development-curriculum/blob/master/module_one/dtr_guidelines_memo.md))
 * Add all teammates and your assigned instructor as collaborators to your forked repository
 * In a Slack message to your assigned instructor share links to:
@@ -118,12 +118,12 @@ To earn a given score, an application must meet the requirements listed in that 
 
 ### Professionalism
 
-* **4:** 
+* **4:**
   - Team uses a [PR template](https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository) consistently
   - Team habitually conducts thorough code reviews in the GitHub GUI to document the progress of the application
-  - Team has sought out code reviews from one or more mentors. Mentors must add their code review to a pull request that can be viewed. 
+  - Team has sought out code reviews from one or more mentors. Mentors must add their code review to a pull request that can be viewed.
 
-* **3:** 
+* **3:**
   - Commits are atomic and frequent, effectively documenting the evolution/progression of the application. Remember, a commit should be one “unit” of work.
   - Commit messages are consistent, descriptive, concise and begin with a verb and capital letter
   - Team uses PRs to screen/verify code before adding it to the main branch
@@ -131,15 +131,15 @@ To earn a given score, an application must meet the requirements listed in that 
   - There is no more than a 10% disparity in code contributions between teammates. Note: this is checked via the “Insights” and “Contributors” tab in your GitHub repo.
   - README is well formatted and gives good context about the project. At minimum, a sufficient README should contain - contributors, technologies used, instructions for running and viewing the project, deploy link (gh-pages), images/GIFs if necessary, future additions, etc. Think about what a user needs to understand and get the full picture of the application.
 
-* **2:** 
-  - Commits are large and do not effectively communicate the progression of the application. 
+* **2:**
+  - Commits are large and do not effectively communicate the progression of the application.
   - Team uses PRs but do not review code before merging into the main branch
   - During evaluations with PM, all teammates can speak to the purpose and functionality of any/every line of code.  
   - Branches are sometimes used for individual features
   - There is a 20% disparity in code contributions between teammates
   - README is brief and does not provide full context for the project
 
-* **1:** 
+* **1:**
   - During evaluations with PM, teammates are unable to describe the purpose and functionality of every line of code
   - Some commits are pushed directly to the main branch
   - PRs are used inconsistently or not at all
@@ -147,27 +147,29 @@ To earn a given score, an application must meet the requirements listed in that 
 
 ### JavaScript Style & Implementation
 
-* **4:** 
-  - There are no global variables aside from query selectors, `currentPoster`, `images`, `titles`, `quotes`, and `savedPosters`. 
+* **4:**
+  - There are no global variables aside from query selectors, `currentPoster`, `images`, `titles`, `quotes`, and `savedPosters`.
   - Application uses event delegation correctly on dynamic elements
   - All functions strictly adhere to the [Single Responsibility Principle (SRP)](http://knnthvu.weebly.com/srp-and-dry.html) and are all 10 lines of code or less
   - Uses logical operators instead of nesting conditional statements
+  - Conditionals are written in a way that demonstrates an understanding of [truthy/falsy values](https://frontend.turing.io/lessons/module-1/js-truthy-falsy-expressions.html). For example, the developer avoids using logic like `=== true` and `!== 0`.
 
 * **3:**
   - Demonstrate understanding of DOM manipulation by adding, removing, and updating elements on the DOM, after the page has loaded
-  - Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and observe [SRP](http://knnthvu.weebly.com/srp-and-dry.html) - and most are around 10 lines of code or less 
+  - Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and observe [SRP](http://knnthvu.weebly.com/srp-and-dry.html) - and most are around 10 lines of code or less
   - Most functions and variables are semantically and concisely named. Functions should start with a verb, array names should be plural, etc. Function and variable names describe their role in the program. Examples: The name of the data type should not ever be in a variable name (ex: “petArray”); the name itself should be clear enough to indicate the type of data it holds (ex: “allPets” or “pets”).
   - An event handler should not have the word “handler” in the name (ex: “clickHandler”); the name should indicate the handler’s purpose (ex: “addNewPet”).
-  - Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused. 
-  - All console logs, debuggers and comments are removed from code before submitting. 
+  - Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
+  - Whenever possible, function declarations are used over anonymous functions in event listeners. There should be no logic present in an event listener.
+  - All console logs, debuggers and comments are removed from code before submitting.
 
-* **2:** 
-  - Uses named functions instead of anonymous functions as event handlers in event listeners. 
-  - Correctly uses if/else statements to handle multiple paths of logic & error handling. 
-  - Inconsistently uses parameters and arguments to craft short and reusable functions. There might be parameters or arguments in functions that are unused. 
-  - Most console logs, debuggers and comments are removed from code before submitting. 
+* **2:**
+  - Uses named functions instead of anonymous functions as event handlers in event listeners.
+  - Correctly uses if/else statements to handle multiple paths of logic & error handling.
+  - Inconsistently uses parameters and arguments to craft short and reusable functions. There might be parameters or arguments in functions that are unused.
+  - Most console logs, debuggers and comments are removed from code before submitting.
 
-* **1:** 
+* **1:**
   - Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
 
 
