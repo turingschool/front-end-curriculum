@@ -8,20 +8,6 @@ tags: react, javascript, api
 
 This project will challenge you to use the technology you've become familiar with over the course of Mod 3, as well as force you to work inside some constraints. Everyone will be working with (at least) one API and one audience.
 
-Choose an open API to work with where the data sounds interesting to you. A good place to start looking is [this repo with a list of free/open APIs](https://github.com/public-apis/public-apis). Choose an API where you could make an application based on the data from the API. _Do not choose an API that requires "OAuth or OAuth 2.0"_, which is a more complicated authentication scheme. Also, be wary of APIs that have "CORS" value of "no."
-
-APIs that require an `apikey` are usually easy to deal with, and some APIs don't require an `apikey`. If the API you want to use relies on an API key, be sure to request on ASAP!
-
-After you have an API that interests you, the next thing you need to do is choose an audience. You need to be _specific_ with your audience. For instance, if you chose an API that served cat data, your audience should not just be "cat lovers", it should be something more specific like "cat lovers who live in Alaska". This will give you some constraints for the project to make it more unique and design decisions a little easier.
-
-Once you've got your API and audience settled, start thinking about how you're going to build something for this audience, using that API. Come up with a few different ideas.
-
-## Wireframes
-
-Wireframing will be a major component of this project. The more time you spend intentionally thinking about what the layout of your application will look like, the better the final result will be.
-
-There are a lot of different tools you can use for this, including just plain old pen and paper. Just make sure you really spend time thinking about the user interactions. For a good overview of how to effectively wireframe a project, check out [this video](https://www.youtube.com/watch?v=e2Oynq-mOLk).
-
 ## Project Goals and Requirements
 
 1. Use the technology you've been working with over the course of the module to
@@ -29,22 +15,134 @@ There are a lot of different tools you can use for this, including just plain ol
    - React
    - Router
    - Asynchronous JavaScript
+   - End to end testing with Cypress
 
-2. Work within constraints to deliver a unique product for your audience which helps them in some way. Your project must utilize your assigned API and technology, and must be built for your assigned audience.
+2. Create personas and user stories to describe your target audience. 
 
-3. Your applications should have the following core functionality:
-  - Display the data from the API in a way that applies directly to your audience
-  - Ability for users to store/manipulate the data displayed in the application, such as favoriting or adding to a list
+3. Work within constraints to deliver a product for your niche audience, which helps solve a problem unique to them.
 
-### Day-1 Deliverables
+4. Your applications must have the following core functionality:
+  - **Display** the data from the API in a way that applies directly to your audience
+  - Ability for users to **store/manipulate** the data displayed in the application, such as favoriting or adding to a list, searching, commenting, etc
+  - Multiple views handled by Router
 
-By 2PM of day 1, send your instructional project manager the plans for you API, specific audience, and a general overview of what the application will do. Have a backup API/audience ready just in case.
+## Abstract
 
-If you have wireframes ready to go, send those along too. You can send your wireframes to your project manager at any time to get feedback.
+This project, having a short time frame, will need to pack a lot into a small space. We're going to accomplish this by building an app that serves the needs of a very small, very niche audience.
+
+You'll create an MVP to serve a deeply specific audience of users.
+
+<section class="answer">
+### What is an MVP? 
+
+When we talk about "MVP", we mean "**M**inimum **V**iable **P**roduct"! 
+
+An MVP defines the features that MUST be included in an app to achieve its base, core functionality.
+
+Let's consider Twittter. It's MVP may be defined as:
+- A user can write a tweet, which when submitted will be visible on the page
+
+That's it! Obviously, Twitter has MANY more features. But without tweets, Twitter wouldn't be Twitter. 
+
+These other Twitter features (which may FEEL very central and vital) are actually just nice-to-haves, which make the experience richer and more robust:
+- A user can log in
+- A user can see their previous tweets
+- A user can follow another user
+- A user can like tweets
+- A user can re-tweet
+- etc
+
+</section>
+
+## Process
+
+Here are some tips for creating an interesting, tightly-scoped application!
+
+### Finding an API
+
+Choose an open API to work with where the data sounds interesting to you. A good place to start looking is [this repo with a list of free/open APIs](https://github.com/public-apis/public-apis). Choose an API where you could make an application based on the data from the API. _Do not choose an API that requires "OAuth or OAuth 2.0"_, which is a more complicated authentication scheme. Also, be wary of APIs that have "CORS" value of "no."
+
+APIs that require an `apikey` are usually easy to deal with, and some APIs don't require an `apikey`. If the API you want to use relies on an API key, be sure to request one ASAP!
+
+### Choosing an audience
+
+After you have an API that interests you, the next thing you need to do is choose an audience. You need to be **specific** with your audience.
+
+For example, if you chose an API that served cat data, your audience should not just be "cat lovers". Instead, it should be something more specific like "cat lovers who live in Alaska". This will give you some constraints for the project to make it more unique and design decisions a little easier.
+
+**GET WEIRD. HAVE FUN.** (And also still be professional. Silliness is good; rudeness/crassness is not.)
+
+Once you've got your API and audience settled, start thinking about how you're going to build something for this audience, using that API. Come up with a few different ideas.
+
+### Niche audience
+
+The best audiences for this project are highly specific. You won't have a lot of time to build something, so a big app that has to serve lots of different audience members is not really feasible. You're not building Airbnb or Twitter here. 
+
+Examples of past student apps that had excellent audiences:
+- An app that interprets sports statistics into bite-sized sentences to share at work, intended to help non-sports-fans talk to sports-fans.
+- An app for plant-killers to remember to water their plants.
+- An app for wine-haters to find wines to try.
+- An app for soon-to-be-dads to begin building up a repertoire of dad jokes.
+
+As you can see, specific, niche audiences are more fun and interesting than broad audiences! These constraints will help inspire specific app features.
+
+## Thinking like a developer
+
+This project is often a portfolio piece for FE students. So let's make this as professional as possible!
+
+### User personas
+
+We expect you to write 2 thorough user personas which describe two members of your niche audience. These personas should inform the design & features/functionality of your app.
+
+### Wireframes & design inspiration
+
+Wireframing will be a major component of this project. The more time you spend intentionally thinking about the layout/views and user flow of your application, the better the final result will be.
+
+There are many different tools you can use for this, including just plain old pen and paper. Just make sure you really spend time thinking about the user interactions. For a good overview of how to effectively wireframe a project, check out [this video](https://www.youtube.com/watch?v=e2Oynq-mOLk).
+
+We also want you to choose two design inspiration pieces, which can be as broad as inspiration for the layout of your app, to as small as a color palette or a micro-interaction animation.
+
+### Day 1 Deliverables
+
+By 3PM of Day 1:
+
+* Create a DM with both instructors
+* Send the following:
+  - Your niche audience (be as specific and narrow as possible)
+  - Your chosen API
+  - The information you will be using from it
+  - A list of your app's MVP features
+  - Optional: a list of your app's nice-to-have features
+  - A backup API & audience
+
+Once your project MVP is approved (instructors will help you narrow down your MVP to a reasonable scope), please also send the following:
+
+* Wireframes
+* Links to 2 design inspirations
+* 2 separate user personas describing people in your niche audience
+* Project board link
+* Repo link
 
 ## Rubric
 
+Remember: scores are an indicator of your progress in specific areas.
+
+Score key:  
+- **4:** above and beyond expectations; did extensive self-teaching to achieve
+- **3:** right on track; exactly where instructors expect you to be
+- **2:** a little behind; be sure to devote study & practice time to this area in order to accelerate growth/understanding
+- **1:** very behind; strongly recommend you reach out to instructors to create a plan to catch up in this area
+
 ### Specification Adherence
+
+* **4:** 
+  - Project meets MVP & adds nice-to-haves; meets all project requirements
+* **3:** 
+  - Project meets MVP; meets all project requirements
+* **2:** 
+  - Project either does not meet MVP or does not meet all project requirements
+* **1:** 
+  - Project does not meet MVP or project requirements
 
 ### React Architecture
 

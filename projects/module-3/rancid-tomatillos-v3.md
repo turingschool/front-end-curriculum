@@ -4,7 +4,7 @@ module: 3
 tags: react,  testing, javascript, api, cypress
 ---
 
-Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a rancid tomatillo at the screen!" Or maybe you loved the movie and you could really go for a nice, fresh tomatillo salsa to enjoy the moment. Well it's your lucky day. In this project, you'll build a movie rating site where a user can login and rate the movies they loved or hated.
+This project is definitely not Rotten Tomatoes. Nor is it Netflix. Nor is it IMDB. It's R A N C I D  T O M A T I L L O S. Very different!
 
 ## Learning Goals
 
@@ -15,12 +15,7 @@ Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a
 
 ## Iterations
 
-<section class="note">
-
-### Note
-You are expected to test the functionality you write in each iteration. Don't save testing for the last minute!
-
-</section>
+We've broken this project down into iterations. Please be sure to read them closely with your project partner! 
 
 ### Iteration 0 - Day 1 Deliverables
 
@@ -111,6 +106,8 @@ All resources are given a unique ID in the database. For instance, every user ha
 If you are sending information in the body of a request, you will need to set the request header of `Content-Type` to `application/json`.
 
 Please note: the server occasionally returns a 500 error. You will need to build in FE functionality to handle this possibility.
+
+Also note: there are some endpoints here that you will not be using! Read the documentation carefully to find out which routes are useful to you.
 </section>
 
 **User Story**  

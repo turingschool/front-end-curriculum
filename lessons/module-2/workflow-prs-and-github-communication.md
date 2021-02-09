@@ -75,6 +75,12 @@ GH issues are often a great place to start when deciding what to work on, especi
 4.  Think about any additional information that might be needed.  This can included resources such as helpful links or relevant wireframes.
 </section>
 
+<section class="note">
+### Where is the Issues tab?
+
+If you don't see an **Issues** tab, it's likely because you haven't enabled it.  To fix this, you can go to the **Settings** tab, and under "Features", check the box for Issues so that the tab will then be available.
+</section>
+
 <section class="checks-for-understanding">
 ### Compare & Contrast
 

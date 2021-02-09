@@ -61,14 +61,14 @@ As you have seen in a couple of examples today, you can chain multiple propertie
 
 ```js
   var user = {
-    email: ‘jonathan@email.com’,
-    name: ‘Jonathan’,
+    email: 'jonathan@email.com',
+    name: 'Jonathan',
     contactInfo: {
-      phone: 123456789
+      phone: 123456789,
       address: {
-        street: ‘1234 Main Street’,
-        city: ‘Denver’
-        state: ‘CO’
+        street: '1234 Main Street',
+        city: 'Denver',
+        state: 'CO',
         zip: 80206
      }
    }
