@@ -66,7 +66,7 @@ To do this, we need to combine what we just learned about event listeners with w
 
 We are putting a few pieces together now, so this may seem a bit more challenging. That's when it is especially important to pseudo-code, or write human-readable notes that give you a roadmap for the code you will later write.
 
-Your task is to create a single `div` that is gray. Then, when it is clicked, it turns pink!
+You will be building off of [this Codepen](https://codepen.io/hannahhudson/pen/NWbRZmQ) to create a single `div` that is gray. Then, when it is clicked, it turns pink!
 
 In your notebook:
 * List the directions, as specially as possible, that you want to give to the computer.
@@ -129,8 +129,8 @@ Let's break down what's happening in the CodePen above:
 
 <section class="call-to-action">
 ### Paired Practice
-Examine [this code](https://codepen.io/kaylaewood/pen/eYddjBL) and talk about the following questions:
-1. Why do you think "Summer" appearing in the screen, when "Fall" is in the original HTML?
+Examine [this code](https://codepen.io/hannahhudson/pen/RwoGzXe) and talk about the following questions:
+1. Why do you think "Summer" is appearing in the screen, when "Fall" is in the original HTML?
 2. Why isn't the button working?
 </section>
 
