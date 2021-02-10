@@ -152,39 +152,12 @@ readWords();
 
 ## Scope & Scope Execution Practice
 
-##### Returning values
-
-Let's review how we can capture/store variables declared within a function and use them in the global scope:
-
-<section class="call-to-action">
-### Problem #1
-
-Review the example below and answer the following questions:
-
-```js
-function makeNumber () {
-  var number = 5;
-
-  return number;
-};
-
-console.log(number);
-console.log(makeNumber);
-console.log(makeNumber());
-```
-
-* What do we get we logging the value of `number`?
-* What do we get we logging the value of `makeNumber`?
-* What do we get we logging the value of `makeNumber()`?
-* **Bonus:** How can we store the value returned from `makeNumber()` to use later? 
-</section>
-
 ##### Parent vs. Child Scopes
 
 Let's look at another example and compare how scopes work between the parent and child.
 
 <section class="call-to-action">
-### Problem #2
+### Problem #1
 
 Review the example below and answer the following questions:
 
@@ -224,7 +197,7 @@ Parent scopes do not have access to child scopes BUT child scopes do have access
 As we discussed earlier, variables declared with the keyword `let` or `const` will be block scoped if declared within a block. This means that they are scoped to the block statement (`if`, `for`...) in which they are declared. When you see `{` and `}`, those curly brackets are likely creating a scope, - as with `function`, `if`, and `for`.
 
 <section class="call-to-action">
-### Answer the following:
+### Problem #2
 
 Run the following examples in your Repl/console:
 
