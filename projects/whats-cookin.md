@@ -104,6 +104,14 @@ A `Recipe` represents one recipe object.
   - Return its directions / instructions
 
 <section class="note">
+### Calculating the cost of a Recipe
+
+To calculate the cost of an of a recipe, you will need to factor in the amount listed in the recipe.  The price (`estimatedCostInCents`) of an ingredient is per `unit`.  
+
+For example, if flour is marked as 100 cents, and the recipe calls for 1.5 cups, then it would cost 150 cents.  Similarly, if a tomato is $2, and the recipe needs 2 tomatoes, then the cost would be $4.
+</section>
+
+<section class="note">
 ### Hint
 
 You may find it helpful to have an `Ingredient` class as well as you build your your recipes.  A common theme when dealing with data is not to manipulate the original data, but to create copies / instances to work with.
