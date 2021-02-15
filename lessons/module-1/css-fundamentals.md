@@ -104,10 +104,9 @@ Let's make the following edits on [kodewithklossy.com](https://www.kodewithkloss
 * Change the background color of the div that holds the mission to `rebeccapurple`
 * Change the background color of the nav to `orange`.
 * Change the "Kode With Klossy" logo in the nav bar to have a height of 90px and a width of 320px
+* Change the background color of the right side "donate" button to a color of your choosing. Try out different color formats. Hint - this [HTML Color Codes](https://htmlcolorcodes.com/) website will help!
 * Experiment with deselecting a few CSS styles. What happens?
 
-**Finished Early?**
-- Close the Dev Tools. Mess around with the size of the window. Do you notice any issues with this site's styling? Why might thinking about screen size be important when designing a website?
 </section>
 
 ## The Box Model
