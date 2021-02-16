@@ -20,7 +20,7 @@ This Solo Challenge gives students and instructors the opportunity to get a puls
 
 ## Expectations
 - In order to get a good read on your progress during this inning, we'd like to see you complete the MVP (iteration 1) and at least one CYOA feature. If you'd like to complete more CYOA features after that, please do!
-- As for feedback: No news is good news. If we have concerns, we'll let you know so that you can make adjustments before your next project
+- As for feedback: Your PM will give you minimal feedback on this challenge. You will be asked to reflect on your work and then submit one code block for review from your PM. 
 
 ## Setup
 
@@ -30,10 +30,10 @@ This Solo Challenge gives students and instructors the opportunity to get a puls
 - Read this README thoroughly, then begin working!
 
 ## Workflow
-Make sure you're utilizing git best practices (branches) and commiting frequently. 
+Make sure you're utilizing git best practices (branches) and commiting frequently.
 
 ### Day One Deliverables
-- Read the spec sheet closely. 
+- Read the spec sheet closely.
 - Send the link to your forked repo to your Project Manager
 - Fill out [this planning form](https://docs.google.com/forms/d/1Bz9QipKTIKqx-9orvsPIi6teEIZE39iIIB8YLMq6--E/edit)
 
@@ -56,7 +56,9 @@ Make sure you're utilizing git best practices (branches) and commiting frequentl
 
 ### Choose your own Adventure
 
-In the interest of giving you opportunities to individualize the skills you build, this project's main goal is to provide various different paths you can take. Along these different paths you will encounter different problems and solve them in different ways. As you make choices about which features to add, you should consider which features align with your strengths, which features would challenge you to grow, and which features you'd find to be useful in this application. Choose one or more of the following features to add. Some of them build on others, so be sure to read them all before choosing. 
+In the interest of giving you opportunities to individualize the skills you build, this project's main goal is to provide various different paths you can take. Along these different paths you will encounter different problems and solve them in different ways. As you make choices about which features to add, you should consider which features align with your strengths, which features would challenge you to grow, and which features you'd find to be useful in this application. Choose one or more of the following features to add. Some of them build on others, so be sure to read them all before choosing.
+
+When you choose a feature, you **must** complete all bullet points!
 
 When you choose a feature, you **must** complete all bullet points!
 
@@ -64,8 +66,8 @@ _NOTE: You should absolutely not be working on this unless your UI is solid and 
 
 #### Error handling and clear button
 - User should not be able to click the "Receive Message" button unless they have selected a message option.
-- The user can click a clear button, which clears the page of any message. 
-- User should only be able to click the clear button if a message is visible. 
+- The user can click a clear button, which clears the page of any message.
+- User should only be able to click the clear button if a message is visible.
 - When the clear button is clicked and the message is removed, the image of the meditation icon should re-appear.
 - If you've added other buttons or inputs, be sure to add some error handling for them as well.
 
@@ -94,7 +96,7 @@ _NOTE: None of this needs to persist on page refresh, unless you also complete t
 _NOTE: None of this needs to persist on page refresh, unless you also complete the local storage feature_
 
 #### User can delete a message
-- Add the ability to delete a messge (ie: when a message shows up, show a button that says "I don't like this messge" (or something similar), and remove it from the list so that it will not show up any more. Make sure to alert the user in some way that the message has been removed. 
+- Add the ability to delete a messge (ie: when a message shows up, show a button that says "I don't like this messge" (or something similar), and remove it from the list so that it will not show up any more. Make sure to alert the user in some way that the message has been removed.
 
 _NOTE: None of this needs to persist on page refresh, unless you also complete the local storage feature_
 
@@ -124,7 +126,7 @@ _NOTE: None of this needs to persist on page refresh, unless you also complete t
 
 Remember your user experience and animate these things in gradually. Timing is everything!
 
-#### Local Storage 
+#### Local Storage
 - Only do this if you've added the "Favorite a Message" functionality.
 - Do some research to utilize Local Storage, so that the user's favorite messages will persist, even if they reload the page.
 
@@ -151,7 +153,7 @@ My possibilities are endless.
 
 I am worthy of my dreams.
 
-I am enough. 
+I am enough.
 
 I deserve to be healthy and feel good.
 
@@ -170,7 +172,7 @@ Don’t let yesterday take up too much of today.
 
 Every day is a second chance.
 
-Tell the truth and love everyone. 
+Tell the truth and love everyone.
 
 I am free from sadness.
 
