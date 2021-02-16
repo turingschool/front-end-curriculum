@@ -35,15 +35,7 @@ Make sure you're utilizing git best practices (branches) and commiting frequentl
 ### Day One Deliverables
 - Read the spec sheet closely.
 - Send the link to your forked repo to your Project Manager
-
-Reflect on the the following questions in a DM to your Project Manager:
-- What are my strengths as a developer? With which Mod 1 concepts do I feel comfortable?
-- In what areas could I grow? With which Mod 1 concepts do I struggle?
-- Which CYOA features align with my strengths?
-- Which CYOA features align with my areas of growth?
-- Which CYOA features align with what I enjoy about programming?
-- Which CYOA features make the most sense for this application?
-- Which CYOA feature(s) will I aim for?
+- Fill out [this planning form](https://docs.google.com/forms/d/1Bz9QipKTIKqx-9orvsPIi6teEIZE39iIIB8YLMq6--E/edit)
 
 ### Iteration 0: Build Out Comp
 - Images are below
@@ -65,6 +57,8 @@ Reflect on the the following questions in a DM to your Project Manager:
 ### Choose your own Adventure
 
 In the interest of giving you opportunities to individualize the skills you build, this project's main goal is to provide various different paths you can take. Along these different paths you will encounter different problems and solve them in different ways. As you make choices about which features to add, you should consider which features align with your strengths, which features would challenge you to grow, and which features you'd find to be useful in this application. Choose one or more of the following features to add. Some of them build on others, so be sure to read them all before choosing.
+
+When you choose a feature, you **must** complete all bullet points!
 
 _NOTE: You should absolutely not be working on this unless your UI is solid and you are 100% sure that your MVP is fully functional and bug free._
 
@@ -113,12 +107,15 @@ _NOTE: None of this needs to persist on page refresh, unless you also complete t
 - When that button is clicked, the user is taken to a new pages that displays all messages, sorted by message type.
 - On this page, user should have the ability to add/edit/delete messages.
 
+<<<<<<< HEAD
 #### Animations
 - Add a loading animation when a user clicks the "Receive Message" button to simulate searching for a message. Hint - You will need to use CSS Keyframes, and a Javascript timeout function for this.
 - Make your buttons grow in size or change color when the user hovers over them, enticing them to click the dang thing.
 - When the message appears, the text should fade in, from white to black to deliver the message in a calming way.
 - Have the background change depending on if a user has selected an affirmation or mantra. Choose a calming secondary gradient for each type of message Remember your user experience and animate this in gradually!
 
+=======
+>>>>>>> 5ee17cafd8fec273635022f2639827de290e6f49
 #### Login Page
 - Refactor your application so that the user lands on a "Login" page
 - The login page should match the style of the application.
@@ -126,9 +123,15 @@ _NOTE: None of this needs to persist on page refresh, unless you also complete t
 - After the user clicks the submit button, they should be taken to the main application page, and see a personalized greeting that displays their name and some sort of welcome message.
 - The welcome message and name should appear in a logical place of your choosing.
 
-#### Responsive Design
+#### Intermediate CSS
 - Do some research and determine how to make your app respond to the user's screen size.
-- Layout and spacing should adapt to mobile, tablet, desktop and extra large screens.
+- Layout and spacing should adapt to mobile, tablet, desktop and extra large screens
+- Add a loading animation when a user clicks the "Receive Message" button to simulate searching for a message. Hint - You will need to use CSS Keyframes, and a Javascript timeout function for this.
+- Make your buttons grow in size or change color when the user hovers over them, enticing them to click the dang thing.
+- When the message appears, the text should fade in, from white to black to deliver the message in a calming way.
+- Have the background change depending on if a user has selected an affirmation or mantra. Choose a calming secondary gradient for each type of message.
+
+Remember your user experience and animate these things in gradually. Timing is everything!
 
 #### Local Storage
 - Only do this if you've added the "Favorite a Message" functionality.
