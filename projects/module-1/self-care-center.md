@@ -60,6 +60,8 @@ In the interest of giving you opportunities to individualize the skills you buil
 
 When you choose a feature, you **must** complete all bullet points!
 
+When you choose a feature, you **must** complete all bullet points!
+
 _NOTE: You should absolutely not be working on this unless your UI is solid and you are 100% sure that your MVP is fully functional and bug free._
 
 #### Error handling and clear button
@@ -107,15 +109,6 @@ _NOTE: None of this needs to persist on page refresh, unless you also complete t
 - When that button is clicked, the user is taken to a new pages that displays all messages, sorted by message type.
 - On this page, user should have the ability to add/edit/delete messages.
 
-<<<<<<< HEAD
-#### Animations
-- Add a loading animation when a user clicks the "Receive Message" button to simulate searching for a message. Hint - You will need to use CSS Keyframes, and a Javascript timeout function for this.
-- Make your buttons grow in size or change color when the user hovers over them, enticing them to click the dang thing.
-- When the message appears, the text should fade in, from white to black to deliver the message in a calming way.
-- Have the background change depending on if a user has selected an affirmation or mantra. Choose a calming secondary gradient for each type of message Remember your user experience and animate this in gradually!
-
-=======
->>>>>>> 5ee17cafd8fec273635022f2639827de290e6f49
 #### Login Page
 - Refactor your application so that the user lands on a "Login" page
 - The login page should match the style of the application.
