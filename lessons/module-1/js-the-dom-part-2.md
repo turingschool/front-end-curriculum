@@ -16,7 +16,7 @@ tags: javascript, dom, browser
 
 Spend a few minutes [researching the docs](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) for `document.querySelectorAll()`, and answer the following questions in your notebook.
 
-- How is this method similar to `document.querySelector()`? 
+- How is this method similar to `document.querySelector()`?
 - How does it differ?
 - What does `document.querySelectorAll()` return?
 
@@ -24,7 +24,7 @@ Spend a few minutes [researching the docs](https://developer.mozilla.org/en-US/d
 
 ## document.querySelectorAll();
 
- `document.querySelectorAll()` returns a collection (specifically called a "NodeList") of all the elements that match the query.
+ `document.querySelectorAll()` returns a collection (specifically called a "[NodeList](https://attacomsian.com/blog/javascript-nodelist-vs-array)") of all the elements that match the query.
 
 This collection is an array-like structure of nodes (or elements) that meet the query we passed through to the `document.querySelectorAll()` method!
 
@@ -40,8 +40,8 @@ We are intentionally using the `for loop` throughout this lesson. If at a later 
 
 Let's say we have a page with the following markup. What will be returned to us in each of the following examples?
 
-* `document.querySelectorAll('p');` 
-* `document.querySelectorAll('.awesome');` 
+* `document.querySelectorAll('p');`
+* `document.querySelectorAll('.awesome');`
 * `document.querySelectorAll('#third');`
 
 ```html
@@ -111,11 +111,11 @@ In the CodePen above that you forked:
 
 ### The Data Model and the DOM
 
-A **Data Model** is a tool to both hold and organize your data. As you are developing, it is a good practice to keep your website data contained in one model. There are many benefits to encapsulating your data but the most important one is this: **There is only one Source of Truth in your program**. 
+A **Data Model** is a tool to both hold and organize your data. As you are developing, it is a good practice to keep your website data contained in one model. There are many benefits to encapsulating your data but the most important one is this: **There is only one Source of Truth in your program**.
 
 When a user starts interacting with your website, they are going to create and change data. Say a user makes an account - your website is going to store information about their account, like their username, their first and last names, the date and time they created their account. You will reference that data throughout your website. Like the report card, we had two places that referenced student name. If the student name is changed, only **one** piece of data should be changed.
 
-When you start storing data in multiple places on your website, that data can very easily become outdated. If I forget to change BOTH instances of my student name, then one of those instances will be wrong. This is why you should store all of your data in a **data model**, or a structure that encapsulates your data. 
+When you start storing data in multiple places on your website, that data can very easily become outdated. If I forget to change BOTH instances of my student name, then one of those instances will be wrong. This is why you should store all of your data in a **data model**, or a structure that encapsulates your data.
 
 <section class="note">
 ### Important Note
@@ -123,20 +123,24 @@ When you start storing data in multiple places on your website, that data can ve
 The **DOM** is **NOT** the place to store your data. The information the **DOM** displays should be based off of your **data model**.
 </section>
 
-Take a look at this code pen to see how the Report Card is generated using a data model. In this instance, the object `studentReportCard` is the data model. See how the HTML holds placeholder text that is being replaced with my student's data in the javascript.
+<section class="call-to-action">
+### Code Exploration
+Look at the two codepens below.
 
+- [Example 1](https://codepen.io/kaylaewood/pen/GRNmNZz)
+- [Example 2](https://codepen.io/kaylaewood/pen/JjbNRQy)
 
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="QWbVRKr" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML Report Card with a Data Model">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/QWbVRKr">
-  HTML Report Card with a Data Model</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+Notice that the functionality is identical, but the code looks quite different.
+- Which example is separating data model vs DOM?
+- Which example do you think is preferable? Why?
+- What questions do you have about this code?
+</section>
+
 
 ## Wrap Up
 <section class="call-to-action">
 ### Journaling and Additional Practice
   - What does `document.querySelectorAll()` return? How can we interact with and use this return value?
   - Why is it important to keep your data model and your DOM displays separate?
-  - Fork the [above codepen](https://codepen.io/turing-school/pen/QWbVRKr) and complete the extra exercises commented out in the JS section
+  - Fork the [this codepen](https://codepen.io/turing-school/pen/QWbVRKr) and complete the exercises commented out in the JS section
 </section>
