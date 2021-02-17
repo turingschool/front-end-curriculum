@@ -163,14 +163,14 @@ Browser vendors are beginning to work some accessibility checks directly into ou
 
 **Lighthouse**
 * Open up your dev tools panel on the current lesson plan.
-* Click on the 'Audits' panel of dev tools
+* Click on the 'Lightouse' panel of dev tools
 * Select the following [settings](https://imgur.com/QMMFc0R) to run an accessibility check on the page
-* Click 'Run Audits' (your dev tools may disappear for a while, or your screen may go blank, just wait it out)
+* Click 'Generate Report' (your dev tools may disappear for a while, or your screen may go blank, just wait it out)
 
 **WAVE Evaluation Tool**
 * Download the [Chrome Extension](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US)
 
-Read through the passing, failing, non-applicable and manual audits:
+Read through the passing, failing, non-applicable and manual audits for this page:
 * What accessibility concerns have come to light? WHY are they accessibility concerns?
 * What strategies may you have learned based on the failing audits? Passing audits?
 * Run the audit on your paired project, and take note of what issues you might need to resolve
