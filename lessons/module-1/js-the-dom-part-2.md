@@ -142,5 +142,5 @@ Notice that the functionality is identical, but the code looks quite different.
 ### Journaling and Additional Practice
   - What does `document.querySelectorAll()` return? How can we interact with and use this return value?
   - Why is it important to keep your data model and your DOM displays separate?
-  - Fork the [this codepen](https://codepen.io/turing-school/pen/QWbVRKr) and complete the exercises commented out in the JS section
+  - Can you think of an example in your last project where you separated the Data Model/DOM well? Not well? Is there anything you'll do differently in your next project?
 </section>
