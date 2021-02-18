@@ -28,7 +28,9 @@ You may NOT take liberties with the layout, but your creative license includes:
 ### Additional Requirements
  - Site must work across Firefox, Safari, Chrome
  - Developer must use [normalize or reset](https://frontend.turing.io/lessons/module-1/reset-vs-normalize.html){:target='blank'} file in CSS
- - **You are allowed to use `flex-box` and/or `grid`**
+ - You should definitely experiment with `flex-box` and/or `grid`
+ - Ask your mentor for a review on one of your pull requests
+ - Ask your accountabilibuddy for a review on one of your pull requests and give them one in return
 
  <section class="note">
 ### First time with CSS Grid?
