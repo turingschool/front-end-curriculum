@@ -15,25 +15,31 @@ You may NOT take liberties with the layout, but your creative license includes:
 * Copy
 * Images
 * Icons
-* Color palette, but ONLY if you select a complementary palette. We highly encourage you to visit sites like: [material palette](https://www.materialpalette.com/) or [coolors](https://coolors.co/) or [color-hex](http://www.color-hex.com/color-palettes/)
+* Color palette, but ONLY if you select a complementary palette. We highly encourage you to visit sites like: [material palette](https://www.materialpalette.com/){:target='blank'}  or [coolors](https://coolors.co/){:target='blank'}  or [color-hex](http://www.color-hex.com/color-palettes/){:target='blank'} 
 
 ### Base Requirements
 
   - Basic static site setup with `index.html` and `styles.css`
   - Site must be responsive
-  - Create a repo on github :octocat: for your work with following naming construct: [initials]-comp-challenge-[challenge number] (i.e. __"cd-comp-challenge-1"__)
+  - Create a repo on github :octocat: for your work
   - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your version.
   - Push your final work to [github pages](https://pages.github.com/)
 
 ### Additional Requirements
  - Site must work across Firefox, Safari, Chrome
- - Developer must use normalize or reset file in CSS
+ - Developer must use [normalize or reset](https://frontend.turing.io/lessons/module-1/reset-vs-normalize.html){:target='blank'} file in CSS
  - **You are allowed to use `flex-box` and/or `grid`**
+
+ <section class="note">
+### First time with CSS Grid?
+
+This [slideshow](https://frontend.turing.io/lessons/module-1/css-grid-slides.html){:target='blank'} provides a nice demonstration of some of the neat things you can do with CSS Grid.  Alternatively there is a more common [lesson](https://frontend.turing.io/lessons/module-1/css-grid-tutorial.html){:target='blank'} that covers similar content as well.  There are also many great resources online such as [CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/){:target='blank'} and even a [fun game](https://cssgridgarden.com/){:target='blank'}!
+</section>
 
 ***
 
 ## Submission Details
 
-* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1wY5daYCN013bC1QIo5fUzFOyQiNqXftSq2Zx63L4-Kc/edit#gid=1037661414)
+* Please submit your static comp [here](https://forms.gle/snJsb9N9mgDx1CEh6){:target='blank'}
 
 ![static-comp-challenge-2](/assets/images/static-comp-challenge-2.jpg)
