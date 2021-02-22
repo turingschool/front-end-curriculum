@@ -204,7 +204,7 @@ To earn a given score, an application must meet the requirements listed in that 
 
 ### HTML && CSS - Style and Implementation
 * **4:**
-  - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
+  - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, let assigned instructor know which naming convention will be used._
   - Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected. To get this extension to work with local files, follow these steps:
     - Install
     - Right click the WAVE extension
@@ -253,6 +253,6 @@ This means, we DO NOT want to see:
 * A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
 
 * **4:** Application completes an extension without bugs.
-* **3:** Application meets all of the expectations of Iteration 5 without bugs..
-* **2:** Application meets all of the expectations of Iteration 4 without bugs..
-* **1:** Application meets all of the expectations of Iteration 3 without bugs..
+* **3:** Application meets all of the expectations of Iteration 5 without bugs.
+* **2:** Application meets all of the expectations of Iteration 4 without bugs.
+* **1:** Application meets all of the expectations of Iteration 3 without bugs.
