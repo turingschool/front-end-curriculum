@@ -8,7 +8,7 @@ tags: react, javascript, api, frameworks
 
 You've made it through your first front-end JavaScript framework: React! Now that you have the building blocks down, it's time to take what you've learned, build something creative, and dive into some independent learning of new technologies.
 
-Incorporating a new technology into your application that isn't explicitly taught will give you the opportunity to differentiate yourself from other Turing grads and give you a great story to tell in your job interview - employers love to hear about your experiences being self driven and learning new technologies outside of the standard Turing curriculum.
+Incorporating a new technology into your application that isn't explicitly taught will give you the opportunity to differentiate yourself from other Turing grads **and** give you a great story to tell in your job interview - employers love to hear about your experiences being self driven and learning new technologies outside of the standard Turing curriculum.
 
 No one hires a junior dev based on what the junior already knows. Instead, junior developers are successful when they showcase their ability to learn and ask questions. This project will provide tangible, demonstrable anecdotes for you to bring up during interviews to show your ability to struggle with new material and problem solve!
 
@@ -21,15 +21,24 @@ As a group, you need to decide on:
 1. A minimum viable product (MVP) idea that solves a problem for your users
 1. The use of at least one external API
 1. Choose one category from the "Stretch Technologies" section below
+1. Meets the specs listed below under **MVP**.
 
 ### MVP
 
-Your application needs to be summarized with a minimum viable product. What is the smallest set of features to give the user a way to accomplish the goal of the application?
+Your application needs to be summarized with a **minimum viable product**. What is the _smallest_ set of features to give the user a way to accomplish the goal of the application?
 
-The project is very open-ended in that you can make pretty much anything you want. However, we have some requirements to follow:
-* The application cannot simply be a display of data - there needs to be some way for the user to work with or manipulate the data (think favoriting at the very least, but be more creative than favoriting)
+<section class="note">
+### NOTE
+
+The functionality for Stretch will be MUCH LIGHTER than the functionality in Rancid Tomatillos. You will probably not be able to add as many features, especially if your RT choose-your-own-adventure included adding more functionality. 
+
+Remember: the learning goals of this project are to expand/deepen your understanding of your learning process & dynamics within a team - NOT to build the flashiest thing ever.
+</section>
+
+The project is very open-ended in that you can make pretty much anything you want. However, we have some requirements to follow:  
+* The application cannot simply be a display of data - there needs to be some way for the user to work with or manipulate the data (favoriting, searching, filtering, commenting, rating, etc)
 * The application should be a multi-page application using React Router
-* Be able to answer: What problems are you solving? What features must the solution include to solve this problem?
+* Be able to answer: What problems are you solving? What features **must** the solution include to solve this problem?
 
 Create a summary (MVP) of what your application will do and who your application is made for - be specific with your audience because it will give you direction in your work and make your project more interesting.
 
@@ -91,9 +100,10 @@ Writing bug-free code can be made easier by adding some very common workflow too
 
 #### Testing
 
-For those who just can't get enough testing, there is another testing subject we haven't touched on: end-to-end testing. This is another type of testing that loads your app in a browser and clicks on buttons/types in forms automatically. The technology we would like to see used here is called Cypress, which is a very popular E2E testing tool which is framework-agnostic!
+For those who just can't get enough testing, you can challenge yourself to do acceptance testing with our friend Cypress, AND unit/integration testing with React-Testing-Library or Enzyme!
 
-* Cypress
+* React-Testing-Library
+* Enzyme
 
 If you choose this, then all of your large/important integration tests should be done with Cypress. Unit tests should still be done using React Testing Library.
 
@@ -141,12 +151,13 @@ If you choose from this category, then you must pick at least two of these optio
 
 ### Day 1
 
-Create a private Slack channel with your team members and instructor project manager. Submit the following by **3PM** of day 1:
+Create a Slack DM with your team members and  both instructors. Submit the following by **3PM** of day 1:
 
-* MVP summary with a description the problem you are solving and your audience
+* MVP summary with a description the problem you are solving and your audience (be specific and don't be afraid to narrow your audience!)
 * The API you will use
 * DTR (be as actionable, detailed, and specific as you can)
 * Wireframes of your application (using any electronic or hand-drawn tool you would like)
+* Links to your design inspirations, with description of what you hope to replicate in your project
 * Project management tool (with some cards filled out and assigned to team members)
 * A plan for how you will learn the stretch technology together as a group
 
@@ -163,7 +174,22 @@ Your instructors will do a formal check-in with your group. At this check-in, in
 * Any blockers you're experiencing
 * Your plan going forward for the next few days
 
-Share your app progress with the class for Show and Tell! Be prepared to tell the story or what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes.
+### Day 5
+
+Share your app progress with the class for Show and Tell! Be prepared to tell the story of what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes (shoot for 5 minutes).
+
+Your project does not need to be done or impressive by this point; this is more of a way to give you a milestone to shoot for and to help plan your timeline.
+
+## Evals
+
+Similar to Rancid Tomatillos, the evals will be conducted in two parts:  
+1. Written feedback & project scores delivered the morning of evals
+2. Evals with the team and an instructor 
+  - Time for questions/discussion about feedback
+  - Each person will talk through some code
+  - Each person will answer an interview question, using the project as an example of their ability to learn
+
+The purpose of this is to give you another opportunity to begin answering technical interview questions in a way that helps a future team understand what it would be like to work with you. It gives you a chance to practice talking about your own specific experiences, as way to illustrate your problem solving processes and learning skills.
 
 ## Rubric
 
@@ -218,8 +244,8 @@ Share your app progress with the class for Show and Tell! Be prepared to tell th
   - A clear understanding of class components vs function components is demonstrated
   - Only the data that a child component _needs_ is passed down as props
   - Logic is kept out of return statements; return statements are as readable as possible, only communicating what will be displayed
-  - There are some issues with the asynchronous JS where the frontend is not matching with the backend
-  - There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
+  - There may be some issues with the asynchronous JS where the frontend does not match with the backend
+  - There are a few functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
   - Data fetched from API is not cleaned before being set to state
   - All components which receive props implement prop typechecking (proptypes or otherwise)
 * **2:** 
@@ -229,6 +255,7 @@ Share your app progress with the class for Show and Tell! Be prepared to tell th
   - `return` statements contain logic that should be refactored out for the sake of readability and performance
   - There are methods that are being created inside of functional components that should be passed down through props from a parent class component
   - API calls have not been broken out into their own file
+  - There are several functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
   - Most components which receive props implement prop typechecking (proptypes or otherwise)
 * **1:**
   - Project shows little understanding of React and significant refactoring is required, including but not limited to:
@@ -264,20 +291,17 @@ Share your app progress with the class for Show and Tell! Be prepared to tell th
 
 * **4:** 
   - Team has successfully achieved 90%+ test coverage of all components
-  - All async functionality is mocked
-  - Async tests cover happy & sad paths
-  - All unit tests are in place, including conditional rendering
-  - All integration tests are in place, tested from the correct component
+  - All async functionality is stubbed
+  - Tests cover happy & sad path user flows
+  - All user flows are covered 
 * **3:** 
-  - All unit tests are in place & passing, including any conditional rendering
-  - All integration tests are in place, tested from the correct component
-  - Happy path async functionality is tested
+  - All user flows are covered
+  - Async functionality is stubbed at least once
 * **2:**
-  - Most unit tests are in place & passing
-  - A valid attempt is made at integration testing; some integration tests may be in the wrong place (aka, attempted to be done by a component that cannot actually "see"/access all the necessary functionality/data)
-  - A valid attempt is made at async testing; sad paths might not be tested
+  - Most user flows are covered, sad paths are not
+  - A valid attempt is made at stubbing async functionality
 * **1:** 
-  - Many unit tests are missing/failing
-  - Little or no attempt is made at integration testing
-  - Little or no attempt is made at async testing
+  - Many tests are missing/failing
+  - Tests do not successfully illustrate user flows
+  - No async functionality is stubbed
   - There are obvious, large gaps in testing app functionality

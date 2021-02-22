@@ -34,9 +34,9 @@ Use the same text on your cards that is used in the spec so you can ensure your 
 
 ![Desktop Layout](./assets/ideabox-group/desktop.jpg)
 
-You will need the `svg` image files for the star and delete icons. [Here's the link to download the `svg` icons.](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing)
+You will need the `svg` image files for the star and delete icons. [Here's the link to download the `svg` icons.](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing). _Note: You won't end up using all of the icons in this folder._
 
-![Colors](./assets/ideabox-group/colors.jpg)
+![Colors](./assets/ideabox-group/ideabox-colors.png)
 ![Icons](./assets/ideabox-group/icons.jpg)
 
 
@@ -222,12 +222,10 @@ To earn a given score, an application must meet the requirements listed in that 
 * **2:**
   - Commits are large and do not effectively communicate the progression of the application
   - Team uses PRs but do not review code before merging into the main branch
-  - All teammates can speak to the purpose and functionality of any/every line of code
   - Branches are sometimes used for individual features
   - There is a 20% disparity in project contributions between teammates
   - README is brief and does not provide context for the project
 * **1:**
-  - Teammates do not understand the purpose and functionality of every line of code
   - Some commits are pushed directly to the main branch
   - PRs are used inconsistently
   - There is a 50% disparity in project contributions between teammates
@@ -248,7 +246,7 @@ To earn a given score, an application must meet the requirements listed in that 
 
 ### HTML && CSS - Style and Implementation
 * **4:**
-  - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
+  - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, let assigned instructor know which naming convention will be used._
    - Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected. To get this extension to work with local files, follow these steps:
     - Install
     - Right click the WAVE extension
@@ -268,15 +266,15 @@ To earn a given score, an application must meet the requirements listed in that 
 ### JavaScript - Style and Implementation
 
 * **4:**
-  * All functions strictly adhere to the Single Responsibility Principle (SRP) and are all 10 lines of code or less
+  * All functions strictly adhere to the Single Responsibility Principle (SRP)
   * There are no nested if/else statements
-  * When 'Filtering and Searching by Text' and 'Viewing Starred Ideas', ideas that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
+  * Functions and code are well-refactored and show developer empathy
 * **3:**
   * Application uses the Data Model exclusively to track changes to the ideas,
     and display of ideas happens after the Data Model has been updated
   * There are no nested for loops
   * Functions are DRY and observe SRP - and most are around 10 lines of code or less
-  * There are no global variables aside from query selectors and an array for your idea
+  * There are no global variables aside from query selectors and an array for your ideas
   * Uses event delegation correctly on dynamic elements for deleting, and starring an idea
   * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
 * **2:**
