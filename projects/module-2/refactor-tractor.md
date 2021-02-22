@@ -17,10 +17,17 @@ In this project, you will be building on top of somebody else's pre-existing Fit
 * Fetch
 * [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html)
 
+### Note
+
+**You must pull 3 inspirations from 3 different apps that you want to implement in your application**
+* Be specific about what piece you are trying to re-create
+* This may include how elements are organized from desktop to mobile views
+* You may also pull inspirations from other sites such as [Dribbble](https://dribbble.com/)
+
 ## Timeline
 Dates and deadlines to be aware of:
 
-* **Wednesday, February 24th** - Make sure to have project board ready with tickets already completed and plans to complete for sprint over the weekend. (*DTR should also be complete*)
+* **Wednesday, February 24th** - Make sure to have project board ready with tickets already completed and plans to complete for sprint over the weekend. You should also have wireframes in place (*DTR should also be complete*)
 * **Monday, March 1st** - Project board up to date with tasks completed and plans for finishing final sprint. (*May review a couple PRs as well for code reviews*)
 * **Wednesday, March 3rd** - Project due at 9PM.
 * **Thursday, March 4th** - Project evals.
