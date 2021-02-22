@@ -69,7 +69,7 @@ What about in this block of HTML?
 ```
 <section class="answer">
 ### The Answer
-In the code above, we now have these `h2` elements nested inside of each `article`. It's important to know that `h2` is **not** a aimmediate child of the `section`. It is technically a grandchild, and a child of `article`. The idea of **immediate child** is really important to understand as we work with Flexbox.
+In the code above, we now have these `h2` elements nested inside of each `article`. It's important to know that the `h2` is **not** an immediate child of the `section`. It is technically a grandchild, and a child of `article`. The idea of **immediate child** is really important to understand as we work with Flexbox.
 
 When we use Flexbox, we will make the parent elements `flex containers` and the children elements `flex items`. 
 </section>
@@ -86,9 +86,13 @@ When we use Flexbox, we will make the parent elements `flex containers` and the 
     - `center`
     - `space-around`
     - `space-between`
-  - Delete or comment out your justify-content declaration. Add the following to your `.wrapper`, and note what changes;:
+    - `space-evenly`
+    - `flex-end`
+  - Delete or comment out your justify-content declaration. Add the following to your `.wrapper`, and note what changes:
     - `flex-direction: column`
     - `align-items: center`
+
+  _Can you use your developer tools to find some other values for flex-direction and align-items?_
 </div>
 
 <section class="note">
@@ -189,5 +193,7 @@ These properties will get you far enough for now, but they're just scratching th
 - [MDN Documentation](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 - [freeCodeCamp Blog Post](https://www.freecodecamp.org/news/learn-css-flexbox-in-5-minutes-b941f0affc34/)
 - [Scrimba Video that accompanies blog post above](https://scrimba.com/g/gflexbox)
-- [Flexbox Froggy - great practice!](https://flexboxfroggy.com/)
-- [Flexbox Defense - more practice!](http://www.flexboxdefense.com/)
+- [Flexbox Froggy Game - great practice!](https://flexboxfroggy.com/)
+- [Flexbox Defense Game - more practice!](http://www.flexboxdefense.com/)
+- [Flexbox Zombies Game - leveled up practice!](https://geddski.teachable.com/p/flexbox-zombies)
+- [CSS Diner Game - learn more complex CSS selecting](https://flukeout.github.io/)
