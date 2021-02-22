@@ -57,41 +57,40 @@ the model that we could create a visual representation for. The key is that
 every thing we ultimately _see_ on the DOM, is backed up by some piece of data in
 our model.
 
+Having a specific way that we render our Data Model is very helpful, because it
+allows us to save a lot of effort coding. Once we have a way of rendering our
+Data Model, we can use that same method anytime our data model changes.
+
 <div class="call-to-action">
-## Try it in a group
+## Try it!
 
 Taking a look at [this codepen](https://codepen.io/wvmitchell/pen/eYNaYpG)
-you'll find the Data Model from above, as well as some HTML and CSS. Take 15
-minutes, read through all the existing code, then try adding a `render` method,
+you'll find the Data Model from above, as well as some HTML and CSS. Read through all the existing code, then try adding a `render` method,
 which will create one displayed fruit for every fruit in the Data Model.
 
 Be an advocate for your own learning, don't read ahead!
 </div>
 
-## Rendering our Data Model
-
-Having a specific way that we render our Data Model is very helpful, because it
-allows us to save a lot of effort coding. Once we have a way of rendering our
-Data Model, we can use that same method anytime our data model changes.
-
-Here's one way that you could have rendered the Data Model in the codepen above:
+<section class="answer">
+### Here's one way that you could have rendered the Data Model in the codepen above...  
 
 ```javascript
 function render() {
   var fruitHTML = ""
-  fruits.forEach(function(fruit) {
-    var fruitTitle = fruit.rotten ? `Rotten ${fruit.name}` : fruit.name;
-    fruitHTML += `
-      <div class="fruit">
-        <h2>${fruitTitle}</h2>
-        <img src="${fruit.img}" />
-        <button data-id=${fruit.id}>Lick</button>
-      </div>
-    `
-  })
+
+  for(var i = 0; i < fruits.length; i++) {
+    fruitHTML += `<div class="fruit">
+    <h2>${fruits[i].name}</h2>
+    <img src=${fruits[i].img} />
+    <button data-id=${fruits[i].id}>Lick</button>
+    </div>`
+  }
+
   fruitBox.innerHTML = fruitHTML;
 }
 ```
+</section>
+
 
 This code iterates through all the fruits, and builds up an HTML string based on
 the values in our Data Model. Finally, after it's finished building, it makes
@@ -108,7 +107,7 @@ to add something to our code, it better be updating our Data Model.
 <div class="call-to-action">
 ## Back to the group
 
-Continuing to work in the same codepen, create a function with three arguments: 
+Continuing to work in the same codepen, create a function with three arguments:
 name, img, and rotten. This function should be able to add a new object to the
 Data Model. Once you've finished, call your function with 3 arguments of your
 choice. Does your Data Model update? What about what the user sees?
@@ -119,8 +118,8 @@ function that looks something this this:
 
 ```javascript
 function addFruit(name, img, rotten) {
-  var newFruit = {name: name, img: img, rotten: rotten, id: fruits.length}
-  fruits.push(newFruit)
+  var newFruit = {name: name, img: img, rotten: rotten, id: fruits.length};
+  fruits.push(newFruit);
 }
 ```
 
@@ -133,9 +132,9 @@ fruit is added:
 
 ```javascript
 function addFruit(name, img, rotten) {
-  var newFruit = {name: name, img: img, rotten: rotten, id: fruits.length}
-  fruits.push(newFruit)
-  render()
+  var newFruit = {name: name, img: img, rotten: rotten, id: fruits.length};
+  fruits.push(newFruit);
+  render();
 }
 ```
 
@@ -149,6 +148,17 @@ It's great to be able to add fruit to our Data Model, but what about removing
 them? Create a new function that takes an id parameter, removes the fruit with
 that id from our Data Model, and updates the presentation layer for our user.
 </div>
+
+```javaScript
+function removeFruit(id) {
+  for (var i = 0; i < fruits.length; i++) {
+    if (fruits[i].id === id) {
+      fruits.splice(i, 1);
+    }
+  }
+  render()
+}
+```
 
 ## Challenge Time
 
