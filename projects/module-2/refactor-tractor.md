@@ -148,13 +148,6 @@ Your Sass should be making use of:
 * Your app should be **fully responsive** from mobile devices - tablets - laptops - large monitors
 ---
 
-### Extensions
-* Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
-* Create a video of your team navigating through your app via a keyboard and screen reader. 
-* Implement an animation using CSS and SASS.
-* Create and implement a new feature for your application (run this by instructors first). 
-
-
 ### Inheritance & Refactoring
 
 * Identify redundant code in your classes and opportunities for DRYing it up
@@ -167,14 +160,6 @@ Your Sass should be making use of:
 * Your app must still be viewable when tested with a colorblind extension
 * You must score as close to 100% in an Accessibility Audit as possible. Be prepared to explain any accessibility audits your application is failing.
 * Your HTML must be written semantically and ARIA tags should be used (*ONLY if needed / appropriate*)
-
-
-## Extensions
-
-* Create and implement a new feature for your application (run this by instructors first).
-* Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
-* Create a video of your team navigating through your app via a keyboard and screen reader.
-* Implement an animation using CSS and SASS
 
 ### Testing
 In addition to your refactoring, you also want to make sure the application is fully tested. This means:
@@ -192,6 +177,14 @@ In addition to your refactoring, you also want to make sure the application is f
 </section>
 
 ---
+
+### Extensions
+* Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
+* Create a video of your team navigating through your app via a keyboard and screen reader. 
+* Implement an animation using CSS and SASS.
+* Create and implement a new feature for your application (run this by instructors first). 
+
+
 
 # Project Requirements Rubric
 
