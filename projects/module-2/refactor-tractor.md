@@ -49,6 +49,11 @@ Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6)
 8. In your terminal:
     - remove the old remote `git remote remove origin`
     - then add a new remote `git remote add origin [your new repo url]`
+9. To run app:
+    - Run `npm i`
+    - Run `npm start`
+10. To run tests:
+    - Run `npm test`
 
 ### Working with Webpack
 
@@ -69,8 +74,6 @@ Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6)
 
 #### Nice to know
 
-This project is set up to use [Webpack](https://webpack.js.org/guides/getting-started/), a module bundler. It will take whatever code we write, and bundle it into a series of more efficient files that the browser can read (allowing us to use things like Sass, npm packages and ES6 `import` / `export` syntax).
-
 This [video](https://www.youtube.com/watch?v=GU-2T7k9NfI) provides a nice overview of some things webpack lets us do out of the box, most of which is set up for you already.
 
 This [article](https://survivejs.com/webpack/what-is-webpack/) provides some more detail into how Webpack works, and what the `webpack.config.js` file is doing (don't mess with this file unless you're sure you need to -- feel free to ask before you change things).
@@ -78,6 +81,10 @@ This [article](https://survivejs.com/webpack/what-is-webpack/) provides some mor
 Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html) is a great place to start). But there are a few things that you should know when starting to work with it:
 
 ## Requirements
+
+### Functionality
+
+You must complete all of the User Stories outlined in the [FitLit Spec](https://frontend.turing.io/projects/fitlit.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished
 
 ### Sass
 
@@ -92,17 +99,17 @@ Your Sass should be making use of:
 
 
 ### Fetch
-
-You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a server. You must use fetch to:
+  
+You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/fitlit-api){:target='blank'}.  You will need to clone this down and have it running in a separate tab in your terminal each time you run your client.  Here are the endpoints setup for this project:
 
 #### Retrieve all data from an endpoint (GET)
 
 | Data Type | Verb | URL |  
 |---|---|---|  
-| User Data |GET | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/users/userData |  
-| Sleep Data | GET | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/sleep/sleepData |  
-| Activity Data | GET | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/activity/activityData |  
-| Hydration Data | GET | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/hydration/hydrationData |  
+| User Data |GET | http://localhost:3001/users |  
+| Sleep Data | GET | https://localhost:3001/sleep |  
+| Activity Data | GET | https://localhost:3001/activity |  
+| Hydration Data | GET | https://localhost:3001/hydraation |  
 
 #### Add new sleep, activity, and hydration data (POST)
 
@@ -110,10 +117,15 @@ For the currently displayed user, you must be able to add a new sleep, hydration
 
 | Data Type | Verb | URL | Required Body |  
 |---|---|---|---|  
-| Sleep Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/sleep/sleepData | `{"userID": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
-| Activity Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/activity/activityData | `{"userID": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
-| Hydration Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/hydration/hydrationData | `{"userID": integer, "date": string, "numOunces": integer}` |
+| Sleep Data | POST | https://localhost:3001/sleep | `{"userID": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
+| Activity Data | POST | https://activity/activity | `{"userID": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
+| Hydration Data | POST | https://hydration/hydration | `{"userID": integer, "date": string, "numOunces": integer}` |
 
+<section class="note">
+### Error Handling
+
+Do proper error handling for your users to ensure that they are getting data and are submitting their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request.  Also validate the input fields on the client-side.
+</section>
 
 ---
 
@@ -143,13 +155,6 @@ Your Sass should be making use of:
 * Create and implement a new feature for your application (run this by instructors first). 
 
 
-### Pull Requests
-
-* Each person must submit at least 1 pull request to their group mates for feedback
-* Each pull request that you did NOT submit must be reviewed by every other team member, individually
-* Each pull request should include significant / helpful feedback and conversation
-* No pull request may be merged before it has been reviewed, and must not be merged by the person who submitted it
-
 ### Inheritance & Refactoring
 
 * Identify redundant code in your classes and opportunities for DRYing it up
@@ -166,7 +171,6 @@ Your Sass should be making use of:
 
 ## Extensions
 
-* Deploy your updates to GH pages
 * Create and implement a new feature for your application (run this by instructors first).
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
 * Create a video of your team navigating through your app via a keyboard and screen reader.
