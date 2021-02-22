@@ -109,7 +109,7 @@ You will no longer be receiving your data from a hardcoded data file, but rather
 | User Data |GET | http://localhost:3001/users |  
 | Sleep Data | GET | https://localhost:3001/sleep |  
 | Activity Data | GET | https://localhost:3001/activity |  
-| Hydration Data | GET | https://localhost:3001/hydraation |  
+| Hydration Data | GET | https://localhost:3001/hydration |  
 
 #### Add new sleep, activity, and hydration data (POST)
 
