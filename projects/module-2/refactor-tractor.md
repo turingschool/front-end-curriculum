@@ -109,7 +109,7 @@ You will no longer be receiving your data from a hardcoded data file, but rather
 | User Data |GET | http://localhost:3001/users |  
 | Sleep Data | GET | https://localhost:3001/sleep |  
 | Activity Data | GET | https://localhost:3001/activity |  
-| Hydration Data | GET | https://localhost:3001/hydraation |  
+| Hydration Data | GET | https://localhost:3001/hydration |  
 
 #### Add new sleep, activity, and hydration data (POST)
 
@@ -117,9 +117,9 @@ For the currently displayed user, you must be able to add a new sleep, hydration
 
 | Data Type | Verb | URL | Required Body |  
 |---|---|---|---|  
-| Sleep Data | POST | https://localhost:3001/sleep | `{"userID": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
-| Activity Data | POST | https://activity/activity | `{"userID": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
-| Hydration Data | POST | https://hydration/hydration | `{"userID": integer, "date": string, "numOunces": integer}` |
+| Sleep Data | POST | http://localhost:3001/sleep | `{"userID": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
+| Activity Data | POST | http://localhost:3001/activity | `{"userID": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
+| Hydration Data | POST | http://localhost:3001/hydration | `{"userID": integer, "date": string, "numOunces": integer}` |
 
 <section class="note">
 ### Error Handling
@@ -146,14 +146,8 @@ Your Sass should be making use of:
 * Test out the application manually and file errors for any UI or UX issues you can find
 * Fix UI / UX problems. If a display feels hard to use, think about how you can remake it (wihout changing the original design of the app)
 * Your app should be **fully responsive** from mobile devices - tablets - laptops - large monitors
+
 ---
-
-### Extensions
-* Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
-* Create a video of your team navigating through your app via a keyboard and screen reader. 
-* Implement an animation using CSS and SASS.
-* Create and implement a new feature for your application (run this by instructors first). 
-
 
 ### Inheritance & Refactoring
 
@@ -167,14 +161,6 @@ Your Sass should be making use of:
 * Your app must still be viewable when tested with a colorblind extension
 * You must score as close to 100% in an Accessibility Audit as possible. Be prepared to explain any accessibility audits your application is failing.
 * Your HTML must be written semantically and ARIA tags should be used (*ONLY if needed / appropriate*)
-
-
-## Extensions
-
-* Create and implement a new feature for your application (run this by instructors first).
-* Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
-* Create a video of your team navigating through your app via a keyboard and screen reader.
-* Implement an animation using CSS and SASS
 
 ### Testing
 In addition to your refactoring, you also want to make sure the application is fully tested. This means:
@@ -192,6 +178,14 @@ In addition to your refactoring, you also want to make sure the application is f
 </section>
 
 ---
+
+### Extensions
+* Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
+* Create a video of your team navigating through your app via a keyboard and screen reader. 
+* Implement an animation using CSS and SASS.
+* Create and implement a new feature for your application (run this by instructors first). 
+
+
 
 # Project Requirements Rubric
 
