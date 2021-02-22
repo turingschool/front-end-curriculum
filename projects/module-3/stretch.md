@@ -180,6 +180,17 @@ Share your app progress with the class for Show and Tell! Be prepared to tell th
 
 Your project does not need to be done or impressive by this point; this is more of a way to give you a milestone to shoot for and to help plan your timeline.
 
+## Evals
+
+Similar to Rancid Tomatillos, the evals will be conducted in two parts:  
+1. Written feedback & project scores delivered the morning of evals
+2. Evals with the team and an instructor 
+  - Time for questions/discussion about feedback
+  - Each person will talk through some code
+  - Each person will answer an interview question, using the project as an example of their ability to learn
+
+The purpose of this is to give you another opportunity to begin answering technical interview questions in a way that helps a future team understand what it would be like to work with you. It gives you a chance to practice talking about your own specific experiences, as way to illustrate your problem solving processes and learning skills.
+
 ## Rubric
 
 ### Project Professionalism
