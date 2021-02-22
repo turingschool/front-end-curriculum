@@ -146,6 +146,7 @@ Your Sass should be making use of:
 * Test out the application manually and file errors for any UI or UX issues you can find
 * Fix UI / UX problems. If a display feels hard to use, think about how you can remake it (wihout changing the original design of the app)
 * Your app should be **fully responsive** from mobile devices - tablets - laptops - large monitors
+
 ---
 
 ### Inheritance & Refactoring
