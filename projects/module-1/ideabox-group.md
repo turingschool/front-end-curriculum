@@ -34,9 +34,9 @@ Use the same text on your cards that is used in the spec so you can ensure your 
 
 ![Desktop Layout](./assets/ideabox-group/desktop.jpg)
 
-You will need the `svg` image files for the star and delete icons. [Here's the link to download the `svg` icons.](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing)
+You will need the `svg` image files for the star and delete icons. [Here's the link to download the `svg` icons.](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing). _Note: You won't end up using all of the icons in this folder._
 
-![Colors](./assets/ideabox-group/colors.jpg)
+![Colors](./assets/ideabox-group/ideabox-colors.png)
 ![Icons](./assets/ideabox-group/icons.jpg)
 
 
