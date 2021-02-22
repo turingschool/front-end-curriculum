@@ -117,9 +117,9 @@ For the currently displayed user, you must be able to add a new sleep, hydration
 
 | Data Type | Verb | URL | Required Body |  
 |---|---|---|---|  
-| Sleep Data | POST | https://localhost:3001/sleep | `{"userID": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
-| Activity Data | POST | https://activity/activity | `{"userID": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
-| Hydration Data | POST | https://hydration/hydration | `{"userID": integer, "date": string, "numOunces": integer}` |
+| Sleep Data | POST | http://localhost:3001/sleep | `{"userID": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
+| Activity Data | POST | http://localhost:3001/activity | `{"userID": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
+| Hydration Data | POST | http://localhost:3001/hydration | `{"userID": integer, "date": string, "numOunces": integer}` |
 
 <section class="note">
 ### Error Handling
