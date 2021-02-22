@@ -142,7 +142,7 @@ As a user,
 - I see all ideas, favorited or not
 
 As a user,
-- When a type a letter or phrase into the search bar
+- When I type a letter or phrase into the search bar, the cards should start filtering (no click needed)
 - I now only see the cards that include the letter/phrase in the title or body
 
 As a user,
@@ -168,7 +168,7 @@ This file should hold a class, `Comment`. `Comment` methods must include, but ar
   * _star_ is a boolean.
   * _comments_ is an array.
 
-* A comment should have _content_ - a string that holds the content of a comment. 
+* A comment should have _content_ - a string that holds the content of a comment.
 
 
 As a user,
@@ -233,16 +233,16 @@ To earn a given score, an application must meet the requirements listed in that 
 
 ### Comp Recreation
 
-* **4:** 
+* **4:**
   - Additional elements and animations have been added that match the visuals established in the comps, and/or design is responsive across small, medium and large breakpoints.
-* **3:** 
+* **3:**
   - Application implements all major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment, etc).
   - If additional elements were added, they generally match the visuals established in the comps, but may be slightly awkward.
   - Careful attention was given to the little details like spacing, alignment, and hover states.
-* **2:** 
+* **2:**
   - Application implements most major comp details accurately and correctly (colors, fonts, icons, spacing, alignment, etc.).
 * **1:**
-  - Application has a significant mismatch when compared to the provided comp. 
+  - Application has a significant mismatch when compared to the provided comp.
 
 ### HTML && CSS - Style and Implementation
 * **4:**
@@ -254,11 +254,11 @@ To earn a given score, an application must meet the requirements listed in that 
     - Flip the "Allow access to file URLs" switch
     - Success!
 * **3:**
-  - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly. 
-  - CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles. There is evidence of reused styles in the application. 
+  - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly.
+  - CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles. There is evidence of reused styles in the application.
 * **2:**
   - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). Semantic elements like `<button>`, `<li>`, etc. are used instead of `<div>`. If `<div>` elements are used, they are only for styling purposes.
-  - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together. 
+  - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together.
 * **1:**
   - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
   - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
@@ -277,7 +277,7 @@ To earn a given score, an application must meet the requirements listed in that 
   * There are no global variables aside from query selectors and an array for your ideas
   * Uses event delegation correctly on dynamic elements for deleting, and starring an idea
   * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
-* **2:** 
+* **2:**
   * Data model is built to the specifications detailed in the spec sheet and is fully separated from the DOM. Example: There should not be any DOM manipulation in class files.
   * All console logs, debuggers and comments are removed from code before submitting.
 * **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
