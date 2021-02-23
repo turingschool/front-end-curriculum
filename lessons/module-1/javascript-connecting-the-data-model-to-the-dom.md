@@ -169,7 +169,7 @@ that id from our Data Model, and updates the presentation layer for our user.
 <section class="answer">
 ### Possible Solution to #4
 
-```javaScript
+```javascript
 function removeFruit(id) {
   for (var i = 0; i < fruits.length; i++) {
     if (fruits[i].id === id) {
