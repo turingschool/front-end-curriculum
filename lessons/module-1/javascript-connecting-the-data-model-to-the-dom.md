@@ -123,7 +123,7 @@ function render() {
   fruitBox.innerHTML = fruitHTML;
 }
 ```
-</div>
+</section>
 
 ## Making a change to our Data Model
 
@@ -155,7 +155,7 @@ selectors to add in the new fruit you create, but this is an anti-pattern.
 Remember, we already have a function that is specifically designed to render our
 fruits. We're reusing our render method to show what's in our data model
 whenever anything changes. Cool!!
-</div>
+</section>
 
 
 <div class="call-to-action">
@@ -180,9 +180,9 @@ function removeFruit(id) {
 }
 ```
 Notice that we are once again using the render method! Look how clean our code is!
-</div>
+</section>
 
-## Challenge Time
+## Challenge Time 🌶
 
 Great, so we can render, add, and remove fruits from our data model, and we're
 doing it all with only one DOM element! That's all well and good when we're just
@@ -224,7 +224,7 @@ function makeRotten(event) {
 We loop through all our fruits, find the one where the fruit.id matches the
 id in the dataset, and update it's property to indicate it is now rotten. After we've updated our
 Data Model, we re-render the model to see the change.
-</div>
+</section>
 
 
 ## In Summary
