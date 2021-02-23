@@ -94,10 +94,10 @@ You will no longer be receiving your data from a hardcoded data file, but rather
 
 | Data Type | Verb | URL |  
 |---|---|---|  
-| User Data |GET | http://localhost:3001/users |  
-| Sleep Data | GET | https://localhost:3001/sleep |  
-| Activity Data | GET | https://localhost:3001/activity |  
-| Hydration Data | GET | https://localhost:3001/hydration |  
+| User Data |GET | http://localhost:3001/api/v1/users |  
+| Sleep Data | GET | http://localhost:3001/api/v1/sleep |  
+| Activity Data | GET | http://localhost:3001/api/v1/activity |  
+| Hydration Data | GET | http://localhost:3001/api/v1/hydration |  
 
 #### Add new sleep, activity, and hydration data (POST)
 
@@ -105,9 +105,9 @@ For the currently displayed user, you must be able to add a new sleep, hydration
 
 | Data Type | Verb | URL | Required Body |  
 |---|---|---|---|  
-| Sleep Data | POST | http://localhost:3001/sleep | `{"userID": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
-| Activity Data | POST | http://localhost:3001/activity | `{"userID": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
-| Hydration Data | POST | http://localhost:3001/hydration | `{"userID": integer, "date": string, "numOunces": integer}` |
+| Sleep Data | POST | http://localhost:3001/api/v1/sleep | `{"userID": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
+| Activity Data | POST | http://localhost:3001/api/v1/activity | `{"userID": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
+| Hydration Data | POST | http://localhost:3001/api/v1/hydration | `{"userID": integer, "date": string, "numOunces": integer}` |
 
 <section class="note">
 ### Error Handling

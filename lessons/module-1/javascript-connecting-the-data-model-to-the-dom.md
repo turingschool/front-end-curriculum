@@ -57,47 +57,73 @@ the model that we could create a visual representation for. The key is that
 every thing we ultimately _see_ on the DOM, is backed up by some piece of data in
 our model.
 
-<div class="call-to-action">
-## Try it in a group
-
-Taking a look at [this codepen](https://codepen.io/wvmitchell/pen/eYNaYpG)
-you'll find the Data Model from above, as well as some HTML and CSS. Take 15
-minutes, read through all the existing code, then try adding a `render` method,
-which will create one displayed fruit for every fruit in the Data Model.
-
-Be an advocate for your own learning, don't read ahead!
-</div>
-
-## Rendering our Data Model
+## Rendering the Data Model
 
 Having a specific way that we render our Data Model is very helpful, because it
 allows us to save a lot of effort coding. Once we have a way of rendering our
 Data Model, we can use that same method anytime our data model changes.
 
-Here's one way that you could have rendered the Data Model in the codepen above:
+<div class="call-to-action">
+## Try it #1
+
+Taking a look at [this codepen](https://codepen.io/wvmitchell/pen/eYNaYpG)
+you'll find the Data Model from above, as well as some HTML and CSS. Read through all the existing code, then try adding a `render` method,
+which will create one displayed fruit for every fruit in the Data Model.
+
+Be an advocate for your own learning, don't read ahead!
+</div>
+
+<section class="answer">
+### Possible Solution to #1  
 
 ```javascript
 function render() {
   var fruitHTML = ""
-  fruits.forEach(function(fruit) {
-    var fruitTitle = fruit.rotten ? `Rotten ${fruit.name}` : fruit.name;
-    fruitHTML += `
-      <div class="fruit">
-        <h2>${fruitTitle}</h2>
-        <img src="${fruit.img}" />
-        <button data-id=${fruit.id}>Lick</button>
-      </div>
-    `
-  })
+
+  for(var i = 0; i < fruits.length; i++) {
+    fruitHTML += `<div class="fruit">
+    <h2>${fruits[i].name}</h2>
+    <img src=${fruits[i].img} />
+    <button data-id=${fruits[i].id}>Lick</button>
+    </div>`
+  }
+
   fruitBox.innerHTML = fruitHTML;
 }
 ```
-
 This code iterates through all the fruits, and builds up an HTML string based on
 the values in our Data Model. Finally, after it's finished building, it makes
 _one_ reference to the DOM, to update what our user actually _sees_. Critically,
 the Data Model is our source of truth. With out the Data Model, our render
 method is pretty meaningless.
+</section>
+
+<div class="call-to-action">
+## Try it #2
+What if we don't want the rotten fruit to render? Update the code you have so that only the fruit with a `rotten: false` render to the page.
+</div>
+
+<section class="answer">
+### Possible Solution to #2  
+
+```javascript
+function render() {
+  var fruitHTML = ""
+
+  for(var i = 0; i < fruits.length; i++) {
+    if (!fruits[i].rotten) {
+      fruitHTML += `<div class="fruit">
+        <h2>${fruits[i].name}</h2>
+        <img src=${fruits[i].img} />
+        <button data-id=${fruits[i].id}>Lick</button>
+      </div>`
+    }
+  }
+
+  fruitBox.innerHTML = fruitHTML;
+}
+```
+</section>
 
 ## Making a change to our Data Model
 
@@ -106,51 +132,57 @@ Remember, our Data Model is our _*source of truth*_, so if a function is going
 to add something to our code, it better be updating our Data Model.
 
 <div class="call-to-action">
-## Back to the group
+## Try it #3
 
-Continuing to work in the same codepen, create a function with three arguments: 
-name, img, and rotten. This function should be able to add a new object to the
+Continuing to work in the same codepen, create a function with three arguments:
+`name`, `img`, and `rotten`. This function should be able to add a new object to the
 Data Model. Once you've finished, call your function with 3 arguments of your
-choice. Does your Data Model update? What about what the user sees?
+choice (we've provided a banana example for you!). Does your Data Model update? What about what the user sees?
 </div>
 
-If you successfully added a new fruit to your Data Model, you may have written a
-function that looks something this this:
+<section class="answer">
+### Possible Solution to #3
 
 ```javascript
 function addFruit(name, img, rotten) {
-  var newFruit = {name: name, img: img, rotten: rotten, id: fruits.length}
-  fruits.push(newFruit)
+  var newFruit = {name: name, img: img, rotten: rotten, id: fruits.length};
+  fruits.push(newFruit);
+  render();
 }
 ```
-
-This will do a fine job of updating our Data Model, but what about actually
-showing the fruit on the page? You might be tempted to start using some DOM
+You might be tempted to start using some DOM
 selectors to add in the new fruit you create, but this is an anti-pattern.
 Remember, we already have a function that is specifically designed to render our
-fruits. Let's just modify our addFruit method to call our render function once a
-fruit is added:
-
-```javascript
-function addFruit(name, img, rotten) {
-  var newFruit = {name: name, img: img, rotten: rotten, id: fruits.length}
-  fruits.push(newFruit)
-  render()
-}
-```
-
-Awesome! Now we're reusing our render method to show what's in our data model
+fruits. We're reusing our render method to show what's in our data model
 whenever anything changes. Cool!!
+</section>
+
 
 <div class="call-to-action">
-## Once more with the group
+## Try It #4
 
 It's great to be able to add fruit to our Data Model, but what about removing
 them? Create a new function that takes an id parameter, removes the fruit with
 that id from our Data Model, and updates the presentation layer for our user.
 </div>
 
-## Challenge Time
+<section class="answer">
+### Possible Solution to #4
+
+```javascript
+function removeFruit(id) {
+  for (var i = 0; i < fruits.length; i++) {
+    if (fruits[i].id === id) {
+      fruits.splice(i, 1);
+    }
+  }
+  render()
+}
+```
+Notice that we are once again using the render method! Look how clean our code is!
+</section>
+
+## Challenge Time 🌶
 
 Great, so we can render, add, and remove fruits from our data model, and we're
 doing it all with only one DOM element! That's all well and good when we're just
@@ -165,47 +197,40 @@ match the id of the fruit above. We could use them in conjuction with an event
 listener to make our fruit rotten!
 
 <div class="call-to-action">
-## Rotten fruit
+## Try It #5
 
 Set an event listener on the `fruitBox` DOM element. Whenever someone clicks on
-one of the 'Lick' buttons, that fruit should now be labeled as 'Rotten'. _Hint:
+one of the 'Lick' buttons, that fruit should now be labeled as 'Rotten' in the data model and no longer appear on the page. _Hint:
 You may find event.target.dataset useful!_
-
-Be an advocate for your own learning, don't read ahead!
 </div>
 
-Alright, how'd you do? Here's one way we could solve the problem:
-
+<section class="answer">
+### Possible Solution to #5
 ```javascript
-fruitBox.addEventListener('click', makeRotten)
+fruitBox.addEventListener('click', makeRotten);
 
 function makeRotten(event) {
-  var id = event.target.dataset.id
-  if(id) {
-    var newFruits = []
-    fruits.forEach(function(fruit) {
-      if(fruit.id == id) {
-        newFruits.push({name: fruit.name, img: fruit.img, rotten: true})
-      } else {
-        newFruits.push(fruit)
-      }
-    })
-    fruits = newFruits
+  var id = parseInt(event.target.dataset.id);
+
+  for (var i = 0; i < fruits.length; i++) {
+    if (fruits[i].id === id) {
+      fruits[i].rotten = true;
+    }
   }
-  render()
+
+  render();
 }
 ```
-
-Our event handler looks to see if an id exists in the event.target.dataset,
-which will only be true if one of the buttons has been clicked. If it finds an
-id, we loop through all our fruits, find the one where the fruit.id matches the
-id in the dataset, and replace it with a rotten fruit. After we've updated our
+We loop through all our fruits, find the one where the fruit.id matches the
+id in the dataset, and update it's property to indicate it is now rotten. After we've updated our
 Data Model, we re-render the model to see the change.
+</section>
+
 
 ## In Summary
 
 This pattern of using a Data Model as a source of truth is extremely common in
 professional JavaScript programming. You'll see it again later at Turing. As you
-work on your current project, remember to ask yourself 'What is my Data Model',
-and 'How do my user interactions affect my Data Model'. If you can get the hang
+work on your current project, remember to ask yourself *What is my Data Model?*,
+and *How do my user interactions affect my Data Model?*. If you can get the hang
 of this concept, you'll be set up for future success.
