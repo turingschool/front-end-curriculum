@@ -27,8 +27,8 @@ In this project, you will be building on top of somebody else's pre-existing Fit
 ## Timeline
 Dates and deadlines to be aware of:
 
-* **Wednesday, February 24th** - Make sure to have project board ready with tickets already completed and plans to complete for sprint over the weekend. You should also have wireframes in place (*DTR should also be complete*)
-* **Monday, March 1st** - Project board up to date with tasks completed and plans for finishing final sprint. (*May review a couple PRs as well for code reviews*)
+* **Wednesday, February 24th** - Make sure to have project board ready with tickets already completed and plans to complete for sprint over the weekend. (*DTR should also be complete*)
+* **Monday, March 1st** - Project board up to date with tasks completed and plans for finishing final sprint. (*We may review some pull requests in this check in too to make sure that y'all are utilitzing pr processes*)
 * **Wednesday, March 3rd** - Project due at 9PM.
 * **Thursday, March 4th** - Project evals.
 
@@ -78,25 +78,13 @@ This [video](https://www.youtube.com/watch?v=GU-2T7k9NfI) provides a nice overvi
 
 This [article](https://survivejs.com/webpack/what-is-webpack/) provides some more detail into how Webpack works, and what the `webpack.config.js` file is doing (don't mess with this file unless you're sure you need to -- feel free to ask before you change things).
 
-Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html) is a great place to start). But there are a few things that you should know when starting to work with it:
+Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html) is a great place to start). 
 
 ## Requirements
 
 ### Functionality
 
 You must complete all of the User Stories outlined in the [FitLit Spec](https://frontend.turing.io/projects/fitlit.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished
-
-### Sass
-
-Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an `index.scss` file that imports your partials, and a `variables.scss` file that contains any of your Sass variables or function definitions. Identify common/re-used elements on your page to determine the remaining partials you might want.
-
-Your Sass should be making use of:
-
-* variables for colors, fonts, etc.
-* nesting, when/where appropriate
-* color functions for ensuring a cohesive color scheme
-* at least one mixin, function or extends
-
 
 ### Fetch
   
@@ -137,7 +125,6 @@ Your Sass should be making use of:
 
 * variables for colors, fonts, etc.
 * nesting, when/where appropriate
-* color functions for ensuring a cohesive color scheme
 * at least **two** mixins or extends
 
 ---
