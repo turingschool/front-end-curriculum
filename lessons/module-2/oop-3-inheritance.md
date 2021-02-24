@@ -9,7 +9,7 @@ module: 2
 
 * Understand and describe OOP and its benefits
 * Implement and structure a basic program around objects
-* Understand prototypal inheritance
+* Understand how to utilize inheritance with classes
 
 ## Vocab
 
@@ -117,7 +117,7 @@ let bob = new TA('Bob', 2, ['serious']);
 
 * We create a new class called `TA` that **extends** from `Instructor` (this tells our TA that it is going to be subclass of `Instructor`)
 * We create our constructor, which takes in the same parameters as our `Instructor` class
-* Within our constructor, we can invoke the built-in `super` function to call the constructor method of the parent class, passing through **only** the properties that it needs to inherit from the parent class
+* Within our constructor, we can invoke the built-in `super` function to call the constructor method of the parent class, passing through the properties that it needs to inherit from the parent class
 * We add our additional behavior method - scheduling check-ins
 </section>
 
