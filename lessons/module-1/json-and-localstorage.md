@@ -93,7 +93,7 @@ JSON has the following rules:
     - Arrays
     - Objects
 
-**What does JSON look like? Have we seen JSON anywhere else?**
+**Here's an example of what JSON looks like:**
 ```
 {
   "commonName": "Swiss Cheese Plant",
