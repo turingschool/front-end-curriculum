@@ -34,9 +34,9 @@ Up until this point, the data in our projects has disappeared whenever we refres
 
 ## Client-side Storage
 
-Using the web storage API, browsers provide two main types of immediate storage that is accessible without messing with a database: 
+Using the web storage API, browsers provide two main types of immediate storage that is accessible without messing with a database:
 - <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"><code>sessionStorage</code></a> - gets reset whenever your browser session restarts
-- <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a> - has no specified expiration date. 
+- <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a> - has no specified expiration date.
 
 The web storage API is a secure way your browser can store key value pairs that are unique to each domain. So, if you store some information on a page hosted at `github.com`, then it is not accessible from a page hosted at `twitter.com`. This is for security reasons as well as to guarantee that the pages won't end up with conflicting names and overwriting items in storage from another site.
 
@@ -59,7 +59,7 @@ The web storage API is a secure way your browser can store key value pairs that 
 
 ### Practice
 
-Open up the developer tools on this page and try the following. Make sure to take note of your observations through each step. 
+Open up the developer tools on this page and try the following. Make sure to take note of your observations through each step.
 
 1. `localStorage.setItem('storeMePlease', 2);`
 2. `localStorage.getItem('storeMePlease');`
@@ -95,7 +95,7 @@ JSON has the following rules:
 
 **What does JSON look like? Have we seen JSON anywhere else?**
 ```
-{ 
+{
   "commonName": "Swiss Cheese Plant",
   "classification": "Monstera",  
   "family": "Araceae",
@@ -159,6 +159,7 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 
 
 ## Dig Deeper
+* [Local Storage Fairy Tale (by Scott Ertmer)](https://docs.google.com/presentation/d/14_08bVkzfqIKXD3UAM1DFrrqlQto8I2v4XBhDza8BAo/edit#slide=id.gbff5b80357_0_19)
 * [JSON Mozilla Tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
 * [JSON Validator](https://jsonlint.com/)
 * [Mozilla Docs on Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
