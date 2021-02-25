@@ -7,7 +7,7 @@ tags: js, introduction, pseudocoding, articulation, problem solving
 ## Learning Goals
 
 * Understand what pseudocoding is and its purpose
-* Practice talking about code without writing code 
+* Practice talking about code without writing code
 * Sit in the eustress!
 
 ## Vocabulary
@@ -57,7 +57,7 @@ In your notebook, write down:
 
 - What is your first reaction to seeing this? Do you want to write code?
 - If you were to explain what to do to a very simple, very literal, very well-meaning, helpful, but silly robot, what would you tell it to do?
-- Attempt to write some pseudocode! 
+- Attempt to write some pseudocode!
 
 Hints: Use good terms of art. Don't write code. Focus on getting closer to a solution, but don't worry about solving it!
 </section>
@@ -99,12 +99,12 @@ With a partner, discuss what you notice about the provided pseudocode.
 - Does it contain code?
 - What terms of art are we using? Why is it important to use precise vocabulary, even when just pseudocoding?
 - Do you have to know how to write a function, or how to write the code to access array elements, in order to write this pseudocode?
-- Share the pseudocode you wrote before with each other. What is missing? What should be removed? 
+- Share the pseudocode you wrote before with each other. What is missing? What should be removed?
 </section>
 
 ### Final thoughts
 
-Notice in the provided pseudocode: we are balancing the level of detail we get into. 
+Notice in the provided pseudocode: we are balancing the level of detail we get into.
 
 The pseudocode examines each step that needs to be taken, but it does not worry about writing the code to accomplish that step.
 
@@ -130,7 +130,7 @@ Next steps after this, is to do some research! Perhaps I would search the follow
 
 Let's put this into practice. We'll get into pairs, separately write pseudocode for two different coding challenges, and swap! The goal will be to see if we can use each others' pseudocode to research and try implementing some code.
 
-Once you form your pair, Partner ⭐️ is the person with the shortest hair. Partner ⚡️ is the person with the longest hair. 
+Once you form your pair, Partner ⭐️ is the person with the shortest hair. Partner ⚡️ is the person with the longest hair.
 
 Find your challenge below (do not cheat and look at your partner's challenge yet!), and spend 5 minutes writing some specific pseudocode.
 
@@ -149,9 +149,9 @@ var bounces = 5;
 ### Partner ⚡️ Challenge
 
 ```js
-var person = "Casey";
+var person = "scott ertmer ";
 
-// Write a function that makes a string that compliments the person. Ex: "Wow, Casey! You're having a great hair day!" or something similar.
+// Write a function that will capitalize the first letter of a person's name. For example, "Scott Ertmer"
 // Make sure your pseudocode can handle the value of "person" changing to a different name!
 
 ```
