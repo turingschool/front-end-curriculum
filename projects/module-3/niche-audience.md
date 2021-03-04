@@ -64,6 +64,8 @@ Choose an open API to work with where the data sounds interesting to you. A good
 
 APIs that require an `apikey` are usually easy to deal with, and some APIs don't require an `apikey`. If the API you want to use relies on an API key, be sure to request one ASAP!
 
+Sometimes an API (especially open public ones) can cease to be maintained, so request keys from a few and start playing around with the data you can get!
+
 ### Choosing an audience
 
 After you have an API that interests you, the next thing you need to do is choose an audience. You need to be **specific** with your audience.
@@ -72,7 +74,7 @@ For example, if you chose an API that served cat data, your audience should not 
 
 **GET WEIRD. HAVE FUN.** (And also still be professional. Silliness is good; rudeness/crassness is not.)
 
-Once you've got your API and audience settled, start thinking about how you're going to build something for this audience, using that API. Come up with a few different ideas.
+Once you've chosen your API and audience, start thinking about how you're going to build something for this audience, using that API. Come up with a few different ideas.
 
 ### Niche audience
 
@@ -102,6 +104,13 @@ There are many different tools you can use for this, including just plain old pe
 
 We also want you to choose two design inspiration pieces, which can be as broad as inspiration for the layout of your app, to as small as a color palette or a micro-interaction animation.
 
+### Evals
+
+Real world context
+eval format
+
+interview questions
+
 ### Day 1 Deliverables
 
 By 3PM of Day 1:
@@ -122,6 +131,31 @@ Once your project MVP is approved (instructors will help you narrow down your MV
 * 2 separate user personas describing people in your niche audience
 * Project board link
 * Repo link
+
+## Evals
+
+Unlike the evals for the previous projects in Mod 3, you will receive less feedback on this project. Instead, you'll be asked to answer some high level questions about your code and the decisions you made.
+
+The purpose of this is to give you an opportunity to begin experiencing what it is like to turn in a code challenge for a job interview. Often, you will not receive close code feedback - you'll simply move on to the next round of interviewing, or not. It's also common to be asked to talk about your code and what led you to make the decisions you did.
+
+### Eval process
+
+In order to ensure that we have time to give relevant feedback to everyone, we are going to do asynchronous project evals.
+
+Here is what we need from you:  
+1. We will DM you your scores
+  * _Note: in the interest of time, the feedback for this project will not be as specific as it has been for previous projects_
+2. In a DM, we will send you a link to part of your project code.
+  * Please describe that code in your own words:
+    - what does that code do,
+    - when is it used,
+    - what choices did you make when you wrote it?
+3. Answer the following question in a short paragraph, using specific examples from a Mod 3 project:
+  * “What is a benefit of using a framework like React over vanilla JS? What is a drawback?” (this is a common interview question!)
+4. **OPTIONAL:** Identify one function or test that you would like specific feedback on
+  * Send us the link
+    - Instructions on grabbing the link can be found [here](https://stackoverflow.com/questions/23821235/how-to-link-to-specific-line-number-on-github)
+  * If you do not want specific feedback, you can skip this step
 
 ## Rubric
 

@@ -51,7 +51,7 @@ Your group will be assigned an app or website, such as:
 - united.com
 - allstate.com
 
-Then, everyone in the group will fill out the [persona worksheet](https://drive.google.com/file/d/0Bx39MTcNBZhKa0t1Nktub2ZfcUU/view). Choose a character you know well, and fill out the worksheet for that character.
+Then, everyone in the group will fill out the [persona worksheet](https://docs.google.com/document/d/1SAFPnVBFNWPUcFMA9v18xEPdWoPVZ3VVUzlqxUiGfGY/edit?usp=sharing). **MAKE A COPY of the worksheet,** choose a character you know well, and fill out the worksheet for that character.
 
 Some ideas:
 - Ron Swanson

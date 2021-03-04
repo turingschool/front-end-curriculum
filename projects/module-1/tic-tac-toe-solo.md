@@ -22,17 +22,17 @@ This project is an important step in demonstrating you are ready to start Module
 
 - You are the only one who should type code - no copy-pasting code!
 - For any code that you didn't write entirely by yourself (mentor or rock supported), you should be able delete it and re-write it yourself
-- The only resources you use are MDN, CSS Tricks, and lesson plans - no youtube videos or tutorials of programming Tic Tac Toe. If you have an opportunity and are tempted, do the right thing for YOUR learning and don't do it!
+- No youtube videos or tutorials of programming Tic Tac Toe. If you have an opportunity and are tempted, do the right thing for YOUR learning and don't do it!
 - Any peer-to-peer collaboration should be discussions about IDEAS, not coding together or sharing code.
 
 We want to see YOUR work.
 
 ## Set Up & Submission
 
-- Create a **private** repository and add your assigned instructor as a collaborator. (You cannot deploy private repositories to GitHub Pages; that's ok.)
-- Create a planning document where you outline your anticipated progress through the project. You can choose any format for this planning doc: Google Docs, a Gist, GitHub Projects, etc. You can add anything to this doc that will help you stay organized throughout the completion of this project. At minimum, it should include a timeline for when you'd like to complete each piece of functionality for the project.
+- Create a **private** repository and add your assigned instructor as a collaborator. (You cannot deploy private repositories to GitHub Pages; that's ok. If you'd like, at the end of the project, you can make your repo public in order to deploy to GH pages.)
+- Create a planning document where you outline your anticipated progress through the project. You can choose any format for this planning doc: Google Docs, a Gist, [GitHub Projects](https://github.com/features/project-management/), [Trello](https://trello.com/en-US), etc. You can add anything to this doc that will help you stay organized throughout the completion of this project. At minimum, it should include a timeline for when you'd like to complete each piece of functionality for the project.
 
-By EOD on Kick Off Day: DM your assigned instructor with two links: Your repo & the planning doc.
+**By EOD on Kick Off Day: DM your assigned instructor with two links: Your repo & the planning doc.**
 
 ### Functionality
 
@@ -45,7 +45,7 @@ In this project, we will not be providing detailed iterations. We want you to ex
 Notes:
 * A timeout is used after a completed game to reset the board.
 * YOU DO NOT NEED TO DISPLAY EACH INDIVIDUAL WIN BOARD. WE ONLY NEED TO SEE NUMBER OF WINS.
-* No need to match colors or icons, but the overall layout should be the same.
+* No need to match colors or icons, but the overall layout should be the same. You can get as creative as you would like with your Tic Tac Toe design!
 
 ### Architecture
 
@@ -95,10 +95,10 @@ The rubric categories are **not** weighted equally. We will be using the followi
 
 Here is what the final score means in terms of completing the module:
 
-* **4:** - Student will complete module if prior project work, attendance, and final assessment corroborate readiness
-* **3+:** - Student will complete module if prior project work, attendance, and final assessment corroborate readiness
-* **2+:** - Student may complete module if prior project work, attendance, and final assessment corroborate readiness
-* **<2:** - Student needs more time with concepts and work covered in module
+* **4:** Student will complete module if prior project work, attendance, and final assessment corroborate readiness
+* **3+:** Student will complete module if prior project work, attendance, and final assessment corroborate readiness
+* **2+:** Student may complete module if prior project work, attendance, and final assessment corroborate readiness
+* **<2:** Student needs more time with concepts and work covered in module
 
 **Please note that a passing project must include a fully playable game.**
 
@@ -132,7 +132,7 @@ Here is what the final score means in terms of completing the module:
   - Some arguments and parameters are used to limit global variables and repetitive code.
   - The event object is used correctly, and is only accepted as a parameter when the function calls on it directly.
   - Function and variable names generally describe their role in the program.
-  - Function declarations are used over anonymous functions in event listeners, unless data needs to be passed in.
+  - Function declarations are used over anonymous functions in event listeners, unless data needs to be passed in. There is no logic present in an event listener. 
 
 * **1:**
 
