@@ -23,47 +23,42 @@ For this project, you will be building a hotel management tool for hotel custome
 
 * **the fetch API** to retrieve and add data
 * **Sass** for getting fancy with your CSS
+* **Mocha** and **Chai** for testing your code
 
 ## Initial Setup
 
-For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) repo. Setup instructions are in the README
+For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit){:target='blank'} repo. Setup instructions are in the README.  You will also need to clone down this [local server](https://github.com/turingschool-examples/overlook-api){:target='blank'} and have it running in a separate tab in your terminal each time you run your client.
 
-## Datasets
+### Endpoints
 
-You will use the following endpoints for fetching your data:
+Below are all the endpoints set up for this project. You may not use all of them -- some apply to extensions. Pay attention to the functionality required of each iteration when picking the appropriate endpoint.
 
-* [Users](https://fe-apps.herokuapp.com/api/v1/overlook/1904/users/users)
-* [Rooms](https://fe-apps.herokuapp.com/api/v1/overlook/1904/rooms/rooms)
-* [Bookings](https://fe-apps.herokuapp.com/api/v1/overlook/1904/bookings/bookings)
+| Description | URL | Method | Required Properties for Request | Sample Successful Response |
+|----------|-----|--------|---------------------|-----------------|
+| Get all users|`http://localhost:3001/api/v1/users`| GET  | none | object with `users` property containing an array of all users |
+|Get single user|`http://localhost:3001/api/v1/users/<id>`     *where`<id>` will be a number of a user's id* | GET  | none | object of single user's info |
+|Get all rooms| `http://localhost:3001/api/v1/rooms` | GET | none | object with `rooms` property containing an array of all rooms |
+|Get all bookings| `http://localhost:3001/api/v1/bookings` | GET | none | object with `bookings` property containing an array of all bookings |
+| Add new booking |`http://localhost:3001/api/v1/bookings`| POST | `{ "userID": 48, "date": "2019/09/23", "roomNumber": 4 }` | `{ message: 'Booking with id <id> successfully posted', newBooking: <Object with trip info just posted> }`|
+| Delete single booking | `http://localhost:3001/api/v1/bookings/<id>`     *where`<id>` will be a number of a booking's id*  | DELETE | none | `{ message: Booking #<id> has been deleted }` |
+
+<section class="note">
+### Note
+
+* All POST and DELETE requests should have the following headers:
+```js
+{
+  "Content-Type": "application/json"
+}
+```
+
+* Remember, a `.catch` won't necessarily run on a bad response (ie 4xx level status) from the server. Make sure you're checking your response status codes and messages if something isn't working as expected
+</section>
 
 
 ## Iterations
 
-### 1. Login
-
-Your app should support two different types of users: a customer and a manager. When first arriving at the site, a user should be able to log in with a username and password. If it is a **manager** logging in, they should log in with the following credentials:
-
-```
-username: manager
-password: overlook2020
-```
-
-If it is a **customer** logging in, they should log in with the following credentials:
-
-```
-username: customer50 (where 50 is the ID of the user)
-password: overlook2020
-```
-
-
-### 2. Dashboard
-
-**As a manager, upon logging in:**
-
-* I should see a dashboard page that shows me:
-  * Total Rooms Available for today's date
-  * Total revenue for today's date
-  * Percentage of rooms occupied for today's date
+### 1. Dashboard
 
 **As a customer, upon logging in:**
 
@@ -71,7 +66,7 @@ password: overlook2020
   * Any room bookings I have made (past or present/upcoming)
   * The total amount I have spent on rooms
 
-### 3. Customer Interaction
+### 2. Customer Interaction
 
 **As a customer:**
 
@@ -81,20 +76,52 @@ password: overlook2020
 * I should be able to select a room for booking
 * In the event that no rooms are available for the date/roomType selected, display a message fiercely apologizing to the user and asking them to adjust their room search
 
-Booking a room will require a POST request to the bookings endpoint, like so:
+**Refer to the "Add new booking" section from the endpoints table above!** 
 
-**Room Booking: [https://fe-apps.herokuapp.com/api/v1/overlook/1904/bookings/bookings](https://fe-apps.herokuapp.com/api/v1/overlook/1904/bookings/bookings)**
+<section class="note">
+### Note!
 
-```js
-{
-    "userID": 48,
-    "date": "2019/09/23",
-    "roomNumber": 4
-}
+If you haven't already, focus on accessibility at this point.  Before moving to iteration 3, please **create a branch and push it up to GH** so instructors can run *Lighthouse* and check your dashboard for it's accessibility audit.
+</section>
+
+### 3. Login
+
+When first arriving at the site, a user should be able to log in with a username and password.
+
+**As a customer:**
+* I should be able to login
+  - I will see a login page when I first visit the site:
+  - I can log in with the following credentials:
+
+```
+username: customer50 (where 50 is the ID of the user)
+password: overlook2021
 ```
 
+  - Upon successfully loggin in, I should see my dashboard.
+
+**Refer to the "Get single user" section from the endpoints table above!** 
 
 ### 4. Manager Interaction
+
+Your app should now support two different types of users.  In addition to having a customer, you will now add a manager. 
+
+**As a manager:**
+- I should be able to login:
+  - I will see a login page when I first visit the site:
+  - I can log in with the following credentials:
+
+```
+username: manager
+password: overlook2021
+```
+
+**As a manager, upon logging in:**
+
+* I should see a dashboard page that shows me:
+  * Total Rooms Available for today's date
+  * Total revenue for today's date
+  * Percentage of rooms occupied for today's date
 
 **As a manager:**
 
@@ -103,30 +130,10 @@ Booking a room will require a POST request to the bookings endpoint, like so:
   * Add a room booking for that user
   * Delete any upcoming room bookings for that user (they cannot delete a booking from the past)
 
-Deleting an upcoming booking will require a DELETE request to the bookings endpoint, like so:
-
-```js
-{
-    id: 12085397154
-}
-```
-
-## Workflow
-
-You will be assigned one workflow buddy to submit PRs to:
-
-* You must give your workflow buddy collaboration access to your repo.
-* You must submit at least 2 PRs to your workflow buddy for review.
-* You must wait for your workflow buddy to review your PRs, and allow THEM to merge any PRs you submit.
-
-It is up to you to decide what changes warrant a PR -- remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you're struggling with or have questions about or need help with. As a workflow buddy, you are responsible for reviewing at least 2 PRs from your partner.
-
-Please also tag your instructors in any PR you make.
-
+**Refer to the endpoints table above for *deleting* a single booking**
 
 ## Testing
-
-You should be testing your the correctness of your code throughout your project. Each JavaScript class file in your project should have its own test file.
+You should be testing the correctness of your code throughout your project. Each JavaScript class file in your project should have its own test file.
 
 Your testing suite should test all of the functionality of the application, including the following:
 
@@ -134,12 +141,16 @@ Your testing suite should test all of the functionality of the application, incl
 * Class methods
 * Anything that updates class properties
 
-Keep in mind your use-cases for Spies:
+## Workflow
+You will want to submit PRs to your accountabilibuddy to:
 
-* Mocking out a fetch call and testing your applications reaction to the response
-* Spying on methods that call other methods which are already tested elsewhere
-* Spying on any functions that do DOM manipulation in response to the result of a fetch request/instance updating
+* You must give your accountabilibuddy collaboration access to your repo.
+* You must submit *at least* 2 PRs to your accountabilibuddy for review.
+* You must wait for your accountabilibuddy to review your PRs, and allow THEM to merge any PRs you submit.
 
+It is up to you to decide what changes warrant a PR – remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you’re struggling with or have questions about or need help with. As an accountabilibuddy, you are responsible for reviewing at least 2 PRs from your partner.
+
+**Please also tag your project manager in any PR you make to your buddy.**
 
 ## Accessibility
 
@@ -148,47 +159,49 @@ Keep in mind your use-cases for Spies:
 * ARIA attributes should be utilized for any UI elements that are not understood by the screen reader
 * Application should be fully responsive for mobile - tablet - desktop
 
-
 ## Extensions
 
 * Allow customers to filter available rooms by cost (min/max), bed size, and/or number of beds
 * Allow customers and managers to add a room service charge to a booking by utilizing the [room services endpoint](https://fe-apps.herokuapp.com/api/v1/overlook/1904/room-services/roomServices)
 * Find and fix a cross-browser compat issue
 
+## Due Date
+
+Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'} by **Tuesday, March 9th at 9pm**.
 
 # Rubric
 
 ## Specification Adherence
 
-* [ ]  Novice - The application is missing multiple features/requirements outlined above. 
-* [ ]  Advanced Beginner - The application is in a usable state, but is missing part of one or more of the technologies outlined above.
-* [ ]  Proficient - The application uses the above technologies to a professional level. 
-* [ ]  Exceptional - Meets all expectations of `Proficient`. In addition, the application has additional features/extensions implemented that go above and beyond the project requirements.
+* 4: The application completes all iterations above and implements one or more of the extensions.
+* 3: The application completes the first 3 iterations above without error.
+* 2: The application completes the first 2 iterations and is in a usable state, but has some miscellaneous bugs.
+* 1: The application completes only the first iteration, displaying the user's data, but has no additional functionality.
 
-## UI/UX
+## UI/UX & Accessibility
 
-* [ ] Novice - The application is confusing or difficult to use. The UI is incomplete.
-* [ ] Advanced Beginner - The application may be confusing or difficult to use at times. The application shows some effort in the interface, but the result is not effective because UX and/or UI still present an application that is incomplete or difficult to use.
-* [ ] Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX.
-* [ ] Exceptional - Meets all expectations for `Proficient`. In addition, the application has clearly had special consideration around usability on devices. 
+* 4: Application has clearly had special consideration around accessibility and usability on devices. Lighthouse accessibility audit is at a 100%.
+* 3: Application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance. The application is fully responsive and the UI does not detract from the UX. Lighthouse accessibility audit is at least 90%.
+* 2: The application may be confusing or difficult to use at times.  The UI is incomplete, and the app is not responsive. Accessibility has been considered, but does not have strong accessible features. 
+* 1: Application is confusing or difficult to use. The UI is incomplete, and the app is not responsive. Accessibility has not been considered. 
 
-### JavaScript Style & OOP
+## JavaScript Style & OOP
 
-* [ ] Novice - Application is not separated into classes, or methods and properties are illogically assigned to classes. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity. Business-side logic and view-related code are not separated.
-* [ ] Advanced Beginner - Application has a significant amount of duplication. Application is organized into classes that do not display a good understanding of encapsulation, and logic is not well-divided. Developer cannot articulate what each line of code is doing. 
-* [ ] Proficient - Application is thoughtfully put together with some duplication. Developers can speak to choices made in the code and knows what every line of code is doing. Application is organized into classes (and correctly uses inheritance) with some misplaced logic. Business-logic code is mostly separated from view-related code. 
-* [ ] Exceptional - Meets all requirements of `Proficient`. In addition, application has exceptionally well-factored code with little or no duplication. SRP (single responsibility principle) and DRY (don't repeat yourself) principles are utilized. There are _zero_ instances where an instructor would recommend taking a different approach. There are no instances where instructor would suggest moving logic or data to another class. The business-logic code driving functionality is cleanly separated from rendering, view-related code.
+* 4: Application has exceptionally well-factored code with little or no duplication.  The business-logic code driving functionality is cleanly separated from rendering, view-related code.   Excellent usage of `fetch` and updates DOM based on results of network requests.  Handles all scenarios for error handling.
+* 3: Application is thoughtfully put together with some duplication.  Application is organized into classes with some misplaced logic. Business-logic code is mostly separated from view-related code.  Great usage of `fetch` and updates DOM based on results in most scenarios, but may update DOM before a network request is complete.  Handles some scenarios for error handling.
+* 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has zero error handling and only `logs` errors if a network request fails.
+* 1:  Application generates syntax error or crashes during execution.  Application is not separated into classes and there is no separation of business-side logic and view-related code. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity.
 
-## CSS/Sass Style
+## SASS
 
-* [ ] Novice - There are several (10+) instances of duplication and one or two major bugs. Developers write code with unnecessary selectors or tags which do not increase clarity.
-* [ ] Advanced Beginner - There is some duplication (5-10 instances) in the codebase. There may be one to two minor bugs. There may be some unnecessary selectors or tags. Application adds organization for the whole stylesheet and within rules.
-* [ ] Proficient - Application is thoughtfully put together with comments to help guide organization. There may be some duplication (fewer than 5 instances) present. Comments are present to assist with organization of code.
-* [ ] Exceptional - Meets all expectations for `Proficient`. The application has exceptionally well-factored CSS/Sass with all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
+* 4: Application fulfills all requirements previously mentioned, and has SASS functionality that goes above and beyond an MVP.
+* 3: The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
+* 2: Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
+* 1: The application makes little to no use of SASS and is not separated into logical stylesheets. There are many instances of duplication
 
 ## Testing
 
-* [ ] Novice - There is little or no evidence of testing in the application.
-* [ ] Advanced Beginner - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
-* [ ] Proficient - Project has a running test suite that tests multiple levels but fails to cover some features.
-* [ ] Exceptional - Project has a running test suite that utilizes spies. The test suite covers almost all aspects of the application.
+* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.
+* 3: Application is well tested but fails to cover some features and only tests for happy paths.
+* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
+* 1: There is little or no evidence of testing in the application.
