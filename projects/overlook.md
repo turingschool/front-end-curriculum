@@ -35,8 +35,8 @@ Below are all the endpoints set up for this project. You may not use all of them
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
-| Get all users|`http://localhost:3001/api/v1/users`| GET  | none | object with `users` property containing an array of all users |
-|Get single user|`http://localhost:3001/api/v1/users/<id>`     *where`<id>` will be a number of a user's id* | GET  | none | object of single user's info |
+| Get all customers|`http://localhost:3001/api/v1/customers`| GET  | none | object with `customers` property containing an array of all customers |
+|Get single customer|`http://localhost:3001/api/v1/customers/<id>`     *where`<id>` will be a number of a customer's id* | GET  | none | object of single customer's info |
 |Get all rooms| `http://localhost:3001/api/v1/rooms` | GET | none | object with `rooms` property containing an array of all rooms |
 |Get all bookings| `http://localhost:3001/api/v1/bookings` | GET | none | object with `bookings` property containing an array of all bookings |
 | Add new booking |`http://localhost:3001/api/v1/bookings`| POST | `{ "userID": 48, "date": "2019/09/23", "roomNumber": 4 }` | `{ message: 'Booking with id <id> successfully posted', newBooking: <Object with trip info just posted> }`|
@@ -60,7 +60,7 @@ Below are all the endpoints set up for this project. You may not use all of them
 
 ### 1. Dashboard
 
-**As a customer, upon logging in:**
+**As a customer:**
 
 * I should see a dashboard page that shows me:
   * Any room bookings I have made (past or present/upcoming)
@@ -90,7 +90,7 @@ When first arriving at the site, a user should be able to log in with a username
 
 **As a customer:**
 * I should be able to login
-  - I will see a login page when I first visit the site:
+  - I will see a login page when I first visit the site
   - I can log in with the following credentials:
 
 ```
@@ -107,8 +107,8 @@ password: overlook2021
 Your app should now support two different types of users.  In addition to having a customer, you will now add a manager. 
 
 **As a manager:**
-- I should be able to login:
-  - I will see a login page when I first visit the site:
+- I should be able to login
+  - I will see a login page when I first visit the site
   - I can log in with the following credentials:
 
 ```
@@ -154,16 +154,10 @@ It is up to you to decide what changes warrant a PR – remember we want to subm
 
 ## Accessibility
 
-* Accessibility audits should be at 100%
+* Accessibility audits should be at 100% for the dashboard.
 * A user should be able to interact with all functionality of your application by tabbing through it, no use of the trackpad
 * ARIA attributes should be utilized for any UI elements that are not understood by the screen reader
 * Application should be fully responsive for mobile - tablet - desktop
-
-## Extensions
-
-* Allow customers to filter available rooms by cost (min/max), bed size, and/or number of beds
-* Allow customers and managers to add a room service charge to a booking by utilizing the [room services endpoint](https://fe-apps.herokuapp.com/api/v1/overlook/1904/room-services/roomServices)
-* Find and fix a cross-browser compat issue
 
 ## Due Date
 
@@ -173,7 +167,7 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 
 ## Specification Adherence
 
-* 4: The application completes all iterations above and implements one or more of the extensions.
+* 4: The application completes all iterations above without error.
 * 3: The application completes the first 3 iterations above without error.
 * 2: The application completes the first 2 iterations and is in a usable state, but has some miscellaneous bugs.
 * 1: The application completes only the first iteration, displaying the user's data, but has no additional functionality.
