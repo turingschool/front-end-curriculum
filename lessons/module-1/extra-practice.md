@@ -18,11 +18,12 @@ Below are ways you can get in additional practice throughout the inning. None of
 <section class="answer">
 ### Data Types
 
-* [Data Types](https://repl.it/@letakeane/01-datatypes)
+* [typeof](https://repl.it/@letakeane/01-datatypes)
 * [Statements & Expressions](https://repl.it/@letakeane/15-statements-expressions)
 * [Functions](https://repl.it/@eric_turing/Functions-Workshop)
-* [Objects 1](https://frontend.turing.io/lessons/module-1/objects-review.html)
-* [Objects 2](https://repl.it/@letakeane/02-objects)
+* [Objects 1](https://repl.it/@ameseee/Partner-Practice#index.js)
+* [Objects 2](https://frontend.turing.io/lessons/module-1/objects-review.html)
+* [Objects 3](https://repl.it/@letakeane/02-objects)
 * [Arrays 1](https://gist.github.com/ameseee/b818a24a4b06cdd2c14b88ad146ea508)
 * [Arrays 2](https://repl.it/@letakeane/03-arrays)
 * [Arrays 3](https://repl.it/@sertmer/ArrayPractice)
@@ -68,6 +69,13 @@ Below are ways you can get in additional practice throughout the inning. None of
 * [Add A Friend](https://codepen.io/ameseee/pen/mdbmBmq?editors=1010)
 * [Spooky Friends](https://codepen.io/kaylaewood/pen/jOrzYWM)
 * [Munchie Madness](https://codepen.io/eric_turing/pen/GRKEeEY)
+</section>
+
+<section class="answer">
+### Bracket & Dot Notation
+
+* [Bracket & Dot Notation 1](https://repl.it/@kaylaewood/bracketVsDotHomework#index.js)
+* [Bracket & Dot Notation 2](https://codepen.io/kaylaewood/pen/wvGrQxV?editors=1010)
 </section>
 
 <section class="answer">
