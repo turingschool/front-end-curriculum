@@ -20,7 +20,8 @@ Only the following sessions are optional:
 - PD, 3/23
 - Gear Up, 3/26
 - PD, 4/2
-- Gear Up, 4/23
+- Gear Up, 4/23  
+
 Attendance for all other sessions is required.
 
 ## Alternative Learning Opportunities
