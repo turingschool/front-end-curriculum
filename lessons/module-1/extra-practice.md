@@ -16,6 +16,32 @@ Below are ways you can get in additional practice throughout the inning. None of
 </section>
 
 <section class="answer">
+### Data Types
+
+* [Data Types](https://repl.it/@letakeane/01-datatypes)
+* [Statements & Expressions](https://repl.it/@letakeane/15-statements-expressions)
+* [Functions](https://repl.it/@eric_turing/Functions-Workshop)
+* [Objects 1](https://frontend.turing.io/lessons/module-1/objects-review.html)
+* [Objects 2](https://repl.it/@letakeane/02-objects)
+* [Arrays 1](https://gist.github.com/ameseee/b818a24a4b06cdd2c14b88ad146ea508)
+* [Arrays 2](https://repl.it/@letakeane/03-arrays)
+* [Arrays 3](https://repl.it/@sertmer/ArrayPractice)
+* [Array Methods](https://repl.it/@letakeane/02-array-methods)
+* [Classes](https://repl.it/@letakeane/03-classes)
+</section>
+
+<section class="answer">
+### Looping & Nested Data
+
+* [Animals](https://repl.it/@letakeane/01-for-loops)
+* [Mars Rovers](https://repl.it/@letakeane/04-spicy)
+* [Gifts](https://repl.it/@HannahHudson1/AdventDay1#index.js)
+* [Party](https://repl.it/@HannahHudson1/Advent5#index.js)
+* [Ugly Sweater Generator](https://repl.it/@HannahHudson1/Advent8)
+* [Villians](https://repl.it/@letakeane/05-spicy)
+</section>
+
+<section class="answer">
 ### HTML + CSS
 
 * [HTML Practice](https://github.com/turingschool-examples/html-warmup-challenges)
@@ -45,29 +71,9 @@ Below are ways you can get in additional practice throughout the inning. None of
 </section>
 
 <section class="answer">
-### Data Types
+### Local Storage
 
-* [Data Types](https://repl.it/@letakeane/01-datatypes)
-* [Statements & Expressions](https://repl.it/@letakeane/15-statements-expressions)
-* [Functions](https://repl.it/@eric_turing/Functions-Workshop)
-* [Objects 1](https://frontend.turing.io/lessons/module-1/objects-review.html)
-* [Objects 2](https://repl.it/@letakeane/02-objects)
-* [Arrays 1](https://gist.github.com/ameseee/b818a24a4b06cdd2c14b88ad146ea508)
-* [Arrays 2](https://repl.it/@letakeane/03-arrays)
-* [Arrays 3](https://repl.it/@sertmer/ArrayPractice)
-* [Array Methods](https://repl.it/@letakeane/02-array-methods)
-* [Classes](https://repl.it/@letakeane/03-classes)
-</section>
-
-<section class="answer">
-### Looping & Nested Data
-
-* [Animals](https://repl.it/@letakeane/01-for-loops)
-* [Mars Rovers](https://repl.it/@letakeane/04-spicy)
-* [Gifts](https://repl.it/@HannahHudson1/AdventDay1#index.js)
-* [Party](https://repl.it/@HannahHudson1/Advent5#index.js)
-* [Ugly Sweater Generator](https://repl.it/@HannahHudson1/Advent8)
-* [Villians](https://repl.it/@letakeane/05-spicy)
+* [Local Todos](https://github.com/turingschool-examples/local-todos)
 </section>
 
 <section class="answer">
@@ -75,12 +81,6 @@ Below are ways you can get in additional practice throughout the inning. None of
 
 * [Snow Facts](https://codepen.io/hannahhch/pen/QWEPeKb)
 * **Refactor an old project.** Look back at one of your projects from last inning. Find the feedback that you received on that project from an instructor. Apply some of the recommended refactor opportunities mentioned in your feedback. *Can you use parameters to create a reusable function and DRY up your JavaScript? Can you make your HTML more semantic? Can you organize your CSS in a better way?*
-</section>
-
-<section class="answer">
-### Local Storage
-
-* [Local Todos](https://github.com/turingschool-examples/local-todos)
 </section>
 
 <section class="answer">
