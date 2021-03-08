@@ -28,10 +28,16 @@ Below are ways you can get in additional practice throughout the inning. None of
 </section>
 
 <section class="answer">
-### DOM Maniputation, Event Listeners, & Event Bubbling
+### DOM Maniputation & Event Listeners
 
 * [Puppies + Kittens](https://gist.github.com/kaylaewood/0d5621f9b4cb1c5a0d4da7a0405c8890)
+* [Compliment Generator](https://repl.it/@kaylaewood/04-DOM-manipulation-2#script.js)
 * [Holiday Card Generator](https://codepen.io/hannahhch/pen/OJXGpxJ)
+</section>
+
+<section class="answer">
+### DOM Maniputation, Event Listeners, & Event Bubbling
+
 * [Bear, Muffin, Bird](https://github.com/turingschool/bear-muffin-bird)
 * [Add A Friend](https://codepen.io/ameseee/pen/mdbmBmq?editors=1010)
 * [Spooky Friends](https://codepen.io/kaylaewood/pen/jOrzYWM)
@@ -39,19 +45,29 @@ Below are ways you can get in additional practice throughout the inning. None of
 </section>
 
 <section class="answer">
-### Data Type Review
+### Data Types
 
-* [Intro to Functions Review](https://repl.it/@eric_turing/Functions-Workshop)
-* [Intro to Arrays Review](https://gist.github.com/ameseee/b818a24a4b06cdd2c14b88ad146ea508)
-* [Intro to Objects Review](https://frontend.turing.io/lessons/module-1/objects-review.html)
+* [Data Types](https://repl.it/@letakeane/01-datatypes)
+* [Statements & Expressions](https://repl.it/@letakeane/15-statements-expressions)
+* [Functions](https://repl.it/@eric_turing/Functions-Workshop)
+* [Objects 1](https://frontend.turing.io/lessons/module-1/objects-review.html)
+* [Objects 2](https://repl.it/@letakeane/02-objects)
+* [Arrays 1](https://gist.github.com/ameseee/b818a24a4b06cdd2c14b88ad146ea508)
+* [Arrays 2](https://repl.it/@letakeane/03-arrays)
+* [Arrays 3](https://repl.it/@sertmer/ArrayPractice)
+* [Array Methods](https://repl.it/@letakeane/02-array-methods)
+* [Classes](https://repl.it/@letakeane/03-classes)
 </section>
 
 <section class="answer">
-### Loops & Nested Data
+### Looping & Nested Data
 
-* [Gifts Repl](https://repl.it/@HannahHudson1/AdventDay1#index.js)
-* [Party Repl](https://repl.it/@HannahHudson1/Advent5#index.js)
-* [Ugly Sweater Generator Repl](https://repl.it/@HannahHudson1/Advent8)
+* [Animals](https://repl.it/@letakeane/01-for-loops)
+* [Mars Rovers](https://repl.it/@letakeane/04-spicy)
+* [Gifts](https://repl.it/@HannahHudson1/AdventDay1#index.js)
+* [Party](https://repl.it/@HannahHudson1/Advent5#index.js)
+* [Ugly Sweater Generator](https://repl.it/@HannahHudson1/Advent8)
+* [Villians](https://repl.it/@letakeane/05-spicy)
 </section>
 
 <section class="answer">
