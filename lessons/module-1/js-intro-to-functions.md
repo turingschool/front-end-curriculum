@@ -169,6 +169,108 @@ return "We've stopped executing!";
 Work through <a href="https://repl.it/repls/LegalCadetblueAddresses">this practice REPL</a> with a partner
 </section>
 
+## Conditionals
+
+Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." In JavaScript, conditionals are written very similarly and allow us to take a certain path in our program.
+
+To use conditionals, we first need to use expressions, operators, and statements.
+
+### Basic Conditional Structure
+
+Let's now look at the basic structure of a conditional:
+
+```javascript
+if (expression) {
+  statement;
+} else {
+  statement;
+}
+```
+
+If the expression evaluates to `true`, then the statement(s) for that condition will run. Otherwise, if the expression is `false`, then the statement(s) will not run at all. The expression will usually contain an operator to make a comparison (that evaluates to true or false).
+
+Some examples of expressions we could use for a conditional are:
+
+* `myNum < 5`
+* `userCity === "Denver"`
+* `isTired`
+
+Now for some real conditional examples.
+
+```javascript
+var hoursOfSleep = 8;
+function evaluateSleep() {  
+  if (hoursOfSleep < 6) {
+    console.log("I am groggy.");
+  } else {
+    console.log("I feel fantastic!");
+  }
+}
+
+evaluateSleep();
+```
+
+<section class="answer">
+### See it improved with a parameter and argument
+
+```javascript
+function evaluateSleep(hoursOfSleep) {  
+  if (hoursOfSleep < 6) {
+    console.log("I am groggy.");
+  } else {
+    console.log("I feel fantastic!");
+  }
+}
+
+evaluateSleep(8);
+```
+</section>
+
+```javascript
+var nextLocation = "home";
+function findLocation() {  
+  if (nextLocation === "home") {
+    console.log("It's been a long day, let's go home!");
+  } else if (nextLocation === "work") {
+    console.log("Good morning, finding the fastest route to work!");
+  } else {
+    console.log("Finding location.  Found it!  Let's go!");
+  }
+}
+
+findLocation();
+```
+
+<section class="answer">
+### See it improved with a parameter and argument
+
+```javascript
+function findLocation(nextLocation) {  
+  if (nextLocation === "home") {
+    console.log("It's been a long day, let's go home!");
+  } else if (nextLocation === "work") {
+    console.log("Good morning, finding the fastest route to work!");
+  } else {
+    console.log("Finding location.  Found it!  Let's go!");
+  }
+}
+
+findLocation("home");
+```
+</section>
+
+<section class="call-to-action">
+### Your Turn
+
+In your console, declare and assign a variable named `favoriteAnimal`. Then, write a function with a conditional that logs a different message based on your favorite kind of animal.
+
+**Tip:** You can use the `up arrow` in the Dev Tools console to search through previous commands you have run.
+
+Use the `up arrow` to avoid waiting time re-typing. Before you hit return, change the value assigned to "favoriteAnimal", to ensure your conditional is behaving as you expect.
+</section>
+
+
+
 ### ES5 vs ES6 Functions
 So far in this lesson, we've only looked at regular functions, also known as **ES5 functions**. This refers to ECMAScript 2009, also known as ES5, which was the first major revision to JavaScript. ECMAScript 2015, also known as ES6, was the second major revision to JavaScript. With ES6 came **ES6 functions**, also called **arrow functions**.  
 
@@ -193,6 +295,7 @@ We've worked through a lot of content - some of which may be new, some is review
 3. What is the difference between a parameter and an argument?
 4. How do you get values out of functions?
 5. What is the different between a console log and a return statement? When would you use one over the other?
+6. Write out the basic structure of an `if/else` conditional.
 </section>
 
 ### Additional Resources & Practice
