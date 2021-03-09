@@ -286,66 +286,6 @@ _Example solution:_ `2 >= 3`
 - Write a variable age and assign to a number. Check if the age is greater than 21 but less than 65.
 </section>
 
-## Conditionals
-
-Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." In JavaScript, conditionals are written very similarly and allow us to take a certain path in our program.
-
-To use conditionals, we first need to use expressions, operators, and statements.
-
-### Basic Conditional Structure
-
-Let's now look at the basic structure of a conditional:
-
-```javascript
-if (expression) {
-  statement;
-} else {
-  statement;
-}
-```
-
-If the expression evaluates to `true`, then the statement(s) for that condition will run. Otherwise, if the expression is `false`, then the statement(s) will not run at all. The expression will usually contain an operator to make a comparison (that evaluates to true or false).
-
-Some examples of expressions we could use for a conditional are:
-
-* `myNum < 5`
-* `userCity === "Denver"`
-* `isTired`
-
-Now for some real conditional examples.
-
-```javascript
-var hoursOfSleep = 8;
-
-if (hoursOfSleep < 6) {
-  console.log("I am groggy.");
-} else {
-  console.log("I feel fantastic!");
-}
-```
-
-```javascript
-var nextLocation = "home";
-
-if (nextLocation === "home") {
-  console.log("It's been a long day, let's go home!");
-} else if (nextLocation === "work") {
-  console.log("Good morning, finding the fastest route to work!");
-} else {
-  console.log("Finding location.  Found it!  Let's go!");
-}
-```
-
-<section class="call-to-action">
-### Your Turn
-
-In your console, declare and assign a variable named `favoriteAnimal`. Then, write a conditional that logs a different message based on your favorite kind of animal.
-
-**Tip:** You can use the `up arrow` in the Dev Tools console to search through previous commands you have run.
-
-Use the `up arrow` to avoid waiting time re-typing. Before you hit return, change the value assigned to "favoriteAnimal", to ensure your conditional is behaving as you expect.
-</section>
-
 ### Wrap Up
 
 We've worked through a lot of content - some of which may be new, some is review. Let's take a minute to reflect.
@@ -356,8 +296,7 @@ We've worked through a lot of content - some of which may be new, some is review
 1. What are the five primitive data types we learned about today?
 2. How are variables useful and what is an example of one that has a value assigned to it?
 3. Write out an example of string concatenation.  Now write that same example using a template literal.
-4. Write out the basic structure of an `if/else` conditional.
-5. Write down at least one question you have coming out of this lesson.
+4. Write down at least one question you have coming out of this lesson.
 </section>
 
 ### Additional Resources & Practice
