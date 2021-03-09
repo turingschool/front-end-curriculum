@@ -22,7 +22,7 @@ This project is an important step in demonstrating you are ready to start Module
 
 - You are the only one who should type code - no copy-pasting code!
 - For any code that you didn't write entirely by yourself (mentor or rock supported), you should be able delete it and re-write it yourself
-- No youtube videos or tutorials of programming Tic Tac Toe. If you have an opportunity and are tempted, do the right thing for YOUR learning and don't do it!
+- No youtube videos or tutorials of programming Rock Paper Scissors. If you have an opportunity and are tempted, do the right thing for YOUR learning and don't do it!
 - Any peer-to-peer collaboration should be discussions about IDEAS, not coding together or sharing code.
 
 We want to see YOUR work.
@@ -79,7 +79,7 @@ Your entire application will consist of one HTML page. You will have three JavaS
 
 ### Data Model
 
-In a game like Tic Tac Toe, it is tempting to manipulate the DOM first. Remember that the game logic exists exclusively in the data model. The DOM simply reflects/displays that data model.
+In a game like Rock Paper Scissors, it is tempting to manipulate the DOM first. Remember that the game logic exists exclusively in the data model. The DOM simply reflects/displays that data model.
 
 ### Suggested Iterations
 
