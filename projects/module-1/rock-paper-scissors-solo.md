@@ -39,13 +39,20 @@ We want to see YOUR work.
 
 Here is a video demonstrating most functionality of the game (the only functionality not explicitly depicted is data persistence using Local Storage):
 
-# VIDEO COMING SOON
+<iframe width="840" height="473" src="https://www.youtube.com/embed/a2M5h1B9DQQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 In this project, we will not be providing detailed iterations. We want you to exercise your skills in planning out work!
 
 Notes:
 * A timeout is used after a completed game to reset the board.
 * No need to match colors or icons, but the overall layout should be the same. You can get as creative as you would like with your Rock Paper Scissors design!
+* This game is played by one user against a computer. The computer player should be an instantiation of Player and have the ability to make a random choice.
+* You'll need to make two versions of Rock, Paper, Scissors - "classic" and some variation. You can invent your own variation, or do some research on variations [here](https://www.wrpsa.com/different-variations-of-rock-paper-scissors/). Make sure you communicate the rules to your user!
+
+**Classic Rock Paper Scissors Rules**
+- Rock smashes scissors
+- Scissors cuts paper
+- Paper covers rock
 
 **We have provided [some images](https://drive.google.com/drive/folders/1eWHo2qgTaBQGEhvamiK-74GIZXoXq4_c) to get you started, but feel free to find your own if you would like!**
 
@@ -73,16 +80,6 @@ Your entire application will consist of one HTML page. You will have three JavaS
 ### Data Model
 
 In a game like Tic Tac Toe, it is tempting to manipulate the DOM first. Remember that the game logic exists exclusively in the data model. The DOM simply reflects/displays that data model.
-
-### Required Game Functionality
-
-- This game is played by one user against a computer. The computer player should be an instantiation of Player and have the ability to make a random choice.
-- You'll need to make two versions of Rock, Paper, Scissors - "classic" and some variation. You can invent your own variation, or do some research on variations [here](https://www.wrpsa.com/different-variations-of-rock-paper-scissors/). Make sure you communicate the rules to your user!
-
-**Classic Rock Paper Scissors Rules**
-- Rock smashes scissors
-- Scissors cuts paper
-- Paper covers rock
 
 ### Suggested Iterations
 
