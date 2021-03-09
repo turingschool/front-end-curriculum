@@ -5,7 +5,8 @@ Below are ways you can get in additional practice throughout the inning. None of
 <section class="answer">
 ### Daily Reps
 
-* [Codewars](https://www.codewars.com/): Focus on psuedocoding level 7 and 8 katas
+* [Typing Practice](typing.io): Improving your typing skills will make you a more efficient coder. Consider spending 15 min a day on building your typing accuracy and speed.
+* [Codewars](https://www.codewars.com/): Focus on pseudocoding level 7 and 8 katas
 </section>
 
 <section class="answer">
