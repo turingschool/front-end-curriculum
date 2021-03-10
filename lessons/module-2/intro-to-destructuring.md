@@ -165,11 +165,12 @@ What if you want to destrcuture an object as an argument?
         lastname: 'Doe',
         dateofbirth: '1990'
     };
-function myUser({ firstname, lastname, dateofbirth }) {
+function myUser({ firstname, lastname, dateofbirth } = user) {
     console.log(firstname)
     console.log(lastname)
     console.log(dateofbirth)
 }
+myUser()
 
 ```
 <section class="checks-for-understanding">
