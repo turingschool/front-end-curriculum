@@ -28,11 +28,12 @@ console.log(color2)
 <section class="answer">
 ### The Answer <br>
 This is what happen in the code above. 
-<img class="medium" src="https://github.com/turingschool/front-end-curriculum/blob/f3b5d757b797c33fc08ff93c80c9122f875f2a3a/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array.png" />
+<img class="medium" src="https://github.com/turingschool/front-end-curriculum/blob/dfec040a99f1673538180127f053d7753b3c9a8e/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array.png"/>
 </section>
 
 <section class="call-to-action">
 ### Check It Out
+ 
 Let’s now see a few techniques to use destructuring efficiently.
 Return to your group and discuss the difference between these two examples
 
@@ -83,7 +84,7 @@ console.log(imporant, secondArr)
 ## Destructuring objects:
 The right side of the statement contains the Javascript object that we want to split into variables; the left side contains a “pattern” for corresponding properties of the object. This “pattern” is usually a list of variable names.
 
-#### Example :
+<section class="call-to-action ">
     
 ##### Assigning to exisitng variables 
         
@@ -100,15 +101,12 @@ console.log( firstname, lastname, dateofbirth);
 
 ```
 
+</section>
 
 <section class="answer">
 ### The Answer     
 <img class="medium" src="https://github.com/turingschool/front-end-curriculum/blob/dfec040a99f1673538180127f053d7753b3c9a8e/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-object.png"/>
-
 </section>
-    
-
-    
 
 ##### Assigning to new variable names:
 <section class="call to action">
@@ -128,10 +126,10 @@ console.log( fn, ln, dob);
 </section>  
 
 <section class"answer>
-The above code destructures the object into variables with a different name than the object property:
+The above code destructures the object into variables with a different name than the object property.
 </section
-##### Assigning to a variable with default:
 
+##### Assigning to a variable with default:
 
 We can also assign default values to variables whose keys may not exist in the object we want to destructure. This will prevent our variable from having an undefined value being assigned to it. The code below demonstrates this:
 
@@ -174,13 +172,11 @@ myUser()
 
 ```
 <section class="checks-for-understanding">
+ 
 ### Exit Ticket
-
-What are the 2 ways of destructuring objects?
-    
+What are the 2 ways of destructuring objects?  
 </section>
 
-
-
 ## Additional Resources
+
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
