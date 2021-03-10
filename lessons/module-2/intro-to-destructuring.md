@@ -157,7 +157,7 @@ console.log("\n After setting default values")
 console.log( firstname, lastname, country);
 ```
 #### Passing an object as an argument:
-What if you want to destrcuture an object as an argument?  
+What if you want to destructuring an object as an argument?  
 
 ```js
   var user = {    // Object we want to destructure
