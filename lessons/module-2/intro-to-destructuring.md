@@ -71,7 +71,7 @@ Assigning an Array to a variable
 
 ## Destructuring Arrays:
 #### Example:
-return to your group and work on this example.
+Return to your group and work on this example.
     
 ```js
 let bigArr = ["number", 4,5,6]
@@ -111,7 +111,7 @@ console.log( firstname, lastname, dateofbirth);
     
 
 ##### Assigning to new variable names:
-The following code destructures the object into variables with a different name than the object property:
+<section class="call to action">
     
 ```js
     var user = {    // Object we want to destructure
@@ -125,7 +125,11 @@ The following code destructures the object into variables with a different name 
 var { firstname: fn, lastname: ln, dateofbirth: dob } = user;
 console.log( fn, ln, dob);
 ```
-    
+</section>  
+
+<section class"answer>
+The above code destructures the object into variables with a different name than the object property:
+</section
 ##### Assigning to a variable with default:
 
 
