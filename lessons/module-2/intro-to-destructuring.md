@@ -27,16 +27,12 @@ console.log(color2)
 
 <section class="answer">
 ### The Answer <br>
-      
 This is what happen in the code above. 
-
-
-<img class="medium" src="./assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array.png" />
+<img class="medium" src="https://github.com/turingschool/front-end-curriculum/blob/f3b5d757b797c33fc08ff93c80c9122f875f2a3a/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array.png" />
 </section>
 
 <section class="call-to-action">
 ### Check It Out
-  
 Let’s now see a few techniques to use destructuring efficiently.
 Return to your group and discuss the difference between these two examples
 
@@ -67,9 +63,9 @@ console.log(others)
     
 Assigning an Array to a variable
     
-<img class="medium" src="./assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array-example1.png"/>   
+<img class="medium" src="https://github.com/turingschool/front-end-curriculum/blob/dfec040a99f1673538180127f053d7753b3c9a8e/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array-example1.png"/>   
      
-<img class="medium" src="./assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array-example2.png"/> 
+<img class="medium" src="https://github.com/turingschool/front-end-curriculum/blob/f3b5d757b797c33fc08ff93c80c9122f875f2a3a/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array-example2.png"/> 
     
 </section>
 
@@ -107,7 +103,7 @@ console.log( firstname, lastname, dateofbirth);
 
 <section class="answer">
 ### The Answer     
-<img class="medium" src="./assets/images/lessons/intro to destructuring/intro to destructuring-object-destructuring.png"/>
+<img class="medium" src="https://github.com/turingschool/front-end-curriculum/blob/dfec040a99f1673538180127f053d7753b3c9a8e/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-object.png"/>
 
 </section>
     
