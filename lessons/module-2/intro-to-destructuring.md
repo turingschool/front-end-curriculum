@@ -1,6 +1,6 @@
 ---
 title: "Intro to Destructuring"
-length: 00
+length: 120
 tags: Destructuring, syntax
 ---
 ## Learning Goals
