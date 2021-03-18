@@ -27,8 +27,9 @@ console.log(color2)
 
 <section class="answer">
 ### The Answer <br>
+ 
 This is what happen in the code above. 
-<img class="medium" src="../assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array.png"/>
+ ![Destructuring-array](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array.png)
 </section>
 
 <section class="call-to-action">
@@ -63,10 +64,10 @@ console.log(others)
 ### The Answer   
     
 Assigning an Array to a variable
-    
-<img class="medium" src="../assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array-example1.png"/>   
+
+![Destructuring-comp](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array-example1.png)
+![Destructuring-comp](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array-example2.png)
      
-<img class="medium" src="../assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array-example2.png"/> 
     
 </section>
 
@@ -80,6 +81,19 @@ let [ important, ...secondArr ] = bigArr;
 console.log(important, secondArr)
 
 ```
+Why do we use destructuring?
+<section class="answer">
+ 
+ Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals. This syntax can be extremely terse, while still exhibiting more clarity than the traditional property access.
+ Without destructuring assignment, you might access the first three items in an array like this:
+ 
+ ```js
+
+var first = someArray[0];
+var second = someArray[1];
+var third = someArray[2];
+ ```
+</section>
     
 ## Destructuring objects:
 The right side of the statement contains the Javascript object that we want to split into variables; the left side contains a “pattern” for corresponding properties of the object. This “pattern” is usually a list of variable names.
@@ -105,8 +119,11 @@ console.log( firstname, lastname, dateofbirth);
 
 
 <section class="answer">
-### The Answer     
-<img class="medium" src="../assets/images/lessons/intro-to-destructuring/intro-to-destructuring-object.png"/>
+
+### The Answer    
+
+ ![Destructuring-comp](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-object.png)
+
 </section>
 
 ##### Assigning to new variable names:
@@ -133,20 +150,21 @@ The above code destructures the object into variables with a different name than
 We can also assign default values to variables whose keys may not exist in the object we want to destructure. This will prevent our variable from having an undefined value being assigned to it. The code below demonstrates this:
 
 ```js
-    var user = {    // Object we want to destructure
-        firstname: 'Jon',
-        lastname: 'Doe',
-        dateofbirth: '1990'
-    };
-
+var user = {// Object we want to destructure
+      firstname: 'Jon',
+      lastname: 'Doe',
+      dateofbirth: '1990'
+};
 // Destructuring the object into variables without 
 // assigning default values 
+
 var { firstname, lastname, country } = user;
 console.log("Without setting default values")
 console.log( firstname, lastname, country);
 
 // Destructuring the object into variables by 
 // assigning default values 
+
 var { firstname = 'default firstname', 
       lastname = 'default lastname', 
       country = 'default country' } = employee;
@@ -157,11 +175,11 @@ console.log( firstname, lastname, country);
 What if you want to destructuring an object as an argument?  
 
 ```js
-  var user = {    // Object we want to destructure
-        firstname: 'Jon',
-        lastname: 'Doe',
-        dateofbirth: '1990'
-    };
+var user = { // Object we want to destructure
+      firstname: 'Jon',
+      lastname: 'Doe',
+      dateofbirth: '1990'
+};
 function myUser({ firstname, lastname, dateofbirth } = user) {
     console.log(firstname)
     console.log(lastname)
