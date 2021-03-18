@@ -103,6 +103,7 @@ console.log( firstname, lastname, dateofbirth);
 
 </section>
 
+
 <section class="answer">
 ### The Answer     
 <img class="medium" src="../assets/images/lessons/intro-to-destructuring/intro-to-destructuring-object.png"/>
@@ -123,11 +124,9 @@ console.log( firstname, lastname, dateofbirth);
 var { firstname: fn, lastname: ln, dateofbirth: dob } = user;
 console.log( fn, ln, dob);
 ```
+The above code destructures the object into variables with a different name than the object property.
 </section>  
 
-<section class"answer>
-The above code destructures the object into variables with a different name than the object property.
-</section
 
 ##### Assigning to a variable with default:
 
