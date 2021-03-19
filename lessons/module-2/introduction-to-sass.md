@@ -348,7 +348,7 @@ In your Sassy Sandbox, implement the following `mixins`:
 <section class="note">
 ### Media Queries
 
-But what about media queries? There are a lot of [different approaches](http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32){:target="_blank"} that you can take. Here's a [good blog post](https://medium.com/front-end-developers/the-solution-to-media-queries-in-sass-5493ebe16844){:target="_blank"} that walks through setting up responsive mixins for each component.
+But what about media queries? There are a lot of [different approaches](https://css-tricks.com/approaches-media-queries-sass/){:target="_blank"} that you can take. Here's a [good blog post](https://medium.com/front-end-developers/the-solution-to-media-queries-in-sass-5493ebe16844){:target="_blank"} that walks through setting up responsive mixins for each component.
 
 One thing to note is that we can nest our media queries and use variables.
 </section>

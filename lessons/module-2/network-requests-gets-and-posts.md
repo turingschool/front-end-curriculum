@@ -53,7 +53,7 @@ Today we'll be focusing on how to do **GET** and **POST** requests on the fronte
 
 ### Responses
 
-Every request we make, successful or not, will receive a response.  When looking at the **Network** tab in the dev tools, you might have noticed some requests had different respond codes. The HTTP protocol lays a series of [Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target='blank'} to give more information on the status of a request.
+Every request we make, successful or not, will receive a response.  When looking at the **Network** tab in the dev tools, you might have noticed some requests had different response codes. The HTTP protocol lays a series of [Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target='blank'} to give more information on the status of a request.
 
 <section class="call-to-action">
 ### Reviewing status code levels
@@ -78,7 +78,7 @@ What do each of the status codes mean on a high level?
 ![google 500 error](https://i0.wp.com/s3.amazonaws.com/production-wordpress-assets/blog/wp-content/uploads/2016/11/29074529/500-internal-server-error.png?fit=604%2C237&ssl=1)
 </section>
 
-## Making A Request
+## Making a Request
 
 Each network request takes time - they're *expensive*. Imagine if you had to wait for a webpage to load one thing at a time! It would not make for a great user experience.
 
@@ -112,7 +112,7 @@ Using the [fetch API docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetc
 <section class="note">
 ### Not all browsers support fetch
 
-It's important to note that not every browser supports the fetch api; polyfills are available, but many legacy codebases use other apis that are supported by older browsers, such as `Axios` or `Superagent`.  You can see what [browsers support fetch here](https://caniuse.com/#search=fetch){:target='blank'}!
+It's important to note that not every browser supports the fetch api; [polyfills](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill) (code used to provide modern functionality to older browsers that do not natively support it) are available, but many legacy codebases use other apis that are supported by older browsers, such as `Axios` or `Superagent`.  You can see what [browsers support fetch here](https://caniuse.com/#search=fetch){:target='blank'}!
 </section>
 
 <section class="answer">
