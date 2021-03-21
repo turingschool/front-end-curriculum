@@ -16,10 +16,8 @@ Watch [this video](https://www.youtube.com/watch?t=16&v=U4IU-y9-J8Q&feature=yout
 Once a week, there is **Repeater Fam** time on the calendar. During this time, you will join a zoom call to connect with each other, reflect on the past week, and create goals for the current week. Instructors will not join any of these calls. During the calls, we ask that you fill out [this Goals Document](https://docs.google.com/spreadsheets/d/14CnFCMSFyadbPoMP_ii0NnxQRoZnXKDT2JP-n56yZq8/edit?usp=sharing) for the appropriate week.
 
 ## Gear Ups and Professional Development
-Only the following sessions are optional:
-- PD, 3/23
+All PD sessions are required for repeaters. Only the following Gear Up sessions are optional:
 - Gear Up, 3/26
-- PD, 4/2
 - Gear Up, 4/23  
 
 Attendance for all other sessions is required.
