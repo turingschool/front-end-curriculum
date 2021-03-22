@@ -89,9 +89,9 @@ Why do we use destructuring?
  
  ```js
 
-var first = someArray[0];
-var second = someArray[1];
-var third = someArray[2];
+var first = bigArr[0];
+var second = bigArr[1];
+var third = bigArr[2];
  ```
 </section>
     
