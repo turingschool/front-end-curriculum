@@ -125,9 +125,10 @@ console.log( firstname, lastname, dateofbirth);
 ![Destructuring-comp](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-object.png)
 
  In a destructuring expression L = R, we take the right value R, and break it down so that the new variables in L can be assigned a value. In the above code, we used the object property shorthand notation.
- 
+ ```js
   var { firstname, lastname, dateofbirth } = user;
-  <br/>
+ ```
+
   Without this shorthand notation, our code will look like this:
   ```js
   var user = {    // Object we want to destructure
