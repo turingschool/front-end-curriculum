@@ -16,7 +16,7 @@ The reduction may only be to 1 level or to the least level (depending on the dep
 ## Warm Up
 Return to your notebooks and write what do you think these logs will return?
 ```js
-colors = ["Red","Pink","Blue","Black"] //Array to be destructured
+var colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
 var [color1, color2] = colors //Destructuring
 
@@ -41,7 +41,7 @@ Return to your group and discuss the difference between these two examples
  
 #### Example 1:   
 ```js
-colors = ["Red","Pink","Blue","Black"] //Array to be destructured
+var colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
 var [,color1,, color2] = colors //Focus on the use of extra commas to skip through elements
 
@@ -50,7 +50,7 @@ console.log(color2)
 ```
 #### Example2:
 ```js
-colors = ["","Pink","Blue","Black"] //Array to be destructured
+var colors = ["","Pink","Blue","Black"] //Array to be destructured
 
 var [color1, ...others] = colors //Focus on the use of ... to assign remaining elements to an array
 
@@ -76,8 +76,8 @@ Assigning an Array to a variable
 Return to your group and work on this example.
     
 ```js
-let bigArr = ["number", 4,5,6]
-let [ important, ...secondArr ] = bigArr;
+var bigArr = ["number", 4,5,6]
+var [ important, ...secondArr ] = bigArr;
 console.log(important, secondArr)
 
 ```
