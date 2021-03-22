@@ -158,18 +158,18 @@ var user = {// Object we want to destructure
 // Destructuring the object into variables without 
 // assigning default values 
 
-var { firstname, lastname, country } = user;
+var { firstname, lastname, dateofbirth } = user;
 console.log("Without setting default values")
-console.log( firstname, lastname, country);
+console.log( firstname, lastname, dateofbirth);
 
 // Destructuring the object into variables by 
 // assigning default values 
 
 var { firstname = 'default firstname', 
       lastname = 'default lastname', 
-      country = 'default country' } = employee;
+      dateofbirth = 'default DOB' } = user;
 console.log("\n After setting default values")
-console.log( firstname, lastname, country);
+console.log( firstname, lastname, dateofbirth);
 ```
 #### Passing an object as an argument:
 What if you want to destructuring an object as an argument?  
