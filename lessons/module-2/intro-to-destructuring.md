@@ -122,9 +122,38 @@ console.log( firstname, lastname, dateofbirth);
 
 ### The Answer    
 
- ![Destructuring-comp](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-object.png)
+![Destructuring-comp](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-object.png)
 
+ In a destructuring expression L = R, we take the right value R, and break it down so that the new variables in L can be assigned a value. In the above code, we used the object property shorthand notation.
+ 
+  var { firstname, lastname, dateofbirth } = user;
+  <br/>
+  Without this shorthand notation, our code will look like this:
+  ```js
+  var user = {    // Object we want to destructure
+        firstname: firstname,
+        lastname: lastname,
+        dateofbirth: dateofbirth
+    };
+  ```
+ 
 </section>
+
+<section class="call to action">
+Return to your notebooks and write what do you think the above code will look like in ES5?
+</section>
+
+
+<section class="answer">
+ 
+ ### The Answer
+
+```js
+var firstname = user.firstname;
+var lastname = user.lastname;
+```
+ 
+ </section>
 
 ##### Assigning to new variable names:
 <section class="call to action">
