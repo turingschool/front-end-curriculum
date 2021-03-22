@@ -197,7 +197,7 @@ console.log( firstname, lastname, country);
 
 var { firstname = 'default firstname', 
       lastname = 'default lastname', 
-      country = 'default country' } = employee;
+      country = 'default country' } = user;
 console.log("\n After setting default values")
 console.log( firstname, lastname, country);
 ```
