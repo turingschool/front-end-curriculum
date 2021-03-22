@@ -226,7 +226,7 @@ myUser()
 <section class="checks-for-understanding">
  
 ### Exit Ticket
-What are the 2 ways of destructuring objects?  
+What is a way of destructuring an object?
 </section>
 
 ## Additional Resources
