@@ -197,3 +197,4 @@ What are the 2 ways of destructuring objects?
 ## Additional Resources
 
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+* [Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
