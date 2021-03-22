@@ -75,7 +75,7 @@ Assigning an Array to a variable
 
 ## Destructuring Arrays:
 #### Example:
-Return to your group and work on this example.
+Return to your notebooks and write what do you think this logs will return?
     
 ```js
 var bigArr = ["number", 4,5,6]
