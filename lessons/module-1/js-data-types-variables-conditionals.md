@@ -1,5 +1,5 @@
 ---
-title: "JS: Data Types, Variables, Conditionals"
+title: "JS: Data Types & Variables"
 length: 90
 tags: javascript, introduction, foundation, variables
 ---
@@ -63,11 +63,11 @@ Javascript has six primitive data types:
 ### Data Types Jigsaw
 
 You're going to do some research on one of the 5 data types we are focusing on, then share out with the class. We'll follow this protocol:
-- **2 min:** [independent research using MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+- **5 min:** [independent research using MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 - **2 min:** group discuss findings, ask/answer questions
-- **3 min:** group [makes chart](https://excalidraw.com/) to share takeaways
+- **5 min:** group [makes chart](https://excalidraw.com/) to share takeaways
   - Keep in mind: What are possible values? Examples? Does this data type get commonly confused with something else? Why/when would developers use it? Provide an example of it being used in code!
-- **30 sec - 1 min:** each group presents to the class, while not presenting, you are taking notes on what you're learning from other groups
+- **1 min:** each group presents to the class, while not presenting, you are taking notes on what you're learning from other groups
 </section>
 
 
