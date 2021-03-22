@@ -148,15 +148,18 @@ Return to your notebooks and write what do you think the above code will look li
 
 
 <section class="answer">
- 
- ### The Answer
 
-```js
-var firstname = user.firstname;
-var lastname = user.lastname;
-```
+### The Answer    
+
+ ```js
+ var firstname = user.firstname;
+ var lastname = user.lastname;
+ console.log(firstname);
+ console.log(lastname);
+ ```
  
  </section>
+ 
 
 ##### Assigning to new variable names:
 <section class="call to action">
