@@ -131,7 +131,7 @@ console.log( firstname, lastname, dateofbirth);
 
   Without this shorthand notation, our code will look like this:
   ```js
-  var user = {    // Object we want to destructure
+  var user = { 
         firstname: firstname,
         lastname: lastname,
         dateofbirth: dateofbirth
