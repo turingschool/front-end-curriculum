@@ -50,7 +50,7 @@ console.log(color2)
 ```
 #### Example2:
 ```js
-var colors = ["","Pink","Blue","Black"] //Array to be destructured
+var colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
 var [color1, ...others] = colors //Focus on the use of ... to assign remaining elements to an array
 
