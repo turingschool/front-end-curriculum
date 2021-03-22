@@ -12,6 +12,8 @@ Implement destructuring on arrays and objects
 `Array destructuring` is a javascript expression that reduces arrays to smaller atoms where the contents of the array can be easily accessed and referenced by variables.
 The reduction may only be to 1 level or to the least level (depending on the depth of the array and how far you want to destructure it). 
 
+The `spread operator` is a new addition to the set of operators in JavaScript ES6. It takes in an iterable (e.g an array) and expands it into individual elements.
+
 
 ## Warm Up
 Return to your notebooks and write what do you think these logs will return?
