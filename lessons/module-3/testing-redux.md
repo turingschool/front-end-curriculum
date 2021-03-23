@@ -42,6 +42,7 @@ Unit tests aim to test individual pieces of code as throughly as possible. In Re
 
 In order to test Redux, we need to first consider the pieces that will require testing.
 
+<section class="call-to-action">
 ### When it comes to redux, what do you think we need to test?
 
 Take a look at the <a href="https://redux.js.org/recipes/writing-tests/" target="_blank">Redux docs</a> and come up with an answer.
