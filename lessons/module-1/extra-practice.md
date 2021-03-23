@@ -45,7 +45,7 @@ Below are ways you can get in additional practice throughout the inning. None of
 </section>
 
 <section class="answer">
-### HTML + CSS
+### HTML & CSS
 
 * [HTML Practice](https://github.com/turingschool-examples/html-warmup-challenges)
 * [CSS Layout Challenges](https://github.com/turingschool-examples/css-layout-challenges)
