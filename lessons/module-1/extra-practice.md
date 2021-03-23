@@ -21,7 +21,8 @@ Below are ways you can get in additional practice throughout the inning. None of
 
 * [typeof](https://repl.it/@letakeane/01-datatypes)
 * [Statements & Expressions](https://replit.com/@kaylaewood/15-statements-expressions-1#index.js)
-* [Functions](https://repl.it/@eric_turing/Functions-Workshop)
+* [Functions 1](https://repl.it/@eric_turing/Functions-Workshop)
+* [Functions 2](https://replit.com/@kaylaewood/functionsPractice-1#index.js)
 * [Objects 1](https://repl.it/@ameseee/Partner-Practice#index.js)
 * [Objects 2](https://frontend.turing.io/lessons/module-1/objects-review.html)
 * [Objects 3](https://repl.it/@letakeane/02-objects)
