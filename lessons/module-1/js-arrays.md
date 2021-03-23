@@ -107,32 +107,36 @@ In the console:
 - identify the value of the 3rd element of the array
 </section>
 
-## Getting Multiple Values from Functions
+## Accessing and Updating Nested Data
 
-We learned this morning that a single function can only return a single value. There will be times when you want to send a list of values over. We are able to do this by returning an array. Because an array is a complex data type, it has the ability to "wrap up" many values into one value, it doesn't break the rule of "a single function can only return a single value".
+Often, arrays and objects will be used in tandem to hold data. We can dig into data by putting together what we've learned about accessing objects and arrays. Look below for an example:
 
 ```javascript
-function combineNames(name1, name2, name3) {
-  var names = [name1, name2, name3];
-  return names;
-}
+var instructors = [
+  { name: 'Will', program: 'FE', modsTaught: [1, 2, 3, 4] },
+  { name: 'Hannah', program: 'FE', modsTaught: [1, 2] },
+  { name: 'Heather', program: 'FE', modsTaught: [1] },
+  { name: 'Ian', program: 'BE', modsTaught: [1, 2, 3, 4] }
+];
 
-var listOfNames = combineNames("Luna", "Bey", "Sunny");
+instructors[0];
+// { name: 'Will', program: 'FE', modsTaught: [ 1, 2, 3, 4 ] }
 
-listOfNames;
-// => ["Luna", "Bey", "Sunny"]
+instructors[1].name;
+// 'Hannah'
 
-var modOneInstructors = combineNames("Scott", "Kayla", "Hannah");
+instructors[2].modsTaught[0];
+// 1
 
-modOneInstructors;
-// => ["Scott", "Kayla", "Hannah"]
-
+instructors[1].program = 'BE';
+instructors[1];
+// { name: 'Hannah', program: 'BE', modsTaught: [ 1, 2 ] }
 ```
 
 <section class="call-to-action">
-### Final Practice: Access and Update
+### Practice
 
-Start by forking [this repl.it](https://repl.it/@HannahHudson/IntroArrayPractice). Complete each exercise listed in the comments below the provided array literal. Write the code with a given direction directly below it, and **do not delete code as you go**.
+Start by forking [this repl.it](https://replit.com/@kaylaewood/NestedDataPractice#index.js) and then complete all the exercises.
 </section>
 
 ### Dig Deeper
