@@ -162,25 +162,6 @@ In your notebooks write what do you think the above code will look like in ES5?
  </section>
  
 
-##### Assigning to new variable names:
-<section class="call to action">
-    
-```js
-    var user = {    // Object we want to destructure
-        firstname: 'Jon',
-        lastname: 'Doe',
-        dateofbirth: '1990'
-    };
-
-// Destructuring the object into variables with
-// different names than the object variables
-var { firstname: fn, lastname: ln, dateofbirth: dob } = user;
-console.log( fn, ln, dob);
-```
-The above code destructures the object into variables with a different name than the object property.
-</section>  
-
-
 ##### Assigning to a variable with default:
 
 We can also assign default values to variables whose keys may not exist in the object we want to destructure. This will prevent our variable from having an undefined value being assigned to it. The code below demonstrates this:
