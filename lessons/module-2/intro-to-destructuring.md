@@ -12,9 +12,11 @@ Implement destructuring on arrays and objects
 `Array destructuring` is a javascript expression that reduces arrays to smaller atoms where the contents of the array can be easily accessed and referenced by variables.
 The reduction may only be to 1 level or to the least level (depending on the depth of the array and how far you want to destructure it). 
 
+The `spread operator` is a new addition to the set of operators in JavaScript ES6. It takes in an iterable (e.g an array) and expands it into individual elements.
+
 
 ## Warm Up
-Return to your notebooks and write what do you think these logs will return?
+In your notebooks write what do you think these logs will return?
 ```js
 var colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
@@ -50,7 +52,7 @@ console.log(color2)
 ```
 #### Example2:
 ```js
-var colors = ["","Pink","Blue","Black"] //Array to be destructured
+var colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
 var [color1, ...others] = colors //Focus on the use of ... to assign remaining elements to an array
 
@@ -73,7 +75,7 @@ Assigning an Array to a variable
 
 ## Destructuring Arrays:
 #### Example:
-Return to your group and work on this example.
+Return to your notebooks and write what do you think this logs will return?
     
 ```js
 var bigArr = ["number", 4,5,6]
@@ -81,17 +83,17 @@ var [ important, ...secondArr ] = bigArr;
 console.log(important, secondArr)
 
 ```
-Why do we use destructuring?
-<section class="answer">
+
+<section class="note">
  
- Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals. This syntax can be extremely terse, while still exhibiting more clarity than the traditional property access.
- Without destructuring assignment, you might access the first three items in an array like this:
- 
+## Why do we use destructuring?
+Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals. This syntax can be extremely terse, while still exhibiting more clarity than the traditional property access.
+ Without destructuring assignment, you might access the first three items in an array like this: 
  ```js
 
-var first = someArray[0];
-var second = someArray[1];
-var third = someArray[2];
+var first = bigArr[0];
+var second = bigArr[1];
+var third = bigArr[2];
  ```
 </section>
     
@@ -122,28 +124,43 @@ console.log( firstname, lastname, dateofbirth);
 
 ### The Answer    
 
- ![Destructuring-comp](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-object.png)
+![Destructuring-comp](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-object.png)
 
+ In a destructuring expression L = R, we take the right value R, and break it down so that the new variables in L can be assigned a value. In the above code, we used the object property shorthand notation.
+ ```js
+  var { firstname, lastname, dateofbirth } = user;
+ ```
+
+  Without this shorthand notation, our code will look like this:
+  ```js
+  var user = { 
+        firstname: firstname,
+        lastname: lastname,
+        dateofbirth: dateofbirth
+    };
+  ```
+ 
 </section>
 
-##### Assigning to new variable names:
 <section class="call to action">
-    
-```js
-    var user = {    // Object we want to destructure
-        firstname: 'Jon',
-        lastname: 'Doe',
-        dateofbirth: '1990'
-    };
 
-// Destructuring the object into variables with
-// different names than the object variables
-var { firstname: fn, lastname: ln, dateofbirth: dob } = user;
-console.log( fn, ln, dob);
-```
-The above code destructures the object into variables with a different name than the object property.
-</section>  
+In your notebooks write what do you think the above code will look like in ES5?
+</section>
 
+
+<section class="answer">
+
+### The Answer    
+
+ ```js
+ var firstname = user.firstname;
+ var lastname = user.lastname;
+ console.log(firstname);
+ console.log(lastname);
+ ```
+ 
+ </section>
+ 
 
 ##### Assigning to a variable with default:
 
@@ -167,7 +184,7 @@ console.log( firstname, lastname, country);
 
 var { firstname = 'default firstname', 
       lastname = 'default lastname', 
-      country = 'default country' } = employee;
+      country = 'default country' } = user;
 console.log("\n After setting default values")
 console.log( firstname, lastname, country);
 ```
@@ -180,18 +197,20 @@ var user = { // Object we want to destructure
       lastname: 'Doe',
       dateofbirth: '1990'
 };
-function myUser({ firstname, lastname, dateofbirth } = user) {
+function myUser({ firstname, lastname, dateofbirth }) {
     console.log(firstname)
     console.log(lastname)
     console.log(dateofbirth)
 }
-myUser()
+myUser(user)
 
 ```
 <section class="checks-for-understanding">
  
 ### Exit Ticket
-What are the 2 ways of destructuring objects?  
+How do we destructuring an object?
+How do we destructuring an object?
+How do we use spread operator?
 </section>
 
 ## Additional Resources
