@@ -374,7 +374,7 @@ From this point forward, you should not be using the Finder. Challenge yourself 
 
 Working efficiently in the terminal is an essential skill for developers, and we're going to support you in building it now. We expect that you use the terminal only while working alone, pairing, and in evaluations.
 
-Take some time to review this [cheatsheet of commands](https://gist.github.com/poopsplat/7195274)
+Take some time to review this [cheatsheet of commands](https://www.makeuseof.com/tag/mac-terminal-commands-cheat-sheet/).
 
 You don't need all of the commands, or even most of them - but try out a few that seem interesting to you.
 
