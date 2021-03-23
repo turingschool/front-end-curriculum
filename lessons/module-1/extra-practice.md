@@ -17,7 +17,7 @@ Below are ways you can get in additional practice throughout the inning. None of
 </section>
 
 <section class="answer">
-### Data Types + Functions
+### Data Types & Functions
 
 * [typeof](https://repl.it/@letakeane/01-datatypes)
 * [Statements & Expressions](https://replit.com/@kaylaewood/15-statements-expressions-1#index.js)
