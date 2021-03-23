@@ -70,7 +70,7 @@ _💬 Before moving on to Part 3, check in with each other and make sure both pa
 
 ### Part 3 - Collaborate
 
-For this part, use the `pets` array that is at the top of the Warm Up section. The variable that stores the array needs to be in the repl.it file you are working in. Your task is to write the code that use data from that array to print out (using `console.log`):
+For this part, use the `pets` array that is at the top of the Warm Up section. The variable that stores the array needs to be in the repl.it file you are working in. Your task is to write the code that uses data from that array to print out (using `console.log`):
 
 ```js
 Tilly
@@ -279,7 +279,7 @@ Some ideas, but don't feel limited to these:
 - Write-up (think blog post)
 - Series of images/diagrams
 
-You will submit your solution to the code challenge and educational resource as your exit ticket in a [private Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeKJc4aGTQ33VThooO0b_0e7SfhJc4zSf99f6vHp427jR1hUw/viewform). We'll ask for volunteers to share out their educational resources when we come back together!
+You will submit your solution to the code challenge and educational resource as your exit ticket in a [private Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeQ-PUzJ-8QthmAt6UgZDrwfuUYp7mLzWd9ddt4UOwD8p590A/viewform). We'll ask for volunteers to share out their educational resources when we come back together!
 </section>
 
 ### Additional Practice  
