@@ -10,6 +10,9 @@ tags: javascript, introduction, foundation, variables
 * Understand how to call functions with and without arguments
 * Make function expressions evaluate to something other than `undefined` using `return`
 
+## Pre-Work
+Complete [this lesson on Statements, Expressions, and Operators](https://frontend.turing.io/lessons/module-1/js-statements-and-expressions.html).
+
 ## Vocab
 
 - `Function` A predefined and reusable group of behavior
