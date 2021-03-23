@@ -208,7 +208,9 @@ myUser()
 <section class="checks-for-understanding">
  
 ### Exit Ticket
-What is a way of destructuring an object?
+How do we destructuring an object?
+How do we destructuring an object?
+How do we use spread operator?
 </section>
 
 ## Additional Resources
