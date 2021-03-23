@@ -8,7 +8,8 @@ tags: javascript, introduction, foundation, variables
 
 * Be able to declare functions with and without parameters
 * Understand how to call functions with and without arguments
-* Make function expressions evaluate to something other than `undefined` using `return`
+* Make function expressions evaluate to something other than `undefined` using `return`  
+* Understand and use operators and conditionals  
 
 ## Pre-Work
 Complete [this lesson on Statements, Expressions, and Operators](https://frontend.turing.io/lessons/module-1/js-statements-and-expressions.html).
