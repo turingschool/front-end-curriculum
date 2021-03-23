@@ -21,7 +21,7 @@ tags: js, introduction, object literals, dot notation
 
 <section class="call-to-action">
 ## Warm Up
-Respond to the following questions on [this Jamboard](https://jamboard.google.com/d/13-bFjFETJ28KBZRIar4wl0bGbKcDfNiAHwvbP--o2FU/viewer?f=0)
+Respond to the following questions on [this Jamboard](https://jamboard.google.com/d/13-bFjFETJ28KBZRIar4wl0bGbKcDfNiAHwvbP--o2FU/viewer?f=0){:target="blank"}
 - What do you already know about Objects from M0?
 - What feels fuzzy or do you have questions about?
 </section>
@@ -110,7 +110,7 @@ Practice using dot notation to access each value on your `you` object.
 <section class="call-to-action">
 ### Partner Practice: Accessing Properties
 
-Choose a driver and a navigator. The driver should start by forking [this repl.it](https://repl.it/@ameseee/Dot-Notation-Practice)
+Choose a driver and a navigator. The driver should start by forking [this repl.it](https://repl.it/@ameseee/Dot-Notation-Practice){:target="blank"}
 
 Together, complete each exercise listed in the comments below the two object literals. Write the code with a given direction directly below it, and do not delete code as you go.
 </section>
