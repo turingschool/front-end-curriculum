@@ -16,7 +16,7 @@ The `spread operator` is a new addition to the set of operators in JavaScript ES
 
 
 ## Warm Up
-Return to your notebooks and write what do you think these logs will return?
+In your notebooks write what do you think these logs will return?
 ```js
 var colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
@@ -143,7 +143,8 @@ console.log( firstname, lastname, dateofbirth);
 </section>
 
 <section class="call to action">
-Return to your notebooks and write what do you think the above code will look like in ES5?
+
+In your notebooks write what do you think the above code will look like in ES5?
 </section>
 
 
