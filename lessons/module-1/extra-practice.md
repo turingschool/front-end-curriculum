@@ -20,7 +20,7 @@ Below are ways you can get in additional practice throughout the inning. None of
 ### Data Types
 
 * [typeof](https://repl.it/@letakeane/01-datatypes)
-* [Statements & Expressions](https://repl.it/@letakeane/15-statements-expressions)
+* [Statements & Expressions](https://replit.com/@kaylaewood/15-statements-expressions-1#index.js)
 * [Functions](https://repl.it/@eric_turing/Functions-Workshop)
 * [Objects 1](https://repl.it/@ameseee/Partner-Practice#index.js)
 * [Objects 2](https://frontend.turing.io/lessons/module-1/objects-review.html)
