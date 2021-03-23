@@ -18,9 +18,9 @@ The `spread operator` is a new addition to the set of operators in JavaScript ES
 ## Warm Up
 In your notebooks write what do you think these logs will return?
 ```js
-var colors = ["Red","Pink","Blue","Black"] //Array to be destructured
+const colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
-var [color1, color2] = colors //Destructuring
+let [color1, color2] = colors //Destructuring
 
 console.log(color1)
 console.log(color2)
@@ -43,18 +43,18 @@ Return to your group and discuss the difference between these two examples
  
 #### Example 1:   
 ```js
-var colors = ["Red","Pink","Blue","Black"] //Array to be destructured
+const colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
-var [,color1,, color2] = colors //Focus on the use of extra commas to skip through elements
+let [,color1,, color2] = colors //Focus on the use of extra commas to skip through elements
 
 console.log(color1)
 console.log(color2)
 ```
 #### Example2:
 ```js
-var colors = ["Red","Pink","Blue","Black"] //Array to be destructured
+const colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
-var [color1, ...others] = colors //Focus on the use of ... to assign remaining elements to an array
+let [color1, ...others] = colors //Focus on the use of ... to assign remaining elements to an array
 
 console.log(color1)
 console.log(others)
@@ -78,8 +78,8 @@ Assigning an Array to a variable
 Return to your notebooks and write what do you think this logs will return?
     
 ```js
-var bigArr = ["number", 4,5,6]
-var [ important, ...secondArr ] = bigArr;
+const bigArr = ["number", 4,5,6]
+let [ important, ...secondArr ] = bigArr;
 console.log(important, secondArr)
 
 ```
@@ -91,9 +91,9 @@ Destructuring assignment allows you to assign the properties of an array or obje
  Without destructuring assignment, you might access the first three items in an array like this: 
  ```js
 
-var first = bigArr[0];
-var second = bigArr[1];
-var third = bigArr[2];
+const first = bigArr[0];
+const second = bigArr[1];
+const third = bigArr[2];
  ```
 </section>
     
@@ -105,14 +105,14 @@ The right side of the statement contains the Javascript object that we want to s
 ##### Assigning to exisitng variables 
         
 ```js
-    var user = {    // Object we want to destructure
+    const user = {    // Object we want to destructure
         firstname: 'Jon',
         lastname: 'Doe',
         dateofbirth: '1990'
     };
 
 // Destructuring the object into our variables
-var { firstname, lastname, dateofbirth } = user;
+let { firstname, lastname, dateofbirth } = user;
 console.log( firstname, lastname, dateofbirth);
 
 ```
@@ -128,12 +128,12 @@ console.log( firstname, lastname, dateofbirth);
 
  In a destructuring expression L = R, we take the right value R, and break it down so that the new variables in L can be assigned a value. In the above code, we used the object property shorthand notation.
  ```js
-  var { firstname, lastname, dateofbirth } = user;
+  let { firstname, lastname, dateofbirth } = user;
  ```
 
   Without this shorthand notation, our code will look like this:
   ```js
-  var user = { 
+  const user = { 
         firstname: firstname,
         lastname: lastname,
         dateofbirth: dateofbirth
@@ -153,8 +153,8 @@ In your notebooks write what do you think the above code will look like in ES5?
 ### The Answer    
 
  ```js
- var firstname = user.firstname;
- var lastname = user.lastname;
+ let firstname = user.firstname;
+ let lastname = user.lastname;
  console.log(firstname);
  console.log(lastname);
  ```
@@ -192,7 +192,7 @@ console.log( firstname, lastname, country);
 What if you want to destructuring an object as an argument?  
 
 ```js
-var user = { // Object we want to destructure
+const user = { // Object we want to destructure
       firstname: 'Jon',
       lastname: 'Doe',
       dateofbirth: '1990'
