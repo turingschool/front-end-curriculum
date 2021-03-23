@@ -83,12 +83,12 @@ var [ important, ...secondArr ] = bigArr;
 console.log(important, secondArr)
 
 ```
-Why do we use destructuring?
-<section class="answer">
+
+<section class="note">
  
- Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals. This syntax can be extremely terse, while still exhibiting more clarity than the traditional property access.
- Without destructuring assignment, you might access the first three items in an array like this:
- 
+## Why do we use destructuring?
+Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals. This syntax can be extremely terse, while still exhibiting more clarity than the traditional property access.
+ Without destructuring assignment, you might access the first three items in an array like this: 
  ```js
 
 var first = bigArr[0];
@@ -197,12 +197,12 @@ var user = { // Object we want to destructure
       lastname: 'Doe',
       dateofbirth: '1990'
 };
-function myUser({ firstname, lastname, dateofbirth } = user) {
+function myUser({ firstname, lastname, dateofbirth }) {
     console.log(firstname)
     console.log(lastname)
     console.log(dateofbirth)
 }
-myUser()
+myUser(user)
 
 ```
 <section class="checks-for-understanding">
