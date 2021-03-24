@@ -25,7 +25,7 @@ A fundamental part of writing better code and digging into more advanced topics 
 Each browser has what's called a 'JavaScript Engine' that translates (or interprets) your code line by line as it executes, which allows your application to perform the behaviors and interactions you've programmed. For example, if you've written the following code:
 
 ```js
-var header = document.getElementById('header');
+const header = document.getElementById('header');
 header.innerText = 'Lorem Ipsum Dolor'
 ```
 
@@ -118,7 +118,7 @@ Our function is also hoisted to the top of our code block, with its entire defin
 2    return 'Moooo!';
 3  }
 4
-5  var moo = mooLikeACow();
+5  const moo = mooLikeACow();
 6  
 7  console.log('Animal Sound: ', moo);
 ```
@@ -135,10 +135,10 @@ With a partner, take turns explaining how the following JavaScript code would be
 
 
 ```js
-1  var hungriestDog = 'Tess';
+1  const hungriestDog = 'Tess';
 2 
 3  function begForTreats(seconds) {
-4   var result = seconds * 2;
+4   const result = seconds * 2;
 5
 6   if (result > 5) {
 7    return 'This human is rude, not giving me treats. Onto the next one.';
@@ -147,7 +147,7 @@ With a partner, take turns explaining how the following JavaScript code would be
 10  }
 11 }
 12 
-13 var beggingTime = 20;
+13 let beggingTime = 20;
 14
 15 begForTreats(beggingTime);
 16
@@ -200,7 +200,7 @@ As the call stack builds up, each function has its own execution context.
 With a partner, take turns explaining how the the following JavaScript code would be translated by the interpreter. While one person is speaking, the other person should be diagramming this process.
 
 ```js  
-var myNum = 21; 
+const myNum = 21; 
 
 function addTwo(num) { 
   hello();  
@@ -211,7 +211,7 @@ function hello() {
   console.log('hello'); 
 }
 
-var sum = addTwo(myNum); 
+const sum = addTwo(myNum); 
 console.log(sum); 
 ```
 </section>
