@@ -37,29 +37,29 @@ In our previous example, we mentioned the JS Engine will read the two lines of c
 
 JavaScript is a **single-threaded** language, which means each line of code must fully finish executing before it can move onto the next -- only one task can be executed at a time.
 
-Let's look at a more complex example:
-
+<section class="call-to-action">
+### In Your Notebook
 
 ```js
-1   var modTwoTeachers = ['Will', 'Hannah', 'Khalid'];
+1   const modTwoTeachers = ['Will', 'Hannah', 'Khalid'];
 2
 3   function calculateEvals (teachers, classSize) {
 4     return classSize / teachers.length;
 5   }
 6
-7   var numEvals = calculateEvals(modTwoTeachers, currentCohort);
+7   const numEvals = calculateEvals(modTwoTeachers, currentCohort);
 8
-9   var currentCohort = 32;
+9   const currentCohort = 32;
 10  console.log(numEvals);
 ```
 
-<section class="call-to-action">
-### In Your Notebook
-
-What would you expect to be logged when we get to line 10? Why?
+Looking at the example above, what would you expect to be logged when we get to line 10? Why?
 </section>
 
 Let's do a quick breakdown of what the interpreter did here to read this code:
+
+<section class="answer">
+### Breakdown of what the interpreter is doing  
 
 1. **Line 1:** The `modTwoTeachers` variable is assigned to an array of instructor names.
 2. **Line 7:** We then skip down to line 7, because we are not currently invoking the function that's been declared, so we skip over that for now. On line 7, the `numEvals` variable is assigned to the invocation of `calculateEvals`.
@@ -68,13 +68,14 @@ Let's do a quick breakdown of what the interpreter did here to read this code:
 5. **Line 9:** Our function has finished executing, so we're going to pop out of that and pick up where we left off, which is on line 9, where the `currentCohort` variable is assigned to the number 32.
 6. **Line 10:** We console log the value of our `numEvals` variable, which gives us NaN.
 
-
 Based on this order of execution, we ultimately receive NaN as our result because the value of our `currentCohort` is not assigned until **after** we already do the math within `calculateEvals`. At the time `calculateEvals` executes, the value of our `currentCohort` variable is `undefined`. So what our function is really doing is trying to return `undefined / 3` -- which will always result in NaN.
+</section>
 
-Let's look at another example:
+<section class="call-to-action">
+### Looking at another example
 
 ```js
-1  var moo = mooLikeACow();
+1  const moo = mooLikeACow();
 2  
 3  function mooLikeACow() {
 4    return 'Moooo!';
@@ -82,9 +83,6 @@ Let's look at another example:
 6 
 7  console.log('Animal Sound: ', moo);
 ```
-
-<section class="call-to-action">
-### On Your Own  
 
 What would we expect to be logged when line 7 executes? Why? Is the actual behavior different than you expected?
 </section>
@@ -98,7 +96,7 @@ The interpreter takes a first pass to skim over our code and get a general idea 
 Using the first code example, the interpreter recognizes that we're going to be working with a function called `calculateEvals` and some variables - `modTwoTeachers`, `numEvals`, and `currentCohort`. In trying to be helpful, the interpreter **hoists** these functions and variables to the top of our scope. Behind the scenes, the interpreter would essentially be changing our code to look something like this:
 
 ```js
-1   var modTwoTeachers, numEvals, currentCohort;
+1   let modTwoTeachers, numEvals, currentCohort;
 2   function calculateEvals(teachers, classSize) {
 3     return classSize / teachers.length;
 4   }
@@ -111,7 +109,7 @@ Using the first code example, the interpreter recognizes that we're going to be 
 11  console.log(numEvals);
 ```
 
-Our variable **declarations** are hoisted to the top of our code block, but their **initialization** or **assignment** remains on the original line it was written. Therefore, all three of our variables are `undefined` until the execution phase when the interpreter reaches the lines where we assign them values.
+Our variable **declarations** are hoisted to the top of our code block, but their **initialization** or **assignment** remains on the original line it was written. Therefore, all three of our variables are `undefined` until the **execution phase** when the interpreter reaches the lines where we assign them values.
 
 Our function is also hoisted to the top of our code block, with its entire definition alongside it. This gives us insight into why our second example still worked without throwing an error:
 
@@ -181,6 +179,9 @@ function ransomTheWorld () {
 ransomTheWorld();  
 ```
 
+<section class="answer">
+### What's happening here?  
+
 As the call stack builds up, each function has its own execution context.  
 1. We start in the global execution context  
 1. `ransomTheWorld` is called, creating a new call on the stack 
@@ -191,6 +192,7 @@ As the call stack builds up, each function has its own execution context.
 1. `ransomTheWorld` returns and is popped off. Our stack frame is empty and we are back in the global execution context.  
 
 ![callstack building up](https://media.giphy.com/media/3ohs4rkYvzISB83cqY/giphy.gif) 
+</section> 
 
 <section class="call-to-action">
 ### Turn and Talk 
