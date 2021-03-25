@@ -126,7 +126,7 @@ instructors[1];
 ```
 
 <section class="call-to-action">
-### Practice
+### Extra, Extra Practice
 
 Start by forking [this repl](https://replit.com/@kaylaewood/NestedDataPractice#index.js) and then complete all the exercises.
 </section>
