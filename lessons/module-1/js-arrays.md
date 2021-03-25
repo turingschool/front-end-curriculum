@@ -94,7 +94,7 @@ colors[0];
 ```
 
 <section class="call-to-action">
-### Extra Practice
+### Practice!
 
 * Fork [this repl](https://replit.com/@kaylaewood/03-arrays#index.js) and complete the prompts.
 </section>
@@ -126,7 +126,7 @@ instructors[1];
 ```
 
 <section class="call-to-action">
-### Extra, Extra Practice
+### More Practice!
 
 Start by forking [this repl](https://replit.com/@kaylaewood/NestedDataPractice#index.js) and then complete all the exercises.
 </section>
