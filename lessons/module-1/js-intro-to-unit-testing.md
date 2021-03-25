@@ -27,7 +27,7 @@ tags: javascript, testing, tdd, mocha, chai
 ## Warm Up
 
 **On Your Own**
-Open [this repository](https://github.com/turingschool-examples/first-unit-tests), then:
+Open [this repository](https://github.com/turingschool-examples/first-unit-tests){:target="blank"}, then:
 * Read the README, and follow the `Getting Started` steps.
 * Run the `npm test` command in your terminal and explore at the result. 
 * Open up the `functions-test.js` file, and read every line, using all of the terms of art that you can.
