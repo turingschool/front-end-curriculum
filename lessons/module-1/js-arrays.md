@@ -20,11 +20,7 @@ tags: javascript, foundation, arrays
 <section class="call-to-action">
 ### Warm Up
 
-* Explore [this repl](https://repl.it/@letakeane/03-arrays#index.js), questions 1 through 4.
-* If you encounter a prompt that you are not sure how to solve - come back to this lesson, or do some googlin'.
-* If you have extra time,  attempt the 5th *spicy* prompt.
-* Make note of any questions that come up, or any clarifications you need. We'll talk through these in class tomorrow!
-* Remember - the goal is not completion. The goal is understanding.
+* Add your responses to the prompts on [this JamBoard](https://jamboard.google.com/d/1YTS-L4g4FT87J-SQbHgZQQl3DATxgiNx24GnFJHT0Cg/edit?usp=sharing). You don't have to answer every prompt!
 </section>
 
 ## Arrays
@@ -100,11 +96,7 @@ colors[0];
 <section class="call-to-action">
 ### Extra Practice
 
-In the console:  
-- create an array of cars
-- change the values within the array
-- add a new car to the array
-- identify the value of the 3rd element of the array
+* Fork [this repl](https://replit.com/@kaylaewood/03-arrays#index.js) and complete the prompts.
 </section>
 
 ## Accessing and Updating Nested Data
@@ -136,7 +128,7 @@ instructors[1];
 <section class="call-to-action">
 ### Practice
 
-Start by forking [this repl.it](https://replit.com/@kaylaewood/NestedDataPractice#index.js) and then complete all the exercises.
+Start by forking [this repl](https://replit.com/@kaylaewood/NestedDataPractice#index.js) and then complete all the exercises.
 </section>
 
 ### Dig Deeper
