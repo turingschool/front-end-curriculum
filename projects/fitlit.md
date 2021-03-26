@@ -84,7 +84,7 @@ For this dataset, when "today" is referenced in iterations, it is the last date 
 <section class="note">
 ### 3rd Party Libraries
 
-Please get instructor approval first before using additional 3rd-party libraries.  You may use [Day.js](https://www.npmjs.com/package/dayjs) to help with manipulating / formatting dates.
+Please get instructor approval first before using additional 3rd-party libraries.  You may use [Day.js](https://www.npmjs.com/package/dayjs) to help with manipulating / formatting dates.  You may also use [Chart.js](https://www.npmjs.com/package/chart.js) in order to help with displaying some data.  (Note: Learning a new technology does take extra time.  Plan ahead and maybe do a research spike over the first weekend, before deciding to use it.)
 </section>
 
 ---
