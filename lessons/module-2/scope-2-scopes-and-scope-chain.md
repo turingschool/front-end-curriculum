@@ -13,7 +13,11 @@ module: 2
 
 ## Vocab
 
-- `Scope` The level in which a variable can be accessed
+- `Scope` - The level in which a variable can be accessed.
+- `Scope Chain` - a stack of currently accessible scopes, from the most immediate context to the global context. 
+- `Global Scope` - A globally scoped variable can be accessed anywhere in the program
+- `Local or Function Scope` - A locally scoped variable can only be accessed in the function where it was declared
+- `Block Scope` - A block scoped variable can only be accessed in the set of curly brackets where it was declared (only applies to `let` and `const`)
 
 ## Scope
 
