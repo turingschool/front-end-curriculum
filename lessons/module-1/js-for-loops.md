@@ -26,7 +26,7 @@ In a repl.it, declare a variable that stores an array, and `console.log` it. You
 - A list of your friends (and their birthdays or hobbies)
 - A list of Hogwarts students (name, House, "cool" status)
 
-Or, if you're not feeling creative, you can take this as a starter and modify it a bit:
+Or, if you're not feeling creative, you can take the example below as a starter and modify it a bit:
 
 ```javascript
 var pets = [
@@ -55,7 +55,7 @@ var pets = [
 
 ### Part 2 - Warm Up, Explore
 
-Once in your breakout room, trade repl.it links with your partner. This way, you are each exposed to a new array that you will work with during activity. You will each need for fork the repl.it.
+Once in your breakout room, trade repl.it links with your partner. This way, you are each exposed to a new array that you will work with during activity. You will each need to fork the repl.it.
 
 - Take a moment to familiarize yourself with the array your partner declared
 
@@ -70,7 +70,8 @@ _💬 Before moving on to Part 3, check in with each other and make sure both pa
 
 ### Part 3 - Collaborate
 
-For this part, use the `pets` array that is at the top of the Warm Up section. The variable that stores the array needs to be in the repl.it file you are working in. Your task is to write the code that uses data from that array to print out (using `console.log`):
+For this part, use the `pets` array that is at the top of the Warm Up section. The variable that stores the array needs to be in the repl.it file you are working in.  
+Your task is to write the code that uses data from that array to print out (using `console.log`):
 
 ```js
 Tilly
@@ -144,15 +145,13 @@ for (var i = 0; i < fruits.length; i++) {
 
 The `for` loop is not magically tied to the `fruits` array in the example above. It's important to note that when we want to call a specific fruit, we call the `fruits` array then use bracket notation with the `i` variable to access `fruits[0]`, then `fruits[1]`, then `fruits[2]` - when `i` holds each of those respective values.
 
-📚 _As we talk through these concepts in class, instructors will screen share code in a repl.it and/or diagram on a tablet. Anything we write/draw during that time will be shared in the cohort Slack channel!_
-
 <section class="call-to-action">
 
 ### Predict & Discover
 
 **First, make a prediction:** What would happen if `fruits.length` was replaced with the Number `8` in the example above?
 
-Now, type out the function above (yes, actually type it! This is a great opporuntunity for attention to detail and catching your small errors). Replace `8` for `fruits.length`. Run the code and reflect on your prediction.
+Now, type out the function above (yes, actually type it! This is a great opportunity for attention to detail and catching your small errors). Replace `8` for `fruits.length`. Run the code and reflect on your prediction.
 </section>
 
 <section class='note'>
@@ -172,7 +171,7 @@ During your time in Mod 1, we'd like you to **only** use `for` loops when you ne
 
 ## Solo Practice
 
-Join the breakout room associated with the problem you are _currently_ working on. This is meant to mainly be done independently (no one should be screen sharing or "leading" anything), but we want you to have a source of support/place to ask questions if needed. 
+Join the breakout room associated with the problem you are _currently_ working on. This is meant to mainly be done independently (no one should be screen sharing or "leading" anything), but we want you to have a source of support/place to ask questions if needed.
 
 ### Mild Heat ⚡️: Annoying Zoo Kid 1
 

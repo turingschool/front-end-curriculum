@@ -8,6 +8,15 @@ tags: javascript, testing, tdd, mocha, chai
 * Ability to read/create tests for Classes
 * Understand how to import/export files specifically for testing
 
+<section class="call-to-action">
+### Wrap Up
+
+In your journal or notebook, reflect on the following:
+
+* What is TDD? What are the benefits of TDD?
+* What did you learn about testing in general from your JS Fun In The Library solo project?  Best practices? Tips/tricks?
+</section>
+
 Let's say we were writing a class, Tweet, that represents the content a user see when they read a tweet. We want to make sure each tweet is labeled with its sender. Here's how that test would look:
 
 ```javascript
@@ -140,7 +149,7 @@ In your journal or notebook, reflect on the following:
 </section>
 
 ## Extra Stuff
-If your curiosity is piqued - read [this article](https://techcrunch.com/2020/02/04/iowa-caucus-app-disaster/). 
+If your curiosity is piqued - read [this article](https://techcrunch.com/2020/02/04/iowa-caucus-app-disaster/).
 
 - What were the consequences of this app not working as expected?
 - What kind of pressure can you imagine the engineering team who built this were under, while developing the app?
