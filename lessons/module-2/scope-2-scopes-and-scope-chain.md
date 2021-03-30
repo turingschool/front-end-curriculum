@@ -250,7 +250,7 @@ getIndex("Travis"); // What will log and what will return?
 
 ## Scope Chain
 
-Whenever a variable is used, the JavaScript interpreter traverses the `scope chain` until it finds an entry for that variable. Traversal on the scope chain always starts in the most immediate (local) scope and moves towards the global space. Note that the scope chain is initialized during the "creation phase" of the interpreter running through the code.  Let's see an example of this in action!
+Whenever a variable is used, the JavaScript interpreter traverses the `scope chain` until it finds an entry for that variable. Traversal on the scope chain always starts in the most immediate scope and moves towards the global space. Note that the scope chain is initialized during the "creation phase" of the interpreter running through the code.  Let's see an example of this in action!
 
 <section class="call-to-action">
 ### In Breakout Groups
@@ -260,14 +260,14 @@ Consider the following example and explain what is happening:
 ```js
 let number = 10;
 
-function foo () {
+function logNumber() {
   number = 20;
   console.log('A', number);
 }
 
 console.log('B', number);
 
-foo();
+logNumber();
 
 console.log('C', number);
 ```
@@ -279,10 +279,10 @@ console.log('C', number);
 <section class="answer">
 ### What is happening here?  
 
-1. `foo` and its definition as well as the declaration `number` are stored in global memory
+1. `logNumber` and its definition as well as the declaration `number` are stored in global memory
 2. Line 1 - `number` is assigned the value of 10
 3. Line 8 - prints `B 10` to the console
-4. Line 10 - `foo` is invoked, creating a new execution context
+4. Line 10 - `logNumber` is invoked, creating a new execution context
 5. Line 4 - A variable is declared without the keyword `var` and assigned a value. The interpreter searches in the current execution context to see where this variable was defined. Because it doesn't find it declared in the current scope, it looks up the scope chain to the parent scope, which happens to be the global scope. The interpreter understands that this is to be treated as a re-assignment and assigned the value of `number` to 20, both locally and globally.
 6. Line 5 - prints `A 20` to the console
 7. Line 12 - prints `C 20` to the console
@@ -312,12 +312,12 @@ With a partner, take turns walking through the following code examples:
 Example 1:
 
 ```js
-function foo () {
+function logLocalNumber () {
   var localNumber = 20;
   number = localNumber;  
 }
 
-foo()
+logLocalNumber()
 
 console.log(number);  // what will log here?
 ```
