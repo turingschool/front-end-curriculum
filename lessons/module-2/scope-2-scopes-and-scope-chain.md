@@ -13,8 +13,8 @@ module: 2
 
 ## Vocab
 
-- `Scope` - The level in which a variable can be accessed.
-- `Scope Chain` - a stack of currently accessible scopes, from the most immediate context to the global context. 
+- `Scope` - The place in which a variable can be accessed.
+- `Scope Chain` - A stack of currently accessible scopes, from the most immediate context to the global context. 
 - `Global Scope` - A globally scoped variable can be accessed anywhere in the program
 - `Local or Function Scope` - A locally scoped variable can only be accessed in the function where it was declared
 - `Block Scope` - A block scoped variable can only be accessed in the set of curly brackets where it was declared (only applies to `let` and `const`)
@@ -26,7 +26,7 @@ Now that we understand the order of execution a bit, we can dive deeper into the
 <section class="call-to-action">
 ### Warmup
 
-Variables often are described as having either global scope or local scope.
+ES5 variables often are described as having either global scope or local (function) scope.
 
 * How would you describe the differences between a *globally* vs *locally* scoped variable?
 * Looking at the below example, does our `makeNoise` function have access to the `cowNoise` and `catNoise` variables? 
@@ -57,7 +57,7 @@ We have several scopes available to us: global, local (also known as function), 
 <section class="call-to-action">
 ### In Your Notebook
 
-Here is an example that uses *globally* scoped variables.  What rules apply to them?
+Here is an example that uses *globally* scoped variables. What rules apply to them?
 
 ```js
 var one = "one";
@@ -123,7 +123,7 @@ console.log(greeting + question + response);
 #### Block scope:
 
 <section class="call-to-action">
-### In Breakout Groups
+### In Your Notebook
 
 Here is an example that uses *block* scoped variables.  What rules apply to them?
 
@@ -166,15 +166,15 @@ Let's look at another example and compare how scopes work between the parent and
 Review the example below and answer the following questions:
 
 ```js
-const array = [ 5, 4, 3, 2, 1 ];
+const array = [5, 4, 3, 2, 1];
 const secondNumber = array[1];
 
-function getFirstNumber () {
+function getFirstNumber() {
   const firstNumber = array[0];
   return firstNumber;
 }
 
-function getSecondNumber () {
+function getSecondNumber() {
   return secondNumber;
 }
 
@@ -221,21 +221,21 @@ console.log('Outside of conditional:', message);
 ```js
 // Example #2
 function getIndex(searchQuery) {
-  const names = ["Brittany", "Khalid", "Robbie"];
+  const names = ["Nik", "Travis", "Hannah"];
 
   for (let i = 0; i < names.length; i++) {
     if (names[i] === searchQuery) {
       console.log ('The index is: ', i);
-      break;
     }
   }
   return i;
 }
 
-getIndex("Khalid"); // What will log and what will return?
+getIndex("Travis"); // What will log and what will return?
 ```
 
-* Be prepared to explain what is happening and why.  If you have time, replace `let` with `var` in **Example #2** and note what happens!
+* Be prepared to explain what is happening and why.  
+* If you have time, replace `let` with `var` in **Example #2** and note what happens!
 </section>
 
 <section class="checks-for-understanding">
@@ -369,3 +369,9 @@ Using your journal, take a few minutes to answer the following:
 - Why is it important to understand scope?
 - What is the scope chain? What does it do?
 </section>
+
+### Additional Resources
+
+* [Var, Let and Const - What's the Difference?](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/)
+* [How JavaScript variable scoping is just like multiple levels of government](https://blog.codeanalogies.com/2017/11/22/how-javascript-variable-scoping-is-just-like-multiple-levels-of-government/)
+
