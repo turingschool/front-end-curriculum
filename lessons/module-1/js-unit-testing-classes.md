@@ -13,7 +13,8 @@ tags: javascript, testing, tdd, mocha, chai
 
 In your journal or notebook, reflect on the following:
 
-* What is TDD? What are the benefits of TDD?
+* What is TDD? What are the benefits of TDD?  
+* What is unit testing?  
 * What did you learn about testing in general from your JS Fun In The Library solo project?  Best practices? Tips/tricks?
 </section>
 
