@@ -31,15 +31,15 @@ The image above is *not* a comp. We expect you to design your own dashboard layo
 ## Timeline
 Dates and deadlines to be aware of:
 
-* **Monday, December 7th** - Submit the following to your PM BEFORE beginning to write code via Slack:
+* **Monday, March 29thth** - Submit the following to your PM BEFORE beginning to write code via Slack:
 1. DTR (be specific about learning goals, schedules, and communication expectations ) 
 1. Project board
 1. Planned out class structure
 1. Wireframes
 1. 3 design inspirations (Please include links)
 
-* **Thursday, December 17th** - Project due at 9PM.
-* **Friday, December 18th** - Project evals.
+* **Wednesday, April 7th** - Project due at 9PM.
+* **Thursday, April 8th** - Project evals.
 
 Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6)
 
@@ -84,7 +84,7 @@ For this dataset, when "today" is referenced in iterations, it is the last date 
 <section class="note">
 ### 3rd Party Libraries
 
-Please get instructor approval first before using additional 3rd-party libraries.  You may use [Moment.js](https://www.npmjs.com/package/moment) to help with manipulating / formatting dates.
+Please get instructor approval first before using additional 3rd-party libraries.  You may use [Day.js](https://www.npmjs.com/package/dayjs) to help with manipulating / formatting dates.  You may also use [Chart.js](https://www.npmjs.com/package/chart.js) in order to help with displaying some data.  (Note: Learning a new technology does take extra time.  Plan ahead and maybe do a research spike over the first weekend, before deciding to use it.)
 </section>
 
 ---
@@ -256,8 +256,8 @@ if (typeof module !== 'undefined') {
 
 ### Fundamental JavaScript & Style / OOP
 * 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring. Application is expertly divided into logical components each with a clean, single responsibility.
-* 3: Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. Application is effectively broken into logical components, but violate the principle of SRP.
-* 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. Divisions of logic into classes are inconsistent or unclear.
+* 3: Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. There are multiple scenarios of destructuring to help enhance readability.  Application is effectively broken into logical components, but violate the principle of SRP.
+* 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. There is no usage of destructuring.  Divisions of logic into classes are inconsistent or unclear.
 * 1: Application generates syntax error or crashes during execution. Application logic shows poor decomposition with too much logic mashed together.
 
 ### Test-Driven Development
