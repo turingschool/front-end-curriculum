@@ -9,7 +9,7 @@ tags: javascript, testing, tdd, mocha, chai
 * Understand how to import/export files specifically for testing
 
 <section class="call-to-action">
-### Wrap Up
+### Warm Up
 
 In your journal or notebook, reflect on the following:
 
