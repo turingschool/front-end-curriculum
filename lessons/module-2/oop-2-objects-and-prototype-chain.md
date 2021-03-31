@@ -100,7 +100,7 @@ var instructor = new Instructor('Travis', 'OOP');
 In order to add methods to our template, we had to manipulate the `prototype` directly.  This is exactly what our classes do under the hood.
 </section>
 
-<section class="note">
+<section class="checks-for-understanding">
 ### Review: What is a prototype?
 
 1. A property on a function that points to an object.
@@ -148,13 +148,18 @@ It is this reference, or linking, between objects that makes up the **prototype 
 For example, using our `instructor` variable, let's use the `valueOf` prototype method.
 
 ```js
+// Example #1
 let instructor = new Instructor('Travis', 'OOP');
 
 instructor.valueOf()
 // {instructor: "Travis", module: 2}
+
+// Example #2
+let message = 'The prototype chain is super cool!';
+message.valueOf();
 ```
 
-Strange...this isn't a method we created on our `Instructor` class.  [valueOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf){:target='blank'} is actually an object prototype method!  What's happening?
+Strange...this isn't a method we created on our `Instructor` class.  [valueOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf){:target='blank'} is actually an object prototype method!  Why do we have access to this method on a string as well? What is happening?!
 
 When the interpreter is attempting to access a property on an object, it will start by looking directly on that object. If that property is not found, the objects internal `[[prototype]]` property will point to the object to examine next. The interpreter will continue to travese the prototype chain to seek a resolution for the property... until the end of the prototype chain is reached (resulting in `null`). 
 
