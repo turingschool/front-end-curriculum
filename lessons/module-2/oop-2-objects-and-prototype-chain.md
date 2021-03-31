@@ -157,6 +157,7 @@ instructor.valueOf()
 // Example #2
 let message = 'The prototype chain is super cool!';
 message.valueOf();
+// "The prototype chain is super cool!"
 ```
 
 Strange...this isn't a method we created on our `Instructor` class.  [valueOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf){:target='blank'} is actually an object prototype method!  Why do we have access to this method on a string as well? What is happening?!
@@ -181,7 +182,7 @@ With your partner, save all the data types that you can think of to variables. U
 ### Checks for Understanding
 
 * Describe the prototype chain. Why is the chain in place? Why would the interpreter traverse this chain?
-* What is the difference between `prototype` and `[[prototype]]`?
+* What is the difference between `prototype` and `__proto__`?
 </section>
 
 ## Additional Resources
