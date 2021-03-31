@@ -30,7 +30,8 @@ Where have we heard the term `prototype` before.  What do we know about this so 
 <section class="answer">
 ### Review 
 
-We know that a **prototype** is a model of something and how it should look or behave, and we know the we have access to the prototype methods (forEach, filter, etc).
+* We know that a **prototype** is a model of something and how it should look or behave.
+* We know that we have access to prototype methods (forEach, filter, etc) on arrays.
 
 Prototypes are the mechanism by which JavaScript objects inherit features from one another. Having access to this chain of inheritance (via prototype objects) is a powerful way to define a behavior in one place and then use it in many others.
 </section>
@@ -40,7 +41,7 @@ Prototypes are the mechanism by which JavaScript objects inherit features from o
 
 In JavaScript, a prototype is a special object that is assigned to all functions, including but not limited to functions that are used to construct objects. 
 
-Take a look at an example below:
+Take a look at the example below:
 
 ```js
 class Instructor {
@@ -65,13 +66,13 @@ class Instructor {
 let instructor = new Instructor('Travis', 'OOP');
 ```
 
-* After declaring this class, type `Instructor.` into your console. You should see the browser attempting to autocomplete this with properties that are available on this function.  Look at the `prototype` property and take note of its value.
+* After declaring this class, type `Instructor.` into your console.  (*Note the uppercase `I`*) You should see the browser attempting to autocomplete this with properties that are available on this function.  Look at the `prototype` property and take note of its value.
 </section>
 
 <section class="answer">
 ### Diving Deeper  
 
-By accessing the `prototype` of our `Instructor` class - we can see that it points to an object that it has two methods: `constructor`, `teachLesson`, and `gradeProject`.  Our `prototype` points back to the class of `Instructor`. 
+By accessing the `prototype` of our `Instructor` class - we can see that it points to an object that it has two methods: `constructor`, `teachLesson`, and `gradeProject`.  Our `prototype` is a property on the function that points back to our `Instructor` class. 
 
 Remember classes are actually functions. (also known as **constructor functions**).  Before we had the syntax for classes, developers used constructor functions to create multiple objects from a template.  Here is the same code from above written in ES5 syntax:
 
@@ -96,7 +97,7 @@ Instructor.prototype.gradeProjects = function(project) {
 var instructor = new Instructor('Travis', 'OOP');
 ```
 
-In order to add methods to our template, we had to manipulate the `prototype` directly.  This is exactly what our classes do under the hook.
+In order to add methods to our template, we had to manipulate the `prototype` directly.  This is exactly what our classes do under the hood.
 </section>
 
 <section class="note">
@@ -110,7 +111,7 @@ In order to add methods to our template, we had to manipulate the `prototype` di
 <section class="call-to-action">
 ### Another Look (In Breakout Groups)
 
-From our prior example, take a look at the `instructor` and take note of *all* the properties.   
+From our prior example, take a look at the `instructor` and take note of *all* the properties. (*Note the lowercase `i`*)
 
 ![instance in the console](/assets/images/lessons/oop/instance.png)
 
@@ -119,15 +120,22 @@ It is likely that you have seen this (somewhat overwhelming) list of properties 
 * After doing the above, declare an array literal named `food` in your console.  (list the last three things you ate)
 * What happens when you type `food.`?  
 * What is the browser attempting to autocomplete?
-* What familiar properties are showing up? 
+* What familiar properties are showing up?  
+* Is the `prototype` property still there or is it something different?
 </section>
 
 ## __proto__
 
-You'll notice that when we checked the `instructor` instance and array literal in the console, there was no property of `prototype` listed. This is because neither of these are functions, so the special object with the name/property of `prototype` is not automatically assigned. However... _everything_ (including the `Instructor` class) that we have checked in the console thus far has had the property `__proto__`.
+You'll notice that when we checked the `instructor` instance and array literal in the console, there was no property of `prototype` listed. This is because neither of these are functions, so the property of `prototype` is not automatically assigned. 
 
-`__proto__`, or "dunder-proto" (double-underscore proto), is a property that exposes the internal `[[prototype]]` property. 
+<section class="answer">
+### What is the __proto__?
+
+_Everything_ (including the `Instructor` class) that we have checked in the console thus far has had the property `__proto__`.
+
+* `__proto__`, or "dunder-proto" (double-underscore proto), is a property that exposes the internal `[[prototype]]` property. 
 * This `[[prototype]]`property acts a as a reference that points to a function's prototype object. 
+</section>
 
 ![dunder proto at work](/assets/images/lessons/oop/prototype-chain.png)
 
@@ -150,18 +158,10 @@ Strange...this isn't a method we created on our `Instructor` class.  [valueOf](h
 
 When the interpreter is attempting to access a property on an object, it will start by looking directly on that object. If that property is not found, the objects internal `[[prototype]]` property will point to the object to examine next. The interpreter will continue to travese the prototype chain to seek a resolution for the property... until the end of the prototype chain is reached (resulting in `null`). 
 
-It is this linking between objects that makes it so that objects are not limited to using the methods that are formally defined directly on that object - they can also ask objects further up the chain for help.
-
-The most common way to link two objects together (and extend the prototype chain that is built-in to the language) is to use the `new` keyword with the invocation of a function. When this occurs, the new object instance that is created will automatically set the instance's `[[prototype]]` property to point to that function's `prototype`. 
+*It is this linking between objects that makes it so that objects are not limited to using the methods that are formally defined directly on that object - they can also ask objects further up the chain for help.* 
 
 ![the prototype chain simplified](/assets/images/lessons/oop/chain.png)
 </section>
-
-#### Turn and Code
-
-With a partner, save all the data types that you can think of to variables. Using the console, check the `[[prototype]]` link via the dunder-proto.
-
-- What similiarties do you notice across data types? What differences?
 
 <section class="call-to-action">
 ### In Breakout Groups
