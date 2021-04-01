@@ -72,7 +72,7 @@ let instructor = new Instructor('Travis', 'OOP');
 <section class="answer">
 ### Diving Deeper  
 
-By accessing the `prototype` of our `Instructor` class - we can see that it points to an object that it has two methods: `constructor`, `teachLesson`, and `gradeProject`.  Our `prototype` is a property on the function that points back to our `Instructor` class. 
+By accessing the `prototype` of our `Instructor` class - we can see that it points to an object that has three methods: `constructor`, `teachLesson`, and `gradeProject`.  Our `prototype` is a property on the function that points back to our `Instructor` class. 
 
 Remember classes are actually functions. (also known as **constructor functions**).  Before we had the syntax for classes, developers used constructor functions to create multiple objects from a template.  Here is the same code from above written in ES5 syntax:
 
