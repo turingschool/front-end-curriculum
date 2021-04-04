@@ -4,7 +4,7 @@ title: What's For Dinner?
 
 ## Overview
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a dish and put together meals. 
+What's for dinner? The ultimate question. You will be building an app that helps users choose a dish and put together meals.
 
 This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
 
@@ -29,12 +29,11 @@ This Solo Challenge gives students and instructors the opportunity to get a puls
 - Read this README thoroughly, then begin working!
 
 ## Workflow
-Make sure you're utilizing git best practices (branches) and commiting frequently. 
+Make sure you're utilizing git best practices (branches) and commiting frequently.
 
 ### Day One Deliverables
-- Read the spec sheet closely. 
-- Send the link to your forked repo to your Project Manager
-- Fill out [this planning form](https://docs.google.com/forms/d/e/1FAIpQLSdMyfyHn83EMUqzFtn1M0qE5iac350_Oh3-vNNnexSvgc8l5g/viewform)
+- Read the spec sheet closely.
+- Fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdMyfyHn83EMUqzFtn1M0qE5iac350_Oh3-vNNnexSvgc8l5g/viewform). 
 
 ### Iteration 0: Build Out Comp
 - Images are below
@@ -54,7 +53,7 @@ Make sure you're utilizing git best practices (branches) and commiting frequentl
 
 ### Choose your own Adventure
 
-In the interest of giving you opportunities to individualize the skills you build, this project's main goal is to provide various different paths you can take. Along these different paths you will encounter different problems and solve them in different ways. As you make choices about which features to add, you should consider which features align with your strengths, which features would challenge you to grow, and which features you'd find to be useful in this application. Choose one or more of the following features to add. Some of them build on others, so be sure to read them all before choosing. 
+In the interest of giving you opportunities to individualize the skills you build, this project's main goal is to provide various different paths you can take. Along these different paths you will encounter different problems and solve them in different ways. As you make choices about which features to add, you should consider which features align with your strengths, which features would challenge you to grow, and which features you'd find to be useful in this application. Choose one or more of the following features to add. Some of them build on others, so be sure to read them all before choosing.
 
 When you choose a feature, you **must** complete all bullet points!
 
@@ -111,7 +110,7 @@ _Note: You can disable these buttons, hide them, or display a message to the use
 <hr/>
 
 #### User can delete a recipe
-- Add the ability to delete a recipe (ie: when a recipe shows up, show a button that says "I don't like this recipe" (or something similar), and remove it from the list so that it will not show up any more. Make sure to alert the user in some way that the recipe has been removed. 
+- Add the ability to delete a recipe (ie: when a recipe shows up, show a button that says "I don't like this recipe" (or something similar), and remove it from the list so that it will not show up any more. Make sure to alert the user in some way that the recipe has been removed.
 
 
 <hr/>
@@ -140,10 +139,10 @@ Remember your user experience and animate these things in gradually. Timing is e
 
 <hr/>
 
-#### Local Storage 
+#### Local Storage
 - Only do this if you've added the "Favorite a dish" functionality.
 - Do some research to utilize `localStorage`, so that the user's favorite recipes will persist, even if they reload the page.
-- `localStorage` could also be utilized for the "User can delete a recipe" CYOA to make sure that the recipes a user has deleted stay gone after page reload. 
+- `localStorage` could also be utilized for the "User can delete a recipe" CYOA to make sure that the recipes a user has deleted stay gone after page reload.
 <hr/>
 
 #### Design your own feature
@@ -199,4 +198,3 @@ Key Lime Pie
 Tart Tatin  
 Croissants  
 Eclairs  
-
