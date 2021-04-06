@@ -118,7 +118,7 @@ this argument the path. In our example, the path is everything that comes after
 #### the callback function
 The second argument is a callback function, and this is where the meat of our
 server lives. Whenever our server hears a `GET` request to the `/welcome` path,
-it will execute this callback function. The function takes two paramenters;
+it will execute this callback function. The function takes two parameters;
 `request`, which will contain information about the request that was sent from the
 client, and `response`, which will give our server the ability to send
 information back to the client.
