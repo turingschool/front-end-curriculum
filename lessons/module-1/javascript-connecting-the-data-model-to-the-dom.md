@@ -234,3 +234,39 @@ professional JavaScript programming. You'll see it again later at Turing. As you
 work on your current project, remember to ask yourself *What is my Data Model?*,
 and *How do my user interactions affect my Data Model?*. If you can get the hang
 of this concept, you'll be set up for future success.
+
+
+## Let's take a walk down memory lane...
+
+Now that we have more context for how to separate the data model and the DOM, let's look back at your paired project!  
+
+<div class="call-to-action">
+## Paired Project Refactoring
+
+Clone down [this repo](https://github.com/kaylaewood/romcom)! 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sm
