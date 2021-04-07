@@ -226,13 +226,10 @@ id in the dataset, and update it's property to indicate it is now rotten. After 
 Data Model, we re-render the model to see the change.
 </section>
 
-
-## Enough with the fruit! Let's take a walk down memory lane...
+<div class="call-to-action">
+## Enough with the fruit! Let's look at a REAL project!
 
 Now that we have more context for how to separate the data model and the DOM, let's look back at your paired project!  
-
-<div class="call-to-action">
-## Paired Project Refactoring
 
 Clone down [this repo](https://github.com/kaylaewood/romcom)!
 </div>
