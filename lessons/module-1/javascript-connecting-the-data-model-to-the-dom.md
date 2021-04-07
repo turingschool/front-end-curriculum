@@ -243,8 +243,13 @@ Now that we have more context for how to separate the data model and the DOM, le
 <div class="call-to-action">
 ## Paired Project Refactoring
 
-Clone down [this repo](https://github.com/kaylaewood/romcom)! 
+Clone down [this repo](https://github.com/kaylaewood/romcom)!
 </div>
+
+## Guiding Questions:
+- What represents the data model?
+- Am I updating the data model?
+- Am I updating the DOM using the data model?
 
 
 
