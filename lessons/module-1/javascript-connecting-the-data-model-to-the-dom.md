@@ -227,16 +227,7 @@ Data Model, we re-render the model to see the change.
 </section>
 
 
-## In Summary
-
-This pattern of using a Data Model as a source of truth is extremely common in
-professional JavaScript programming. You'll see it again later at Turing. As you
-work on your current project, remember to ask yourself *What is my Data Model?*,
-and *How do my user interactions affect my Data Model?*. If you can get the hang
-of this concept, you'll be set up for future success.
-
-
-## Let's take a walk down memory lane...
+## Enough with the fruit! Let's take a walk down memory lane...
 
 Now that we have more context for how to separate the data model and the DOM, let's look back at your paired project!  
 
@@ -250,28 +241,3 @@ Clone down [this repo](https://github.com/kaylaewood/romcom)!
 - What represents the data model?
 - Am I updating the data model?
 - Am I updating the DOM using the data model?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-sm
