@@ -22,10 +22,10 @@ In this project, you will be building on top of somebody else's pre-existing Wha
 ## Timeline
 Dates and deadlines to be aware of:
 
-* **Wednesday, January 6th** - Make sure to have project board ready with tickets already completed and plans to complete for sprint over the weekend. (*DTR should also be complete*)
-* **Tuesday, January 12th** - Project board up to date with tasks completed and plans for finishing final sprint. (*May review a couple PRs as well for code reviews*)
-* **Wednesday, January 13th** - Project due at 9PM.
-* **Thursday, January 14th** - Project evals.
+* **Wednesday, April 14th** - Make sure to have project board ready with tickets already completed and plans to complete for sprint over the weekend. (*DTR should also be complete*)
+* **Monday, April 19th** - Project board up to date with tasks completed and plans for finishing final sprint. (*May review a couple PRs as well for code reviews*)
+* **Tuesday, April 20th** - Project due at 9PM.
+* **Wednesday, April 21st** - Project evals.
 
 Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
 
@@ -45,7 +45,7 @@ Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6)
     - then add a new remote `git remote add origin [your new repo url]`
 9. To run app:
     - Run `npm i`
-    - Run `npm start`
+    - Run `npm start` and visit `localhost:8080`
 10. To run tests:
     - Run `npm test`
 
