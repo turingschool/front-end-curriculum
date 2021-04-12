@@ -211,6 +211,17 @@ What if we want to add information to a database?
 
 If we want to use fetch to make any other kind of request, we'll have to add an optional init object into the function call.
 
+<section class="call-to-action">
+### In Your Notebook
+
+Reflecting on the [How the Web Works](https://frontend.turing.io/lessons/module-2/how-the-web-works.html){:target='blank'}, what makes up the request?  What additional information might we need to send in our `fetch` request?
+</section>
+
+<section class="answer">
+### Implementing a POST Request  
+
+Given that the default behavior of `fetch` is to GET data, we need to utilize the `options` object and update the method to be a POST.
+
 ```js
 fetch(url, {
   method:"POST",
@@ -242,21 +253,14 @@ fetch(url, {
 Remember, **fetch still returns a promise**. We've got to resolve it, regardless of what request type we're making.
 
 Often times, if a `POST` is successful, you'll see a `201 created` status message in the response
+</section>
 
 <section class="call-to-action">
 #### Practice
 
 Head to <a href="https://github.com/turingschool-examples/fe2-fetch-practice" target="\__blank">this repo</a> for some practice with GETting and POSTing.
 
-Working with a partner do the following:
-- Get the server up and running (just follow all the set up instructions in the
-  repo)
-- Write a fetch request to GET all the users
-- Write a fetch request to POST a new user
-- Rerun your previous GET fetch request to verify you added the user
-- Write a fetch request to GET all the animals
-- Write a fetch request to POST a new animal
-- Rerun your previous GET fetch request to verify you added the animal
+Working with a partner, follow the setup instructions to get the server running.  Then follow the steps in order within the `client/index.js` file and test it out by opening the `client/index.html` file.
 </section>
 
 ### Nice to Know: Query Strings / URL Structure
@@ -342,7 +346,7 @@ console.log("Wait for it...");
 * [The Evolution of Asyncronous JavaScript](https://blog.risingstack.com/asynchronous-javascript/)
 * [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-* [Postman](https://www.getpostman.com/) -- good tool for testing out APIs
+* [Postman](https://www.postman.com/downloads/) -- good tool for testing out APIs
 * [GETs, POSTs and DELETEs, man! Intro to Postman](https://www.youtube.com/watch?v=MRw07FQRscI) - Instructor video for getting started with Postman
 
 
