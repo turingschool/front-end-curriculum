@@ -240,10 +240,10 @@ Here's a typical POST request structure:
 ```js
 fetch(url, {
   method: 'POST',
+  body: JSON.stringify(someDataToSend), // remember how HTTP can only send and receive strings, just like localStorage?
   headers: {
   	'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(someDataToSend), // remember how HTTP can only send and receive strings, just like localStorage?
+  }
 })
   .then(response => response.json())
   .then(json => /*do something with json*/)
