@@ -98,6 +98,8 @@ Make sure that you link this file in your `index.html` using a `script` tag, abo
 ![Activity Complete Desktop](./assets/intention-timer/complete-activity-desktop.png)
 ![Full Functionality Desktop](./assets/intention-timer/full-functionality-desktop.png)
 
+* NOTE: There is a typo in the image above. Where it says `Walk`, it should really say `Exercise`.
+
 ## Iteration 5 - Persisting past activities
 
 **STOP!** Did you refactor Iteration 4? Clean up your code before moving on!
