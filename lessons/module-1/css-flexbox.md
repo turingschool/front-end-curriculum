@@ -170,7 +170,7 @@ Just like we can control how our content sits on the main axis with `justify-con
 These properties will get you far enough for now, but they're just scratching the surface at what flex can do! If you want more, check out this [extensive guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) from CSS tricks.
 </section>
 
-## Additional Practice
+## Recreating a Comp
 
 <section class="call-to-action">
 ### Instructions
