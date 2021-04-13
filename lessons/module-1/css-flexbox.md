@@ -27,11 +27,11 @@ Read through [Intro to Layout Pre-Work document](./intro-to-layout-prework.html)
 - With a partner, fork [this codepen](https://codepen.io/hannahhch/pen/zYqdVyp)
 - Explore the CSS that's already present. Without googling, what do you think `:nth-child` means?
 - In your CSS, add the property of "display" with a value of "flex" to the `.wrapper` selector. What happened? Which elements visually changed?
-</section> 
+</section>
 
 ## What is Flexbox?
 
-Flexbox is a part of CSS that provides an efficient way to lay out, align and distribute space among items in a container. Before flexbox became popular, it was a real challenge to center elements. We would use something called `float`, which could behave unpredictably at times. 
+Flexbox is a part of CSS that provides an efficient way to lay out, align and distribute space among items in a container. Before flexbox became popular, it was a real challenge to center elements. We would use something called `float`, which could behave unpredictably at times.
 
 
 ## Parents and Children
@@ -53,7 +53,7 @@ Let's look an some HTML to make sure we are all on the same page. Which element 
 In the code above, the `section` is the parent element, the `<h1>` and the 3 `article`s are all children elements because they are directly nested inside of that `section`. Proper indentation is really helpful here!
 </section>
 
-What about in this block of HTML? 
+What about in this block of HTML?
 ```html
 <section>
   <article>
@@ -71,7 +71,7 @@ What about in this block of HTML?
 ### The Answer
 In the code above, we now have these `h2` elements nested inside of each `article`. It's important to know that the `h2` is **not** an immediate child of the `section`. It is technically a grandchild, and a child of `article`. The idea of **immediate child** is really important to understand as we work with Flexbox.
 
-When we use Flexbox, we will make the parent elements `flex containers` and the children elements `flex items`. 
+When we use Flexbox, we will make the parent elements `flex containers` and the children elements `flex items`.
 </section>
 
 <img class="small" src="./assets/images/flexbox/parent-container.svg" alt="graphic of parent/container">
@@ -136,7 +136,7 @@ _The above Codepen is an example from CSS Tricks_
 <div class="call-to-action">
 ### Partner Practice
 - In your previous "Flexbox Playground" codepen, make sure the `.wrapper` has the following styles applied:
-  - `flex-direction: column` 
+  - `flex-direction: column`
   - `justify-content: center`
 - What happens? Why do you think that is?
 </div>
@@ -162,7 +162,7 @@ Just like we can control how our content sits on the main axis with `justify-con
 ### Partner Practice
 - In your previous "Flexbox Playground" codepen, make sure the `.wrapper` has the following styles applied:
   - `align-items: center`
-- Play around with and without `flex-direction: column` 
+- Play around with and without `flex-direction: column`
 </section>
 
 <section class="note">
@@ -176,16 +176,13 @@ These properties will get you far enough for now, but they're just scratching th
 <section class="call-to-action">
 ### Instructions
 
-1. Fork [this repo](https://github.com/turingschool-examples/flex-comp-boilerplate) 
-2. Examine the HTML, taking note of parent and child elements
-3. Re-create the following comp using flexbox - work on making small, atomic commits! Feel free to take creative liberty on color schemes, fonts, placeholder images/logos, etc.
-
-*NOTE: The HTML has been provided for you, but you are free to make changes if needed (ie: adding divs, classnames, etc.)*
+1. Fork [this codepen](https://codepen.io/kaylaewood/pen/wvgmOmV)
+3. Re-create the following comp. Start by building out the HTML. Then, work slowly through the CSS.
 </section>
 
 
 #### Pricing Table
-<img class="medium-large" src="./assets/images/flexbox/pricing.png">
+<img class="medium-large" src="./assets/images/flexbox/comp.png">
 
 ## Additional Resources
 
