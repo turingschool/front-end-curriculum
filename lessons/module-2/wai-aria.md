@@ -170,7 +170,7 @@ States can also be implicit, imagine a checkbox element in html. If you toggle t
 
 <section class="call-to-action">
 ## In Groups
-- Checkout this [Menu-Example](https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html) with VoiceOver to see how screen readers interact with `aria-expanded1`
+- Checkout this [Menu-Example](https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html) with VoiceOver to see how screen readers interact with `aria-expanded`
 - Take turns explaining what states are.
 - What would be another example of state that your app might need?
 </section>
@@ -225,7 +225,7 @@ You can then use JavaScript to keep this information up to date - for example, o
 
 <section class="call-to-action">
 ## In Groups
-- While using VoiceOver, compare [this Codepen](https://codepen.io/damwhit/pen/WZqyEe) and compare it with [this Code](https://codepen.io/damwhit/pen/XeLVbw). What changes to do you notice?
+- While using VoiceOver, compare [this Codepen](https://codepen.io/damwhit/pen/WZqyEe) and compare it with [this Codepen](https://codepen.io/damwhit/pen/XeLVbw). What changes to do you notice?
 - Take turns explaining what a property is
 - Come up with a good analogy for property
 - How are properties different from state?
@@ -237,80 +237,75 @@ You can then use JavaScript to keep this information up to date - for example, o
 * The time to use them is if the answer to the following question is yes:
   * Will sighted users see content that people with visual disabilities cannot?
 
-__Below are some low hanging fruit that you should always incorporate in lessons__
+__Below are some things that you should ALWAYS incorporate in your web applications__
 
-<section class="answer">
-### Low hanging fruit
 
-### Alt Attributes for Yo Images!
+### Alt Attributes for Your Images!
 
-* Hugely important
+* Hugely important (for both accessibility and SEO!)
 * Low hanging fruit, easy to use on images.
 * Be verbose.
 * Just do it.
 
 ```html
-bad
+meh...
 <img src="mountain.jpg" alt="mountain">
 
-good
+yes!
 <img src="mountain.jpg" alt="The cascade mountains at sunset in January">
 ```
 
-*Below you will find a REAL example of how alt text helps to paint a picture of what a missing image depicts:*
+- Wait, what if there is _already_ descriptive text below my image?? 
+  - This is one of the only times were you DONT need to supply alt text. Having both would be repetive and redundant for screen reader users. To still be "valid", include an empty alt tag like this `<h3>A round, sleepy cat napping on a bed.</h3><img src="src/cat-pic.jpg" alt="">`
+- What about background images??
+  - Background images are purely for design, and should not be used to display important web content. Because of this, background images do not need alt text. 
 
 ![Great example of alt tag](/assets/images/alt-example.png)
 
-### Title Attributes for Yo Links that have no text!
+### ARIA Labels for Your Links that have no text!
 
-* Low hanging fruit on anchor tags.
 * Not necessary for all links, but make sure to use them for your icon anchors – you know, things like your facebook, twitter, etc icons:
 
 ```html
-<a class="facebook-icon" title="Facebook"><a/>
+<a class="facebook-icon" aria-label="Link to Facebook"><a/>
 ```
 
-### Lang attribute on Yo HTML!
+### Lang attribute on Your HTML!
 
-* Low hanging fruit for HTML
-* As far as non-english speaking screen readers are concerned, when they land on an english-speaking web page without lang attribute, it will be spoken with the screen reader language - making it impossible to understand - unless the screen reader user disables language switching in the screen reader.
-* Just do it
+* Is often populated by default if using Emment or other HTML boilerplates!
+* As far as non-english speaking screen readers are concerned, when they land on an english-speaking web page without the `lang` attribute, it will be spoken with the screen reader language - making it impossible to understand - unless the screen reader user disables language switching in the screen reader.
 
 ```html
 <html lang="en">
 </html>
 ```
 
--------------------------------------------------
-
-__Label Input Elements that do not have a label element associated with them__
-
-Note: you should _really_ be providing labels with all of your input fields, like this:
+* Fun Fact - You can change this if you have a snippet of text in another language!
 
 ```html
-<label for="first-name">First name</label>
-<input id="first-name" type="text" placeholder="Hannah">
+<h1 lang="es">¿Donde está la biblioteca?</h1>
+```
 
+### Label Input Elements that do not have a label element associated with them
+
+Note: you should _really_ be providing labels with all of your input fields, like this!
+
+```html
+<label for="firstName">First name</label>
+<input id="firstName" type="text" placeholder="Clementine">
 ```
 
 You can use the `aria-label` below to define a label, but remember to use semantic, native elements whenever possible.
 
-* `aria-label`: property that defines a short title for an element
-
 ```html
-<input type="text" aria-label="First name" placeholder="Hannah">
+<input type="text" aria-label="First name" placeholder="Clementine">
 ```
 
 </section>
 
 
--------------------------------------------------
 
-## Your Challenge
-
-Now that you have the basics of accessibility under your belt, we will be spending the remainder of class making our current applications more accessible. Find your project partner/s and start implementing!
-
-## Perfect is the enemy of good
+## One Last Note
 
 For many people, the fear of not getting EVERYTHING right when it comes to accessibility causes them to not do accessibility at all. Don't be that person.
 
