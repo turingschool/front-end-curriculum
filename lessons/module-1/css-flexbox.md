@@ -181,7 +181,7 @@ These properties will get you far enough for now, but they're just scratching th
 </section>
 
 
-#### Pricing Table
+#### The Comp
 <img class="medium-large" src="./assets/images/flexbox/comp.png">
 
 ## Additional Resources
