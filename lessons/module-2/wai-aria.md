@@ -7,6 +7,7 @@ tags: html, ARIA, accessibility
 ## Learning Goals
 
 * Review ways we already make websites accessible
+* Be able to use the three different types of ARIA attributes
 * Determine when ARIA is and is not needed to make websites more accessible
 
 ## Vocab
@@ -45,14 +46,13 @@ __Side Note__: Documentation is your friend when developing a website. Here are 
 
 
 ### CSS/Styling
-## Browser Focus Rings
+#### Browser Focus Rings
 
 DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
 
 This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options. And [this article](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) also has some alternatives to use to get rid of the focus ring while still keeping things accessible.
 
 A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles.
-</section>
 
 ## WAI-ARIA
 
@@ -80,9 +80,9 @@ If you can use native HTML elements and attributes to communicate the proper sem
 
 **Many "accessibility flags" come from developers _overusing_ ARIA.**
 
-### Aria Roles, States, and Properties
+## Aria Roles, States, and Properties
 
-#### Roles
+### Roles
 
 Roles define what an element is - what function it serves on the page. They give screen readers more information about how to interact with the element (`What am I?`)
 
@@ -121,7 +121,7 @@ A form element has a role of 'form' by default. We can override that role using 
 - What is the difference between implicit and explicit roles?
 </section>
 
-### States
+## States
 
 States describe how you are interacting with an element (What am I doing right now?)
 
@@ -178,7 +178,7 @@ Here is a good [menu example][Menu-Example] that you can use with voiceover to s
 - What would be another example of state that your app might need?
 </section>
 
-### Properties
+## Properties
 
 Properties give an element special characteristics that you can relate to other documents or elements.
 
