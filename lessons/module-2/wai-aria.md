@@ -7,9 +7,8 @@ tags: html, ARIA, accessibility
 ## Learning Goals
 
 * Speak to why website accessibility is important
-* Implement Semantic HTML to make websites more accessible
+* Review ways we already make websites accessible
 * Implement ARIA to make websites more accessible
-* Learn basic VoiceOver screen reader commands to test accessibility
 
 ## Vocab
 
@@ -20,7 +19,9 @@ tags: html, ARIA, accessibility
 - `Property` Additional information about an element or other elements its related to
 
 <section class="call-to-action">
-## Review from "Intro to Accessibility"
+## Warm Up
+
+Let's review from last week's [Intro to Accessibility Lesson](https://frontend.turing.io/lessons/module-2/intro-to-accessibility.html)
 
 In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1Cx_0TzXvo2HYrfW4LSDTdRevqPxI7ZfUaoW38e9j-io/viewer?f=0)
 
