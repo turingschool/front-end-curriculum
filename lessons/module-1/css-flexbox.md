@@ -33,7 +33,6 @@ Read through [Intro to Layout Pre-Work document](./intro-to-layout-prework.html)
 
 Flexbox is a part of CSS that provides an efficient way to lay out, align and distribute space among items in a container. Before flexbox became popular, it was a real challenge to center elements. We would use something called `float`, which could behave unpredictably at times.
 
-
 ## Parents and Children
 
 As we start working with flexbox, a very important distinction should be pointed out. We need to be careful about the CSS rules we apply to a parent element vs. those to a child element. A **parent** element wraps other elements, a **child** is nested inside the parent.
@@ -179,7 +178,6 @@ These properties will get you far enough for now, but they're just scratching th
 1. Fork [this codepen](https://codepen.io/kaylaewood/pen/wvgmOmV)
 3. Re-create the following comp. Start by building out the HTML. Then, work slowly through the CSS.
 </section>
-
 
 #### The Comp
 <img class="medium-large" src="./assets/images/flexbox/comp.png">
