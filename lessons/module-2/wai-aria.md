@@ -6,9 +6,8 @@ tags: html, ARIA, accessibility
 
 ## Learning Goals
 
-* Speak to why website accessibility is important
 * Review ways we already make websites accessible
-* Implement ARIA to make websites more accessible
+* Determine when ARIA is and is not needed to make websites more accessible
 
 ## Vocab
 
@@ -29,21 +28,7 @@ In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1C
 - What are some ways we can test how accessible an application is?
 </section>
 
-# Accessibility
-
-Accessibility in Web development means enabling as many people as possible to use Web sites and applications, even when those people's abilities are limited in some way.
-The Web is fundamentally designed to work for __all people__, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
-
-__Good News!__ _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
-
-Most production websites are not very accessible. This is a great way to set yourself apart from other candidates in the job hunt and add value to teams early.
-
-
-## Ways to Make Your Websites More Accessible
-
-This lesson is largely focused on writing code in a way that is accessible for people with visual disabilities.
-
-In terms of statistics, the World Health Organization estimates that "285 million people are estimated to be visually impaired worldwide: 39 million are blind and 246 have low vision."
+## Accessible Defaults
 
 ### Semantic HTML
 
@@ -52,9 +37,7 @@ There are two different elements that are semantically neutral: Those are `span`
 Semantic html is very important for 3 reasons:
 1. developer empathy - It makes code much easier to read and debug
 2. accessibility - It allows screen readers to move through the web page seamlessly
-3. seo - it will make your webpage more discoverable
-
-Let's compare a <a href="https://repl.it/@Khalid_Williams/Semantic-Page" target="\__blank">semantic</a> and <a href="https://repl.it/@Khalid_Williams/All-Div-Everything" target="\__blank"> non-semantic</a> version of the same simple page.
+3. SEO (search engine optimization) - it will make your webpage more discoverable via Google
 
 __Side Note__: Documentation is your friend when developing a website. Here are some super useful docs for better knowing what element to use for a given scenario.
 
@@ -62,9 +45,7 @@ __Side Note__: Documentation is your friend when developing a website. Here are 
 
 
 ### CSS/Styling
-<section class="answer">
-## On removing focus rings
-***PLEASE NOTE***
+## Browser Focus Rings
 
 DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
 
@@ -73,9 +54,9 @@ This blog post on writing accessible css has a [section](https://medium.com/@mat
 A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles.
 </section>
 
-### WAI-ARIA
+## WAI-ARIA
 
-WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories:
+[WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories:
 
 * __Roles__
 * __States__
@@ -89,13 +70,15 @@ An important point about WAI-ARIA attributes is that they don't affect the appea
 - `alt`
 - `lang`
 
-<!--
-![Aria Tree](/assets/images/aria.jpg)
- -->
+
+<!-- ![Aria Tree](/assets/images/aria.jpg) -->
+
 #### Rules of ARIA Use
 The core rules to keep in mind when using ARIA are:
 
-If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time, and will annoy your screen reader users. Many "accessibility flags" come from developers _overusing_ ARIA.
+If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time, and will annoy your screen reader users. 
+
+**Many "accessibility flags" come from developers _overusing_ ARIA.**
 
 ### Aria Roles, States, and Properties
 
