@@ -286,7 +286,7 @@ yes!
 <h1 lang="es">¿Donde está la biblioteca?</h1>
 ```
 
-### Label Input Elements that do not have a label element associated with them
+### Label Input Elements
 
 Note: you should _really_ be providing labels with all of your input fields, like this!
 
@@ -301,18 +301,6 @@ You can use the `aria-label` below to define a label, but remember to use semant
 <input type="text" aria-label="First name" placeholder="Clementine">
 ```
 
-</section>
-
-
-
-## One Last Note
-
-For many people, the fear of not getting EVERYTHING right when it comes to accessibility causes them to not do accessibility at all. Don't be that person.
-
-```markdown
-Helping one group of people is a good place to start. There's a temptation with accessibility to think it has to be perfect. This is technology. This is people. We don't do perfect. It never happens. So, really, please don't go out there and think that if you're going to do accessibility that you have to get everything right. Perfect is, very much, the enemy of good.
-- Leonie Watson, Accessibility Engineer
-```
 
 ## Additional Resources
 
