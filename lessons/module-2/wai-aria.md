@@ -223,8 +223,8 @@ You can then use JavaScript to keep this information up to date - for example, o
 * `aria-labelledby` - Sister to `aria-label`, references the ID of another element, which is a short title for the element.
 * `aria-describedby` - is just like aria-labelledby – but is meant for longer descriptions instead of short titles. This is read after the field-type is stated
 
-<section class="call-to-action:">
-#### Your Turn
+<section class="call-to-action">
+## In Groups
 - While using VoiceOver, compare [this Codepen](https://codepen.io/damwhit/pen/WZqyEe) and compare it with [this Code](https://codepen.io/damwhit/pen/XeLVbw). What changes to do you notice?
 - Take turns explaining what a property is
 - Come up with a good analogy for property
@@ -281,32 +281,6 @@ good
 </html>
 ```
 
-## ARIA Landmark Roles
-
-One of the easiest ARIA features to implement, and one that provides significant immediate benefits to screen reader users, is landmark roles. To add them, simply add a relevant role attribute to an appropriate container within your HTML. This allows the screen reader to quickly jump to that section of the page. Below, you will find an example of how you might utilize the different landmark roles for your layout:
-
-![Landmark Layout](/assets/images/landmarks.png)
-
-__Take note:__
-
-* The banner, main, and contentinfo roles are meant to be used only one time per page
-* Take care in using `role="application"` - When assistive technologies encounter content that’s marked up with `role=”application”` they stop listening for users’ keystrokes and hand off all functionality to the application. This is due to an expectation that the application has its own model for navigating and operating all controls by keyboard. It generally should not be used.
-
-Below you will find a code example of defining three landmark roles:
-
-```html
-<!-- explicitly using the role attribute -->
-<!-- bad -->
-<div role="banner"></div>
-<div role="main"></div>
-<div role="contentinfo"></div>
-
-<!-- implicitly using the correct semantic tag -->
-<!-- good -->
-<header></header>
-<main></main>
-<footer></footer>
-```
 -------------------------------------------------
 
 __Label Input Elements that do not have a label element associated with them__
