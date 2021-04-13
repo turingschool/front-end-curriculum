@@ -19,29 +19,24 @@ tags: html, ARIA, accessibility
 - `State` The state of an element on a page (e.g., expanded, disabled)
 - `Property` Additional information about an element or other elements its related to
 
+<section class="call-to-action">
+## Review from "Intro to Accessibility"
+
+In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1Cx_0TzXvo2HYrfW4LSDTdRevqPxI7ZfUaoW38e9j-io/viewer?f=0)
+
+- What have you already been implementing (or would like to implement) to make your applications accessible?
+- What are some ways we can test how accessible an application is?
+</section>
+
 # Accessibility
 
-Accessibility in Web development means enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way.
+Accessibility in Web development means enabling as many people as possible to use Web sites and applications, even when those people's abilities are limited in some way.
 The Web is fundamentally designed to work for __all people__, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
 
 __Good News!__ _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
 
 Most production websites are not very accessible. This is a great way to set yourself apart from other candidates in the job hunt and add value to teams early.
 
-
-<section class="answer">
-
-### History of accessibility technology
-Let's watch the first ten minutes of [this video](https://www.youtube.com/watch?v=qdB8SRhqvFc) to see how far accessible technologies in web development have come.
-
-  <section class="call-to-action">
-    While you watch, think about these questions:
-    * What has changed about web accessibility in recent years?
-    * What is the accessibility tree?
-    * How can developers make webpages more accessible?
-  </section>
-
-</section>
 
 ## Ways to Make Your Websites More Accessible
 
@@ -388,3 +383,4 @@ Videos
 * [Aria Roles, States, and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk)
 * [ARIA, Accessibility APIs and Coding Like You Give A Damn!](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
 * [describedBy vs labeledBy video](https://www.youtube.com/watch?v=U8_VjI-Z1LA)
+* [History of Accessibility Tech](https://www.youtube.com/watch?v=qdB8SRhqvFc)
