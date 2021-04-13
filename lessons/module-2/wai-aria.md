@@ -112,12 +112,13 @@ A form element has a role of 'form' by default. We can override that role using 
 [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
 
 <section class="call-to-action">
-#### Your Turn
+## In Groups
 - Use the table of elements and look up the following elements and their implicit roles
   - div
   - footer
   - input
-- Turn to your neighbor and take turns explaining what a role is.
+- Check out some of the other elements. Is there anything suprising?
+- Take turns explaining what a role is.
 - What is the difference between implicit and explicit roles?
 </section>
 
@@ -166,15 +167,11 @@ This also allows you to target these elements using the `aria-expanded` attribut
 
 States can also be implicit, imagine a checkbox element in html. If you toggle the checked property that state will change as well.
 
-Here is a good [menu example][Menu-Example] that you can use with voiceover to see how screen readers interact with aria-expanded.
-
-[Menu-Example]: https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html
-
 
 <section class="call-to-action">
-#### Your Turn
-
-- Turn to your neighbor and take turns explaining what states are.
+## In Groups
+- Checkout this [Menu-Example](https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html) with VoiceOver to see how screen readers interact with `aria-expanded1`
+- Take turns explaining what states are.
 - What would be another example of state that your app might need?
 </section>
 
@@ -199,7 +196,7 @@ For example, take the button we mentioned when discussing states. That button sp
 
 The `aria-controls` property has a value of the ID of the element it is attached to. So in this case, we would assume that there is another element with an id of `sidebar-menu` that is contolled by this button.
 
-Open [this CodePen](https://codepen.io/damwhit/pen/WZqyEe) to play around with it.
+
 
 You can also use something called an `aria-label` property. Think of this like an `alt` tag for accessibility - this property allows you to enter additional text that provides more information to the user. This information won't show up on the page but will be read by the screen reader.
 
@@ -215,8 +212,6 @@ You can also use something called an `aria-label` property. Think of this like a
 
 You can then use JavaScript to keep this information up to date - for example, once `aria-expanded="false"`, you'd set your `aria-label` to `"Open sidebar navigation menu"`.
 
-Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with it.
-
 **NOTE**: Use `aria-label` with caution. The screen reader will now REPLACE whatever exists as the default button text and instead read the `aria-label` content.
 
 #### Other Properties
@@ -230,7 +225,8 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 
 <section class="call-to-action:">
 #### Your Turn
-- Turn to your neighbor and explain what a property is
+- While using VoiceOver, compare [this Codepen](https://codepen.io/damwhit/pen/WZqyEe) and compare it with [this Code](https://codepen.io/damwhit/pen/XeLVbw). What changes to do you notice?
+- Take turns explaining what a property is
 - Come up with a good analogy for property
 - How are properties different from state?
 </section>
