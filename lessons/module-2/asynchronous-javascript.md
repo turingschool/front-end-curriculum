@@ -23,7 +23,7 @@ Let's talk more about JavaScript and it's ability to be asynchronous. What does 
 <section class="call-to-action">
 ### Review
 
-On the sticky notes in [this Miro board](https://miro.com/welcomeonboard/md6UlSJghj8KD6SmzW9oIDVhlh74slAAX6BrGrYtE656sxEtPwuR38KSuDAxa10Q), answer the following with your breakout group:
+Using sticky notes in [this Miro board](https://miro.com/welcomeonboard/md6UlSJghj8KD6SmzW9oIDVhlh74slAAX6BrGrYtE656sxEtPwuR38KSuDAxa10Q) (_**Note:** If you don't have an account, you can sign in with a Google account!_), answer the following with your breakout group:
 - Everything you know about / questions you still have on asynchronous code
 - Everything you know about / questions you still have on fetch
 - Everything you know about / questions you still have on execution contexts & the call stack
@@ -41,7 +41,7 @@ Take 8 minutes to read [this article](https://dev.to/steelvoltage/if-javascript-
 Then in breakout groups, explore [this site](http://latentflip.com/loupe){:target='blank'} that gives a nice visualization of how asynchronous code runs in the browser.  Note the **call stack**  as well as the **Web API** the article discusses.
 
 * When running the code, note where the `console.logs` are moved.  What about the `event listener` or `setTimeout`?
-* Where does the `setTimeout` move to before going back to the call stack?
+* Where does the `setTimeout` move to before going back to the **call stack**?  What do you think this **callback queue** is?
 * Click on the *Click Me!* button on the bottom left-hand corner.  Discuss the order of events.
 </section>
 
@@ -66,7 +66,9 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 console.log('burrito');
 ```
 
-How does `fetch` fit in with the code above and below it? What order will the console logs show up in and why?
+* How does `fetch` fit in with the code above and below it? 
+* What order will the console logs show up in and why?
+* Using terms like the call stack, Web API, & callback queue, explain this is working behind the scenes.
 </section>
 
 
