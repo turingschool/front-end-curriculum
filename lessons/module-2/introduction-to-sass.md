@@ -13,7 +13,7 @@ module: 2
 ## Vocab
 
 - `CSS Preprocessor` a program that lets you generate CSS from the preprocessor's own unique syntax. It extends the default capabilities of CSS. Examples include: Sass, LESS, Stylus and more. 
-- `Compiler` converts our preprocessed code into css code so that the browser can understand it.
+- `Compiler` converts our preprocessed code into css code so that the browser can understand it. Examples include: Webpack, Node-Sass, Gulp-Sass and many more! 
 
 <section class="call-to-action">
 ### Warm Up
@@ -21,6 +21,7 @@ module: 2
 Before diving into SASS, the history behind it, and some of the tools it provides for us, reflect in your notebook the following:
 
 * In past projects, how have you organized / refactored your CSS to follow the DRY principle?
+* Has anything been frustrating about organizing your CSS? If so, what?
 </section>
 
 ## Intro to Sass
@@ -33,9 +34,13 @@ Sass was originally part of another preprocessor called Haml. It used no curly b
 
 <img width="50%" src="../../assets/images/lessons/sass/sass-syntax.png" />
 
-With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now. Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.
+With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now. 
 
-<section class="call-to-action">
+Check out this [Sass Codepen Example](https://codepen.io/hannahhch/pen/eYmdpLj){:target="_blank"} to see they classic Sass syntax in action.  
+
+Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in. 
+
+<!-- <section class="call-to-action">
 ### SASS vs. SCSS
 
 Let's compare the same code written in Sass and SCSS syntax.  
@@ -46,9 +51,9 @@ Let's compare the same code written in Sass and SCSS syntax.
 For another example of SCSS, take a look at [this codepen](https://codepen.io/the_ruther4d/pen/ormbi){:target="_blank"}.
 
 * Write down any syntactical similarities and differences you notice between SCSS and and the plain CSS you're familiar with.
-</section>
+</section> -->
 
-<section class="answer">
+<!-- <section class="answer">
 ### Similarities & Differences  
 
 **Similarities**
@@ -58,7 +63,7 @@ For another example of SCSS, take a look at [this codepen](https://codepen.io/th
 **Differences**
 * Variables that store values are created and used in multiple places.  (Note the syntax for variables is akin to the syntax for jQuery variables) 
 * Some styles are nested inside of each other using `{}`!
-</section>
+</section> -->
 
 ### SCSS
 
