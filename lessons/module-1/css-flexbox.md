@@ -79,35 +79,15 @@ When we use Flexbox, we will make the parent elements `flex containers` and the 
 (Graphics from <a target="blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" >CSS Tricks</a>)
 
 <div class="call-to-action">
-### Partner Practice
+### Try It 1
   - Go back to your codepen from the warm up
-  - Experiment adding the "justify-content" property to your `.wrapper`. Add the following values (one at a time), and note what changes:
+  - Experiment adding the `justify-content` property to your `.wrapper`. Add the following values (one at a time), and note what changes:
     - `center`
     - `space-around`
     - `space-between`
     - `space-evenly`
     - `flex-end`
-  - Delete or comment out your justify-content declaration. Add the following to your `.wrapper`, and note what changes:
-    - `flex-direction: column`
-    - `align-items: center`
-
-  _Can you use your developer tools to find some other values for flex-direction and align-items?_
 </div>
-
-<section class="note">
-### Note
-
-Most flexbox-related properties have _default_ values. We don't see them in our CSS, but can know that they are being applied! These properties can always be changed by us. You'll see some default values indicated below.
-</section>
-
-## Flex Direction
-
-Another CSS property with flexbox is `flex-direction`. This property takes one of four values:
-
-- `row` (default): left-to-right
-- `row-reverse`: opposite of row (right-to-left)
-- `column`: same as `row` but top to bottom
-- `column-reverse`: same as `column` but bottom to top
 
 ## Justify Content
 
@@ -120,9 +100,7 @@ Another CSS property with flexbox is `flex-direction`. This property takes one o
 - `space-around`: items are evenly distributed in the line with equal space around them
 - `space-evenly`: items are distributed so that the spacing between any two adjacent alignment subjects, before the first alignment subject, and after the last alignment subject is the same
 
-<img class="medium" src="./assets/images/flexbox/flexbox-axis.svg" alt="flexbox parent axis">
-
-
+Here is a great example of how you can use `justify-content` to move your items:
 <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="css-tricks" data-slug-hash="zzJMGJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox &amp;amp; justify-content">
   <span>See the Pen <a href="https://codepen.io/team/css-tricks/pen/zzJMGJ">
   Flexbox &amp; justify-content</a> by CSS-Tricks (<a href="https://codepen.io/css-tricks">@css-tricks</a>)
@@ -132,18 +110,42 @@ Another CSS property with flexbox is `flex-direction`. This property takes one o
 
 _The above Codepen is an example from CSS Tricks_
 
+<section class="note">
+### Note
+
+Most flexbox-related properties have _default_ values. We don't see them in our CSS, but can know that they are being applied! These properties can always be changed by us. You'll see some default values indicated below.
+</section>
+
 <div class="call-to-action">
-### Partner Practice
-- In your previous "Flexbox Playground" codepen, make sure the `.wrapper` has the following styles applied:
-  - `flex-direction: column`
-  - `justify-content: center`
-- What happens? Why do you think that is?
+### Try It 2
+  - Go back to your codepen from the warm up
+  - Now add `flex-direction: column;` to your `.wrapper`
+  - What happened? How does changing the values for the `justify-content` property affect the boxes?
 </div>
 
-<section class="answer">
-### The Answer
-  In the section above, you should have observed that `justify-content: center;` had a different impact - it centered the items vertically. Since `flex-direction: column;` was applied, the _main axis_ was the vertical axis. `justify-content` will apply it's values to the items along the _main axis_.
-</section>
+## Flex Direction
+
+Another CSS property with flexbox is `flex-direction`. This property takes one of four values:
+
+- `row` (default): left-to-right
+- `row-reverse`: opposite of row (right-to-left)
+- `column`: same as `row` but top to bottom
+- `column-reverse`: same as `column` but bottom to top
+
+<img class="medium" src="./assets/images/flexbox/flexbox-axis.svg" alt="flexbox parent axis">
+
+<div class="call-to-action">
+### Try It 3
+  - Go back to your codepen from the warm up
+  - Remove the `justify-content` and `flex-direction` properties.
+  - Now, add in an `align-items` property and experiment with the following values:
+    - `stretch`
+    - `center`
+    - `baseline`
+    - `flex-start`
+    - `flex-end`
+  - Then, add `flex-direction: column;` to your `.wrapper`. What changes?
+</div>
 
 ## Align Items
 
@@ -156,13 +158,6 @@ Just like we can control how our content sits on the main axis with `justify-con
 - `baseline`: items are aligned such as their baselines align
 
 <img src="./assets/images/flexbox/flex-align.svg" alt="flex align values">
-
-<section class="call-to-action">
-### Partner Practice
-- In your previous "Flexbox Playground" codepen, make sure the `.wrapper` has the following styles applied:
-  - `align-items: center`
-- Play around with and without `flex-direction: column`
-</section>
 
 <section class="note">
 ### Note
