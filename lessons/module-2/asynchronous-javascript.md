@@ -14,7 +14,7 @@ module: 2
 ## Vocab
 
 - `Execution Call Stack` A data structure for the interpreter to keep track of its place in a script that calls multiple functions. It is single threaded and LIFO (Last In First Out)
-- `Browser APIs` Built in APIs that have a separate execution context from your code (They act as separate threads) examples include `setTimeout` and `fetch`
+- `Web APIs` Built in APIs that have a separate execution context from your code (They act as separate threads) examples include `setTimeout` and `fetch`
 - `Callback Queue` A data structure that holds functions returned from Browser APIs that are ready to go back on the stack. It is FIFO (First In First Out)
 - `Event Loop` Middleman between callback queue and call stack. Checks if call stack is empty and adds functions from the callback queue
 
@@ -36,7 +36,7 @@ When we say **single-threaded**, that could be read as doing one thing at a time
 <section class="call-to-action">
 ### On Your Own
 
-Take 8 minutes to read [this article](https://dev.to/steelvoltage/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd){:target='blank'} about how JavaScript is asynchronous and also single threaded.
+Take several minutes to read [this article](https://dev.to/steelvoltage/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd){:target='blank'} about how JavaScript is asynchronous and also single threaded.
 
 Then in breakout groups, explore [this site](http://latentflip.com/loupe){:target='blank'} that gives a nice visualization of how asynchronous code runs in the browser.  Note the **call stack**  as well as the **Web API** the article discusses.
 
