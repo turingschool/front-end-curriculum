@@ -32,11 +32,11 @@ Before diving into SASS, the history behind it, and some of the tools it provide
 
 Sass was originally part of another preprocessor called Haml. It used no curly braces or semi-colons, and the syntax adhered to strict spacing and indentation rules. Like so:
 
-<img width="50%" src="../../assets/images/lessons/sass/sass-syntax.png" />
+<img width="50%" src="../../assets/images/lessons/sass/sass-syntax.png" alt="diagram of sass syntax code"/>
 
 With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now. 
 
-Check out this [Sass Codepen Example](https://codepen.io/hannahhch/pen/eYmdpLj){:target="_blank"} to see they classic Sass syntax in action.  
+Check out this [Sass Codepen Example](https://codepen.io/hannahhch/pen/eYmdpLj){:target="_blank"} to see this classic Sass syntax in action.  
 
 Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in. 
 
@@ -80,13 +80,23 @@ Although you *may* see the Sass syntax in the wild, movement has shifted signifi
 For our purposes here, be aware that we will be working strictly with the SCSS syntax when we are working with Sass, AND when most people say "SASS" they are talking about SCSS.
 </section>
 
+
 ### Sass in Action
 
 Our browsers *do not* understand Sass, or any of the css preprocessors! In order to be able to use Sass in our code, we need something to turn our Sass code into CSS code so that the browser can understand it. One tool that _compiles_ our Sass (among other things) for us is Webpack!
 
+<section class="call-to-action">
+### In Groups
+
+Let's start exploring some Sass code! Check out one or both of the following codepens. What is similar to the CSS you know and love? Different?
+* [Example 1](https://codepen.io/hannahhch/pen/MWYjKWP){:target="_blank"}
+* [Example 2](https://codepen.io/the_ruther4d/pen/ormbi){:target="_blank"}
+
+</section>
+
 ### Why would we use Sass?
 
-CSS in large apps can get crazy. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY. This is the one of the key principles of Sass (and in most programming) - *DO NOT REPEAT YOURSELF* .
+CSS in large apps can get unruly. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY. This is the one of the key principles of Sass (and in most programming) - *DO NOT REPEAT YOURSELF* .
 
 Some of the cool tricks include:
 * defining variables that can be peppered across multiple CSS files
