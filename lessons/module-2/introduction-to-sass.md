@@ -88,7 +88,7 @@ Our browsers *do not* understand Sass, or any of the css preprocessors! In order
 <section class="call-to-action">
 ### In Groups
 
-Let's start exploring some Sass code! Check out one or both of the following codepens. What is similar to the CSS you know and love? Different?
+Let's start exploring some Sass code! Check out one or both of the following codepens. What is similar to the CSS you know and love? What's different?
 * [Example 1](https://codepen.io/hannahhch/pen/MWYjKWP){:target="_blank"}
 * [Example 2](https://codepen.io/the_ruther4d/pen/ormbi){:target="_blank"}
 
@@ -248,7 +248,7 @@ One of the main benefits of Sass is having the ability to split your codebase ac
 
 ### @import in CSS
 
-You may remember the [`@import`](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) CSS at-rule that can be used to import style rules from other style sheets when you were working with CSS in Mod 1. However, it's okay if you don't - as the use of this at-rule is typically a code smell/bad practice since it blocks parallel downloads of CSS files (each time you use `@import` it creates another HTTP request).
+You _can_ have multiple files and import them in CSS, but the use of this at-rule is typically a code smell/bad practice. It blocks parallel downloads of CSS files (each time you use `@import` it creates another HTTP request).
 
 ### @import in Sass
 
@@ -313,8 +313,8 @@ A mixin allows you to define a set of styles that you want to reuse throughout y
 
 To use:
 
-1. You name them with `@mixin name(arguments) { style }`.
-1. To include them you use `@include` name.
+1. You name them with `@mixin name(optional arguments) { style }`.
+1. To include them you use `@include name(optional arguments)`.
 
 ##### SCSS
 
@@ -327,8 +327,14 @@ To use:
           border-radius: $radius;
 }
 
+@mixin centered() {
+  display: flex;
+  justify-content: center;
+}
+
 .box {
   @include rounded-corners(50px);
+  @include centered();
 }
 ```
 
@@ -340,6 +346,8 @@ To use:
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   border-radius: 50px;
+  display: flex;
+  justify-content: center;
 }
 ```
 
@@ -492,17 +500,15 @@ Using RGBA to try to adjust lightness or saturation can be impractical and frust
 <section class="call-to-action">
 ### Group Practice
 
-In small groups, research your assigned built-in color function. Reference the descriptions below, the [Sass documentation](https://sass-lang.com/documentation/modules/color) on color functions, and the examples you are given. Make sure to play around with the code in a codepen - are there differences in using hex, rgba, and hsla? Why is this function relevant?
+In small groups, research the following built-in color functions. Reference the descriptions below, the [Sass documentation](https://sass-lang.com/documentation/modules/color) on color functions, and the examples you are given. Make sure to play around with the code in a codepen - are there differences in using hex, rgba, and hsla? Why is this function relevant? How could you see yourself using these in practice?
 
   * complement()
   * mix()
   * lighten/darken()
   * desaturate/saturate()
 
-Be prepared to show us:
-* What the function does
-* What it takes in 
-* The function in action!
+Finished early? What other useful color functions can you find?
+
 </section>
 
 ## Summary
