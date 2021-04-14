@@ -6,10 +6,9 @@ tags: html, ARIA, accessibility
 
 ## Learning Goals
 
-* Speak to why website accessibility is important
-* Implement Semantic HTML to make websites more accessible
-* Implement ARIA to make websites more accessible
-* Learn basic VoiceOver screen reader commands to test accessibility
+* Review ways we already make websites accessible
+* Be able to use the three different types of ARIA attributes
+* Determine when ARIA is and is not needed to make websites more accessible
 
 ## Vocab
 
@@ -19,35 +18,18 @@ tags: html, ARIA, accessibility
 - `State` The state of an element on a page (e.g., expanded, disabled)
 - `Property` Additional information about an element or other elements its related to
 
-# Accessibility
+<section class="call-to-action">
+## Warm Up
 
-Accessibility in Web development means enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way.
-The Web is fundamentally designed to work for __all people__, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
+Let's review from last week's [Intro to Accessibility Lesson](https://frontend.turing.io/lessons/module-2/intro-to-accessibility.html)
 
-__Good News!__ _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
+In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1Cx_0TzXvo2HYrfW4LSDTdRevqPxI7ZfUaoW38e9j-io/viewer?f=0)
 
-Most production websites are not very accessible. This is a great way to set yourself apart from other candidates in the job hunt and add value to teams early.
-
-
-<section class="answer">
-
-### History of accessibility technology
-Let's watch the first ten minutes of [this video](https://www.youtube.com/watch?v=qdB8SRhqvFc) to see how far accessible technologies in web development have come.
-
-  <section class="call-to-action">
-    While you watch, think about these questions:
-    * What has changed about web accessibility in recent years?
-    * What is the accessibility tree?
-    * How can developers make webpages more accessible?
-  </section>
-
+- What have you already been implementing (or would like to implement) to make your applications accessible?
+- What are some ways we can test how accessible an application is?
 </section>
 
-## Ways to Make Your Websites More Accessible
-
-This lesson is largely focused on writing code in a way that is accessible for people with visual disabilities.
-
-In terms of statistics, the World Health Organization estimates that "285 million people are estimated to be visually impaired worldwide: 39 million are blind and 246 have low vision."
+## Accessible Defaults
 
 ### Semantic HTML
 
@@ -56,9 +38,7 @@ There are two different elements that are semantically neutral: Those are `span`
 Semantic html is very important for 3 reasons:
 1. developer empathy - It makes code much easier to read and debug
 2. accessibility - It allows screen readers to move through the web page seamlessly
-3. seo - it will make your webpage more discoverable
-
-Let's compare a <a href="https://repl.it/@Khalid_Williams/Semantic-Page" target="\__blank">semantic</a> and <a href="https://repl.it/@Khalid_Williams/All-Div-Everything" target="\__blank"> non-semantic</a> version of the same simple page.
+3. SEO (search engine optimization) - it will make your webpage more discoverable via Google
 
 __Side Note__: Documentation is your friend when developing a website. Here are some super useful docs for better knowing what element to use for a given scenario.
 
@@ -66,20 +46,17 @@ __Side Note__: Documentation is your friend when developing a website. Here are 
 
 
 ### CSS/Styling
-<section class="answer">
-## On removing focus rings
-***PLEASE NOTE***
+#### Browser Focus Rings
 
 DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
 
 This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options. And [this article](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) also has some alternatives to use to get rid of the focus ring while still keeping things accessible.
 
 A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles.
-</section>
 
-### WAI-ARIA
+## WAI-ARIA
 
-WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories:
+[WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories:
 
 * __Roles__
 * __States__
@@ -93,17 +70,19 @@ An important point about WAI-ARIA attributes is that they don't affect the appea
 - `alt`
 - `lang`
 
-<!--
-![Aria Tree](/assets/images/aria.jpg)
- -->
+
+<!-- ![Aria Tree](/assets/images/aria.jpg) -->
+
 #### Rules of ARIA Use
 The core rules to keep in mind when using ARIA are:
 
-If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time, and will annoy your screen reader users. Many "accessibility flags" come from developers _overusing_ ARIA.
+If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time, and will annoy your screen reader users. 
 
-### Aria Roles, States, and Properties
+**Many "accessibility flags" come from developers _overusing_ ARIA.**
 
-#### Roles
+## Aria Roles, States, and Properties
+
+### Roles
 
 Roles define what an element is - what function it serves on the page. They give screen readers more information about how to interact with the element (`What am I?`)
 
@@ -133,16 +112,17 @@ A form element has a role of 'form' by default. We can override that role using 
 [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
 
 <section class="call-to-action">
-#### Your Turn
+## In Groups
 - Use the table of elements and look up the following elements and their implicit roles
   - div
   - footer
   - input
-- Turn to your neighbor and take turns explaining what a role is.
+- Check out some of the other elements. Is there anything suprising?
+- Take turns explaining what a role is.
 - What is the difference between implicit and explicit roles?
 </section>
 
-### States
+## States
 
 States describe how you are interacting with an element (What am I doing right now?)
 
@@ -187,19 +167,15 @@ This also allows you to target these elements using the `aria-expanded` attribut
 
 States can also be implicit, imagine a checkbox element in html. If you toggle the checked property that state will change as well.
 
-Here is a good [menu example][Menu-Example] that you can use with voiceover to see how screen readers interact with aria-expanded.
-
-[Menu-Example]: https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html
-
 
 <section class="call-to-action">
-#### Your Turn
-
-- Turn to your neighbor and take turns explaining what states are.
+## In Groups
+- Checkout this [Menu-Example](https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html) with VoiceOver to see how screen readers interact with `aria-expanded`
+- Take turns explaining what states are.
 - What would be another example of state that your app might need?
 </section>
 
-### Properties
+## Properties
 
 Properties give an element special characteristics that you can relate to other documents or elements.
 
@@ -220,7 +196,7 @@ For example, take the button we mentioned when discussing states. That button sp
 
 The `aria-controls` property has a value of the ID of the element it is attached to. So in this case, we would assume that there is another element with an id of `sidebar-menu` that is contolled by this button.
 
-Open [this CodePen](https://codepen.io/damwhit/pen/WZqyEe) to play around with it.
+
 
 You can also use something called an `aria-label` property. Think of this like an `alt` tag for accessibility - this property allows you to enter additional text that provides more information to the user. This information won't show up on the page but will be read by the screen reader.
 
@@ -236,8 +212,6 @@ You can also use something called an `aria-label` property. Think of this like a
 
 You can then use JavaScript to keep this information up to date - for example, once `aria-expanded="false"`, you'd set your `aria-label` to `"Open sidebar navigation menu"`.
 
-Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with it.
-
 **NOTE**: Use `aria-label` with caution. The screen reader will now REPLACE whatever exists as the default button text and instead read the `aria-label` content.
 
 #### Other Properties
@@ -249,9 +223,10 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 * `aria-labelledby` - Sister to `aria-label`, references the ID of another element, which is a short title for the element.
 * `aria-describedby` - is just like aria-labelledby – but is meant for longer descriptions instead of short titles. This is read after the field-type is stated
 
-<section class="call-to-action:">
-#### Your Turn
-- Turn to your neighbor and explain what a property is
+<section class="call-to-action">
+## In Groups
+- While using VoiceOver, compare [this Codepen](https://codepen.io/damwhit/pen/WZqyEe) and compare it with [this Codepen](https://codepen.io/damwhit/pen/XeLVbw). What changes to do you notice?
+- Take turns explaining what a property is
 - Come up with a good analogy for property
 - How are properties different from state?
 </section>
@@ -262,113 +237,70 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 * The time to use them is if the answer to the following question is yes:
   * Will sighted users see content that people with visual disabilities cannot?
 
-__Below are some low hanging fruit that you should always incorporate in lessons__
+__Below are some things that you should ALWAYS incorporate in your web applications__
 
-<section class="answer">
-### Low hanging fruit
 
-### Alt Attributes for Yo Images!
+### Alt Attributes for Your Images!
 
-* Hugely important
+* Hugely important (for both accessibility and SEO!)
 * Low hanging fruit, easy to use on images.
 * Be verbose.
 * Just do it.
 
 ```html
-bad
+meh...
 <img src="mountain.jpg" alt="mountain">
 
-good
+yes!
 <img src="mountain.jpg" alt="The cascade mountains at sunset in January">
 ```
 
-*Below you will find a REAL example of how alt text helps to paint a picture of what a missing image depicts:*
+- Wait, what if there is _already_ descriptive text below my image?? 
+  - This is one of the only times were you DONT need to supply alt text. Having both would be repetive and redundant for screen reader users. To still be "valid", include an empty alt tag like this `<h3>A round, sleepy cat napping on a bed.</h3><img src="src/cat-pic.jpg" alt="">`
+- What about background images??
+  - Background images are purely for design, and should not be used to display important web content. Because of this, background images do not need alt text. 
 
 ![Great example of alt tag](/assets/images/alt-example.png)
 
-### Title Attributes for Yo Links that have no text!
+### ARIA Labels for Your Links that have no text!
 
-* Low hanging fruit on anchor tags.
 * Not necessary for all links, but make sure to use them for your icon anchors – you know, things like your facebook, twitter, etc icons:
 
 ```html
-<a class="facebook-icon" title="Facebook"><a/>
+<a class="facebook-icon" aria-label="Link to Facebook"><a/>
 ```
 
-### Lang attribute on Yo HTML!
+### Lang attribute on Your HTML!
 
-* Low hanging fruit for HTML
-* As far as non-english speaking screen readers are concerned, when they land on an english-speaking web page without lang attribute, it will be spoken with the screen reader language - making it impossible to understand - unless the screen reader user disables language switching in the screen reader.
-* Just do it
+* Is often populated by default if using Emment or other HTML boilerplates!
+* As far as non-english speaking screen readers are concerned, when they land on an english-speaking web page without the `lang` attribute, it will be spoken with the screen reader language - making it impossible to understand - unless the screen reader user disables language switching in the screen reader.
 
 ```html
 <html lang="en">
 </html>
 ```
 
-## ARIA Landmark Roles
-
-One of the easiest ARIA features to implement, and one that provides significant immediate benefits to screen reader users, is landmark roles. To add them, simply add a relevant role attribute to an appropriate container within your HTML. This allows the screen reader to quickly jump to that section of the page. Below, you will find an example of how you might utilize the different landmark roles for your layout:
-
-![Landmark Layout](/assets/images/landmarks.png)
-
-__Take note:__
-
-* The banner, main, and contentinfo roles are meant to be used only one time per page
-* Take care in using `role="application"` - When assistive technologies encounter content that’s marked up with `role=”application”` they stop listening for users’ keystrokes and hand off all functionality to the application. This is due to an expectation that the application has its own model for navigating and operating all controls by keyboard. It generally should not be used.
-
-Below you will find a code example of defining three landmark roles:
+* Fun Fact - You can change this if you have a snippet of text in another language!
 
 ```html
-<!-- explicitly using the role attribute -->
-<!-- bad -->
-<div role="banner"></div>
-<div role="main"></div>
-<div role="contentinfo"></div>
-
-<!-- implicitly using the correct semantic tag -->
-<!-- good -->
-<header></header>
-<main></main>
-<footer></footer>
+<h1 lang="es">¿Donde está la biblioteca?</h1>
 ```
--------------------------------------------------
 
-__Label Input Elements that do not have a label element associated with them__
+### Label Input Elements
 
-Note: you should _really_ be providing labels with all of your input fields, like this:
+Note: you should _really_ be providing labels with all of your input fields, like this!
 
 ```html
-<label for="first-name">First name</label>
-<input id="first-name" type="text" placeholder="Hannah">
-
+<label for="firstName">First name</label>
+<input id="firstName" type="text" placeholder="Clementine">
 ```
 
 You can use the `aria-label` below to define a label, but remember to use semantic, native elements whenever possible.
 
-* `aria-label`: property that defines a short title for an element
-
 ```html
-<input type="text" aria-label="First name" placeholder="Hannah">
+<input type="text" aria-label="First name" placeholder="Clementine">
 ```
 
-</section>
-
-
--------------------------------------------------
-
-## Your Challenge
-
-Now that you have the basics of accessibility under your belt, we will be spending the remainder of class making our current applications more accessible. Find your project partner/s and start implementing!
-
-## Perfect is the enemy of good
-
-For many people, the fear of not getting EVERYTHING right when it comes to accessibility causes them to not do accessibility at all. Don't be that person.
-
-```markdown
-Helping one group of people is a good place to start. There's a temptation with accessibility to think it has to be perfect. This is technology. This is people. We don't do perfect. It never happens. So, really, please don't go out there and think that if you're going to do accessibility that you have to get everything right. Perfect is, very much, the enemy of good.
-- Leonie Watson, Accessibility Engineer
-```
 
 ## Additional Resources
 
@@ -388,3 +320,4 @@ Videos
 * [Aria Roles, States, and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk)
 * [ARIA, Accessibility APIs and Coding Like You Give A Damn!](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
 * [describedBy vs labeledBy video](https://www.youtube.com/watch?v=U8_VjI-Z1LA)
+* [History of Accessibility Tech](https://www.youtube.com/watch?v=qdB8SRhqvFc)
