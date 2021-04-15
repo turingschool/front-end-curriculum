@@ -165,6 +165,14 @@ Just like we can control how our content sits on the main axis with `justify-con
 These properties will get you far enough for now, but they're just scratching the surface at what flex can do! If you want more, check out this [extensive guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) from CSS tricks.
 </section>
 
+## Using Flexbox on Nested Elements
+
+<div class="call-to-action">
+### Try It 4
+  - Fork [this NEW codepen](https://codepen.io/kaylaewood/pen/jOyxZWz)
+  - Complete the 3 challenges listed in the CSS file.
+</div>
+
 ## Recreating a Comp
 
 <section class="call-to-action">
