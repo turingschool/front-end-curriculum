@@ -125,7 +125,7 @@ The same would happen in this case:
   //output: undefined
 ```
 
-We can use bracket notation in our favor, by passing in the variable, like the example below. In this case, the interpreter will register `lookupField` as a variable and then pass in it’s value of `‘greeting’` to get the output of `‘hello’`:
+We can use bracket notation in our favor, by passing in the variable, like the example below. In this case, the interpreter will evaluate whats between the brackets, register `lookupField` as a variable and then pass in it’s value of `‘greeting’` to get the output of `‘hello’`:
 ```js
   console.log(phrases[lookupField]);
   //output: ‘hello’
@@ -154,7 +154,23 @@ Even if these concepts are new to you, you've actually been putting them into pr
 <section class="call-to-action">
 ### Paired Practice
 
-* In a breakout room, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt4#main.js).
+* In a breakout room, complete the exercise found on [this repl](https://replit.com/@hfaerber/bracketVsDotTryIt4#index.js).
+* Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
+</section>
+
+<section class="checks-for-understanding">
+
+<section class="note">  
+### Key Point #4
+
+When we use dot notation, the JS interpreter looks in the object for key that is an exact letter-by-letter match to whatever comes after the dot.  
+When we use bracket notation, the JS interpreter *evaluates* everything between the brackets, then looks in the object for a key that matches whatever the code between the brackets evaluated to.  
+</section>  
+
+<section class="call-to-action">  
+### Paired Practice
+
+* In a breakout room, complete the exercise found on [this repl](https://replit.com/@hfaerber/Bracket-vs-Dot-Notation-Review-Sample-Lesson#index.js).
 * Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
 
@@ -162,6 +178,7 @@ Even if these concepts are new to you, you've actually been putting them into pr
 ### Reflect
 
 In your notebook, answer the following questions:
+* How does the JavaScript interpreter handle dot and bracket notation differently?
 * When should you use dot notation? Bracket notation?
 * What is a limitation of using dot notation? How does bracket notation address this?
 </section>
