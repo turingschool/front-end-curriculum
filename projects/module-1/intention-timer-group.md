@@ -26,8 +26,7 @@ You'll be building an application that allows a user to set goals for their heal
   - `main.js`
   - `assets` (this is a directory that will hold your icon files)
 
-Make sure both teammates and your assigned instructor are all added as collaborators on the GitHub repository.
-
+- Make sure both teammates and your assigned instructor are all added as collaborators on the GitHub repository.
 - Deploy your application to GitHub Pages.
 - **By EOD on Kick Off Day:** Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the following links:
   - the forked GitHub repo
