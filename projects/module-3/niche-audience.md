@@ -104,16 +104,9 @@ There are many different tools you can use for this, including just plain old pe
 
 We also want you to choose two design inspiration pieces, which can be as broad as inspiration for the layout of your app, to as small as a color palette or a micro-interaction animation.
 
-### Evals
-
-Real world context
-eval format
-
-interview questions
-
 ### Day 1 Deliverables
 
-By 3PM of Day 1:
+Initial proposal:
 
 * Create a DM with both instructors
 * Send the following:
@@ -128,9 +121,9 @@ Once your project MVP is approved (instructors will help you narrow down your MV
 
 * Wireframes
 * Links to 2 design inspirations
-* 2 separate user personas describing people in your niche audience
 * Project board link
 * Repo link
+* 2 separate user personas describing people in your niche audience (can wait until after the user persona lesson)
 
 ## Evals
 
@@ -140,9 +133,10 @@ The purpose of this is to give you an opportunity to begin experiencing what it 
 
 ### Eval process
 
+We will send out the link to the submission form sometime on the due date.
+
 In order to ensure that we have time to give relevant feedback to everyone, we are going to do asynchronous project evals.
 
-Here is what we need from you:  
 1. We will DM you your scores
   * _Note: in the interest of time, the feedback for this project will not be as specific as it has been for previous projects_
 2. In a DM, we will send you a link to part of your project code.
@@ -189,6 +183,7 @@ Score key:
   - Frontend data (state) always matches the backend data
   - Data fetched from API is run through a cleaning function (which is defined in a separate `utilities` file)
   - Implements excellent error handling if movie database server is down or fetch fails (this includes loading images as well as error messages on the frontend)
+  - PropTypes or type-checking of props is complete and specific (all data passed into a component is correctly and specifically identified)
 * **3:** 
   - A consistent, modular file structure is used
   - A clear understanding of class components vs function components is demonstrated (if using hooks, a clear understanding of when hooks need to be used is sufficient)
@@ -197,6 +192,7 @@ Score key:
   - There are some issues with the asynchronous JS where the frontend is not matching with the backend
   - There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
   - Data fetched from API is not cleaned before being set to state
+  - PropTypes or type-checking of props is mostly complete
 * **2:** 
   - The file structure is inconsistent and/or not modular
   - There is some confusion about when to use a class or function component, but it does not hinder functionality
@@ -204,6 +200,7 @@ Score key:
   - `return` statements contain logic that should be refactored out for the sake of readability and performance
   - There are methods that are being created inside of functional components that should be passed down through props from a parent class component
   - API calls have not been broken out into their own file
+  - PropTypes or type-checking of props is incomplete
 * **1:**
   - Project shows little understanding of React and significant refactoring is required, including but not limited to:
     - component structure is inconsistent or buggy
@@ -212,6 +209,7 @@ Score key:
     - props are being mutated
     - state is directly mutated
   - File structure is not modular.
+  - PropTypes or type-checking of props is not implemented
 
 ### Project Professionalism
 
@@ -226,7 +224,6 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
   - You lean on cohortmates or a mentor to do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging
   - Evolution of the project (decisions made, etc) is fully and clearly documented in the git history and PRs
   - When the project is run locally, the terminal shows no errors or warnings
-  - PropTypes or type-checking of props is complete and specific (all data passed into a component is correctly and specifically identified)
 * **3:**
   - README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
   - README links to all applicable repos/deployed sites
@@ -234,7 +231,6 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
   - PRs have full, consistent descriptions
   - Evolution of the project (decisions made, etc) is documented in the git history and PRs but is sometimes unclear
   - When the project is run locally, the terminal shows no errors and fewer than 5 warnings
-  - PropTypes or type-checking of props is mostly complete
 * **2:**
   - README concisely communicates your learning goals and the evolution of the project, but does not use Markdown formatting to aid readability
   - README links to any applicable repos/deployed sites
@@ -243,14 +239,12 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
   - Team members mostly do not do code reviews on PRs
   - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
   - When the project is run locally, the terminal shows no errors and more than 5 warnings
-  - PropTypes or type-checking of props is incomplete
 * **1:** 
   - README does not document your learning goals, the evolution of the project, and is poorly formatted (hindering readability)
   - README does not include links to team member's GitHub profiles
   - Git commits are not atomic and document changesets that are too large
   - PRs do not have thorough descriptions, and no code reviews are conducted, merging bugs into the main branch
   - When the project is run locally, the terminal shows errors and more than 5 warnings
-  - PropTypes or type-checking of props is not implemented
 
 ### Testing
 
