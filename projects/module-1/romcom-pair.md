@@ -34,13 +34,13 @@ Then, as a team:
 
 ## Day 1 Deliverables
 
-By the end of the day, complete the following tasks:
+**By EOD on Kick Off Day:** complete the following tasks:
 
 * As a team, read the entire project spec and rubric
 * As a team, create a rough timeline to follow
 * As a team, create a public document for your DTR (instructions can be found [here](https://github.com/turingschool/career-development-curriculum/blob/master/module_one/dtr_guidelines_memo.md))
 * Make sure all teammates (and assigned instructor) are added as collaborators to the forked repository
-* As a team, send a Slack message to your assigned instructor (PM) with:
+* Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the following links:
   - the forked GitHub repo
   - the GitHub Pages deployed site
     - Under your repo's settings, scroll down to GitHub Pages and set it up to deploy your `main` branch

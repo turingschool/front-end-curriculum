@@ -32,8 +32,8 @@ We want to see YOUR work.
 - Create a **private** repository and add your assigned instructor as a collaborator. (You cannot deploy private repositories to GitHub Pages; that's ok. If you'd like, at the end of the project, you can make your repo public in order to deploy to GH pages.)
 - Create a planning document where you outline your anticipated progress through the project. You can choose any format for this planning doc: Google Docs, a Gist, [GitHub Projects](https://github.com/features/project-management/), [Trello](https://trello.com/en-US), etc. You can add anything to this doc that will help you stay organized throughout the completion of this project. At minimum, it should include a timeline for when you'd like to complete each piece of functionality for the project.
 
-**By EOD on Kick Off Day: DM your assigned instructor with two links: Your repo & the planning doc.**
-
+## Day One Deliverables
+- **By EOD on Kick Off Day:** Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the links to your repo and the planning doc.
 
 ### Functionality
 
@@ -143,7 +143,7 @@ Here is what the final score means in terms of completing the module:
   - Some arguments and parameters are used to limit global variables and repetitive code.
   - The event object is used correctly, and is only accepted as a parameter when the function calls on it directly.
   - Function and variable names generally describe their role in the program.
-  - Function declarations are used over anonymous functions in event listeners, unless data needs to be passed in. There is no logic present in an event listener. 
+  - Function declarations are used over anonymous functions in event listeners, unless data needs to be passed in. There is no logic present in an event listener.
 
 * **1:**
 
