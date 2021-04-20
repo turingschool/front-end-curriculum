@@ -147,6 +147,15 @@ Bracket notation gives us the ability to use variables to look up values in an o
 Whenever we are accessing an object's property using a variable, we must use bracket notation.
 </section>
 
+<section class="note">  
+
+
+### Key Point #4
+
+When we use dot notation, the JS interpreter looks in the object for key that is an exact letter-by-letter match to whatever comes after the dot.  
+When we use bracket notation, the JS interpreter *evaluates* everything between the brackets, then looks in the object for a key that matches whatever the code between the brackets evaluated to.  
+</section>  
+
 ## Applying What We've learned
 
 Even if these concepts are new to you, you've actually been putting them into practice for awhile now! Let's take a deeper look into something familiar to you: **for loops**.
