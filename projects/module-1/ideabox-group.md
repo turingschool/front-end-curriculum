@@ -22,7 +22,11 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 - One person should fork [the boilerplate
   repository](https://github.com/turingschool-examples/ideabox-boilerplate). Add all team members and your Project Manager as collaborators.
 - Deploy your application to GitHub Pages.
-- In a Slack DM to your assigned instructor, drop the repo link, DTR and GitHub pages link.
+- **By EOD on Kick Off Day:** Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the following links:
+  - the forked GitHub repo
+  - the GitHub Pages deployed site
+    - Under your repo's settings, scroll down to GitHub Pages and set it up to deploy your `main` branch
+  - the DTR
 
 ## Progression
 

@@ -13,7 +13,7 @@ In this project, you'll be gaining experience working with variables, primitive
 data types, looping, arrays, and objects. As you work through the
 iterations, be sure to take time to stop and refactor you solutions. There is
 rarely one right way to solve a problem in programming, and part of your job
-will be evaulating the trade offs between different approaches to solving a
+will be evaluating the trade offs between different approaches to solving a
 problem.
 
 ## Learning goals
@@ -28,7 +28,9 @@ problem.
   - clone the repository to your local machine
   - `cd` into the project
   - run `npm install` to install the necessary dependencies
-  - Send the URL to your forked repo to your Project Manager via slack immediately!
+
+## Day One Deliverables
+  - **By EOD on Kick Off Day:** Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the link to your repo.
 
 ## Iterations
 

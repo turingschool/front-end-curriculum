@@ -32,8 +32,9 @@ This Solo Challenge gives students and instructors the opportunity to get a puls
 Make sure you're utilizing git best practices (branches) and commiting frequently.
 
 ### Day One Deliverables
+**By EOD on Kick Off Day:**   
 - Read the spec sheet closely.
-- Fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdMyfyHn83EMUqzFtn1M0qE5iac350_Oh3-vNNnexSvgc8l5g/viewform). 
+- Fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdMyfyHn83EMUqzFtn1M0qE5iac350_Oh3-vNNnexSvgc8l5g/viewform).
 
 ### Iteration 0: Build Out Comp
 - Images are below
