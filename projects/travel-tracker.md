@@ -157,14 +157,14 @@ It is up to you to decide what changes warrant a PR – remember we want to subm
 
 ## Due Date
 
-Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'} by **Tuesday, January 19th at 9pm**
+Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'} by **Tuesday, April 27th at 9pm**
 
 # Rubric
 
 ## Specification Adherence
 
 * 4: The application completes all iterations above and implements one or more of the extensions.
-* 3: The application completes the first 3 iterations above without error.
+* 3: The application completes the first 3 iterations above without error. **Note: Must be completed in order to pass.**
 * 2: The application completes the first 2 iterations and is in a usable state, but has some miscellaneous bugs.
 * 1: The application completes only the first iteration, displaying the user's data, but has no additional functionality.
 

@@ -3,7 +3,10 @@ title: "UX/UI: Intro to Personas"
 module: 2
 ---
 
-Thinking back to [last week's lesson](https://docs.google.com/presentation/d/1V2Pn6ejC78e0u9T4e9rP8fDpZ29Vm7G-eLVAxFdMDBU/edit?usp=sharing), what are some hallmarks of good, user-focused design?
+## Prework
+Take a look at [these slides](https://docs.google.com/presentation/d/1V2Pn6ejC78e0u9T4e9rP8fDpZ29Vm7G-eLVAxFdMDBU/edit?usp=sharing)
+
+What are some hallmarks of good, user-focused design?
 - Doesn't just look nice - it has to work well
 - UXD is more (or at least equally) about function than it is about aesthetics
 - Context - anticipate user needs
