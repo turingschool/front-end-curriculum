@@ -10,10 +10,9 @@ Make sure you are part of the following channels:
 * **#the_repeaters**: A community of Turing students and alumni who have repeated or are currently repeating a module.
 
 ## Goal Tracking
-Watch [this video](https://www.youtube.com/watch?t=16&v=U4IU-y9-J8Q&feature=youtu.be) on creating SMART Goals. Then, add your name to [this Goals Document](https://docs.google.com/spreadsheets/d/14CnFCMSFyadbPoMP_ii0NnxQRoZnXKDT2JP-n56yZq8/edit?usp=sharing) and fill out your goal for Intermission. We will check in on these goals on the Monday of Week 1.
+Add your name to [this Goals Document](https://docs.google.com/spreadsheets/d/14CnFCMSFyadbPoMP_ii0NnxQRoZnXKDT2JP-n56yZq8/edit?usp=sharing) and fill out your goal for Intermission. We will check in on these goals on the Monday of Week 1.  
 
-## Repeater Fam Time
-Once a week, there is **Repeater Fam** time on the calendar. During this time, you will join a zoom call to connect with each other, reflect on the past week, and create goals for the current week. Instructors will not join any of these calls. During the calls, we ask that you fill out [this Goals Document](https://docs.google.com/spreadsheets/d/14CnFCMSFyadbPoMP_ii0NnxQRoZnXKDT2JP-n56yZq8/edit?usp=sharing) for the appropriate week.
+You will continue to add your weekly goals to that document every Monday throughout the inning. We'll set up a slackbot in #mod1_repeater_fam to remind you!
 
 ## Gear Ups and Professional Development
 All PD sessions are required for repeaters. Only the following Gear Up sessions are optional:
