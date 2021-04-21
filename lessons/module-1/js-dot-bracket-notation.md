@@ -89,7 +89,7 @@ Notice how each block is formatted:
 <section class="call-to-action">
 ### Paired Practice
 
-* In a breakout room, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt2#main.js).
+* In a breakout room, complete the exercise found on [this repl](https://replit.com/@hfaerber/bracketVsDotTryIt2#index.js).
 * When you finish, discuss this question with your partner: *In your opinion, which notation is easier to read and write?*
 * Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
@@ -157,8 +157,6 @@ Even if these concepts are new to you, you've actually been putting them into pr
 * In a breakout room, complete the exercise found on [this repl](https://replit.com/@hfaerber/bracketVsDotTryIt4#index.js).
 * Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
-
-<section class="checks-for-understanding">
 
 <section class="note">  
 ### Key Point #4
