@@ -133,18 +133,18 @@ We can use bracket notation in our favor, by passing in the variable, like the e
 
 If we reassigned the value of lookupField and then ran the same command as above, we’d get a new output:
 ```js
-  lookupField = 'leaving';
+  lookupField = 'departing';
 
   console.log(phrases[lookupField]);
   //output: 'goodbye'
 ```
 
-Bracket notation gives us the ability to use variables to look up values in an object. This is especially helpful with the value of the variable changes.
+Remember: a variable represents some other value, and that value could be reassigned/change over time.  This means dot notation is not an option when using a variable to represent the object's key we are trying to access because to use dot notation, we must be able to type out the exact letter-by-letter name the key. Bracket notation gives us the ability to use variables to access values in an object. This is especially helpful with the value of the variable changes.  
 
 <section class="note">
 ### Key Point #3
 
-Whenever we are accessing an object's property using a variable, we must use bracket notation.
+We must use bracket notation whenever we are accessing an object's property using a *variable* or when the property's key is a *number* or includes a *symbol* or is *two words with a space*.
 </section>
 
 ## Applying What We've learned
@@ -161,8 +161,8 @@ Even if these concepts are new to you, you've actually been putting them into pr
 <section class="note">  
 ### Key Point #4
 
-When we use dot notation, the JS interpreter looks in the object for key that is an exact letter-by-letter match to whatever comes after the dot.  
-When we use bracket notation, the JS interpreter *evaluates* everything between the brackets, then looks in the object for a key that matches whatever the code between the brackets evaluated to.  
+When we use dot notation, the JS interpreter looks in the object for a key that is an exact letter-by-letter literal match to whatever comes after the dot.  
+When we use bracket notation, the JS interpreter *evaluates* everything between the brackets, *then* looks in the object for a key that matches whatever the code between the brackets evaluated to.  
 </section>  
 
 <section class="call-to-action">  
