@@ -162,7 +162,7 @@ Even if these concepts are new to you, you've actually been putting them into pr
 ### Key Point #4
 
 When we use dot notation, the JS interpreter looks in the object for a key that is an exact letter-by-letter literal match to whatever comes after the dot.  
-When we use bracket notation, the JS interpreter *evaluates* everything between the brackets, then looks in the object for a key that matches whatever the code between the brackets evaluated to.  
+When we use bracket notation, the JS interpreter *evaluates* everything between the brackets, *then* looks in the object for a key that matches whatever the code between the brackets evaluated to.  
 </section>  
 
 <section class="call-to-action">  
