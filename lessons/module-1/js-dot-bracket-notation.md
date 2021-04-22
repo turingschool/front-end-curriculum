@@ -133,7 +133,7 @@ We can use bracket notation in our favor, by passing in the variable, like the e
 
 If we reassigned the value of lookupField and then ran the same command as above, we’d get a new output:
 ```js
-  lookupField = 'leaving';
+  lookupField = 'departing';
 
   console.log(phrases[lookupField]);
   //output: 'goodbye'
