@@ -62,7 +62,7 @@ Your entire application will consist of one HTML page. You will have three JavaS
 
 1. A `player.js` file that contains a `Player` class.
 	* `Player` methods must include, _but are not limited to_:
-		1. `constructor` - properties should include: `name` (ex: `'hannah'`), `token` (ex: `'⭐️'`), `wins` (ex: `0`)
+		1. `constructor` - properties should include: `name` (ex: `'Human'`), `token` (ex: `'👩🏻'`), `wins` (ex: `0`)
 		2. `saveWinsToStorage`
 		3. `retrieveWinsFromStorage`
     4. `takeTurn`
