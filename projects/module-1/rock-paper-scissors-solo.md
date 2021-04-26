@@ -13,7 +13,6 @@ Now that you've got the main foundations down to build out a frontend applicatio
   * localStorage to persist data
   * event delegation to handle similar event listeners
 * Understand the difference between the data model and how the data is displayed on the DOM
-* Iterate through/filter DOM elements using for loops
 * Use your problem solving process to break down large problems, solve things step by step, and trust yourself to not rely on an outside "answer" to a logical challenge
 
 ## Solo Project Expectations
@@ -47,7 +46,7 @@ Notes:
 * A timeout is used after a completed game to reset the board.
 * No need to match colors or icons, but the overall layout should be the same. You can get as creative as you would like with your Rock Paper Scissors design!
 * This game is played by one user against a computer. The computer player should be an instantiation of Player and have the ability to make a random choice.
-* You'll need to make two versions of Rock, Paper, Scissors - "classic" and some variation. You can invent your own variation, or do some research on variations [here](https://www.wrpsa.com/different-variations-of-rock-paper-scissors/). Make sure you communicate the rules to your user!
+* You'll need to make two versions of Rock, Paper, Scissors - "classic" and some variation. The variation should include more than 3 options (the one in the video has 5). You can invent your own variation, or do some research on variations [here](https://www.wrpsa.com/different-variations-of-rock-paper-scissors/). Make sure you communicate the rules to your user!
 
 **Classic Rock Paper Scissors Rules**
 - Rock smashes scissors
