@@ -16,8 +16,8 @@ You will continue to add your weekly goals to that document every Monday through
 
 ## Gear Ups and Professional Development
 All PD sessions are required for repeaters. Only the following Gear Up sessions are optional:
-- Gear Up, 3/26
-- Gear Up, 4/23  
+- Gear Up, Week 1 - Unconcious Bias: 5/14
+- Gear Up, Week 5 - Community Gear Up: 6/11 
 
 Attendance for all other sessions is required.
 
