@@ -31,6 +31,7 @@ Your README should include the following, in this order:
 
 - Abstract at the top (A sentence or two describing the project)
 - A GIF of the working application
+- Technologies used
 - Install/Setup instructions
 
 ## Testing
@@ -43,11 +44,11 @@ Your testing suite should test all of the functionality of the game, including t
 * Class methods
 * Anything that updates class properties
 
-<section class="note">
+<!-- <section class="note">
 ### Note
 
 While not a major learning goal in this project, we do encourage that you start experimenting with destructuring especially with objects either in your implementation or testing code!  No need to force it if it doesn't work well, but you might find a couple of scenarios where it makes your code more readable.  This will be more of a focus in the next project where you'll have more opportunities!
-</section>
+</section> -->
 
 # Iterations
 
