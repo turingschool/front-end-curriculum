@@ -64,6 +64,13 @@ You're going to do some research on one of the 5 data types we are focusing on, 
 - **5 min:** group [makes chart](https://excalidraw.com/) to share takeaways
   - Keep in mind: What are possible values? Examples? Does this data type get commonly confused with something else? Why/when would developers use it? Provide an example of it being used in code!
 - **1 min:** each group presents to the class, while not presenting, you are taking notes on what you're learning from other groups
+
+Groups (based on breakout room number):
+- 1 + 6: Boolean
+- 2 + 7: `undefined`
+- 3 + 8: `null`
+- 4 + 9: Number
+- 5 + 10: String
 </section>
 
 
