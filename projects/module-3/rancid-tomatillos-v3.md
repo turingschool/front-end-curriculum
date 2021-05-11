@@ -23,6 +23,7 @@ Create a group Slack DM with both project partners and both instructors.
 
 In that DM, please share the following:  
 * Layouts/Wireframes sketches of your user interface
+* A link to 2-3 pieces of design inspiration that you will aim to mimic (use Dribbble, or even applications that you already use). Screenshots are also fine.
 * Group DTR
 * Project management tool (GitHub Projects, Trello, etc.) - be sure this is public so your instructors can view it
 * PR template your group agrees to follow for every PR submitted ([here are some instructions from GitHub on how to create this](https://help.github.com/en/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository))
