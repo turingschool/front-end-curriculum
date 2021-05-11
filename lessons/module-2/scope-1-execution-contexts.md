@@ -149,9 +149,10 @@ With a partner, take turns explaining how the following JavaScript code would be
 12 
 13 let beggingTime = 20;
 14
-15 begForTreats(beggingTime);
+15 console.log(begForTreats(beggingTime));
 16
-17 beggingTime = 30;
+17 beggingTime = 1;
+18 console.log(begForTreats(beggingTime))
 ```
 </section>
 
