@@ -1,5 +1,3 @@
-# What's Cookin'?
-
 ## Goals and Objectives
 
 - Implement ES6 classes that communicate to each other as needed
@@ -7,8 +5,13 @@
 - Create a user interface that is easy to use and displays information in a clear way **on multiple screens**
 - Write modular, reusable code that follows SRP (Single Responsibility Principle)
 - Implement a robust testing suite using TDD
+- Make network requests to API endpoints to retrieve and manipulate data
 
 In this project, you will be creating a recipe tracking / meal planning application that allows users to view their favorite recipes and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should be able to view a list of recipes, favorite their own recipes, and choose recipes to cook.
+
+## New Technologies
+- Fetch
+- [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'}
 
 <section class="note">
 ### Note
@@ -26,17 +29,47 @@ Feel free to use the above sites as inspiration for your UI, but note that there
 ## Timeline
 Dates and deadlines to be aware of:
 
-* **Monday, February 8th** - Submit the following to your PM BEFORE beginning to write code via Slack:
+* **Monday, May 17th** - Submit the following to your PM BEFORE beginning to write code via Slack:
 1. DTR (be specific about learning goals, schedules, and communication expectations ) 
 1. Project board
 1. Planned out class structure
 1. Wireframes
 1. 3 design inspirations (Please include links and details on what you're trying to re-create)
 
-* **Wednesday, February 17th** - Project due at 9PM.
-* **Thursday, February 18th** - Project evals.
+* **Tuesday, May 25th** - Project due at 9PM.
+* **Wednesday, May 26th** - Project demos due at 1PM.
 
 Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
+
+---
+
+### Working with Webpack
+This project is set up to use [Webpack](https://webpack.js.org/guides/getting-started/){:target='blank'}, a module bundler. It will take whatever code we write, and bundle it into a series of more efficient files that the browser can read (allowing us to use things like Sass, npm packages and ES6 `import` / `export` syntax).
+
+This [video](https://www.youtube.com/watch?v=GU-2T7k9NfI){:target='blank'} provides a nice overview of some things webpack lets us do out of the box, most of which is set up for you already.
+
+This [article](https://survivejs.com/webpack/what-is-webpack/){:target='blank'} provides some more detail into how Webpack works, and what the `webpack.config.js` file is doing (**don't mess with this file unless you're sure you need to -- feel free to ask before you change things**).
+
+<section class="note">
+### Important Notes
+
+Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
+
+1. You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ){:target='blank'} syntax
+  - Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.
+
+2. Webpack needs to know where to look for your files. Look [here](https://github.com/turingschool-examples/webpack-starter-kit#where-to-add-your-code){:target='blank'} for a description of where webpack is set up to look for your HTML, CSS, JS and image files. Some general points:
+  - You need to import images into the entrypoint file (usually `scripts.js` or `index.js`).
+  - You need to `import` you Sass/CSS files into the entrypoint file too
+  - Make sure HTML, JS and Sass/CSS files are all in the `/src` directory
+  - You have to `import` any required modules and code for tests into your test files
+
+
+3. While developing, run `npm start`. Webpack will create a live version of your site on a local server, where you can see your changes happen in real time. To access it, in your browser, navigate to the `localhost` address that your terminal gives you. Be aware, if you write a breaking change, your server may crash. The terminal will give you some error report about why the crash happened.
+
+
+4. Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
+</section>
 
 ---
 
@@ -50,19 +83,16 @@ For this project, you will need to use this [What's Cookin Starter Kit](https://
 
 There is no boilerplate for testing in the starter-kit repo. You will need to set up all of the tests yourself. Although, if you have run `npm install` in the setup instructions, then the tooling you need to start testing is already installed (`mocha` and `chai`). Refer to the testing lesson from week 1 as a guide to get started as well as the [mocha](https://mochajs.org/){:target='blank'} and [chai](https://www.chaijs.com/){:target='blank'} documentation pages.
 
-### Data
+### Endpoints
 
-The shape and structure of the data is outlined in the starter-kit repo. The data and values are all randomly generated -- don't read too much into why a certain user has certain data associated with them. A general overview of the data is:
+You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}.  You will need to clone this down and have it running in a separate tab in your terminal each time you run your client.  Here are the endpoints setup for this project:
 
-```
-users.js - a file with many users
-recipes.js - a file with many recipes
-ingredients.js - a file with many ingredients and their associated prices
-
-Users will be associated with recipes, which will in turn be associated with ingredients, via IDs
-```
-
----
+| Description | URL | Method | Required Properties for Request | Sample Successful Response |
+|----------|-----|--------|---------------------|-----------------|
+| Get all users |`http://localhost:3001/api/v1/users`| GET  | none | An array containing all users |
+|Get all ingredients |`http://localhost:3001/api/v1/ingredients` | GET | none | An array containing all ingredients |
+|Get all recipes | `http://localhost:3001/api/v1/recipes` | GET | none | An array containing all recipes |
+| Add/Remove Ingredients from a pantry |`http://localhost:3001/api/v1/users`| POST | `{ userID: <number>, ingredientID: <number>, ingredientModification: <number> }` | `{message: '"User # <userID> has 7 units of item # <ingredientID>"' }`|
 
 ## Project Iterations
 Each iteration has a "Data" section and "User Stories" section. Data deals with using the data to calculate something meaningful for the user. The user stories section deals with what to display on the page and what the user flow looks like. Unlike your week-1 project, the classes and method names are not completely drawn out for you.
