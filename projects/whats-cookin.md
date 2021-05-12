@@ -86,16 +86,6 @@ For this project, you will need to use this [What's Cookin Starter Kit](https://
 
 There is no boilerplate for testing in the starter-kit repo. You will need to set up all of the tests yourself. Although, if you have run `npm install` in the setup instructions, then the tooling you need to start testing is already installed (`mocha` and `chai`). Refer to the testing lesson from week 1 as a guide to get started as well as the [mocha](https://mochajs.org/){:target='blank'} and [chai](https://www.chaijs.com/){:target='blank'} documentation pages.
 
-### Endpoints
-
-You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}.  You will need to clone this down and have it running in a separate tab in your terminal each time you run your client.  Here are the endpoints setup for this project:
-
-| Description | URL | Method | Required Properties for Request | Sample Successful Response |
-|----------|-----|--------|---------------------|-----------------|
-| Get all users |`http://localhost:3001/api/v1/users`| GET  | none | An array containing all users |
-|Get all ingredients |`http://localhost:3001/api/v1/ingredients` | GET | none | An array containing all ingredients |
-|Get all recipes | `http://localhost:3001/api/v1/recipes` | GET | none | An array containing all recipes |
-<!-- | Add/Remove Ingredients from a pantry |`http://localhost:3001/api/v1/users`| POST | `{ userID: <number>, ingredientID: <number>, ingredientModification: <number> }` | `{message: '"User # <userID> has 7 units of item # <ingredientID>"' }`| -->
 
 ## Project Iterations
 Each iteration has a "Data" section and "User Stories" section. Data deals with using the data to calculate something meaningful for the user. The user stories section deals with what to display on the page and what the user flow looks like. Unlike your week-1 project, the classes and method names are not completely drawn out for you.
@@ -116,17 +106,10 @@ You may choose **ONE** of the following 3rd party libraries to incorporate into 
 
 ### Iteration 1 - Get Familiar with the Data and Recipes
 
-Checkout out the endpoints and explore the shape of the data (HINT: once you have the server running, you can pop the endpoint in your browser to check it out). Get a sense of what each property is and what the data nesting is like.
+Checkout the `data` directory and explore the data. Get a sense of what each property is and what the data nesting is like.
 
-Once you have looked over each endpoint, start with the your recipes. 
+Once you have looked over each data file, start with the `recipes.js` data file.
 
-<section class="note">
-### Fetch
-
-At this point, you won't have access to any data in your repo! You'll need to decide as a team when you will plan to implement [Fetch](https://frontend.turing.edu/lessons/module-2/network-requests-gets-and-posts.html){:target='blank'} to GET data from the server. If you decide to wait and get started with the Recipe functionality, you'll need to create some mock data to work with that matches the shape of the endpoint data. 
-
-
-</section>
 
 #### Recipe Data
 
@@ -190,19 +173,29 @@ Create classes and methods that can:
 
 ---
 
-### Iteration 3 - Pantries
+### Iteration 3 - Fetch Calls
+
+You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}.  You will need to clone this down and have it running in a separate tab in your terminal each time you run your client.  Here are the endpoints setup for this project:
+
+| Description | URL | Method | Required Properties for Request | Sample Successful Response |
+|----------|-----|--------|---------------------|-----------------|
+| Get all users |`http://localhost:3001/api/v1/users`| GET  | none | An array containing all users |
+|Get all ingredients |`http://localhost:3001/api/v1/ingredients` | GET | none | An array containing all ingredients |
+|Get all recipes | `http://localhost:3001/api/v1/recipes` | GET | none | An array containing all recipes |
+
+Once you've got fetch working on all three arrays, you can delete your hardcoded data file!
+
+### Iteration 4 - Pantries
 
 #### Pantry Data
 Create classes and methods that can:
 - Determine whether a user's pantry has enough ingredients to cook a given meal.
 - Determine the amount of missing ingredients still needed to cook a given meal, based on what's in the user's pantry.
-- Remove the ingredients used to cook a given recipe from a user's pantry.
 
 #### User Stories
 - As a user, I should be able to view what ingredients exist inside of my pantry.
 - As a user, I should be able to check my list of recipes to cook and see if my pantry has enough ingredients to cook a meal.
 - As a user, I should be told what ingredients are still needed if I don't have enough ingredients in my pantry to cook the recipe.
-- As a user, I should be able to cook a meal if I do have enough ingredients in my pantry.  As a result, cooking the meal should remove the ingredients from my pantry.
 
 ---
 
@@ -231,30 +224,15 @@ You are *expected* to test:
 You are *not expected* to test:
 
 * DOM manipulation / DOM manipulating methods (like `document.querySelector(...)`)
-
-<section class="note">
-### Note
-
-When you test a JavaScript class file, you need to use `module.exports` in your class file so the test can use the code - just like Mythical Creatures. However, in this project when you call that same class in the browser, the browser has no idea what `module` is. So your code crashes. To fix this, you'll want to include something like this in your class file (for each class file that you create):
-
-```js
-// Instead of:
-module.exports = someClassName;
-
-// You will need to use:
-if (typeof module !== 'undefined') {
-  module.exports = someClassName;
-}
-```
-</section>
+* Fetch calls
 
 ---
 
 ## Rubric
 
 ### Functional Expectations
-* 4: Application fulfills all requirements *as well as* an extension.
-* 3: Application fulfills all requirements.
+* 4: Application fulfills all requirements *as well as* an extension and/or iteration 4.
+* 3: Application fulfills all requirements of iteration 3.
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage.
 
