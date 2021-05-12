@@ -113,10 +113,10 @@ After running the code in the console that is pictured above, the text of the `h
 
 Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR) and complete the steps listed below, in the `JS` file of the CodePen.
 
-- Declare a variable `studentName` and assign it to the value of the element with the class of `student`
-- Declare a variable `schoolName` and assign it to the value of the `h3` element
-- Declare a variable `bestGrade` and assign it to the value of the element with a class of `grade-2`
-- Declare a variable `newData` and assign it to an object with keys of `studentName`, `schoolName`, and `bestGrade`, whose values are new strings with whatever information you want to display on the page instead.
+- Declare a variable `studentName` and assign the value of the element with the class of `student` to it 
+- Declare a variable `schoolName` and assign the value of the `h3` element to it 
+- Declare a variable `bestGrade` and assign the value of the element with a class of `grade-2` to it 
+- Declare a variable `newData` and assign an object with keys of `studentName`, `schoolName`, and `bestGrade` (whose values are new strings with whatever information you want to display on the page instead) to it
 - Change the `innerText` of the `studentName` variable to the `studentName` value from your `newData` object
 - Change the `innerText` of the `schoolName` variable to the `schoolName` value from your object
 - Change the `innerText` of the `bestGrade` variable to be the grade you gave your `bestGrade` key in your object
