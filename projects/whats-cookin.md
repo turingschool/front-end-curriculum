@@ -52,8 +52,9 @@ This [video](https://www.youtube.com/watch?v=GU-2T7k9NfI){:target='blank'} provi
 
 This [article](https://survivejs.com/webpack/what-is-webpack/){:target='blank'} provides some more detail into how Webpack works, and what the `webpack.config.js` file is doing (**don't mess with this file unless you're sure you need to -- feel free to ask before you change things**).
 
-<section class="note">
-### Important Notes
+
+<section class="answer">
+### Notes on Webpack
 
 Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
 
