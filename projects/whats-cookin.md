@@ -1,3 +1,5 @@
+# What's Cookin
+
 ## Goals and Objectives
 
 - Implement ES6 classes that communicate to each other as needed
