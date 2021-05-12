@@ -376,67 +376,6 @@ But what about media queries? There are a lot of [different approaches](https://
 One thing to note is that we can nest our media queries and use variables.
 </section>
 
-## Extend
-
-Another way to keep your code reuseable and simple is to make use of the `@extend` feature of Sass. Extend allows you to inherit properties from other selectors.
-
-```scss
-.message {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
-}
-
-.success {
-  @extend .message;
-  border-color: green;
-}
-
-.error {
-  @extend .message;
-  border-color: red;
-}
-
-.warning {
-  @extend .message;
-  border-color: yellow;
-}
-```
-
-Compiles to:
-
-```scss
-.message, .success, .error, .warning {
-  border: 1px solid #cccccc;
-  padding: 10px;
-  color: #333;
-}
-
-.success {
-  border-color: green;
-}
-
-.error {
-  border-color: red;
-}
-
-.warning {
-  border-color: yellow;
-}
-```
-
-<section class="note">
-### @extend vs @mixin
-
-You may have noticed that `@extend` and `@mixin` can be seen as accomplishing the same thing in a different way since they are both geared towards reusing styles across your project. A common question developers have with Sass is when you should choose to use one over the other, and why.
-</section>
-
-<section class="call-to-action">
-#### Paired Practice
-
-* Add an `extend` or two to your sandbox, and compare it to your mixin. Do you have a preference?
-</section>
-
 <hr />
 
 ## Colors
