@@ -63,8 +63,8 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 
 2. Webpack needs to know where to look for your files. Look [here](https://github.com/turingschool-examples/webpack-starter-kit#where-to-add-your-code){:target='blank'} for a description of where webpack is set up to look for your HTML, CSS, JS and image files. Some general points:
   - You need to import images into the entrypoint file (usually `scripts.js` or `index.js`).
-  - You need to `import` you Sass/CSS files into the entrypoint file too
-  - Make sure HTML, JS and Sass/CSS files are all in the `/src` directory
+  - You need to `import` your CSS files into the entrypoint file too
+  - Make sure HTML, JS and CSS files are all in the `/src` directory
   - You have to `import` any required modules and code for tests into your test files
 
 
