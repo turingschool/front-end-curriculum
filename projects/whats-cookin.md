@@ -95,7 +95,7 @@ You will no longer be receiving your data from a hardcoded data file, but rather
 | Get all users |`http://localhost:3001/api/v1/users`| GET  | none | An array containing all users |
 |Get all ingredients |`http://localhost:3001/api/v1/ingredients` | GET | none | An array containing all ingredients |
 |Get all recipes | `http://localhost:3001/api/v1/recipes` | GET | none | An array containing all recipes |
-| Add/Remove Ingredients from a pantry |`http://localhost:3001/api/v1/users`| POST | `{ userID: <number>, ingredientID: <number>, ingredientModification: <number> }` | `{message: '"User # <userID> has 7 units of item # <ingredientID>"' }`|
+<!-- | Add/Remove Ingredients from a pantry |`http://localhost:3001/api/v1/users`| POST | `{ userID: <number>, ingredientID: <number>, ingredientModification: <number> }` | `{message: '"User # <userID> has 7 units of item # <ingredientID>"' }`| -->
 
 ## Project Iterations
 Each iteration has a "Data" section and "User Stories" section. Data deals with using the data to calculate something meaningful for the user. The user stories section deals with what to display on the page and what the user flow looks like. Unlike your week-1 project, the classes and method names are not completely drawn out for you.
@@ -116,9 +116,17 @@ You may choose **ONE** of the following 3rd party libraries to incorporate into 
 
 ### Iteration 1 - Get Familiar with the Data and Recipes
 
-Checkout the `data` directory and explore the data (there is also an outline of the structure of the data in the README of the starter kit repo). Get a sense of what each property is and what the data nesting is like.
+Checkout out the endpoints and explore the shape of the data (HINT: once you have the server running, you can pop the endpoint in your browser to check it out). Get a sense of what each property is and what the data nesting is like.
 
-Once you have looked over each data file, start with the `recipes.js` data file.
+Once you have looked over each endpoint, start with the your recipes. 
+
+<section class="note">
+### Fetch
+
+At this point, you won't have access to any data in your repo! You'll need to decide as a team when you will plan to implement [Fetch](https://frontend.turing.edu/lessons/module-2/network-requests-gets-and-posts.html){:target='blank'} to GET data from the server. If you decide to wait and get started with the Recipe functionality, you'll need to create some mock data to work with that matches the shape of the endpoint data. 
+
+
+</section>
 
 #### Recipe Data
 
