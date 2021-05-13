@@ -19,8 +19,8 @@ Complete [this lesson on Statements, Expressions, and Operators](https://fronten
 - `Function` A predefined and reusable group of behavior
 - `Declare/Define` The initial writing of a function
 - `Call/Invoke` Running a function
-- `Parameters` The variables declared when a function is declared/defined
-- `Arguments` The variables passed to a function when it's called/invoked
+- `Parameters` The variables declared between the parenthesis when a function is declared/defined
+- `Arguments` The value passed to a function when it's called/invoked which becomes the value of the declared parameter.
 
 ## Functions
 
@@ -98,6 +98,10 @@ bakeCake("carrot", "cream cheese icing", "walnuts");
 ```
 
 What is returned? Could I call this function again but with different arguments?
+
+A good was to think of parameters and arguments is this:  
+* Parameters are the *placeholders* declared in the function declaration (similar to declaring a variable).  
+* Arguments are the *assigned values* for each parameter/placeholder which are passed in each time the function is invoked.  
 
 ## Functions, part II
 
