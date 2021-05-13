@@ -224,7 +224,7 @@ Choose one or more of these extensions for this iteration.
 _Note: Solving some of these problems may require modifying pre-existing code that was given to you_
 
 ***Use a project board to guide your workflow***
-Use a tool like GitHub pages or Trello to split up iteration items into small tasks.
+Use a tool like GitHub projects or Trello to split up iteration items into small tasks.
 
 ***Build out another study/flashcards dataset***
 Create a new dataset that is structured similarily to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file.. Update your application so that once the first `Round` is over (and thus, the `Game` is over), a new `Round` starts with the new dataset that you've created.
