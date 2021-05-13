@@ -202,8 +202,6 @@ Create classes and methods that can:
 ### Extensions
 _Choose at least one_
 * Implement one of the listed 3rd party libraries or one of your choosing with instructor approval.
-* Don't have enough ingredients in your pantry to cook a recipe?  Add a form to add the remaining ingredients needed!
-* Add functionality so that a user can cook more than one recipe at a time!
 * Favoriting recipes is nice, but implementing a rating system would be even more helpful for a user!  This could include a 5 star rating system, a way to leave reviews, etc!
 * You may also collaborate with instructors to personalize an extension for this project.
 
@@ -236,7 +234,7 @@ You are *not expected* to test:
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage.
 
-### Fundamental JavaScript & Style / OOP
+### Fundamental JavaScript & Style / OOP / Fetch
 * 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring. Application is expertly divided into logical components each with a clean, single responsibility.
 * 3: Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. Application is effectively broken into logical components, but violate the principle of SRP.
 * 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. Divisions of logic into classes are inconsistent or unclear.
