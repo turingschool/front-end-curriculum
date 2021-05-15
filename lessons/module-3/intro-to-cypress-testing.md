@@ -25,20 +25,44 @@ npm i
 npm start
 ```
 
-Once you have application running, experiment with the application and then examine the FE code to see how the application runs.  It's not important to understand every line of code, but take note of the various user flows and how the various API calls work.
+Once you have application running, use the application and then examine the FE code to see how the application runs. (The fake log-in information is located in [this file](https://github.com/turingschool-examples/feedback-loop-api/blob/main/mockData/users.js){:target='blank'}.) It's not important to understand every line of code, but take note of the various user flows and how the various API calls work.
+
+For example, you don't need to know how Router works; instead, use the application and see how the URL changes as you navigate through the website.
 </section>
 
 ## Learning Goals:
-* Understand what end-to-end tests are
-* Become familiar with what Cypress is and the tools available to it
+* Understand how acceptance testing & end-to-end testing differ from unit & integration testing
+* Become familiar with what Cypress is
 * Practice testing a React application with Cypress including:
-  * Filling out forms and switching of routes
+  * Filling out forms and switching routes
   * Happy and sad path user flows that require network requests
 
-## What are end-to-end tests?
-`End-to-end` tests add another layer of confidence to your testing by running your entire application including the client, API, database, and other services.  This helps boost a developer's confidence with their app ensuring that the **user flow** works correctly.  Although they can be expensive in the initial setup, they test how a user would interact with an application.
+## A little background
 
-This is the final layer that should be added in addition to `unit` and `integration` tests.  While these tests focus more on the code written and help pinpoint potential errors for the developer, `end-to-end` tests are useful for the end user.  Think about the various happy and sad path user flows your last project encompassed.  This could include the *happy paths* of displaying a list of movies or adding a movie to their favorites.  Maybe the route changes if a user clicks on a button.  There are also the *sad paths* to those user flows.  What if the movie has already been favorited?  What if a route doesn't exist?
+So far in your time at Turing, you've learned a lot about unit/integration testing. The paradigm you've learned so far is testing individual functions or classes (unit tests) to verify that they produce the same output every time, and the interactions between those functions/classes (integration tests).
+
+We haven't tested anything that's on the DOM - our whole testing perspective has been from the point of view of the developer. This makes sense - after all, tests are there to tell us if something in our codebase breaks!
+
+However, because the apps we build are meant to be used by, well, _users_, it's also important that we ensure that our apps work from their perspective!
+
+In this lesson, we're going to learn about **acceptance testing** and **end-to-end testing** (also known as E2E testing).
+
+## What are acceptance tests?
+
+In our User Stories lesson, we learned about describing user flows. We also learned about writing _acceptance criteria_. A user story describes the WHAT of a user flow: what is supposed to happen? Acceptance criteria describes the HOW of a user flow: how is that accomplished? 
+
+Acceptance testing ensures that the acceptance criteria were successfully implemented. It doesn't just manually call functions - it runs the actual application and walks through a user flow via the app UI. When we run acceptance tests, we use the client, and stub out (we'll learn about this later) our network requests and other services.
+
+You can think of testing complexity moving from unit testing to integration testing, from integration testing to acceptance testing.
+
+Consider testing a site like Twitter. When the developers build out the login functionality, it's mission critical that it works as expected in all cases, including obscure edge cases. Just testing the functions in isolation wouldn't be enough. For true confidence in an app, we need to test that the user experiences the expected user flow.
+
+Most of the tests we write in Cypress are going to be acceptance tests!
+
+## What are end-to-end tests?
+`End-to-end` ("E2E") tests add another layer of confidence to your testing by running your entire application including the client, API, database, and other services.  This helps boost a developer's confidence with their app ensuring that the **user flow** works correctly in the production environment (or something very similar to the production environment). Although they can be expensive in the initial setup, they test how a user would interact with an application.
+
+This is the final layer that should be added in addition to `unit` and `integration` tests.  While these tests focus more on the code written and help pinpoint potential errors for the developer, `acceptance` and `end-to-end` tests are useful for the end user.  Think about the various happy and sad path user flows your last project encompassed.  This could include the *happy paths* of displaying a list of movies or adding a movie to their favorites.  Maybe the route changes if a user clicks on a button.  There are also the *sad paths* to those user flows.  What if the movie has already been favorited?  What if a route doesn't exist?
 
 ##  What is Cypress?
 
@@ -58,7 +82,7 @@ Here are a list of major features pulled from the [documentation](https://docs.c
 * **Cross browser Testing:** Run tests within Firefox and Chrome-family browsers (including Edge and Electron) locally and optimally in a Continuous Integration pipeline.
 </section>
 
-<section class="note">
+<!-- <section class="note">
 ### Is this similar to Selenium?
 
 Although often compared to Selenium, another common automated testing framework that allows you to test your application across multiple browsers, Cypress has some distinct differences that makes it stand out. Below is a list of some key differences:
@@ -73,7 +97,7 @@ Although often compared to Selenium, another common automated testing framework 
 | Setup Complexity | Setup is simple with no additional downloads required | More complex due to the necessity of download browser-specific drivers |
 
 You'll note that Selenium seems to have more support and honestly, it has been around for longer.  However, Cypress is gaining a significant amount of support in recent years and has some distinct advantages including it runs in the same run loop as the app, it's built on a Node server process, and it allows you to read / alter web traffic giving you the ability to modify everything that comes in and out of the browser.  You can read more about the differences and why Cypress is becoming a major game changer in the industry [here](https://docs.cypress.io/guides/overview/key-differences.html#Debuggability){:target='blank'}.
-</section>
+</section> -->
 
 <section class="call-to-action">
 ### Enough Talk Already!
@@ -99,31 +123,44 @@ Let's experiment ourselves and see how great Cypress is firsthand.  Using the ap
 ```js
 {
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress": "./node_modules/.bin/cypress open"
   }
 }
 ```
 
-* Then run `npm run cypress:open`
+* Then run `npm run cypress`
 </section>
 
 ## Writing our first test!
 
-You might be overwhelmed by the number of directories & files added.  For now, let's focus on the newly added `integration` directory living inside of the `Cypress` directory.  You may delete the `examples` directory since these are just examples of the various ways you can test.
+You might be overwhelmed by the number of directories & files added.  For now, let's focus on the newly added `integration` directory living inside of the `Cypress` directory.  **Delete the `examples` directory since these are just examples of the various ways you can test.**
 
-Let's add a new file to the `integration` directory that will represent our application called `feedback_loop_spec.js`.
+As we consider what we will be testing, let's consider a few ways to set up our files.
 
-Inside we'll write a dummy test to make sure things are hooked up correctly.
+We could make one giant file and test absolutely everything there: `feedback_loop_spec.js`
+
+But it's probably more maintainable to group up our related user flows. 
+
+Let's create a few files in the `integration` directory (located inside the `cypress` directory):
+- `login_spec.js`
+- `get_feedback_spec.js`
+- `post_feedback_spec.js`
+
+Notice that each of these describes actions tied to our data/server/network requests. When viewing feedback from coworkers, there are several different user flows. But they all involve GETTING feedback data from the back end.
+
+Figuring out how to group user flows/stories can be tricky, and ultimately there are no hard-and-fast rules about how to do so. Over time, you'll develop a sense of what to put together, just like how you are learning what to break out into a React component and what to leave as is. And, of course, these conventions change from team to team. 
+
+Inside `login_spec.js`, we'll first write a dummy test to make sure things are hooked up correctly.
 
 ```js
-describe('Feedback Loop', () => {
+describe('Feedback Loop login flows', () => {
   it('Should confirm that true is equal to true', () => {
     expect(true).to.equal(true)
   });
 });
 ```
 
-Move over to the [Cypress Test Runner](https://docs.cypress.io/guides/core-concepts/test-runner.html#Overview){:target='blank'} and click on the `feedback_loop_spec.js` and prepare to be amazed!  Did it pass?  Look at the [Command Log](https://docs.cypress.io/guides/core-concepts/test-runner.html#Command-Log){:target='blank'} and notice the assertion being made.  Then try changing `true` to `false` and see if it fails.
+Move over to the [Cypress Test Runner](https://docs.cypress.io/guides/core-concepts/test-runner.html#Overview){:target='blank'} and click on the `login_spec.js` and prepare to be amazed!  Did it pass?  Look at the [Command Log](https://docs.cypress.io/guides/core-concepts/test-runner.html#Command-Log){:target='blank'} and notice the assertion being made.  Then try changing `true` to `false` and see if it fails.
 
 <section class="note">
 ### Note the Similarities
@@ -168,7 +205,9 @@ You might notice that your test will fail trying to load your site.  This is bec
 ### Possible Solution  
 
 ```js
-describe('Feedback Loop', () => {
+// login_spec.js
+
+describe('Feedback Loop login', () => {
   it('Should be able to visit the page and render the correct elements', () => {
     cy.visit('http://localhost:3000')
       .contains('Feedback Loop').get('form').contains('Please Sign In');
