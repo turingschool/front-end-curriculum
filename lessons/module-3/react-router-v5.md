@@ -22,7 +22,8 @@ module: 3
 * `match` A match object contains information about how a \<Route path\> matched the URL.
 
 <section class="checks-for-understanding">
-## Prework
+## Prework  
+ 
 Before the lesson, complete the [prework](https://gist.github.com/letakeane/3ba8fce0958b12cf1a48fe6b4ff2a783)
 </section>
  
