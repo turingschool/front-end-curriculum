@@ -24,7 +24,7 @@ module: 3
 <section class="checks-for-understanding">
 ## Prework  
  
-Before the lesson, complete the [prework](https://gist.github.com/letakeane/3ba8fce0958b12cf1a48fe6b4ff2a783)
+Before the lesson, complete the [prework](https://gist.github.com/letakeane/3ba8fce0958b12cf1a48fe6b4ff2a783){:target='blank'}.
 </section>
  
 ## React Router
