@@ -41,7 +41,7 @@ Then, as a team:
 * Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the following links:
   - the forked GitHub repo
   - the GitHub Pages deployed site
-    - Instructions for deploying: Repo Settings >> Pages >> Select the `main` branch as your Source branch >> Save >> Send us the URL they give you in the pop up that says "Your site is ready to be published at <URL>"
+    - Instructions for deploying: Repo Settings >> Pages >> Select the `main` branch as your Source branch >> Save >> Send us the URL they give you in the pop up that says "Your site is ready to be published at [URL]"
 * Add all teammates and your assigned instructor as collaborators to your forked repository
 
 ## Progression
