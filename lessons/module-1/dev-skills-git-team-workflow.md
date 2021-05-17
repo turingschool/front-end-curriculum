@@ -61,7 +61,7 @@ tags: git, github
 - Partner merges your branch into main
 - Repeat
 
-#### Want a more thorough code review?
+#### Advanced: Want a more thorough code review?
 When your teammate asks for a code review, you can review the code in GH, but that makes it hard to actually run and test the code. To get the code to your local machine, go through these steps:
 - After the PR is opened by your partner, run `git fetch` on your machine. This will give you access to all of the remote branches.
 - Run `git checkout [name-of-partner's-branch]` and you should now have the code from the branch that your partner is trying to merge into main
