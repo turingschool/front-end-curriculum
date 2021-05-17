@@ -23,7 +23,7 @@ module: 3
 
 <section class="checks-for-understanding">
 ## Prework
-Before the lesson, complete the [prework](https://gist.github.com/khalidwilliams/aedcaedddc30f598ae14ff86be633360)
+Before the lesson, complete the [prework](https://gist.github.com/letakeane/3ba8fce0958b12cf1a48fe6b4ff2a783)
 </section>
  
 ## React Router
