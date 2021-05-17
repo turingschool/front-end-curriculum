@@ -20,7 +20,7 @@ tags: git, github
 2. Checkout to a feature branch (`git checkout -b [feature/branch-name]`)
 3. Do work
 4. Commit frequently (`git status`, `git diff`, `git add [file-name]`, `git commit -m '[Message]'`)
-  * repeat until feature complete
+  * Repeat until feature is complete
 5. Before pushing your branch, make sure you're up to date with the remote main branch
   - `git checkout main`
   - `git pull origin main`
