@@ -184,10 +184,11 @@ This is great and all but let's think about what we actually need to test.  Reme
 * As a user, I will receive an error message that my email and password don't match if I submit incorrect `email` and `password` inputs.  **Sad Path**
 </section>
 
-<section class="call-to-action">
 ### Testing Our First User Flow
 
-**User Story:** As a user, I should be able to visit `http://localhost:3000` and see a title & form displayed.
+Now that we've identified some user flows, let's get to testing (finally)! First, let's focus on this user flow:
+
+**As a user, I should be able to visit `http://localhost:3000` and see a title & form displayed.**
 
 * Write a test that asserts that a user can visit `http://localhost:3000` using the [visit](https://docs.cypress.io/api/commands/visit.html#Syntax) command.
 * In the same `it` block, check to make sure that our site can [get](https://docs.cypress.io/api/commands/get.html#Syntax){:target='blank'} a form and that it [contains](https://docs.cypress.io/api/commands/contains.html){:target='blank'} the correct text on the page!
@@ -196,13 +197,11 @@ This is great and all but let's think about what we actually need to test.  Reme
 <section class="note">
 ### Note
 
-You might notice that your test will fail trying to load your site.  This is because Cypress is actually trying to visit your page, but your server is not running.  Make sure your React server is running in a separate tab on your terminal!
+You might notice that your test fails when trying to load your site. This is because Cypress is actually trying to visit your page, but your server is not running. Make sure your React server is running in a separate tab on your terminal! You do not need to have the API server running, though.
 </section>
-</section>
-
 
 <section class="answer">
-### Possible Solution  
+### Possible Solution - challenge yourself to try before looking!
 
 ```js
 // login_spec.js
@@ -220,9 +219,6 @@ describe('Feedback Loop login', () => {
 Note that we can chain multiple methods to make multiple assertions!
 </section>
 
-<section class="call-to-action">
-### Let's Test Another User Flow
-
 Before starting our next test, let's add in the following block:
 
 ```js
@@ -233,21 +229,22 @@ Before starting our next test, let's add in the following block:
 
 This helps to ensure that we start anew before each test.  A [best practice](https://docs.cypress.io/guides/references/best-practices.html#Having-tests-rely-on-the-state-of-previous-tests){:target='blank'} is that tests should always be able to run independently from one another and *still pass*.
 
-**User Story:** As a user, I can select different inputs and fill them out.
+**User flow to test:** I can select different inputs and fill them out.
 
 * Experiment with [type](https://docs.cypress.io/api/commands/type.html){:target='blank'} and [should](https://docs.cypress.io/api/commands/should.html#Syntax){:target='blank'} as you write a test that selects the `Email` and `Password` inputs and fills them with the corresponding values, `leta@turing.io` and `keane20`.  Assert that they have the correct values.
 
 Here is a link to [commonly used assertions](https://docs.cypress.io/guides/references/assertions.html#Common-Assertions) in Cypress!
 
-**User Story:** As a user, I will receive an error message when I click the Submit button without filling out both inputs. 
+**User flow to test:** I will receive an error message when I click the Submit button without filling out both inputs. 
 
 * Write another test that asserts an error message is displayed when the Submit button is [clicked](https://docs.cypress.io/api/commands/click.html){:target='blank'} without filling both inputs.
-</section>
 
 <section class="note">
 ### Did You Know?
 
 In the test runner, you can actually hit `command + option + i` to open up your DevTools!  Instead of looking at your code, use your DevTools to find the necessary elements you need to query.
+
+To add the React Dev Tools to your cypress browser window, take a look at [this blog post](https://www.cypress.io/blog/2020/01/07/how-to-load-the-react-devtools-extension-in-cypress/){:target='blank'}.
 </section>
 
 <section class="answer">
@@ -270,7 +267,6 @@ In the test runner, you can actually hit `command + option + i` to open up your 
 ```
 </section>
 
-<section class="call-to-action">
 ### Writing tests involving network requests
 
 **User Story:** As a user, I can fill out the `email` and `password` inputs and click the Submit button and be directed to a different URL.
@@ -287,8 +283,7 @@ There are some downsides however:
 * This can slow the performance of your tests as a result of doing real network requests.
 * It is also more difficult to test edge cases.
 
-For now, let's experiment with [stubbing](https://docs.cypress.io/guides/guides/network-requests.html#Stub-Responses){:target='blank'} and [intercepting](https://docs.cypress.io/api/commands/intercept.html#Comparison-to-cy-route){:target='blank'} the response.  Although both types of tests are important, stubbing is much more common and allows you to control the response body, status, and headers while also making your tests more performant.
-</section>
+For now (and throughout Mod 3), we will instead use [stubbing](https://docs.cypress.io/guides/guides/network-requests.html#Stub-Responses){:target='blank'} and [intercepting](https://docs.cypress.io/api/commands/intercept.html#Comparison-to-cy-route){:target='blank'} to control our network responses. Although both types of tests are important, stubbing is much more common and allows you to control the response body, status, and headers while also making your tests more performant.
 </section>
 
 <section class="answer">
@@ -316,13 +311,11 @@ Note that we are just intercepting the `POST` request for logging in and mocking
 All we need to worry about is that our URL has updated to the page we expect to view when we are logged in.
 </section>
 
-<section class="call-to-action">
 ### Testing the Sad Path to a Network Request
 
-**User Story:** As a user, I will receive an error message that my email and password don't match if I submit incorrect `email` and `password` inputs.
+**User flow to test:** I will receive an error message that my email and password don't match if I submit incorrect `email` and `password` inputs.
 
 * Take what you learned from the exercise to **stub** a `401` response if a user fails to login.  Assert that a new error message is displayed.
-</section>
 
 <section class="answer">
 ### Solution  
