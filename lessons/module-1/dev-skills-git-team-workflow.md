@@ -16,7 +16,7 @@ tags: git, github
 6. All team members should clone the repo to their local machines (don't fork!)
 
 #### General Workflow:
-1. Start on main branch(`git checkout main`)
+1. Start on main branch (`git checkout main`)
 2. Checkout to a feature branch (`git checkout -b [feature/branch-name]`)
 3. Do work
 4. Commit frequently (`git status`, `git diff`, `git add [file-name]`, `git commit -m '[Message]'`)
