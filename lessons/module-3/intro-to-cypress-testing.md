@@ -143,8 +143,8 @@ But it's probably more maintainable to group up our related user flows.
 
 Let's create a few files in the `integration` directory (located inside the `cypress` directory):
 - `login_spec.js`
-- `get_feedback_spec.js`
-- `post_feedback_spec.js`
+- `dashboard_spec.js`
+- `form_spec.js`
 
 Notice that each of these describes actions tied to our data/server/network requests. When viewing feedback from coworkers, there are several different user flows. But they all involve GETTING feedback data from the back end.
 
@@ -210,7 +210,9 @@ You might notice that your test will fail trying to load your site.  This is bec
 describe('Feedback Loop login', () => {
   it('Should be able to visit the page and render the correct elements', () => {
     cy.visit('http://localhost:3000')
-      .contains('Feedback Loop').get('form').contains('Please Sign In');
+      .contains('Feedback Loop')
+      .get('form')
+        .contains('Please Sign In');
   });
 });
 ```
@@ -294,11 +296,7 @@ For now, let's experiment with [stubbing](https://docs.cypress.io/guides/guides/
 
 ```js
   it('should be able to fill out the email and password and click Submit, directing the user to a different page', () => {
-    cy.intercept({
-        method: 'POST',
-        url: 'http://localhost:3001/api/v1/login'
-      },
-      {
+    cy.intercept('POST', 'http://localhost:3001/api/v1/login', {
         statusCode: 201,
         body: {
           id: 2,
@@ -306,22 +304,16 @@ For now, let's experiment with [stubbing](https://docs.cypress.io/guides/guides/
           name: "Leta Keane"
         }
       })
-      .get('input[type="email"]')
-      .type('leta@turing.io')
-      .get('input[type="password"]')
-      .type('keane20')
+      .get('input[type="email"]').type('leta@turing.io')
+      .get('input[type="password"]').type('keane20')
       .get('button').click()
       .url().should('include', '/dashboard')
   });
 ```
 
-Note that we are just intercepting the `POST` request for logging in and mocking out what the expected response would look like.  You can even add a log in your `apiCalls.js` file and track the response there as well.  Although our dashboard is blank because we haven't mocked out the other network requests, this is something we could do later on.
-</section>
+Note that we are just intercepting the `POST` request for logging in and mocking out what the expected response would look like. Our dashboard is blank because we haven't mocked out the other network requests; this is something we'll test later on in our dashboard spec.
 
-<section class="note">
-### Note
-
-Many of the projects you will be working on often require that you load a significant amount of data.  To take the above example to the next step, we would need to load a user's teammates.  To help with readability of our tests, it would be good to use a [fixture](https://docs.cypress.io/api/commands/fixture.html#Syntax){:target='blank'} to load a fixed set of data from another file. 
+All we need to worry about is that our URL has updated to the page we expect to view when we are logged in.
 </section>
 
 <section class="call-to-action">
@@ -360,7 +352,7 @@ Once again we have intercepted the `POST` request, but this time changed the sta
 </section>
 
 <section class="note">
-### Note
+### Handy `should` arguments cheatsheet
 
 Take note of the different arguments passed through `should` when checking the values of an element on the page.  
 
@@ -369,16 +361,207 @@ Take note of the different arguments passed through `should` when checking the v
 * **Other DOM elements:** `.should('contain', [some text]')`.
 </section>
 
-<section class="call-to-action">
-### Just the beginning
+## Testing the Dashboard view
 
-This is just the beginning to testing with Cypress, but hopefully it gives you more context to explore more of the functionality within this application.  The [documentation](https://docs.cypress.io/api/api/table-of-contents.html){:target='blank'} Cypress offers is a great place to start as you become more and more proficient in testing.  With time, you can even drive your implementation through TDD with Cypress.
+Let's get a little more practice with intercepting network requests, by testing our Dashboard view.
+
+In our `dashboard_spec.js` file, let's pseudocode the user flows we should be testing.
+
+- After I login successfully, I should see the dashboard, complete with feedback from my teammates, as well as seeing teammates I have/haven't left feedback for
+
+As you can see by digging through `App.js` and `Dashboard.js`, the way this code is constructed, there are no error messages when there is no appropriate user data. This is probably something we should fix in the future, but for now, we'll only worry about testing the happy path.
+
+### Automating our login
+
+As we saw in our `login_spec.js` file, logging in takes a few steps. We have to find the inputs, type the appropiate data in, and click our login button.
+
+We can actually automate this process by creating a custom [Cypress command](https://docs.cypress.io/api/cypress-api/custom-commands){:target='blank'}.
+
+<section class="note">
+### Caution
+
+In today's example, we're going to create a command to login to the dashboard by using our app's UI. This is actually an anti-pattern. In `login_spec.js`, we already tested that our login UI works! By creating a command that does this same thing, we're simply creating redundant code that does nothing to make us feel more confident about our code.
+
+In complex applications with dozens or hundreds of user flows to test, all of which depend on first being logged in, having Cypress go through the UI to login (aka finding and typing into form fields, clicking buttons, waiting for new pages to render, etc) would make our tests take FOREVER to run.
+
+We are forced to use the app's UI to login today because of the way we've written our app - this is a GREAT example of how when our tests are difficult, it indicates that perhaps we should refactor our implementation code. Perhaps instead of having our login form directly set the state of App with a user, and all the results of the subsequent network requests listed in `updateUser`, we could set the user info in localStorage and rely on componentDidMount to conduct the rest of the fetches. That would allow us to use a custom command to just put the user data in localStorage, rather than having to go through the rigamarole of filling in fields and stubbing the POST request.
+
+To learn about creating a custom login command that does not have to go through the UI of an app, you can watch [this conference talk](https://youtu.be/5XQOK0v_YRE?t=925) from the creator of Cypress. The video starts partway through, and shows you the creation of a custom command.
 </section>
+
+Inside the `cypress` directory, you'll find another directory called `support`. Inside that are two files:
+- `index.js`
+- `commands.js`
+
+Before we replace the commented out code in `commands.js`, let's take a look at the `App.js` file and see what happens when we click our login button.
+
+1. We fetch our teammate information (populates the right-hand sidebar of the app)
+1. We fetch our feedback (populates the left-hand main page and shows us the feedback our teammates have left for us)
+1. We get additional ifo (if necessary)
+1. We set state with the new information
+
+This means our new command will need to:
+
+1. stub our POST network request to login
+1. stub our GET network request to get our teammates
+1. stub our GET network request to get our feedback
+1. find the form inputs, fill them out, and click the button, redirecting us to the `/dashboard` page
+
+Research the [Cypress docs](https://docs.cypress.io/api/cypress-api/custom-commands){:target='blank'} and see what you can come up with!
+
+<section class="answer">
+### Try your best before you peek!
+
+Our command might look something like this:
+
+```js
+// commands.js
+
+Cypress.Commands.add('login', () => {
+  const baseURL = 'http://localhost:3001/api/v1';
+
+  // stub our login in network request
+  cy.intercept('POST', `${baseURL}/login`, {
+    statusCode: 201,
+      body: {
+        id: 2,
+        image: "https://ca.slack-edge.com/T029P2S9M-U37MJAV0T-007ccf2f5eb2-512",
+        name: "Leta Keane"
+      }
+  });
+
+  // stub our teammate network request
+  cy.intercept(`${baseURL}/users/2/teammates`, {
+      "teammates": [
+        {
+          email: "hannah@turing.io",
+          id: 1,
+          image: "https://ca.slack-edge.com/T029P2S9M-UPE0QSWEQ-d4bebe6f4d88-512",
+          name: "Hannah Hudson",
+          delivered: false
+        },
+        {
+          email: "khalid@turing.io",
+          id: 3,
+          image: "https://ca.slack-edge.com/T029P2S9M-UDR1EJKFS-9351230a5443-512",
+          name: "Khalid Williams",
+          delivered: true
+        }
+      ]
+    });
+
+  // stub our feedback network request
+  cy.intercept(`${baseURL}/users/2/feedback`, {
+    feedback: [
+      {
+        feedback: "Your feedback game is TOO strong.",
+        senderId: 4,
+        receiverId: 2
+      },
+      {
+        feedback: "I appreciate your positive energy and how hard you work in supporting both students and other instructors alike.",
+        senderId: 11,
+        receiverId: 2
+      }
+    ]
+  });
+  
+  // Fill in our UI to trigger the network requests and send us to /dashboard
+  cy.visit('http://localhost:3000/')
+    .get('input[name=email]').type('leta@turing.io')
+    .get('input[name=password]').type('keane20')
+    .get('button').click()
+})
+```
+</section>
+
+Let's see this in action. In our test file `dashboard_spec.js`, write a `describe` block with an `it` block that checks to see the title of the page. Use a `beforeEach` to call the custom login command.
+
+<section class="answer">
+### Try it before looking here
+
+One possible solution:
+
+```js
+describe('Dashboard view', () => {
+
+  beforeEach(() => {
+    cy.login();
+  })
+
+  it('should render the title', () => {
+    cy.contains('h1', 'Feedback Loop');
+  });
+});
+```
+</section>
+
+Now that that is written, run this spec **(hint: you can run a single spec file at a time)**. 
+
+We can see two pieces of feedback and two teammates rendered.
+
+<section class="call-to-action">
+### Try it yourself
+
+Now try to write more into this test to find and verify the rest of the information on the page: the two pieces of feedback, and the two teammates.
+</section>
+
+<section class="answer">
+### Try it before looking here
+
+One possible solution:
+
+```js
+describe('Dashboard view', () => {
+
+  beforeEach(() => {
+    cy.login();
+  })
+
+  it('should render the title', () => {
+    cy.contains('h1', 'Feedback Loop');
+    cy.contains('.feedback', 'Scott Ertmer')
+    cy.contains('.feedback', 'Your feedback game is TOO strong');
+    cy.contains('.feedback', 'Travis Rollins');
+    cy.contains('.feedback', 'I appreciate your positive energy and how hard you work in supporting both students and other instructors alike.');
+    cy.contains('.team', 'Hannah Hudson');
+    cy.contains('.team', 'Khalid Williams');
+  });
+});
+```
+</section>
+
+### Note about mocking data
+
+Many of the projects you will be working on often require that you load a significant amount of data. To take the above example to the next step, we would need to load a user's teammates.  To help with readability of our tests, it would be good to use a [fixture](https://docs.cypress.io/api/commands/fixture.html#Syntax){:target='blank'} to load a fixed set of data from another file. 
+
+### Testing the form
+
+See what you can do on your own! 
+
+Here's a `beforeEach` to get you started:
+
+```js
+beforeEach(() => {
+    cy.login();
+
+    // This selects the teammate who we have not given feedback to
+    cy.get(".highlight").click();
+  });
+```
+
+And let's make a list of functionality to test:
+1. "should show the feedback form"
+1. "should be able to fill in the feedback form"
+1. "should be able to submit the form and see confirmation message"
+1. "should be able to return to the dashboard & see status change"
+
+The [documentation](https://docs.cypress.io/api/api/table-of-contents.html){:target='blank'} that Cypress offers is a great place to start as you become more and more proficient in testing.  With time, you can even drive your implementation through TDD with Cypress.
 
 <section class="checks-for-understanding">
 ### Exit Ticket
 
-* What is end-to-end testing and how is it different from unit and integration tests?
+* What is acceptance testing and how is it different from unit and integration tests?
 * What is Cypress and how is it different from other testing frameworks you've used in the past?
-* Should you include tests that utilize the API or should you stub the network requests?  Is there an argument for both?
+* Should you include tests that utilize the API (end-to-end) or should you stub the network requests?  Is there an argument for both?
 </section>
