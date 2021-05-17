@@ -458,6 +458,24 @@ Cypress.Commands.add('login', () => {
       }
     ]
   });
+
+  // stub Scott's user data
+  cy.intercept("GET", "http://localhost:3001/api/v1/users/4", {
+    id: 4,
+    name: "Scott Ertmer",
+    image: "https://ca.slack-edge.com/T029P2S9M-UJ910QEJF-7244f37f7e12-512",
+    email: "scott@turing.io",
+    password: "ertmer20",
+  });
+
+  // stub Travis's user data
+  cy.intercept("GET", "http://localhost:3001/api/v1/users/11", {
+    id: 11,
+    name: "Travis Rollins",
+    image: "https://ca.slack-edge.com/T029P2S9M-U4R41TZD2-7661f06e8c71-512",
+    email: "travis@turing.io",
+    password: "rollins20",
+  });
   
   // Fill in our UI to trigger the network requests and send us to /dashboard
   cy.visit('http://localhost:3000/')
