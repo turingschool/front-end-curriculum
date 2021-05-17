@@ -54,6 +54,13 @@ tags: git, github
 - *If you are ready to add a new feature:*
   - Start back at step 1!
 
+#### Short and Sweet Version:
+- Make sure your main branch is updated with the remote main branch
+- Checkout to a branch when coding
+- Push up your branch when it's complete
+- Partner merges your branch into main
+- Repeat
+
 #### Want a more thorough code review?
 When your teammate asks for a code review, you can review the code in GH, but that makes it hard to actually run and test the code. To get the code to your local machine, go through these steps:
 - After the PR is opened by your partner, run `git fetch` on your machine. This will give you access to all of the remote branches.
