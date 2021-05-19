@@ -129,7 +129,7 @@ Let's break down what's happening in the CodePen above:
 
 <section class="call-to-action">
 ### Paired Practice
-Examine [this code](https://https://codepen.io/hfaerber/pen/gOmLBgJ) and talk about the following questions:
+Examine [this code](https://codepen.io/hfaerber/pen/gOmLBgJ) and talk about the following questions:
 1. Why do you think "Summer" is appearing in the screen, when "Fall" is in the original HTML?
 2. Why isn't the button working?
 </section>
