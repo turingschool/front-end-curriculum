@@ -129,7 +129,7 @@ Let's break down what's happening in the CodePen above:
 
 <section class="call-to-action">
 ### Paired Practice
-Examine [this code](https://codepen.io/hannahhudson/pen/RwoGzXe) and talk about the following questions:
+Examine [this code](https://https://codepen.io/hfaerber/pen/gOmLBgJ) and talk about the following questions:
 1. Why do you think "Summer" is appearing in the screen, when "Fall" is in the original HTML?
 2. Why isn't the button working?
 </section>
@@ -144,6 +144,12 @@ button.addEventListener('click', function() {
 ```  
 
 Too many anonymous functions can lead to unclear and hard to follow code. The important thing to remember is that you should only be reaching for and anonymous function when you need it. **If there are no arguments to be passed in, you don't need an anonymous function.**
+
+<section class="call-to-action">
+### Think About It  
+What if I wanted to invoke 3 functions on button click?  
+What if you need to use logic to determine which function should be invoked on an event?   
+</section>  
 
 ## Suggested re-teaching practice
 
