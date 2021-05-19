@@ -125,34 +125,31 @@ Let's break down what's happening in the CodePen above:
   - Declare a variable, `color` that takes the value the user selected and stores it
   - Applies an inline style, `backgroundColor` with that newly selected color
 
-## Anonymous and Helper Functions
+## Anonymous Functions
 
 <section class="call-to-action">
 ### Paired Practice
-Examine [this code](https://codepen.io/hannahhudson/pen/RwoGzXe) and talk about the following questions:
+Examine [this code](https://codepen.io/hfaerber/pen/gOmLBgJ) and talk about the following questions:
 1. Why do you think "Summer" is appearing in the screen, when "Fall" is in the original HTML?
 2. Why isn't the button working?
 </section>
 
-Remember that the second argument the `addEventListener` accepts is a function name, not an invoked function. This presents challenges when we need to pass parameters to that function. There are two options for how to approach this issue.
+Remember that the second argument the `addEventListener` accepts is a function name, not an invoked function. This presents challenges when we need to pass parameters to that function.  
 
 You can use an **anonymous function**:  
 ```js
 button.addEventListener('click', function() {
   changeSeason('fall');
 });
-```
+```  
 
-Or you can use a **helper function**:  
-```js
-button.addEventListener('click', updatePage);
+Too many anonymous functions can lead to unclear and hard to follow code. The important thing to remember is that you should only be reaching for and anonymous function when you need it. **If there are no arguments to be passed in, you don't need an anonymous function.**
 
-function updatePage() {
-  changeSeason('fall');
-}
-```
-
-Both approaches have pros and cons. Helper functions can seem like too much code for a simple issue, while too many anonymous functions can lead to unclear and hard to follow code. The important thing to remember is that you should only be reaching for one of these options when you need it. **If there are no arguments to be passed in, you don't need a helper function or an anonymous function.**
+<section class="call-to-action">
+### Think About It  
+What if I wanted to invoke 3 functions on button click?  
+What if you need to use logic to determine which function should be invoked on an event?   
+</section>  
 
 ## Suggested re-teaching practice
 
