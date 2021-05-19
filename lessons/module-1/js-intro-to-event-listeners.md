@@ -55,7 +55,7 @@ Open up a webpage that you often visit. Maybe it's a social media page, maybe it
 
 Like we mentioned earlier, it's pretty common for a user to experience helpful feedback from an application after they've taken some sort of action.
 
-Take for example the "heart" icon on CodePen. CodePen has 4 levels of "love" - 0, 1, 2, and 3. Each time a heart is clicked, the user increments their love up by one. (Until the click when it is read and at level 3 - at that point, it goes back to 0). While the "love leveling" is a bit confusing, this is still a great example of **styles changing based on user interaction**.
+Take for example the "heart" icon on CodePen. CodePen has 4 levels of "love" - 0, 1, 2, and 3. Each time a heart is clicked, the user increments their love up by one. (Until the click when it is red and at level 3 - at that point, it goes back to 0). While the "love leveling" is a bit confusing, this is still a great example of **styles changing based on user interaction**.
 
 <img class="medium" src="./assets/images/dom-manipulation-1/codepen-heart-click.gif">
 
