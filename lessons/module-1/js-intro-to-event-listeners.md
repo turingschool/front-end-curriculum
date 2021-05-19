@@ -55,7 +55,7 @@ Open up a webpage that you often visit. Maybe it's a social media page, maybe it
 
 Like we mentioned earlier, it's pretty common for a user to experience helpful feedback from an application after they've taken some sort of action.
 
-Take for example the "heart" icon on CodePen. CodePen has 4 levels of "love" - 0, 1, 2, and 3. Each time a heart is clicked, the user increments their love up by one. (Until the click when it is read and at level 3 - at that point, it goes back to 0). While the "love leveling" is a bit confusing, this is still a great example of **styles changing based on user interaction**.
+Take for example the "heart" icon on CodePen. CodePen has 4 levels of "love" - 0, 1, 2, and 3. Each time a heart is clicked, the user increments their love up by one. (Until the click when it is red and at level 3 - at that point, it goes back to 0). While the "love leveling" is a bit confusing, this is still a great example of **styles changing based on user interaction**.
 
 <img class="medium" src="./assets/images/dom-manipulation-1/codepen-heart-click.gif">
 
@@ -125,7 +125,7 @@ Let's break down what's happening in the CodePen above:
   - Declare a variable, `color` that takes the value the user selected and stores it
   - Applies an inline style, `backgroundColor` with that newly selected color
 
-## Anonymous and Helper Functions
+## Anonymous Functions
 
 <section class="call-to-action">
 ### Paired Practice
@@ -134,25 +134,16 @@ Examine [this code](https://codepen.io/hannahhudson/pen/RwoGzXe) and talk about 
 2. Why isn't the button working?
 </section>
 
-Remember that the second argument the `addEventListener` accepts is a function name, not an invoked function. This presents challenges when we need to pass parameters to that function. There are two options for how to approach this issue.
+Remember that the second argument the `addEventListener` accepts is a function name, not an invoked function. This presents challenges when we need to pass parameters to that function.  
 
 You can use an **anonymous function**:  
 ```js
 button.addEventListener('click', function() {
   changeSeason('fall');
 });
-```
+```  
 
-Or you can use a **helper function**:  
-```js
-button.addEventListener('click', updatePage);
-
-function updatePage() {
-  changeSeason('fall');
-}
-```
-
-Both approaches have pros and cons. Helper functions can seem like too much code for a simple issue, while too many anonymous functions can lead to unclear and hard to follow code. The important thing to remember is that you should only be reaching for one of these options when you need it. **If there are no arguments to be passed in, you don't need a helper function or an anonymous function.**
+Too many anonymous functions can lead to unclear and hard to follow code. The important thing to remember is that you should only be reaching for and anonymous function when you need it. **If there are no arguments to be passed in, you don't need an anonymous function.**
 
 ## Suggested re-teaching practice
 
