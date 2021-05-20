@@ -143,7 +143,7 @@ button.addEventListener('click', function() {
 });
 ```  
 
-Too many anonymous functions can lead to unclear and hard to follow code. The important thing to remember is that you should only be reaching for and anonymous function when you need it. **If there are no arguments to be passed in, you don't need an anonymous function.**
+Too many anonymous functions can lead to unclear and hard to follow code. The important thing to remember is that you should only be reaching for an anonymous function when you need it. **If there are no arguments to be passed in, you don't need an anonymous function.**
 
 <section class="call-to-action">
 ### Think About It  
