@@ -11,7 +11,7 @@ tags: node, express, server, backend
 
 ### Vocab
 * `Server` A specialized, network enabled, computer
-* `Express` A javascript library for creating server side code
+* `Express` A javascript framework for creating server side code
 
 ### Warm Up
 
@@ -144,7 +144,7 @@ request handlers:
 <section class="checks-for-understanding">
 ### Reviewing Key Takeaways
 
-* What would you use the library, **Express**, for?
+* What would you use the framework, **Express**, for?
 * What is it called when a client sends a message to a server?
 * What is it called when a server sends a message to a client?
 </section>
