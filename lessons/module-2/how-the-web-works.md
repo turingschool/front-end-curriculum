@@ -93,8 +93,8 @@ Now the response codes that you'll typically run into are
 If you want to see all the type of server responses check out [http status dogs](https://httpstatusdogs.com/)
 
 
-<section class="call-to-action">
- 
+<section class="call-to-action ">
+
 #### Your Turn
 
 Turn to person next to you and discuss the following things
