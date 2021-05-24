@@ -92,7 +92,10 @@ Now the response codes that you'll typically run into are
 
 If you want to see all the type of server responses check out [http status dogs](https://httpstatusdogs.com/)
 
-#### Your Turn
+
+<section class="call-to-action">
+ 
+ #### Your Turn
 
 Turn to person next to you and discuss the following things
 
@@ -116,7 +119,7 @@ Once you're done discussing please visit `idea-box-jhun.herokuapp.com` with your
 
 * Delete an Idea
   * According to the network tab what verb was used?
-
+</section>
 
 ## DNS
 
