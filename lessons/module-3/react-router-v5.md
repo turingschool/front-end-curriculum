@@ -9,7 +9,6 @@ module: 3
 * Understand and articulate the need for routing 
 * Be able to confidently implement React Router in a project
 * Utilize URL params to build dynamic routes 
-* Understand how to test components using React Router 
 
 ## Vocab
 * `BrowserRouter` A \<Router\> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL
