@@ -19,18 +19,6 @@ In this project, you will be building on top of somebody else's pre-existing Wha
 
 ---
 
-## Timeline
-Dates and deadlines to be aware of:
-
-* **Wednesday, April 14th** - Make sure to have project board ready with tickets already completed and plans to complete for sprint over the weekend. (*DTR should also be complete*)
-* **Monday, April 19th** - Project board up to date with tasks completed and plans for finishing final sprint. (*May review a couple PRs as well for code reviews*)
-* **Tuesday, April 20th** - Project due at 9PM.
-* **Wednesday, April 21st** - Project evals.
-
-Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
-
----
-
 ## Set Up
 
 1. Download your assigned repo [wc-a](https://drive.google.com/file/d/1BEc9sHk0nEzDERZ5p9HPeARkT49l9y9S/view?usp=sharing){:target='blank'} or [wc-b](https://drive.google.com/file/d/1DAnwfBNtdcC3ZuMqo8Vo7EejB5qUZcMD/view?usp=sharing){:target='blank'}

@@ -24,16 +24,6 @@ In this project, you will be building on top of somebody else's pre-existing Fit
 * This may include how elements are organized from desktop to mobile views
 * You may also pull inspirations from other sites such as [Dribbble](https://dribbble.com/)
 
-## Timeline
-Dates and deadlines to be aware of:
-
-* **Wednesday, February 24th** - Make sure to have project board ready with tickets already completed and plans to complete for sprint over the weekend. (*DTR should also be complete*)
-* **Monday, March 1st** - Project board up to date with tasks completed and plans for finishing final sprint. (*We may review some pull requests in this check in too to make sure that y'all are utilitzing pr processes*)
-* **Wednesday, March 3rd** - Project due at 9PM.
-* **Thursday, March 4th** - Project evals.
-
-Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
-
 ---
 
 ## Set Up
