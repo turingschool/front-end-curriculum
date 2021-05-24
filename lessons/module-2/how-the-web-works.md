@@ -95,7 +95,7 @@ If you want to see all the type of server responses check out [http status dogs]
 
 <section class="call-to-action">
  
- #### Your Turn
+#### Your Turn
 
 Turn to person next to you and discuss the following things
 
