@@ -116,14 +116,6 @@ Your Sass should be making use of:
 * variables for colors, fonts, etc.
 * nesting, when/where appropriate
 * at least **two** mixins or extends
-
----
-
-### User Testing / UI
-* Test out the application manually and file errors for any UI or UX issues you can find
-* Fix UI / UX problems. If a display feels hard to use, think about how you can remake it (wihout changing the original design of the app)
-* Your app should be **fully responsive** from mobile devices - tablets - laptops - large monitors
-
 ---
 
 ### Inheritance & Refactoring
@@ -161,6 +153,7 @@ In addition to your refactoring, you also want to make sure the application is f
 * Create a video of your team navigating through your app via a keyboard and screen reader. 
 * Implement an animation using CSS and SASS.
 * Create and implement a new feature for your application (run this by instructors first). 
+* Your app should be **fully responsive** from mobile devices - tablets - laptops - large monitors
 
 
 
