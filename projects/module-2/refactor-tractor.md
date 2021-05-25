@@ -143,6 +143,7 @@ Your Sass should be making use of:
 * at least **two** mixins or extends
 
 Your app should be **fully responsive** from mobile devices - tablets - laptops
+
 ---
 
 ### Accessibility
