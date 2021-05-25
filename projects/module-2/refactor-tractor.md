@@ -17,13 +17,6 @@ In this project, you will be building on top of somebody else's pre-existing Fit
 * Fetch
 * [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html)
 
-### Note
-
-**You must pull 3 inspirations from 3 different apps that you want to implement in your application**
-* Be specific about what piece you are trying to re-create
-* This may include how elements are organized from desktop to mobile views
-* You may also pull inspirations from other sites such as [Dribbble](https://dribbble.com/)
-
 ---
 
 ## Set Up
@@ -46,35 +39,39 @@ In this project, you will be building on top of somebody else's pre-existing Fit
     - Run `npm test`
 
 ### Working with Webpack
+This project is set up to use [Webpack](https://webpack.js.org/guides/getting-started/){:target='blank'}, a module bundler. It will take whatever code we write, and bundle it into a series of more efficient files that the browser can read (allowing us to use things like Sass, npm packages and ES6 `import` / `export` syntax).
 
-#### Need to know
+This [video](https://www.youtube.com/watch?v=GU-2T7k9NfI){:target='blank'} provides a nice overview of some things webpack lets us do out of the box, most of which is set up for you already.
 
-- To start your development server, run `npm start`. Webpack will create a live version of your site on a local server, where you can see your changes happen in real time. To access it, in your browser, navigate to the `localhost` address that your terminal gives you. Be aware, if you write a breaking change, your server may crash. The terminal will give you some error report about why the crash happened.
+This [article](https://survivejs.com/webpack/what-is-webpack/){:target='blank'} provides some more detail into how Webpack works, and what the `webpack.config.js` file is doing (**don't mess with this file unless you're sure you need to -- feel free to ask before you change things**).
 
-- Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages)
 
-- You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ) syntax
+<section class="answer">
+### Notes on Webpack
+
+Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
+
+1. You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ){:target='blank'} syntax
   - Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.
 
-- Webpack needs to know where to look for your files. Look [here](https://github.com/turingschool-examples/webpack-starter-kit#where-to-add-your-code) for a description of where webpack is set up to look for your HTML, CSS, JS and image files. Some general points:
+2. Webpack needs to know where to look for your files. Look [here](https://github.com/turingschool-examples/webpack-starter-kit#where-to-add-your-code){:target='blank'} for a description of where webpack is set up to look for your HTML, CSS, JS and image files. Some general points:
   - You need to import images into the entrypoint file (usually `scripts.js` or `index.js`).
-  - You need to `import` you Scss/CSS files into the entrypoint file too
-  - Make sure HTML, JS and Scss/CSS files are all in the `/src` directory
+  - You need to `import` your CSS files into the entrypoint file too
+  - Make sure HTML, JS and CSS files are all in the `/src` directory
   - You have to `import` any required modules and code for tests into your test files
 
-#### Nice to know
 
-This [video](https://www.youtube.com/watch?v=GU-2T7k9NfI) provides a nice overview of some things webpack lets us do out of the box, most of which is set up for you already.
+3. While developing, run `npm start`. Webpack will create a live version of your site on a local server, where you can see your changes happen in real time. To access it, in your browser, navigate to the `localhost` address that your terminal gives you. Be aware, if you write a breaking change, your server may crash. The terminal will give you some error report about why the crash happened.
 
-This [article](https://survivejs.com/webpack/what-is-webpack/) provides some more detail into how Webpack works, and what the `webpack.config.js` file is doing (don't mess with this file unless you're sure you need to -- feel free to ask before you change things).
 
-Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html) is a great place to start). 
+4. Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
+</section>
 
 ## Requirements
 
 ### Functionality
 
-You must complete all of the User Stories outlined in the [FitLit Spec](https://frontend.turing.io/projects/fitlit.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished
+You must complete all of the User Stories outlined in the [FitLit Spec](https://frontend.turing.io/projects/fitlit.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
 
 ### Fetch
   
@@ -107,6 +104,34 @@ Do proper error handling for your users to ensure that they are getting data and
 
 ---
 
+### Inheritance & Refactoring
+
+* Identify redundant code in your classes and opportunities for DRYing it up
+* Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior
+* Refactor **across** your classes to create a parent class that others inherit methods from as appropriate **OR** be able to defend your choice for *not* using inheritance.
+
+---
+
+### DOM Manipulation 
+
+* DOM manipulation should be organized into its own `domUpdates.js` file. The file should look something like this:
+
+```js
+// domUpdates.js
+
+let domUpdates = {
+  updateDomMethod1(){...},
+  updateDomMethod2(){...},
+  ...
+};
+
+export default  domUpdates;
+```
+
+Any DOM updating functionality will then be imported into your `scripts.js` file to be called along with your other class methods.  This helps to create an even more modular structure.
+
+---
+
 ### Sass
 
 Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an `index.scss` file that imports your partials, and a `variables.scss` file that contains any of your Sass variables or function definitions.  You should also include a [normalize or reset](https://frontend.turing.io/lessons/module-1/reset-vs-normalize.html){:target='blank'} file to help with cross browser compatibility.  Identify common/re-used elements on your page to determine the remaining partials you might want.
@@ -116,19 +141,15 @@ Your Sass should be making use of:
 * variables for colors, fonts, etc.
 * nesting, when/where appropriate
 * at least **two** mixins or extends
+
+Your app should be **fully responsive** from mobile devices - tablets - laptops
 ---
-
-### Inheritance & Refactoring
-
-* Identify redundant code in your classes and opportunities for DRYing it up
-* Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior
-* Refactor **across** your classes to create a parent class that others inherit methods from
 
 ### Accessibility
 
 * You must be able to tab through your app and use it without a mouse
 * Your app must still be viewable when tested with a colorblind extension
-* You must score as close to 100% in an Accessibility Audit as possible. Be prepared to explain any accessibility audits your application is failing.
+* You must score as close to 100% as possible with the "Lighthouse Accessibility Audit". Be prepared to explain any accessibility audits your application is failing.
 * Your HTML must be written semantically and ARIA tags should be used (*ONLY if needed / appropriate*)
 
 ### Testing
@@ -151,11 +172,10 @@ In addition to your refactoring, you also want to make sure the application is f
 ### Extensions
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
 * Create a video of your team navigating through your app via a keyboard and screen reader. 
-* Implement an animation using CSS and SASS.
+* Implement an animation using CSS and Sass.
 * Create and implement a new feature for your application (run this by instructors first). 
-* Your app should be **fully responsive** from mobile devices - tablets - laptops - large monitors
 
-
+---
 
 # Project Requirements Rubric
 
@@ -163,7 +183,7 @@ In addition to your refactoring, you also want to make sure the application is f
 * 4: Application fulfills all requirements *as well as* an extension.
 * 3: Application fulfills all requirements.
 * 2: Application is usable but has some missing functionality.
-* 1: Application crashes during normal usage.
+* 1: Application crashes during normal usage or does not run.
 
 ## Testing
 * 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.
@@ -171,11 +191,11 @@ In addition to your refactoring, you also want to make sure the application is f
 * 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation.
 * 1: Tests have not been updated to reflect changes made in refactor.
 
-## SASS
-* 4: Application fulfills all requirements previously mentioned, and has SASS functionality that goes above and beyond an MVP.
-* 3: The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
-* 2: Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
-* 1: The application makes little to no use of SASS and is not separated into logical stylesheets. There are many instances of duplication
+## Sass
+* 4: Application fulfills all requirements previously mentioned, and has Sass functionality that goes above and beyond an MVP (see extensions).
+* 3: The application has well-factored Sass with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
+* 2: Application adds organization for the whole stylesheet and within rules, but multiple Sass files have not been utilized. All Sass code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
+* 1: The application makes little to no use of Sass and is not separated into logical stylesheets. There are many instances of duplication.
 
 ## Accessibility
 * 4: Has an audit score of 100% and has gone above and beyond accessibility requirements (see extensions).
