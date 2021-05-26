@@ -66,7 +66,7 @@ Data Model, we can use that same method anytime our data model changes.
 <div class="call-to-action">
 ## Try it #1
 
-Taking a look at [this codepen](https://codepen.io/wvmitchell/pen/eYNaYpG)
+Taking a look at [this codepen](https://codepen.io/kaylaewood/pen/PopKYYm)
 you'll find the Data Model from above, as well as some HTML and CSS. Read through all the existing code, then try adding a `render` method,
 which will create one displayed fruit for every fruit in the Data Model.
 
@@ -79,12 +79,12 @@ Be an advocate for your own learning, don't read ahead!
 ```javascript
 function render() {
   var fruitHTML = ""
-
+  
   for(var i = 0; i < fruits.length; i++) {
     fruitHTML += `<div class="fruit">
-    <h2>${fruits[i].name}</h2>
-    <img src=${fruits[i].img} />
-    <button data-id=${fruits[i].id}>Lick</button>
+      <h2>${fruits[i].name}</h2>
+      <img src=${fruits[i].img} />
+      <button data-id=${fruits[i].id}>Lick</button>
     </div>`
   }
 
@@ -146,7 +146,9 @@ choice (we've provided a banana example for you!). Does your Data Model update? 
 ```javascript
 function addFruit(name, img, rotten) {
   var newFruit = {name: name, img: img, rotten: rotten, id: fruits.length};
+
   fruits.push(newFruit);
+
   render();
 }
 ```
@@ -176,6 +178,7 @@ function removeFruit(id) {
       fruits.splice(i, 1);
     }
   }
+
   render()
 }
 ```
@@ -223,7 +226,9 @@ function makeRotten(event) {
 ```
 We loop through all our fruits, find the one where the fruit.id matches the
 id in the dataset, and update it's property to indicate it is now rotten. After we've updated our
-Data Model, we re-render the model to see the change.
+Data Model, we re-render the model to see the change.  
+
+Interested in learning more about data attributes? Check out [this article](https://www.abeautifulsite.net/posts/working-with-html5-data-attributes/)!
 </section>
 
 <div class="call-to-action">
@@ -231,10 +236,12 @@ Data Model, we re-render the model to see the change.
 
 Now that we have more context for how to separate the data model and the DOM, let's look back at your paired project!  
 
+Note: This repo contains an example of the RomCom project. If you didn't work on that project, don't panic -- It's nearly identical to the Hang in There project!
+
 Clone down [this repo](https://github.com/kaylaewood/romcom)!
 </div>
 
 ## Guiding Questions:
 - What represents the data model?
 - Am I updating the data model?
-- Am I updating the DOM using the data model?
+- Am I updating the DOM using the data model? Is the DOM manipulation dependent on the data model?
