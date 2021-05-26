@@ -79,7 +79,7 @@ Be an advocate for your own learning, don't read ahead!
 ```javascript
 function render() {
   var fruitHTML = ""
-  
+
   for(var i = 0; i < fruits.length; i++) {
     fruitHTML += `<div class="fruit">
       <h2>${fruits[i].name}</h2>
@@ -179,7 +179,7 @@ function removeFruit(id) {
     }
   }
 
-  render()
+  render();
 }
 ```
 Notice that we are once again using the render method! Look how clean our code is!
