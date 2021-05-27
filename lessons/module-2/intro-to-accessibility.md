@@ -92,9 +92,8 @@ Here are some helpful VoiceOver commands:
 <section class="call-to-action">
 ### Color Blindness
  
-Install a colorblind simulator for Chrome. Try one (or both) of the following:
+Install a colorblind simulator for Chrome. 
 
-* [Colorblinding](https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa/related?hl=en){:target='blank'}
 * [Colorblind](https://chrome.google.com/webstore/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool/related?hl=en){:target='blank'}
 
 Navigate to some of your most visited sites -- especially those that have some sort of notifications that you would expect to be red (error), yellow (info/warning), green (success). (You can also look at design sites like [Dribbble](https://www.dribbble.com){:target='blank'})
