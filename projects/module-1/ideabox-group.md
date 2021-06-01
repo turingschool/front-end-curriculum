@@ -18,15 +18,19 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 
 ## Day One Deliverables
 
-- Complete [the DTR form](https://docs.google.com/forms/d/e/1FAIpQLSeD_i9e4zuKGOhQ4nQbb5XchqhS0A2AE-UCrE1DIple7f78Nw/viewform?usp=sf_link).
-- One person should fork [the boilerplate
-  repository](https://github.com/turingschool-examples/ideabox-boilerplate). Add all team members and your Project Manager as collaborators.
-- Deploy your application to GitHub Pages.
-- **By EOD on Kick Off Day:** Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the following links:
-  - the forked GitHub repo
-  - the GitHub Pages deployed site
-    - Under your repo's settings, scroll down to GitHub Pages and set it up to deploy your `main` branch
-  - the DTR
+- One person should create a new directory called `intention-timer`.You'll need to initialize git in your local repo. You can brush up on that process with [this article](https://guides.github.com/introduction/git-handbook/).
+  It should contain:
+  - `index.html`
+  - `styles.css`
+  - `Idea.js`
+  - `main.js`
+  - `assets` (this is a directory that will hold your icon files)
+-  As a team, complete [the DTR Form](https://docs.google.com/forms/d/e/1FAIpQLSeD_i9e4zuKGOhQ4nQbb5XchqhS0A2AE-UCrE1DIple7f78Nw/viewform?usp=sf_link)
+-  Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the following links:
+    - the GitHub repo link
+    - the GitHub Pages deployed site
+      - Instructions for deploying: Repo Settings >> Pages >> Select the `main` branch as your Source branch >> Save >> Send us the URL they give you in the pop up that says "Your site is ready to be published at [URL]"
+-  Add all teammates and your assigned instructor as collaborators to your forked repository
 
 ## Progression
 
@@ -57,7 +61,7 @@ For this project, we'll be increasingly thinking about the "data model" and "DOM
 
 Your entire application will consist of one HTML page or template. You will have two JavaScript files, for now:
 
-1. An `idea.js` file that contains an `Idea` class.
+1. An `Idea.js` file that contains an `Idea` class.
   * `Idea` methods must include, but are not limited to:
     1. `constructor`
     2. `saveToStorage` (should only have one job which is to save the instance to storage)
@@ -65,7 +69,7 @@ Your entire application will consist of one HTML page or template. You will have
     4. `updateIdea` (should be able to update the idea's title, body, or starred state)
 2. A `main.js` file that contains all DOM related JavaScript.
 
-**Note** The `idea.js` file  must be the first script in your HTML so that your `main.js` file has access to your `Idea` class.
+**Note** The `Idea.js` file  must be the first script in your HTML so that your `main.js` file has access to your `Idea` class.
 
 ### Data Model
 
@@ -157,7 +161,7 @@ As a user,
 
 ### Architecture
 
-In addition to your `idea.js` and `main.js`, you now need to have a `comment.js` file.
+In addition to your `Idea.js` and `main.js`, you now need to have a `Comment.js` file.
 
 This file should hold a class, `Comment`. `Comment` methods must include, but are not limited to:
 1. `constructor`
