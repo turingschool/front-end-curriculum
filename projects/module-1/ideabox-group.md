@@ -278,8 +278,8 @@ To earn a given score, an application must meet the requirements listed in that 
   * There are no nested if/else statements
   * Functions and code are well-refactored and show developer empathy
 * **3:**
-  * Application uses the Data Model exclusively to track changes to the ideas,
-    and display of ideas happens after the Data Model has been updated
+  * Application uses the Data Model exclusively to track changes to the ideas.
+    Display of ideas on the DOM happens after the Data Model has been updated and *uses* the updated Data Model  
   * There are no nested for loops
   * Functions are DRY and observe SRP - and most are around 10 lines of code or less
   * There are no global variables aside from query selectors and an array for your ideas
