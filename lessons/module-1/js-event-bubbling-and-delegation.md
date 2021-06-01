@@ -34,7 +34,7 @@ A common obstacle that many JavaScript developers struggle with is understanding
 ### Experiment
 
 Clone [this](https://github.com/turingschool-examples/eventPractice) repository to your
-local machine, and open up `example1/index.html` in your browser. Additionally, open up the `example1/script.js` and `example1/index.html` in your text editor, side by side. 
+local machine, and open up `example1/index.html` in your browser. Additionally, open up the `example1/script.js` and `example1/index.html` in your text editor, side by side.
 
 <section class="call-to-action">
 ### Your Turn
@@ -42,10 +42,10 @@ local machine, and open up `example1/index.html` in your browser. Additionally, 
 You should see three buttons labeled "Click me!" as well as a button for adding new buttons to the page.
 
 1. Spend some time reading through the code in script.js. You might want to add some of your own pseudocode.  
-2. After you've read every line,  ask yourself: 
+2. After you've read every line,  ask yourself:
     * Which elements are we selecting with `querySelector`'s?
     * Which elements are we adding `eventListeners` to?
-    * What happens when the user clicks the `addNewButton`? 
+    * What happens when the user clicks the `addNewButton`?
 
 3. In the browser, click each of the "Click me!" buttons and verify that each one fires an `alert` notifying you that the button has in fact been clicked.
 4. Add an additional button using the "Add a new button below." button.
@@ -54,7 +54,7 @@ You should see three buttons labeled "Click me!" as well as a button for adding 
 
 What did you notice?
 
-*The event listeners are only bound to the buttons that were present when the page code was first loaded.* 
+*The event listeners are only bound to the buttons that were present when the page code was first loaded.*
 
 The buttons we added later (using the `createButton` function) were not around when we added the listeners. Even though the newly created buttons are given the same class name that we are targeting with the `eventListener`, they didn't exist at the time the listeners were attached, so they aren't able to listen for those clicks, and thus they can't call any functions at all.
 
@@ -77,11 +77,12 @@ Event propagation is an important yet misunderstood topic/term when talking abou
 * **Event capture phase** - When an event occurs in the DOM, notification of the event is passed starting at the top of the DOM tree and passing down through all parent element nodes all the way to the target node where the event occurred.
 * **Event target phase** - After the capturing phase occurs, the Target phase occurs. The target phase only includes a notification of Node where the event took place.
 * **Event bubbling phase** - This is the final phase to occur, although many people think this is the first phase. In the bubbling phase a notice is passed from the target Node up through all of the parent Nodes all the way back to the top root of the DOM.
+* **OK but what is actually *happening* during these phases?** When an event occurs -  JavaScript/the browser start at the 'top' of the DOM tree then looks down/zooms into the target (whatever element the event occurred on), then looks back up/out element by element *to see if there are any event listeners/handlers that need fired*
 
 <section class="call-to-action">
 ### On Your Own
 
-- Create your own visual representation of event propagation. 
+- Create your own visual representation of event propagation.
 
 ### With a Partner
 
@@ -110,7 +111,7 @@ Using your repo from earlier, `open example2/index.html` for this pair practice,
 
 ### Discussion
 
-You may have noticed that the event listeners on a parent element are fired whenever the action occurs on one of its children. Even though the click happens on the child node, the parent and grandparent nodes still "hear" it. 
+You may have noticed that the event listeners on a parent element are fired whenever the action occurs on one of its children. Even though the click happens on the child node, the parent and grandparent nodes still "hear" it. **This just means that when you add an event listener, it 'listens' for events on the entire element/area, *including* all the elements that may be nested inside that element (it's children).**
 
 When an event occurs, the browser checks the element to see if there are any event listeners registered. After it checks the element where the event occurred, the browser works its way up the DOM tree to see if any of the parents have a listener registered, then grandparents, and so on. It checks every element all the way up to the root. This process is known as _event bubbling_.
 
@@ -187,7 +188,12 @@ button.addEventListener('click', function(event) {
 <section class="call-to-action">
 ### Pair Practice
 
-Modify the code above to log the event itself (as opposed to the `target` property on the event). In that console.log, you should be able to open up the whole `event` object. What other properties on the event object look particularly useful or interesting?
+Modify the code above to log the event itself (as opposed to the `target` property on the event). In that console.log, you should be able to open up the whole `event` object.  
+- What other properties on the event object look particularly useful or interesting?  
+- Dig into the event's `target` property.  Look for the following properties: className, classList, id  
+  - Look for the target's `parentNode` property.  Look for that parent's parentNode.  Look for *that* parent's parentNode. How far up the DOM tree can you dig into the parent's parents?  
+  - Look for the target's `childNodes` property and `children` property. How far down the DOM tree can you dig into the children's children?  
+  - What other properties on the `event.target` look useful or noteworthy?   
 </section>
 
 ## Event Delegation
@@ -196,10 +202,11 @@ With the understanding of **event propagation** and the **event object**, we can
 
 In ***event delegation***, we take advantage of the fact that events bubble in the event loops by setting an event listener on one parent. This event listener analyzes bubbled events to find a match in its child elements. Event delegation is one of the most helpful patterns for DOM events. It simplifies things and can save memory since there is no need to add many handlers.
 
-The algorithm:
- 1. Put a single handler on a container
- 2. In the handler - check the source element using `event.target`
- 3. If the event happened inside an element that interests us, then handle the event
+The steps:
+ 1. Put a single handler (event listener and function) on a parent container/area  
+ 2. In our function, check the source element (whichever element the event directly occurred on) using `event.target.____(some property)` (whatever property we can use to identify the element(s) we care about)  
+ 3. If the event happened on an element that we care about, THEN 'handle' that event (aka, do all the behaviors outlined in the code in the function)  
+ Remember to use console.log(event) to figure out what info you have to work with for whichever element. Remember that the 'target' will depend on where/what you 'click' on.
 
 ```js
 var parent = document.querySelector('.parent');
@@ -220,6 +227,16 @@ parent.addEventListener('click', function(event) {
 - Add some other if statements. How often is this eventListener being activated?
 
 </section>
+
+## Applying Event Bubbling & Event Delegation In Your Projects
+- Think about which larger container/area/parent you should put your listener on  
+    - Listen to this whole area (and everything in it) for the specific type of event. Ex. 'click'  
+- Think about which element(s) you actually care about being clicked on  
+    - How can they be identified?  Do they have a specific class/id we can look for?  
+- Think about what you want to happen when one of those elements-of-interest is clicked on  
+    - What should happen?  
+    - Which element should it happen to?  The one that was clicked or a relative?  
+        - How can you tell JS which element you want the thing to happen to?  
 
 <section class="checks-for-understanding">
 
