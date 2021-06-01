@@ -78,17 +78,14 @@ Be an advocate for your own learning, don't read ahead!
 
 ```javascript
 function render() {
-  var fruitHTML = ""
-
   for(var i = 0; i < fruits.length; i++) {
-    fruitHTML += `<div class="fruit">
+    fruitBox.innerHTML += `
+    <section class="fruit">
       <h2>${fruits[i].name}</h2>
       <img src=${fruits[i].img} />
-      <button data-id=${fruits[i].id}>Lick</button>
-    </div>`
+      <button id=${fruits[i].id}>Lick</button>
+    </section>`
   }
-
-  fruitBox.innerHTML = fruitHTML;
 }
 ```
 This code iterates through all the fruits, and builds up an HTML string based on
@@ -108,19 +105,16 @@ What if we don't want the rotten fruit to render? Update the code you have so th
 
 ```javascript
 function render() {
-  var fruitHTML = ""
-
   for(var i = 0; i < fruits.length; i++) {
     if (!fruits[i].rotten) {
-      fruitHTML += `<div class="fruit">
+      fruitBox.innerHTML += `
+      <section class="fruit">
         <h2>${fruits[i].name}</h2>
         <img src=${fruits[i].img} />
-        <button data-id=${fruits[i].id}>Lick</button>
-      </div>`
+        <button id=${fruits[i].id}>Lick</button>
+      </section>`
     }
   }
-
-  fruitBox.innerHTML = fruitHTML;
 }
 ```
 </section>
@@ -145,7 +139,7 @@ choice (we've provided a banana example for you!). Does your Data Model update? 
 
 ```javascript
 function addFruit(name, img, rotten) {
-  var newFruit = {name: name, img: img, rotten: rotten, id: fruits.length};
+  var newFruit = {name: name, img: img, rotten: rotten, id: Date.now()};
 
   fruits.push(newFruit);
 
@@ -195,7 +189,7 @@ our page?
 If something our user does should change the look of the page, then it probably
 needs to change our Data Model as well.
 
-Notice those 'Lick' buttons? They all have _data-id attributes_ on them which
+Notice those 'Lick' buttons? They all have _id attributes_ on them which
 match the id of the fruit above. We could use them in conjuction with an event
 listener to make our fruit rotten!
 
@@ -203,8 +197,7 @@ listener to make our fruit rotten!
 ## Try It #5
 
 Set an event listener on the `fruitBox` DOM element. Whenever someone clicks on
-one of the 'Lick' buttons, that fruit should now be labeled as 'Rotten' in the data model and no longer appear on the page. _Hint:
-You may find event.target.dataset useful!_
+one of the 'Lick' buttons, that fruit should now be labeled as 'Rotten' in the data model and no longer appear on the page.
 </div>
 
 <section class="answer">
@@ -213,7 +206,7 @@ You may find event.target.dataset useful!_
 fruitBox.addEventListener('click', makeRotten);
 
 function makeRotten(event) {
-  var id = parseInt(event.target.dataset.id);
+  var id = parseInt(event.target.id);
 
   for (var i = 0; i < fruits.length; i++) {
     if (fruits[i].id === id) {
@@ -225,7 +218,7 @@ function makeRotten(event) {
 }
 ```
 We loop through all our fruits, find the one where the fruit.id matches the
-id in the dataset, and update it's property to indicate it is now rotten. After we've updated our
+id on the button, and update it's property to indicate it is now rotten. After we've updated our
 Data Model, we re-render the model to see the change.  
 
 Interested in learning more about data attributes? Check out [this article](https://www.abeautifulsite.net/posts/working-with-html5-data-attributes/)!
