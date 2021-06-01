@@ -18,7 +18,7 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 
 ## Day One Deliverables
 
-- One person should create a new directory called `intention-timer`.You'll need to initialize git in your local repo. You can brush up on that process with [this article](https://guides.github.com/introduction/git-handbook/).
+- One person should create a new directory called `ideabox`.You'll need to initialize git in your local repo. You can brush up on that process with [this article](https://guides.github.com/introduction/git-handbook/).
   It should contain:
   - `index.html`
   - `styles.css`
