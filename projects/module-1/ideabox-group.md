@@ -18,7 +18,7 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 
 ## Day One Deliverables
 
-- Complete a [DTR](https://github.com/turingschool/career-development-curriculum/blob/master/module_one/dtr_guidelines_memo.md).
+- Complete [the DTR form](https://docs.google.com/forms/d/e/1FAIpQLSeD_i9e4zuKGOhQ4nQbb5XchqhS0A2AE-UCrE1DIple7f78Nw/viewform?usp=sf_link).
 - One person should fork [the boilerplate
   repository](https://github.com/turingschool-examples/ideabox-boilerplate). Add all team members and your Project Manager as collaborators.
 - Deploy your application to GitHub Pages.
