@@ -21,7 +21,7 @@ In this project, you will be building on top of somebody else's pre-existing Wha
 
 ## Set Up
 
-1. Download your assigned repo [wc-a](https://drive.google.com/file/d/1BEc9sHk0nEzDERZ5p9HPeARkT49l9y9S/view?usp=sharing){:target='blank'} or [wc-b](https://drive.google.com/file/d/1DAnwfBNtdcC3ZuMqo8Vo7EejB5qUZcMD/view?usp=sharing){:target='blank'}
+1. Download your assigned repo [wc-a](https://drive.google.com/file/d/15fNAHAyuJ99FFwu_yxqtsKklmrqiyI92/view?usp=sharing){:target='blank'} or [wc-b](https://drive.google.com/file/d/1fcAh0wU73zZz8zujfrmpY9fBT3TM-deb/view?usp=sharing){:target='blank'}
 2. Move the zip file into the folder where you want the project to live
 3. cd into the directory with your zip file
 4. run `unzip [filename]`

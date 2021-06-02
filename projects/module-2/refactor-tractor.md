@@ -21,7 +21,7 @@ In this project, you will be building on top of somebody else's pre-existing Fit
 
 ## Set Up
 
-1. Download your assigned repo [fitlit-a](https://drive.google.com/file/d/1-foUFLx8vyn8XkI6WVlf48e-0BrdpdF5/view?usp=sharing){:target='blank'} or [fitlit-b](https://drive.google.com/file/d/1i68mv2A5oRJtKzJsF2W6tojNnVkaByDB/view?usp=sharing){:target='blank'}
+1. Download your assigned repo [fitlit-a](https://drive.google.com/file/d/1CnHqMMoLUVXFNnBCt_ErL4fO2WdIxRlw/view?usp=sharing){:target='blank'} or [fitlit-b](https://drive.google.com/file/d/1pp8JYPewYf3mB0QwG4GIJpoliNoDhFok/view?usp=sharing){:target='blank'}
 
 2. Move the zip file into the folder where you want the project to live
 3. cd into the directory with your zip file
