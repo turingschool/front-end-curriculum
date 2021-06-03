@@ -117,14 +117,18 @@ JSON has the following rules:
 
 The browser provides a `JSON` object with two methods.
 
-- `JSON.stringify();` turns any JavaScript object into a valid JSON string.
-- `JSON.parse();` turns any valid JSON into a JavaScript object.
+- `JSON.stringify();`  
+  - takes 1 argument - a JavaScript object  
+  - turns any JavaScript object into a valid JSON string.  
+- `JSON.parse();`   
+  - takes 1 argument - valid JSON  
+  - turns any valid JSON into a JavaScript object.  
 
 <section class="checks-for-understanding">
 
 ### Your Turn
 
-Take the object from the previous exercise that didn't work and refactor it. Don't look below quite yet...
+Take the object from the previous exercise that didn't work and refactor it so that it can be saved and retrieved from Local Storage. Don't look below quite yet...
 
 1. You should use `JSON.stringify();` before storing it in `localStorage`.
 2. You should use `JSON.parse();` after retrieving it from `localStorage`.
