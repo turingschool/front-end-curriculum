@@ -13,26 +13,26 @@ In this project, you will be building on top of somebody else's pre-existing cod
 
 ## Getting Started
 
-You and your team will first need to decide which project you'd like to work on - [Fitlit](https://frontend.turing.io/projects/module-2/refactor-tractor.html) or [What's Cookin](https://frontend.turing.io/projects/module-2/refactor-tractor-wc.html).
+You and your team will first need to decide which project you'd like to refactor - [Fitlit](https://frontend.turing.io/projects/module-2/refactor-tractor.html) or [What's Cookin](https://frontend.turing.io/projects/module-2/refactor-tractor-wc.html).
 
 ### How to Choose?
-Both Fitlit and What's Cookin' will give you practice with Sass, Fetch, Web Accessibility, refactoring, working with someone else's code and more. Here are some things to consider when making that choice
+Both Fitlit and What's Cookin' will give you practice with Sass, Fetch, Web Accessibility, refactoring, working with someone else's code and more. Here are some things you could consider when making that choice:
 
 #### Choosing the same as your paired project
 - Since you are already familiar with the application and its requirements, you'll spend less time understanding the new spec
 - You'll get more experience and exposure to how someone could have solved the same problems differently than you
 
 #### Choosing the new project 
-- This will give you practice ramping up on a brand new project
+- This will give you valuable practice ramping up on a brand new project
 - You might have less temptation to look at your old code
 
-Once you let your PM know which project your group has chosen, they will message you with what version of the app you'll need to get set up with (Ex: Fitlit A, Fitlit B, What's Cookin A, etc.)
+**Note: There are two different versions of each project. You will be assigned the A or B version.**
 
 ## Timeline
 Dates and deadlines to be aware of:
 
-* **Tuesday, June 1st** -  Project kickoff (choose project by EOD and let PM know)
-* **Wednesday, June 2nd** - Make sure to have project board ready with tickets (*DTR should also be complete*)
+* **Tuesday, June 1st** -  Project kickoff
+* **Wednesday, June 2nd** - Have your project chosen and let PM know. Make sure to have project board ready with tickets (*DTR should also be complete*). 
 * **Tuesday, June 8th** - Project due at 9PM
 * **Wednesday, June 9th** - Project evals
 

@@ -16,23 +16,20 @@ You'll be building an application that allows a user to set goals for their heal
 
 ## Day One Deliverables
 
-- Complete a [DTR](https://github.com/turingschool/career-development-curriculum/blob/master/module_one/dtr_guidelines_memo.md).
 - One person should create a new directory called `intention-timer`.You'll need to initialize git in your local repo. You can brush up on that process with [this article](https://guides.github.com/introduction/git-handbook/).
-
   It should contain:
   - `index.html`
   - `styles.css`
   - `Activity.js`
   - `main.js`
   - `assets` (this is a directory that will hold your icon files)
+-  As a team, complete [the DTR Form](https://docs.google.com/forms/d/e/1FAIpQLSeD_i9e4zuKGOhQ4nQbb5XchqhS0A2AE-UCrE1DIple7f78Nw/viewform?usp=sf_link)
+-  Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the following links:
+    - the GitHub repo link
+    - the GitHub Pages deployed site
+      - Instructions for deploying: Repo Settings >> Pages >> Select the `main` branch as your Source branch >> Save >> Send us the URL they give you in the pop up that says "Your site is ready to be published at [URL]"
+-  Add all teammates and your assigned instructor as collaborators to your forked repository
 
-- Make sure both teammates and your assigned instructor are all added as collaborators on the GitHub repository.
-- Deploy your application to GitHub Pages.
-- **By EOD on Kick Off Day:** Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the following links:
-  - the forked GitHub repo
-  - the GitHub Pages deployed site
-    - Under your repo's settings, scroll down to GitHub Pages and set it up to deploy your `main` branch
-  - the DTR
 
 ## Progression
 

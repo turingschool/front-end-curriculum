@@ -46,10 +46,18 @@ The web storage API is a secure way your browser can store key value pairs that 
 
 `localStorage` supports the following methods:
 
-- `localStorage.setItem();` takes two arguments—a key and value (key must be string)—and stores the given value under the provided key.
-- `localStorage.getItem();` gets an item from storage based on the key provided.
-- `localStorage.removeItem();` takes a key and removes that key and its associated value from storage.
-- `localStorage.clear();` removes all items from storage for that domain.
+- `localStorage.setItem();`  
+  - takes 2 arguments — a key and value (key must be string)
+  - and stores the given value under the provided key.  
+- `localStorage.getItem();`  
+  - takes 1 argument - a key (a string)  
+  - gets an item from storage based on the key provided.  
+- `localStorage.removeItem();`  
+  - takes 1 argument - a key (a string)  
+  - removes that key and its associated value from storage.  
+- `localStorage.clear();`   
+  - no arguments  
+  - removes all items from storage for that domain.  
 
 [ls-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [ss-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
@@ -109,14 +117,18 @@ JSON has the following rules:
 
 The browser provides a `JSON` object with two methods.
 
-- `JSON.stringify();` turns any JavaScript object into a valid JSON string.
-- `JSON.parse();` turns any valid JSON into a JavaScript object.
+- `JSON.stringify();`  
+  - takes 1 argument - a JavaScript object  
+  - turns any JavaScript object into a valid JSON string.  
+- `JSON.parse();`   
+  - takes 1 argument - valid JSON  
+  - turns any valid JSON into a JavaScript object.  
 
 <section class="checks-for-understanding">
 
 ### Your Turn
 
-Take the object from the previous exercise that didn't work and refactor it. Don't look below quite yet...
+Take the object from the previous exercise that didn't work and refactor it so that it can be saved and retrieved from Local Storage. Don't look below quite yet...
 
 1. You should use `JSON.stringify();` before storing it in `localStorage`.
 2. You should use `JSON.parse();` after retrieving it from `localStorage`.
