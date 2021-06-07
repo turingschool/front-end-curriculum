@@ -1,0 +1,15 @@
+---
+layout: page
+title: Documents
+---
+
+## Program Documents
+
+* [Turing School of Software and Design Course Catalog Vol
+  10-2020](./catalog_10_2020.pdf){:target="_blank"}
+* [Leave of Absence
+  Guidelines](./leave_of_absence_guidelines_2021.pdf){:target="_blank"}
+* [Reasonable Accomodation
+  Request](./reasonable_accommodation_request_form.pdf){:target="_blank"}
+* [Repeating a Module](./repeat_guidelines_student_2020.pdf){:target="_blank"}
+* [Laptop Policy](./laptop_policy.pdf){:target="_blank"}

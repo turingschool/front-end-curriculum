@@ -6,7 +6,7 @@ nav {
 
 .nav-links {
   display: grid;
-  grid-template-columns: auto 100px 100px 100px 200px;
+  grid-template-columns: auto 100px 100px 100px 110px 200px;
   grid-template-rows: 120px;
   align-items: center;
   justify-items: center;
@@ -51,7 +51,7 @@ nav {
   .nav-links {
     margin: 0 35px;
     font-size: 0.9rem;
-    grid-template-columns: auto 75px 75px 75px 150px;
+    grid-template-columns: auto 75px 75px 75px 90px 150px;
     grid-template-rows: 90px;
 
     .home-logo-link img {
@@ -66,7 +66,7 @@ nav {
     margin: 15px;
     font-size: 1rem;
     grid-template-columns: auto 200px;
-    grid-template-rows: 35px 35px 35px 55px;
+    grid-template-rows: 35px 35px 35px 35px 55px;
     justify-items: right;
 
     li {
