@@ -1,7 +1,7 @@
 ---
 title: Overlook  
 length: 1 week
-tags: javascript, oop, testing, jquery
+tags: javascript, oop, testing
 ---
 
 1 week solo project for FE Mod 2 (Week 6)
@@ -161,14 +161,14 @@ It is up to you to decide what changes warrant a PR – remember we want to subm
 
 ## Due Date
 
-Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'} by **Tuesday, March 9th at 9pm**.
+Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'} by **Tuesday, June 15th at 9pm**.
 
 # Rubric
 
 ## Specification Adherence
 
 * 4: The application completes all iterations above without error.
-* 3: The application completes the first 3 iterations above without error.
+* 3: The application completes the first 3 iterations above without error. **Note: Must be completed in order to pass.**
 * 2: The application completes the first 2 iterations and is in a usable state, but has some miscellaneous bugs.
 * 1: The application completes only the first iteration, displaying the user's data, but has no additional functionality.
 
@@ -186,12 +186,12 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 * 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has zero error handling and only `logs` errors if a network request fails.
 * 1:  Application generates syntax error or crashes during execution.  Application is not separated into classes and there is no separation of business-side logic and view-related code. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity.
 
-## SASS
+## Sass
 
-* 4: Application fulfills all requirements previously mentioned, and has SASS functionality that goes above and beyond an MVP.
-* 3: The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
-* 2: Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
-* 1: The application makes little to no use of SASS and is not separated into logical stylesheets. There are many instances of duplication
+* 4: Application fulfills all requirements previously mentioned, and has Sass functionality that goes above and beyond an MVP.
+* 3: The application has well-factored Sass with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
+* 2: Application adds organization for the whole stylesheet and within rules, but multiple Sass files have not been utilized. All Sass code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
+* 1: The application makes little to no use of Sass and is not separated into logical stylesheets. There are many instances of duplication
 
 ## Testing
 
@@ -199,3 +199,7 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 * 3: Application is well tested but fails to cover some features and only tests for happy paths.
 * 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
 * 1: There is little or no evidence of testing in the application.
+
+# Evaluation
+
+Evaluations will be done live with an intructor. You'll be asked to step through the various parts of your application including reponsive design, running the accessibility audit, the user interface, running tests and looking at Sass and JavaScript code. 

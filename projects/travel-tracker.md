@@ -1,7 +1,7 @@
 ---
 title: Travel Tracker  
 length: 1 week
-tags: javascript, oop, testing, jquery
+tags: javascript, oop, testing
 ---
 
 ## Background and Description
@@ -184,10 +184,10 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 
 ## SASS
 
-* 4: Application fulfills all requirements previously mentioned, and has SASS functionality that goes above and beyond an MVP.
-* 3: The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
-* 2: Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
-* 1: The application makes little to no use of SASS and is not separated into logical stylesheets. There are many instances of duplication
+* 4: Application fulfills all requirements previously mentioned, and has Sass functionality that goes above and beyond an MVP.
+* 3: The application has well-factored Sass with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
+* 2: Application adds organization for the whole stylesheet and within rules, but multiple Sass files have not been utilized. All Sass code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
+* 1: The application makes little to no use of Sass and is not separated into logical stylesheets. There are many instances of duplication
 
 ## Testing
 
@@ -195,3 +195,7 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 * 3: Application is well tested but fails to cover some features and only tests for happy paths.
 * 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
 * 1: There is little or no evidence of testing in the application.
+
+# Evaluation
+
+Evaluations will be done live with an intructor. You'll be asked to step through the various parts of your application including reponsive design, running the accessibility audit, the user interface, running tests and looking at Sass and JavaScript code. 
