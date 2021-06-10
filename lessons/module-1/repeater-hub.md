@@ -15,11 +15,7 @@ Add your name to [this Goals Document](https://docs.google.com/spreadsheets/d/14
 You will continue to add your weekly goals to that document every Monday throughout the inning. We'll set up a slackbot in #mod1_repeater_fam to remind you!
 
 ## Gear Ups and Professional Development
-All PD sessions are required for repeaters. Only the following Gear Up sessions are optional:
-- Gear Up, Week 1 - Unconcious Bias: 5/14
-- Gear Up, Week 5 - Community Gear Up: 6/11 
-
-Attendance for all other sessions is required.
+TBD
 
 ## Alternative Learning Opportunities
 We want you to feel empowered to skip some classes if you feel like there is a better way to spend your time. **You can choose to miss up to 3 classes from the first two weeks of the inning:**  
