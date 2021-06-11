@@ -283,7 +283,7 @@ To earn a given score, an application must meet the requirements listed in that 
   * There are no nested for loops
   * Functions are DRY and observe SRP - and most are around 10 lines of code or less
   * There are no global variables aside from query selectors and an array for your ideas
-  * Uses event delegation correctly on dynamic elements for deleting, and starring an idea
+  * Uses event delegation correctly on dynamic elements for deleting, and starring an idea.  `onclick` functionality should not be used in the HTML for idea cards - all functionality should be through JavaScript.  
   * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
 * **2:**
   * Data model is built to the specifications detailed in the spec sheet and is fully separated from the DOM. Example: There should not be any DOM manipulation in class files.
