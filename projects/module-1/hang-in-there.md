@@ -88,6 +88,7 @@ Result after clicking save button:
 ## Iteration 4 - Deleting Saved Posters
 
 - From the saved posters view, if a user double clicks a saved poster, it will be deleted
+  -  `onclick` functionality should not be used in any HTML code - all functionality should be through JavaScript.  
 
 _Hint: How will you update the data model to achieve this?_
 
