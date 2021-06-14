@@ -236,7 +236,6 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
   - README links to any applicable repos/deployed sites
   - Git commits are mostly atomic but sometimes document changesets that are too large
   - PRs do not have thorough descriptions
-  - Team members mostly do not do code reviews on PRs
   - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
   - When the project is run locally, the terminal shows no errors and more than 5 warnings
 * **1:** 
