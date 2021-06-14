@@ -250,22 +250,19 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
 
 * **4:** 
   - Team has successfully achieved 90%+ test coverage of all components
-  - All async functionality is mocked
-  - Async tests cover happy & sad paths
-  - All unit tests are in place, including conditional rendering
-  - All integration tests are in place, tested from the correct component
+  - All async functionality is stubbed
+  - Tests cover happy & sad path user flows
+  - All user flows are covered 
 * **3:** 
-  - All unit tests are in place & passing, including any conditional rendering
-  - All integration tests are in place, tested from the correct component
-  - Happy path async functionality is tested
+  - All user flows are covered
+  - Async functionality is stubbed at least once
 * **2:**
-  - Most unit tests are in place & passing
-  - A valid attempt is made at integration testing; some integration tests may be in the wrong place (aka, attempted to be done by a component that cannot actually "see"/access all the necessary functionality/data)
-  - Little or no attempt at async testing was made
+  - Most user flows are covered, sad paths are not
+  - A valid attempt is made at stubbing async functionality
 * **1:** 
-  - Many unit tests are missing/failing
-  - Little or no attempt is made at integration testing
-  - Little or no attempt is made at async testing
+  - Many tests are missing/failing
+  - Tests do not successfully illustrate user flows
+  - No async functionality is stubbed
   - There are obvious, large gaps in testing app functionality
 
 ### Routing  
