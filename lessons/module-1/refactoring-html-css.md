@@ -16,6 +16,12 @@ tags: html, css, refacoring
 - `Refactoring` Restructuring code without changing or adding to its external behavior and functionality
 
 <section class="call-to-action">
+### Warm Up
+
+Looking at the definition of refactoring above, why do you think refactoring code is important? What do you think might be challenging about it?
+</section>
+
+<section class="call-to-action">
 ### Be the Instructor
 
 * Go to [this repo](https://github.com/kaylaewood/number-guesser-refactor) and follow the instructions for cloning it down.
@@ -71,14 +77,25 @@ tags: html, css, refacoring
   - Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/css).
 </section>
 
+## Group Discussion
 
+While we are looking at these two files, let's create [a checklist](https://www.notion.so/turingschool/Refactoring-HTML-CSS-Class-Notes-61a7a51ad9db412d860020a5797dddd8). We can add to this checklist throughout the lesson, and you can refer to it as you work on future projects.
 
+First, let's look at the HTML file. In the zoom chat, share what score your group gave for the HTML.
+
+Now, let's share some ideas for refactoring the HTML code.
+
+Next, let's look at the CSS file. In the zoom chat, share what score your group gave for the CSS.
+
+Now, let's share some ideas for refactoring the CSS code.
 
 ## Wrap Up
 
 <section class="call-to-action">
 ### Solo Journaling
 
-- 
+- What is one thing you learned today that you'd like to implement in your current project?
+- What is the importance of writing code that follows consistent convention for indentation, naming, and spacing?
+- How will you ensure that you give these details careful attention in all future projects?
 
 </section>
