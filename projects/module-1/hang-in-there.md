@@ -128,7 +128,7 @@ To earn a given score, an application must meet the requirements listed in that 
   - Team uses PRs to screen/verify code before adding it to the main branch
   - Branches are consistently used for individual features
   - There is no more than a 10% disparity in code contributions between teammates. Note: this is checked via the “Insights” and “Contributors” tab in your GitHub repo.
-  - README is well formatted and gives good context about the project. At minimum, a sufficient README should contain - links to all contributors' GitHubs, technologies used, instructions for running and viewing the project (as a user, not as a student building the project), deploy link (gh-pages), images/GIFs if necessary, future additions, etc. Think about what a user needs to understand and get the full picture of the application.
+  - README is well formatted and gives good context about the project. At minimum, a sufficient README should contain - links to all contributors' GitHubs, technologies used, instructions for running and viewing the project (as a user, not as a student building the project), deploy link (gh-pages), images or GIFs, future additions, etc. Think about what a user needs to understand and get the full picture of the application.
 
 * **2:**
   - Commits are large and do not effectively communicate the progression of the application.
