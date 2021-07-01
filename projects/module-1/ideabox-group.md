@@ -66,7 +66,7 @@ Your entire application will consist of one HTML page or template. You will have
     1. `constructor`
     2. `saveToStorage` (should only have one job which is to save the instance to storage)
     3. `deleteFromStorage`
-    4. `updateIdea` (should be able to update the idea's title, body, or starred state)
+    4. `updateIdea` (should update the idea's starred state)
 2. A `main.js` file that contains all DOM related JavaScript.
 
 **Note** The `Idea.js` file  must be the first script in your HTML so that your `main.js` file has access to your `Idea` class.
@@ -85,7 +85,8 @@ Each idea should be created as an object instance of the `Idea` class. Once an i
 As a user,
 - When I click "Save",
 - If I entered information in both the "Title" and "Body" input fields,
-- I should see a new idea card with the provided title and body appear in the idea list
+- I should see a new Idea instance with the provided title and body appear in the ideas array
+- I should see a new idea card with the provided title and body appear on the DOM
 
 As a user,
 - When I click "Save",
@@ -106,17 +107,14 @@ As a user,
 
 As a user,
 - When I click the "Delete" button on an idea card,
+- The card instance should be permanently removed from the ideas array
 - The card should be permanently removed from my view
 
 As a user,
 - When I click the "Star" button on an idea card,
-- When the button was an outline of a star (not favorited),
-- The button should now be a filled in star (favorited)
-
-As a user,
-- When I click the "Star" button on an idea card,
-- When the button was a filled in star (favorited),
-- The button should now be an outline of a star (not favorited)
+- The card instance's star property should be updated in the ideas array
+- When the button was an outline of a star (not favorited), the button should now be a filled in star (favorited)
+  - and vice versa (for unfavoriting)
 
 As a user,
 - When I delete or favorite any card,
@@ -126,19 +124,21 @@ As a user,
 
 As a user,
 - When I create one idea successfully, then refresh the page,
-- The idea card is still in the idea list
+- The idea card instance is still in the ideas array
+- The idea card is still visible on the DOM
 
 As a user,
 - When I create two cards successfully, delete one, then refresh the page,
-- One idea card is still in the idea list (the one I did not delete)
+- One idea instance is still in the ideas array (the one I did not delete)
+- One idea card is still visible on the DOM (the one I did not delete)
 
 As a user,
 - When I favorite an idea card, then refresh the page,
-- That idea card is still in the "favorite" state with the filled in star icon
+- That idea card is still in the "favorite" state with the filled in star icon (in both the ideas array and on the DOM)
 
 As a user,
 - When I click "Show Starred Ideas"
-- I see only card that are favorited
+- I see only cards that are favorited
 
 As a user,
 - When I click "Show Starred Ideas"
@@ -283,7 +283,7 @@ To earn a given score, an application must meet the requirements listed in that 
   * There are no nested for loops
   * Functions are DRY and observe SRP - and most are around 10 lines of code or less
   * There are no global variables aside from query selectors and an array for your ideas
-  * Uses event delegation correctly on dynamic elements for deleting, and starring an idea
+  * Uses event delegation correctly on dynamic elements for deleting, and starring an idea.  `onclick` functionality should not be used in the HTML for idea cards - all functionality should be through JavaScript.  
   * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
 * **2:**
   * Data model is built to the specifications detailed in the spec sheet and is fully separated from the DOM. Example: There should not be any DOM manipulation in class files.
