@@ -18,7 +18,7 @@ Sometimes you need a pick me up. Remember those motivational posters that were a
 To begin, choose one partner to do the following:
 
 1. Fork the repository found here: [https://github.com/turingschool-examples/hang-in-there-boilerplate/](https://github.com/turingschool-examples/hang-in-there-boilerplate/).
-2. Clone down your new, forked repo
+2. Clone down your new, forked repo.  While cloning, name it what you want your project to be named, should not include "boilerplate". `git clone <url> <newNameYouWantItToHave>`
 3. `cd` into the repository
 4. Open it in your text editor
 5. Add all project partners and your assigned instructor as collaborators on the repository
@@ -73,10 +73,10 @@ Result after clicking save button:
 
 - On the new poster form view, users should be able to fill out the three input fields and then hit the save button
 - When the save button is clicked, several things will happen:
-  - Save the submitted data into the respective arrays (image URL into the images array, etc) so that future random posters can use the user-created data
-  - Use the values from the inputs to create a new instance of our Poster class
+  - Use the values from the inputs to create a new instance of our Poster class  (part of your data model)
+  - Save the submitted data into the respective arrays (image URL into the images array, etc - all part of your data model) so that future random posters can use the user-created data
   - Change back to the main poster view (hiding the form view again)
-  - Display the newly created poster image, title, and quote in the main view
+  - Use the new instance of the Poster class (part of your data model) to display the newly created poster image, title, and quote in the main view on the DOM
 
 ## Iteration 3 - Saving & Viewing Posters
 
@@ -120,7 +120,7 @@ To earn a given score, an application must meet the requirements listed in that 
 * **4:**
   - Team uses a [PR template](https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository) consistently
   - Team habitually conducts thorough code reviews in the GitHub GUI to document the progress of the application
-  - Team has sought out code reviews from one or more mentors. Mentors must add their code review to a pull request that can be viewed.
+  - Team has sought out code reviews from one or more mentors. Mentors must add their code review to a pull request that can be viewed. Consider letting your PM know that a mentor has reviewed to ensure they see it.
 
 * **3:**
   - Commits are atomic and frequent, effectively documenting the evolution/progression of the application. Remember, a commit should be one “unit” of work.
@@ -128,7 +128,7 @@ To earn a given score, an application must meet the requirements listed in that 
   - Team uses PRs to screen/verify code before adding it to the main branch
   - Branches are consistently used for individual features
   - There is no more than a 10% disparity in code contributions between teammates. Note: this is checked via the “Insights” and “Contributors” tab in your GitHub repo.
-  - README is well formatted and gives good context about the project. At minimum, a sufficient README should contain - contributors, technologies used, instructions for running and viewing the project, deploy link (gh-pages), images/GIFs if necessary, future additions, etc. Think about what a user needs to understand and get the full picture of the application.
+  - README is well formatted and gives good context about the project. At minimum, a sufficient README should contain - links to all contributors' GitHubs, technologies used, instructions for running and viewing the project (as a user, not as a student building the project), deploy link (gh-pages), images or GIFs, future additions, etc. Think about what a user needs to understand and get the full picture of the application.
 
 * **2:**
   - Commits are large and do not effectively communicate the progression of the application.
