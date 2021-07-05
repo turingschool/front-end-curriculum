@@ -96,16 +96,16 @@ The interpreter takes a first pass to skim over our code and get a general idea 
 Using the first code example, the interpreter recognizes that we're going to be working with a function called `calculateEvals` and some variables - `modTwoTeachers`, `numEvals`, and `currentCohort`. In trying to be helpful, the interpreter **hoists** these functions and variables to the top of our scope. Behind the scenes, the interpreter would essentially be changing our code to look something like this:
 
 ```js
-1   let modTwoTeachers, numEvals, currentCohort;
+1   var modTwoTeachers, numEvals, currentCohort;
 2   function calculateEvals(teachers, classSize) {
 3     return classSize / teachers.length;
 4   }
 5
-6   modTwoTeachers = ['Will', 'Hannah', 'Khalid'];
+6   modTwoTeachers = ['Hannah', 'Nik', 'Cass'];
 7
 8   numEvals = calculateEvals(modTwoTeachers, currentCohort);
 9
-10  currentCohort = 32;
+10  currentCohort = 29;
 11  console.log(numEvals);
 ```
 
@@ -147,11 +147,11 @@ With a partner, take turns explaining how the following JavaScript code would be
 10  }
 11 }
 12 
-13 let beggingTime = 20;
+13 let beggingTime = 1;
 14
-15 let beg = begForTreats(beggingTime));
+15 let beg = begForTreats(beggingTime);
 16
-17 beggingTime = 30;
+17 beggingTime = 4;
 18 console.log(beg)
 ```
 </section>
