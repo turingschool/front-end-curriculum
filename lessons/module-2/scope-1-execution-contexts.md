@@ -231,5 +231,4 @@ What are the most important/significant ideas or elements about how the JS engin
 
 * [Ultimate Guide to Execution Contexts, Hoisting, Scopes and Closures](https://www.youtube.com/watch?v=Nt-qa_LlUH0)
 * [JavaScript Visualizer](https://tylermcginnis.com/javascript-visualizer/)
-* [Creation Phase & Hoisting](https://www.youtube.com/watch?v=FJNRmUdLlfw)
 * [Function Expressions vs. Function Declarations](https://gomakethings.com/function-expressions-vs-function-declarations)
