@@ -269,10 +269,10 @@ Collaborate with instructors to personalize an extension for this project
 
 ## Repeaters
 - Must create a brand new repo and start the project fresh
-- Should aim to complete at least one extension
+- Should aim to complete at least one extension in addition to using a project board
 
 # Evaluations / Submission
 
-This project will be evaluated remotely by your instructors over the weekend. We will send you written feedback on your project by Sunday afternoon / Monday.
+You'll have the opportunity to review code with your accountabilibuddy after submitting. Instructors will send over group feedback.
 
 Submit your GH Repo [here](https://forms.gle/dTjaDmgDog9U8dGn6) by **9PM on Thursday of Week 1**.
