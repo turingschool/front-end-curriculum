@@ -41,15 +41,15 @@ JavaScript is a **single-threaded** language, which means each line of code must
 ### In Your Notebook
 
 ```js
-1   const modTwoTeachers = ['Will', 'Hannah', 'Khalid'];
+1   var modTwoTeachers = ['Hannah', 'Nik', 'Cass'];
 2
 3   function calculateEvals (teachers, classSize) {
 4     return classSize / teachers.length;
 5   }
 6
-7   const numEvals = calculateEvals(modTwoTeachers, currentCohort);
+7   var numEvals = calculateEvals(modTwoTeachers, currentCohort);
 8
-9   const currentCohort = 32;
+9   var currentCohort = 29;
 10  console.log(numEvals);
 ```
 
@@ -65,10 +65,10 @@ Let's do a quick breakdown of what the interpreter did here to read this code:
 2. **Line 7:** We then skip down to line 7, because we are not currently invoking the function that's been declared, so we skip over that for now. On line 7, the `numEvals` variable is assigned to the invocation of `calculateEvals`.
 3. **Line 3:** Because line 7 told us to invoke `calculateEvals`, the interpreter will jump back up to line 3 and begin executing that function.
 4. **Line 4:** return `classSize / teachers.length`
-5. **Line 9:** Our function has finished executing, so we're going to pop out of that and pick up where we left off, which is on line 9, where the `currentCohort` variable is assigned to the number 32.
+5. **Line 9:** Our function has finished executing, so we're going to pop out of that and pick up where we left off, which is on line 9, where the `currentCohort` variable is assigned to the number 29.
 6. **Line 10:** We console log the value of our `numEvals` variable, which gives us NaN.
 
-Based on this order of execution, we ultimately receive NaN as our result because the value of our `currentCohort` is not assigned until **after** we already do the math within `calculateEvals`. At the time `calculateEvals` executes, the value of our `currentCohort` variable is `undefined`. So what our function is really doing is trying to return `undefined / 3` -- which will always result in NaN.
+Based on this order of execution, we ultimately receive NaN as our result because the value of our `currentCohort` is not assigned until **after** we already do the math within `calculateEvals`. At the time `calculateEvals` executes, the value of our `currentCohort` variable is `undefined`. So what our function is really doing is trying to return `undefined / 3` -- which will always result in NaN. NOTE: You will get a different error message instead of `NaN` if declaring variables with `const` instead of `var`.
 </section>
 
 <section class="call-to-action">
