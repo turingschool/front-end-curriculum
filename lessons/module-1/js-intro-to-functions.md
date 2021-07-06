@@ -38,7 +38,7 @@ function displayFunctionSkeleton(/* parameters go here if needed */) {
 
 To declare a function, we use the JavaScript keyword `function`.
 
-Then, you write the name of the function. Because functions perform an action, it's best to name it with an action verb! For example: `generateRandomNum`, `printGreeting`, `saveGroceryItem`, etc. Notice that the names are camel-cased!
+Then, you write the name of the function. Because functions perform an action, it's best to name it with an action verb! For example: `generateRandomNum`, `printGreeting`, `saveGroceryItem`, etc. Notice that the names are camelCased!
 
 After the name, notice the opening and closing parentheses (note: there is NO space between the name and the parentheses!). These parentheses can be empty, or they can contain parameters (more on those later).
 
@@ -302,7 +302,7 @@ We've worked through a lot of content - some of which may be new, some is review
 2. How do we pass in information to a function?
 3. What is the difference between a parameter and an argument?
 4. How do you get values out of functions?
-5. What is the different between a console log and a return statement? When would you use one over the other?
+5. What is the difference between a console log and a return statement? When would you use one over the other?
 6. Write out the basic structure of an `if/else` conditional.
 </section>
 
