@@ -40,10 +40,12 @@ Dates and deadlines to be aware of:
 1. 3 design inspirations (Please include links)
 
 * **Tuesday of Week Three** - Project due at 9PM.
-* **Wednesday of Week Three** - Project demo (video) due at 9PM (send YouTube link to your PM).
+* **Wednesday of Week Three** - [Project demo](https://frontend.turing.edu/projects/project-demo-pair.html) (video) due at 9PM (send YouTube link to your PM).
 * **Thursday of Week Three** - Project demo watch party! (Optional to submit your demo video)
 
 Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6)
+
+Please send your project demo to your PM. The instructions can be found [here](https://frontend.turing.edu/projects/project-demo-pair.html)!
 
 ### Working with Webpack
 This project is set up to use [Webpack](https://webpack.js.org/guides/getting-started/){:target='blank'}, a module bundler. It will take whatever code we write, and bundle it into a series of more efficient files that the browser can read (allowing us to use things like Sass, npm packages and ES6 `import` / `export` syntax).
