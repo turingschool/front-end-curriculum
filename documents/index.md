@@ -6,7 +6,7 @@ title: Documents
 ## Program Documents
 
 * [Turing School of Software and Design Course Catalog Vol
-  10-2020](./catalog_10_2020.pdf){:target="_blank"}
+  07-2021](./catalog_07_2021.pdf){:target="_blank"}
 * [Leave of Absence
   Guidelines](./leave_of_absence_guidelines_2021.pdf){:target="_blank"}
 * [Reasonable Accomodation
