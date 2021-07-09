@@ -33,7 +33,7 @@ Dates and deadlines to be aware of:
 
 * **Monday, May 17th** - Submit the following to your PM BEFORE beginning to write code via Slack:
 1. DTR (be specific about learning goals, schedules, and communication expectations ) 
-1. Project board
+1. Project board (this should be kept updated throughout the project and will be reviewed by PM in check ins)
 1. Planned out class structure
 1. Wireframes
 1. 3 design inspirations (Please include links and details on what you're trying to re-create)
@@ -251,3 +251,13 @@ You are *not expected* to test:
 * 3: The application has many strong displays/interactions, but a few holes in lesser-used displays.  The application is fully responsive and the UI does not detract from the UX.
 * 2: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the users' needs.  Application is not responsive on other devices.
 * 1: The application is confusing or difficult to use.
+
+------------------------------------------------------------------
+
+### Minimum Professionalism Expectations
+  * Commits are atomic and frequent, effectively documenting the evolution/progression of the application
+  * Developer uses PRs from feature branches before adding new code to the main branch.
+  * The README is formatted well and contains:
+      * Overview of project and goals
+      * Overview of technologies used, your code architecture, challenges, wins, and any other reflections
+      * Screenshots/gifs of your app

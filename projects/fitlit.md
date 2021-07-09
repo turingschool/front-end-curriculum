@@ -34,7 +34,7 @@ Dates and deadlines to be aware of:
 
 * **Monday of Week Two** - Submit the following to your PM BEFORE beginning to write code via Slack:
 1. DTR (be specific about learning goals, schedules, and communication expectations ) 
-1. Project board
+1. Project board (this should be kept updated throughout the project and will be reviewed by PM in check ins)
 1. Planned out class structure
 1. Wireframes
 1. 3 design inspirations (Please include links)
@@ -303,3 +303,13 @@ You are *not expected* to test:
 * Add something with inheritance to the classes (maybe a different kind of user?)
 * Give the user a date selector to be able to select a specific date for data (and then a button to go back to "today")
  -->
+
+------------------------------------------------------------------
+
+### Minimum Professionalism Expectations
+  * Commits are atomic and frequent, effectively documenting the evolution/progression of the application
+  * Developer uses PRs from feature branches before adding new code to the main branch.
+  * The README is formatted well and contains:
+      * Overview of project and goals
+      * Overview of technologies used, your code architecture, challenges, wins, and any other reflections
+      * Screenshots/gifs of your app
