@@ -178,7 +178,6 @@ Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. T
 
 <section class="call-to-action">
 ### Take 10 minutes in pairs to get the puppies rendering
-</section>
 
 <section class="note">
 ### Hints:
@@ -218,9 +217,10 @@ export default class App extends Component {
 }
 ```
 </section>
+</section>
 
 <section class="call-to-action">
-### Stop and think
+### Solo Reflection
 
 Why do you think the `Home` page is rendering at `/puppies`?
 </section>
@@ -331,7 +331,7 @@ history and location are worth looking into on your own, but today we'll focus o
 The `match` gives us information about how and why the application matched. And it allows us to do some pretty cool stuff.
 
 <section class="call-to-action">
-### Take a look
+### Solo Exploration
 
 Add this to your code:
 ```jsx
@@ -377,7 +377,6 @@ Take a look at the CreatureDetails Component. It takes in all data for a given c
 ### Your Task is to make a route that will dynamically render a CreatureDetails component for a puppy based on its ID.
 
 For example, the URL `/puppies/1` should render a view just for the puppy with an ID of 1 in the dataset, with all of its details (name, bio, etc)
-</section>
 
 <section class="note">
 Hints:
@@ -413,6 +412,7 @@ return (
 />
 // ...
 ```
+</section>
 </section>
 
 
