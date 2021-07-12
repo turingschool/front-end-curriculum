@@ -131,14 +131,15 @@ By the time class begins in Week 2, these items should be completed:
 1. Iterations 0-3
 2. Project board has been updated so functionality is described as user stories
 3. Each user story includes thorough acceptance criteria
-4. Instructors have been tagged in one PR (see below)
+4. Instructors have been DM'd a link to one PR (see below)
 
 <section class="call-to-action">
 ### PR review
 
-By Sunday evening at 5pm, please tag your instructors in one PR demonstrating at least one of the following:
+By Sunday evening at 5pm, please send a PR link to your instructors demonstrating at least one of the following:
 - A feature being refactored
 - Tests being written
+- React Fundamentals
 
 DO NOT wait on code review from us to merge these PRs in. We will conduct code reviews in the first few days of Week 2.
 
