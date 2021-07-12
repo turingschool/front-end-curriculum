@@ -28,7 +28,6 @@ Before the lesson, complete the [prework](https://gist.github.com/letakeane/3ba8
 
 ## React Router
 
-### Review
 <section class="call-to-action">
 ### Prework Review
 In small groups, discuss the following questions:
@@ -374,13 +373,17 @@ This can be great for dynamically rendering content based on things in the url, 
 
 Take a look at the CreatureDetails Component. It takes in all data for a given creature, and displays it on the page.
 
-**Your Task is to make a route that will dynamically render a CreatureDetails component for a puppy based on its ID**
+<section class="call-to-action">
+### Your Task is to make a route that will dynamically render a CreatureDetails component for a puppy based on its ID.
+
+For example, the URL `/puppies/1` should render a view just for the puppy with an ID of 1 in the dataset, with all of its details (name, bio, etc)
+</section>
 
 <section class="note">
 Hints:
-- For example, the URL `/puppies/1` should render a view just for the puppy with an ID of 1 in the dataset, with all of its details (name, bio, etc)
 - Use the CreatureDetails component
 - What will you need to do to ensure that the URL is updated when you click on a given puppy?
+- How can you access the id from the URL?
 - How can you find a one puppy's data in an array based on its id?
 </section>
 
