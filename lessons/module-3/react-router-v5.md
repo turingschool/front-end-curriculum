@@ -6,9 +6,9 @@ module: 3
 ---
 
 ## Learning Goals:
-* Understand and articulate the need for routing 
+* Understand and articulate the need for routing
 * Be able to confidently implement React Router in a project
-* Utilize URL params to build dynamic routes 
+* Utilize URL params to build dynamic routes
 
 ## Vocab
 * `BrowserRouter` A \<Router\> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL
@@ -22,13 +22,13 @@ module: 3
 
 <section class="checks-for-understanding">
 ## Prework  
- 
+
 Before the lesson, complete the [prework](https://gist.github.com/letakeane/3ba8fce0958b12cf1a48fe6b4ff2a783){:target='blank'}.
 </section>
- 
+
 ## React Router
 
-### Review 
+### Review
 <section class="call-to-action">
 ### Prework Review
 In small groups, discuss the following questions:
@@ -37,7 +37,7 @@ In small groups, discuss the following questions:
 3. Describe the following components:
 - Route
 - Redirect
-- Link 
+- Link
 - NavLink
 - Switch
 </section>
@@ -47,7 +47,7 @@ In small groups, discuss the following questions:
 
 **Routing** refers to keeping a webpage up to date with the current url, and vice-versa.
 
-Most of the apps you've written so far have been single-page applications. One HTML page whose content is updated through user interactions and JS. These DO NOT use routing.They work fine, but put some limits on the user experience of our applications. 
+Most of the apps you've written so far have been single-page applications. One HTML page whose content is updated through user interactions and JS. These DO NOT use routing.They work fine, but put some limits on the user experience of our applications.
 
 <section class="answer">
 ### What are some advantages routing can provide?
@@ -57,7 +57,7 @@ Most of the apps you've written so far have been single-page applications. One H
 </section>
 
 <section class="note">
-If you have written a multi-page application, you may have wrestled with Webpack configs in order to get all your pages built successfully. 
+If you have written a multi-page application, you may have wrestled with Webpack configs in order to get all your pages built successfully.
 </section>
 
 Fortunately, routing with React is easy! We just need to use a library called <a href="https://reacttraining.com/react-router/web/guides/quick-start" target="_blank">React Router</a>.
@@ -66,7 +66,7 @@ Fortunately, routing with React is easy! We just need to use a library called <a
 
 ### The Code
 
-Rather than tell you about how Router works, we'll work through a series of exercises and examples. 
+Rather than tell you about how Router works, we'll work through a series of exercises and examples.
 
 We'll be using <a href="https://github.com/turingschool-examples/react-router-v5" target="_blank">this repo</a> to solve a series of challenges listed below.
 
@@ -85,22 +85,22 @@ npm start
 You're also welcome to use the code sand box template, found <a href="https://codesandbox.io/s/github/turingschool-examples/react-router-v5?file=/src/App/App.js" target="_blank">here</a>.
 </section>
 
-The App is not fully put together. It has a series of components that will serve as building blocks of the final component. You won't be building out new components, but you will be editing existing ones. 
+The App is not fully put together. It has a series of components that will serve as building blocks of the final component. You won't be building out new components, but you will be editing existing ones.
 
 ### Setting up Router
 
-Before we break out into groups, we'll review how to set up Router as a class. 
+Before we break out into groups, we'll review how to set up Router as a class.
 
 <section class="call-to-action">
 ### Look through the codebase
-Get oriented with the application. Check out all the components, try and write a short summary of what each is doing. 
+Get oriented with the application. Check out all the components, try and write a short summary of what each is doing.
 </section>
 
-The `<Home />` component is rendering a welcome message. Right now, nothing but a nav bar is being rendered by the App. Let's use router to render the `<Home />` component as a landing page. 
+The `<Home />` component is rendering a welcome message. Right now, nothing but a nav bar is being rendered by the App. Let's use router to render the `<Home />` component as a landing page.
 
 Remember that React Router conditionally renders components based on the current url. So our goal is to **render the <Home /> component when the user is at the base url**.
 
-<section class="call-to-action"> 
+<section class="call-to-action">
 ### Setting up Router
 
 To use React Router, we need to wrap any components that will use a React Router-provided-component in some kind of [Router component](https://reacttraining.com/react-router/web/guides/primary-components/routers).
@@ -116,7 +116,7 @@ We'll come back to this later in the lesson...
 ### The first step is installing react router:
 ```bash
 npm install react-router-dom
-``` 
+```
 </section>
 
 <section class="answer">
@@ -192,7 +192,7 @@ Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. T
 ### Solution
 
 ```jsx
-/ App.js 
+/ App.js
 
 import './App.css';
 import puppies from '../data/puppy-data.js';
@@ -220,12 +220,17 @@ export default class App extends Component {
 ```
 </section>
 
+<section class="call-to-action">
+### Stop and think
+
+Why do you think the `Home` page is rendering at `/puppies`?
+</section>
 
 ### Render `exact` matches
 
-Check out what happens when you take the [`exact`](https://reacttraining.com/react-router/web/api/Route/exact-bool) prop out of one of your Routes. Why do you think the `Home` page is rendering at `/puppies`?
+Check out what happens when you add the [`exact`](https://reacttraining.com/react-router/web/api/Route/exact-bool) prop into one of your Routes.
 
-The `exact` prop can be used to make sure that partial matches of a URL don\'t trigger a render. 
+The `exact` prop can be used to make sure that partial matches of a URL don\'t trigger a render.
 
 ### Render Methods
 
@@ -263,7 +268,7 @@ This also allows you to define and pass specific properties to a component dynam
 ```
 
 **Children**
-
+`children` works exactly like `render` except that it gets called whether the path is a match or not.
 ```jsx
 <Route path='/other-unicorns' children={ () => <Unicorns /> } />
 ```
@@ -272,7 +277,7 @@ This also allows you to define and pass specific properties to a component dynam
 ---
 ## Exercise # 2: Rendering Sharks
 
-Get the sharks link working as well! 
+Get the sharks link working as well!
 
 
 <section class="answer">
@@ -297,8 +302,8 @@ export default class App extends Component {
         </nav>
         <h1>Puppies or Sharks?</h1>
         <Route exact path="/" render={ Home }/>
-        <Route path="/puppies" render={() => <Creatures name="puppies" data={puppies} />} />
-        <Route path="/sharks" render={() => <Creatures name="sharks" data={sharks} />} />
+        <Route exact path="/puppies" render={() => <Creatures name="puppies" data={puppies} />} />
+        <Route exact path="/sharks" render={() => <Creatures name="sharks" data={sharks} />} />
       </main>
     );
   }
@@ -309,9 +314,9 @@ export default class App extends Component {
 
 ### Route Props
 
-Let's take a close look at what happens when a Route renders. 
+Let's take a close look at what happens when a Route renders.
 
-[Route render methods](https://reacttraining.com/react-router/web/api/Route/route-render-methods) all provide access to [route props](https://reacttraining.com/react-router/web/api/Route/route-props), either automatically to the component they render, or via the callback function that the methods take. 
+[Route render methods](https://reacttraining.com/react-router/web/api/Route/route-render-methods) all provide access to [route props](https://reacttraining.com/react-router/web/api/Route/route-props), either automatically to the component they render, or via the callback function that the methods take.
 
 These props include:
 - [`history`](https://reacttraining.com/react-router/web/api/history)
@@ -324,20 +329,36 @@ These props include:
 
 history and location are worth looking into on your own, but today we'll focus on `match`.
 
-The `match` gives us information about how and why the application matched. And it allows us to do some pretty cool stuff. 
+The `match` gives us information about how and why the application matched. And it allows us to do some pretty cool stuff.
+
+<section class="call-to-action">
+### Take a look
+
+Add this to your code:
+```jsx
+<Route path="/puppies" render={({ match }) => { console.log(match)}} />
+```
+ - What is logged in the console when you go to the puppies page?
+ - Look at the `params` property. What do you see?
+
+Now change the line of code above to this:
+```jsx
+<Route path="/:animal" render={({ match }) => { console.log(match)}} />
+```
+- What do you notice about the value for the `params` propery? Where is each piece of that key:value pair coming from?
+</section>
 
 #### `match.params`
-The `params` property of the match prop gives us an object with key value pairs of dynamic url parameters, and any strings that match them. 
+The `params` property of the match prop gives us an object with key value pairs of dynamic url parameters, and any strings that match them.
 
 For instance, we could make our routes for animals more dynamic by doing this:
 
 ```jsx
 <Route
-  exact
-  path="/:animal"
+  exact path="/:animal"
   render={({ match }) => {
     const whichAnimal = match.params.animal === 'sharks' ? sharks : puppies
-    return <Creatures name={`I love ${match.params.animal}`} data={whichAnimal} />
+    return <Creatures name={match.params.animal} data={whichAnimal} />
   }}
 />
 ```
@@ -346,37 +367,48 @@ and then navigate to either `/puppies` or `/sharks`, we can see that the `<Creat
 
 **`params` allows us to define shapes of a url that will cause a match, then access the data from that url in our components**.
 
-This can be great for dynamically rendering content based on things in the url, like an id. Let's do that! 
+This can be great for dynamically rendering content based on things in the url, like an id. Let's do that!
 
 ## Exercise #3: Dynamic Routing
 ---
 
-Take a look at the CreatureDetails Component. It takes in all data for a given creature, and displays it on the page. 
+Take a look at the CreatureDetails Component. It takes in all data for a given creature, and displays it on the page.
 
 **Your Task is to make a route that will dynamically render a CreatureDetails component for a puppy based on its ID**
 
 <section class="note">
 Hints:
+- For example, the URL `/puppies/1` should render a view just for the puppy with an ID of 1 in the dataset, with all of its details (name, bio, etc)
 - Use the CreatureDetails component
-- For example the URL `/puppies/1` should render a view just for the puppy with an ID of 1 in the dataset 
+- What will you need to do to ensure that the URL is updated when you click on a given puppy?
 - How can you find a one puppy's data in an array based on its id?
 </section>
 
 <section class="answer">
 ### Solution
 
-The new route could look something like this:
+It could look something like this:
 ```jsx
-// App.js
-        <Route
-          exact
-          path="/puppies/:id"      
-          render={({match}) => {
-            const { id } = match.params;
-            const creatureToRender = puppies.find(creature => creature.id === parseInt(id));   
-            return <CreatureDetails {...creatureToRender} />
-          }}
-        />
+// **Creatures.js**
+// ...
+return (
+  <NavLink to={`/${name}/${id}`}>
+    <img src={image} key={id} id={id} className="app-img"/>
+  </NavLink>
+)
+// ...
+
+
+// **App.js**
+// ...
+<Route
+  exact path="/puppies/:id"      
+  render={({match}) => {
+    const creatureToRender = puppies.find(creature => creature.id === parseInt(match.params.id));   
+    return <CreatureDetails {...creatureToRender} />
+  }}
+/>
+// ...
 ```
 </section>
 
@@ -473,4 +505,3 @@ _Renders the **first** child `<Route>` or `<Redirect>` that matches the location
 The [docs](https://reacttraining.com/react-router/web/api/Switch) do a great job of quickly showing what Switch is all about.
 </section>
 </section>
-
