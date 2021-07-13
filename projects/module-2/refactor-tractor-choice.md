@@ -18,7 +18,7 @@ In this project, you will be building on top of somebody else's pre-existing cod
 Dates and deadlines to be aware of:
 
 * **Monday of Week 4** -  Project kickoff
-* **Wednesday of Week 4** - Have your project chosen and let PM know. Make sure to have project board ready with tickets (*DTR should also be complete*). 
+* **Tuesday of Week 4** - Have your project chosen and let PM know. Make sure to have GitHub project board ready with tickets (*DTR should also be complete*). 
 * **Monday of Week 5** - Project due at 9PM
 * **Tuesday of Week 5** - Project evals
 
@@ -27,7 +27,7 @@ Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6)
 
 ## Getting Started
 
-You and your team will first need to decide which project you'd like to refactor - [Fitlit](https://frontend.turing.io/projects/module-2/refactor-tractor.html) or [What's Cookin](https://frontend.turing.io/projects/module-2/refactor-tractor-wc.html).
+You and your team will first need to decide which project you'd like to refactor - [Fitlit](https://frontend.turing.edu/projects/fitlit.html) or [What's Cookin](https://frontend.turing.edu/projects/whats-cookin.html).
 
 ### How to Choose?
 Both Fitlit and What's Cookin' will give you practice with Sass, Fetch, Web Accessibility, refactoring, working with someone else's code and more. Here are some things you could consider when making that choice:
@@ -41,7 +41,7 @@ Both Fitlit and What's Cookin' will give you practice with Sass, Fetch, Web Acce
 - You might have less temptation to look at your old code
 
 **Note: There are two different versions of each project. You will be assigned the A or B version.**
-### Working with Webpack
+## Working with Webpack
 This project is set up to use [Webpack](https://webpack.js.org/guides/getting-started/){:target='blank'}, a module bundler. It will take whatever code we write, and bundle it into a series of more efficient files that the browser can read (allowing us to use things like Sass, npm packages and ES6 `import` / `export` syntax).
 
 This [video](https://www.youtube.com/watch?v=GU-2T7k9NfI){:target='blank'} provides a nice overview of some things webpack lets us do out of the box, most of which is set up for you already.
@@ -76,15 +76,15 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 <section class="answer">
 ### Fitlit Specific
 
-### Functionality
+#### Functionality
 
 You must complete all of the User Stories outlined in the [FitLit Spec](https://frontend.turing.io/projects/fitlit.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
 
-### Fetch
+#### Fetch
   
 You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/fitlit-api){:target='blank'}.  You will need to clone this down and have it running in a separate tab in your terminal each time you run your client.  Here are the endpoints setup for this project:
 
-#### Retrieve all data from an endpoint (GET)
+##### Retrieve all data from an endpoint (GET)
 
 | Data Type | Verb | URL |  
 |---|---|---|  
@@ -93,7 +93,7 @@ You will no longer be receiving your data from a hardcoded data file, but rather
 | Activity Data | GET | http://localhost:3001/api/v1/activity |  
 | Hydration Data | GET | http://localhost:3001/api/v1/hydration |  
 
-#### Add new sleep, activity, and hydration data (POST)
+##### Add new sleep, activity, and hydration data (POST)
 
 For the currently displayed user, you must be able to add a new sleep, hydration and activity data entry for that user.
 
@@ -111,15 +111,6 @@ Do proper error handling for your users to ensure that they are getting data and
 
 ---
 
-<section class="note">
-## Strategies for Success
-* Make sure you are reviewing the original ["FitLit" spec](https://frontend.turing.io/projects/fitlit.html) so you have a good idea for what the project and its requirements are.
-* Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well.
-* Every group member must fully understand and be able to speak to all of the code changes that have been made.
-</section>
-
----
-
 ### Extensions
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
 * Create a video of your team navigating through your app via a keyboard and screen reader. 
@@ -133,17 +124,17 @@ Do proper error handling for your users to ensure that they are getting data and
 <section class="answer">
 ### What's Cookin' Specific
 
-### Functionality
+#### Functionality
 
 You must complete all of the User Stories outlined in the [What's Cookin Spec](https://frontend.turing.io/projects/whats-cookin.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
 
 **NOTE: You must complete through interation 4**
 
-### Fetch
+#### Fetch
 
 You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}.  You will need to clone this down and have it running in a separate tab in your terminal each time you run your client.  Here are the endpoints setup for this project:
 
-#### Endpoints (GET and POST)
+##### Endpoints (GET and POST)
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
@@ -185,16 +176,7 @@ Do proper error handling for your users to ensure that they are getting data and
 
 ---
 
-<section class="note">
-## Strategies for Success
-* Make sure you are reviewing the original ["What's Cooking"](https://frontend.turing.io/projects/whats-cookin.html) spec so you have a good idea for what the project and its requirements are. 
-* Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well. 
-* Every group member must fully understand and be able to speak to all of the code changes that have been made. 
-</section>
-
----
-
-### Extensions
+#### Extensions
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
 * Create a video of your team navigating through your app via a keyboard and screen reader. 
 * Implement an animation using CSS and Sass.
@@ -262,7 +244,12 @@ In addition to your refactoring, you also want to make sure the application is f
 - **You are not required to test your fetch calls**
 
 
-
+<section class="note">
+## Strategies for Success
+* Make sure you are reviewing the original ["FitLit" spec](https://frontend.turing.io/projects/fitlit.html) or ["What's Cooking" spec](https://frontend.turing.io/projects/whats-cookin.html) so you have a good idea for what the project and its requirements are.
+* Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well.
+* Every group member must fully understand and be able to speak to all of the code changes that have been made.
+</section>
 
 
 
