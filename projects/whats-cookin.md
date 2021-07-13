@@ -1,5 +1,7 @@
-# What's Cookin
-
+---
+title: What's Cookin'
+tags: javascript, oop, mocha, testing, sass, fetch
+---
 ## Goals and Objectives
 
 - Implement ES6 classes that communicate to each other as needed

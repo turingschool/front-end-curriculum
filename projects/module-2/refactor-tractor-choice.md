@@ -111,7 +111,7 @@ Do proper error handling for your users to ensure that they are getting data and
 
 ---
 
-### Extensions
+#### Extensions
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
 * Create a video of your team navigating through your app via a keyboard and screen reader. 
 * Implement an animation using CSS and Sass.
@@ -128,7 +128,7 @@ Do proper error handling for your users to ensure that they are getting data and
 
 You must complete all of the User Stories outlined in the [What's Cookin Spec](https://frontend.turing.io/projects/whats-cookin.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
 
-**NOTE: You must complete through interation 4**
+**NOTE: You must complete through iteration 4**
 
 #### Fetch
 
@@ -243,6 +243,7 @@ In addition to your refactoring, you also want to make sure the application is f
 - Any methods that modify class properties should be test
 - **You are not required to test your fetch calls**
 
+--- 
 
 <section class="note">
 ## Strategies for Success
