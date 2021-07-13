@@ -14,6 +14,8 @@ tags: javascript, oop, mocha, testing, sass, fetch
 
 In this project, you will be building on top of somebody else's pre-existing codebase. It's uncommon that you'll be starting an application from scratch when you get on the job; more frequently, you're entering into a large codebase that other developers have been working on for years. It can be intimidating at first, and may take some time for you to learn your way around. Take this project as an opportunity to get comfortable doing this!
 
+---
+
 ## Timeline
 Dates and deadlines to be aware of:
 
@@ -24,6 +26,8 @@ Dates and deadlines to be aware of:
 
 
 Please submit your finished projects [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
+
+---
 
 ## Getting Started
 
@@ -42,7 +46,7 @@ Both Fitlit and What's Cookin' will give you practice with Sass, Fetch, Web Acce
 
 **Note: There are two different versions of each project. You will be assigned the A or B version.**
 
-Once you have choosen either Fitlit or Whats' Cookin' and have been assigned a verion. You can get started with your start repo below: 
+Once you have choosen either Fitlit or Whats' Cookin' and have been assigned a verion. You can get started with your starter repo below: 
 - [Fitlit A](https://github.com/turingschool-examples/refactor-tractor-fitlit-a)
 - [Fitlit B](https://github.com/turingschool-examples/refactor-tractor-fitlit-b)
 - [WC A](https://github.com/turingschool-examples/refactor-tractor-whats-cookin-a)
@@ -78,6 +82,8 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 
 4. Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
 </section>
+
+---
 
 ## Requirements
 
@@ -243,6 +249,8 @@ Your app should be **fully responsive** from mobile devices - tablets - laptops
 * Your app must still be viewable when tested with a colorblind extension
 * You must score as close to 100% as possible with the "Lighthouse Accessibility Audit". Be prepared to explain any accessibility audits your application is failing.
 * Your HTML must be written semantically and ARIA tags should be used (*ONLY if needed / appropriate*)
+
+---
 
 ### Testing
 In addition to your refactoring, you also want to make sure the application is fully tested. This means:
