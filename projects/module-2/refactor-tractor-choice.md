@@ -41,6 +41,15 @@ Both Fitlit and What's Cookin' will give you practice with Sass, Fetch, Web Acce
 - You might have less temptation to look at your old code
 
 **Note: There are two different versions of each project. You will be assigned the A or B version.**
+
+Once you have choosen either Fitlit or Whats' Cookin' and have been assigned a verion. You can get started with your start repo below: 
+- [Fitlit A](https://github.com/turingschool-examples/refactor-tractor-fitlit-a)
+- [Fitlit B](https://github.com/turingschool-examples/refactor-tractor-fitlit-b)
+- [WC A](https://github.com/turingschool-examples/refactor-tractor-whats-cookin-a)
+- [WC B](https://github.com/turingschool-examples/refactor-tractor-whats-cookin-b)
+
+---
+
 ## Working with Webpack
 This project is set up to use [Webpack](https://webpack.js.org/guides/getting-started/){:target='blank'}, a module bundler. It will take whatever code we write, and bundle it into a series of more efficient files that the browser can read (allowing us to use things like Sass, npm packages and ES6 `import` / `export` syntax).
 
