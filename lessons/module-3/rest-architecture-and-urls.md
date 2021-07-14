@@ -71,7 +71,7 @@ RESTful architecture includes sending HTTP methods to a URL to get back informat
 5. DELETE - Destroy an entire specific resource by the request
 
 Typically there are only 2 paths for a given resource when it comes to RESTFUL endpoints. For example, if we have an ideabox app. Those two paths would be:
-  1. `/ideas` - used to generically identify the type of resource. Because we may not have an id yet or we want a collection. 
+  1. `/ideas` - used to generically identify the type of resource. Because we may not have an id yet or we want a collection.
   2. `/ideas/:id` - used to identify a specific resource of that type.
 
 That's a lot of words, at a high level, REST is really just a pattern that matches CRUD operations to endpoints.
@@ -84,9 +84,8 @@ What RESTful api endpoint have you used in the past? How do you know they're RES
 * [GraphQL](https://graphql.org/) is becoming more and more popular because you only get what you ask for in a request.
 
 ### Activity time!
-With a partner, design an api that implements CRUD for sharks, puppies, OR unicorns.
-  * What endpoints will you need?
-  * For each endpoint:
-    * What information do you need in the request?
-    * What will you send back in the response? What data? What response status?
-  
+With a partner, design an api that implements CRUD for sharks or puppies (based on the app we worked on yesterday). For each type of request - GET, POST, and DELETE - answer these questions:
+  * What endpoints will you need? Write down the URLs.
+  * What information do you need in the request?
+  * What will you send back in the response? (i.e. What data? What response status?)  
+HINT: Consider organizing your work in a table, like [this one](https://github.com/turingschool-examples/overlook-api). If you'd like, you can use [this template](https://docs.google.com/spreadsheets/d/1-aqqA510nihdYDIsOTbJX5tBq0e_mm0vE8yIVGCXrBk/edit?usp=sharing) to get started.
