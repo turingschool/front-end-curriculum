@@ -21,7 +21,7 @@ module: 2
 
 ## The Why.
 <section class="call-to-action">
- ### Journal for 3 minutes,answer the following. <br>
+ Journal for 3 minutes,answer the following. <br>
  
     Why is learning how the web works important for you as a computer programmer.
  
