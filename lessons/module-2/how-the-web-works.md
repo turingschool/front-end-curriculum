@@ -20,12 +20,12 @@ module: 2
 - `IP Address` Internet Protocol Address
 
 ## The Why.
-
 <section class="call-to-action">
-### Journal for 3 minutes,answer the following. 
+ ### Journal for 3 minutes,answer the following. <br>
  
-Why is learning how the web works important for you as a computer programmer.
-</section>
+    Why is learning how the web works important for you as a computer programmer.
+ 
+ </section>
 
 ## Client Server Model
 
