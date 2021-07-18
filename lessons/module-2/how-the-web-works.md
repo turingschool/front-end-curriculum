@@ -53,7 +53,7 @@ Write down everything you can and then if you want to find out more, click on th
 
 <section class="answer">
 ### Request
-So everything typically starts with the `URI` and when I say that I mean the location of the website / server we'd like to user / leverage.
+So everything typically starts with the `URL` and when I say that I mean the location of the website / server we'd like to user / leverage.
 Once we've figured out our destination and hit enter our client will then send a request to the server we'd like to visit.
 
 The request is comprised of 2 parts. We have the `header` and we also have the `body`. These two parts make up the whole of a server request.
