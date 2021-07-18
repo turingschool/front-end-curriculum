@@ -108,21 +108,6 @@ Turn to person next to you and discuss the following things
   * A PUT/PATCH request in slack?
   * A DELETE request in slack?
 
-Once you're done discussing please visit `https://github.com/turingschool/What-s-cookin--starter-kit-API` with your partner and open up your dev tools. Once you're in the dev tools I would like you to go to the network tab. Once you are there please complete the following tasks.
-
-* Refresh the page
-  * According to the network tab what verb was used?
-
-* Add an Idea
-  * According to the network tab what verb was used?
-
-* Edit an Idea
-  * According to the network tab what verb was used?
-
-* Delete an Idea
-  * According to the network tab what verb was used?
-</section>
-
 ## DNS
 
 DNS also known as domain name system is used to map domain names to IP addresses. A domain name is the same as the url you would type into your web browser. www.google.com for example. Now this name has a corresponding IP address. The IP address meaning internet protocol address, which is a unique string of numbers separated by periods.
