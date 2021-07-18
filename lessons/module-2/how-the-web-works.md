@@ -21,12 +21,14 @@ module: 2
 
 ## The Why.
 
-Journal for 3 minutes, and answer the following. Why is learning how the web works important for you as a computer programmer.
-
+<section class="call-to-action">
+### Journal for 3 minutes,answer the following. 
+ 
+Why is learning how the web works important for you as a computer programmer.
+</section>
 
 ## Client Server Model
 
-[Slides](https://docs.google.com/presentation/d/1oA0g7Vmsiv7pOySq2bVrb2t5BurELTixYpRRyW899nQ/edit?usp=sharing){:target="blank"}
 
 Really in a very small and simplistic sense the internet is just a bunch of computers talking to computers. The internet is comprised of Servers that hold files and information on them. These servers or server networks are connected by wires either underground or underwater.
 
