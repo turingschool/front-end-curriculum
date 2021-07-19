@@ -274,7 +274,7 @@ You are *not expected* to test:
 
 ### Fundamental JavaScript & Style / OOP / Fetch
 * 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring. Application is expertly divided into logical components each with a clean, single responsibility.
-* 3: Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. There are multiple scenarios of destructuring to help enhance readability.  Application is effectively broken into logical components, but violate the principle of SRP.
+* 3: Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. Application is effectively broken into logical components, but violate the principle of SRP.
 * 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. There is no usage of destructuring.  Divisions of logic into classes are inconsistent or unclear.
 * 1: Application generates syntax error or crashes during execution. Application logic shows poor decomposition with too much logic mashed together.
 
