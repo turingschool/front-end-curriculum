@@ -175,7 +175,7 @@ When the interpreter is attempting to access a property on an object, it will st
 With your partner, save all the data types that you can think of to variables. Using the console, check the `[[prototype]]` link via the dunder-proto.
 
 - What similiarties do you notice across data types? What differences?
-- Why do we say "everything is an object" in JavaScript?
+- Can we say "everything is an object" in JavaScript?
 </section>
 
 <section class="checks-for-understanding">
@@ -190,3 +190,5 @@ With your partner, save all the data types that you can think of to variables. U
 * [Object Prototypes from MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes){:target='blank'}
 * [Explaining JavaScript's Prototype Chain Like You're Five](https://dev.to/codesmith_staff/explain-javascripts-prototype-chain-like-im-five-51p){:target='blank'}
 * [Prototype Inheritance](https://javascript.info/prototype-inheritance){:target='blank'}
+* [Everything in JavaScript Is (Not) an Object](https://betterprogramming.pub/everything-in-javascript-is-an-object-except-for-when-it-isnt-305bc65a3410){:target='blank'}
+* [Primitive data types](https://developer.mozilla.org/en-US/docs/Glossary/Primitive){:target='blank'}
