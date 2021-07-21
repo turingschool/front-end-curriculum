@@ -50,8 +50,6 @@ Below are ways you can get in additional practice throughout the inning. None of
 * [HTML Practice](https://github.com/turingschool-examples/html-warmup-challenges)
 * [CSS Layout Challenges](https://github.com/turingschool-examples/css-layout-challenges)
 * [Cookie Recipe (Comp Recreation)](https://github.com/turingschool-examples/cookie-comp)
-<!-- * [Comp Recreation 1](https://frontend.turing.io/projects/module-1/m1-static-comp.html)🌶
-* [Comp Recreation 2](https://frontend.turing.io/projects/module-1/m1-static-comp-2.html)🌶 -->
 * [Countdown (CSS Exploration)](https://codepen.io/hannahhch/pen/mdEYqjX)
 * [CSS Flexbox Froggy](https://flexboxfroggy.com/)
 </section>
