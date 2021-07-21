@@ -13,7 +13,7 @@ Instead of a live demo with an instructor, you'll be putting together short vide
   - Wins & challenges 
   - Any future additions 
 - Your video should be between 5 and 10 minutes long and uploaded to YouTube or Vimeo when completed 
-- **Due Date: videos should be sent to PM's on Wednesday before 3:30 MT for the viewing party**
+- **Due Date: videos should be sent to PM's by EOD Wednesday**
 
 ## Some Inspiration
 - M2 Projects
