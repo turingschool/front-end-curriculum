@@ -91,8 +91,8 @@ _Hint: go check out the HTML and CSS files to see how the form and saved covers 
 
 ## Iteration 3 - Creating a New Cover
 
-- In the new cover form view, users should be able to fill out the four input fields and then hit the save button
-- When the save button is clicked, several things will happen:
+- In the new cover form view, users should be able to fill out the four input fields and then hit the Make My Book button
+- When the Make My Book button is clicked, several things will happen:
   - Save the submitted data into the respective arrays (cover URL into the covers array, title string into the titles array, etc) so that future random covers can use the user-created data
   - Use the values from the inputs to create a new instance of the Cover class
   - Change back to the main home view (hiding the form view again)
