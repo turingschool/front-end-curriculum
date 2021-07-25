@@ -95,6 +95,8 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 
 You must complete all of the User Stories outlined in the [FitLit Spec](https://frontend.turing.io/projects/fitlit.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
 
+**NOTE: You must complete through iteration 5**
+
 #### Fetch
   
 You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/fitlit-api){:target='blank'}.  You will need to clone this down and have it running in a separate tab in your terminal each time you run your client.  Here are the endpoints setup for this project:
