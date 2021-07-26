@@ -30,7 +30,7 @@ Your application needs to be summarized with a **minimum viable product**. What 
 <section class="note">
 ### NOTE
 
-The functionality for Stretch will be MUCH LIGHTER than the functionality in Rancid Tomatillos. You will probably not be able to add as many features, especially if your RT choose-your-own-adventure included adding more functionality. 
+The functionality for Stretch will be MUCH LIGHTER than the functionality in Rancid Tomatillos. You will probably not be able to add as many features, especially if your RT choose-your-own-adventure included adding more functionality.
 
 Remember: the learning goals of this project are to expand/deepen your understanding of your learning process & dynamics within a team - NOT to build the flashiest thing ever.
 </section>
@@ -118,7 +118,7 @@ React might not be the framework you end up working with on the job, and employe
 
 #### User Authentication
 
-Some apps allow you to sign in using your Google, Facebook, or Twitter account - this is called user authentication. If you made this yourself, **you will need a back-end server** to store the user's data and it gets complicated, which is too much for this project. Use a third-party library like: 
+Some apps allow you to sign in using your Google, Facebook, or Twitter account - this is called user authentication. If you made this yourself, **you will need a back-end server** to store the user's data and it gets complicated, which is too much for this project. Use a third-party library like:
 
 * Google's Firebase
 * PassportJS
@@ -174,7 +174,7 @@ Your instructors will do a formal check-in with your group. At this check-in, in
 * Any blockers you're experiencing
 * Your plan going forward for the next few days
 
-### Day 5
+### Day 6
 
 Share your app progress with the class for Show and Tell! Be prepared to tell the story of what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes (shoot for 5 minutes).
 
@@ -184,7 +184,7 @@ Your project does not need to be done or impressive by this point; this is more 
 
 Similar to Rancid Tomatillos, the evals will be conducted in two parts:  
 1. Written feedback & project scores delivered the morning of evals
-2. Evals with the team and an instructor 
+2. Evals with the team and an instructor
   - Time for questions/discussion about feedback
   - Each person will talk through some code
   - Each person will answer an interview question, using the project as an example of their ability to learn
@@ -220,7 +220,7 @@ The purpose of this is to give you another opportunity to begin answering techni
   - Team members mostly do not do code reviews on PRs
   - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
   - When the project is run locally, the terminal shows no errors and more than 5 warnings
-* **1:** 
+* **1:**
   - README does not document the team's individual and joint learning goals, the evolution of the project, and is poorly formatted (hindering readability)
   - README does not include links to team member's GitHub profiles
   - Git commits are not atomic and document changesets that are too large
@@ -239,7 +239,7 @@ The purpose of this is to give you another opportunity to begin answering techni
   - Data fetched from API is run through a cleaning function (which is defined in a separate `utilities` file) before being stored in state
   - Implements excellent error handling and accounts for all sad paths
   - All components which receive props implement prop typechecking (proptypes or otherwise)
-* **3:** 
+* **3:**
   - A consistent, modular file structure is used
   - A clear understanding of class components vs function components is demonstrated
   - Only the data that a child component _needs_ is passed down as props
@@ -248,7 +248,7 @@ The purpose of this is to give you another opportunity to begin answering techni
   - There are a few functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
   - Data fetched from API is not cleaned before being set to state
   - All components which receive props implement prop typechecking (proptypes or otherwise)
-* **2:** 
+* **2:**
   - The file structure is inconsistent and/or not modular
   - There is some confusion about when to use a class or function component, but it does not strongly hinder functionality
   - Unnecessary data is passed down to child components as props
@@ -267,7 +267,7 @@ The purpose of this is to give you another opportunity to begin answering techni
   - File structure is not modular.
   - Prop typechecking (proptypes or otherwise) is substantially underused
 
-### Stretch Technology 
+### Stretch Technology
 
 * **4:**
   - Project implements the chosen stretch tech with a sophisitication that indicates a deep understanding
@@ -289,18 +289,18 @@ The purpose of this is to give you another opportunity to begin answering techni
 
 ### Testing
 
-* **4:** 
+* **4:**
   - Team has successfully achieved 90%+ test coverage of all components
   - All async functionality is stubbed
   - Tests cover happy & sad path user flows
-  - All user flows are covered 
-* **3:** 
+  - All user flows are covered
+* **3:**
   - All user flows are covered
   - Async functionality is stubbed at least once
 * **2:**
   - Most user flows are covered, sad paths are not
   - A valid attempt is made at stubbing async functionality
-* **1:** 
+* **1:**
   - Many tests are missing/failing
   - Tests do not successfully illustrate user flows
   - No async functionality is stubbed
