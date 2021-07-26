@@ -67,7 +67,7 @@ What do each of the status codes mean on a high level?
 </section>
 
 <section class="answer">
-### Here's a few common status codes 
+### Here's a few common status codes
 
 * `200 OK` -- successful request
 * `201 Created`-- successful POST request
@@ -106,7 +106,7 @@ Speaking of using the fetch API, let's take a look at the docs on what it is!
 Using the [fetch API docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API){:target='blank'}, answer the following questions.
 
 * What arguments does the `fetch` method take?  Clarify which ones are mandatory and optional.
-* What does `fetch` always return?  If the term is new to you, read further on what it is. 
+* What does `fetch` always return?  If the term is new to you, read further on what it is.
 </section>
 
 <section class="note">
@@ -271,7 +271,7 @@ What's all that weird stuff in the URL we're fetching?
 
 Fetch and XMLHttpRequest Objects take the url as one of their arguments. The URL itself can be thought of containing sub-arguments that give these request objects and methods more information. The entire anatomy of a URL can be broken down into a series of informative peices, but the ones we're focused on today are queries.
 
-Anything coming after the `?` in a url is part of a query. Queries can be broken down into categories and arguments (check the vocab here). Each category / argument pair is separated by an `&`.
+Anything coming after the `?` in a url is part of a query. Queries can be broken down into categories and arguments. Each category / argument pair is separated by an `&`.
 
  In the example from above:
 ```
@@ -299,7 +299,7 @@ function getTrivia(number, categoryId) {
   const url = `${root}?amount=${number}&category=${categoryId}&type=multiple`;
   const promise = fetch(url)
                   .then(response => response.json());
-  
+
   return promise;
 }
 
