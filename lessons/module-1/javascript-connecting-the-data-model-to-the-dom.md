@@ -203,7 +203,9 @@ one of the 'Lick' buttons, that fruit should now be labeled as 'Rotten' in the d
 <section class="answer">
 ### Possible Solution to #5
 ```javascript
-fruitBox.addEventListener('click', makeRotten);
+fruitBox.addEventListener('click', function (event) {
+  makeRotten(event);
+});
 
 function makeRotten(event) {
   var id = parseInt(event.target.id);
