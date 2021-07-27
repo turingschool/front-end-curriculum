@@ -123,7 +123,8 @@ let bob = new TA('Bob', 2, ['serious']);
 
 <section class="note">
 ### What is super?  
-
+ 
+The `super` keyword in JavaScript acts as a reference variable to the parent class.
 The `super` keyword is used to access and invoke methods on the parent class. In the example above, the `super` keyword is used to invoke the constructor method of the parent class.
 
 When used in a constructor, the `super` keyword appears alone and must be used before the `this` keyword is used. The `super` keyword can also be used to call functions on a parent object while keeping the current context (of our **child class**).
