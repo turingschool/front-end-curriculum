@@ -195,8 +195,6 @@ Create classes and methods that can calculate:
 * For a user, how many hours slept each day over the course of a given week (7 days) - you should be able to calculate this for any week, not just the latest week
 * For a user, their sleep quality each day over the course of a given week (7 days) - you should be able to calculate this for any week, not just the latest week
 * For all users, the average sleep quality
-* Find all users who average a sleep quality greater than `3` for a given week (7 days) - you should be able to calculate this for any week, not just the latest week
-* For a given day (identified by the date), find the users who slept the most number of hours (one or more if they tied)
 
 #### Dashboard
 Items to add to the dashboard:
