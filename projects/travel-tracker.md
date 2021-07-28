@@ -64,6 +64,17 @@ Below are all the endpoints set up for this project. You may not use all of them
     - All of my trips (past, present, upcoming and pending)
     - Total amount I have spent on trips this year. This should be calculated from the trips data and include a travel agent's 10% fee
 
+<section class="note">
+### 3rd Party Libraries
+
+You may choose any of the following 3rd party libraries to incorporate into your app if interested. Please get instructor approval first before choosing to use additional 3rd-party libraries.  
+
+* [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'} 
+* [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
+* [InteractJS](https://interactjs.io/){:target='blank'}
+* [DayJS](https://www.npmjs.com/package/dayjs)
+</section>
+
 ### 2. Traveler Interaction
 
 **As a traveler:**
@@ -77,7 +88,7 @@ Below are all the endpoints set up for this project. You may not use all of them
 <section class="note">
 ### Note!
 
-If you haven't already, focus on accessibility at this point.  Before moving to iteration 3, please **create a branch and push it up to GH** so instructors can run *Lighthouse* and check your dashboard for it's accessibility audit.
+If you haven't already, focus on accessibility at this point.  Before moving to iteration 3, please **create a branch and push it up to GH** so *Lighthouse* can be ran to check your dashboard for the accessibility audit. Since Lighthouse refreshes the page, we need this code on a separate branch to test the accessibility of your dashboard instead of your log in page. 
 </section>
 
 ### 3. Login
@@ -91,7 +102,7 @@ When first arriving at the site, a user should be able to log in with a username
 
 ```
 username: traveler50 (where 50 is the ID of the user)
-password: travel2020
+password: travel
 ```
 
   - Upon successfully loggin in, I should see my dashboard.
@@ -110,7 +121,7 @@ Your app should now support two different types of users.  In addition to having
 
 ```
 username: agency
-password: travel2020
+password: travel
 ```
 
 **As a travel agent, upon logging in:**
@@ -152,12 +163,12 @@ It is up to you to decide what changes warrant a PR – remember we want to subm
 - The user dashboard should display a countdown to my next trip (if I have any)
 - Allow the travel agent to POST suggestedActivities for user trips (see Endpoints table above). This could be based off of a user's "travelerType" value.
 - Allow the travel agent to create new destinations (see Endpoints table above)
-- Utilize an npm package (example: momentJS) - requires permission from instructors
+- Utilize an npm package - requires permission from instructors
 - Choose your own extension! 
 
 ## Due Date
 
-Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'} by **Tuesday, April 27th at 9pm**
+Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'} by **Tuesday, of Week Six at 9pm**
 
 # Rubric
 
