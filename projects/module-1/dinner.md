@@ -8,6 +8,8 @@ What's for dinner? The ultimate question. You will be building an app that helps
 
 This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
 
+_NOTE: You do not need to use Classes for this project._
+
 <img class="medium-large" src="./assets/dinner/dinner_0.png" alt="iteration 0 comp">
 
 ## Learning Goals
@@ -73,7 +75,7 @@ _NOTE: You should absolutely not be working on this unless your UI is solid and 
 - The user can click a clear button, which clears the page of any message. User should only be able to click the clear button if a food is visible. When the clear button is clicked and the food is removed, the image of the cookpot should re-appear.
 - User should not be able to click the "Let's Cook" button for a recipe unless they have selected an option.
 
-_Note: You can disable these buttons, hide them, or display a message to the user for error handling. The choice is yours!_
+_Note: You can disable these buttons, hide them, or display a message to the user for error handling. The choice is yours! But it should be very clear to the user if/when they can/can't click on any given button. Users should never think they can click a button then just have nothing happen._
 
 <img class="medium-large" src="./assets/dinner/dinner_2.png" alt="iteration 2 and 3 comp">
 <hr/>
