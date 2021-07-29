@@ -134,7 +134,7 @@ You can add TypeScript in React! This is a big shift in writing JavaScript like 
 
 #### Building a Backend
 
-Not feeling excited about any of the free data APIs? Build your own! If you choose this category, you would be responsible for building your own server in Express, connecting it to a PostgreSQL database, and hosting it on Heroku. You would not be required to use a separate data API.
+Not feeling excited about any of the free data APIs? Build your own! If you choose this category, you would be responsible for building your own server in Express, connecting it to a PostgreSQL database (usually with Knex), and hosting it on Heroku. You would not be required to use a separate data API.
 
 #### Miscellaneous
 
