@@ -18,7 +18,7 @@ Watch the first 7 minutes of [this video](https://www.youtube.com/watch?v=DJ0dey
 
 - `Object` An unordered collection of related data in the form of key value pairs. JavaScript provides two notations for accessing object properties...
 - `Dot Notation` A property in an object is accessed by giving the object’s name, followed by a period, followed by the property name (Example: `user.name`)
-- `Bracket Notation` The object name is followed by a set of square brackets, with the property name specified as a string inside the brackets (Example: `user['name']`)
+- `Bracket Notation` The object name is followed by a set of square brackets, with the property name specified inside the brackets via either a string (Example: `user['name']`) or a variable (Example: `user[name]`)  
 
 <section class="call-to-action">
 ### Warm Up
@@ -182,7 +182,7 @@ In your notebook, answer the following questions:
 </section>
 
 <section class="call-to-action">
-### Homework
+### Homework (Optional and Spicy!)  
 * Complete the code challenges found on [this repl](https://repl.it/@kaylaewood/bracketVsDotHomework). These are tough! Do what you can. Stuck? Look [here](https://repl.it/@kaylaewood/bracketVsDotHomeworkAnswers#main.js).
 * Answer the questions found in the JavaScript section of [this codepen](https://codepen.io/kaylaewood/pen/wvGrQxV?editors=1010).
 </section>
