@@ -158,6 +158,7 @@ Create a Slack DM with your team members and  both instructors. Submit the follo
 * DTR (be as actionable, detailed, and specific as you can)
 * Wireframes of your application (using any electronic or hand-drawn tool you would like)
 * Links to your design inspirations, with description of what you hope to replicate in your project
+* Links to your repos
 * Project management tool (with some cards filled out and assigned to team members)
 * A plan for how you will learn the stretch technology together as a group
 
