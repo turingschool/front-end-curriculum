@@ -70,9 +70,9 @@ As you have seen in a couple of examples today, you can chain multiple propertie
         city: 'Denver',
         state: 'CO',
         zip: 80206
-     }
-   }
-}
+      }
+    }
+  }
 ```
 If we wanted to access this user’s zip code using **dot notation**, we could write:  
 `user.contactInfo.address.zip`
@@ -89,7 +89,7 @@ Notice how each block is formatted:
 <section class="call-to-action">
 ### Paired Practice
 
-* In a breakout room, complete the exercise found on [this repl](https://replit.com/@hfaerber/bracketVsDotTryIt2#index.js).
+* In a breakout room, complete the exercises found on [this repl](https://replit.com/@hfaerber/bracketVsDotTryIt2#index.js).
 * When you finish, discuss this question with your partner: *In your opinion, which notation is easier to read and write?*
 * Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
@@ -154,7 +154,7 @@ Even if these concepts are new to you, you've actually been putting them into pr
 <section class="call-to-action">
 ### Paired Practice
 
-* In a breakout room, complete the exercise found on [this repl](https://replit.com/@hfaerber/bracketVsDotTryIt4#index.js).
+* In a breakout room, complete the exercises found on [this repl](https://replit.com/@hfaerber/bracketVsDotTryIt4#index.js).
 * Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
 
@@ -168,7 +168,7 @@ When we use bracket notation, the JS interpreter *evaluates* everything between 
 <section class="call-to-action">  
 ### Paired Practice
 
-* In a breakout room, complete the exercise found on [this repl](https://replit.com/@hfaerber/Bracket-vs-Dot-Notation-Review-Sample-Lesson#index.js).
+* In a breakout room, complete the exercises found on [this repl](https://replit.com/@hfaerber/Bracket-vs-Dot-Notation-Review-Sample-Lesson#index.js).
 * Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
 
