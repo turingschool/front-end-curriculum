@@ -25,6 +25,7 @@ This project will challenge you to use the technology you've become familiar wit
   - **Display** the data from the API in a way that applies directly to your audience
   - Ability for users to **store/manipulate** the data displayed in the application, such as favoriting or adding to a list, searching, commenting, etc
   - Multiple views handled by Router
+  - Be deployed using Heroku, Surge, or any other similar service
 
 ## Abstract
 
@@ -124,6 +125,10 @@ Once your project MVP is approved (instructors will help you narrow down your MV
 * Project board link
 * Repo link
 * 2 separate user personas describing people in your niche audience (can wait until after the user persona lesson)
+
+### Weekend PR review
+Before the weekend, you'll be assigned a PR buddy. Over the weekend, tag each other in a review that you'd like some eyes on (hopefully a PR for something that involves the learning goals of this project).
+Plan to spend about 20 minutes deep-diving into your buddy's code, asking questions, proposing refactors, and just generally discussing the code with one another. 
 
 ## Evals
 
