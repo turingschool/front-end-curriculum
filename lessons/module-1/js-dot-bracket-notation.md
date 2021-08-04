@@ -18,7 +18,7 @@ Watch the first 7 minutes of [this video](https://www.youtube.com/watch?v=DJ0dey
 
 - `Object` An unordered collection of related data in the form of key value pairs. JavaScript provides two notations for accessing object properties...
 - `Dot Notation` A property in an object is accessed by giving the object’s name, followed by a period, followed by the property name (Example: `user.name`)
-- `Bracket Notation` The object name is followed by a set of square brackets, with the property name specified as a string inside the brackets (Example: `user['name']`)
+- `Bracket Notation` The object name is followed by a set of square brackets, with the property name specified inside the brackets via either a string (Example: `user['name']`) or a variable (Example: `user[name]`)  
 
 <section class="call-to-action">
 ### Warm Up
@@ -70,9 +70,9 @@ As you have seen in a couple of examples today, you can chain multiple propertie
         city: 'Denver',
         state: 'CO',
         zip: 80206
-     }
-   }
-}
+      }
+    }
+  }
 ```
 If we wanted to access this user’s zip code using **dot notation**, we could write:  
 `user.contactInfo.address.zip`
@@ -89,7 +89,7 @@ Notice how each block is formatted:
 <section class="call-to-action">
 ### Paired Practice
 
-* In a breakout room, complete the exercise found on [this repl](https://replit.com/@hfaerber/bracketVsDotTryIt2#index.js).
+* In a breakout room, complete the exercises found on [this repl](https://replit.com/@hfaerber/bracketVsDotTryIt2#index.js).
 * When you finish, discuss this question with your partner: *In your opinion, which notation is easier to read and write?*
 * Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
@@ -154,7 +154,7 @@ Even if these concepts are new to you, you've actually been putting them into pr
 <section class="call-to-action">
 ### Paired Practice
 
-* In a breakout room, complete the exercise found on [this repl](https://replit.com/@hfaerber/bracketVsDotTryIt4#index.js).
+* In a breakout room, complete the exercises found on [this repl](https://replit.com/@hfaerber/bracketVsDotTryIt4#index.js).
 * Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
 
@@ -168,7 +168,7 @@ When we use bracket notation, the JS interpreter *evaluates* everything between 
 <section class="call-to-action">  
 ### Paired Practice
 
-* In a breakout room, complete the exercise found on [this repl](https://replit.com/@hfaerber/Bracket-vs-Dot-Notation-Review-Sample-Lesson#index.js).
+* In a breakout room, complete the exercises found on [this repl](https://replit.com/@hfaerber/Bracket-vs-Dot-Notation-Review-Sample-Lesson#index.js).
 * Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section>
 
@@ -182,7 +182,7 @@ In your notebook, answer the following questions:
 </section>
 
 <section class="call-to-action">
-### Homework
+### Homework (Optional and Spicy!)  
 * Complete the code challenges found on [this repl](https://repl.it/@kaylaewood/bracketVsDotHomework). These are tough! Do what you can. Stuck? Look [here](https://repl.it/@kaylaewood/bracketVsDotHomeworkAnswers#main.js).
 * Answer the questions found in the JavaScript section of [this codepen](https://codepen.io/kaylaewood/pen/wvGrQxV?editors=1010).
 </section>
