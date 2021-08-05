@@ -60,19 +60,19 @@ Notes:
 Your entire application will consist of one HTML page. You will have three JavaScript files:
 
 1. A `player.js` file that contains a `Player` class.
-	* `Player` methods must include, _but are not limited to_:
-		1. `constructor` - properties should include: `name` (ex: `'Human'`), `token` (ex: `'👩🏻'`), `wins` (ex: `0`)
-		2. `saveWinsToStorage`
-		3. `retrieveWinsFromStorage`
-    4. `takeTurn`
+   * `Player` methods must include, _but are not limited to_:
+     - `constructor` - properties should include: `name` (ex: `'Human'`), `token` (ex: `'👩🏻'`), `wins` (ex: `0`)
+     - `saveWinsToStorage`
+     - `retrieveWinsFromStorage`
+     - `takeTurn`
 2. A `game.js` file that contains a Game class.
-  * A `Game` should include:
-      - Two `Player` instances
-      - A way to keep track of the data for the game board
-      - A way to keep track of the selected game type
-      - A way to check the Game's board data for win conditions
-      - A way to detect when a game is a draw (no one has won)
-      - A way to reset the Game's board to begin a new game
+   * A `Game` should include:
+     - Two `Player` instances
+     - A way to keep track of the data for the game board
+     - A way to keep track of the selected game type
+     - A way to check the Game's board data for win conditions
+     - A way to detect when a game is a draw (no one has won)
+     - A way to reset the Game's board to begin a new game
 3. A `main.js` file that contains all DOM related JavaScript
 
 ### Data Model
