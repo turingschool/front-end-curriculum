@@ -63,6 +63,15 @@ You will have 20 minutes total, so be sure to watch the clock and switch roles a
 
 </section>
 
+## Summary
+
+<section class="call-to-action">
+### In Your Journal
+
+- What theme do you feel the most prepared to discuss? The least?
+- How will you practice moving forward?
+</section>
+
 ## Additional Resources
 
 * xx
