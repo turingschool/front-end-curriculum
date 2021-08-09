@@ -14,10 +14,13 @@ module: 3
 <section class="call-to-action">
 ### Warm Up
 
-- What do you think are the top 2 goals of an interviewer when they are interviewing a candidate for a developer position?
+- What do you think are the top 2 goals of an interviewer during the behavioral interview?
+- What are some ways that people can prepare for behavioral interviews?
+
+*Note: `behavioral interview` refers to the non-technical interview.
 </section>
 
-## Section title
+## Thinking Like an Interviewer
 
 Some content
 
@@ -27,7 +30,7 @@ Some content
 Complete [this activity](https://docs.google.com/spreadsheets/d/1UzP9XHcbKWSSG7S49VPCcJyijd9u6FwrJGdaYgI4Z20/edit?usp=sharing).
 </section>
 
-## Section title
+## Preparing for Interviews
 
 Some content
 
@@ -63,7 +66,9 @@ You will have 20 minutes total, so be sure to watch the clock and switch roles a
 
 </section>
 
-## Summary
+## Upcoming Evals
+
+[stretch tech project](https://frontend.turing.edu/projects/module-3/stretch.html)
 
 <section class="call-to-action">
 ### In Your Journal
@@ -71,7 +76,3 @@ You will have 20 minutes total, so be sure to watch the clock and switch roles a
 - What theme do you feel the most prepared to discuss? The least?
 - How will you practice moving forward?
 </section>
-
-## Additional Resources
-
-* xx
