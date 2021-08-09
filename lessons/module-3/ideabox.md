@@ -5,7 +5,7 @@ module: 3
 
 ## Agenda
 
-- Review React
+- Review React fundamentals
 - Discuss what we're building
 - Talk about Data vs Actions
 - Build the controlled form component
@@ -37,7 +37,7 @@ module: 3
 Today we're going to explore some React patterns that will become very familiar
 to us over the next few weeks. While this Ideabox may seem pretty contrived,
 you'll find that many application out in the real world are just high end
-Ideaboxes. 
+Ideaboxes.
 
 ### What components do we need?
 
@@ -280,7 +280,7 @@ class App extends Component {
 ```
 
 Notice that our `addIdea` method also adds an `id` to each new idea. This will
-prove useful later when we want to remove ideas. 
+prove useful later when we want to remove ideas.
 
 Also, we're passing our new `addIdea` method down to our form as a prop. This
 gives our form access to this function, but we're still going to need to make
