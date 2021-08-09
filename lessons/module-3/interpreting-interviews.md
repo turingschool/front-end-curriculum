@@ -5,17 +5,17 @@ tags: professional development, pd, interview prep
 module: 3
 ---
 
-## Intro
-
-XX
-
 ### Learning Goals
 
-* XX
+* Approach an interview by thinking like the interviewer
+* Consider the themes of questions and the top skills they are assessing
+* Begin categorizing your experiences so you’re ready to answer any question
 
-### Vocabulary
+<section class="call-to-action">
+### Warm Up
 
-* `XX` - XX
+- What do you think are the top 2 goals of an interviewer when they are interviewing a candidate for a developer position?
+</section>
 
 ## Section title
 
@@ -32,7 +32,10 @@ Complete [this activity](https://docs.google.com/spreadsheets/d/1UzP9XHcbKWSSG7S
 Some content
 
 <section class="call-to-action">
-### Solo Reflection
+### Mini Mock Interview
+
+<section class="answer">
+### Solo Reflection  
 
 Consider the following questions about your group project from mod 2.
 - What about that project sticks out to you the most?
@@ -40,22 +43,24 @@ Consider the following questions about your group project from mod 2.
 - What is something you did well during that project?
 - What is something you wish you had done better?
 
-Now, think about the themes from the questions in the previous activity. Which theme do you think you could speak to best using that group project from mod 2 as your tangible example?
+Now, think about the themes from the questions in the previous activity.
+- Which theme do you think you could speak to best using that group project from mod 2 as your tangible example?
 </section>
 
-<section class="call-to-action">
-### Mini Mock Interview
+<section class="answer">
+### In Breakout Rooms
 
-In pairs, you'll practice answering one question by using that group project from mod 2.
+In pairs, you'll practice answering one question by using that group project from mod 2. Determine who is person A and person B and follow these steps:
 
-- Determine who is person A and person B.
 - Person A will tell person B what theme/category they'd like to focus on.
 - Person B will then choose a question from that category and ask person A.
 - Person A will answer that question and use the project experience to anchor their answer.
-- Person B will give feedback on their answer.
+- Person B will give feedback on their answer. (Your feedback should focus on person A's ability to convey the skills the question is assessing and person A's ability to anchor their answer in the tangible project example.)
 - Switch roles and repeat!
 
 You will have 20 minutes total, so be sure to watch the clock and switch roles after 10 minutes.
+</section>
+
 </section>
 
 ## Additional Resources
