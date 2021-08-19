@@ -9,7 +9,7 @@ tags: javascript, oop, mocha, testing,fetch
 - Create a user interface that is easy to use and displays information in a clear way.
 - Write modular, reusable code that follows SRP (Single Responsibility Principle)
 - Implement a robust testing suite using TDD
-- Make network requests to API endpoints to retrieve and manipulate data
+- Make network requests to API endpoints to retrieve data
 
 In this project, you will be creating a recipe tracking / meal planning application that allows users to view their favorite recipes and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should be able to view a list of recipes, favorite their own recipes, and choose recipes to cook.
 
