@@ -8,7 +8,7 @@ title: What's Cookin' Part One
 	- Create a user interface that is easy to use and clearly displays information.
 	- Write modular, reusable code that follows SRP (Single Responsibility Principle)
 	- Implement a robust testing suite using TDD
-	- Make network requests to API endpoints to retrieve data
+	- Make network requests to retrieve data
 	 
 	In this project, you will create a recipe tracking / meal planning application that allows users to view their favorite recipes and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should view a list of recipes, favorite their own recipes, and choose recipes to cook.
 	 
