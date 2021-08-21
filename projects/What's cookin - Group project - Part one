@@ -79,7 +79,7 @@ title: What's Cookin' Part One
 	 
 	### Initial Setup
 	 
-	For this project, you will need to use provided Endpoints to retrieve data from a server after familiarizing yourself with the existing dataset and structuring your classes.
+	For this project, you will need to use this [What's Cookin Starter Kit](https://github.com/turingschool-examples/whats-cookin-starter-kit){:target='blank'} repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up, follow the instructions to verify it is setup correctly.
 	 
 	### Testing Setup
 	 
