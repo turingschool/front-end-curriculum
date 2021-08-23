@@ -31,7 +31,7 @@ Feel free to use the above sites as inspiration for your UI, but note that there
 ## Timeline
 Dates and deadlines to be aware of:
 	 
-* **Monday, August 27th** - Submit the following to your PM BEFORE beginning to write code via Slack:
+* **Friday, August 27th** - Submit the following to your PM BEFORE beginning to write code via Slack:
 1. DTR (be specific about learning goals, schedules, and communication expectations) 
 1. Project board (this should be kept updated throughout the project and will be reviewed by PM in check-ins).
 1. Planned out Class structure
