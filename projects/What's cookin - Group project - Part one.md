@@ -2,7 +2,6 @@
 
 ## Goals and Objectives
 ---
-## Goals and Objectives
 	 
 - Implement ES6 classes that communicate to each other as needed
 - **Use object and array prototype methods to perform data manipulation**
