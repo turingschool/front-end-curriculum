@@ -19,10 +19,10 @@ You will continue to add your weekly goals to that document every Monday through
 You do not have to attend PD sessions, but you should plan to participate in homeroom and mix it up groups on Wednesdays — you’ll find out your new homeroom group some time week 1! In terms of what you can work on to further your professional development this module, [here is an outline](https://careerdev.turing.edu/module_one/m1_PD_repeat_plan) for PD goal-setting. @allison_reu_singer is always available for support and coaching at the link in her Slack bio. You can reach out to her with any questions you have.  
 
 **Gear Up expectations for repeating mod 1:**  
-You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters (Friday, July 9th).   
+You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters.   
 
 ## Alternative Learning Opportunities
-We want you to feel empowered to skip some classes if you feel like there is a better way to spend your time. **You can choose to miss up to 3 classes from the first two weeks of the inning:**  
+We want you to feel empowered to skip some classes if you feel like there is a better way to spend your time. **You can choose to miss up to 3 classes from the first few weeks of the inning:**  
 * JS: Data Types
 * JS: Object Literals
 * JS: Bracket & Dot Notation

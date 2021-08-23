@@ -41,7 +41,7 @@ JavaScript is a **single-threaded** language, which means each line of code must
 ### In Your Notebook
 
 ```js
-1   var modTwoTeachers = ['Hannah', 'Nik', 'Cass'];
+1   var modTwoTeachers = ['Hannah', 'Nik', 'Robbie'];
 2
 3   function calculateEvals (teachers, classSize) {
 4     return classSize / teachers.length;
@@ -101,7 +101,7 @@ Using the first code example, the interpreter recognizes that we're going to be 
 3     return classSize / teachers.length;
 4   }
 5
-6   modTwoTeachers = ['Hannah', 'Nik', 'Cass'];
+6   modTwoTeachers = ['Hannah', 'Nik', 'Robbie'];
 7
 8   numEvals = calculateEvals(modTwoTeachers, currentCohort);
 9
