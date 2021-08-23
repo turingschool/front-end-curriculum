@@ -17,8 +17,7 @@ In this project, you will create a recipe tracking / meal planning application t
 - Fetch API
 - [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'}
 	 
-<section class="note">
-	
+<section class="note">	
 ### Note	 
 Feel free to use the above sites as inspiration for your UI, but note that there is NO COMP provided for this project. We expect you to design your own dashboard layout that is relevant to the data being displayed.
 	 
@@ -54,6 +53,7 @@ This [article](https://survivejs.com/webpack/what-is-webpack/){:target='blank'} 
 	 
 	 
 <section class="answer">
+	
 ### Notes on Webpack
 	 
 Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
@@ -100,6 +100,7 @@ You may choose **ONE** of the following 3rd party libraries to incorporate into 
 * [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'} 
 * [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
 * [InteractJS](https://interactjs.io/){:target='blank'}
+	
 </section>
 	 
 ---
@@ -128,6 +129,7 @@ A `Recipe` represents one recipe object.
 - Return its directions / instructions
 	 
 <section class="note">
+	
 ### Calculating the cost of a Recipe
 	 
 To calculate the cost of a recipe, you will need to factor in the amount listed in the recipe. The price (`estimatedCostInCents`) of an ingredient is per `unit`. 
@@ -137,7 +139,7 @@ For example, if flour is marked as 100 cents, and the recipe calls for 1.5 cups,
 	 
 <section class="note">
 ### Hint
-	 
+	
 You may find it helpful to have an `Ingredient` class as well as you build your recipes. A common theme when dealing with data is not to manipulate the original data, but to create copies / instances to work with.
 </section>
 	 
