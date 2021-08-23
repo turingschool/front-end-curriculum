@@ -113,6 +113,7 @@ If you wanted to remove_ 3 units of that ingredient, you'd want to send a JSON t
 </section>
 
 <section class="note">
+  
 ### Error Handling
 
 Make proper error handling for your users to ensure they get data and submit their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user?  Also, validate the input fields on the client-side.
@@ -181,6 +182,7 @@ In addition to your refactoring, you also want to make sure the application is f
 ---
 
 <section class="note">
+  
 ## Strategies for Success
 * Make sure you are reviewing the original ["What's Cooking"](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/projects/What's%20cookin%20-%20Group%20project%20-%20Part%20one) spec, so you have a good idea for what the project and its requirements are. 
 * Since this project is not separated into iterations or user stories, make sure that you spend a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well. 
