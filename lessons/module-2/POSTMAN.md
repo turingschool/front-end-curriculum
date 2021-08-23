@@ -13,7 +13,7 @@ Using Postman to test APIs and endpoints
 
 
 ## Warm Up
-Before start using POSTMAN install it ![here](https://www.postman.com/downloads/)
+Before start using POSTMAN install it [here](https://www.postman.com/downloads/)
 
 ### Check It Out
  
@@ -23,6 +23,6 @@ Before start using POSTMAN install it ![here](https://www.postman.com/downloads/
 - Clear and simple documentation can be produce to make the API more understandable. 
 
 ### step 1:
-Create a collection for your project on post man see image below 
-![POSTMAN- Collection](<iframe src="https://giphy.com/embed/QPaIeUUV4vY7aE91jR" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/QPaIeUUV4vY7aE91jR">via GIPHY</a></p>)
+Create a collection for your project on post man see image below <br>
+![POSTMAN- Collection](https://media.giphy.com/media/QPaIeUUV4vY7aE91jR/giphy.gif?cid=790b76111c0ec1064d10b8aadc2bfe791e4c2bb1317610d8&rid=giphy.gif&ct=g=350x350)
  
