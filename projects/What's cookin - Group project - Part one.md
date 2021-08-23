@@ -18,6 +18,7 @@ In this project, you will create a recipe tracking / meal planning application t
 - [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'}
 	 
 <section class="note">	
+	
 ### Note	 
 Feel free to use the above sites as inspiration for your UI, but note that there is NO COMP provided for this project. We expect you to design your own dashboard layout that is relevant to the data being displayed.
 	 
