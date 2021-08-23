@@ -1,5 +1,5 @@
 ---
-title: Niche Audience
+title: Showcase Project
 module: 3
 tags: react, javascript, api
 ---
@@ -17,7 +17,7 @@ This project will challenge you to use the technology you've become familiar wit
    - Asynchronous JavaScript
    - End to end testing with Cypress
 
-2. Create personas and user stories to describe your target audience. 
+2. Create personas and user stories to describe your target audience.
 
 3. Work within constraints to deliver a product for your niche audience, which helps solve a problem unique to them.
 
@@ -34,16 +34,16 @@ This project, having a short time frame, will need to pack a lot into a small sp
 You'll create an MVP to serve a deeply specific audience of users.
 
 <section class="answer">
-### What is an MVP? 
+### What is an MVP?
 
-When we talk about "MVP", we mean "**M**inimum **V**iable **P**roduct"! 
+When we talk about "MVP", we mean "**M**inimum **V**iable **P**roduct"!
 
 An MVP defines the features that MUST be included in an app to achieve its base, core functionality.
 
 Let's consider Twittter. It's MVP may be defined as:
 - A user can write a tweet, which when submitted will be visible on the page
 
-That's it! Obviously, Twitter has MANY more features. But without tweets, Twitter wouldn't be Twitter. 
+That's it! Obviously, Twitter has MANY more features. But without tweets, Twitter wouldn't be Twitter.
 
 These other Twitter features (which may FEEL very central and vital) are actually just nice-to-haves, which make the experience richer and more robust:
 - A user can log in
@@ -79,7 +79,7 @@ Once you've chosen your API and audience, start thinking about how you're going 
 
 ### Niche audience
 
-The best audiences for this project are highly specific. You won't have a lot of time to build something, so a big app that has to serve lots of different audience members is not really feasible. You're not building Airbnb or Twitter here. 
+The best audiences for this project are highly specific. You won't have a lot of time to build something, so a big app that has to serve lots of different audience members is not really feasible. You're not building Airbnb or Twitter here.
 
 Examples of past student apps that had excellent audiences:
 - An app that interprets sports statistics into bite-sized sentences to share at work, intended to help non-sports-fans talk to sports-fans.
@@ -128,7 +128,7 @@ Once your project MVP is approved (instructors will help you narrow down your MV
 
 ### Weekend PR review
 Before the weekend, you'll be assigned a PR buddy. Over the weekend, tag each other in a review that you'd like some eyes on (hopefully a PR for something that involves the learning goals of this project).
-Plan to spend about 20 minutes deep-diving into your buddy's code, asking questions, proposing refactors, and just generally discussing the code with one another. 
+Plan to spend about 20 minutes deep-diving into your buddy's code, asking questions, proposing refactors, and just generally discussing the code with one another.
 
 ## Evals
 
@@ -168,13 +168,13 @@ Score key:
 
 ### Specification Adherence
 
-* **4:** 
+* **4:**
   - Project meets MVP & adds nice-to-haves; meets all project requirements
-* **3:** 
+* **3:**
   - Project meets MVP; meets all project requirements
-* **2:** 
+* **2:**
   - Project either does not meet MVP or does not meet all project requirements
-* **1:** 
+* **1:**
   - Project does not meet MVP or project requirements
 
 ### React Architecture
@@ -189,7 +189,7 @@ Score key:
   - Data fetched from API is run through a cleaning function (which is defined in a separate `utilities` file)
   - Implements excellent error handling if movie database server is down or fetch fails (this includes loading images as well as error messages on the frontend)
   - PropTypes or type-checking of props is complete and specific (all data passed into a component is correctly and specifically identified)
-* **3:** 
+* **3:**
   - A consistent, modular file structure is used
   - A clear understanding of class components vs function components is demonstrated (if using hooks, a clear understanding of when hooks need to be used is sufficient)
   - Only the data that a child component _needs_ is passed down as props
@@ -198,7 +198,7 @@ Score key:
   - There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
   - Data fetched from API is not cleaned before being set to state
   - PropTypes or type-checking of props is mostly complete
-* **2:** 
+* **2:**
   - The file structure is inconsistent and/or not modular
   - There is some confusion about when to use a class or function component, but it does not hinder functionality
   - Unnecessary data is passed down to child components as props
@@ -243,7 +243,7 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
   - PRs do not have thorough descriptions
   - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
   - When the project is run locally, the terminal shows no errors and more than 5 warnings
-* **1:** 
+* **1:**
   - README does not document your learning goals, the evolution of the project, and is poorly formatted (hindering readability)
   - README does not include links to team member's GitHub profiles
   - Git commits are not atomic and document changesets that are too large
@@ -252,18 +252,18 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
 
 ### Testing
 
-* **4:** 
+* **4:**
   - Team has successfully achieved 90%+ test coverage of all components
   - All async functionality is stubbed
   - Tests cover happy & sad path user flows
-  - All user flows are covered 
-* **3:** 
+  - All user flows are covered
+* **3:**
   - All user flows are covered
   - Async functionality is stubbed at least once
 * **2:**
   - Most user flows are covered, sad paths are not
   - A valid attempt is made at stubbing async functionality
-* **1:** 
+* **1:**
   - Many tests are missing/failing
   - Tests do not successfully illustrate user flows
   - No async functionality is stubbed
@@ -274,7 +274,7 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
 * **4:**
   - Application has been refactored to use Router without leaving artifacts of the prior code (no odd workarounds remaining)
   - Use of Router shows developer empathy (readability, maintainability)
-  - Application uses React Router components and does not manipulate the `history` object 
+  - Application uses React Router components and does not manipulate the `history` object
   - A 404 page handles undefined routes
   - UX is excellent; routes are consistent and navigation is clear
 * **3:**
