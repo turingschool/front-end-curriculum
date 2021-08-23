@@ -1,0 +1,28 @@
+---
+title: "POSTMAN"
+length:
+tags: POSTMAN
+---
+## Learning Goals
+Using Postman to test APIs and endpoints
+
+## Vocabulary
+`POSTMAN` is API testing application. It is an HTTP  client that test HTTP requests. By utilizing graphical UI validating different type od responses coming back from the server.
+
+
+
+
+## Warm Up
+Before start using POSTMAN install ![POSTMAN](https://www.postman.com/downloads/)
+
+### Check It Out
+ 
+- After installation the postman UI can be use to READ, WRITE and delete content from the API. 
+- REST API requests can be sent easily for testing within POSTMAN
+- The behavior of an API can be tested without building the actual frontend.
+- Clear and simple documentation can be produce to make the API more understandable. 
+
+### step 1:
+Create a collection for your project on post man see image below 
+![POSTMAN- Collection](<iframe src="https://giphy.com/embed/QPaIeUUV4vY7aE91jR" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/QPaIeUUV4vY7aE91jR">via GIPHY</a></p>)
+ 
