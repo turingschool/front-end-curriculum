@@ -244,7 +244,7 @@ You are welcome to come up with your own ideas, too.
 
 **Suggested completion date**  
 - Iteration 5 Deliverables due Thursday of Week 2
-- Project should be completed by end of Monday of Week 3 (aim to leave final day for polishing the project, not building out features!)
+- Project should be completed by end of Sunday of Week 3 (aim to leave final day for polishing the project, not building out features!)
 
 ---
 
