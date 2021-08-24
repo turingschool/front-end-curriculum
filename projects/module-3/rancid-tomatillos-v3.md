@@ -15,7 +15,7 @@ This project is definitely not Rotten Tomatoes. Nor is it Netflix. Nor is it IMD
 
 ## Iterations
 
-We've broken this project down into iterations. Please be sure to read them closely with your project partner! 
+We've broken this project down into iterations. Please be sure to read them closely with your project partner!
 
 ### Iteration 0 - Day 1 Deliverables
 
@@ -80,7 +80,7 @@ In the future, when we use the actual API to get individual movie details, the i
 
 For the third iteration, we'll refactor our application to use actual data from the database (information is below) instead of our mocked `movieData` file.
 
-The information about the API we are using is located 
+The information about the API we are using is located
 
 <section class="answer">
 ### API setup and documentation
@@ -122,7 +122,7 @@ Also note: there are some endpoints here that you will not be using! Read the do
 **Suggested testing progress by end of iteration**  
 - Project board has been updated so functionality is described as user stories
 - Each user story includes thorough acceptance criteria
-  
+
 ---
 
 ### FIRST WEEKEND DELIVERABLES
@@ -152,11 +152,11 @@ The point of these code reviews is to get you familiar with common code review p
 
 ### Iteration 4 - Refactoring with Router
 
-In the fourth iteration, we will be refactoring our application to use [Router](https://frontend.turing.io/lessons/module-3/react-router-v5.html) instead of conditional rendering to change the view! 
+In the fourth iteration, we will be refactoring our application to use [Router](https://frontend.turing.io/lessons/module-3/react-router-v5.html) instead of conditional rendering to change the view!
 
-So far the application has worked like a single page applicaiton. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes. 
+So far the application has worked like a single page applicaiton. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes.
 
-To crete a better UX, we're going to be using [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) to conditionally render our views based on the URL. 
+To crete a better UX, we're going to be using [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) to conditionally render our views based on the URL.
 
 This iteration is all about refactoring. Use the table below to add in appropriate routes.
 
@@ -171,7 +171,7 @@ Look into the [Cypress assertions](https://docs.cypress.io/api/commands/location
 
 <section class="note">
 
-Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Deeper_dive) to learn more about URL anatomy. 
+Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Deeper_dive) to learn more about URL anatomy.
 
 </section>
 
@@ -206,7 +206,7 @@ Here is a list of concepts (including some push-yourself learning goals):
 - Express (server-side JavaScript)
 - Deployment
 
-Decide as a team what to focus on. 
+Decide as a team what to focus on.
 
 <section class="note">
 ### A word of warning!
@@ -226,8 +226,8 @@ Once you have decided on the area to continue learning, decide on a new feature 
 ### DELIVERABLE  
 On Friday of Week 2, send a specific outline of features/work/goals to your instructors in the group DM. Please include user stories, too. Do not begin work until you get the go-ahead from an instructor. (We may help you make your goal more specific or achievable.)
 
-Here are some ideas: 
-* **More React and/or Router practice:** 
+Here are some ideas:
+* **More React and/or Router practice:**
   - Add a search/filtering functionality for movies
 * **More testing practice:**
   - Take time to carefully ensure that you have tested all possible views and user flows
@@ -248,7 +248,7 @@ You are welcome to come up with your own ideas, too.
 
 ---
 
-### PROJECT DUE DATE: 9pm Tuesday of Week 3
+### PROJECT DUE DATE: 9pm Monday of Week 3
 
 On Tuesday, instructors will post a link to a gist in the cohort slack channel. Please add a comment to that gist with:
 
@@ -303,7 +303,7 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
   - Team members mostly do not do code reviews on PRs
   - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
   - When the project is run locally, the terminal shows no errors and more than 5 warnings
-* **1:** 
+* **1:**
   - README does not document the team's individual and joint learning goals, the evolution of the project, and is poorly formatted (hindering readability)
   - README does not include links to team member's GitHub profiles
   - Git commits are not atomic and document changesets that are too large
@@ -321,7 +321,7 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
   - Frontend data (state) always matches the backend data
   - Data fetched from API is run through a cleaning function (which is defined in a separate `utilities` file)
   - Implements excellent error handling if movie database server is down or fetch fails (this includes loading images as well as error messages on the frontend)
-* **3:** 
+* **3:**
   - A consistent, modular file structure is used
   - A clear understanding of class components vs function components is demonstrated
   - Only the data that a child component _needs_ is passed down as props
@@ -329,7 +329,7 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
   - There are some issues with the asynchronous JS where the frontend is not matching with the backend
   - There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
   - Data fetched from API is not cleaned before being set to state
-* **2:** 
+* **2:**
   - The file structure is inconsistent and/or not modular
   - There is some confusion about when to use a class or function component, but it does not strongly hinder functionality
   - Unnecessary data is passed down to child components as props
@@ -347,13 +347,13 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
 
 ### Testing
 
-* **4:** 
+* **4:**
   - Team has successfully achieved 90%+ test coverage of all components
   - All async functionality is stubbed and tested
   - Async tests cover happy & sad paths
   - All application views are tested
   - All user flows are tested
-* **3:** 
+* **3:**
   - All application views are tested
   - All user flows are tested
   - Happy path async functionality is stubbed and tested
@@ -361,7 +361,7 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
   - Most application views are testeed
   - A valid attempt is made at testing user flows; some flows may be missing or incomplete
   - Little or no attempt at async testing was made
-* **1:** 
+* **1:**
   - Many application views tests are missing/failing
   - Little or no attempt is made at testing user flows
   - Little or no attempt is made at async testing
@@ -372,7 +372,7 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
 * **4:**
   - Application has been refactored to use Router without leaving artifacts of the prior code (no odd workarounds remaining)
   - Use of Router shows developer empathy (readability, maintainability)
-  - Application uses React Router components and does not manipulate the `history` object 
+  - Application uses React Router components and does not manipulate the `history` object
   - A 404 page handles undefined routes
   - UX is excellent; routes are consistent and navigation is clear
 * **3:**
