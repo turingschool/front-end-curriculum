@@ -1,4 +1,3 @@
-
 # What's Cookin - Part one
 ## Goals and Objectives
 
