@@ -1,4 +1,7 @@
-# What's Cookin - Part one
+---
+title: What's Cookin - Part one!
+tags: javascript, oop, mocha, testing, fetch
+---
 ## Goals and Objectives
 
 	 
