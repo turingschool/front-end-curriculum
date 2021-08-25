@@ -74,7 +74,7 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 	 
 	 
 4. Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
-	</section>
+</section>
 	 
 ---
 	 
