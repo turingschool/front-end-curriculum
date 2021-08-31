@@ -25,7 +25,7 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
   - `Idea.js`
   - `main.js`
   - `assets` (this is a directory that will hold your icon files)
--  As a team, complete [the DTR Form](https://docs.google.com/forms/d/e/1FAIpQLSeD_i9e4zuKGOhQ4nQbb5XchqhS0A2AE-UCrE1DIple7f78Nw/viewform?usp=sf_link)
+-  As a team, complete [the DTR Form](https://docs.google.com/forms/d/e/1FAIpQLSche5cvtlYQ_SaBDqqoF3H9gFiy2p60AOPoUMbhgIHlg-vRlQ/viewform?usp=sf_link)
 -  Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the following links:
     - the GitHub repo link
     - the GitHub Pages deployed site
