@@ -18,7 +18,7 @@ tags: javascript, dom, events, event listener, event handler
 
 <section class="call-to-action">
 ### Warm Up
-Complete the tasks listed in the JS file on [this codepen](https://codepen.io/kaylaewood/pen/OJRREYN).
+Complete the tasks listed in the JS file on [this codepen](https://codepen.io/hfaerber/pen/JjJXxae).
 </section>
 
 ## Event Listeners
@@ -31,7 +31,7 @@ Let's revisit the codepen from the Warm Up and add in an Event Listener.
 
 <section class="call-to-action">
 ### Talk It out
-Take turns with your partner talking through the code found [here](https://codepen.io/turing-school/pen/MWWzMre). Practice using technical vocabulary. It's okay to mess up! This takes practice. If you need help, look below!
+Take turns with your partner talking through the code found [here](https://codepen.io/hfaerber/pen/mdwPvjd). Practice using technical vocabulary. It's okay to mess up! This takes practice. If you need help, look below!
 </section>
 
 <section class="answer">
