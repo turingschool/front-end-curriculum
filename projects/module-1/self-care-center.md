@@ -35,7 +35,7 @@ Make sure you're utilizing git best practices (branches) and commiting frequentl
 ### Day One Deliverables
 **By EOD on Kick Off Day:**   
 - Read the spec sheet closely.
-- Fill out [this planning form](https://docs.google.com/forms/d/e/1FAIpQLSczBHXCf793C1DhRzkaq0Ethu74mtv_Qbj2W_L_Iq-TI6aIPQ/viewform?usp=sf_link)
+- Fill out [this planning form](https://docs.google.com/forms/d/1pW1rNr63XgPjIy_uCOIeu5dpBQPud1tYfW5qAWTLXz8/edit)
 
 ### Iteration 0: Build Out Comp
 - Images are below
