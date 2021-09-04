@@ -13,7 +13,7 @@ module: 3
 * Use JSX
 
 <section class="answer">
-## Iteration 0: Create React App
+### Iteration 0: Create React App
 
 <section class="answer">
 ### The Challenge  
