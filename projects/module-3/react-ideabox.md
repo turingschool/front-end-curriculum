@@ -12,6 +12,7 @@ module: 3
 * Create a controlled form
 * Use JSX
 
+<section class="answer">
 ## Iteration 0: Create React App
 
 <section class="answer">
@@ -107,6 +108,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```
 * What do you think is happening here?  
 * Can you find in the codebase what the `root` is referring to?
+</section>
+
 </section>
 
 
