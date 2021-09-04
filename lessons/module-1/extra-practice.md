@@ -20,9 +20,9 @@ Below are ways you can get in additional practice throughout the inning. None of
 ### Data Types & Functions
 
 * [typeof](https://repl.it/@letakeane/01-datatypes)
-* [Statements & Expressions](https://replit.com/@kaylaewood/15-statements-expressions-1#index.js)
+* [Statements & Expressions](https://replit.com/@kaylagordon/15-statements-expressions-1#index.js)
 * [Functions 1 (parameters, arguments, conditionals)](https://repl.it/@eric_turing/Functions-Workshop)
-* [Functions 2 (parameters, arguments, conditionals)](https://replit.com/@kaylaewood/functionsPractice-1#index.js)
+* [Functions 2 (parameters, arguments, conditionals)](https://replit.com/@kaylagordon/functionsPractice-1#index.js)
 * [Objects 1](https://repl.it/@ameseee/Partner-Practice#index.js)
 * [Objects 2](https://frontend.turing.io/lessons/module-1/objects-review.html)
 * [Objects 3](https://repl.it/@letakeane/02-objects)
@@ -57,8 +57,8 @@ Below are ways you can get in additional practice throughout the inning. None of
 <section class="answer">
 ### DOM Maniputation & Event Listeners
 
-* [Puppies + Kittens](https://gist.github.com/kaylaewood/0d5621f9b4cb1c5a0d4da7a0405c8890)
-* [Compliment Generator](https://repl.it/@kaylaewood/04-DOM-manipulation-2#script.js)
+* [Puppies + Kittens](https://gist.github.com/kaylagordon/0d5621f9b4cb1c5a0d4da7a0405c8890)
+* [Compliment Generator](https://repl.it/@kaylagordon/04-DOM-manipulation-2#script.js)
 * [Holiday Card Generator](https://codepen.io/hannahhch/pen/OJXGpxJ)
 </section>
 
@@ -67,15 +67,15 @@ Below are ways you can get in additional practice throughout the inning. None of
 
 * [Bear, Muffin, Bird](https://github.com/turingschool/bear-muffin-bird)
 * [Add A Friend](https://codepen.io/ameseee/pen/mdbmBmq?editors=1010)
-* [Spooky Friends](https://codepen.io/kaylaewood/pen/jOrzYWM)
+* [Spooky Friends](https://codepen.io/kaylagordon/pen/jOrzYWM)
 * [Munchie Madness](https://codepen.io/eric_turing/pen/GRKEeEY)
 </section>
 
 <section class="answer">
 ### Bracket & Dot Notation
 
-* [Bracket & Dot Notation 1](https://repl.it/@kaylaewood/bracketVsDotHomework#index.js)
-* [Bracket & Dot Notation 2](https://codepen.io/kaylaewood/pen/wvGrQxV?editors=1010)
+* [Bracket & Dot Notation 1](https://repl.it/@kaylagordon/bracketVsDotHomework#index.js)
+* [Bracket & Dot Notation 2](https://codepen.io/kaylagordon/pen/wvGrQxV?editors=1010)
 </section>
 
 <section class="answer">

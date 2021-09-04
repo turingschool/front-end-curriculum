@@ -10,8 +10,9 @@ tags: node, express, server, backend
 * Experiment with server side code to return different results
 
 ### Vocab
-* `Server` A specialized, network enabled, computer
-* `Express` A javascript framework for creating server side code
+* `Server` A computer or system that provides resources, data, services, or programs to other computers, known as clients, over a network.
+* `Node.js` A development platform for executing JavaScript code server-side (back-end).
+* `Express` A `Node.js` web application framework.
 
 ### Warm Up
 

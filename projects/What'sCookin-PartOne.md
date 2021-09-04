@@ -1,5 +1,7 @@
-# What's Cookin - Part one
-
+---
+title: What's Cookin - Part one!
+tags: javascript, oop, mocha, testing, fetch
+---
 ## Goals and Objectives
 
 	 
@@ -31,10 +33,10 @@ Feel free to use the above sites as inspiration for your UI, but note that there
 ## Timeline
 Dates and deadlines to be aware of:
 	 
-* **Friday, August 27th** - Submit the following to your PM BEFORE beginning to write code via Slack:
+* **Monday August 30th** - Submit the following to your PM BEFORE beginning to write code via Slack:
 1. DTR (be specific about learning goals, schedules, and communication expectations) 
 1. Project board (this should be kept updated throughout the project and will be reviewed by PM in check-ins).
-1. Planned out Class structure
+1. Planned out Class structure, for example, for a Recipe setup, you can have a ```RecipeRepository Class ``` and ```Recipe Class```.
 1. Wireframes
 1. 3 design inspirations (Please include links and details on what you're trying to re-create).
 	 
@@ -72,7 +74,7 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 	 
 	 
 4. Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
-	</section>
+</section>
 	 
 ---
 	 
@@ -187,23 +189,6 @@ You will no longer be receiving your data from a hardcoded data file, but rather
 	 
 Once you've got fetch working on all three arrays, you can delete your hardcoded data file!
 	 
-### Iteration 4 - Pantries
-	 
-#### Pantry Data
-Create classes and methods that can:
-- Determine whether a user's pantry has enough ingredients to cook a given meal.
-- Determine the amount of missing ingredients still needed to cook a given meal, based on what's in the user's pantry.
-	 
-#### User Stories
-- As a user, I should be able to view what ingredients exist inside of my pantry.
-- As a user, I should be able to check my list of recipes to cook and see if my pantry has enough ingredients to cook a meal.
-- As a user, I should be told what ingredients are still needed if I don't have enough ingredients in my pantry to cook the recipe.
-	 
-### Iteration 5 - Pantries
-	 
-#### User Stories
-- As a user, I should be able to add/remove ingredients from my pantry.
----
 	 
 ### Extensions
 _Choose at least one_
@@ -235,7 +220,7 @@ You are *not expected* to test:
 ## Rubric
 	 
 ### Functional Expectations
-* 4: Application fulfills all requirements *as well as* an extension and/or iteration 4.
+* 4: Application fulfills all requirements *as well as* an extension.
 * 3: Application fulfills all requirements of iteration 3.
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage.
@@ -262,6 +247,7 @@ You are *not expected* to test:
 	 
 ### Minimum Professionalism Expectations
 * Commits are atomic and frequent, effectively documenting the evolution/progression of the application
+* The Project Board is utilized with Github issues and labels.
 * Developer uses PRs from feature branches before adding new code to the main branch.
 * The README is formatted well and contains:
 * Overview of project and goals
