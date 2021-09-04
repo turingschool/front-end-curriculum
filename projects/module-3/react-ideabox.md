@@ -112,6 +112,120 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 </section>
 
+<section class="answer">
+### Iteration 1: Our First Component (App.js)
+
+<section class="answer">
+### The Challenge  
+
+xx
+</section>
+
+<section class="answer">
+### The Code  
+
+xx
+</section>
+
+<section class="answer">
+### Reflections  
+
+xx
+</section>
+
+</section>
+
+<section class="answer">
+### Iteration 2: Rendering Ideas (Ideas.js + Card.js)
+
+<section class="answer">
+### The Challenge  
+
+xx
+</section>
+
+<section class="answer">
+### The Code  
+
+xx
+</section>
+
+<section class="answer">
+### Reflections  
+
+xx
+</section>
+
+</section>
+
+<section class="answer">
+### Iteration 3: Conditional Rendering
+
+<section class="answer">
+### The Challenge  
+
+xx
+</section>
+
+<section class="answer">
+### The Code  
+
+xx
+</section>
+
+<section class="answer">
+### Reflections  
+
+xx
+</section>
+
+</section>
+
+<section class="answer">
+### Iteration 4: Controlled Form (Form.js)
+
+<section class="answer">
+### The Challenge  
+
+xx
+</section>
+
+<section class="answer">
+### The Code  
+
+xx
+</section>
+
+<section class="answer">
+### Reflections  
+
+xx
+</section>
+
+</section>
+
+<section class="answer">
+### Iteration 5: Deleting a Card
+
+<section class="answer">
+### The Challenge  
+
+xx
+</section>
+
+<section class="answer">
+### The Code  
+
+xx
+</section>
+
+<section class="answer">
+### Reflections  
+
+xx
+</section>
+
+</section>
 
 
 <!-- ## Ideabox
