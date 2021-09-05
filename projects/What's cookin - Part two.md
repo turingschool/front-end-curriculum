@@ -14,7 +14,7 @@ In this project, you will use what's cooking part one and build on top of that. 
 Dates and deadlines to be aware of:
 
 * **Monday of Week 4** -  Project kickoff
-* **Tuesday of Week 4** - Have your project board updated with new tickets (*DTR should also be complete*).  
+* **Tuesday of Week 4** - Have your project board updated with new tickets (*DTR should also already be completed but you could review and edit*).  
 * **Monday of Week 5** - Project due at 9PM
 * **Tuesday of Week 5** - Project evals
 
