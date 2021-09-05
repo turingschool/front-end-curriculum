@@ -6,7 +6,7 @@
 * Refactor your code and use inheritance to DRY up repetitive logic
 * Ensure your app follows best practices for accessibility
 * Leverage Sass to DRY up your CSS
-* Incorporate Webpack to streamline your workflow process
+
 
 In this project, you will use what's cooking part one and build on top of that. This is an opportunity to refactor your code from part one and build new features. 
 
@@ -14,55 +14,13 @@ In this project, you will use what's cooking part one and build on top of that. 
 Dates and deadlines to be aware of:
 
 * **Monday of Week 4** -  Project kickoff
-* **Tuesday of Week 4** - Have your project branch set up. Make sure to have the GitHub project board ready with tickets (*DTR should also be complete*).  
+* **Tuesday of Week 4** - Have your project board updated with new tickets (*DTR should also be complete*).  
 * **Monday of Week 5** - Project due at 9PM
 * **Tuesday of Week 5** - Project evals
 
 ## New Technologies
 
 * Sass
-* Fetch
-* [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'}
-
-
----
-
-## Set Up
-
-1. For this project, use the group project repository and create a new branch for project part two. On branch part two, we must see the preexisting code from part one. 
-2. To create a new branch in the terminal, use this command 
-```git branch -b partTwo```
-
-### Working with Webpack
-This project is set up to use [Webpack](https://webpack.js.org/guides/getting-started/){:target='blank'}, a module bundler. It will take whatever code we write and bundle it into a series of more efficient files that the browser can read (allowing us to use things like Sass, npm packages and ES6 `import` / `export` syntax).
-
-This [video](https://www.youtube.com/watch?v=GU-2T7k9NfI){:target='blank'} provides a helpful overview of some things webpack lets us do out of the box, most of which is set up for you already.
-
-This [article](https://survivejs.com/webpack/what-is-webpack/){:target='blank'} provides some more detail into how Webpack works, and what the `webpack.config.js` file is doing (**don't mess with this file unless you're sure you need to -- feel free to ask before you change things**).
-
-
-<section class="answer">
-### Notes on Webpack
-
-Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
-
-1. You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ){:target='blank'} syntax
-  - Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.
-
-2. Webpack needs to know where to look for your files. Look [here](https://github.com/turingschool-examples/webpack-starter-kit#where-to-add-your-code){:target='blank'} for a description of where webpack is set up to look for your HTML, CSS, JS and image files. Some general points:
-  - You need to import images into the entrypoint file (usually `scripts.js` or `index.js`).
-  - You need to `import` your CSS files into the entrypoint file too
-  - Make sure HTML, JS and CSS files are all in the `/src` directory
-  - You have to `import` any required modules and code for tests into your test files
-
-
-3. While developing, run `npm start`. Webpack will create a live version of your site on a local server, where you can see your changes happen in real-time. To access it, in your browser, navigate to the `localhost` address that your terminal gives you. Be aware; if you write a breaking change, your server may crash. The terminal will provide you with some error report about why the crash happened.
-
-
-4. Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
-</section>
-
-
 
 ---
 
@@ -70,13 +28,15 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 
 ### Functionality
 
-You must complete all of the User Stories outlined in the [What's Cookin Spec](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/projects/What's%20cookin%20-%20Group%20project%20-%20Part%20one){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
+You must complete all of the remaining User stories from [What's Cookin Spec](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/projects/What's%20cookin%20-%20Group%20project%20-%20Part%20one){:target='blank'}. If you did not finish parts of the original requirements, this is your chace to revisit and finish all of the functionality. 
 
-**NOTE: You must complete through iteration 5**
+**NOTE: You must complete through iteration 4**
 
 ### Fetch
 
-You will no longer receive your data from the deployed API, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}.  You will need to clone this down and run it in a separate tab in your terminal each time you run your client.  Here are the endpoints' setup for this project:
+You will no longer receive your data from the deployed API, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}.  This is for getting practice working with local server and how to implement that instead of working with deployed API. 
+You will need to clone this down and run it in a separate tab in your terminal each time you run your client.  Here are the endpoints' setup for this project. 
+
 
 #### Endpoints (GET and POST)
 
@@ -184,7 +144,6 @@ In addition to your refactoring, you also want to make sure the application is f
 <section class="note">
   
 ## Strategies for Success
-* Make sure you are reviewing the original ["What's Cooking"](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/projects/What's%20cookin%20-%20Group%20project%20-%20Part%20one) spec, so you have a good idea for what the project and its requirements are. 
 * Since this project is not separated into iterations or user stories, make sure that you spend a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well. 
 * Every group member must fully understand and be able to speak to all of the code changes that have been made. 
 * Implement feedback received in part one into part two.
