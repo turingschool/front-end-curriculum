@@ -2,25 +2,27 @@
 
 ## Goals and Objectives
 
-* Work with local server and make network requests to API endpoints to retrieve and manipulate data.
+* Work with a local server and make network requests to API endpoints to retrieve and manipulate data.
 * Refactor your code and use inheritance to DRY up repetitive logic
 * Ensure your app follows best practices for accessibility
 * Leverage Sass to DRY up your CSS
 
-
-In this project, you will use what's cooking part one and build on top of that. This is an opportunity to refactor your code from part one and build new features. 
+In this project, you will use your project from What's Cookin' (Part One) and build on top of that. This is an opportunity to refactor your code, complete unfinished work, build new features, and take advantage of instructor feedback.  
 
 ## Timeline
 Dates and deadlines to be aware of:
 
 * **Monday of Week 4** -  Project kickoff
-* **Tuesday of Week 4** - Have your project board updated with new tickets (*DTR should also already be completed but you could review and edit*).  
-* **Monday of Week 5** - Project due at 9PM
-* **Tuesday of Week 5** - Project evals
+* **Tuesday of Week 4** - Have your project board updated with new tickets (*DTR should also already be completed but you should review and edit.*).  
+* **Monday of Week 5** - Project due at 9PM(MST)
+* **Tuesday of Week 5** - Project evaluations
+* **Tuesday of Week 5** - Project demo watch party (optional)
 
-## New Technologies
+
+## New Technologies + Tools
 
 * Sass
+* Lighthouse Accessibility Audit
 
 ---
 
@@ -28,14 +30,35 @@ Dates and deadlines to be aware of:
 
 ### Functionality
 
-You must complete all of the remaining User stories from [What's Cookin Spec](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/projects/What's%20cookin%20-%20Group%20project%20-%20Part%20one){:target='blank'}. If you did not finish parts of the original requirements, this is your chace to revisit and finish all of the functionality. 
+You must complete all of the remaining user stories from the [What's Cookin Spec](https://frontend.turing.edu/projects/whats-cookin-part-one.html){:target='blank'}. If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part One requirements you must also add "Iteration Four."
 
-**NOTE: You must complete through iteration 4**
+#### Iteration 4 - Pantries
+
+##### Pantry Data
+Create classes and methods that can:
+- Determine whether a user's pantry has enough ingredients to cook a given meal.
+- Determine the amount of missing ingredients still needed to cook a given meal, based on what's in the user's pantry.
+
+##### User Stories
+- As a user, I should be able to view what ingredients exist inside of my pantry.
+- As a user, I should be able to check my list of recipes to cook and see if my pantry has enough ingredients to cook a meal.
+- As a user, I should be told what ingredients are still needed if I don't have enough ingredients in my pantry to cook the recipe.
+- As a user, I should not be able to cook a recipe if I don't have the ingredients required. 
+- As a user, when I cook a meal, those ingredients should be removed from my pantry. 
+- As a user, I should be able to add more ingredients to my pantry.
 
 ### Fetch
 
-You will no longer receive your data from the deployed API, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}.  This is for getting practice working with local server and how to implement that instead of working with deployed API. 
-You will need to clone this down and run it in a separate tab in your terminal each time you run your client.  Here are the endpoints' setup for this project. 
+You will no longer receive your data from the deployed API, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}. 
+
+Your GET requests should not change very much, but you will need to clone down the repo for the local server and run it in a separate tab in your terminal each time you run your client (app). Below are the endpoints' setup for this project. 
+
+<section class="note">
+### Why this change? 
+
+Everyone was using the same exact endpoints for Part One. This is typically how things work, but can cause some headache when implementing types of requests other than GET. In this part of the project, you will start making POST requests. Creating a local server instead of using the hosted (deployed) one, gives everyone their own version of the APIs and decreases an overload of new data getting sent. 
+
+</section>
 
 
 #### Endpoints (GET and POST)
@@ -77,6 +100,7 @@ If you wanted to remove_ 3 units of that ingredient, you'd want to send a JSON t
 ### Error Handling
 
 Make proper error handling for your users to ensure they get data and submit their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user?  Also, validate the input fields on the client-side.
+
 </section>
 
 ---
@@ -115,10 +139,10 @@ Refactor the existing CSS into Sass. You should break your Sass out into separat
 
 Your Sass should be making use of:
 
+* separate files
 * variables for colors, fonts, etc.
 * nesting, when/where appropriate
 * at least **two** mixins or extends
-
 
 ---
 
@@ -137,14 +161,14 @@ In addition to your refactoring, you also want to make sure the application is f
 - Initial values of class properties need tests
 - Class methods need tests for all expected outcomes
 - Any methods that modify class properties should be test
-- **You are not required to test your fetch calls**
+- **You are not required to test your fetch calls or dom manipulation**
 
 ---
 
 <section class="note">
   
 ## Strategies for Success
-* Since this project is not separated into iterations or user stories, make sure that you spend a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well. 
+* Since this project is not separated into iterations or user stories, make sure that you spend a good amount of time breaking apart tasks and using that project board wisely. 
 * Every group member must fully understand and be able to speak to all of the code changes that have been made. 
 * Implement feedback received in part one into part two.
 </section>
@@ -152,26 +176,27 @@ In addition to your refactoring, you also want to make sure the application is f
 ---
 
 ### Extensions
+* If you didn't get a chance to experiment with an NPM package in Part One, try one out here! Remember to revist the list of approved NPM packages, or run a new one by your project manager first. 
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
 * Create a video of your team navigating through your app via a keyboard and screen reader. 
-* Implement an animation using CSS and Sass.
+* Implement an animation using CSS and Sass and/or make your application responsive on smaller screen sizes. 
 * Create and implement a new feature for your application (run this by instructors first). 
 
 ---
 
 # Project Requirements Rubric
 
-## Functional Expectiations
+## Functional Expectations
 * 4: Application fulfills all requirements *as well as* an extension.
 * 3: Application fulfills all requirements.
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage or does not run.
 
 ## Testing
-* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.
-* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation.
-* 1: Tests have not been updated to reflect changes made in refactor.
+* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. All tests are passing. 
+* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files. All tests are passing
+* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation. Some tests might be failing. 
+* 1: Tests have not been updated to reflect changes made in refactor. There is not enough test coverage, and multiple tests might be failing. 
 
 ## Sass
 * 4: Application fulfills all requirements previously mentioned, and has Sass functionality that goes above and beyond an MVP (see extensions).
@@ -187,9 +212,9 @@ In addition to your refactoring, you also want to make sure the application is f
 
 ## JavaScript Refactoring
 * 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring.  Excellent usage of `fetch` and updates DOM based on results of network requests.  Handles all scenarios for error handling.
-* 3: Class methods use array and object prototypes - for loops are not used in the application. Application shows strong effort towards organization, content, and refactoring.  Great usage of `fetch` and updates DOM based on results in most scenarios, but may update DOM before a network request is complete.  Handles some scenarios for error handling.
-* 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has zero error handling and only `logs` errors if a network request fails.
-* 1: Application generates syntax error or crashes during execution.  Uses original data files and does not utilize `fetch` at all.
+* 3: Class methods use array and object prototypes - for loops are not used in the application. Application shows strong effort towards organization, content, and refactoring.  Great usage of `fetch` and updates DOM based on results in most scenarios, but may update DOM before a network request is complete.  Handles some scenarios for error handling. 
+* 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has zero error handling and only `logs` errors if a network request fails. 
+* 1: Application generates syntax errors or crashes during execution. Does not utilize `fetch` at all.
 
 ---
 
