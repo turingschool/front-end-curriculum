@@ -151,9 +151,9 @@ If you choose from this category, then you must pick at least two of these optio
 
 ## Deliverables
 
-### Day 1
+### Day 2
 
-Create a Slack DM with your team members and  both instructors. Submit the following by **3PM** of day 1:
+Create a Slack DM with your team members and  both instructors. Submit the following by **10:00AM** of day 2:
 
 * MVP summary with a description the problem you are solving and your audience (be specific and don't be afraid to narrow your audience!)
 * The API you will use
