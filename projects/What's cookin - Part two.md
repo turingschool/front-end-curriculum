@@ -14,9 +14,10 @@ In this project, you will use what's cooking part one and build on top of that. 
 Dates and deadlines to be aware of:
 
 * **Monday of Week 4** -  Project kickoff
-* **Tuesday of Week 4** - Have your project board updated with new tickets (*DTR should also already be completed but you could review and edit*).  
+* **Tuesday of Week 4** - Have your project board updated with new tickets (*DTR should also already be completed but you can review and edit that*).  
 * **Monday of Week 5** - Project due at 9PM
 * **Tuesday of Week 5** - Project evals
+* **Tuesday of Week 5** - (Optional)Project demo watch party
 
 ## New Technologies
 
@@ -144,7 +145,7 @@ In addition to your refactoring, you also want to make sure the application is f
 <section class="note">
   
 ## Strategies for Success
-* Since this project is not separated into iterations or user stories, make sure that you spend a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well. 
+* Since this project is not separated into iterations or user stories, make sure that you spend a good amount of time breaking apart tasks and using that project board wisely.
 * Every group member must fully understand and be able to speak to all of the code changes that have been made. 
 * Implement feedback received in part one into part two.
 </section>
