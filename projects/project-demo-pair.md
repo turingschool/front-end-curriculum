@@ -1,4 +1,4 @@
-# Pair Project Demo
+# Project Demo
 
 Instead of a live demo with an instructor, you'll be putting together short videos to show off your project! This is something you can include on your README to provide more information on your app, and will give you practice for future demo days. 
 
@@ -13,7 +13,7 @@ Instead of a live demo with an instructor, you'll be putting together short vide
   - Wins & challenges 
   - Any future additions 
 - Your video should be between 5 and 10 minutes long and uploaded to YouTube or Vimeo when completed 
-- **Due Date: videos should be sent to PM's by EOD Wednesday**
+- **Due Date: videos should be sent to PM's by EOD Monday**
 
 ## Some Inspiration
 - M2 Projects
