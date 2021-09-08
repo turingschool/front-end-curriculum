@@ -184,6 +184,11 @@ In addition to your refactoring, you also want to make sure the application is f
 
 ---
 
+### Project demo video
+* Instead of live demo with the instructor you are required to make a video and present that during watch demo party.
+* You can find the instructions [here](https://frontend.turing.edu/projects/project-demo-pair.html){:target='blank'}
+
+---
 # Project Requirements Rubric
 
 ## Functional Expectations
