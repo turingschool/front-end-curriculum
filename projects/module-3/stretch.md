@@ -23,7 +23,7 @@ As a group, you need to decide on:
 1. Choose one category from the "Stretch Technologies" section below
 1. Meets the specs listed below under **MVP**.
 
-This application must be deployed by the time it is submitted for evaluation. 
+This application must be deployed by the time it is submitted for evaluation.
 
 ### MVP
 
@@ -193,7 +193,7 @@ Your project does not need to be done or impressive by this point; this is more 
 
 Connecting back to the purpose of this project, Evals will be conducted in a way that gives you an opportunity to practice speaking about your learning experience.
 
-Evals are 
+Evals are
 * 1:1 sessions with you and an instructor from the Frontend Team (Go Birds!)
 * 15 minutes
 * Two interview questions - one technical (about your stretch tech) and one behavioral (you get to choose the "theme", but not the specific question)
@@ -205,31 +205,32 @@ Evals are
 There will be no written feedback for this project, but each and every one of you is capable of self-assessing wether or not your project is proficient. Mentors and Rocks are also a valuable resource here.
 
 **A Proficient project would include the following:**
-- README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
-- README links to all user GitHub profiles and any applicable repos/deployed sites
-- Setup instructions for any and all repos are through and verbose enough that even non-technical people (like recruiters) could follow them
-- Git commits are atomic, with concise and precise descriptions of the change made
-- PRs have full, consistent descriptions
-- Team members do some code reviews of PRs, but are not always thorough or consistent
-- Evolution of the project (decisions made, etc) is documented in the git history and PRs but is sometimes unclear
-- When the project is run locally, the terminal shows no errors and fewer than 5 warnings
-
-- A consistent, modular file structure is used
-- A clear understanding of class components vs function components is demonstrated
-- Only the data that a child component _needs_ is passed down as props
-- Logic is kept out of return statements; return statements are as readable as possible, only communicating what will be displayed
-- There may be some issues with the asynchronous JS where the frontend does not match with the backend
-- There are a few functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
-- Data fetched from API is not cleaned before being set to state
-- All components which receive props implement prop typechecking (proptypes or otherwise)
-
-- Project implements the chosen stretch tech with a sophisitication that indicates a deep understanding
-- Group members can all individually speak about the stretch tech's best practices
-- Group members have reflected on the process of learning these technologies and can speak clearly about their learning processes
-
-- All user flows are covered
-- Async functionality is stubbed at least once
-- Tests make specific assertions about the content DOM elements contain
+#### Professionalism/Workflow:
+- [ ] README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
+- [ ] README links to all user GitHub profiles and any applicable repos/deployed sites
+- [ ] Setup instructions for any and all repos are thorough and verbose enough that even non-technical people (like recruiters) could follow them
+- [ ] Git commits are atomic, with concise and precise descriptions of the change made
+- [ ] PRs have full, consistent descriptions
+- [ ] Team members conduct consistent code reviews of PRs
+- [ ] Evolution of the project (decisions made, etc) is documented in the git history and PRs
+- [ ] When the project is run locally, the terminal shows no errors and no warnings
+#### React Architecture:
+- [ ] A consistent, modular file structure is used
+- [ ] A clear understanding of class components vs function components is demonstrated
+- [ ] Only the data that a child component _needs_ is passed down as props
+- [ ] Logic is kept out of return statements; return statements are as readable as possible, only communicating what will be displayed
+- [ ] The data displayed on the frontend is consistent with the data stored on the backend
+- [ ] Functions follow the single responsibility principle and are written to be reusable when appropriate
+- [ ] Data fetched from API is cleaned before being set to state
+- [ ] All components which receive props implement prop typechecking (proptypes or otherwise)
+#### Stretch Technology:
+- [ ] Project implements the chosen stretch tech with a sophisitication that indicates a deep understanding
+- [ ] Group members can all individually speak about the stretch tech's best practices
+- [ ] Group members have reflected on the process of learning these technologies and can speak clearly about their learning processes
+#### Testing:
+- [ ] All user flows are tested
+- [ ] Async functionality is stubbed at least once
+- [ ] Tests make specific assertions about the content DOM elements contain
 
 <!-- ### Project Professionalism
 
