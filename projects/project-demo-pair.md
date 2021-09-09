@@ -28,4 +28,4 @@ Instead of a live demo with an instructor, you'll be putting together short vide
   - [Planet Party](https://www.youtube.com/watch?v=XHJVaMba-GA)
 
 ## Optional Viewing Party
-We'll get together to celebrate the completion of your apps but watching each other's videos! We'd love for everyone show off their videos, but you team can choose if you'd like to share your video with the cohort or not. 
+We'll get together to celebrate the completion of your apps by watching each other's videos! We'd love for everyone show off their videos, but your team can choose if you'd like to share your video with the cohort or not. 
