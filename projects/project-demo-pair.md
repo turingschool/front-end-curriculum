@@ -1,5 +1,7 @@
-# Project Demo
-
+---
+title: Project Demo Video
+tags: javascript, oop, mocha, testing, fetch
+---
 Instead of a live demo with an instructor, you'll be putting together short videos to show off your project! This is something you can include on your README to provide more information on your app, and will give you practice for future demo days. 
 
 ## Requirements
