@@ -224,9 +224,9 @@ There will be no written feedback for this project, but each and every one of yo
 - [ ] Data fetched from API is cleaned before being set to state
 - [ ] All components which receive props implement prop typechecking (proptypes or otherwise)
 #### Stretch Technology:
-- [ ] Project implements the chosen stretch tech with a sophisitication that indicates a deep understanding
-- [ ] Group members can all individually speak about the stretch tech's best practices
-- [ ] Group members have reflected on the process of learning these technologies and can speak clearly about their learning processes
+- [ ] Project implements the chosen stretch tech throughout the entire application
+- [ ] Group members can all individually speak about the stretch tech's best practices and attempts were made to follow those best practices in your application
+- [ ] Group members have reflected on the process of learning these technologies and can speak clearly about their learning processes and how that relates to their future job
 #### Testing:
 - [ ] All user flows are tested
 - [ ] Async functionality is stubbed at least once
