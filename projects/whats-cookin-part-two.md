@@ -6,6 +6,7 @@
 * Refactor your code and use inheritance to DRY up repetitive logic
 * Ensure your app follows best practices for accessibility
 * Leverage Sass to DRY up your CSS
+* Pracitce talking about your code and high level technical concepts
 
 In this project, you will use your project from What's Cookin' (Part One) and build on top of that. This is an opportunity to refactor your code, complete unfinished work, build new features, and take advantage of instructor feedback.  
 
@@ -14,10 +15,11 @@ Dates and deadlines to be aware of:
 
 * **Monday of Week 4** -  Project kickoff
 * **Tuesday of Week 4** - Have your project board updated with new tickets (*DTR should also already be completed but you should review and edit.*).  
-* **Monday of Week 5** - Project due at 9PM(MST)
+* **Monday of Week 5** - Project and video due at 9PM(MST)
 * **Tuesday of Week 5** - Project evaluations
-* **Tuesday of Week 5** - Project demo watch party (optional)
+* **Tuesday of Week 5** - Project demo watch party (optional to attend)
 
+_NOTE: Creating the project demo video is a requirement, but attending and submitting your video in the watch party is optional. Instructions can be found [here](https://frontend.turing.edu/projects/project-demo-pair.html)_
 
 ## New Technologies + Tools
 
@@ -220,6 +222,18 @@ In addition to your refactoring, you also want to make sure the application is f
 * 3: Class methods use array and object prototypes - for loops are not used in the application. Application shows strong effort towards organization, content, and refactoring.  Great usage of `fetch` and updates DOM based on results in most scenarios, but may update DOM before a network request is complete.  Handles some scenarios for error handling. 
 * 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has zero error handling and only `logs` errors if a network request fails. 
 * 1: Application generates syntax errors or crashes during execution. Does not utilize `fetch` at all.
+
+---
+
+### Minimum Professionalism Expectations
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application
+* The Project Board is utilized (and updated) with Github issues and labels.
+* Developer uses PRs from feature branches before adding new code to the main branch.
+* The README is formatted well and at a minimum contains:
+  * Overview of project and goals
+  * Overview of technologies used, challenges, wins, and any other reflections
+  * Screenshots/gifs of your app
+  * Demo video
 
 ---
 

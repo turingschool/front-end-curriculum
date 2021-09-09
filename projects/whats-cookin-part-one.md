@@ -249,7 +249,7 @@ You are *not expected* to test:
 * Commits are atomic and frequent, effectively documenting the evolution/progression of the application
 * The Project Board is utilized with Github issues and labels.
 * Developer uses PRs from feature branches before adding new code to the main branch.
-* The README is formatted well and contains:
-* Overview of project and goals
-* Overview of technologies used, your code architecture, challenges, wins, and any other reflections
-* Screenshots/gifs of your app
+* The README is formatted well and at a minimum contains:
+  * Overview of project and goals
+  * Overview of technologies used, challenges, wins, and any other reflections
+  * Screenshots/gifs of your app
