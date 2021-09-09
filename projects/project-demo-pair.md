@@ -13,7 +13,7 @@ Instead of a live demo with an instructor, you'll be putting together short vide
   - Wins & challenges 
   - Any future additions 
 - Your video should be between 5 and 10 minutes long and uploaded to YouTube or Vimeo when completed 
-- **Due Date: videos should be sent to PM's by EOD Monday**
+- **Due Date: videos should be sent along with project repos by due date**
 
 ## Some Inspiration
 - M2 Projects
@@ -26,4 +26,4 @@ Instead of a live demo with an instructor, you'll be putting together short vide
   - [Planet Party](https://www.youtube.com/watch?v=XHJVaMba-GA)
 
 ## Optional Viewing Party
-On Thursday afternoon, we'll have a viewing party. Your team can choose if you'd like to share your video with the cohort or not. 
+We'll get together to celebrate the completion of your apps but watching each other's videos! We'd love for everyone show off their videos, but you team can choose if you'd like to share your video with the cohort or not. 
