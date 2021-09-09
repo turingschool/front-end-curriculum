@@ -1,4 +1,7 @@
-# What's Cookin - Part two
+---
+title: What's Cookin - Part two!
+tags: javascript, oop, mocha, testing, fetch, sass
+---
 
 ## Goals and Objectives
 
@@ -6,7 +9,7 @@
 * Refactor your code and use inheritance to DRY up repetitive logic
 * Ensure your app follows best practices for accessibility
 * Leverage Sass to DRY up your CSS
-* Pracitce talking about your code and high level technical concepts
+* Practice talking about your code and high level technical concepts
 
 In this project, you will use your project from What's Cookin' (Part One) and build on top of that. This is an opportunity to refactor your code, complete unfinished work, build new features, and take advantage of instructor feedback.  
 
