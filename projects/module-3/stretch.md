@@ -168,13 +168,13 @@ Create a Slack DM with your team members and  both instructors. Submit the follo
 
 Your instructors will do a stand-up meeting in the mornings to see where the group is at, and give a chance for each group member to talk through what they're working on or where they have blockers.
 
-### Day 4-ish
+### Day 5
 * In your Project DM, send us the link to a recent PR
 * Choose a PR that is related to your Stretch Tech, and use the PR description to fill us in on your learning.
 * Sometime in the next few days, we'll perform a code review
 * You do not need to wait for our review to merge it in.
 
-### Day 5
+### Day 6
 
 Your instructors will do a formal check-in with your group. At this check-in, instructors expect to see:
 * A very quick demo of your application so far detailing the progress made toward your MVP
@@ -183,7 +183,7 @@ Your instructors will do a formal check-in with your group. At this check-in, in
 * Any blockers you're experiencing
 * Your plan going forward for the next few days
 
-### Day 8
+### Day 9
 
 Share your app progress with the class for Show and Tell! Be prepared to tell the story of what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes (shoot for 5 minutes).
 
@@ -226,7 +226,7 @@ There will be no written feedback for this project, but each and every one of yo
 #### Stretch Technology:
 - [ ] Project implements the chosen stretch tech throughout the entire application
 - [ ] Group members can all individually speak about the stretch tech's best practices and attempts were made to follow those best practices in your application
-- [ ] Group members have reflected on the process of learning these technologies and can speak clearly about their learning processes and how that relates to their future job
+- [ ] Group members have reflected on the process of learning these technologies and can speak clearly about their learning processes
 #### Testing:
 - [ ] All user flows are tested
 - [ ] Async functionality is stubbed at least once
