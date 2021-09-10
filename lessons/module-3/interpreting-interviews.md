@@ -22,15 +22,18 @@ module: 3
 
 ## Thinking Like an Interviewer
 
-Many people approach interviews with the mindset that they need to improvise their answer for every question they are asked. This approach can lead to lots of nerves going into the interviews because you're thinking: *What if I can't think of a good answer on the spot?* It can also lead to you leaving an interview thinking *Oh shoot, I should have said THAT when they asked me that question! Why didn't I think of that earlier?*
+Many people approach interviews with the mindset that they need to improvise their answer for every question they are asked. This approach can lead to lots of nerves going into the interviews because you're thinking:  
+*What if I can't think of a good answer on the spot?*  
+It can also lead to you leaving an interview thinking:  
+*Oh shoot, I should have said THAT when they asked me that question! Why didn't I think of that earlier?*  
 
-Today we are going to talk about how you can prepare for a behavioral interview by **thinking ahead** and preparing your answers **before** the interview.
+Today we are going to talk about how you can prepare for a behavioral interview by **thinking ahead** and preparing your answers **before** the interview.  
 
-You can't possible predict all of the questions that you may get asked in an interview. But you CAN predict some of the main ideas and themes that the interviewer may ask you about. For example, it's safe to say that you'll get asked about your professional background. You'll also probably get asked about how you learn, how you collaborate, and how you overcome obstacles. If you can think ahead to what themes you make get asked about, you can prepare your stories ahead of time to address any specific question you may get asked.
+You can't possible predict all of the questions that you may get asked in an interview. But you CAN predict some of the main ideas and themes that the interviewer may ask you about. For example, it's safe to say that you'll get asked about your professional background. You'll also probably get asked about how you learn, how you collaborate, and how you overcome obstacles.  
 
-### Let's consider an example.
+**If you can think ahead to what themes you make get asked about, you can prepare your stories ahead of time to address any specific question you may get asked.**  
 
-Take a moment to think about all of the different ways an interviewer might ask about your collaboration style. Make a list of at least 5 questions someone might ask you that would get you to talk about how you collaborate.
+Let's consider an example. Take a moment to think about all of the different ways an interviewer might ask about your collaboration style. Make a list of at least 5 questions someone might ask you that would get you to talk about how you collaborate.  
 
 <section class="answer">
 ### Some examples:
@@ -44,20 +47,24 @@ Take a moment to think about all of the different ways an interviewer might ask 
 - At our company, collaboration is important to us. If hired, how will you contribute to your team?
 </section>
 
-Notice that many of those questions are extremely similar, just worded differently. How many different stories would you need to have prepared to answer those questions? Two? Maybe three? That's the point! **You do not have to have a different answer prepared for any possible question you might get asked. Instead, should prepare answers that speak to the broad themes of what you may be asked about.** For example, you might prepare a story that highlights your strengths as a teammate and another that demonstrates your skills in conflict-resolution and empathy. Then, you'd be prepared to answer any question on the list!
+Notice that many of those questions are extremely similar, just worded differently. How many different stories would you need to have prepared to answer those questions? Two? Maybe three? That's the point!  
 
-### Let's look at more questions.
+**You do not have to have a different answer prepared for any possible question you might get asked. Instead, should prepare answers that speak to the broad themes of what you may be asked about.**  
+
+For example, you might prepare a story that highlights your strengths as a teammate and another that demonstrates your skills in conflict-resolution and empathy. Then, you'd be prepared to answer any question on the list!
+
+We are going to work through some activities to solidify this concept.
 
 <section class="call-to-action">
-### Interpreting Questions
+### Activity 1: Categorizing Questions
 
-Complete [this activity](https://docs.google.com/spreadsheets/d/1UzP9XHcbKWSSG7S49VPCcJyijd9u6FwrJGdaYgI4Z20/edit?usp=sharing).
+First, take 15 minutes to complete part A of [this activity](https://docs.google.com/spreadsheets/d/1UzP9XHcbKWSSG7S49VPCcJyijd9u6FwrJGdaYgI4Z20/edit?usp=sharing) in breakout rooms. Note that you will all want to have your own copy of this document.
+
+Next, take 15 minutes to complete part B of the same activity independently.
 </section>
 
-### Let's get some practice.
-
 <section class="call-to-action">
-### Mini Mock Interview
+### Activity 2: Mini Mock Interview
 
 <section class="answer">
 ### Solo Reflection  
@@ -88,15 +95,14 @@ You will have 20 minutes total, so be sure to watch the clock and switch roles a
 
 </section>
 
-### Let's reflect and plan.
-
 <section class="call-to-action">
 ### Wrap Up
 
+Take some time to reflect on the following questions:
 - What theme do you feel the most prepared to discuss? The least?
 - How will you practice moving forward?
 </section>
 
-## FE ONLY: Stretch Tech Evals
+### FE ONLY: Stretch Tech Evals
 
 For your [stretch tech project](https://frontend.turing.edu/projects/module-3/stretch.html) evals, you will have a mini-mock interview with an instructor. You will be able to choose the category/theme of your behavioral question and then the interviewer will ask you a question on the spot within that theme. You'll be expected to use your experience from the Stretch Tech project to answer your question. You'll get feedback from the instructor on your response.
