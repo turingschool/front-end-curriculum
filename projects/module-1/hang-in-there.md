@@ -68,11 +68,11 @@ _Hint: go check out the HTML and CSS files to see how the form and saved posters
 
 ## Iteration 2 - Creating a New Poster
 
-Result after clicking save button:
+Result after clicking Show My Poster button:
 ![result](../../assets/images/projects/hang-in-there/form-result.png)
 
-- On the new poster form view, users should be able to fill out the three input fields and then hit the save button
-- When the save button is clicked, several things will happen:
+- On the new poster form view, users should be able to fill out the three input fields and then hit the Show My Poster button
+- When the Show My Poster button is clicked, several things will happen:
   - Use the values from the inputs to create a new instance of our Poster class  (part of your data model)
   - Save the submitted data into the respective arrays (image URL into the images array, etc - all part of your data model) so that future random posters can use the user-created data
   - Change back to the main poster view (hiding the form view again)
