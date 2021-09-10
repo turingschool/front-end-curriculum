@@ -38,6 +38,7 @@ Remember: the learning goals of this project are to expand/deepen your understan
 </section>
 
 The project is very open-ended in that you can make pretty much anything you want. However, we have some requirements to follow:  
+* Assume one single user - multiple users with log in and authentication is out of the scope of this project.
 * The application cannot simply be a display of data - there needs to be some way for the user to work with or manipulate the data (favoriting, searching, filtering, commenting, rating, etc)
 * The application should be a multi-page application using React Router
 * Be able to answer: What problems are you solving? What features **must** the solution include to solve this problem?
