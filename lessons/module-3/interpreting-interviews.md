@@ -31,7 +31,7 @@ Today we are going to talk about how you can prepare for a behavioral interview 
 
 You can't possible predict all of the questions that you may get asked in an interview. But you CAN predict some of the main ideas and themes that the interviewer may ask you about. For example, it's safe to say that you'll get asked about your professional background. You'll also probably get asked about how you learn, how you collaborate, and how you overcome obstacles.  
 
-**If you can think ahead to what themes you make get asked about, you can prepare your stories ahead of time to address any specific question you may get asked.**  
+**You do not have to have a different answer prepared for every possible question you might get asked. Instead, should prepare answers that speak to the broad themes of what you may be asked about.**
 
 Let's consider an example. Take a moment to think about all of the different ways an interviewer might ask about your collaboration style. Make a list of at least 5 questions someone might ask you that would get you to talk about how you collaborate.  
 
@@ -47,11 +47,7 @@ Let's consider an example. Take a moment to think about all of the different way
 - At our company, collaboration is important to us. If hired, how will you contribute to your team?
 </section>
 
-Notice that many of those questions are extremely similar, just worded differently. How many different stories would you need to have prepared to answer those questions? Two? Maybe three? That's the point!  
-
-**You do not have to have a different answer prepared for any possible question you might get asked. Instead, should prepare answers that speak to the broad themes of what you may be asked about.**  
-
-For example, you might prepare a story that highlights your strengths as a teammate and another that demonstrates your skills in conflict-resolution and empathy. Then, you'd be prepared to answer any question on the list!
+Notice that many of those questions are extremely similar, just worded differently. How many different stories would you need to have prepared to answer those questions? Two? Maybe three? That's the point! Instead of preparing an answer for every question above, you might prepare a story that highlights your strengths as a teammate and another that demonstrates your skills in conflict-resolution and empathy. Then, you'd be prepared to answer any question on the list!
 
 We are going to work through some activities to solidify this concept.
 
