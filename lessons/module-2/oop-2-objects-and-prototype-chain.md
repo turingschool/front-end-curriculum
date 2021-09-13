@@ -31,13 +31,12 @@ Where have we heard the term `prototype` before.  What do we know about this so 
 ### Review 
 
 * We know that a **prototype** is a model of something and how it should look or behave.
-* We know that we have access to prototype methods (forEach, filter, etc) on arrays.
+* We know that we have access to prototype methods (forEach, filter, etc) on arrays. 
 
-Prototypes are the mechanism by which JavaScript objects inherit features from one another. Having access to this chain of inheritance (via prototype objects) is a powerful way to define a behavior in one place and then use it in many others.
 </section>
 
 <section class="call-to-action">
-### Once more, what is a prototype?
+### What is a prototype?
 
 In JavaScript, a prototype is a special object that is assigned to all functions, including but not limited to functions that are used to construct objects. 
 
@@ -63,7 +62,7 @@ class Instructor {
   }
 }
 
-let instructor = new Instructor('Travis', 'OOP');
+let instructor = new Instructor('Hannah', 'OOP 2');
 ```
 
 * After declaring this class, type `Instructor.` into your console.  (*Note the uppercase `I`*) You should see the browser attempting to autocomplete this with properties that are available on this function.  Look at the `prototype` property and take note of its value.
@@ -91,10 +90,10 @@ Instructor.prototype.teachLesson = function(duration) {
 }
 
 Instructor.prototype.gradeProjects = function(project) {
-  return `${this.name} is grading ${project}.`
+  return `${this.name} is grading ${project}.` 
 }
 
-var instructor = new Instructor('Travis', 'OOP');
+let instructor = new Instructor('Robbie', 'POST Requests');
 ```
 
 In order to add methods to our template, we had to manipulate the `prototype` directly.  This is exactly what our classes do under the hood.
@@ -103,9 +102,7 @@ In order to add methods to our template, we had to manipulate the `prototype` di
 <section class="checks-for-understanding">
 ### Review: What is a prototype?
 
-1. A property on a function that points to an object.
-1. An object that allows you to share methods among all instances of an object.
-1. A way for objects to inherit methods from other objects.
+A special object which is assigned to functions that you make in JavaScript
 </section>
 
 <section class="call-to-action">
@@ -121,7 +118,8 @@ It is likely that you have seen this (somewhat overwhelming) list of properties 
 * What happens when you type `food.`?  
 * What is the browser attempting to autocomplete?
 * What familiar properties are showing up?  
-* Is the `prototype` property still there or is it something different?
+* Is the `prototype` property still there? Why or why not?
+* Bonus: Try this out with other data types! 
 </section>
 
 ## __proto__
