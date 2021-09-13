@@ -169,13 +169,13 @@ Create a Slack DM with your team members and  both instructors. Submit the follo
 
 Your instructors will do a stand-up meeting in the mornings to see where the group is at, and give a chance for each group member to talk through what they're working on or where they have blockers.
 
-### Day 5
+### Day 6
 * In your Project DM, send us the link to a recent PR
 * Choose a PR that is related to your Stretch Tech, and use the PR description to fill us in on your learning.
 * Sometime in the next few days, we'll perform a code review
 * You do not need to wait for our review to merge it in.
 
-### Day 6
+### Day 8
 
 Your instructors will do a formal check-in with your group. At this check-in, instructors expect to see:
 * A very quick demo of your application so far detailing the progress made toward your MVP
