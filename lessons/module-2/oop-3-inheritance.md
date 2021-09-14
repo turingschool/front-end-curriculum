@@ -88,7 +88,7 @@ class Instructor {
   }
 }
 
-var instructor = new Instructor('Pam', 2, ['funny', 'smart']);
+let instructor = new Instructor('Hannah', 2, ['hungry', 'calm']);
 ```
 
 Similar to an instructor, we might have a teaching assistant class to keep track of this data. Teaching Assistants should have a name, module, and traits property, just like instructors do. They should also be able to teach lessons, grade projects, and schedule check-ins. 
@@ -116,6 +116,7 @@ let bob = new TA('Bob', 2, ['serious']);
 
 - What is `super`?  Try commenting it out and accessing `bob`'s properties.  What error do you get?
 - Comment `super` back in and then log each of the properties including the `name`, `module`, and `traits`.
+-  Check out the [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super) on `super`. 
 - Add a new property of `experience` to signify years of experience that TA has.  Check both the `Instructor` and `TA` to see which class has the added property.
 - Should a `TA` still have access to their parent's methods?  Try having `bob` "teach a lesson" or "grade a project."
 </section>
@@ -155,11 +156,12 @@ With a partner, think about an arcade game such as Frogger, Galaga, Centipede, o
 <section class="checks-for-understanding">
 ### Checks for Understanding
 
-* Explain how inheritance works.
+* Explain how inheritance works. How does this play into the Prototype Chain? 
 * Why do we call `super()` in the inherited class's constructor?
 </section>
 
 ## Further Reading
 
-* [Class-based vs. prototypal inheritance](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
+* [MDN Super](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
+* [MDN Extends](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
 * [MDN Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
