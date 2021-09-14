@@ -20,14 +20,21 @@ module: 2
 - `Instance` One specific copy of an object
 - `Inheritance` The practice of allowing new objects to take on the data and behavior of their parents
 
-## OOP Benefits
+<section class="call-to-action">
+### Warm Up
 
-Before we dive into Inheritance, another pillar of OOP, let's review a few reasons why OOP is such an integral part of programming!
+Discuss in groups:
+- What are some of the benefits of Object Oriented Programming? Think about why we organize code into classes. 
+</section>
 
-* Code reusability
-* Encapsulation: values & functionality are scoped to the specific object
-* Design & Scalability: OOP forces programmers to meticulously plan the project. OOP is also much more maintainable for larger programs
-* Maintainable: OOP tends to be easier to modify specific pieces of the code without affecting the larger program
+<section class="answer">
+### OOP Benefits
+
+  * Code reusability
+  * Encapsulation: values & functionality are scoped to the specific object
+  * Design & Scalability: OOP forces programmers to meticulously plan the project. OOP is also much more maintainable for larger programs
+  * Maintainable: OOP tends to be easier to modify specific pieces of the code without affecting the larger program
+</section>
 
 ## Inheritance
 
