@@ -14,10 +14,10 @@ module: 2
 ## Vocab
 
 - `OOP` Object Oriented Programming
-- `Object` A data structure of key value pairs that groups related data and behavior
 - `Class` A blueprint or template of an object that describes what information it should contain and how it should interact with the data
 - `Subclass` A class that inherits from a parent class (also known as a child class)
-- `Instance` One specific copy of an object
+- `extends` A keyword that is used in class declarations to create a class that is a child of another class.
+- `super` A keyword that is used to access and call functions on an class' parent.
 - `Inheritance` The practice of allowing new objects to take on the data and behavior of their parents
 
 <section class="call-to-action">
@@ -43,9 +43,10 @@ Inheritance allows you to create an object based on another one. Let's look at a
 ![instrument example](https://koenig-media.raywenderlich.com/uploads/2017/05/ObjectOrientedProgramming-graph-2.png)
 
 <section class="call-to-action">
-### In Your Notebook
+### Discuss in groups:
 
-- What traits or functionality does a guitar *inherit* from an instrument?  A string instrument or a piano?
+- What traits or functionality do ALL instruments have?
+- What traits or functionality could a guitar *inherit* from an instrument? What about a piano?
 - Getting more specific, what traits/functionality do these **sub classes** *inherit* from the **parent class**?
 
 | **Parent class**| **Sub class** |
