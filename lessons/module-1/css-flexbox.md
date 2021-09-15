@@ -168,13 +168,13 @@ These properties will get you far enough for now, but they're just scratching th
 ## Tips and Tricks (write these in your notes!)
 
 When you are about to use flexbox, ask yourself the following questions:
-- What elements do I want to move?
-- What is the parent element of those elements? (this is where the flex properties should live!)
+- *What elements do I want to move?*
+- *What is the parent element of those elements?* (this is where the flex properties should live!)
 
 If flex isn't working the way you think it should, check the following things:
-- Did you remember to include `display: flex;`? Without that line of code, the other flex properties won't work!
-- Are you sure you're adding the flex properties to the correct element? Check the parent-child relationship in the HTML file to be sure that you are adding those properties to the direct parent.
-- Is the parent element big enough? Add a border to the parent element. If it is the same width and/or height as the children, you won't be able to move those children as expected.
+- *Did you remember to include `display: flex;`?* Without that line of code, the other flex properties won't work!
+- *Are you sure you're adding the flex properties to the correct element?* Check the parent-child relationship in the HTML file to be sure that you are adding those properties to the direct parent.
+- *Is the parent element big enough?* Add a border to the parent element. If it is the same width and/or height as the children, you won't be able to move those children as expected.
 
 ## Using Flexbox on Nested Elements
 
