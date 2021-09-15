@@ -165,6 +165,17 @@ Just like we can control how our content sits on the main axis with `justify-con
 These properties will get you far enough for now, but they're just scratching the surface at what flex can do! If you want more, check out this [extensive guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) from CSS tricks.
 </section>
 
+## Tips and Tricks (write these in your notes!)
+
+When you are about to use flexbox, ask yourself the following questions:
+- What elements do I want to move?
+- What is the parent element of those elements?
+
+If flex isn't working the way you think it should, check the following things:
+- Did you remember to include `display: flex;`? Without that line of code, the other flex properties won't work!
+- Are you sure you're working with the correct element? Check that parent-child relationship in the HTML file to be sure that you are working with the direct parent.
+- Is the parent element big enough? Add a border to the parent element. If it is the same width and/or height as the children, you won't be able to move those children as expected.
+
 ## Using Flexbox on Nested Elements
 
 <div class="call-to-action">
