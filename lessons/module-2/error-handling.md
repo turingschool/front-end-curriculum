@@ -11,7 +11,7 @@ As front end developers, we should always be concerned about giving our users th
 ### The challenge
 
 Visit [this repo](https://github.com/turingschool-examples/fe2-fetch-practice/tree/error-handling) and follow the directions in the readme to get some practice in gracefully handling errors and presenting them to the end user.
-There is a [code sandbox](https://codesandbox.io/s/great-wildflower-o8ibx?file=/src/index.js) with client-side code provided for you, if you prefer to use that instead of cloning the repo.
+
 
 ## Key takeaways
 
