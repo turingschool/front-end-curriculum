@@ -23,7 +23,7 @@ Let's talk more about JavaScript and it's ability to be asynchronous. What does 
 <section class="call-to-action">
 ### Review
 
-Using sticky notes in [this Miro board](https://miro.com/welcomeonboard/md6UlSJghj8KD6SmzW9oIDVhlh74slAAX6BrGrYtE656sxEtPwuR38KSuDAxa10Q) (_**Note:** If you don't have an account, you can sign in with a Google account!_), answer the following with your breakout group:
+Using sticky notes in [this Jamboard](https://jamboard.google.com/d/1LZb7HhtV9IDzehlzd7B33A4lgiT8EaBFAVTyb7rwznA/viewer?f=0), answer the following with your breakout group:
 - Everything you know about / questions you still have on asynchronous code
 - Everything you know about / questions you still have on fetch
 - Everything you know about / questions you still have on execution contexts & the call stack
