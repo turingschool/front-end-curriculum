@@ -79,7 +79,7 @@ Looking at the definition of refactoring above, why do you think refactoring cod
 
 ## Group Discussion
 
-While we are looking at these two files, let's create [a checklist](https://www.notion.so/turingschool/Refactoring-HTML-CSS-Class-Notes-61a7a51ad9db412d860020a5797dddd8). We can add to this checklist throughout the lesson, and you can refer to it as you work on future projects.
+While we are looking at these two files, let's create [a checklist](https://turingschool.notion.site/Refactoring-HTML-CSS-Class-Notes-15dc6b215c0640a18f5c372af60f41fc). We can add to this checklist throughout the lesson, and you can refer to it as you work on future projects.
 
 First, let's look at the HTML file. In the zoom chat, share what score your group gave for the HTML.
 
