@@ -161,7 +161,7 @@ It is up to you to decide what changes warrant a PR – remember we want to subm
 
 ## Due Date
 
-Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'} by **Tuesday, June 15th at 9pm**.
+Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'} by **Tuesday, September 28th at 9pm**.
 
 # Rubric
 
