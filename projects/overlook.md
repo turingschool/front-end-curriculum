@@ -202,4 +202,4 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 
 # Evaluation
 
-Evaluations will be done live with an intructor. You'll be asked to step through the various parts of your application including reponsive design, running the accessibility audit, the user interface, running tests and looking at Sass and JavaScript code. 
+Evaluations will be done live with an intructor. You'll be asked to step through the various parts of your application including accessibility audit, the user interface, running tests and looking at Sass and JavaScript code. 
