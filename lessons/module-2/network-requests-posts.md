@@ -64,7 +64,7 @@ fetch(url, {
   }
 })
   .then(response => response.json())
-  .then(json => /*do something with json*/)
+  .then(data => /*do something with data*/)
   .catch(err => /*do something with the error*/);
 ```
 
