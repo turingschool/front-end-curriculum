@@ -22,6 +22,7 @@ In this project, you will be given data from an activity tracker for many users 
 
 
 <section class="note">
+	
 ### Note
 
 The image above is *not* a comp. We expect you to design your own dashboard layout that is relevant to the data that was logged or calculated for a user or group of users. Use inspiration from Fitbit and other fitness/activity apps, but do not copy an app directly.
