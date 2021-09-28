@@ -1,5 +1,5 @@
 ---
-title: "React III: Advanced data management"
+title: "React: Advanced Data Management"
 length: 180
 tags: react, ideabox, lifecycle methods, prop types, conditional rendering
 module: 3
@@ -181,7 +181,7 @@ Once you are set up, you can visit `http://localhost:3001/api/v1/ideas` and you 
   </section>
   <section class="answer">
 ### What does `.then()` do? What is the method called on? What does it return?
-`.then()` is a promise prototype method that runs when the promise object it is chained to successfully resolves. It returns a new promise object. 
+`.then()` is a promise prototype method that runs when the promise object it is chained to successfully resolves. It returns a new promise object.
   </section>
   <section class="answer">
 ### What does `.catch()` do? What is the method called on? What does it return?
@@ -414,7 +414,7 @@ Take a few minutes to journal to write notes to each of these questions:
 ## Required Homework
 <section class="call-to-action">
 ### Life Cycles Diagram
-Diagram out the react component lifecycle. Feel free to follow the diagram at the top of the lesson. 
+Diagram out the react component lifecycle. Feel free to follow the diagram at the top of the lesson.
 Your diagram should include a description of the following methods, an example of what you might use them for, and an indication of when in the lifecycle they run:
 - `constructor`
 - `render`

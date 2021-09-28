@@ -1,5 +1,5 @@
 ---
-title: "React II: The How"
+title: "React: Our First IdeaBox"
 length: 3 hours
 tags: react, ideabox
 module: 3
@@ -186,7 +186,7 @@ Save this code and go check your browser. What do you see?
 Let's take a minute and examine that return statement in our `render` method.
 
 <section class="note">
-### Understanding JSX 
+### Understanding JSX
 
 It looks like our `render` method is returning some HTML! Very easy to read, right?  
 
@@ -269,7 +269,7 @@ Okay. Let's come back to our App constructor method and create state.
 <section class="call-to-action">
 ### On your own
 
-* What is the keyword `this` doing here? 
+* What is the keyword `this` doing here?
 * What is "state"?
 </section>
 
@@ -320,7 +320,7 @@ We already said that we want to have a container for all of our idea Cards. So l
 
 You may have noticed that our App component was capitalized. And now our Ideas component is capitalized, too. Why do you think this is? What did you learn about the naming conventions for JS classes in Mod 2?  
 
-When an element starts with a lowercase letter, it refers to (and will be treated as) a built-in component like `<div>` or `<span>`, which can lead to silent errors or unexpected side-effects. It's also import to note that capitalizing class names makes for good developer empathy. Now, at a glance, a dev knows they are dealing with a class. 
+When an element starts with a lowercase letter, it refers to (and will be treated as) a built-in component like `<div>` or `<span>`, which can lead to silent errors or unexpected side-effects. It's also import to note that capitalizing class names makes for good developer empathy. Now, at a glance, a dev knows they are dealing with a class.
 </section>
 
 Will this Ideas component need to have state? What do you think?
@@ -602,12 +602,12 @@ I created a button to delete the Card, but we'll get to that later. For now, let
 
 ## Conditional Rendering
 
-Before me move on, lets tighten up the UX here a bit. 
+Before me move on, lets tighten up the UX here a bit.
 
 <section class="call-to-action">
 ### On your own  
 
-* Try making App.state.ideas an empty array. 
+* Try making App.state.ideas an empty array.
 * What happens? Why?
 * What would make for a better user experience?
 </section>
@@ -654,7 +654,7 @@ if (! this.state.ideas.length) {
 We want this logic to live inside of our `render()` method, so we can use curly braces to inject JS into our JSX. However, we need whatever is inside of our curlies to _evaluate_ to the HTML we want rendered, so we'll use some syntax like this:
 
 ```
-// App.js 
+// App.js
 
 render() {
   <main className="App>
@@ -669,7 +669,7 @@ render() {
 <section class="note">
 ### If this syntax feels weird, take a look at the [logical && operator's docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical).
 
-What does the operator return? 
+What does the operator return?
 </section>
 
 The code above says that, if the expression on the left side of the `&&` is true, return the expression on the right side. So if there are no ideas in state, return our h2!

@@ -118,7 +118,19 @@ ReactDOM.render(<App />, document.getElementById('root'));
 <section class="answer">
 ### The Challenge  
 
-xx
+Let's get rid of all the boilerplate inside the `App.js` file. Yep. Just ERASE THAT CODE!
+
+You'll notice that as soon as we save our changes, the browser re-renders. Look into the terminal, and you'll see another build kick off. This is because `create-react-app` gives us hot-reloading. Any time we make a change, the browser will update to show our changes.
+
+If we look at the browser now that we've deleted our `App.js` code, you'll see an error that reads:
+
+"Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."
+
+Back in our `index.js` file we're trying to render a React component: App. However, we're no longer exporting a valid React component! The error is trying to be helpful to let us know what's going on.
+
+Let's start building out our App component...
+
+
 </section>
 
 <section class="answer">

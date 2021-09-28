@@ -1,5 +1,5 @@
 ---
-title: "React I: The What & the Why"
+title: "React: The What & the Why"
 length: 3 hours
 tags: javascript, react
 module: 3
@@ -36,12 +36,12 @@ You and your group will pool your existing understanding about React.
 Use the following prompts to help guide your discussion.
 - What is React?
 - Why do we use it?
-- Virtual Dom 
+- Virtual Dom
 - JSX
 - Components
 - Props/State
 - Application Data
-- Miscellaneous 
+- Miscellaneous
 </section>
 
 ## WHAT is React?

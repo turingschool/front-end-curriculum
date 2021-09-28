@@ -3,18 +3,8 @@ title: Building Ideabox in React
 module: 3
 ---
 
-## Agenda
-
-- Review React fundamentals
-- Discuss what we're building
-- Talk about Data vs Actions
-- Build the controlled form component
-- Add ideas to our App state
-- Display ideas on the page
-- Remove ideas that have been added
 
 ## Learning Goals
-
 - Build stateful/stateless react components
 - Pass data down, and actions up
 - Be able to explain what a bound function is, and how to make one
