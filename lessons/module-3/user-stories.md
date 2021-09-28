@@ -32,9 +32,9 @@ Breaking down what you want to build is incredibly important when it comes to so
 <section class="call-to-action">
 ### Once upon a time ...
 
-In your breakout room, choose a web app that everyone is familiar with. 
+With your project partner, choose a web app that you are both familiar with.
 
-Together, try to describe every possible action a user could take in this app! 
+Together, try to describe every possible action a user could take in this app!
 
 * What is the action? (ex: logging in)
 * What steps go into accomplishing this action? (ex: finding and clicking an input field, typing into it, etc)
@@ -66,7 +66,7 @@ Here are two examples of ways to write a user story:
 As a <type of user>, I want to <execute some goal> so that <some reason>
 ```
 
-2: 
+2:
 ```
 As a(n) [user type]
 In order to [extract business value]
@@ -147,7 +147,7 @@ and flesh them out with additional information!
 
 ### Acceptance criteria
 
-That final piece of information from the previous exercise can be hard to conceptualize! It's known as the [acceptance criteria](https://www.productplan.com/glossary/acceptance-criteria/). It lets a developer know when that particular user story can be considered "completed" and finished. 
+That final piece of information from the previous exercise can be hard to conceptualize! It's known as the [acceptance criteria](https://www.productplan.com/glossary/acceptance-criteria/). It lets a developer know when that particular user story can be considered "completed" and finished.
 
 The previous link includes a great explanation of the difference between a user story and its acceptance criteria.
 
@@ -169,14 +169,10 @@ As you can see, the acceptance criteria reads a lot like our descriptions when w
 ## In closing
 
 <section class="call-to-action">
-### Trying it out
+### Action Item! Rancid Tomatillos Project Board
 
-Back in the breakout rooms from the beginning of the lesson, try to write three user stories, complete with acceptance criteria.
+For your project board for Rancid Tomatillos, use user stories to create each card. Your instructors will ask to see your project board at project check-ins later this week.
 </section>
-
-### Summary 
-
-User stories help us organize our project boards, by defining user goals and breaking them down into steps, which we can later use to test the functionality and features of our applications.
 
 ## Additional Resources
 
