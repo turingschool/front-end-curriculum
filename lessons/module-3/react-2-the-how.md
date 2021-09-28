@@ -87,7 +87,7 @@ Happy hacking!
 As the instructions say, let's change directories into our new ideabox application and run `npm start` to see our new boilerplate application!
 
 <section class="call-to-action">
-### Turn and Explore
+### Explore
 
 Take a few minutes and look around the boilerplate. Hint: start at the `src/` folder!
 
@@ -137,7 +137,7 @@ Let's figure out what should be a component in our app.
 
 Because we want App to hold onto our list of ideas, let's think about how we're going to store that information.
 
-In our React I lesson, we learned about _state_. In order to use component state, we need our component to be a class.
+In our first React lesson, we learned about _state_. In order to use component state, we need our component to be a class.
 
 So: let's import React and the parent Component class, and create our child App component! Think back to your OOP knowhow from Mod 2.
 
@@ -267,7 +267,7 @@ Okay. Let's come back to our App constructor method and create state.
 ```
 
 <section class="call-to-action">
-### On your own
+### Reflect
 
 * What is the keyword `this` doing here?
 * What is "state"?
@@ -299,6 +299,12 @@ Neat!
 **Consider the following...**
 
 Okay. Let's pause for a second. `App.js` is a class-based component, rather than a function-based component, because we want it to have its own state.
+
+### State
+
+**State** holds data that represents the actual state of our application. State can be changed and mutated through user interactions.
+
+One of the more confusing things about React is when to make a component a class instead of a function.
 
 (React Hooks is a new feature that was released at the end of 2018 and allows function-based components to access and manipulate state - we'll learn more about this in a future lesson, but for now, it's important to understand the uses of and distinctions between class-based and function-based components.)
 
@@ -386,6 +392,12 @@ We have to pass our ideas array from the App component to our Ideas component. W
 
 Props (along with state) are the heart and soul, the meat and potatoes, of React. They are what allow us to pass information between components. Let's take a look at how that might work.
 
+We've mentioned that components are reusable pieces of code, that allow us to create unique instances of certain UI elements. We can do this by passing props to each of our components. Think about how you create new instances of ES6 Classes - they share the same base, but you pass in different arguments every time you create a new instance, which allows each instance to vary slightly.
+
+Props allow us to pass information from parent components to child components. We can pass strings, numbers, booleans, arrays, objects, functions, pretty much any piece of data we want access to in our child component. We can name them whatever we'd like, as long as we're consistent and semantic with the names that we choose.
+
+When we pass props down to a child component, it comes through as a simple JavaScript object with key value pairs.
+
 Let's start with an example, just to keep things simple. For now, since our Ideas component just contains an h2, let's make that h2 say something different than "Ideas go here!"
 
 In our App component, let's add something to our `render` method.
@@ -456,6 +468,13 @@ const Ideas = ({name}) => {
 ```
 
 We can destructure props ON THE WAY IN. Whoa! It's accomplishing the same thing as destructuring on a separate line, like in the previous example.
+
+
+<section class="note">
+### State vs. Props  
+
+Understanding the difference between props and state can be tricky. Read through the top three answers on this [stackoverflow question](https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react), and go through any links or resources provided in the answers. Just because one answer has the most upvotes, doesn't mean it's going to be the one that makes everything click for you. Take your time reading through the explanations here.
+</section>
 
 ### Mapping over the ideas array
 
@@ -605,7 +624,7 @@ I created a button to delete the Card, but we'll get to that later. For now, let
 Before me move on, lets tighten up the UX here a bit.
 
 <section class="call-to-action">
-### On your own  
+### Explore  
 
 * Try making App.state.ideas an empty array.
 * What happens? Why?
