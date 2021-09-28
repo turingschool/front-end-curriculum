@@ -139,6 +139,17 @@ You can add TypeScript in React! This is a big shift in writing JavaScript like 
 
 Not feeling excited about any of the free data APIs? Build your own! If you choose this category, you would be responsible for building your own server in Express, connecting it to a PostgreSQL database (usually with Knex), and hosting it on Heroku. You would not be required to use a separate data API.
 
+#### Progressive Web App
+[Progressive Web Application](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction) allow you to turn a regular web page into a [native app](https://www.techopedia.com/definition/27568/native-mobile-app) with access to device hardware, push notifications, offline use, etc.
+
+If you choose to create a PWA, your application must include:
+- a manifest file to be able to “install” the application and see an icon on your phone’s home screen
+- a service worker to make your app available offline (even if it doesn’t really function offline)  
+
+A few notes:
+- Beyond the requirements listed above, the rest of the technologies for PWAs are fairly complex (like web push, background sync, indexedDB). None of these should be included in your MVP.
+- The service worker that comes with Create React App can be really frustrating to work with. It is usually better to start from scratch, and there are various tutorials on how to create a service worker from scratch when working with CRA.
+
 #### Miscellaneous
 
 If you choose from this category, then you must pick at least two of these options:
@@ -147,7 +158,6 @@ If you choose from this category, then you must pick at least two of these optio
 * Localization and Internationalization (would recommend using a library for this like [react-i18next](https://github.com/i18next/react-i18next))
 * GSAP Animations or WebGL Animations
 * 100% passing accessibility testing using an accessibility analyzer like A11y or Axe
-* [Progressive Web Application](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction) (turns a regular web page into a [native app](https://www.techopedia.com/definition/27568/native-mobile-app) with access to device hardware, push notifications, offline use, etc)
 
 
 ## Deliverables
