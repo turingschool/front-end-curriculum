@@ -21,10 +21,13 @@ Pick one person to create the repo. The other person should be watching and advi
 - Use the command line to make a new directory called "git-collaboration-practice"
 - Add a `README.md` file to your directory
 - Open up your directory in your text editor and add some text to that README
+- Initialize git by running `git init`
+- Stage your README by running `git add README.md`
+- Make your first commit by running `git commit -m "Initial Commit"`
 
 **GitHub Time!!**
-- Click the plus to create a New Repository
-- Run the steps of "…or create a new repository on the command line" starting with `git init` on the command line
+- Click the plus to create a New Repository. Add Repository name (should match your local directory name). Click Create Repository.  
+- Run the steps of "…or push an existing repository from the command line"
 - Invite your partner to collaborate (find this on the repo page under settings, manage access, invite a collaborator)
 </section>
 
