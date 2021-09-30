@@ -19,31 +19,34 @@ Pick one person to create the repo. The other person should be watching and advi
 
 **Command Line**
 - Use the command line to make a new directory called "git-collaboration-practice"
-- Add a `README.md` file to your directory 
+- Add a `README.md` file to your directory
 - Open up your directory in your text editor and add some text to that README
+- Initialize git by running `git init`
+- Stage your README by running `git add README.md`
+- Make your first commit by running `git commit -m "Initial Commit"`
 
 **GitHub Time!!**
-- Click the plus to create a New Repository
-- Run the steps of "…or create a new repository on the command line" starting with `git init` on the command line
+- Click the plus to create a New Repository. Add Repository name (should match your local directory name). Click Create Repository.  
+- Run the steps of "…or push an existing repository from the command line"
 - Invite your partner to collaborate (find this on the repo page under settings, manage access, invite a collaborator)
 </section>
 
 <section class="answer">
-### Git Commands 
-- **Make a new directory** 
+### Git Commands
+- **Make a new directory**
   - `mkdir name-of-directory`
-- **Change directories** 
+- **Change directories**
   - `cd name-of-directory`
-- **Create a new file** 
+- **Create a new file**
   - `touch` README.md
   - `touch` main.js`
   - //etc.
 </section>
 
 <section class="note">
-### Replacing `master` with `main` 
+### Replacing `master` with `main`
 
-Historically, the default branch on GitHub has been named `master`. This is something you most likely will still come across, but we (and others) have switched to `main` to promote more inclusivity in tech. 
+Historically, the default branch on GitHub has been named `master`. This is something you most likely will still come across, but we (and others) have switched to `main` to promote more inclusivity in tech.
 
 Read more about this important change [here](https://dev.to/afrodevgirl/replacing-master-with-main-in-github-2fjf)!
 
@@ -77,17 +80,17 @@ Then you have to tell git what the default branch should be. You can run this co
 </section>
 
 <section class="answer">
-### Git Commands 
-- **Clone a repo** 
+### Git Commands
+- **Clone a repo**
   - `git clone git@github.com:username/repo-name.git`
   - This link is found on the repo page under the green "Code" button
-- **Create a new branch** 
+- **Create a new branch**
   - `git checkout -b feature/name-of-feature-branch`
-- **Add a file to staging** 
+- **Add a file to staging**
   - `git add README.md`
-- **Commit a file (with a message)** 
+- **Commit a file (with a message)**
   - `git commit -m "description of work here"`
-- **Push changes** 
+- **Push changes**
   - `git push`
 </section>
 
@@ -106,14 +109,14 @@ Then you have to tell git what the default branch should be. You can run this co
 
 **GitHub**
 - Merge that pull request!
-- Why do you think developers shouldn't merge their own pull requests? 
+- Why do you think developers shouldn't merge their own pull requests?
 </section>
 
 <section class="answer">
-### Git Commands 
-- **Fetch all remote branches** 
+### Git Commands
+- **Fetch all remote branches**
   - `git fetch`
-- **Checkout a branch** 
+- **Checkout a branch**
   - `git checkout feature/name-of-partner branch`
 </section>
 
@@ -131,17 +134,48 @@ Then you have to tell git what the default branch should be. You can run this co
 Yes! As long as a branch is pushed up to GitHub, _anyone_ can pull it down and work on it. This is a common place for conflicts to arise though, so make sure you are communicating well and often. Sticking to different parts of the codebase is better practice to avoid merge conflicts for now.
 
 **When should I commit?**
-- Early and often! 
-- When you've completed one task or fix 
+- Early and often!
+- When you've completed one task or fix
 - You're done for the day or reached a stopping point.
 - If you have code you want someone else to see
 
 **What is an atomic commit?**
 - An “atomic” change revolves around one task or one fix.
-- Atomic means it could not be smaller 
+- Atomic means it could not be smaller
 
 **When should I submit a pull request?**
 - When you've created a new, fully functional feature
 - When you have successfully solved a bug or fixed something broken
 
+<section class="answer">
+### Other Git Tips & Infos  
+- `git branch`  
+  - DOES nothing   
+  - SHOWS you what branches you have, and which branch you are currently on    
 
+- `git checkout feature/sample-branch` OR `git checkout main`  
+  - Takes you to the branch, checkouts that branch, puts you on that branch, now you are working on whatever branch you typed   
+
+- `git checkout -b feature/sample-branch`  
+  - The command above is a MASHUP of `git branch feature/new-branch` and `git checkout feature/new-branch`  
+  - CREATING a new branch with whatever name you chose AND going into that branch    
+
+- `git push origin feature/even-better-branch`  
+  - This is the how you will take your code/work that you did locally on the 'feature/even-better-branch' and push it up to the remote repo on Git Hub.   
+    - Its not going to mess with main, its going to let you create a PR.   
+    - Then you can do a thorough code review, _then_ you decided if/when to merge it to main branch.  
+
+- `git add -p`  
+  - same as `git add patch` - basically combines git diff and git add  
+  - shows you the changes you made hunk by hunk and lets you say if you want to stage each hunk  
+  - Helpful because you get to review all your changes for errors  
+  - Helpful because you get to review all your changes which helps you remember what all you did so that you can come up with a accurate commit message  
+  - _"Git add -p is the best thing that's ever happened to me"_ - Heather Faerber   
+
+- Commit messages should start with uppercase, present tense verb. Should fill in the statement "This commit will _________________".  
+
+- Branch Naming  
+  - Conventionally starts with prefix of `feature/` or `refactor/` or `fix/`  
+  - Do not use the word 'iteration' - instead describe what work is being tackled in that iteration  
+  - Should be able to see a high level view of your approach to the project  
+</section>

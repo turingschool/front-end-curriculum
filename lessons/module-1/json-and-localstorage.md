@@ -122,7 +122,7 @@ The browser provides a `JSON` object with two methods.
   - turns any JavaScript object into a valid JSON string.  
 - `JSON.parse();`   
   - takes 1 argument - valid JSON  
-  - turns any valid JSON into a JavaScript object.  
+  - turns any valid JSON into a usable JavaScript object.  
 
 <section class="checks-for-understanding">
 
@@ -139,17 +139,17 @@ Take the object from the previous exercise that didn't work and refactor it so t
 
 The goal is to take our object, store it in local storage, and then be able to take the object out of local storage and modify the object.
 
-1. `var objectToStore = { crust: 'deep dish', type: 'veggie' };`
-2. `var stringifiedObject = JSON.stringify(objectToStore);`
-3. `stringifiedObject` (Notice our object has turned into a string!)
-4. `localStorage.setItem('somethingComplicated', stringifiedObject);` (Stores the object in local storage)
+1. `var pizzaToStore = { crust: 'deep dish', type: 'veggie' };`
+2. `var stringifiedPizza = JSON.stringify(pizzaToStore);`
+3. `stringifiedPizza` (Notice our object has turned into a string!)
+4. `localStorage.setItem('somethingComplicated', stringifiedPizza);` (Stores the object in local storage)
 
 Now the object is in local storage, and we can retrieve it out of local storage.
 
-5. `var retrievedObject = localStorage.getItem('somethingComplicated');`
-6. `retrievedObject` (Notice this is still the stringified version of our object - we need it to be a real object again, not a string)
-7. `var parsedObject = JSON.parse(retrievedObject);`
-8. `parsedObject` (We are now back to our original object!)
+5. `var retrievedPizza = localStorage.getItem('somethingComplicated');`
+6. `retrievedPizza` (Notice this is still the stringified version of our object - we need it to be a real object again, not a string)
+7. `var parsedPizza = JSON.parse(retrievedPizza);`
+8. `parsedPizza` (We are now back to our original object!)
 </section>
 
 

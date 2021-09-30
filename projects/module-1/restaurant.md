@@ -30,7 +30,7 @@ problem.
   - run `npm install` to install the necessary dependencies
 
 ## Day One Deliverables
-  - **By EOD on Kick Off Day:** Complete [this project submission form](https://docs.google.com/forms/d/e/1FAIpQLSecGamPjyq0E5JDovjq4BZrhegv6ct3MeyO1uJaIgxSosK0wQ/viewform?usp=sf_link) to ensure your project manager has the link to your repo.
+  - **By EOD on Kick Off Day:** Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the link to your repo.
 
 ## Iterations
 
