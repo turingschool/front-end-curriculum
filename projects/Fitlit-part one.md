@@ -158,10 +158,10 @@ You will no longer be receiving your data from a hardcoded data file, but rather
 
 | Data Type | Verb | URL |  
 |---|---|---|  
-| User Data |GET | /api/v1/users |  
-| Sleep Data | GET | /api/v1/sleep |  
-| Activity Data | GET | /api/v1/activity |  
-| Hydration Data | GET | /api/v1/hydration |  
+| User Data |GET | https://pacific-badlands-43237.herokuapp.com/api/v1/users |  
+| Sleep Data | GET | https://pacific-badlands-43237.herokuapp.com/api/v1/sleep |  
+| Activity Data | GET | https://pacific-badlands-43237.herokuapp.com/api/v1/activity |  
+| Hydration Data | GET | https://pacific-badlands-43237.herokuapp.com/api/v1/hydration |  
 
 Once you've got fetch working, you can delete your hardcoded data file!
 
