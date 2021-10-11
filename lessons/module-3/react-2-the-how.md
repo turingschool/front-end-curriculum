@@ -22,6 +22,17 @@ Can't wait until Wednesday? Come to office hours! We will be hosting office hour
 
 Your goal should be to complete this entire lesson by Wednesday morning. Please keep your instructors in the loop if you find that you're not on track to finish on time.
 
+## What You're Building
+Here is a peak at what you're going to build during this lesson:  
+
+![ideabox preview](https://media.giphy.com/media/MHPLTw4hmBOpaSteSc/giphy.gif)
+
+<section class="call-to-action">
+### Stop and Think
+
+How would you build this application using vanilla JS? What functions would need to exist? What classes might you create?
+</section>
+
 ## Create React App
 
 For this lesson, we will be using [`create-react-app`](https://facebook.github.io/create-react-app/). This is a single command line that sets up a boilerplate React application for us. Out of the box, it comes with some handy scripts (such as `start` and `test`).
