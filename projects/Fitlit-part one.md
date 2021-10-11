@@ -36,16 +36,16 @@ The image above is *not* a comp. We expect you to design your own dashboard layo
 ## Timeline
 Dates and deadlines to be aware of:
 	 
-* **Monday Week 2** - Submit the following to your PM BEFORE beginning to write code via Slack:
-1. DTR (be specific about learning goals, schedules, and communication expectations) 
-1. Project board (this should be kept updated throughout the project and will be reviewed by PM in check-ins).
-1. Planned out Class structure, for example, for a User setup, you can have a ```UserRepository Class ``` and ```User Class```.
-1. Wireframes
-1. 3 design inspirations (Please include links and details on what you're trying to re-create).
+#### Monday Week 2 - Submit the following to your PM BEFORE beginning to write code via Slack:
+- DTR (be specific about learning goals, schedules, and communication expectations) 
+- Project board (this should be kept updated throughout the project and will be reviewed by PM in check-ins).
+- Planned out Class structure, for example, for a User setup, you can have a ```UserRepository Class ``` and ```User Class```.
+- Wireframes
+- 3 design inspirations (Please include links and details on what you're trying to re-create).
 	 
-* **Monday, Week 3** - Project due at 9PM.
+#### Monday, Week 3 - Project due at 9PM.
 	 
-Please submit your Group project part one [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
+- Please submit your Group project part one [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
 	 
 ---
 
@@ -63,20 +63,20 @@ This [article](https://survivejs.com/webpack/what-is-webpack/){:target='blank'} 
 	 
 Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
 	 
-1. You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ){:target='blank'} syntax
-- Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.
+- You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ){:target='blank'} syntax
+	- Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.
 	 
-2. Webpack needs to know where to look for your files. Look [here](https://github.com/turingschool-examples/webpack-starter-kit#where-to-add-your-code){:target='blank'} for a description of where webpack is set up to look for your HTML, CSS, JS and image files. Some general points:
-- You need to import images into the entrypoint file (usually `scripts.js` or `index.js`).
-- You need to `import` your CSS files into the entrypoint file too
-- Make sure HTML, JS and CSS files are all in the `/src` directory
-- You have to `import` any required modules and code for tests into your test files
-	 
-	 
-3. While developing, run `npm start`. Webpack will create a live version of your site on a local server, where you can see your changes happen in real time. To access it, in your browser, navigate to the `localhost` address that your terminal gives you. Be aware, if you write a breaking change, your server may crash. The terminal will give you some error report about why the crash happened.
+- Webpack needs to know where to look for your files. Look [here](https://github.com/turingschool-examples/webpack-starter-kit#where-to-add-your-code){:target='blank'} for a description of where webpack is set up to look for your HTML, CSS, JS and image files. Some general points:
+	- You need to import images into the entrypoint file (usually `scripts.js` or `index.js`).
+	- You need to `import` your CSS files into the entrypoint file too
+	- Make sure HTML, JS and CSS files are all in the `/src` directory
+	- You have to `import` any required modules and code for tests into your test files
 	 
 	 
-4. Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
+- While developing, run `npm start`. Webpack will create a live version of your site on a local server, where you can see your changes happen in real time. To access it, in your browser, navigate to the `localhost` address that your terminal gives you. Be aware, if you write a breaking change, your server may crash. The terminal will give you some error report about why the crash happened.
+	 
+	 
+- Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
 </section>
 	 
 ---
@@ -107,7 +107,8 @@ For this dataset, when "today" is referenced in iterations, it is the last date 
 	
 ### 3rd Party Libraries
 
-Please get instructor approval first before using additional 3rd-party libraries.  You may use [Day.js](https://www.npmjs.com/package/dayjs) to help with manipulating / formatting dates.  You may also use [Chart.js](https://www.npmjs.com/package/chart.js) in order to help with displaying some data.  (Note: Learning a new technology does take extra time.  Plan ahead and maybe do a research spike over the first weekend, before deciding to use it.)
+***Please get instructor approval first before using additional 3rd-party libraries.***  You may use [Day.js](https://www.npmjs.com/package/dayjs) to help with manipulating / formatting dates.  You may also use [Chart.js](https://www.npmjs.com/package/chart.js) in order to help with displaying some data.  (Note: Learning a new technology does take extra time.  Plan ahead and maybe do a research spike over the first weekend, before deciding to use it.)
+- ***You are not required to use any 3rd party libraries***
 </section>
 
 ### Iteration 1 - Get Familiar with the Data and Users
