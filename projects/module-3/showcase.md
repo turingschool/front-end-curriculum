@@ -105,28 +105,21 @@ There are many different tools you can use for this, including just plain old pe
 
 We also want you to choose two design inspiration pieces, which can be as broad as inspiration for the layout of your app, to as small as a color palette or a micro-interaction animation.
 
-### Day 1 Deliverables
+## Deliverables
 
-Initial proposal:
+**Turn in all Day 1 + 2 deliverables via [this google sheet](https://docs.google.com/spreadsheets/d/1O5tv2wxmzeJp8-vlk5bZNTtRBEYQ4Zk-0SgOuyzzVJg/edit?usp=sharing).**
 
-* Create a DM with both instructors
-* Send the following:
-  - Your niche audience (be as specific and narrow as possible)
-  - Your chosen API
-  - The information you will be using from it
-  - A list of your app's MVP features
-  - Optional: a list of your app's nice-to-have features
-  - A backup API & audience
+### Day 1, 2 PM MT
+* The link to your MVP proposal
 
-Once your project MVP is approved (instructors will help you narrow down your MVP to a reasonable scope), please also send the following:
-
-* Wireframes
-* Links to 2 design inspirations
-* Project board link
-* Repo link
-* 2 separate user personas describing people in your niche audience (can wait until after the user persona lesson)
+### Day 2, 3 PM MT
+* The link to your repo
+* The link to your Project Board
+* A link to 2-3 pieces of design inspiration that you will aim to mimic
+* A wireframe of your app - this can include sketches of your user interface, or a link to your Canva, InVision, etc.
 
 ### Weekend PR review
+
 Before the weekend, you'll be assigned a PR buddy. Over the weekend, tag each other in a review that you'd like some eyes on (hopefully a PR for something that involves the learning goals of this project).
 Plan to spend about 20 minutes deep-diving into your buddy's code, asking questions, proposing refactors, and just generally discussing the code with one another.
 
