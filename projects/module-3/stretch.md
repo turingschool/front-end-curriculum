@@ -164,10 +164,10 @@ If you choose from this category, then you must pick at least two of these optio
 
 **Turn in all Day 1 + 2 deliverables via [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing).**
 
-### Day 1, 3 PM MT
+### Day 1 before 3 PM MT
 * The link to your MVP proposal
 
-### Day 2, 12 PM MT
+### Day 2 before 12 PM MT
 * The link to your repo
 * The link to your DTR
 * The link to your Project Board
