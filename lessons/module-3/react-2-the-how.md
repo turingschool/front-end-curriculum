@@ -310,7 +310,7 @@ Let's start out with a couple of default ideas, just so we can have something to
   }
 ```
 
-When I look in my React dev tools, I can see that App now has state:
+Open up your React Dev Tools (open your dev tools, then go to the Components tab). You can see that App now has state:
 
 ![App component state](https://i.imgur.com/hi2ICjX.png)
 
