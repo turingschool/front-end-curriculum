@@ -17,22 +17,22 @@ This project is definitely not Rotten Tomatoes. Nor is it Netflix. Nor is it IMD
 
 We've broken this project down into iterations. Please be sure to read them closely with your project partner!
 
-### Iteration 0 - Day 1 Deliverables
+### Iteration 0 - Deliverables
 
-Create a group Slack DM with both project partners and both instructors.
+Enter all of your information in [this google sheet](https://docs.google.com/spreadsheets/d/1YDI4TAFdkOhpcFatdGONR7QtlDZVOpsvJVimtX77M6I/edit?usp=sharing).
 
-In that DM, please share the following:  
-* Layouts/Wireframes sketches of your user interface
-* A link to 2-3 pieces of design inspiration that you will aim to mimic (use Dribbble, or even applications that you already use). Screenshots are also fine.
-* Group DTR
-* Project management tool (GitHub Projects, Trello, etc.) - be sure this is public so your instructors can view it
-* PR template your group agrees to follow for every PR submitted ([here are some instructions from GitHub on how to create this](https://help.github.com/en/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository))
-* An initial plan:
+By the end of the day, Day 1:
+* The link to your repo (hint: use [Create-React-App](https://frontend.turing.io/lessons/module-3/react-2-the-how.html) to start your project!)
+* The link to your DTR
+* The link to your Project Board with at least a few user stories entered  
+
+By the end of the day, Day 2:
+* A link to 2-3 pieces of design inspiration that you will aim to mimic
+* A wireframe of your app - this can include sketches of your user interface, or a link to your Canva, InVision, etc.
+* An initial plan for your component architecture. You should answer the following questions:
   - What components do you envision needing?
   - Where will data be stored?
   - How will information be passed around?
-* The link to your repo (use [Create-React-App](https://frontend.turing.io/lessons/module-3/react-2-the-how.html) to start your project!)
-
 ---
 
 ### Iteration 1 - Displaying movies
