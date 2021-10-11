@@ -19,7 +19,7 @@ We've broken this project down into iterations. Please be sure to read them clos
 
 ### Iteration 0 - Deliverables
 
-Enter all of your information in [this google sheet](https://docs.google.com/spreadsheets/d/1YDI4TAFdkOhpcFatdGONR7QtlDZVOpsvJVimtX77M6I/edit?usp=sharing).
+**Enter all of your information in [this google sheet](https://docs.google.com/spreadsheets/d/1YDI4TAFdkOhpcFatdGONR7QtlDZVOpsvJVimtX77M6I/edit?usp=sharing).**
 
 By the end of the day, Day 1:
 * The link to your repo (hint: use [Create-React-App](https://frontend.turing.io/lessons/module-3/react-2-the-how.html) to start your project!)
@@ -32,7 +32,8 @@ By the end of the day, Day 2:
 * An initial plan for your component architecture. You should answer the following questions:
   - What components do you envision needing?
   - Where will data be stored?
-  - How will information be passed around?
+  - How will information be passed around?  
+
 ---
 
 ### Iteration 1 - Displaying movies
