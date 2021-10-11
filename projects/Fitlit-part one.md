@@ -98,12 +98,13 @@ Each iteration has a "Data" section and "Dashboard" section. Data deals with usi
 Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on class structure and the calculation methods, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there.
 
 <section class="note">
+	
 ### Note
-
 For this dataset, when "today" is referenced in iterations, it is the last date in the data. The latest week is the most recent 7 days in the data.
 </section>
 
 <section class="note">
+	
 ### 3rd Party Libraries
 
 Please get instructor approval first before using additional 3rd-party libraries.  You may use [Day.js](https://www.npmjs.com/package/dayjs) to help with manipulating / formatting dates.  You may also use [Chart.js](https://www.npmjs.com/package/chart.js) in order to help with displaying some data.  (Note: Learning a new technology does take extra time.  Plan ahead and maybe do a research spike over the first weekend, before deciding to use it.)
