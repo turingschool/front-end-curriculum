@@ -71,7 +71,9 @@ The bulk of your tests for an application are likely to be unit tests. **Unit te
 * Unit & Integration tests provide documentation by telling a living story about your application
 * Unit tests foster simplicity by forcing you to write code that is decoupled, flexible, and configurable
 * Integration tests allow us to be confident that all those small pieces are working together as expected
-* Tests can prevent users from breaking your application (example: think about a website that auctions off items like EBay. What happens if a user tries to bid on an item that has already been sold? Are they able to? Does the app break or do they get a nice error page?) Testing helps plan for error states. </section>
+* Tests can prevent users from breaking your application (example: think about a website that auctions off items like EBay. What happens if a user tries to bid on an item that has already been sold? Are they able to? Does the app break or do they get a nice error page?) Testing helps plan for error states. 
+
+</section>
 
 <section class="call-to-action">
 ### Think - Pair - Share
