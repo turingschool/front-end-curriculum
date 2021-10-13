@@ -60,12 +60,8 @@ The bulk of your tests for an application are likely to be unit tests. **Unit te
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0GypdsJulKE?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<section class="call-to-action">
-## What could be some benefits to testing?
-</section>
-
 <section class="answer">
-### Benefits of Testing
+### What are Some of the Benefits of Testing?
 
 * Unit & Integration tests are a safety net that helps developers find software bugs early
 * Unit & Integration tests provide documentation by telling a living story about your application
