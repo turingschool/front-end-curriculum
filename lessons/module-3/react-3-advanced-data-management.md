@@ -17,6 +17,38 @@ module: 3
 - `lifecycle method` a set of methods found in the parent class Component that fire at different points during the component lifecycle
 - `PropTypes` a library we use to validate the data type of props coming into a component; allows for more specific, helpful error messages
 
+<section class="call-to-action">
+### Warm Up
+
+Before we jump too far into the concepts for today, let's do some exploring. First, follow the following instructions:
+```bash
+git clone git@github.com:turingschool-examples/react-iii-ideabox.git
+cd react-iii-ideabox
+git checkout lifecycle-warmup
+npm start
+```
+
+Then, follow these steps:
+1. Uncomment lines 15-21 in the `App.js` file.
+2. Open up the `Console` in your Dev Tools.
+3. Refresh the page. What logged to the console?
+4. Add an idea. What logged to the console?
+5. Add another idea. What logged to the console?
+6. Delete an idea. What logged to the console?
+7. Now, comment lines 15-21 in the `App.js` file so they are no longer active.
+8. Uncomment lines 6-16 in the `Card.js` file.
+9. Refresh the page. What logged to the console?
+10. Add an idea. What logged to the console?
+11. Add another idea. What logged to the console?
+12. Delete an idea. What logged to the console?
+
+Now, answer these questions:
+*(It's okay if you're wrong! Just make your best guess!)*
+- When does `componentDidMount` run? How many times does it run?
+- When does `componentDidUpdate` run? How many times does it run?
+- When does `componentWillUnmount` run? How many times does it run?
+</section>
+
 ## The Component Lifecycle
 
 Did you ever learn about the butterfly lifecycle when you were a kid? It starts out as an egg, hatches into a caterpillar, eats a bunch, wraps itself into a cocoon, emerges as a butterfly? Well, React components have lifecycles, too.
@@ -134,19 +166,11 @@ We're going to implement `componentDidMount()` in our IdeaBox.
 
 ### Setup Your Front End
 
-If you want, you can [re-clone](https://github.com/turingschool-examples/react-iii-ideabox) your IdeaBox into a new directory.  Follow the steps here:
+We are going to use the same repo we used for the warm up, but you'll need to switch branches:
 
 ```bash
-git clone https://github.com/turingschool-examples/react-iii-ideabox
-cd react-iii-ideabox
-npm i
-npm start
+git checkout main
 ```
-
-<section class="note">
-#### Optional Code Sandbox Link:
-You can also make a fork of this <a href="https://codesandbox.io/s/react-iii-ideabox-starter-mz1g2" target="_blank"> CodeSandBox Template</a>
-</section>
 
 ### Setting Up Your Back End
 
