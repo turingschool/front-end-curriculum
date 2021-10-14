@@ -244,12 +244,11 @@ You are welcome to come up with your own ideas, too.
 </section>
 
 **Suggested completion date**  
-- Iteration 5 Deliverables due Thursday of Week 2
-- Project should be completed by end of Sunday of Week 3 (aim to leave final day for polishing the project, not building out features!)
+- All code for the project should be completed by end of Sunday of Week 3 (so you can leave Monday for polishing the project and finishing the README, not building out features!)
 
 ---
 
-### PROJECT DUE DATE: 9pm Monday of Week 3
+### PROJECT DUE DATE: 6pm Monday of Week 3
 
 On Tuesday, instructors will post a link to a gist in the cohort slack channel. Please add a comment to that gist with:
 
