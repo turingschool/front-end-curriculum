@@ -1,7 +1,7 @@
 ---
 title: "React: Advanced Data Management"
 length: 180
-tags: react, ideabox, lifecycle methods, prop types, conditional rendering
+tags: react, ideabox, lifecycle methods, conditional rendering
 module: 3
 ---
 
@@ -10,12 +10,10 @@ module: 3
 * Understand the component lifecycle
 * Understand class component lifecycle methods
 * Implement conditional rendering
-* Implement `PropTypes` and understand why they are useful
 
 ## Vocabulary
 
 - `lifecycle method` a set of methods found in the parent class Component that fire at different points during the component lifecycle
-- `PropTypes` a library we use to validate the data type of props coming into a component; allows for more specific, helpful error messages
 
 <section class="call-to-action">
 ### Warm Up
@@ -26,6 +24,7 @@ First, follow the following instructions:
 ```bash
 git clone git@github.com:turingschool-examples/react-iii-ideabox.git
 cd react-iii-ideabox
+npm i
 git checkout lifecycle-warmup
 npm start
 ```
@@ -43,8 +42,8 @@ Then, follow these steps:
 10. Add an idea. What logged to the console?
 11. Add another idea. What logged to the console?
 12. Delete an idea. What logged to the console?
-  
-Now, answer these questions:
+
+Now, answer these questions:  
 *(It's okay if you're wrong! Just make your best guess!)*
 - When does `componentDidMount` run? How many times does it run?
 - When does `componentDidUpdate` run? How many times does it run?
@@ -297,135 +296,19 @@ We're not rendering two different versions of the App. We just have the one, and
 Imagine we have a slow connection or need to load A LOT of data.  We might want to implement some kind of loading icon.  Using conditional rendering, display a loading icon while the fetch is retrieving the data.
 </section>
 
-## PropTypes
-
-PropTypes allow you to specify what type of props you are expecting in a certain component. This is also known as "typechecking".
-
-Many people have moved to implementing languages like [TypeScript](https://www.typescriptlang.org/) or [Flow](https://flowtype.org/) for this exact purpose, but even without any additional technologies, the `prop-type` module lets you establish a safety net with very little effort.
-
-Let's say you declare a component `<Card title={this.state.title}/>`. Here, your component is expecting a prop called `title` and you (probably) expect it to be a string. If you define that value within your `propTypes` object and it comes in as something else - say for example the API you are consuming has changed and now you have an array of strings - you will get a helpful warning message in your console.  
-
-Previously, PropTypes was built into the React library itself, however it has since been extracted into its own module. You can install it like any other module.
-
-```bash
-$ npm install prop-types
-```
-
-In React, `PropTypes` are declared like this:
-
-```jsx
-// Card.js
-
-import React from 'react';
-import PropTypes from 'prop-types';
-import './Card.css';
-
-const Card = ({ id, title, description, removeIdea, isFavorite }) => {
-  const favoriteClass = isFavorite ? 'favorite' : 'card';
-
-  return (
-    <section className={favoriteClass}>
-      <h3>{ title }</h3>
-      <p>{ description }</p>
-      <button onClick={() => removeIdea(id)}>🗑</button>
-    </section>
-  );
-};
-
-export default Card;
-
-Card.propTypes = {
-  title: PropTypes.string
-};
-```
-
-The error you will see if the component gets something besides a string would look something like this:  
-
-```
-Warning: Failed prop type: Invalid prop `name` of type `array` supplied to `Card`, expected `string`.
-```
-
-Without using PropTypes, you would have seen a vague error when the Component failed to render. With PropTypes, we can see that the error was that we were receiving an array when we expected a string.
-
-### Class propTypes
-
-Check out a complete list of `propTypes` and examples of usage [here](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#react.proptypes).  
-
-By default, all props specified within the `Class.propTypes` object will be considered optional. There are many instances where your component will not function correctly without that particular prop. To add a validation that will fire an error message if a prop does not show up at all, simply add `.isRequired` to the end of the propType declaration.  
-
-```js
-Card.propTypes = {
-  title: PropTypes.string.isRequired
-};
-```
-
-You can also be more generic - let's say you need a prop to come in but it doesn't matter what type it is as long as it's there. Instead of specifying a particular JS primitive you can use `.any`.
-
-```js
-Card.propTypes = {
-  title: PropTypes.any.isRequired
-};
-```
-
 <section class="call-to-action">
-### Your Turn
-
-Take a few minutes and finish writing up the rest of the propTypes for our `Card` component.  
-
+### Diagramming
+Diagram out the react component lifecycle. Feel free to follow the diagram at the top of the lesson.
+Your diagram should include a description of the following methods, an example of what you might use them for, and an indication of when in the lifecycle they run:
+- `constructor`
+- `render`
+- `componentDidMount`
+- `componentDidUpdate`
+- `componentWillUnmount`
+Once you've completed your diagram, snap a pic of it and add it to the slack thread!
 </section>
 
 <section class="call-to-action">
-### Your Turn
-
-Take the next 5 minutes to look up the following prop types and understand what they do. We will circle back to talk about
-these particular methods when you are done.  
-
-- `PropTypes.oneOf()`  
-- `PropTypes.arrayOf()`  
-- `PropTypes.objectOf()`  
-- `PropTypes.shape()`
-
-</section>
-
-## DefaultProps
-
-Just like when writing functions, React also allows us to provide a default value for props. [defaultProps](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#default-prop-values) let you ensure that a value will be passed through. This helps eliminate some of the incessant ternaries that either render the prop or an empty string, for instance.  
-
-```jsx
-const Card = ({ id, title, description, removeIdea, isFavorite }) => {
-  const favoriteClass = isFavorite ? 'favorite' : 'card'
-
-  return (
-    <section className={favoriteClass}>
-      <h3>{ title }</h3>
-      <p>{ description }</p>
-      <button onClick={() => removeIdea(id)}>🗑</button>
-    </section>
-  );
-};
-
-export default Card;
-
-Card.propTypes = {
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  removeIdea: PropTypes.func.isRequired,
-  isFavorite: PropTypes.bool.isRequired,
-};
-
-Card.defaultProps = {
-  isFavorite: true
-};
-```  
-
-<section class="note">
-### Note
-
-The `propTypes` typechecking validations fire AFTER `defaultProps` have been resolved. This allows for the default props to fill themselves in before any warning messages are thrown.
-</section>
-
-<section class="checks-for-understanding">
 ### Reflect
 
 Take a few minutes to journal to write notes to each of these questions:
@@ -434,30 +317,9 @@ Take a few minutes to journal to write notes to each of these questions:
 * Which concepts are the fuzziest for you right now?
 * Which concepts are the clearest for you right now?
 * What do you know about `componentDidMount`?
-* What's the purpose of propTypes?
-</section>
-
-## Required Homework
-<section class="call-to-action">
-### Life Cycles Diagram
-Diagram out the react component lifecycle. Feel free to follow the diagram at the top of the lesson.
-Your diagram should include a description of the following methods, an example of what you might use them for, and an indication of when in the lifecycle they run:
-- `constructor`
-- `render`
-- `componentDidMount`
-- `componentDidUpdate`
-- `componentWillUnmount`
 </section>
 
 ## Suggested homework
-
-<section class="call-to-action">
-### Extra Reading on PropTypes
-
-Now that we've talked about the most obvious use cases of propTypes to preemptively debug your code, read the following two articles - you are highly encouraged to take notes:  
-- [Better Prop Validation](https://medium.com/@MoeSattler/better-prop-validation-in-react-cc83590d311f#.8z6wszfzn).  
-- [Writing A Good React Component](https://thoughts.travelperk.com/writing-a-good-react-component-59624ed40b8e#.64wzjk4qc)
-</section>
 
 <section class="call-to-action">
 ### Additional Async Practice
