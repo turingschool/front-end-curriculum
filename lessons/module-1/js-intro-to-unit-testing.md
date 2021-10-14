@@ -56,18 +56,20 @@ The bulk of your tests for an application are likely to be unit tests. **Unit te
 
 ## Integration Tests
 
-**Integration tests** test the interaction between two units to make sure that they play together nicely and work the way we expect them to work. You will get many opportunities to experiment with this type of test at Turing (including Mod 1) and in the work environment as well.  
+**Integration tests** test the interaction between two units to make sure that they play together nicely and work the way we expect them to work. You will get opportunities to experiment with this type of test later on in Turing and in the work environment as well.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0GypdsJulKE?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-#### Benefits of Testing
+<section class="answer">
+### What are Some of the Benefits of Testing?
 
 * Unit & Integration tests are a safety net that helps developers find software bugs early
 * Unit & Integration tests provide documentation by telling a living story about your application
 * Unit tests foster simplicity by forcing you to write code that is decoupled, flexible, and configurable
 * Integration tests allow us to be confident that all those small pieces are working together as expected
 * Tests can prevent users from breaking your application (example: think about a website that auctions off items like EBay. What happens if a user tries to bid on an item that has already been sold? Are they able to? Does the app break or do they get a nice error page?) Testing helps plan for error states. 
+
+</section>
 
 <section class="call-to-action">
 ### Think - Pair - Share

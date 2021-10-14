@@ -6,7 +6,7 @@ tags: javascript, foundation, arrays
 
 ## Learning Goals
 
-* Understand array literals  
+* Understand array literals (arrays)
 * Add and change values to arrays via their indices  
 
 ## Vocabulary
@@ -96,7 +96,7 @@ colors[0];
 <section class="call-to-action">
 ### Practice!
 
-* Fork [this repl](https://replit.com/@kaylaewood/03-arrays#index.js) and complete the prompts.
+* Fork [this repl](https://replit.com/@HannahHudson/03-arrays#index.js) and complete the prompts.
 </section>
 
 ## Accessing and Updating Nested Data

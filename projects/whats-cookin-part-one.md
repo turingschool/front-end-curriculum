@@ -36,7 +36,7 @@ Dates and deadlines to be aware of:
 * **Monday August 30th** - Submit the following to your PM BEFORE beginning to write code via Slack:
 1. DTR (be specific about learning goals, schedules, and communication expectations) 
 1. Project board (this should be kept updated throughout the project and will be reviewed by PM in check-ins).
-1. Planned out Class structure, for example, for a Recipe setup, you can have a ```RecipeRepository Class ``` and ```Recipe Class```.
+1. Planned out Class structure, for example, for a Recipe setup, you can have a ```RecipeRepository Class ``` and ```Repository Class```.
 1. Wireframes
 1. 3 design inspirations (Please include links and details on what you're trying to re-create).
 	 
