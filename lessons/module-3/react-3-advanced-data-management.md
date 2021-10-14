@@ -20,7 +20,9 @@ module: 3
 <section class="call-to-action">
 ### Warm Up
 
-Before we jump too far into the concepts for today, let's do some exploring. First, follow the following instructions:
+You're going to learn about some important lifecycle methods today: `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`. Before we jump too far into the concepts for today, let's do some exploring.  
+
+First, follow the following instructions:
 ```bash
 git clone git@github.com:turingschool-examples/react-iii-ideabox.git
 cd react-iii-ideabox
@@ -41,7 +43,7 @@ Then, follow these steps:
 10. Add an idea. What logged to the console?
 11. Add another idea. What logged to the console?
 12. Delete an idea. What logged to the console?
-
+  
 Now, answer these questions:
 *(It's okay if you're wrong! Just make your best guess!)*
 - When does `componentDidMount` run? How many times does it run?
@@ -444,7 +446,7 @@ Your diagram should include a description of the following methods, an example o
 - `render`
 - `componentDidMount`
 - `componentDidUpdate`
-- `componentDidUnmount`
+- `componentWillUnmount`
 </section>
 
 ## Suggested homework
