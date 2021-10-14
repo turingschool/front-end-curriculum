@@ -201,7 +201,7 @@ In the above example, note that you can do NESTED bracket notation!
 
 1. Fork the following [REPL](https://repl.it/repls/TrustyCarpalCalculator)
 2. Spend no more than *40 minutes* working through the problems on your own
-3. When you've finished, submit your completed repl in [this form](https://docs.google.com/forms/d/1M24gWsdMQodFrD_jLjUy7bNInvXQQnpRmlFp58xx5V4/edit)
+3. When you've finished, submit your completed repl in [this form](https://docs.google.com/forms/d/e/1FAIpQLSdTXs5VwHtFJnswfEtlMeGzJ4XKoQerH797bpA9wFWFVMLJxg/viewform?usp=sf_link)
 4. We'll give group feedback in slack, or in the audit tomorrow
 </section>
 
