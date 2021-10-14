@@ -264,21 +264,21 @@ We can see that this condition will never return `false` and we'll be stuck in t
 
 You'll complete this section with a partner!
 
-**Step 1:** Pick one of the 4 options linked below as a code challenge. Write a solution and make sure you and your partner both have a full understanding of the solution before moving on.
+Pick one of the 4 options linked below as a code challenge. Write a solution and make sure you and your partner both have a full understanding of the solution before moving on. If you finish early, try another!
 
 - [YELLING](https://repl.it/@turingschool/yelling-1#index.js) 🔥
 - [Walking Backwards](https://repl.it/@turingschool/backwards-1#index.js) 🔥
 - [Cacti](https://repl.it/@turingschool/cacti-1) 🔥🔥
 - [School Supplies](https://repl.it/@turingschool/school-supplies-1#index.js) 🔥🔥
 
-**Step 2:** Your next task is to create an educational resource - we can say it's for the next cohort of students - to understand the concepts behind the code, using the code challenge you just solved as an example. If this is a stretch for you, consider how you best learn and what type of resources are helpful for you!
+<!-- **Step 2:** Your next task is to create an educational resource - we can say it's for the next cohort of students - to understand the concepts behind the code, using the code challenge you just solved as an example. If this is a stretch for you, consider how you best learn and what type of resources are helpful for you!
 
 Some ideas, but don't feel limited to these:
 - Video
 - Write-up (think blog post)
 - Series of images/diagrams
 
-You will submit your solution to the code challenge and educational resource as your exit ticket in a [private Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeQ-PUzJ-8QthmAt6UgZDrwfuUYp7mLzWd9ddt4UOwD8p590A/viewform). We'll ask for volunteers to share out their educational resources when we come back together!
+You will submit your solution to the code challenge and educational resource as your exit ticket in a [private Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeQ-PUzJ-8QthmAt6UgZDrwfuUYp7mLzWd9ddt4UOwD8p590A/viewform). We'll ask for volunteers to share out their educational resources when we come back together! -->
 </section>
 
 ### Additional Practice  
