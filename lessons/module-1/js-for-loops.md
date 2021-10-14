@@ -129,8 +129,6 @@ Let's dig into the three statements separated by semicolons that make up or our 
 
 The statement within the curly braces executes each time the loop runs. In this case, we can see we are logging the value of `i` to the console.
 
-📚 _As we talk through these concepts in class, instructors will screen share code in a repl.it and/or diagram on a tablet. Anything we write/draw during that time will be shared in the cohort Slack channel!_
-
 ## Looping With Arrays
 
 `for` loops are commonly used to take action on every item in an array. To do this, we can use the initializer and condition to tell the loop to perform the action the same number of times for the number of elements in the array. Typically, we set the initializer at 0, and set the _stop_ condition to the `length` of the array. The code in the snippet that follows is also [available in this repl.it](https://repl.it/@turingschool/looping-with-arrays#index.js).
