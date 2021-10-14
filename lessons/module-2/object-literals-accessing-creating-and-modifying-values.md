@@ -71,7 +71,7 @@ const kittens = [
 ### The Answer  
 
 ```js
-// Accessing Values using bracket notation 
+// Accessing Values using bracket notation
 // where our parameter represents a key
 const kittens = [
     { name: 'george', age: 3, breed: 'tabby' },
@@ -201,7 +201,7 @@ In the above example, note that you can do NESTED bracket notation!
 
 1. Fork the following [REPL](https://repl.it/repls/TrustyCarpalCalculator)
 2. Spend no more than *40 minutes* working through the problems on your own
-3. When you've finished, submit your completed repl in [this form](https://forms.gle/PtJKZZhLuWTUrQMm9)
+3. When you've finished, submit your completed repl in [this form](https://docs.google.com/forms/d/1M24gWsdMQodFrD_jLjUy7bNInvXQQnpRmlFp58xx5V4/edit)
 4. We'll give group feedback in slack, or in the audit tomorrow
 </section>
 
@@ -227,7 +227,7 @@ Level I Prompts
   and don't provide feedback/nitpick on their solutions. Take a very quick glance and if it all looks sound,
   send them onto the second instructor
 * When there are 50 minutes left in the lesson time, anyone who has not moved onto the next level of prompts
-  should take a 5-minute POM, then come back to the classroom and you will spend the last 45 minutes reviewing 
+  should take a 5-minute POM, then come back to the classroom and you will spend the last 45 minutes reviewing
   the solutions to each prompt as a class. I would use popsicle sticks to call on students to help you solve them
   by telling you what to type
 * Answer Key, for your reference: https://repl.it/repls/TerribleBlindDesign
