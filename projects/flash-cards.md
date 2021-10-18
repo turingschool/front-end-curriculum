@@ -264,7 +264,7 @@ Collaborate with instructors to personalize an extension for this project
 ### Test-Driven Development
 * 4: Application is broken into components, good use of own data, good happy and sad path testing.
 * 3: Application is well tested but does not have consistent use of beforeEach to DRY up tests, uses data files instead of creating own data, and not enough sad path testing.
-* 2: Application makes some use of tests, but the coverage is insufficient given project requirements.
+* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. No use of beforeEach to DRY up tests.
 * 1: Application does not demonstrate strong use of TDD.
 
 ## Repeaters
