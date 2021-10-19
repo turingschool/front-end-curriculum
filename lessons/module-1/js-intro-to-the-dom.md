@@ -197,7 +197,7 @@ Since it's common to need to change multiple CSS declarations, we can instead ad
 <section class="call-to-action">
 ### Check It Out
 
-Fork [this CodePen](https://codepen.io/turing-school/pen/MWWPLYx) and follow the directions below:
+Fork [this CodePen](https://codepen.io/hannahhudson/pen/JjyKBpW) and follow the directions below:
 - Read through the code that is currently written, and observe the result in the mini-browser
 - Un-comment line 3. What changed about the button? What remained the same?
 - Un-comment line 4. What changed about the button? What remained the same?
