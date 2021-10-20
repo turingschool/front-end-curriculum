@@ -35,7 +35,7 @@ _NOTE: Creating the project demo video is a requirement, but attending and submi
 
 ### Functionality
 
-You must complete all of the remaining user stories from the [Fitlit Spec](https://frontend.turing.edu/projects/Fitlit-part-one.html){:target='blank'}. If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part One requirements you must also add ***"Iteration Five."
+You must complete all of the remaining user stories from the [Fitlit Spec](https://frontend.turing.edu/projects/Fitlit-part-one.html){:target='blank'}. If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part One requirements you must also add ***"Iteration Five."***
 
 ---
 
