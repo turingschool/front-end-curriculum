@@ -63,6 +63,7 @@ Items to add to the dashboard:
 * For a user, the distance they have walked (in miles) for the latest day based on their step count
 * How their number of steps, minutes active, and flights of stairs climbed compares to all users for the latest day
 * For a user, a weekly view of their step count, flights of stairs climbed, and minutes active
+* A user should be able to add new sleep, hydration and activity data from the dashboard
 
 ---
 
