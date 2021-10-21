@@ -10,6 +10,7 @@ tags: javascript, oop, mocha, testing, fetch, sass
 * Ensure your app follows best practices for accessibility
 * Leverage Sass to DRY up your CSS
 * Practice talking about your code and high level technical concepts
+* Implement feedback to improve product and process. 
 
 In this project, you will use your project from Fitlit' (Part One) and build on top of that. This is an opportunity to refactor your code, complete unfinished work, build new features, and take advantage of instructor feedback.  
 
@@ -204,7 +205,7 @@ In addition to your refactoring, you also want to make sure the application is f
 ---
 
 ### Project demo video
-* Instead of live demo with the instructor you are required to make a video and present that during watch demo party.
+* Instead of live demo with the instructor you are required to make a video and send that to your PM.
 * You can find the instructions [here](https://frontend.turing.edu/projects/project-demo-pair.html){:target='blank'}
 
 ---
