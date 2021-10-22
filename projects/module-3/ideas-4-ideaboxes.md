@@ -22,7 +22,6 @@ In order to get the practice with all of the fundamentals, a thorough ideabox mi
 - Some network requests if possible
 - Cypress tests for general user flows and network requests
 
-
 ## Ideas 4 Ideaboxes
 - To-do List
 - Bucket List
@@ -40,7 +39,7 @@ In order to get the practice with all of the fundamentals, a thorough ideabox mi
 - etc, etc
 - Anything else you might think of!
 
-## API's you might use
+## APIs you might use
 - [Some Turing Specific API's](https://github.com/turingschool-examples/react-practice-servers)
 - [Big List of Free and Open APIs](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
 - [Another Big List](https://github.com/public-apis/public-apis)
