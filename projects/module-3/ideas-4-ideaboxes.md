@@ -36,7 +36,6 @@ In order to get the practice with all of the fundamentals, a thorough ideabox mi
 - Baby Name list
 - A compliment generator
 - A thesarus app
-- etc, etc
 - Anything else you might think of!
 
 ## APIs you might use
