@@ -4,7 +4,7 @@ module: 3
 tags: react,  testing, javascript, api, cypress
 ---
 
-Throughout Mod 3 you'll be building an `Ideabox` over and over again. An `IdeaBox` is a very basic application which takes in some user information, and updates the DOM with that information! Wow! 
+Throughout Mod 3 you'll be building an `Ideabox` over and over again. An `IdeaBox` is a very basic application which takes in some user information, and updates the DOM with that information! Wow!
 
 ## Learning Goals
 
@@ -17,11 +17,10 @@ Throughout Mod 3 you'll be building an `Ideabox` over and over again. An `IdeaBo
 In order to get the practice with all of the fundamentals, a thorough ideabox might contain the following features:
 
 - Functional and Class components
-- A controlled form or two
+- A controlled form or two that allows user to render elements to the page
 - Routing
-- Some network requests if possible 
+- Some network requests if possible
 - Cypress tests for general user flows and network requests
-- Routing
 
 
 ## Ideas 4 Ideaboxes
@@ -45,4 +44,3 @@ In order to get the practice with all of the fundamentals, a thorough ideabox mi
 - [Some Turing Specific API's](https://github.com/turingschool-examples/react-practice-servers)
 - [Big List of Free and Open APIs](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
 - [Another Big List](https://github.com/public-apis/public-apis)
-
