@@ -240,9 +240,7 @@ Evals are
 
 ## Rubric
 
-There will be no written feedback for this project, but each and every one of you is capable of self-assessing whether or not your project is proficient. Mentors and Rocks are also a valuable resource here.
-
-**A Proficient project would include the following:**
+There will be no written feedback for this project, but each and every one of you is capable of self-assessing whether or not your project is proficient. Mentors and Rocks are also a valuable resource here. **A Proficient project would include the following:**  
 #### Professionalism/Workflow:
 - [ ] README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
 - [ ] README links to all user GitHub profiles and any applicable repos/deployed sites
