@@ -16,7 +16,7 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 <section class="call-to-action">
 ### Warmup
 
-Use this [Jamboard](https://jamboard.google.com/d/1IXwzq1MCdYOhSqYXxHdWcjMT4DphjanOrT8a6l00Tc0/viewer?f=0) to respond to the following questions:
+Use this [Jamboard](https://jamboard.google.com/d/1yt9FfpGP1v4gtwbVPKG2lz60JtsBaMVO5HTOugIw0bA/viewer) to respond to the following questions:
 
 - What do you already know about network requests?
 - What questions do you have about working with network requests?
