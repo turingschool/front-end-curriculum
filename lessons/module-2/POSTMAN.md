@@ -24,5 +24,5 @@ Before start using POSTMAN install [here](https://www.postman.com/downloads/)
 
 ### step 1:
 Create a collection for your project on POSTMAN see image below. <br>
-![POSTMAN- Collection](https://media.giphy.com/media/QPaIeUUV4vY7aE91jR/giphy.gif?cid=790b76111c0ec1064d10b8aadc2bfe791e4c2bb1317610d8&rid=giphy.gif&ct=g)
+
  
