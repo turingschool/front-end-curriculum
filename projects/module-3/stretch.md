@@ -178,48 +178,64 @@ If you choose from this category, then you must pick at least two of these optio
 
 **Turn in all Day 1 + 2 deliverables via [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing).**
 
-### Day 1 before 3 PM MT
-* The link to your MVP proposal
+### Most Days
 
+Your instructors will do a stand-up meeting in the mornings to see where the group is at, and give a chance for each group member to talk through what they're working on or where they have blockers.
+
+<section class="answer">
+### Day 1 before 3 PM MT
+
+* The link to your MVP proposal in [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing)
+</section>
+
+<section class="answer">
 ### Day 2 before 12 PM MT
+
 * The link to your repo
 * The link to your DTR
 * The link to your Project Board
 * A link to 2-3 pieces of design inspiration that you will aim to mimic
 * A wireframe of your app - this can include sketches of your user interface, or a link to your Canva, InVision, etc.
+...in [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing)
+</section>
 
-### Most Days
-
-Your instructors will do a stand-up meeting in the mornings to see where the group is at, and give a chance for each group member to talk through what they're working on or where they have blockers.
-
+<section class="answer">
 ### Day 6
+
 * In a DM with both instructors, send us the link to a recent PR
 * Choose a PR that is related to your Stretch Tech, and use the PR description to fill us in on your learning.
 * Sometime in the next few days, we'll perform a code review
 * You do not need to wait for our review to merge it in.
+</section>
 
+<section class="answer">
 ### Day 8
+
 Your instructors will do a formal check-in with your group. At this check-in, instructors expect to see:
 * A very quick demo of your application so far detailing the progress made toward your MVP
 * **Your testing suite running**
 * Progress you've made on your Stretch Technology category
 * Any blockers you're experiencing
 * Your plan going forward for the next few days
+</section>
 
+<section class="answer">
 ### Day 9
+
 Share your app progress with the class for Show and Tell! Be prepared to tell the story of what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes (shoot for 5 minutes).
 
 Your project does not need to be done or impressive by this point; this is more of a way to give you a milestone to shoot for and to help plan your timeline.
+</section>
 
 ## Evals
 
 Connecting back to the purpose of this project, Evals will be conducted in a way that gives you an opportunity to practice speaking about your learning experience.
 
 Evals are
-* 1:1 sessions with you and an instructor from the Frontend Team (Go Birds!)
+* 1:1 sessions with you and an instructor from the Frontend Team
 * 15 minutes
 * Two interview questions - one technical (about your stretch tech) and one behavioral (you get to choose the "theme", but not the specific question)
-* A great opportunity to practice breaking down interview questions
+* You will be expected to send your interviewer your resume prior to the interview via slack
 
 
 ## Rubric
