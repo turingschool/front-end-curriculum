@@ -240,7 +240,7 @@ Evals are
 
 ## Rubric
 
-There will be no written feedback for this project, but each and every one of you is capable of self-assessing wether or not your project is proficient. Mentors and Rocks are also a valuable resource here.
+There will be no written feedback for this project, but each and every one of you is capable of self-assessing whether or not your project is proficient. Mentors and Rocks are also a valuable resource here.
 
 **A Proficient project would include the following:**
 #### Professionalism/Workflow:
