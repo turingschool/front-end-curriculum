@@ -16,14 +16,13 @@ You have a lot of freedom with this project, but there are a few requirements li
 
 ## Requirements
 
-As a group, you need to decide on:
+By the time this project is submitted for evaluation, it must:
 
-1. A minimum viable product (MVP) idea that solves a problem for your users
-1. The use of at least one external API
-1. Choose one category from the "Stretch Technologies" section below
-1. Meets the specs listed below under **MVP**.
-
-This application must be deployed by the time it is submitted for evaluation.
+1. Meet the specs listed below under **MVP**
+1. Use at least one external API
+1. Implement one of the "Stretch Technologies" listed below
+1. Be deployed
+1. Be a featured project on your resume (Your resume must meet all requirements listed in [this document](https://careerdev.turing.edu/resources/resume_resources).)
 
 ### MVP
 
