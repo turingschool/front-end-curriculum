@@ -24,7 +24,7 @@ By the time this project is submitted for evaluation, it must:
 1. Be deployed
 1. Be a featured project on your resume (Your resume must meet all requirements listed in [this document](https://careerdev.turing.edu/resources/resume_resources).)
 
-### MVP
+## MVP
 
 Your application needs to be summarized with a **minimum viable product**. What is the _smallest_ set of features to give the user a way to accomplish the goal of the application?
 
@@ -38,7 +38,7 @@ The project is very open-ended in that you can make pretty much anything you wan
 
 Create a summary (MVP) of what your application will do and who your application is made for - be specific with your audience because it will give you direction in your work and make your project more interesting.
 
-### Data APIs
+## Data APIs
 
 <section class="answer">
 ### Here is a list of some data APIs that are open to the public:
@@ -74,7 +74,7 @@ You can also take a look at [this list of APIs](https://github.com/public-apis/p
 </section>
 
 
-### Stretch Technologies
+## Stretch Technologies
 
 In addition to an API, you must choose a new technology (or set of technologies) to work with. Here are the possibilities for technologies you can explore for this project.
 
