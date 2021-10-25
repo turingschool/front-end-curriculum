@@ -176,20 +176,20 @@ If you choose from this category, then you must pick at least two of these optio
 
 ## Deliverables
 
-**Turn in all Day 1 + 2 deliverables via [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing).**
+Note: All of these dates are reflected in the calendar
 
 ### Most Days
 
 Your instructors will do a stand-up meeting in the mornings to see where the group is at, and give a chance for each group member to talk through what they're working on or where they have blockers.
 
 <section class="answer">
-### Day 1 before 3 PM MT
+### Day 1 (3 PM MT)
 
 * The link to your MVP proposal in [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing)
 </section>
 
 <section class="answer">
-### Day 2 before 12 PM MT
+### Day 2 (12 PM MT)
 
 * The link to your repo
 * The link to your DTR
@@ -200,7 +200,7 @@ Your instructors will do a stand-up meeting in the mornings to see where the gro
 </section>
 
 <section class="answer">
-### Day 6
+### Day 6 (4 PM MT)
 
 * In a DM with both instructors, send us the link to a recent PR
 * Choose a PR that is related to your Stretch Tech, and use the PR description to fill us in on your learning.
@@ -209,7 +209,7 @@ Your instructors will do a stand-up meeting in the mornings to see where the gro
 </section>
 
 <section class="answer">
-### Day 8
+### Day 8 (during stand ups)
 
 Your instructors will do a formal check-in with your group. At this check-in, instructors expect to see:
 * A very quick demo of your application so far detailing the progress made toward your MVP
@@ -220,7 +220,7 @@ Your instructors will do a formal check-in with your group. At this check-in, in
 </section>
 
 <section class="answer">
-### Day 9
+### Day 9 (9:45 AM MT)
 
 Share your app progress with the class for Show and Tell! Be prepared to tell the story of what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes (shoot for 5 minutes).
 
