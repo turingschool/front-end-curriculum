@@ -32,7 +32,7 @@ If we want to use fetch to make any other kind of request, we'll have to add an 
 <section class="call-to-action">
 ### In Your Notebook
 
-Reflecting on the [How the Web Works](https://jamboard.google.com/d/1yt9FfpGP1v4gtwbVPKG2lz60JtsBaMVO5HTOugIw0bA/viewer?f=0){:target='blank'}, what makes up the request?  What additional information might we need to send in our `fetch` request?
+Reflecting on the [How the Web Works](https://frontend.turing.edu/lessons/module-2/how-the-web-works.html){:target='blank'}, what makes up the request?  What additional information might we need to send in our `fetch` request?
 </section>
 
 <section class="answer">
