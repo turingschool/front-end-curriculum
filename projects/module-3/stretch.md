@@ -18,7 +18,7 @@ You have a lot of freedom with this project, but there are a few requirements li
 
 By the time this project is submitted for evaluation, it must:
 
-1. Meet the specs listed below under **MVP**
+1. Meet the specs listed below under "MVP"
 1. Use at least one external API
 1. Implement one of the "Stretch Technologies" listed below
 1. Be deployed
@@ -28,13 +28,7 @@ By the time this project is submitted for evaluation, it must:
 
 Your application needs to be summarized with a **minimum viable product**. What is the _smallest_ set of features to give the user a way to accomplish the goal of the application?
 
-<section class="note">
-### NOTE
-
-The functionality for Stretch will be MUCH LIGHTER than the functionality in Rancid Tomatillos. You will probably not be able to add as many features, especially if your RT choose-your-own-adventure included adding more functionality.
-
-Remember: the learning goals of this project are to expand/deepen your understanding of your learning process & dynamics within a team - NOT to build the flashiest thing ever.
-</section>
+The functionality for Stretch will be MUCH LIGHTER than the functionality in previous projects. Remember: the learning goals of this project are to expand/deepen your understanding of your learning process & dynamics within a team - NOT to build the flashiest thing ever.
 
 The project is very open-ended in that you can make pretty much anything you want. However, we have some requirements to follow:  
 * Assume one single user - multiple users with log in and authentication is out of the scope of this project.
@@ -46,7 +40,8 @@ Create a summary (MVP) of what your application will do and who your application
 
 ### Data APIs
 
-Here is a list of some data APIs that are open to the public:
+<section class="answer">
+### Here is a list of some data APIs that are open to the public:
 
 * [Thesaurus](https://words.bighugelabs.com/site/api)
 * [Jokes](https://jokes.one/api/joke/)
@@ -76,6 +71,8 @@ Here is a list of some data APIs that are open to the public:
 Some of these APIs require API keys to consume the data. You'll have to go to the documentation for that API to find out how to get an API key and how to use the API key in your network requests.
 
 You can also take a look at [this list of APIs](https://github.com/public-apis/public-apis) for some more ideas. However, stay away from APIs listed here where "Auth" is "OAuth" and where "CORS" is either "Unknown" or "Yes". If you find an API in this list or from somewhere else that you are interested in using, then let your project manager know so they can help you see if it will be relatively easy to work with.
+</section>
+
 
 ### Stretch Technologies
 
@@ -83,7 +80,8 @@ In addition to an API, you must choose a new technology (or set of technologies)
 
 **Note:** For all technologies except for "Another Framework" listed below, the expectation is that you are using React.
 
-#### Global State Management
+<section class="answer">
+### Global State Management
 
 As apps begin to grow and grow, state management via `this.state` and passing props down through dozens of components gets kind of tangled, messy, and confusing. There are some tools invented to alleviate that issue:
 
@@ -91,16 +89,20 @@ As apps begin to grow and grow, state management via `this.state` and passing pr
 * Redux
 
 Companies with large apps are likely to be using a state management tool like the ones listed above. If you're interested in this, you should pick _one_ tool from the list and use it within your React app.
+</section>
 
-#### Workflow
+<section class="answer">
+### Workflow
 
 Writing bug-free code can be made easier by adding some very common workflow tooling. Here are just a few you will see on the job, and learning these will make you productive in your job sooner. If you're interested in this category, then you must complete all listed here:
 
 * Continuous Integration (using Travis CI or Github Actions)
 * Deployment to production with Heroku
 * Automatic deployment to Heroku when a PR is merged to `main` on GitHub
+</section>
 
-#### Testing
+<section class="answer">
+### Testing
 
 For those who just can't get enough testing, you can challenge yourself to do acceptance testing with our friend Cypress, AND unit/integration testing with React-Testing-Library or Enzyme!
 
@@ -108,8 +110,10 @@ For those who just can't get enough testing, you can challenge yourself to do ac
 * Enzyme
 
 If you choose this, then all of your large/important integration tests should be done with Cypress. Unit tests should still be done using React Testing Library.
+</section>
 
-#### Another Framework
+<section class="answer">
+### Another Framework
 
 React might not be the framework you end up working with on the job, and employers might want to see that you can be flexible in the technologies/frameworks you work in. Choosing this category means that you would use a framework other than React - there are two you can choose from for this project since they have a similar feel to React:
 
@@ -117,8 +121,10 @@ React might not be the framework you end up working with on the job, and employe
 * Svelte
 
 **Some things to note**: Instructors will not be able to give in-depth feedback because most instructors do not have a lot of experience in each of these frameworks, and you will _still be required to test the application_ even though you are choosing a framework other than React. **You will not be able to use React Router with these frameworks, start with a single-page application and add a routing tool once you get moving in the new framework.**
+</section>
 
-#### User Authentication
+<section class="answer">
+### User Authentication
 
 Some apps allow you to sign in using your Google, Facebook, or Twitter account - this is called user authentication. If you made this yourself, **you will need a back-end server** to store the user's data and it gets complicated, which is too much for this project. Use a third-party library like:
 
@@ -127,18 +133,25 @@ Some apps allow you to sign in using your Google, Facebook, or Twitter account -
 * Auth0
 
 to enable a user to login to your application via Google, Facebook, and/or Twitter. The user should be able to stay logged in even after refreshing the page.
+</section>
 
-#### TypeScript
+<section class="answer">
+### TypeScript
 
 The JavaScript language that we know and love is loosely typed - meaning a variable that you make can hold a string, and then you can change the value to a number and JS has no problem with that. TypeScript says once a variable is a string, it must stay a string, amongst other features. It's increasingly popular and some employers are seeking TypeScript experience.
 
 You can add TypeScript in React! This is a big shift in writing JavaScript like you have been, so be sure to keep your MVP small and then you can add on as you go. To get started with TypeScript and `create-react-app`, [start here](https://create-react-app.dev/docs/adding-typescript/).
+</section>
 
-#### Building a Backend
+<section class="answer">
+### Building a Backend
 
 Not feeling excited about any of the free data APIs? Build your own! If you choose this category, you would be responsible for building your own server in Express, connecting it to a PostgreSQL database (usually with Knex), and hosting it on Heroku. You would not be required to use a separate data API.
+</section>
 
-#### Progressive Web App
+<section class="answer">
+### Progressive Web App
+
 [Progressive Web Application](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction) allow you to turn a regular web page into a [native app](https://www.techopedia.com/definition/27568/native-mobile-app) with access to device hardware, push notifications, offline use, etc.
 
 If you choose to create a PWA, your application must include:
@@ -148,8 +161,10 @@ If you choose to create a PWA, your application must include:
 A few notes:
 - Beyond the requirements listed above, the rest of the technologies for PWAs are fairly complex (like web push, background sync, indexedDB). None of these should be included in your MVP.
 - The service worker that comes with Create React App can be really frustrating to work with. It is usually better to start from scratch, and there are various tutorials on how to create a service worker from scratch when working with CRA.
+</section>
 
-#### Miscellaneous
+<section class="answer">
+### Miscellaneous
 
 If you choose from this category, then you must pick at least two of these options:
 
@@ -157,7 +172,7 @@ If you choose from this category, then you must pick at least two of these optio
 * Localization and Internationalization (would recommend using a library for this like [react-i18next](https://github.com/i18next/react-i18next))
 * GSAP Animations or WebGL Animations
 * 100% passing accessibility testing using an accessibility analyzer like A11y or Axe
-
+</section>
 
 ## Deliverables
 
