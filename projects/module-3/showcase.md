@@ -209,40 +209,6 @@ Score key:
   - File structure is not modular.
   - PropTypes or type-checking of props is not implemented
 
-### Project Professionalism
-
-The goal of this rubric section is to continue to gauge your readiness and prepare you for workplace standards. As you ramp up your job hunt, it becomes increasingly important to demonstrate to future employers that you are not sloppy and take care with the details of your work and processes!
-
-* **4:**  
-  - README concisely communicates your learning goals, the evolution of the project, and reflections - while using good formatting to enhance readability
-  - README links to any applicable repos/deployed sites
-  - You use a rebase workflow
-  - Git commits are atomic, with concise and precise descriptions of the change made
-  - PRs have full, consistent descriptions
-  - You lean on cohortmates or a mentor to do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging
-  - Evolution of the project (decisions made, etc) is fully and clearly documented in the git history and PRs
-  - When the project is run locally, the terminal shows no errors or warnings
-* **3:**
-  - README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
-  - README links to all applicable repos/deployed sites
-  - Git commits are atomic, with concise and precise descriptions of the change made
-  - PRs have full, consistent descriptions
-  - Evolution of the project (decisions made, etc) is documented in the git history and PRs but is sometimes unclear
-  - When the project is run locally, the terminal shows no errors and fewer than 5 warnings
-* **2:**
-  - README concisely communicates your learning goals and the evolution of the project, but does not use Markdown formatting to aid readability
-  - README links to any applicable repos/deployed sites
-  - Git commits are mostly atomic but sometimes document changesets that are too large
-  - PRs do not have thorough descriptions
-  - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
-  - When the project is run locally, the terminal shows no errors and more than 5 warnings
-* **1:**
-  - README does not document your learning goals, the evolution of the project, and is poorly formatted (hindering readability)
-  - README does not include links to team member's GitHub profiles
-  - Git commits are not atomic and document changesets that are too large
-  - PRs do not have thorough descriptions, and no code reviews are conducted, merging bugs into the main branch
-  - When the project is run locally, the terminal shows errors and more than 5 warnings
-
 ### Testing
 
 * **4:**
@@ -283,3 +249,48 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
   - Application uses Router but fails to properly display all necessary routes
   - Application does not use built-in React Router components and instead directly manipulates the `history` object
   - UX is challenging; multiple pages are missing links to routes, or browser Back/Forward arrow navigation does not work
+
+  ### Project Professionalism
+  You will not receive a score for professionalism, but you should be meeting these expectations:
+  * README concisely communicates your learning goals, the evolution of the project, and reflections while using good formatting to enhance readability
+  * README links to any applicable repos/deployed sites and includes clear instructions for running the application locally
+  * README includes the deployed link and it is easy to locate
+  * README includes a gif of the application
+  * Git commits are atomic, with concise and precise descriptions of the change made
+  * PRs have full, consistent descriptions
+  * Evolution of the project (decisions made, etc) are fully and clearly documented in the git history and PRs
+  * When the project is run locally, the terminal shows no errors or warnings
+
+<!-- ### Project Professionalism
+
+The goal of this rubric section is to continue to gauge your readiness and prepare you for workplace standards. As you ramp up your job hunt, it becomes increasingly important to demonstrate to future employers that you are not sloppy and take care with the details of your work and processes!
+
+* **4:**  
+  - README concisely communicates your learning goals, the evolution of the project, and reflections - while using good formatting to enhance readability
+  - README links to any applicable repos/deployed sites
+  - You use a rebase workflow
+  - Git commits are atomic, with concise and precise descriptions of the change made
+  - PRs have full, consistent descriptions
+  - You lean on cohortmates or a mentor to do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging
+  - Evolution of the project (decisions made, etc) is fully and clearly documented in the git history and PRs
+  - When the project is run locally, the terminal shows no errors or warnings
+* **3:**
+  - README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
+  - README links to all applicable repos/deployed sites
+  - Git commits are atomic, with concise and precise descriptions of the change made
+  - PRs have full, consistent descriptions
+  - Evolution of the project (decisions made, etc) is documented in the git history and PRs but is sometimes unclear
+  - When the project is run locally, the terminal shows no errors and fewer than 5 warnings
+* **2:**
+  - README concisely communicates your learning goals and the evolution of the project, but does not use Markdown formatting to aid readability
+  - README links to any applicable repos/deployed sites
+  - Git commits are mostly atomic but sometimes document changesets that are too large
+  - PRs do not have thorough descriptions
+  - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
+  - When the project is run locally, the terminal shows no errors and more than 5 warnings
+* **1:**
+  - README does not document your learning goals, the evolution of the project, and is poorly formatted (hindering readability)
+  - README does not include links to team member's GitHub profiles
+  - Git commits are not atomic and document changesets that are too large
+  - PRs do not have thorough descriptions, and no code reviews are conducted, merging bugs into the main branch
+  - When the project is run locally, the terminal shows errors and more than 5 warnings -->
