@@ -225,9 +225,7 @@ __Below are some things that you should ALWAYS incorporate in your web applicati
 <section class="answer">
 ### More Accessibility Considerations 
 
-### CSS/Styling
 #### Browser Focus Rings
-
 
 DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
 
@@ -236,7 +234,7 @@ This blog post on writing accessible css has a [section](https://medium.com/@mat
 A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles.
 
 
-### Alt Attributes for Your Images!
+#### Alt Attributes for Your Images!
 
 * Hugely important (for both accessibility and SEO!)
 * Low hanging fruit, easy to use on images.
@@ -258,7 +256,7 @@ yes!
 
 ![Great example of alt tag](/assets/images/alt-example.png)
 
-### ARIA Labels for Your Links that have no text!
+#### ARIA Labels for Your Links that have no text!
 
 * Not necessary for all links, but make sure to use them for your icon anchors – you know, things like your facebook, twitter, etc icons:
 
@@ -266,7 +264,7 @@ yes!
 <a class="facebook-icon" aria-label="Link to Facebook"><a/>
 ```
 
-### Lang attribute on Your HTML!
+#### Lang attribute on Your HTML!
 
 * Is often populated by default if using Emment or other HTML boilerplates!
 * As far as non-english speaking screen readers are concerned, when they land on an english-speaking web page without the `lang` attribute, it will be spoken with the screen reader language - making it impossible to understand - unless the screen reader user disables language switching in the screen reader.
@@ -282,7 +280,7 @@ yes!
 <h1 lang="es">¿Donde está la biblioteca?</h1>
 ```
 
-### Label Input Elements
+#### Label Input Elements
 
 Note: you should _really_ be providing labels with all of your input fields, like this!
 
@@ -297,9 +295,6 @@ You can use the `aria-label` below to define a label, but remember to use semant
 <input type="text" aria-label="First name" placeholder="Clementine">
 ```
 </section>
-
-
-
 
 
 ## Additional Resources
