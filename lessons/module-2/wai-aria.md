@@ -31,18 +31,6 @@ In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1C
 - What questions do you have about accessibility?
 </section>
 
-## Accessible Defaults
-
-
-### CSS/Styling
-#### Browser Focus Rings
-
-
-DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
-
-This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options. And [this article](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) also has some alternatives to use to get rid of the focus ring while still keeping things accessible.
-
-A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles.
 
 ## WAI-ARIA
 
@@ -234,6 +222,19 @@ You can then use JavaScript to keep this information up to date - for example, o
 
 __Below are some things that you should ALWAYS incorporate in your web applications__
 
+<section class="answer">
+### More Accessibility Considerations 
+
+### CSS/Styling
+#### Browser Focus Rings
+
+
+DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
+
+This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options. And [this article](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) also has some alternatives to use to get rid of the focus ring while still keeping things accessible.
+
+A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles.
+
 
 ### Alt Attributes for Your Images!
 
@@ -295,6 +296,10 @@ You can use the `aria-label` below to define a label, but remember to use semant
 ```html
 <input type="text" aria-label="First name" placeholder="Clementine">
 ```
+</section>
+
+
+
 
 
 ## Additional Resources
