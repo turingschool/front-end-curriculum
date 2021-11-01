@@ -58,7 +58,7 @@ ARIA provides a series of tools and approaches to enhancing the meaning of your 
 * __States__
 * __Properties__
 
-* An element can only have one role at a time, but can have as many properties and states as necessary
+*An element can only have one role at a time, but can have as many properties and states as necessary*
 
 An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screen readers get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
 
@@ -105,24 +105,21 @@ A form element has a role of 'form' by default. We can override that role using 
 ```
 
 <section class="call-to-action">
-Can you think of other examples for when we might want to override a default role?
-</section>
-
-
-<section class="call-to-action">
 ## In Groups
 - Use the [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance) and look up the following elements and their implicit roles
-  - div
-  - footer
-  - input
+  - `<div>`
+  - `<form>`
+  - `<main>`
+  - `<input>`
 - Check out some of the other elements. Is there anything suprising?
 - Take turns explaining what a role is.
 - What is the difference between implicit and explicit roles?
+- BONUS: Can you think of other examples for when we might want to override a default role?
 </section>
 
 ## States
 
-States describe how you are interacting with an element (What am I doing right now?)
+States describe how you are interacting with an element (What am I doing right now?) and rely on _boolean logic_.
 
 For example, think about websites that have a sidebar menu that can be toggled open or closed. You might see something like this:
 
@@ -134,7 +131,7 @@ For example, think about websites that have a sidebar menu that can be toggled o
 
 Here we have a button with text that says "Toggle Menu", probably indicating that when you click on said button it will toggle the menu open or closed.
 
-What this doesn't tell you is if the menu is already open or closed, which is fine if you have fully functional eyesight, but probably not great if you use assistive technology.
+What this doesn't tell you is if the menu is already open or closed, which is fine if you are a sighted user, but probably not great if you use assistive technology.
 
 Luckily ARIA provides state information that we can add to our markup.
 
