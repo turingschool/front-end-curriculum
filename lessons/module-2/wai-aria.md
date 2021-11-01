@@ -21,29 +21,17 @@ tags: html, ARIA, accessibility
 <section class="call-to-action">
 ## Warm Up
 
-Let's review from last week's [Intro to Accessibility Lesson](https://frontend.turing.io/lessons/module-2/intro-to-accessibility.html)
+Let's review from the [Intro to Accessibility Lesson](https://frontend.turing.io/lessons/module-2/intro-to-accessibility.html)
 
 In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1Cx_0TzXvo2HYrfW4LSDTdRevqPxI7ZfUaoW38e9j-io/viewer?f=0)
 
 - What have you already been implementing (or would like to implement) to make your applications accessible?
 - What are some ways we can test how accessible an application is?
 - What is semantic HTML and why is it important?
+- What questions do you have about accessibility?
 </section>
 
 ## Accessible Defaults
-<!-- 
-### Semantic HTML
-
-There are two different elements that are semantically neutral: Those are `span` and `div` elements. Avoid using them except in instances that are purely for styling.
-
-Semantic html is very important for 3 reasons:
-1. developer empathy - It makes code much easier to read and debug
-2. accessibility - It allows screen readers to move through the web page seamlessly
-3. SEO (search engine optimization) - it will make your webpage more discoverable via Google
-
-__Side Note__: Documentation is your friend when developing a website. Here are some super useful docs for better knowing what element to use for a given scenario.
-
-* [List of html semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) -->
 
 
 ### CSS/Styling
@@ -58,20 +46,21 @@ A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__
 
 ## WAI-ARIA
 
-Accessible Rich Internet Applications.
+Web Accessibility Initiative - Accessible Rich Internet Applications.
 
-[WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) is a set of tools we can add to our HTML to make our code more semantically meaningful. Not only is this crucial for assistive technology, but it is also helpful to your future self and other developers to know what you were trying to accomplish in your code.
+[WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) is a set of **attributes**  we can add to our HTML tags to make our code more semantically meaningful for screen readers. 
 
-Think about the information provided by a set of <div></div> tags. What do we know about the content within those tags? Really, we know nothing. It’s a semantically void element that controls the APPEARANCE of its content - by default it is a block style element, but beyond that it could theoretically be literally any kind of data - a title, a paragraph, an image, a random red decorative sidebar…etc.
+Think about the information provided by a set of `<div></div>` tags. What do we know about the content within those tags? Really, we know nothing. It’s a semantically void element that controls the APPEARANCE of its content - by default it is a block style element, but beyond that it could theoretically be literally any kind of data - a title, a paragraph, an image, a random red decorative sidebar…etc.
 
-ARIA provides a series of tools and approaches to enhancing the meaning of your code. Toay we will look at the three main aspects of ARIA - Roles, States, and Properties.
+ARIA provides a series of tools and approaches to enhancing the meaning of your code. Today we will look at the three main aspects of ARIA - Roles, States, and Properties.
 
 * __Roles__
 * __States__
 * __Properties__
+
 * An element can only have one role at a time, but can have as many properties and states as necessary
 
-An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
+An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screen readers get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
 
 <section class="call-to-action">
 What are some attributes you might put on an HTML element that don't show up on the page?
@@ -82,9 +71,9 @@ What are some attributes you might put on an HTML element that don't show up on 
 #### Rules of ARIA Use
 The core rules to keep in mind when using ARIA are:
 
-If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time, and will annoy your screen reader users. 
+If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time, and will annoy your screen reader users. 
 
-**Many "accessibility flags" come from developers _overusing_ ARIA.**
+**Many "accessibility flags" come from developers _overusing_ ARIA. Only use ARIA as a last resort!!**
 
 ## Aria Roles, States, and Properties
 
@@ -115,11 +104,14 @@ Explicit Role Example:
 A form element has a role of 'form' by default. We can override that role using the `role` attribute and providing it another value. Like in the case above where we are using the role of search.
 ```
 
-[Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
+<section class="call-to-action">
+Can you think of other examples for when we might want to override a default role?
+</section>
+
 
 <section class="call-to-action">
 ## In Groups
-- Use the table of elements and look up the following elements and their implicit roles
+- Use the [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance) and look up the following elements and their implicit roles
   - div
   - footer
   - input
