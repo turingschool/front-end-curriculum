@@ -27,10 +27,11 @@ In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1C
 
 - What have you already been implementing (or would like to implement) to make your applications accessible?
 - What are some ways we can test how accessible an application is?
+- What is semantic HTML and why is it important?
 </section>
 
 ## Accessible Defaults
-
+<!-- 
 ### Semantic HTML
 
 There are two different elements that are semantically neutral: Those are `span` and `div` elements. Avoid using them except in instances that are purely for styling.
@@ -42,11 +43,12 @@ Semantic html is very important for 3 reasons:
 
 __Side Note__: Documentation is your friend when developing a website. Here are some super useful docs for better knowing what element to use for a given scenario.
 
-* [List of html semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+* [List of html semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) -->
 
 
 ### CSS/Styling
 #### Browser Focus Rings
+
 
 DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
 
@@ -56,7 +58,13 @@ A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__
 
 ## WAI-ARIA
 
-[WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories:
+Accessible Rich Internet Applications.
+
+[WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) is a set of tools we can add to our HTML to make our code more semantically meaningful. Not only is this crucial for assistive technology, but it is also helpful to your future self and other developers to know what you were trying to accomplish in your code.
+
+Think about the information provided by a set of <div></div> tags. What do we know about the content within those tags? Really, we know nothing. It’s a semantically void element that controls the APPEARANCE of its content - by default it is a block style element, but beyond that it could theoretically be literally any kind of data - a title, a paragraph, an image, a random red decorative sidebar…etc.
+
+ARIA provides a series of tools and approaches to enhancing the meaning of your code. Toay we will look at the three main aspects of ARIA - Roles, States, and Properties.
 
 * __Roles__
 * __States__
@@ -65,11 +73,9 @@ A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__
 
 An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
 
-*These are attributes that are "hidden" in your HTML for screen readers to see.* Think of other attributes you might put on an HTML element that don't show up on the page:
-- `disabled`
-- `alt`
-- `lang`
-
+<section class="call-to-action">
+What are some attributes you might put on an HTML element that don't show up on the page?
+</section>
 
 <!-- ![Aria Tree](/assets/images/aria.jpg) -->
 
