@@ -164,9 +164,9 @@ Score key:
 * **4:**
   - Project meets MVP & adds nice-to-haves; meets all project requirements
 * **3:**
-  - Project meets MVP; meets all project requirements
+  - Project meets MVP; meets all project requirements, and is responsive for desktop and mobile screens
 * **2:**
-  - Project either does not meet MVP or does not meet all project requirements
+  - Project either does not meet MVP, does not meet all project requirements, or is not responsive
 * **1:**
   - Project does not meet MVP or project requirements
 

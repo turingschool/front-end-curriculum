@@ -353,19 +353,19 @@ Score key:
   - Application does not use built-in React Router components and instead directly manipulates the `history` object
   - UX is challenging; multiple pages are missing links to routes, or browser Back/Forward arrow navigation does not work
 
-<!-- ### Project Professionalism
+### Project Professionalism
 You will not receive a score for professionalism, but you should be meeting these expectations:
 * README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
 * README links to all user GitHub profiles and any applicable repos/deployed sites
 * README includes a gif of the application
 * Git commits are atomic, with concise and precise descriptions of the change made
-* PRs have full, consistent descriptions
+* PRs have full, consistent descriptions and are formatted using a PR template
 * Team members do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging
 * Evolution of the project (decisions made, etc) are fully and clearly documented in the git history and PRs
-* When the project is run locally, the terminal shows no errors or warnings -->
+* When the project is run locally, the terminal shows no errors or warnings
 
 
-### Project Professionalism
+<!-- ### Project Professionalism
 
 The goal of this rubric section is to continue to gauge your readiness and prepare you for workplace standards. As you ramp up your job hunt, it becomes increasingly important to demonstrate to future employers that you are not sloppy and take care with the details of your work and processes!
 
@@ -399,4 +399,4 @@ The goal of this rubric section is to continue to gauge your readiness and prepa
   - README does not include links to team member's GitHub profiles
   - Git commits are not atomic and document changesets that are too large
   - PRs do not have thorough descriptions, and no code reviews are conducted, merging bugs into the main branch
-  - When the project is run locally, the terminal shows errors and more than 5 warnings
+  - When the project is run locally, the terminal shows errors and more than 5 warnings -->
