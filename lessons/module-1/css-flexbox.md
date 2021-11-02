@@ -132,6 +132,9 @@ Another CSS property with flexbox is `flex-direction`. This property takes one o
 - `column`: same as `row` but top to bottom
 - `column-reverse`: same as `column` but bottom to top
 
+
+**The `flex-direction` property defines the main axis**
+
 <img class="medium" src="./assets/images/flexbox/flexbox-axis.svg" alt="flexbox parent axis">
 
 <div class="call-to-action">
