@@ -13,7 +13,7 @@ As front end developers, we should always be concerned about giving our users th
 
 In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1wyTnk8ev8-GNlS3wpObhzBSSjNvKkgQTbMqP8wFL0PE)
   - What have you already been implementing (or would like to implement) to make your applications more user-friendly when errors occur?
-  - What are some ways we can test errors?
+  - what are the response status code when error occur?
 
 </section>
 ### The challenge
