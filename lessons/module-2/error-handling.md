@@ -7,7 +7,15 @@ module: 2
 ## Preface
 
 As front end developers, we should always be concerned about giving our users the best experience possible. One way to that is to make sure that we provide the user with some feedback in case an interaction goes wrong. In this lesson, y'all are going to focus on improving the ui of a form, by providing error messages to our end user.
+<section class="call-to-action">
+## Warm Up
+  Let's review from the [Network request GET lesson](https://frontend.turing.edu/lessons/module-2/network-requests-gets.html) & [Network request POST lesson](https://frontend.turing.edu/lessons/module-2/network-requests-posts.html)
 
+In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1wyTnk8ev8-GNlS3wpObhzBSSjNvKkgQTbMqP8wFL0PE)
+  - What have you already been implementing (or would like to implement) to make your applications more user-friendly when errors occur?
+  - What are some ways we can test errors?
+
+</section>
 ### The challenge
 
 Visit [this repo](https://github.com/turingschool-examples/fe2-fetch-practice/tree/error-handling) and follow the directions in the readme to get some practice in gracefully handling errors and presenting them to the end user.
