@@ -12,8 +12,8 @@ As front end developers, we should always be concerned about giving our users th
   Let's review from the [Network request GET lesson](https://frontend.turing.edu/lessons/module-2/network-requests-gets.html) & [Network request POST lesson](https://frontend.turing.edu/lessons/module-2/network-requests-posts.html)
 
 In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1wyTnk8ev8-GNlS3wpObhzBSSjNvKkgQTbMqP8wFL0PE)
-  - What have you already been implementing (or would like to implement) to make your applications more user-friendly when errors occur?
-  - what are the response status code when error occur?
+  - What do you remember from request/response cycle?
+  - what are the response status code when error happens?
 
 </section>
 ### The challenge
