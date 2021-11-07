@@ -41,7 +41,7 @@ Looking at the definition of refactoring above, why do you think refactoring cod
 
 * **3:**
 
-  - Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly
+  - Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should use camelCase and be used sparingly.
 
 * **2:**
 
