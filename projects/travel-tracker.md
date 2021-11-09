@@ -182,9 +182,9 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 ## UI/UX & Accessibility
 
 * 4: Application has clearly had special consideration around accessibility and usability on devices. Lighthouse accessibility audit is at a 100%.
-* 3: Application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance. The application is fully responsive and the UI does not detract from the UX. Lighthouse accessibility audit is at least 90%.
-* 2: The application may be confusing or difficult to use at times.  The UI is incomplete, and the app is not responsive. Accessibility has been considered, but does not have strong accessible features. 
-* 1: Application is confusing or difficult to use. The UI is incomplete, and the app is not responsive. Accessibility has not been considered. 
+* 3: Application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance.UI does not detract from the UX. Lighthouse accessibility audit is at least 90%.
+* 2: The application may be confusing or difficult to use at times.  The UI is incomplete, Accessibility has been considered, but does not have strong accessible features. 
+* 1: Application is confusing or difficult to use. The UI is incomplete. Accessibility has not been considered. 
 
 ## JavaScript Style & OOP
 
