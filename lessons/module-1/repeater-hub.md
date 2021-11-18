@@ -10,7 +10,7 @@ Make sure you are part of the following channels:
 * **#the_repeaters**: A community of Turing students and alumni who have repeated or are currently repeating a module.
 
 ## Goal Tracking
-Add your name to [this Goals Document](https://docs.google.com/spreadsheets/d/14CnFCMSFyadbPoMP_ii0NnxQRoZnXKDT2JP-n56yZq8/edit?usp=sharing) and fill out your goal for Intermission. We will check in on these goals on the Monday of Week 1.  
+Add your name to [this Goals Document](https://docs.google.com/spreadsheets/d/1bQ9zZbW0mxLfMXDLQZT4W2M5Z-nv_6FZ1T5WC8Io8Zo/edit#gid=1626636507) and fill out your goal for Intermission. We will check in on these goals on the Monday of Week 1.  
 
 You will continue to add your weekly goals to that document every Monday throughout the inning. We'll set up a slackbot in #mod1_repeater_fam to remind you!
 
