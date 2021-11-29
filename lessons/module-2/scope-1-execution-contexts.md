@@ -61,12 +61,13 @@ Let's do a quick breakdown of what the interpreter did here to read this code:
 <section class="answer">
 ### Breakdown of what the interpreter is doing  
 
-1. **Line 1:** The `modTwoTeachers` variable is assigned to an array of instructor names.
-2. **Line 7:** We then skip down to line 7, because we are not currently invoking the function that's been declared, so we skip over that for now. On line 7, the `numEvals` variable is assigned to the invocation of `calculateEvals`.
+1. **Line 1:** The `modTwoTeachers` variable is assigned the value of an array of instructor names.
+2. **Line 7:** We then skip down to line 7, because we are not currently invoking the function that's been declared, so we skip over that for now. On line 7, the `numEvals` variable is assigned to the value of the function expression (the invoking of) `calculateEvals`.
+    - __Technically, lines 2-6 are still being read and understood by the interpreter as a function declaration. It just doesn't EXECUTE this code.__
 3. **Line 3:** Because line 7 told us to invoke `calculateEvals`, the interpreter will jump back up to line 3 and begin executing that function.
-4. **Line 4:** return `classSize / teachers.length`
-5. **Line 9:** Our function has finished executing, so we're going to pop out of that and pick up where we left off, which is on line 9, where the `currentCohort` variable is assigned to the number 29.
-6. **Line 10:** We console log the value of our `numEvals` variable, which gives us NaN.
+4. **Line 4:** return `classSize / teachers.length` - the function expression evaluates to the calculated value.
+5. **Line 9:** Our function has finished executing, so we're going to pop out of that and pick up where we left off, which is on line 9, where the `currentCohort` variable is assigned the value 33.
+6. **Line 10:** We log the value of our `numEvals` variable to the console, which gives us NaN.
 
 Based on this order of execution, we ultimately receive NaN as our result because the value of our `currentCohort` is not assigned until **after** we already do the math within `calculateEvals`. At the time `calculateEvals` executes, the value of our `currentCohort` variable is `undefined`. So what our function is really doing is trying to return `undefined / 3` -- which will always result in NaN. NOTE: You will get a different error message instead of `NaN` if declaring variables with `const` instead of `var`.
 </section>
