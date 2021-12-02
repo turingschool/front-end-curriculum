@@ -9,8 +9,8 @@ tags: javascript, oop, mocha, testing, fetch
 - **Use object and array prototype methods to perform data manipulation**
 - Create a user interface that is easy to use and clearly displays information.
 - Write modular, reusable code that follows SRP (Single Responsibility Principle)
-- Implement a robust testing suite using TDD
-- Make network requests to retrieve data
+- **Implement a robust testing suite using TDD**
+- **Make network requests to retrieve data**
 	 
 In this project, you will create a recipe tracking / meal planning application that allows users to view their favorite recipes and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should view a list of recipes, favorite their own recipes, and choose recipes to cook.
 	 
@@ -33,16 +33,15 @@ Feel free to use the above sites as inspiration for your UI, but note that there
 ## Timeline
 Dates and deadlines to be aware of:
 	 
-* **Monday August 30th** - Submit the following to your PM BEFORE beginning to write code via Slack:
+* **By EOD Monday of Week 2** - Submit the following to your PM BEFORE beginning to write code via Slack:
 1. DTR (be specific about learning goals, schedules, and communication expectations) 
-1. Project board (this should be kept updated throughout the project and will be reviewed by PM in check-ins).
-1. Planned out Class structure, for example, for a Recipe setup, you can have a ```RecipeRepository Class ``` and ```Repository Class```.
-1. Wireframes
+1. GitHub project board (this should be kept updated throughout the project and will be reviewed by PM in check-ins.
+1. Wireframes (a rough sketch of your website for planning)
 1. 3 design inspirations (Please include links and details on what you're trying to re-create).
 	 
-* **Tuesday, September 7th** - Project due at 9PM.
+* **Monday of Week 3** - Project due at 9PM.
 	 
-Please submit your Group project part one [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
+Please submit your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
 	 
 ---
 	 
@@ -86,7 +85,7 @@ For this project, you will need to use this [What's Cookin Starter Kit](https://
 	 
 ### Testing Setup
 	 
-There is no boilerplate for testing in the starter-kit repo. You will need to set up all of the tests yourself. Although, if you have run `npm install` in the setup instructions, then the tooling you need to start testing is already installed (`mocha` and `chai`). Refer to the testing lesson from week 1 as a guide to get started as well as the [mocha](https://mochajs.org/){:target='blank'} and [chai](https://www.chaijs.com/){:target='blank'} documentation pages.
+There is some boilerplate for testing in the starter-kit repo. You will need to set up the rest of the tests yourself. If you have run `npm install` in the setup instructions, then the tooling you need to start testing is already installed (`mocha` and `chai`). Refer to the testing lesson from week 1 as a guide to get started as well as the [mocha](https://mochajs.org/){:target='blank'} and [chai](https://www.chaijs.com/){:target='blank'} documentation pages.
 	 
 	 
 ## Project Iterations
@@ -97,7 +96,7 @@ Don't get too caught up with polishing your dashboard too early. You'll want to 
 <section class="note">
 ### 3rd Party Libraries
 	 
-You may choose **ONE** of the following 3rd party libraries to incorporate into your app as an extension if interested. Your group may want to do a research spike over the first weekend to see what your team would like to experiment with. Please get instructor approval first before choosing to use additional 3rd-party libraries. 
+You may choose **ONE** of the following 3rd party libraries to incorporate into your app as an extension if interested. Your group may want to do a research spike over the first weekend to see what your team would like to experiment with. Please get instructor approval first before choosing to use additional 3rd-party libraries. **This is an extension and not required!**
 	 
 * [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'} 
 * [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
@@ -119,16 +118,15 @@ Once you have looked over each data file, start with the `recipes.js` data file.
 A `RecipeRepository` should hold onto all `Recipe` objects. 
 - It should have a parameter to take in recipe `data`.
 - It should have methods to determine:
-* A filtered list of recipes based on one or more tags.
-* A filtered list of recipes based on its name or ingredients.
-	 
+  * A filtered list of recipes based on one or more tags.
+  * A filtered list of recipes based on its name or ingredients.
 	 
 A `Recipe` represents one recipe object.
 - It should hold on to all its information (provided in the data file).
 - It should have methods to:
-- Determine the names of ingredients needed
-- Get the cost of its ingredients
-- Return its directions / instructions
+  * Determine the names of ingredients needed
+  * Get the cost of its ingredients
+  * Return its directions / instructions
 	 
 <section class="note">
 	
@@ -145,7 +143,7 @@ For example, if flour is marked as 100 cents, and the recipe calls for 1.5 cups,
 You may find it helpful to have an `Ingredient` class as well as you build your recipes. A common theme when dealing with data is not to manipulate the original data, but to create copies / instances to work with.
 </section>
 	 
-#### User Stories
+#### User Stories (Dashboard)
 	 
 Use the `scripts.js` file to add information to the DOM. This JS file should call methods from your classes to retrieve data. There should not be any DOM manipulation within your class files.
 	 
@@ -173,7 +171,7 @@ Create classes and methods that can:
 * As a user, I should be able to favorite / unfavorite recipes that I like and can easily find again.
 * As a user, I should be able to filter my favorited recipes by one or more tags.
 * As a user, I should be able to search my favorited recipes by its name or ingredients.
-* As a user, I should be able to add a recipe to a list of recipes to cook.
+* As a user, I should be able to add a recipe to a list of recipes to cook (this functionality will be necessary for Part Two of this project).
 	 
 ---
 	 
@@ -221,15 +219,15 @@ You are *not expected* to test:
 	 
 ### Functional Expectations
 * 4: Application fulfills all requirements *as well as* an extension.
-* 3: Application fulfills all requirements of iteration 3.
-* 2: Application is usable but has some missing functionality.
+* 3: Application fulfills all requirements of iteration 3 without bugs.
+* 2: Application is usable but has some missing functionality or bugs.
 * 1: Application crashes during normal usage.
 	 
 ### Fundamental JavaScript & Style / OOP / Fetch
 * 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring. Application is expertly divided into logical components each with a clean, single responsibility.
-* 3: Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. Application is effectively broken into logical components, but violate the principle of SRP.
-* 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. Divisions of logic into classes are inconsistent or unclear.
-* 1: Application generates syntax error or crashes during execution. Application logic shows poor decomposition with too much logic mashed together.
+* 3: Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. Application is effectively broken into logical components, but may violate the principle of SRP. There is no DOM manipulation present in class components.
+* 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. Divisions of logic into classes are inconsistent or unclear. 
+* 1: Application generates syntax errors or crashes during execution. Application logic shows poor decomposition with too much logic mashed together.
 	 
 ### Test-Driven Development
 * 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.
@@ -238,8 +236,8 @@ You are *not expected* to test:
 * 1: Application does not demonstrate strong use of TDD.
 	 
 ### User Interface
-* 4: The application can stand on its own to be used by an instructor without guidance from a developer on the team. The UI does not detract from the UX. 
-* 3: The application has many strong displays/interactions.The UI does not detract from the UX. 
+* 4: Special consideration has been given to the usability of the application. The design is clean and the messaging for how to interact with the application is clear. 
+* 3: The application can stand on its own to be used by an instructor without guidance from a developer on the team.
 * 2: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the users' needs.
 * 1: The application is confusing or difficult to use.
 	 
@@ -247,9 +245,10 @@ You are *not expected* to test:
 	 
 ### Minimum Professionalism Expectations
 * Commits are atomic and frequent, effectively documenting the evolution/progression of the application
-* The Project Board is utilized with Github issues and labels.
+* The Project Board is utilized (and updated throughout the project) with Github issues and labels.
 * Developer uses PRs from feature branches before adding new code to the main branch.
 * The README is formatted well and at a minimum contains:
   * Overview of project and goals
   * Overview of technologies used, challenges, wins, and any other reflections
   * Screenshots/gifs of your app
+  * List of contributors
