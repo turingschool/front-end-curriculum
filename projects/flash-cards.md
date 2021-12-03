@@ -262,8 +262,8 @@ Collaborate with instructors to personalize an extension for this project
 * 1: Application generates syntax error or crashes during execution.
 
 ### Test-Driven Development
-* 4: Application is broken into components, good use of own data, good happy and sad path testing.
-* 3: Application is well tested but does not have consistent use of beforeEach to DRY up tests, uses data files instead of creating own data, and not enough sad path testing.
+* 4: Application is broken into components, good use of own data, good happy and sad path testing. Has consistent use of beforeEach to DRY up tests.
+* 3: Application is well tested, but some coverage might be lacking. Smaller data files are used for testing instead of the entire data file.
 * 2: Application makes some use of tests, but the coverage is insufficient given project requirements.
 * 1: Application does not demonstrate strong use of TDD.
 
