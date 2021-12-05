@@ -70,22 +70,17 @@ Fortunately, routing with React is easy! We just need to use a library called <a
 
 Rather than tell you about how Router works, we'll work through a series of exercises and examples.
 
-We'll be using <a href="https://github.com/turingschool-examples/react-router-v5" target="_blank">this repo</a> to solve a series of challenges listed below.
+We'll be using <a href="https://github.com/turingschool-examples/react-router-v6" target="_blank">this repo</a> to solve a series of challenges listed below.
 
 **Installation Instructions**
 ```bash
-git clone https://github.com/turingschool-examples/react-router-v5
-cd react-router-v5
+git clone https://github.com/turingschool-examples/react-router-v6
+cd react-router-v6
 npm i
 npm start
 
 # open your text editor
 ```
-
-<section class="note">
-### Code Sand Box Template
-You're also welcome to use the code sand box template, found <a href="https://codesandbox.io/s/github/turingschool-examples/react-router-v5?file=/src/App/App.js" target="_blank">here</a>.
-</section>
 
 The App is not fully put together. It has a series of components that will serve as building blocks of the final component. You won't be building out new components, but you will be editing existing ones.
 
