@@ -176,7 +176,7 @@ We picked `/` for the path in the route because it designates that there won't b
 </section>
 
 <section class="answer">
-### Finally, let's update those `<a>` elements to `<NavLink />` components.
+### Finally, let's update those `a` elements to `NavLink` components.
 
 ```jsx
 // App.js
