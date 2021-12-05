@@ -1,5 +1,5 @@
 ---
-title: React Router v5
+title: React Router v6
 length: 3 hours
 tags: React, Router
 module: 3
@@ -13,17 +13,20 @@ module: 3
 ## Vocab
 * `BrowserRouter` A \<Router\> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL
 * `Router` The class that \<BrowserRouter\> is extended from
-* `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
 * `Link` Links provide declarative, accessible navigation around your application
 * `NavLink` A special version of the \<Link\> that will add styling attributes to the rendered element when it matches the current URL.
-* `Redirect` Rendering a \<Redirect\> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do.
-* `Switch` Renders the first child \<Route\> or \<Redirect\> that matches the location. \<Switch\> is unique in that it renders a route exclusively (only one route wins).
+* `Routes`
+* `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
+* `Outlet`
+* `Navigation`
+<!-- * `Redirect` Rendering a \<Redirect\> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do. -->
+<!-- * `Switch` Renders the first child \<Route\> or \<Redirect\> that matches the location. \<Switch\> is unique in that it renders a route exclusively (only one route wins). -->
 * `match` A match object contains information about how a \<Route path\> matched the URL.
 
 <section class="checks-for-understanding">
 ## Prework  
 
-Before the lesson, complete the [prework](https://gist.github.com/letakeane/3ba8fce0958b12cf1a48fe6b4ff2a783){:target='blank'}.
+Before the lesson, complete the [prework](https://gist.github.com/kaylagordon/7a6c7fcdf1ab0cd937d009845d8643dc){:target='blank'}.
 </section>
 
 ## React Router
@@ -35,10 +38,10 @@ In small groups, discuss the following questions:
 2. Describe the high-level process of setting up Router in a project (packages to install, basic component needed)
 3. Describe the following components:
 - Route
-- Redirect
+- Routes
 - Link
 - NavLink
-- Switch
+- Outlet
 </section>
 
 
