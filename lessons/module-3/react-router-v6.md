@@ -23,11 +23,9 @@ React Router just released the newest version - `version 6`. This lesson has bee
 * `NavLink` A special version of the \<Link\> that will add styling attributes to the rendered element when it matches the current URL.
 * `Routes`
 * `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
+* `useParams`
 * `Outlet`
 * `Navigation`
-<!-- * `Redirect` Rendering a \<Redirect\> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do. -->
-<!-- * `Switch` Renders the first child \<Route\> or \<Redirect\> that matches the location. \<Switch\> is unique in that it renders a route exclusively (only one route wins). -->
-* `match` A match object contains information about how a \<Route path\> matched the URL.
 
 <section class="checks-for-understanding">
 ## Prework  
@@ -107,12 +105,7 @@ Remember that React Router conditionally renders components based on the current
 
 To use React Router, we need to wrap any components that will use a React Router-provided-component in some kind of [Router component](https://reacttraining.com/react-router/web/guides/primary-components/routers).
 
-We'll use a [Browser Router](https://reacttraining.com/react-router/web/api/BrowserRouter), since our app will be used in the browser. This Router provides access to the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). But we won't worry abou those details just yet.
-
-<section class="note">
-### Hint
-We'll come back to this later in the lesson...
-</section>
+We'll use a [Browser Router](https://reacttraining.com/react-router/web/api/BrowserRouter), since our app will be used in the browser. This Router provides access to the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). But we won't worry about those details just yet.
 
 <section class="answer">
 ### The first step is installing react router:
@@ -122,7 +115,7 @@ npm install react-router-dom
 </section>
 
 <section class="answer">
-### Once you have React Router installed, import your chosen Router.
+### Once you have React Router installed, import your chosen Router:
 
 ```jsx
 // index.js
@@ -140,7 +133,7 @@ ReactDOM.render(router, document.getElementById('root'));
 </section>
 
 <section class="answer">
-### Now, add a Route for the `Home` component into your `App`
+### Now, add a Route for the `Home` component into your `App`:
 
 ```jsx
 // App.js
@@ -176,7 +169,7 @@ We picked `/` for the path in the route because it designates that there won't b
 </section>
 
 <section class="answer">
-### Finally, let's update those `a` elements to `NavLink` components.
+### Finally, let's update those `a` elements to `NavLink` components:
 
 ```jsx
 // App.js
@@ -330,13 +323,159 @@ Hmmm...two of those `<Route />` components are looking quite similar. I wonder i
 </section>
 ---
 
-### Route Props
+### Route Params
 
+<section class="answer">
+### Let's start by making a dynamic path:
 
-## Exercise #3: Dynamic Routing
+```jsx
+// App.js
+
+import React, { Component } from 'react';
+import './App.css';
+import puppies from '../data/puppy-data.js';
+import sharks from '../data/shark-data.js';
+import Creatures from '../Creatures/Creatures';
+import Home from '../Home/Home';
+import { Routes, Route, NavLink } from 'react-router-dom';
+
+export default class App extends Component {
+  render() {
+    return (
+      <main className="App">
+        <nav>
+          <NavLink to="/puppies" className="nav">Puppies</NavLink>
+          <NavLink to="/sharks" className="nav">Sharks</NavLink>
+        </nav>
+        <h1>Puppies or Sharks?</h1>
+        <Routes>
+          <Route path="/" element={ <Home /> }/>
+          <Route path="/:animal" element={ <Creatures name="puppies" data={puppies} /> }/>
+        </Routes>
+      </main>
+    );
+  }
+}
+```
+</section>
+
+<section class="call-to-action">
+### Let's reflect!
+
+In your app, click on the `Sharks` button. What renders to the page? What shows up in the URL? Why?
+</section>
+
+So now we need the `<Creatures />` component to know which animal we've selected.
+
+<section class="answer">
+### First, let's console.log some stuff:
+
+```jsx
+// Creatures.js
+
+import React from 'react';
+import './image-display.css';
+import { useParams } from 'react-router-dom';
+
+const Creatures = ({ data, name}) => {
+
+  console.log(useParams());
+
+  const creatureImages = data.map(creature => {
+    const { id, image } = creature;
+    return <img src={image} key={id} id={id} className="app-img"/>
+  });
+
+  return (
+    <>
+      <h1>{name}!</h1>
+      {creatureImages}
+    </>
+  )
+
+}
+
+export default Creatures;
+```
+</section>
+
+<section class="call-to-action">
+### Let's explore!
+
+1. What console.logged? Where does the **key:value pair** come from?
+2. Click between the `Puppies` and `Sharks` buttons. How is the logged object changing?
+3. Manually type something random into the URL, like `localhost:3000/potatoes`. What logs?
+</section>
+
+<section class="answer">
+### Let's use useParams to render the correct animal:
+
+```jsx
+// Creatures.js
+
+import React from 'react';
+import './image-display.css';
+import { useParams } from 'react-router-dom';
+import puppies from '../data/puppy-data.js';
+import sharks from '../data/shark-data.js';
+
+const Creatures = () => {
+  const data = useParams().animal === 'puppies' ? puppies : sharks;
+
+  const creatureImages = data.map(creature => {
+    const { id, image } = creature;
+    return <img src={image} key={id} id={id} className="app-img"/>
+  });
+
+  return (
+    <>
+      <h1>{useParams().animal}!</h1>
+      {creatureImages}
+    </>
+  )
+
+}
+
+export default Creatures;
+```
+</section>
+
+<section class="answer">
+### Notice that Creatures isn't use props anymore. Let's remove those from App.js:
+
+```jsx
+// App.js
+
+import React, { Component } from 'react';
+import './App.css';
+import Creatures from '../Creatures/Creatures';
+import Home from '../Home/Home';
+import { Routes, Route, NavLink } from 'react-router-dom';
+
+export default class App extends Component {
+  render() {
+    return (
+      <main className="App">
+        <nav>
+          <NavLink to="/puppies" className="nav">Puppies</NavLink>
+          <NavLink to="/sharks" className="nav">Sharks</NavLink>
+        </nav>
+        <h1>Puppies or Sharks?</h1>
+        <Routes>
+          <Route path="/" element={ <Home /> }/>
+          <Route path="/:animal" element={ <Creatures /> }/>
+        </Routes>
+      </main>
+    );
+  }
+}
+```
+</section>
 ---
 
-Take a look at the CreatureDetails Component. It takes in all data for a given creature, and displays it on the page.
+## Exercise #3: Dynamic Routing
+
+Take a look at the `<CreatureDetails />` Component. It takes in all data for a given creature, and displays it on the page.
 
 <section class="call-to-action">
 ### Your Task is to make a route that will dynamically render a CreatureDetails component for a puppy based on its ID.
