@@ -143,6 +143,8 @@ ReactDOM.render(router, document.getElementById('root'));
 ### Finally, add a Route for the `Home` component into your `App`
 
 ```jsx
+// App.js
+
 import React, { Component } from 'react';
 import './App.css';
 import puppies from '../data/puppy-data.js';
@@ -202,7 +204,7 @@ Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. T
 ### Solution
 
 ```jsx
-/ App.js
+// App.js
 
 import React, { Component } from 'react';
 import './App.css';
@@ -231,6 +233,14 @@ export default class App extends Component {
 }
 ```
 </section>
+
+<section class="call-to-action">
+### Let's reflect!
+
+1. Why doesn't the `<Home />` component render when you're on the `/puppies` path?
+2. Does order matter? Try switching the two `<Route />` components. What happens?
+</section>
+
 </section>
 
 ---
@@ -244,25 +254,29 @@ Get the sharks link working as well!
 
 ```jsx
 // App.js
+
+import React, { Component } from 'react';
 import './App.css';
 import puppies from '../data/puppy-data.js';
 import sharks from '../data/shark-data.js';
 import Creatures from '../Creatures/Creatures';
 import Home from '../Home/Home';
-import { Route, NavLink } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 export default class App extends Component {
   render() {
     return (
       <main className="App">
         <nav>
-          <NavLink to="/puppies" className="nav">Puppies</NavLink>
-          <NavLink to="/sharks" className="nav">Sharks</NavLink>
+          <a href="/puppies" className="nav">Puppies</a>
+          <a href="/sharks" className="nav">Sharks</a>
         </nav>
         <h1>Puppies or Sharks?</h1>
-        <Route exact path="/" render={ Home }/>
-        <Route exact path="/puppies" render={() => <Creatures name="puppies" data={puppies} />} />
-        <Route exact path="/sharks" render={() => <Creatures name="sharks" data={sharks} />} />
+        <Routes>
+          <Route path="/" element={ <Home /> }/>
+          <Route path="/puppies" element={ <Creatures name="puppies" data={puppies} /> }/>
+          <Route path="/sharks" element={ <Creatures name="sharks" data={sharks} /> }/>
+        </Routes>
       </main>
     );
   }
