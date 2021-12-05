@@ -5,6 +5,12 @@ tags: React, Router
 module: 3
 ---
 
+<section class="note">
+### Note
+
+React Router just released the newest version - `version 6`. This lesson has been updated to reflect the changes for v6. If you're looking for the v5 lesson, go [here](https://frontend.turing.edu/lessons/module-3/react-router-v6.html).
+</section>
+
 ## Learning Goals:
 * Understand and articulate the need for routing
 * Be able to confidently implement React Router in a project
@@ -43,7 +49,6 @@ In small groups, discuss the following questions:
 - NavLink
 - Outlet
 </section>
-
 
 ### Why Routing?
 
@@ -135,7 +140,7 @@ ReactDOM.render(router, document.getElementById('root'));
 </section>
 
 <section class="answer">
-### Finally, add a Route for the `Home`  component into your `App`
+### Finally, add a Route for the `Home` component into your `App`
 
 ```jsx
 import React, { Component } from 'react';
@@ -144,9 +149,7 @@ import puppies from '../data/puppy-data.js';
 import sharks from '../data/shark-data.js';
 import Creatures from '../Creatures/Creatures';
 import Home from '../Home/Home';
-import CreatureDetails from '../Creatures/CreatureDetails';
-import { Route } from 'react-router-dom';
-
+import { Routes, Route } from 'react-router-dom';
 
 export default class App extends Component {
   render() {
@@ -157,17 +160,28 @@ export default class App extends Component {
           <a href="/sharks" className="nav">Sharks</a>
         </nav>
         <h1>Puppies or Sharks?</h1>
-        <Route path="/" component={ Home }/>
+        <Routes>
+          <Route path="/" element={ <Home /> }/>
+        </Routes>
       </main>
     );
   }
 }
+
 ```
-We picked `/` for the path in the route becuase it designates that there won't be anything after the URL's domain name. This represents the base url.  
+We picked `/` for the path in the route because it designates that there won't be anything after the URL's domain name. This represents the base url.  
 
 </section>
 
+<section class="call-to-action">
+### Let's break things!
+
+1. What happens if you remove the line that starts with `import { Routes...`? What does the error message say?
+2. What happens if you remove the `Routes` component? What does the error message say?
 </section>
+
+</section>
+
 
 ---
 ## Exercise # 1: Render Puppies
@@ -190,25 +204,27 @@ Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. T
 ```jsx
 / App.js
 
+import React, { Component } from 'react';
 import './App.css';
 import puppies from '../data/puppy-data.js';
 import sharks from '../data/shark-data.js';
 import Creatures from '../Creatures/Creatures';
 import Home from '../Home/Home';
-import { Route, NavLink } from 'react-router-dom';
-
+import { Routes, Route } from 'react-router-dom';
 
 export default class App extends Component {
   render() {
     return (
       <main className="App">
         <nav>
-          <NavLink to="/puppies" className="nav">Puppies</NavLink>
-          <NavLink to="/sharks" className="nav">Sharks</NavLink>
+          <a href="/puppies" className="nav">Puppies</a>
+          <a href="/sharks" className="nav">Sharks</a>
         </nav>
         <h1>Puppies or Sharks?</h1>
-        <Route path="/" component={ Home }/>
-        <Route path="/puppies" render={() => <Creatures name="puppies" data={puppies} />} />
+        <Routes>
+          <Route path="/" element={ <Home /> }/>
+          <Route path="/puppies" element={ <Creatures name="puppies" data={puppies} /> }/>
+        </Routes>
       </main>
     );
   }
@@ -216,60 +232,6 @@ export default class App extends Component {
 ```
 </section>
 </section>
-
-<section class="call-to-action">
-### Solo Reflection
-
-Why do you think the `Home` page is rendering at `/puppies`?
-</section>
-
-### Render `exact` matches
-
-Check out what happens when you add the [`exact`](https://reacttraining.com/react-router/web/api/Route/exact-bool) prop into one of your Routes.
-
-The `exact` prop can be used to make sure that partial matches of a URL don\'t trigger a render.
-
-### Render Methods
-
-According to the [docs](https://reacttraining.com/react-router/web/api/Route/route-render-methods), Routes have three possible methods for rendering a component on match:
-- `component`
-- `render`
-- `children`
-
-We recommend to use `render` or `children` -- they work more efficiently when re-rendering components. We'll take a look at some more benefits they provide after the next exercise.
-
-Here's an example of their syntax:
-**Component**
-
-```jsx
-<Route path='/unicorns' component={ Unicorns } />
-```
-
-**Render**
-
-```jsx
-<Route path='/unicorns' render={ () => <Unicorns /> }
-```
-This also allows you to define and pass specific properties to a component dynamically. For example:
-
-```jsx
-<Route path='/ideas/:id' render={({ match }) => {
-  const idea = ideas.find(idea => idea.id === parseInt(match.params.id));
-
-  if (!idea) {
-    return (<div>This idea does not exist! </div>);  
-  }
-  return <ListItem match={match} {...idea} />
-
-}} />
-```
-
-**Children**
-`children` works exactly like `render` except that it gets called whether the path is a match or not.
-```jsx
-<Route path='/other-unicorns' children={ () => <Unicorns /> } />
-```
-
 
 ---
 ## Exercise # 2: Rendering Sharks
