@@ -140,7 +140,7 @@ ReactDOM.render(router, document.getElementById('root'));
 </section>
 
 <section class="answer">
-### Finally, add a Route for the `Home` component into your `App`
+### Now, add a Route for the `Home` component into your `App`
 
 ```jsx
 // App.js
@@ -175,11 +175,48 @@ We picked `/` for the path in the route because it designates that there won't b
 
 </section>
 
+<section class="answer">
+### Finally, let's update those `<a>` elements to `<NavLink />` components.
+
+```jsx
+// App.js
+
+import React, { Component } from 'react';
+import './App.css';
+import puppies from '../data/puppy-data.js';
+import sharks from '../data/shark-data.js';
+import Creatures from '../Creatures/Creatures';
+import Home from '../Home/Home';
+import { Routes, Route, NavLink } from 'react-router-dom';
+
+export default class App extends Component {
+  render() {
+    return (
+      <main className="App">
+        <nav>
+          <NavLink to="/puppies" className="nav">Puppies</NavLink>
+          <NavLink to="/sharks" className="nav">Sharks</NavLink>
+        </nav>
+        <h1>Puppies or Sharks?</h1>
+        <Routes>
+          <Route path="/" element={ <Home /> }/>
+          <Route path="/puppies" element={ <Creatures name="puppies" data={puppies} /> }/>
+          <Route path="/sharks" element={ <Creatures name="sharks" data={sharks} /> }/>
+        </Routes>
+      </main>
+    );
+  }
+}
+
+```
+</section>
+
 <section class="call-to-action">
 ### Let's break things!
 
 1. What happens if you remove the line that starts with `import { Routes...`? What does the error message say?
 2. What happens if you remove the `Routes` component? What does the error message say?
+3. Change the `<NavLink />` components to `<Link />` components. What happens?
 </section>
 
 </section>
@@ -212,15 +249,15 @@ import puppies from '../data/puppy-data.js';
 import sharks from '../data/shark-data.js';
 import Creatures from '../Creatures/Creatures';
 import Home from '../Home/Home';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
 
 export default class App extends Component {
   render() {
     return (
       <main className="App">
         <nav>
-          <a href="/puppies" className="nav">Puppies</a>
-          <a href="/sharks" className="nav">Sharks</a>
+          <NavLink to="/puppies" className="nav">Puppies</NavLink>
+          <NavLink to="/sharks" className="nav">Sharks</NavLink>
         </nav>
         <h1>Puppies or Sharks?</h1>
         <Routes>
@@ -246,8 +283,8 @@ export default class App extends Component {
 ---
 ## Exercise # 2: Rendering Sharks
 
-Get the sharks link working as well!
-
+<section class="call-to-action">
+### Take 6 minutes to independently get the sharks link working as well!
 
 <section class="answer">
 ### Solution
@@ -261,15 +298,15 @@ import puppies from '../data/puppy-data.js';
 import sharks from '../data/shark-data.js';
 import Creatures from '../Creatures/Creatures';
 import Home from '../Home/Home';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
 
 export default class App extends Component {
   render() {
     return (
       <main className="App">
         <nav>
-          <a href="/puppies" className="nav">Puppies</a>
-          <a href="/sharks" className="nav">Sharks</a>
+          <NavLink to="/puppies" className="nav">Puppies</NavLink>
+          <NavLink to="/sharks" className="nav">Sharks</NavLink>
         </nav>
         <h1>Puppies or Sharks?</h1>
         <Routes>
@@ -283,64 +320,18 @@ export default class App extends Component {
 }
 ```
 </section>
+
+<section class="call-to-action">
+### Let's think!
+
+Hmmm...two of those `<Route />` components are looking quite similar. I wonder if there is a way to make that more dynamic. Take a minute to consider what would we need in order to turn those two `<Route />` components into one.
+</section>
+
+</section>
 ---
 
 ### Route Props
 
-Let's take a close look at what happens when a Route renders.
-
-[Route render methods](https://reacttraining.com/react-router/web/api/Route/route-render-methods) all provide access to [route props](https://reacttraining.com/react-router/web/api/Route/route-props), either automatically to the component they render, or via the callback function that the methods take.
-
-These props include:
-- [`history`](https://reacttraining.com/react-router/web/api/history)
-- [`location`](https://reacttraining.com/react-router/web/api/location)
-- [`match`](https://reacttraining.com/react-router/web/api/match)
-
-```jsx
-<Route path='/unicorns' render={ ({ history, location, match }) => <Unicorns /> }
-```
-
-history and location are worth looking into on your own, but today we'll focus on `match`.
-
-The `match` gives us information about how and why the application matched. And it allows us to do some pretty cool stuff.
-
-<section class="call-to-action">
-### Solo Exploration
-
-Add this to your code:
-```jsx
-<Route path="/puppies" render={({ match }) => { console.log(match)}} />
-```
- - What is logged in the console when you go to the puppies page?
- - Look at the `params` property. What do you see?
-
-Now change the line of code above to this:
-```jsx
-<Route path="/:animal" render={({ match }) => { console.log(match)}} />
-```
-- What do you notice about the value for the `params` propery? Where is each piece of that key:value pair coming from?
-</section>
-
-#### `match.params`
-The `params` property of the match prop gives us an object with key value pairs of dynamic url parameters, and any strings that match them.
-
-For instance, we could make our routes for animals more dynamic by doing this:
-
-```jsx
-<Route
-  exact path="/:animal"
-  render={({ match }) => {
-    const whichAnimal = match.params.animal === 'sharks' ? sharks : puppies
-    return <Creatures name={match.params.animal} data={whichAnimal} />
-  }}
-/>
-```
-
-and then navigate to either `/puppies` or `/sharks`, we can see that the `<Creatures />` component is rendering the correct data based on the `params` from the url.
-
-**`params` allows us to define shapes of a url that will cause a match, then access the data from that url in our components**.
-
-This can be great for dynamically rendering content based on things in the url, like an id. Let's do that!
 
 ## Exercise #3: Dynamic Routing
 ---
