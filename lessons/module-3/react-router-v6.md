@@ -50,18 +50,16 @@ In small groups, discuss the following questions:
 
 **Routing** refers to keeping a webpage up to date with the current url, and vice-versa.
 
-Most of the apps you've written so far have been single-page applications. One HTML page whose content is updated through user interactions and JS. These DO NOT use routing.They work fine, but put some limits on the user experience of our applications.
+Most of the apps you've written so far have been single-page applications. One HTML page whose content is updated through user interactions and JS. These DO NOT use routing. They work fine, but put some limits on the user experience of our applications.
 
-<section class="answer">
-### What are some advantages routing can provide?
+Here  are some advantages routing can provide:
 - Users can use urls to bookmark pages
 - Users can use the back or forward button
 - Users can easily share content from a page in the app
-</section>
 
 If you have written a multi-page application, you may have wrestled with Webpack configs in order to get all your pages built successfully. Fortunately, routing with React is easy! We just need to use a library called <a href="https://reactrouter.com/docs/en/v6" target="_blank">React Router</a>.
 
-> React Router allows us to conditionally render components based on the current url
+**React Router allows us to conditionally render components based on the current url**
 
 ### The Code
 
