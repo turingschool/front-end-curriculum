@@ -317,6 +317,9 @@ Hmmm...two of those `<Route />` components are looking quite similar. I wonder i
 
 ### Route Params
 
+<section class="call-to-action">
+Router has a handy way to deal with dynamic paths...
+
 <section class="answer">
 ### Let's start by making a dynamic path:
 
@@ -462,6 +465,8 @@ export default class App extends Component {
   }
 }
 ```
+</section>
+
 </section>
 ---
 
