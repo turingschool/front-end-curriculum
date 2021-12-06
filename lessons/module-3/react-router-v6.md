@@ -435,87 +435,175 @@ export default App;
 
 ## Rendering the CreatureDetails component
 
+<section class="answer">
+### 12. Let's make the images link to our new URL
 
-<!--
+```jsx
+// Creatures.js
 
+import './Creatures.css';
+import { getCreaturesData } from '../../data/animalData';
+import { useParams, Link } from 'react-router-dom';
 
+const Creatures = () => {
+  const creatureType = useParams().animal;
 
+  const creatureImages = getCreaturesData(creatureType).map(creature => {
+    const { id, image } = creature;
+    return (
+      <Link to={`/${creatureType}/${id}`}>
+        <img src={image} key={id} id={id} className="app-img"/>
+      </Link>
+     )
+   });
 
+   return (
+     <>
+       <h1>{creatureType}!</h1>
+       {creatureImages}
+     </>
+   )
+}
 
-</section>
----
-
-## Exercise #3: Dynamic Routing
-
-Take a look at the `<CreatureDetails />` Component. It displays all the animal's details on the page.
+export default Creatures;
+```
 
 <section class="call-to-action">
-### Your Task is to make a route that will dynamically render a CreatureDetails component for an animal based on its ID.
+### Let's explore
 
-For example, the URL `/puppies/1` should render a view just for the puppy with an ID of 1 in the dataset, with all of its details (name, bio, etc).
+1. What happens when you click on a shark or puppy image? Does the URL change? What appears on the page?
+2. Why did we use a `<Link />` and not a `<NavLink />`?
+</section>
 
-<section class="note">
-Hints:
-- Use the CreatureDetails component
-- What will you need to do to ensure that the URL is updated when you click on a given animal?
-- How can you access the type of animal AND ID from the URL?
-- How can you find a one animal's data in an array based on its id?
 </section>
 
 <section class="answer">
-### Solution
+### 13. Let's tell Router what to do with this new path
 
-It could look something like this (there is not one correct answer!):
+```jsx
+// App.js
+
+import './App.css';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import Home from '../Home/Home';
+import Creatures from '../Creatures/Creatures';
+import CreatureDetails from '../CreatureDetails/CreatureDetails';
+
+function App() {
+  return (
+    <main className="App">
+      <nav>
+        <NavLink to="/puppies" className="nav">Puppies</NavLink>
+        <NavLink to="/sharks" className="nav">Sharks</NavLink>
+      </nav>
+      <h1>Puppies or Sharks?</h1>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/:animal" element={<Creatures />}>
+          <Route path=":id" element={<CreatureDetails />}/>
+        </Route>
+      </Routes>
+    </main>
+  );
+}
+
+export default App;
+```
+
+<section class="call-to-action">
+### Let's explore
+
+1. Why did we nest the routes?
+2. Why don't I have a '/' in front of ":id"? (Note: You can include the '/', if you also include the rest of the path. Meaning, you could do `:/id` OR `/:animal/:id`)
+3. Is it working? Is CreatureDetails rendering to the page?
+</section>
+
+</section>
+
+section class="answer">
+### 14. One more step to getting CreatureDetails to appear
+
+```jsx
+// Creatures.js
+
+import './Creatures.css';
+import { getCreaturesData } from '../../data/animalData';
+import { useParams, Link, Outlet } from 'react-router-dom';
+
+const Creatures = () => {
+  const creatureType = useParams().animal;
+
+  const creatureImages = getCreaturesData(creatureType).map(creature => {
+    const { id, image } = creature;
+    return (
+      <Link to={`/${creatureType}/${id}`}>
+        <img src={image} key={id} id={id} className="app-img"/>
+      </Link>
+     )
+   });
+
+   return (
+     <>
+       <h1>{creatureType}!</h1>
+       <Outlet />
+       {creatureImages}
+     </>
+   )
+}
+
+export default Creatures;
+```
+<section class="call-to-action">
+### Let's explore
+
+1. Try moving the `<Outlet />` component around. Does it's placement matter?
+2. Why is the `<Creatures />` component still showing?
+3. What would you have to change if you didn't want the `<Creatures />` component to render at this path?
+</section>
+
+</section>
+
+section class="answer">
+### 15. Now let's make CreatureDetails show the animal's info (hint: look at animalData.js!)
+
 ```jsx
 // CreatureDetails.js
 
-import React from 'react';
-import './image-display.css';
-import { Link, useParams } from 'react-router-dom';
-import puppies from '../data/puppy-data.js';
-import sharks from '../data/shark-data.js';
+import './CreatureDetails.css';
+import { useParams } from 'react-router-dom';
+import { getCreatureDetails } from '../../data/animalData';
 
 const CreatureDetails = () => {
-  const animalType = useParams().animal;
-  const currentId = useParams().id;
-  const data = animalType === 'puppies' ? puppies : sharks;
-  const currentCreature = data.find(creature => {
-    return creature.id === parseInt(currentId)
-  })
+  const creatureType = useParams().animal;
+  const creatureId = useParams().id;
+
+  const creatureStats = getCreatureDetails(creatureType, creatureId);
 
   return (
     <div>
-      <Link to={`/${animalType}`} className='back-btn'>◀ back</Link>
-      <h1>{currentCreature.name}</h1>
-      <img src={currentCreature.image} className='app-img-no-hover'/>
-      <p className='creature-bio'>{currentCreature.bio}</p>
+      <h1>{creatureStats.name}</h1>
+      <img src={creatureStats.image} className='app-img-no-hover'/>
+      <p className='creature-bio'>{creatureStats.bio}</p>
     </div>
   )
 }
 
 export default CreatureDetails;
-
-
-// App.js
-
-...
-<Route path="/:animal/:id" element={ <CreatureDetails /> }/>
-...
 ```
-
-// Creatures.js
-
-...
-  return (
-    <Link to={`/${animal}/${id}`}>
-      <img src={image} key={id} id={id} className="app-img"/>
-    </Link>
-  )
-...
 </section>
 
-Another solution could have included passing the data as props from `App` to `Creatures` and `CreatureDetails`!
-</section> -->
+<section class="call-to-action">
+### Final Reflections
+
+1. Why use Router?
+3. Describe the following:
+- `Route`
+- `Routes`
+- `Link`
+- `NavLink`
+- `Outlet`
+- `useParams`
+</section>
 
 ## Extra Resources:
 - [React Router v6 Docs](https://reactrouter.com/docs/en/v6/getting-started/overview)
