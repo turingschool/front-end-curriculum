@@ -134,14 +134,15 @@ function App() {
 
 export default App;
 ```
-</section>
-
 <section class="call-to-action">
 ### Let's explore
 
 1. What happens if you remove the line that starts with `import { Routes...`? What does the error message say?
 2. What happens if you remove the `Routes` component? What does the error message say?
 </section>
+
+</section>
+
 
 ## Rendering the Puppies
 
@@ -172,13 +173,14 @@ function App() {
 
 export default App;
 ```
-</section>
 
 <section class="call-to-action">
 ### Let's explore
 
 1. Change the `<NavLink />` components to `<Link />` components. What happens?
 2. When might you choose a `<Link />` over a `<NavLink />`?
+</section>
+
 </section>
 
 <section class="answer">
@@ -210,7 +212,6 @@ function App() {
 
 export default App;
 ```
-</section>
 
 <section class="call-to-action">
 ### Let's explore
@@ -218,6 +219,8 @@ export default App;
 1. Why doesn't the `<Home />` component render when you're on the `/puppies` path?
 2. Does order matter? Try switching the two `<Route />` components. What happens?
 3. How do you pass props to components from inside a `<Route />`?
+</section>
+
 </section>
 
 <section class="answer">
@@ -279,12 +282,13 @@ function App() {
 
 export default App;
 ```
-</section>
 
 <section class="call-to-action">
 ### Let's explore
 
 Hmmm...two of those `<Route />` components are looking quite similar. I wonder if there is a way to make that more dynamic. Take a minute to consider what would we need in order to turn those two `<Route />` components into one.
+</section>
+
 </section>
 
 ## Dynamic Routing
@@ -318,13 +322,14 @@ function App() {
 
 export default App;
 ```
-</section>
 
 <section class="call-to-action">
 ### Let's explore
 
 1. In your app, click on the `Sharks` button. What renders to the page? What shows up in the URL? Why?
 2. How can we tell the `<Creatures />` component which animal we've selected?
+
+</section>
 
 </section>
 
@@ -356,7 +361,6 @@ const Creatures = ({ creatureType }) => {
 
 export default Creatures;
 ```
-</section>
 
 <section class="call-to-action">
 ### Let's explore
@@ -364,6 +368,8 @@ export default Creatures;
 1. What console.logged? Where does the key:value pair come from?
 2. Click between the `Puppies` and `Sharks` buttons. How is the logged object changing?
 3. Manually type something random into the URL, like `localhost:3000/potatoes`. What logs?
+</section>
+
 </section>
 
 <section class="answer">
