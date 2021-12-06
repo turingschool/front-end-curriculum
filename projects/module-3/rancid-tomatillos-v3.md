@@ -336,18 +336,19 @@ Score key:
 * **4:**
   - Application has been refactored to use Router without leaving artifacts of the prior code (no odd workarounds remaining)
   - Use of Router shows developer empathy (readability, maintainability)
-  - Application uses React Router components and does not manipulate the `history` object
-  - A 404 page handles undefined routes
   - UX is excellent; routes are consistent and navigation is clear
+  - When the user enters a bad URL, they are given an easy way to navigate to a working page
 * **3:**
   - Application uses Router to display appropriate components based on URL
   - Refactoring was clean; there may be a few code smells showing the existence of the prior code, but there are no major bugs indicating a lack of understanding of Router
   - Application uses React Router components and does not manipulate the `history` object
   - UX is clear and set up so the user has access to previous routes
+  - A 404 page handles undefined routes
 * **2:**
   - Application uses Router but does not display the appropriate components when navigating throughout the app
   - Refactoring is messy; there are remnants of the previous code or other code smells that indicate that Router is not clearly understood
   - There are 1+ issues with the UX; access to routes is unclear or not fully implemented
+  - Bad URLs are not handled
 * **1:**
   - Application uses Router but fails to properly display all necessary routes
   - Application does not use built-in React Router components and instead directly manipulates the `history` object
