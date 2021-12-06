@@ -24,8 +24,6 @@ React Router just released the newest version - `version 6`. This lesson has bee
 * `Routes`
 * `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
 * `useParams`
-* `Outlet`
-* `Navigation`
 
 <section class="checks-for-understanding">
 ## Prework  
@@ -61,11 +59,7 @@ Most of the apps you've written so far have been single-page applications. One H
 - Users can easily share content from a page in the app
 </section>
 
-<section class="note">
-If you have written a multi-page application, you may have wrestled with Webpack configs in order to get all your pages built successfully.
-</section>
-
-Fortunately, routing with React is easy! We just need to use a library called <a href="https://reacttraining.com/react-router/web/guides/quick-start" target="_blank">React Router</a>.
+If you have written a multi-page application, you may have wrestled with Webpack configs in order to get all your pages built successfully. Fortunately, routing with React is easy! We just need to use a library called <a href="https://reactrouter.com/docs/en/v6" target="_blank">React Router</a>.
 
 > React Router allows us to conditionally render components based on the current url
 
@@ -475,140 +469,77 @@ export default class App extends Component {
 
 ## Exercise #3: Dynamic Routing
 
-Take a look at the `<CreatureDetails />` Component. It takes in all data for a given creature, and displays it on the page.
+Take a look at the `<CreatureDetails />` Component. It displays all the animal's details on the page.
 
 <section class="call-to-action">
-### Your Task is to make a route that will dynamically render a CreatureDetails component for a puppy based on its ID.
+### Your Task is to make a route that will dynamically render a CreatureDetails component for an animal based on its ID.
 
-For example, the URL `/puppies/1` should render a view just for the puppy with an ID of 1 in the dataset, with all of its details (name, bio, etc)
+For example, the URL `/puppies/1` should render a view just for the puppy with an ID of 1 in the dataset, with all of its details (name, bio, etc).
 
 <section class="note">
 Hints:
 - Use the CreatureDetails component
-- What will you need to do to ensure that the URL is updated when you click on a given puppy?
-- How can you access the id from the URL?
-- How can you find a one puppy's data in an array based on its id?
+- What will you need to do to ensure that the URL is updated when you click on a given animal?
+- How can you access the type of animal AND ID from the URL?
+- How can you find a one animal's data in an array based on its id?
 </section>
 
 <section class="answer">
 ### Solution
 
-It could look something like this:
+It could look something like this (there is not one correct answer!):
 ```jsx
-// **Creatures.js**
-// ...
-return (
-  <NavLink to={`/${name}/${id}`}>
-    <img src={image} key={id} id={id} className="app-img"/>
-  </NavLink>
-)
-// ...
+// CreatureDetails.js
+
+import React from 'react';
+import './image-display.css';
+import { Link, useParams } from 'react-router-dom';
+import puppies from '../data/puppy-data.js';
+import sharks from '../data/shark-data.js';
+
+const CreatureDetails = () => {
+  const animalType = useParams().animal;
+  const currentId = useParams().id;
+  const data = animalType === 'puppies' ? puppies : sharks;
+  const currentCreature = data.find(creature => {
+    return creature.id === parseInt(currentId)
+  })
+
+  return (
+    <div>
+      <Link to={`/${animalType}`} className='back-btn'>◀ back</Link>
+      <h1>{currentCreature.name}</h1>
+      <img src={currentCreature.image} className='app-img-no-hover'/>
+      <p className='creature-bio'>{currentCreature.bio}</p>
+    </div>
+  )
+}
+
+export default CreatureDetails;
 
 
-// **App.js**
-// ...
-<Route
-  exact path="/puppies/:id"      
-  render={({match}) => {
-    const creatureToRender = puppies.find(creature => creature.id === parseInt(match.params.id));   
-    return <CreatureDetails {...creatureToRender} />
-  }}
-/>
-// ...
+// App.js
+
+...
+<Route path="/:animal/:id" element={ <CreatureDetails /> }/>
+...
 ```
+
+// Creatures.js
+
+...
+  return (
+    <Link to={`/${animal}/${id}`}>
+      <img src={image} key={id} id={id} className="app-img"/>
+    </Link>
+  )
+...
 </section>
+
 </section>
 
 
 
 ## Extra Resources:
-
-### Tutorials / Guides:
-
-- [React Training's 13 minute overview of React Router](https://www.youtube.com/watch?v=Mf0Fy8iHp8k&feature=youtu.be)
-- [The Hitchhiker's Guide to React Router - learn Router in 20 minutes](https://www.freecodecamp.org/news/hitchhikers-guide-to-react-router-v4-a957c6a5aa18/)
-- [The Hitchhiker's Guide to React Router - match, location, history](https://www.freecodecamp.org/news/hitchhikers-guide-to-react-router-v4-4b12e369d10/)
-
-### Helpful Articles / Docs:
-
-- [Routing and Form Submission](https://tylermcginnis.com/react-router-programmatically-navigate/)
-- [Old lesson plan](https://frontend.turing.io/lessons/module-3/react-router-v4.html)
-- [React Router Testing Recipe from RTL](https://testing-library.com/docs/example-react-router)
-- [Memory Router docs](https://reacttraining.com/react-router/web/api/MemoryRouter)
-- [history package docs](https://github.com/ReactTraining/history)
-
-<section class="call-to-action">
-### Check out this additional information on some Router Components:
-
-<section class="answer">
-### Link
-
-_Provides declarative, accessible navigation around your application._
-
-**Things to know:**
-
-* Link can contain an open and closing tag or be a self-closing tag
-* Link takes a `to` attribute as well as an optional `replace` attribute
-* `to` tells the app which path to redirect to. This can be a string or an object
-* `replace` is a boolean that when `true` will replace the current entry in the history stack instead of adding a new one
-
-```jsx
-<Link to='/unicorns' />
-
-<Link to='/unicorns'> Unicorns </Link>
-```
-</section>
-<section class="answer">
-### NavLink
-
-_A special version of the `<Link>` that will add styling attributes to the rendered element when it matches the current URL._
-
-It can take the following attributes:
-
-* **activeClassName: string** - defaults to `active`
-* activeStyle: object
-* exact: bool
-* strict: bool
-* isActive: func
-* location: object
-
-**Read about each of these [here](https://reacttraining.com/react-router/web/api/NavLink)**
-
-```jsx
-<NavLink to='/about'>About</NavLink>
-```
-</section>
-<section class="answer">
-### Redirect
-
-_Rendering a `<Redirect>` will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do._
-More of a nice to know for now. This is something that can be used if the user does something wrong. ie. went to a route they don't have permissions to access.
-
-It can take the following attributes:
-
-* **to: string**
-* to: object
-* push: bool
-* from: string
-
-```jsx
-<Redirect to='/not/unicorns' />
-```
-</section>
-<section class="answer">
-### Switch
-
-_Renders the **first** child `<Route>` or `<Redirect>` that matches the location. `<Switch>` is unique in that it renders a route **exclusively** (only one route wins). In contrast, every `<Route>` that matches the location renders **inclusively** (more than one route can match and render at a time)_
-
-```jsx
-<Switch>
-  <Route exact path='/' component={Home} />
-  <Route path='/users/add' component={UserAddPage} />
-  <Route path='/users' component={UsersPage} />
-  <Redirect to='/' />
-</Switch>
-```
-
-The [docs](https://reacttraining.com/react-router/web/api/Switch) do a great job of quickly showing what Switch is all about.
-</section>
-</section>
+* `Outlet`
+* `Navigation`
