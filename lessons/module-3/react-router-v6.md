@@ -536,10 +536,10 @@ export default CreatureDetails;
 ...
 </section>
 
+Another solution could have included passing the data as props from `App` to `Creatures` and `CreatureDetails`!
 </section>
 
-
-
 ## Extra Resources:
+It is likely that you'll run into use cases for the following router components. Feel free to take a peak at what they can do!
 * `Outlet`
 * `Navigation`
