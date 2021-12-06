@@ -80,14 +80,14 @@ The App is not fully put together. It has a series of components that will serve
 ## Installing Router
 
 <section class="answer">
-### 1. The first step is installing react router:
+### 1. The first step is installing react router
 ```bash
 npm install react-router-dom
 ```
 </section>
 
 <section class="answer">
-### 2. Once you have React Router installed, import your chosen Router:
+### 2. Once you have React Router installed, import your chosen Router
 
 To use React Router, we need to wrap any components that will use a React Router-provided-component in some kind of [Router component](https://reacttraining.com/react-router/web/guides/primary-components/routers).
 
@@ -96,221 +96,203 @@ We'll use a [Browser Router](https://reacttraining.com/react-router/web/api/Brow
 ```jsx
 // index.js
 
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App/App';
+import App from './Components/App/App';
 import { BrowserRouter } from 'react-router-dom';
 
-const router = <BrowserRouter> <App /> </BrowserRouter>;
-
-ReactDOM.render(router, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter> <App /> </BrowserRouter>, document.getElementById('root'));
 ```
 </section>
 
+## Rendering the Home component
 
+<section class="answer">
+### 3. Now, let's tell React Router what to render at the base URL ('/')
 
+```jsx
+// App.js
 
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from '../Home/Home';
 
+function App() {
+  return (
+    <main className="App">
+      <nav>
+        <a href="/puppies" className="nav">Puppies</a>
+        <a href="/sharks" className="nav">Sharks</a>
+      </nav>
+      <h1>Puppies or Sharks?</h1>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+      </Routes>
+    </main>
+  );
+}
 
+export default App;
+```
+</section>
 
+<section class="call-to-action">
+### Let's explore
 
+1. What happens if you remove the line that starts with `import { Routes...`? What does the error message say?
+2. What happens if you remove the `Routes` component? What does the error message say?
+</section>
+
+## Rendering the Puppies
+
+<section class="answer">
+### 4. First, let's update the links to NavLink components
+
+```jsx
+// App.js
+
+import './App.css';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import Home from '../Home/Home';
+
+function App() {
+  return (
+    <main className="App">
+      <nav>
+        <NavLink to="/puppies" className="nav">Puppies</NavLink>
+        <NavLink to="/sharks" className="nav">Sharks</NavLink>
+      </nav>
+      <h1>Puppies or Sharks?</h1>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+      </Routes>
+    </main>
+  );
+}
+
+export default App;
+```
+</section>
+
+<section class="call-to-action">
+### Let's explore
+
+1. Change the `<NavLink />` components to `<Link />` components. What happens?
+2. When might you choose a `<Link />` over a `<NavLink />`?
+</section>
+
+</section>
+
+<section class="answer">
+### 5. Now, let's tell Router what to do at '/puppies'
+
+```jsx
+// App.js
+
+import './App.css';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import Home from '../Home/Home';
+import Creatures from '../Creatures/Creatures';
+
+function App() {
+  return (
+    <main className="App">
+      <nav>
+        <NavLink to="/puppies" className="nav">Puppies</NavLink>
+        <NavLink to="/sharks" className="nav">Sharks</NavLink>
+      </nav>
+      <h1>Puppies or Sharks?</h1>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/puppies" element={<Creatures creatureType='puppies'/>} />
+      </Routes>
+    </main>
+  );
+}
+
+export default App;
+```
+</section>
+
+<section class="call-to-action">
+### Let's explore
+
+1. Why doesn't the `<Home />` component render when you're on the `/puppies` path?
+2. Does order matter? Try switching the two `<Route />` components. What happens?
+3. How do you pass props to components from inside a `<Route />`?
+</section>
+
+<section class="answer">
+### 6. Let's update the Creatures component so it actually shows puppies
+
+```jsx
+// Creatures.js
+
+import './Creatures.css';
+import { getCreaturesData } from '../../data/animalData';
+
+const Creatures = ({ creatureType }) => {
+  const creatureImages = getCreaturesData(creatureType).map(creature => {
+     const { id, image } = creature;
+     return <img src={image} key={id} id={id} className="app-img"/>
+   });
+
+   return (
+     <>
+       <h1>{creatureType}!</h1>
+       {creatureImages}
+     </>
+   )
+}
+
+export default Creatures;
+```
+</section>
+
+## Rendering the Sharks
+
+<section class="answer">
+### 7. On your own, make the Sharks button render sharks
+
+```jsx
+// App.js
+
+import './App.css';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import Home from '../Home/Home';
+import Creatures from '../Creatures/Creatures';
+
+function App() {
+  return (
+    <main className="App">
+      <nav>
+        <NavLink to="/puppies" className="nav">Puppies</NavLink>
+        <NavLink to="/sharks" className="nav">Sharks</NavLink>
+      </nav>
+      <h1>Puppies or Sharks?</h1>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/puppies" element={<Creatures creatureType='puppies'/>} />
+        <Route path="/sharks" element={<Creatures creatureType='sharks'/>} />
+      </Routes>
+    </main>
+  );
+}
+
+export default App;
+```
+</section>
+
+<section class="call-to-action">
+### Let's explore
+
+Hmmm...two of those `<Route />` components are looking quite similar. I wonder if there is a way to make that more dynamic. Take a minute to consider what would we need in order to turn those two `<Route />` components into one.
+</section>
 
 
 
 <!--
 
-The `<Home />` component is rendering a welcome message. Right now, nothing but a nav bar is being rendered by the App. Let's use router to render the `<Home />` component as a landing page.
-
-Remember that React Router conditionally renders components based on the current url. So our goal is to **render the <Home /> component when the user is at the base url**.
-
-<section class="answer">
-### Now, add a Route for the `Home` component into your `App`:
-
-```jsx
-// App.js
-
-import React, { Component } from 'react';
-import './App.css';
-import puppies from '../data/puppy-data.js';
-import sharks from '../data/shark-data.js';
-import Creatures from '../Creatures/Creatures';
-import Home from '../Home/Home';
-import { Routes, Route } from 'react-router-dom';
-
-export default class App extends Component {
-  render() {
-    return (
-      <main className="App">
-        <nav>
-          <a href="/puppies" className="nav">Puppies</a>
-          <a href="/sharks" className="nav">Sharks</a>
-        </nav>
-        <h1>Puppies or Sharks?</h1>
-        <Routes>
-          <Route path="/" element={ <Home /> }/>
-        </Routes>
-      </main>
-    );
-  }
-}
-
-```
-We picked `/` for the path in the route because it designates that there won't be anything after the URL's domain name. This represents the base url.  
-
-</section>
-
-<section class="answer">
-### Finally, let's update those `a` elements to `NavLink` components:
-
-```jsx
-// App.js
-
-import React, { Component } from 'react';
-import './App.css';
-import puppies from '../data/puppy-data.js';
-import sharks from '../data/shark-data.js';
-import Creatures from '../Creatures/Creatures';
-import Home from '../Home/Home';
-import { Routes, Route, NavLink } from 'react-router-dom';
-
-export default class App extends Component {
-  render() {
-    return (
-      <main className="App">
-        <nav>
-          <NavLink to="/puppies" className="nav">Puppies</NavLink>
-          <NavLink to="/sharks" className="nav">Sharks</NavLink>
-        </nav>
-        <h1>Puppies or Sharks?</h1>
-        <Routes>
-          <Route path="/" element={ <Home /> }/>
-          <Route path="/puppies" element={ <Creatures name="puppies" data={puppies} /> }/>
-          <Route path="/sharks" element={ <Creatures name="sharks" data={sharks} /> }/>
-        </Routes>
-      </main>
-    );
-  }
-}
-
-```
-</section>
-
-<section class="call-to-action">
-### Let's break things!
-
-1. What happens if you remove the line that starts with `import { Routes...`? What does the error message say?
-2. What happens if you remove the `Routes` component? What does the error message say?
-3. Change the `<NavLink />` components to `<Link />` components. What happens?
-</section>
-
-</section>
-
-
----
-## Exercise # 1: Render Puppies
-
-Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. The page should look something like the picture on the lesson plan. ***While you may change components*** as needed, you shouldn't outright delete content from the page to achieve this.
-
-<section class="call-to-action">
-### Take 10 minutes in pairs to get the puppies rendering
-
-<section class="note">
-### Hints:
-- Use the Creatures component. Formatting and styling is handled for you.
-- What additional react-router components should you use? Do any current components need to change?
-- How do you pass props into a component rendered by a `<Route />` ?
-</section>
-
-<section class="answer">
-### Solution
-
-```jsx
-// App.js
-
-import React, { Component } from 'react';
-import './App.css';
-import puppies from '../data/puppy-data.js';
-import sharks from '../data/shark-data.js';
-import Creatures from '../Creatures/Creatures';
-import Home from '../Home/Home';
-import { Routes, Route, NavLink } from 'react-router-dom';
-
-export default class App extends Component {
-  render() {
-    return (
-      <main className="App">
-        <nav>
-          <NavLink to="/puppies" className="nav">Puppies</NavLink>
-          <NavLink to="/sharks" className="nav">Sharks</NavLink>
-        </nav>
-        <h1>Puppies or Sharks?</h1>
-        <Routes>
-          <Route path="/" element={ <Home /> }/>
-          <Route path="/puppies" element={ <Creatures name="puppies" data={puppies} /> }/>
-        </Routes>
-      </main>
-    );
-  }
-}
-```
-</section>
-
-<section class="call-to-action">
-### Let's reflect!
-
-1. Why doesn't the `<Home />` component render when you're on the `/puppies` path?
-2. Does order matter? Try switching the two `<Route />` components. What happens?
-</section>
-
-</section>
-
----
-## Exercise # 2: Rendering Sharks
-
-<section class="call-to-action">
-### Take 6 minutes to independently get the sharks link working as well!
-
-<section class="answer">
-### Solution
-
-```jsx
-// App.js
-
-import React, { Component } from 'react';
-import './App.css';
-import puppies from '../data/puppy-data.js';
-import sharks from '../data/shark-data.js';
-import Creatures from '../Creatures/Creatures';
-import Home from '../Home/Home';
-import { Routes, Route, NavLink } from 'react-router-dom';
-
-export default class App extends Component {
-  render() {
-    return (
-      <main className="App">
-        <nav>
-          <NavLink to="/puppies" className="nav">Puppies</NavLink>
-          <NavLink to="/sharks" className="nav">Sharks</NavLink>
-        </nav>
-        <h1>Puppies or Sharks?</h1>
-        <Routes>
-          <Route path="/" element={ <Home /> }/>
-          <Route path="/puppies" element={ <Creatures name="puppies" data={puppies} /> }/>
-          <Route path="/sharks" element={ <Creatures name="sharks" data={sharks} /> }/>
-        </Routes>
-      </main>
-    );
-  }
-}
-```
-</section>
-
-<section class="call-to-action">
-### Let's think!
-
-Hmmm...two of those `<Route />` components are looking quite similar. I wonder if there is a way to make that more dynamic. Take a minute to consider what would we need in order to turn those two `<Route />` components into one.
-</section>
 
 </section>
 ---
