@@ -520,7 +520,7 @@ export default App;
 
 </section>
 
-section class="answer">
+<section class="answer">
 ### 14. One more step to getting CreatureDetails to appear
 
 ```jsx
@@ -563,7 +563,7 @@ export default Creatures;
 
 </section>
 
-section class="answer">
+<section class="answer">
 ### 15. Now let's make CreatureDetails show the animal's info (hint: look at animalData.js!)
 
 ```jsx
