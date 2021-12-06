@@ -60,9 +60,9 @@ If you have written a multi-page application, you may have wrestled with Webpack
 
 **React Router allows us to conditionally render components based on the current url.**
 
-## Set Up
-
 Rather than tell you about how Router works, we'll work through a series of exercises and examples. We'll be using <a href="https://github.com/turingschool-examples/react-router-v6" target="_blank">this repo</a> to solve a series of challenges listed below.
+
+## Set Up
 
 <section class="answer">
 ### 0. Clone repo & review codebase
@@ -181,8 +181,6 @@ export default App;
 2. When might you choose a `<Link />` over a `<NavLink />`?
 </section>
 
-</section>
-
 <section class="answer">
 ### 5. Now, let's tell Router what to do at '/puppies'
 
@@ -289,87 +287,71 @@ export default App;
 Hmmm...two of those `<Route />` components are looking quite similar. I wonder if there is a way to make that more dynamic. Take a minute to consider what would we need in order to turn those two `<Route />` components into one.
 </section>
 
-
-
-<!--
-
-
-</section>
----
-
-### Route Params
-
-<section class="call-to-action">
-Router has a handy way to deal with dynamic paths...
+## Dynamic Routing
 
 <section class="answer">
-### Let's start by making a dynamic path:
+### 8. Let's start by making a dynamic path
 
 ```jsx
 // App.js
 
-import React, { Component } from 'react';
 import './App.css';
-import puppies from '../data/puppy-data.js';
-import sharks from '../data/shark-data.js';
-import Creatures from '../Creatures/Creatures';
-import Home from '../Home/Home';
 import { Routes, Route, NavLink } from 'react-router-dom';
+import Home from '../Home/Home';
+import Creatures from '../Creatures/Creatures';
 
-export default class App extends Component {
-  render() {
-    return (
-      <main className="App">
-        <nav>
-          <NavLink to="/puppies" className="nav">Puppies</NavLink>
-          <NavLink to="/sharks" className="nav">Sharks</NavLink>
-        </nav>
-        <h1>Puppies or Sharks?</h1>
-        <Routes>
-          <Route path="/" element={ <Home /> }/>
-          <Route path="/:animal" element={ <Creatures name="puppies" data={puppies} /> }/>
-        </Routes>
-      </main>
-    );
-  }
+function App() {
+  return (
+    <main className="App">
+      <nav>
+        <NavLink to="/puppies" className="nav">Puppies</NavLink>
+        <NavLink to="/sharks" className="nav">Sharks</NavLink>
+      </nav>
+      <h1>Puppies or Sharks?</h1>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/:animal" element={<Creatures creatureType='puppies'/>} />
+      </Routes>
+    </main>
+  );
 }
+
+export default App;
 ```
 </section>
 
 <section class="call-to-action">
-### Let's reflect!
+### Let's explore
 
-In your app, click on the `Sharks` button. What renders to the page? What shows up in the URL? Why?
+1. In your app, click on the `Sharks` button. What renders to the page? What shows up in the URL? Why?
+2. How can we tell the `<Creatures />` component which animal we've selected?
+
 </section>
 
-So now we need the `<Creatures />` component to know which animal we've selected.
-
 <section class="answer">
-### First, let's console.log some stuff:
+### 9. Let's console.log some stuff:
 
 ```jsx
 // Creatures.js
 
-import React from 'react';
-import './image-display.css';
+import './Creatures.css';
+import { getCreaturesData } from '../../data/animalData';
 import { useParams } from 'react-router-dom';
 
-const Creatures = ({ data, name}) => {
+const Creatures = ({ creatureType }) => {
+  console.log(useParams())
 
-  console.log(useParams());
+  const creatureImages = getCreaturesData(creatureType).map(creature => {
+     const { id, image } = creature;
+     return <img src={image} key={id} id={id} className="app-img"/>
+   });
 
-  const creatureImages = data.map(creature => {
-    const { id, image } = creature;
-    return <img src={image} key={id} id={id} className="app-img"/>
-  });
-
-  return (
-    <>
-      <h1>{name}!</h1>
-      {creatureImages}
-    </>
-  )
-
+   return (
+     <>
+       <h1>{creatureType}!</h1>
+       {creatureImages}
+     </>
+   )
 }
 
 export default Creatures;
@@ -377,7 +359,7 @@ export default Creatures;
 </section>
 
 <section class="call-to-action">
-### Let's explore!
+### Let's explore
 
 1. What console.logged? Where does the key:value pair come from?
 2. Click between the `Puppies` and `Sharks` buttons. How is the logged object changing?
@@ -385,32 +367,29 @@ export default Creatures;
 </section>
 
 <section class="answer">
-### Let's use useParams to render the correct animal:
+### 10. Let's use useParams to render the correct animal
 
 ```jsx
 // Creatures.js
 
-import React from 'react';
-import './image-display.css';
+import './Creatures.css';
+import { getCreaturesData } from '../../data/animalData';
 import { useParams } from 'react-router-dom';
-import puppies from '../data/puppy-data.js';
-import sharks from '../data/shark-data.js';
 
 const Creatures = () => {
-  const data = useParams().animal === 'puppies' ? puppies : sharks;
+  const creatureType = useParams().animal;
 
-  const creatureImages = data.map(creature => {
-    const { id, image } = creature;
-    return <img src={image} key={id} id={id} className="app-img"/>
-  });
+  const creatureImages = getCreaturesData(creatureType).map(creature => {
+     const { id, image } = creature;
+     return <img src={image} key={id} id={id} className="app-img"/>
+   });
 
-  return (
-    <>
-      <h1>{useParams().animal}!</h1>
-      {creatureImages}
-    </>
-  )
-
+   return (
+     <>
+       <h1>{creatureType}!</h1>
+       {creatureImages}
+     </>
+   )
 }
 
 export default Creatures;
@@ -418,36 +397,44 @@ export default Creatures;
 </section>
 
 <section class="answer">
-### Notice that Creatures isn't using props anymore. Let's remove those from App.js:
+### 11. Notice that Creatures isn't using props anymore. Let's remove those from App.js:
 
 ```jsx
 // App.js
 
-import React, { Component } from 'react';
 import './App.css';
-import Creatures from '../Creatures/Creatures';
-import Home from '../Home/Home';
 import { Routes, Route, NavLink } from 'react-router-dom';
+import Home from '../Home/Home';
+import Creatures from '../Creatures/Creatures';
 
-export default class App extends Component {
-  render() {
-    return (
-      <main className="App">
-        <nav>
-          <NavLink to="/puppies" className="nav">Puppies</NavLink>
-          <NavLink to="/sharks" className="nav">Sharks</NavLink>
-        </nav>
-        <h1>Puppies or Sharks?</h1>
-        <Routes>
-          <Route path="/" element={ <Home /> }/>
-          <Route path="/:animal" element={ <Creatures /> }/>
-        </Routes>
-      </main>
-    );
-  }
+function App() {
+  return (
+    <main className="App">
+      <nav>
+        <NavLink to="/puppies" className="nav">Puppies</NavLink>
+        <NavLink to="/sharks" className="nav">Sharks</NavLink>
+      </nav>
+      <h1>Puppies or Sharks?</h1>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/:animal" element={<Creatures />} />
+      </Routes>
+    </main>
+  );
 }
+
+export default App;
 ```
 </section>
+
+## Rendering the CreatureDetails component
+
+
+<!--
+
+
+
+
 
 </section>
 ---
