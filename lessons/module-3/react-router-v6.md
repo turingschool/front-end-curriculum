@@ -23,6 +23,7 @@ React Router just released the newest version - `version 6`. This lesson has bee
 * `NavLink` A special version of the \<Link\> that will add styling attributes to the rendered element when it matches the current URL.
 * `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
 * `Routes` A component that wraps your Route components that selects the best path match
+* `Outlet` A component that renders the next match in a set of matches. it must exist in the parent component when nesting routes
 * `useParams` A hook that allows us to gain access to a Route's params
 
 <section class="checks-for-understanding">
@@ -31,11 +32,9 @@ React Router just released the newest version - `version 6`. This lesson has bee
 Before the lesson, complete the [prework](https://gist.github.com/kaylagordon/7a6c7fcdf1ab0cd937d009845d8643dc){:target='blank'}.
 </section>
 
-## React Router
-
 <section class="call-to-action">
 ### Prework Review
-In small groups, discuss the following questions:
+In small groups, discuss the following questions via [this Jamboard](https://jamboard.google.com/d/1IEbM9Gi7LLiVBOnx-9L_XjI2lVpi3ik86BtN-_ArNXg/edit?usp=sharing):
 1. Why use Router?
 2. Describe the high-level process of setting up Router in a project (packages to install, basic component needed)
 3. Describe the following components:
@@ -46,7 +45,7 @@ In small groups, discuss the following questions:
 - Outlet
 </section>
 
-### Why Routing?
+## Why Routing?
 
 **Routing** refers to keeping a webpage up to date with the current url, and vice-versa.
 
@@ -59,15 +58,14 @@ Here  are some advantages routing can provide:
 
 If you have written a multi-page application, you may have wrestled with Webpack configs in order to get all your pages built successfully. Fortunately, routing with React is easy! We just need to use a library called <a href="https://reactrouter.com/docs/en/v6" target="_blank">React Router</a>.
 
-**React Router allows us to conditionally render components based on the current url**
+**React Router allows us to conditionally render components based on the current url.**
 
-### The Code
+## Set Up
 
-Rather than tell you about how Router works, we'll work through a series of exercises and examples.
+Rather than tell you about how Router works, we'll work through a series of exercises and examples. We'll be using <a href="https://github.com/turingschool-examples/react-router-v6" target="_blank">this repo</a> to solve a series of challenges listed below.
 
-We'll be using <a href="https://github.com/turingschool-examples/react-router-v6" target="_blank">this repo</a> to solve a series of challenges listed below.
-
-**Installation Instructions**
+<section class="answer">
+### 0. Clone repo & review codebase
 ```bash
 git clone https://github.com/turingschool-examples/react-router-v6
 cd react-router-v6
@@ -76,38 +74,24 @@ npm start
 
 # open your text editor
 ```
-
-The App is not fully put together. It has a series of components that will serve as building blocks of the final component. You won't be building out new components, but you will be editing existing ones.
-
-### Setting up Router
-
-Before we break out into groups, we'll review how to set up Router as a class.
-
-<section class="call-to-action">
-### Look through the codebase
-Get oriented with the application. Check out all the components, try and write a short summary of what each is doing.
+The App is not fully put together. It has a series of components that will serve as building blocks of the final component. You won't be building out new components, but you will be editing existing ones. Get oriented with the application. Check out all the components, try and write a short summary of what each is doing.
 </section>
 
-The `<Home />` component is rendering a welcome message. Right now, nothing but a nav bar is being rendered by the App. Let's use router to render the `<Home />` component as a landing page.
-
-Remember that React Router conditionally renders components based on the current url. So our goal is to **render the <Home /> component when the user is at the base url**.
-
-<section class="call-to-action">
-### Setting up Router
-
-To use React Router, we need to wrap any components that will use a React Router-provided-component in some kind of [Router component](https://reacttraining.com/react-router/web/guides/primary-components/routers).
-
-We'll use a [Browser Router](https://reacttraining.com/react-router/web/api/BrowserRouter), since our app will be used in the browser. This Router provides access to the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). But we won't worry about those details just yet.
+## Installing Router
 
 <section class="answer">
-### The first step is installing react router:
+### 1. The first step is installing react router:
 ```bash
 npm install react-router-dom
 ```
 </section>
 
 <section class="answer">
-### Once you have React Router installed, import your chosen Router:
+### 2. Once you have React Router installed, import your chosen Router:
+
+To use React Router, we need to wrap any components that will use a React Router-provided-component in some kind of [Router component](https://reacttraining.com/react-router/web/guides/primary-components/routers).
+
+We'll use a [Browser Router](https://reacttraining.com/react-router/web/api/BrowserRouter), since our app will be used in the browser. This Router provides access to the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). But we won't worry about those details just yet.
 
 ```jsx
 // index.js
@@ -123,6 +107,22 @@ const router = <BrowserRouter> <App /> </BrowserRouter>;
 ReactDOM.render(router, document.getElementById('root'));
 ```
 </section>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+The `<Home />` component is rendering a welcome message. Right now, nothing but a nav bar is being rendered by the App. Let's use router to render the `<Home />` component as a landing page.
+
+Remember that React Router conditionally renders components based on the current url. So our goal is to **render the <Home /> component when the user is at the base url**.
 
 <section class="answer">
 ### Now, add a Route for the `Home` component into your `App`:
@@ -540,9 +540,10 @@ export default CreatureDetails;
 </section>
 
 Another solution could have included passing the data as props from `App` to `Creatures` and `CreatureDetails`!
-</section>
+</section> -->
 
 ## Extra Resources:
-It is likely that you'll run into use cases for the following router components. Feel free to take a peak at what they can do!
-* `Outlet` A component that renders the next match in a set of matches.
-* `Navigate`/`useNavigate` Helps you force a URL change. [This](https://gist.github.com/mjackson/b5748add2795ce7448a366ae8f8ae3bb) is a helpful resource!
+- [React Router v6 Docs](https://reactrouter.com/docs/en/v6/getting-started/overview)
+- [React Router v6 Tutorial](https://reactrouter.com/docs/en/v6/getting-started/tutorial)
+- [A Guide to Upgrading from v5](https://reactrouter.com/docs/en/v6/upgrading/v5)
+- It is likely that you'll run into use cases for `Navigate`/`useNavigate`, which helps you force a URL change. [This](https://gist.github.com/mjackson/b5748add2795ce7448a366ae8f8ae3bb) is a helpful resource!
