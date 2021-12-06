@@ -8,7 +8,7 @@ module: 3
 <section class="note">
 ### Note
 
-React Router just released the newest version - `version 6`. This lesson has been updated to reflect the changes for v6. If you're looking for the v5 lesson, go [here](https://frontend.turing.edu/lessons/module-3/react-router-v6.html).
+React Router just released the newest version - `version 6`. This lesson has been updated to reflect the changes for v6. If you're looking for the v5 lesson, go [here](https://frontend.turing.edu/lessons/module-3/react-router-v6.html). Interested in upgrading your v5 app to v6? Start [here](https://reactrouter.com/docs/en/v6/upgrading/v5).
 </section>
 
 ## Learning Goals:
@@ -21,9 +21,9 @@ React Router just released the newest version - `version 6`. This lesson has bee
 * `Router` The class that \<BrowserRouter\> is extended from
 * `Link` Links provide declarative, accessible navigation around your application
 * `NavLink` A special version of the \<Link\> that will add styling attributes to the rendered element when it matches the current URL.
-* `Routes`
 * `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
-* `useParams`
+* `Routes` A component that wraps your Route components that selects the best path match
+* `useParams` A hook that allows us to gain access to a Route's params
 
 <section class="checks-for-understanding">
 ## Prework  
@@ -397,7 +397,7 @@ export default Creatures;
 <section class="call-to-action">
 ### Let's explore!
 
-1. What console.logged? Where does the **key:value pair** come from?
+1. What console.logged? Where does the key:value pair come from?
 2. Click between the `Puppies` and `Sharks` buttons. How is the logged object changing?
 3. Manually type something random into the URL, like `localhost:3000/potatoes`. What logs?
 </section>
@@ -436,7 +436,7 @@ export default Creatures;
 </section>
 
 <section class="answer">
-### Notice that Creatures isn't use props anymore. Let's remove those from App.js:
+### Notice that Creatures isn't using props anymore. Let's remove those from App.js:
 
 ```jsx
 // App.js
@@ -544,5 +544,5 @@ Another solution could have included passing the data as props from `App` to `Cr
 
 ## Extra Resources:
 It is likely that you'll run into use cases for the following router components. Feel free to take a peak at what they can do!
-* `Outlet`
-* `Navigation`
+* `Outlet` A component that renders the next match in a set of matches.
+* `Navigate`/`useNavigate` Helps you force a URL change. [This](https://gist.github.com/mjackson/b5748add2795ce7448a366ae8f8ae3bb) is a helpful resource!
