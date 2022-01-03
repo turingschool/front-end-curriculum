@@ -6,12 +6,11 @@ title: IdeaBox Group
 
 Every developer has more ideas than time. As David Allen likes to say "the human brain is for creating ideas, not remembering them." In this project, we'll be building an application that records and archives our ideas (good and bad alike).
 
-Throughout the project, one of our focuses will be on providing a fluid and responsive client-side interface. To this end, we'll rely on JavaScript to implement snappy filtering in the browser, and `localStorage` to persist our wonderful ideas between sessions.
+Throughout the project, one of our focuses will be on providing a fluid and responsive client-side interface. To this end, we'll rely on JavaScript to implement snappy filtering in the browser.
 
 ## Learning Goals
 
 * Gain an understanding of how to write clean HTML and CSS to match a provided comp
-* Understand how to implement client-side data persistence using `localStorage` and JSON
 * Understand what it looks like to have a separate data model (using a class) and DOM model
 * Incorporate & iterate over arrays in order to filter what is being displayed
 * Craft code with clean style, using small functions that show trends toward DRYness and SRP
@@ -56,8 +55,8 @@ We strongly recommend that you complete Iteration 0 before moving on to the next
 
 For this project, we'll be increasingly thinking about the "data model" and "DOM model" as separate entities. We'll be using:
 
-- JSON and `localStorage` to persist data on page reload.
 - JavaScript to manage client-side interactions.
+- HTML, CSS and the DOM to display our data
 
 Your entire application will consist of one HTML page or template. You will have two JavaScript files, for now:
 
@@ -120,21 +119,7 @@ As a user,
 - When I delete or favorite any card,
 - I should _not_ see the page reload
 
-### Iteration 4 - Local Storage & Filtering
-
-As a user,
-- When I create one idea successfully, then refresh the page,
-- The idea card instance is still in the ideas array
-- The idea card is still visible on the DOM
-
-As a user,
-- When I create two cards successfully, delete one, then refresh the page,
-- One idea instance is still in the ideas array (the one I did not delete)
-- One idea card is still visible on the DOM (the one I did not delete)
-
-As a user,
-- When I favorite an idea card, then refresh the page,
-- That idea card is still in the "favorite" state with the filled in star icon (in both the ideas array and on the DOM)
+### Iteration 4 - Filtering
 
 As a user,
 - When I click "Show Starred Ideas"
@@ -157,7 +142,27 @@ As a user,
 - When I backspace and delete something from the search bar, so that it's empty
 - I see all cards since no search criteria is being provided
 
-### Iteration 5 - Commenting on Ideas
+## Extensions
+
+### localStorage 
+
+Typically, frontend developers work with API's to serve up data that lives elsewhere. However, sometimes you might want to store some information `Client Side` - meaning we store it on the users local browser. Interested in this extension? Check out the lesson on [localStorage](https://frontend.turing.edu/lessons/module-1/json-and-localstorage.html). We don't officially teach this lesson, but it's a good one to know.
+
+As a user,
+- When I create one idea successfully, then refresh the page,
+- The idea card instance is still in the ideas array
+- The idea card is still visible on the DOM
+
+As a user,
+- When I create two cards successfully, delete one, then refresh the page,
+- One idea instance is still in the ideas array (the one I did not delete)
+- One idea card is still visible on the DOM (the one I did not delete)
+
+As a user,
+- When I favorite an idea card, then refresh the page,
+- That idea card is still in the "favorite" state with the filled in star icon (in both the ideas array and on the DOM)
+
+### Commenting on Ideas
 
 ### Architecture
 
