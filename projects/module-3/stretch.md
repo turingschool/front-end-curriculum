@@ -200,7 +200,7 @@ Your instructors will do a stand-up meeting in the mornings to see where the gro
 </section>
 
 <section class="answer">
-### Day 6 (4 PM MT)
+### Over the Weekend
 
 * In a DM with both instructors, send us the link to a recent PR
 * Choose a PR that is related to your Stretch Tech, and use the PR description to fill us in on your learning.
@@ -209,7 +209,7 @@ Your instructors will do a stand-up meeting in the mornings to see where the gro
 </section>
 
 <section class="answer">
-### Day 8 (during stand ups)
+### Day 6 (during stand ups)
 
 Your instructors will do a formal check-in with your group. At this check-in, instructors expect to see:
 * A very quick demo of your application so far detailing the progress made toward your MVP
@@ -220,7 +220,7 @@ Your instructors will do a formal check-in with your group. At this check-in, in
 </section>
 
 <section class="answer">
-### Day 9 (9:45 AM MT)
+### Day 8 (9 AM MT)
 
 Share your app progress with the class for Show and Tell! Be prepared to tell the story of what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes (shoot for 5 minutes).
 
