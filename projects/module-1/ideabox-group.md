@@ -305,7 +305,7 @@ This means, we DO NOT want to see:
 * One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
 * A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
 
-* **4:** Application meets all of the expectations from Iteration 5 without bugs.
+* **4:** Application meets all of the expectations from Iteration 4 and at least one extension without bugs.
 * **3:** Application meets all of the expectations from Iteration 4 without bugs.
 * **2:** Application meets all of the expectations of Iteration 3 without bugs.
 * **1:** Application meets all of the expectations of Iteration 2 without bugs.
