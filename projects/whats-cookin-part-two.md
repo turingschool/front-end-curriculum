@@ -229,7 +229,7 @@ In addition to your refactoring, you also want to make sure the application is f
 ---
 
 ### Minimum Professionalism Expectations
-* Commits are atomic and frequent, effectively documenting the evolution/progression of the application
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. Commits are relatively even across all group members. 
 * The Project Board is utilized (and updated) with Github issues and labels.
 * Developer uses PRs from feature branches before adding new code to the main branch.
 * The README is formatted well and at a minimum contains:
