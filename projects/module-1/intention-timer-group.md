@@ -9,7 +9,6 @@ You'll be building an application that allows a user to set goals for their heal
 ## Learning Goals
 
 * Gain an understanding of how to write clean HTML and CSS to match a provided comp
-* Understand how to implement client-side data persistence using `localStorage` and JSON
 * Understand what it looks like to have a separate data model (using a class) and DOM model
 * Incorporate & iterate over arrays in order to filter what is being displayed
 * Craft code with clean style, using small functions that show trends toward DRYness and SRP
@@ -100,18 +99,15 @@ Make sure that you link this file in your `index.html` using a `script` tag, abo
 
 * NOTE: There is a typo in the image above. Where it says `Walk`, it should really say `Exercise`.
 
-## Iteration 5 - Persisting past activities
-
-**STOP!** Did you refactor Iteration 4? Clean up your code before moving on!
-
-- When the user refreshes the page,
-  - Their past activities are still displayed!
-  - Hint: localStorage could come in handy here...
-
 ## Optional Extensions
 
 Remember, do not move on to any of these extensions if functionality from the previous iterations is not complete or bug-free.
 
+- **Option 0:** localStorage
+  - When the user refreshes the page,
+    - Their past activities are still displayed!
+    - Hint: localStorage could come in handy here...
+  
 - **Option 1:** Expand/Collapse Reflection
   - When timer completes but before a card is created, the user can submit a reflection on the way they spent that time. Then, they can click the `Log Activity` button to create the card.
   - Even though there is more information about the activity, the reflection should not appear on the card immediately. The cards should still match the comp. The user should have a visual indicator that there is "more info" on a card. When the user takes the appropriate action, the card expands to show the reflection the user had submitted.
