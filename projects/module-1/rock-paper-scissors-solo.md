@@ -10,7 +10,6 @@ Now that you've got the main foundations down to build out a frontend applicatio
 
 * Solidify and demonstrate your understanding of:
   * DRY JavaScript
-  * localStorage to persist data
   * event delegation to handle similar event listeners
 * Understand the difference between the data model and how the data is displayed on the DOM
 * Use your problem solving process to break down large problems, solve things step by step, and trust yourself to not rely on an outside "answer" to a logical challenge
@@ -36,7 +35,7 @@ We want to see YOUR work.
 
 ### Functionality
 
-Here is a video demonstrating most functionality of the game (the only functionality not explicitly depicted is data persistence using Local Storage):
+Here is a video demonstrating most functionality of the game:
 
 <iframe width="840" height="473" src="https://www.youtube.com/embed/a2M5h1B9DQQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -91,7 +90,7 @@ This workflow is not required, but will help you meet the overall requirements o
 6. Connect Game data model to the DOM
 7. Display the Player data in the sidebars
 8. Automatically reset the game board to allow for a new game to be played after the previous game is won
-9. Persist Player data using local storage (number of wins should persist across page refreshes)
+9. Extension - Persist Player data using local storage (number of wins should persist across page refreshes)
 
 ## Rubric
 
