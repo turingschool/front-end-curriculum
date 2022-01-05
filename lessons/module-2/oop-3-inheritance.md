@@ -24,6 +24,9 @@ module: 2
 ### Warm Up
 
 Discuss in groups:
+
+In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1IxfF8lH5n4rWk-o40ahxb7x3gotGXlo1LkrFkDUMxBs/viewer?f=0)
+
 - What are some of the benefits of Object Oriented Programming? Think about why we organize code into classes. 
 </section>
 
