@@ -55,7 +55,7 @@ You'll be building an application that allows a user to set goals for their heal
   - Methods should include:
     - countdown (or beginTimer or startTimer - whatever naming makes sense to you)
     - markComplete
-    - saveToStorage
+    - saveToStorage * - only used for extensions
 
 Make sure that you link this file in your `index.html` using a `script` tag, above the link to your `main.js` file.
 

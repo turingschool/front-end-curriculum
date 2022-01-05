@@ -63,8 +63,8 @@ Your entire application will consist of one HTML page or template. You will have
 1. An `Idea.js` file that contains an `Idea` class.
   * `Idea` methods must include, but are not limited to:
     1. `constructor`
-    2. `saveToStorage` (should only have one job which is to save the instance to storage)
-    3. `deleteFromStorage`
+    2. `saveToStorage`* - only used for extensions (should only have one job which is to save the instance to storage)
+    3. `deleteFromStorage`* - only used for extensions
     4. `updateIdea` (should update the idea's starred state)
 2. A `main.js` file that contains all DOM related JavaScript.
 
