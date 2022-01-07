@@ -30,6 +30,7 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
     - the GitHub Pages deployed site
       - Instructions for deploying: Repo Settings >> Pages >> Select the `main` branch as your Source branch >> Save >> Send us the URL they give you in the pop up that says "Your site is ready to be published at [URL]"
 -  Add all teammates and your assigned instructor as collaborators to your forked repository
+- In your group project README, include links to all of your LinkedIn profiles. The rough draft of your LinkedIn is due during this project, so use this as an opportunity to leverage it! We'll check in on this during our group project check-in. 
 
 ## Progression
 
