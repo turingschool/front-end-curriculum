@@ -38,7 +38,24 @@ We want to see YOUR work.
 
 Here is a video demonstrating most functionality of the game:
 
-<iframe width="840" height="473" src="https://www.youtube.com/embed/p8UYR0Ixb5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="840" height="473" src="https://www.youtube.com/watch?v=QE17zFLT8K4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+There have been some changes to this project - so until we can get a new video uploaded, please refer to the bullet points below to understand the functional expectations of the project.
+
+- The top displays which player’s turn it is
+- They can only place their token in an empty square
+- Attempting to place their token on a square that’s already occupied will not work, and it remains their turn
+- Once they place their token, it becomes the other player’s turn (the banner updates to communicate this)
+- A player can win by connecting 3 horizontally, vertically, or diagonally.
+When a win occurs
+  - The top banner changes to declare the winner
+  - The dom updates to state how many wins the player has total
+  - The game RESTARTS ITSELF after a brief pause, (long enough that the winner message can be read before resetting)
+  - The player who didn’t begin the previous game now is the first player to go in the new game
+A draw can occur, in which case:
+  - The top banner declares a draw
+  - Neither player’s win count increases or decreases
+  - The game restarts after a brief pause, with the opposite player beginning the game (just like when a game restarts after a player wins)
 
 In this project, we will not be providing detailed iterations. We want you to exercise your skills in planning out work!
 
