@@ -54,8 +54,8 @@ Your entire application will consist of one HTML page. You will have three JavaS
 1. A `player.js` file that contains a `Player` class.
 	* `Player` methods must include, _but are not limited to_:
 		1. `constructor` - properties should include: `id` (ex: `'one'`), `token` (ex: `'⭐️'`), `wins` (ex: `[]`)
-		2. `saveWinsToStorage`
-		3. `retrieveWinsFromStorage`
+		2. `saveWinsToStorage` - only necessary if you choose the localStorage extension
+		3. `retrieveWinsFromStorage`- only necessary if you choose the localStorage extension
 2. A `game.js` file that contains a Game class.
   * A `Game` should include:
       - Two `Player` instances
@@ -107,7 +107,7 @@ Here is what the final score means in terms of completing the module:
 ### Functional Expectations
 
 * **4:** Application is fully complete (matches all functionality from demo, without bugs), and implements additional functionality devised by the student
-* **3:** Application is fully complete (matches all functionality from demo, and persists across refreshes)
+* **3:** Application is fully complete (matches all functionality from demo)
 * **2:** Able to play an entire game successfully (win, draw, displayed player data updates)
 * **1:** Unable to play an entire game successfully
 
