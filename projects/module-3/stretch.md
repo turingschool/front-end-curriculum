@@ -200,7 +200,7 @@ Your instructors will do a stand-up meeting in the mornings to see where the gro
 </section>
 
 <section class="answer">
-### Over the Weekend
+### Day 4
 
 * In a DM with both instructors, send us the link to a recent PR
 * Choose a PR that is related to your Stretch Tech, and use the PR description to fill us in on your learning.
@@ -209,7 +209,7 @@ Your instructors will do a stand-up meeting in the mornings to see where the gro
 </section>
 
 <section class="answer">
-### Day 6 (during stand ups)
+### Day 5 (during stand ups)
 
 Your instructors will do a formal check-in with your group. At this check-in, instructors expect to see:
 * A very quick demo of your application so far detailing the progress made toward your MVP
@@ -220,12 +220,22 @@ Your instructors will do a formal check-in with your group. At this check-in, in
 </section>
 
 <section class="answer">
-### Day 8 (2 PM MT)
+### Day 7 (10 AM MT)
 
 Share your app progress with the class for Show and Tell! Be prepared to tell the story of what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes (shoot for 5 minutes).
 
 Your project does not need to be done or impressive by this point; this is more of a way to give you a milestone to shoot for and to help plan your timeline.
 </section>
+
+## Demo Comp
+One of the Stretch Tech projects will be entered into Demo Comp next inning! Demo Comp is an event that happens on Tuesday of week 1 where the top projects at Turing are presented by students in front of Turing students, staff, and real world devs. It's an amazing opportunity to get your name out there and network. It's a big honor and we're excited to choose one of your groups to go represent your cohort!  
+
+Your instructors will choose our Demo Comp project by looking for the following things:
+* A polished application that is intuitive and professional
+* A bug-free application that meets all of the features from your MVP
+* Strong implementation of the stretch technology with best practices implemented in React, Router, and Cypress  
+
+Involvement in Demo Comp is totally optional.
 
 ## Evals
 
@@ -236,7 +246,6 @@ Evals are
 * 15 minutes
 * Two interview questions - one technical (about your stretch tech) and one behavioral (you get to choose the "theme", but not the specific question)
 * You will be expected to send your interviewer your resume prior to the interview via slack
-
 
 ## Rubric
 
