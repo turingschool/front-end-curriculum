@@ -22,7 +22,7 @@ In this project, you will be given data from an activity tracker for many users 
 
 
 <section class="note">
-	
+
 ### Note
 
 The image above is *not* a comp. We expect you to design your own dashboard layout that is relevant to the data that was logged or calculated for a user or group of users. Use inspiration from Fitbit and other fitness/activity apps, but do not copy an app directly.
@@ -35,50 +35,50 @@ The image above is *not* a comp. We expect you to design your own dashboard layo
 ---
 ## Timeline
 Dates and deadlines to be aware of:
-	 
+
 #### Monday Week 2 - Submit the following to your PM BEFORE beginning to write code via Slack:
-- DTR (be specific about learning goals, schedules, and communication expectations) 
+- DTR (be specific about learning goals, schedules, and communication expectations)
 - Project board (this should be kept updated throughout the project and will be reviewed by PM in check-ins).
 - Planned out Class structure, for example, for a User setup, you can have a ```UserRepository Class ``` and ```User Class```.
 - Wireframes
 - 3 design inspirations (Please include links and details on what you're trying to re-create).
-	 
+
 #### Monday, Week 3 - Project due at 9PM.
-	 
+
 - Please submit your Group project part one [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
-	 
+
 ---
 
 ### Working with Webpack
 This project is set up to use [Webpack](https://webpack.js.org/guides/getting-started/){:target='blank'}, a module bundler. It will take whatever code we write, and bundle it into a series of more efficient files that the browser can read (allowing us to use things like Sass, npm packages and ES6 `import` / `export` syntax).
-	 
+
 This [video](https://www.youtube.com/watch?v=GU-2T7k9NfI){:target='blank'} provides a nice overview of some things webpack lets us do out of the box, most of which is set up for you already.
-	 
+
 This [article](https://survivejs.com/webpack/what-is-webpack/){:target='blank'} provides some more detail into how Webpack works, and what the `webpack.config.js` file is doing (**don't mess with this file unless you're sure you need to -- feel free to ask before you change things**).
-	 
-	 
+
+
 <section class="answer">
-	
+
 ### Notes on Webpack
-	 
+
 Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
-	 
+
 - You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ){:target='blank'} syntax
 	- Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.
-	 
+
 - Webpack needs to know where to look for your files. Look [here](https://github.com/turingschool-examples/webpack-starter-kit#where-to-add-your-code){:target='blank'} for a description of where webpack is set up to look for your HTML, CSS, JS and image files. Some general points:
 	- You need to import images into the entrypoint file (usually `scripts.js` or `index.js`).
 	- You need to `import` your CSS files into the entrypoint file too
 	- Make sure HTML, JS and CSS files are all in the `/src` directory
 	- You have to `import` any required modules and code for tests into your test files
-	 
-	 
+
+
 - While developing, run `npm start`. Webpack will create a live version of your site on a local server, where you can see your changes happen in real time. To access it, in your browser, navigate to the `localhost` address that your terminal gives you. Be aware, if you write a breaking change, your server may crash. The terminal will give you some error report about why the crash happened.
-	 
-	 
+
+
 - Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
 </section>
-	 
+
 ---
 
 ## Requirements
@@ -98,13 +98,13 @@ Each iteration has a "Data" section and "Dashboard" section. Data deals with usi
 Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on class structure and the calculation methods, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there.
 
 <section class="note">
-	
+
 ### Note
 For this dataset, when "today" is referenced in iterations, it is the last date in the data. The latest week is the most recent 7 days in the data.
 </section>
 
 <section class="note">
-	
+
 ### 3rd Party Libraries
 
 ***Please get instructor approval first before using additional 3rd-party libraries.***  You may use [Day.js](https://www.npmjs.com/package/dayjs) to help with manipulating / formatting dates.  You may also use [Chart.js](https://www.npmjs.com/package/chart.js) in order to help with displaying some data.  (Note: Learning a new technology does take extra time.  Plan ahead and maybe do a research spike over the first weekend, before deciding to use it.)
@@ -265,20 +265,18 @@ You are *not expected* to test:
 * 1: Application does not demonstrate strong use of TDD.
 
 ### User Interface
-* 4: The application can stand on its own to be used by an instructor without guidance from a developer on the team. The UI does not detract from the UX. 
-* 3: The application has many strong displays/interactions.The UI does not detract from the UX. 
+* 4: The application can stand on its own to be used by an instructor without guidance from a developer on the team. The UI does not detract from the UX.
+* 3: The application has many strong displays/interactions.The UI does not detract from the UX.
 * 2: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the users' needs.
 * 1: The application is confusing or difficult to use.
 
 ------------------------------------------------------------------
-	 
+
 ### Minimum Professionalism Expectations
-* Commits are atomic and frequent, effectively documenting the evolution/progression of the application
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
 * The Project Board is utilized with Github issues and labels.
 * Developer uses PRs from feature branches before adding new code to the main branch.
 * The README is formatted well and at a minimum contains:
   * Overview of project and goals
   * Overview of technologies used, challenges, wins, and any other reflections
   * Screenshots/gifs of your app
-
-

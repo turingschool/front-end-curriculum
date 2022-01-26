@@ -10,7 +10,7 @@ tags: javascript, oop, mocha, testing, fetch, sass
 * Ensure your app follows best practices for accessibility
 * Leverage Sass to DRY up your CSS
 * Practice talking about your code and high level technical concepts
-* Implement feedback to improve product and process. 
+* Implement feedback to improve product and process.
 
 In this project, you will use your project from Fitlit' (Part One) and build on top of that. This is an opportunity to refactor your code, complete unfinished work, build new features, and take advantage of instructor feedback.  
 
@@ -100,19 +100,19 @@ The expectation for Mod 2 is that you will avoid using `async/await`.  We know `
 | Add A User activity data |`http://localhost:3001/api/v1/activity`| POST | `{ userID: <number>, date: <string>, flightsOfStairs: <number>, minutesActive: <number>, numSteps: <number>` | `{ userID: #, date: "some dates ex("12/12/2020")" , flightsOfStairs: #, minutesActive: # }`|
 
 <section class="note">
-  
+
 <h3> Note about Adding Sleep, Hydration and activity data</h3>
 
 For the currently displayed user, you must be able to add a new sleep, hydration and activity data entry for that user.
 
 For example, if the currently displayed user has an ID of 50, and you want to add new sleep data you would want to send a JSON object through with your POST request that looks like:
-    
+
 
 ```json
 {
-    userID: 50, 
-    date: "10/29/2021" , 
-    hoursSlept: 2, 
+    userID: 50,
+    date: "10/29/2021" ,
+    hoursSlept: 2,
     sleepQuality:2.2
 }
 ```
@@ -120,7 +120,7 @@ For example, if the currently displayed user has an ID of 50, and you want to ad
 </section>
 
 <section class="note">
-  
+
 ### Error Handling
 
 Make proper error handling for your users to ensure they get data and submit their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user?  Also, validate the input fields on the client-side.
@@ -137,7 +137,7 @@ Make proper error handling for your users to ensure they get data and submit the
 
 ---
 
-### DOM Manipulation 
+### DOM Manipulation
 
 * DOM manipulation should be organized into its own `domUpdates.js` file. The file should look something like this:
 
@@ -190,21 +190,21 @@ In addition to your refactoring, you also want to make sure the application is f
 ---
 
 <section class="note">
-  
+
 ## Strategies for Success
-* Since this project is not separated into iterations or user stories, make sure that you spend a good amount of time breaking apart tasks and using that project board wisely. 
-* Every group member must fully understand and be able to speak to all of the code changes that have been made. 
+* Since this project is not separated into iterations or user stories, make sure that you spend a good amount of time breaking apart tasks and using that project board wisely.
+* Every group member must fully understand and be able to speak to all of the code changes that have been made.
 * Implement feedback received in part one into part two.
 </section>
 
 ---
 
 ### Extensions
-* If you didn't get a chance to experiment with an NPM package in [Part One](https://frontend.turing.edu/projects/whats-cookin-part-one.html), try one out here! Remember to revist the list of approved NPM packages, or run a new one by your project manager first. 
+* If you didn't get a chance to experiment with an NPM package in [Part One](https://frontend.turing.edu/projects/whats-cookin-part-one.html), try one out here! Remember to revist the list of approved NPM packages, or run a new one by your project manager first.
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
-* Create a video of your team navigating through your app via a keyboard and screen reader. 
-* Implement an animation using CSS and Sass and/or make your application responsive on smaller screen sizes. 
-* Create and implement a new feature for your application (run this by instructors first). 
+* Create a video of your team navigating through your app via a keyboard and screen reader.
+* Implement an animation using CSS and Sass and/or make your application responsive on smaller screen sizes.
+* Create and implement a new feature for your application (run this by instructors first).
 
 ---
 
@@ -222,33 +222,33 @@ In addition to your refactoring, you also want to make sure the application is f
 * 1: Application crashes during normal usage or does not run.
 
 ## Testing
-* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. All tests are passing. 
+* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. All tests are passing.
 * 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files. All tests are passing
-* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation. Some tests might be failing. 
-* 1: Tests have not been updated to reflect changes made in refactor. There is not enough test coverage, and multiple tests might be failing. 
+* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation. Some tests might be failing.
+* 1: Tests have not been updated to reflect changes made in refactor. There is not enough test coverage, and multiple tests might be failing.
 
 ## Sass
 * 4: Application fulfills all requirements previously mentioned, and has Sass functionality that goes above and beyond an MVP (see extensions).
 * 3: The application has well-factored Sass with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
-* 2: Application adds organization for the whole stylesheet and within rules, but multiple Sass files have not been utilized. All Sass code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
+* 2: Application adds organization for the whole stylesheet and within rules, but multiple Sass files have not been utilized. All Sass code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags.
 * 1: The application makes little to no use of Sass and is not separated into logical stylesheets. There are many instances of duplication.
 
 ## Accessibility
 * 4: Has an audit score of 100% and has gone above and beyond accessibility requirements (see extensions).
 * 3: All accessibility areas have been considered and tested. An accessibility audit with a score of at least 95%.  
-* 2: One accessibility area has not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML. 
+* 2: One accessibility area has not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML.
 * 1: Two or more accessibility areas have not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML.
 
 ## JavaScript Refactoring
 * 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring.  Excellent usage of `fetch` and updates DOM based on results of network requests.  Handles all scenarios for error handling.
-* 3: Class methods use array and object prototypes - for loops are not used in the application. Application shows strong effort towards organization, content, and refactoring.  Great usage of `fetch` and updates DOM based on results in most scenarios, but may update DOM before a network request is complete.  Handles some scenarios for error handling. 
-* 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has zero error handling and only `logs` errors if a network request fails. 
+* 3: Class methods use array and object prototypes - for loops are not used in the application. Application shows strong effort towards organization, content, and refactoring.  Great usage of `fetch` and updates DOM based on results in most scenarios, but may update DOM before a network request is complete.  Handles some scenarios for error handling.
+* 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has zero error handling and only `logs` errors if a network request fails.
 * 1: Application generates syntax errors or crashes during execution. Does not utilize `fetch` at all.
 
 ---
 
 ### Minimum Professionalism Expectations
-* Commits are atomic and frequent, effectively documenting the evolution/progression of the application
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
 * The Project Board is utilized (and updated) with Github issues and labels.
 * Developer uses PRs from feature branches before adding new code to the main branch.
 * The README is formatted well and at a minimum contains:
@@ -266,4 +266,3 @@ As a group, you will respond to high-level technical questions, interview-style.
 Individually, you will be asked a question at random to respond to. You must give an attempt at responding to it before passing it off to a group member if you're unsure. Imagine you don't know the answer to a question on a technical interview, you won't simply say "I don't know". Will you try to take an educated guess? Will you say you're unsure? Will you try to explain by example?
 
 If the evaluator is left wanting a bit more from your response, they may choose to continue to ask a follow-up question to you - or they may open it up to volunteers in the group to assist.
-
