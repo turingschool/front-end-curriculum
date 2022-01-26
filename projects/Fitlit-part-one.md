@@ -158,6 +158,12 @@ To develop this dashboard, first choose a user at random - someone with a random
 
 You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from provided Endpoints in the table below.
 
+<section class="note">
+### Hint
+
+The expectation for Mod 2 is that you will avoid using `async/await`.  We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`.  Consider doing some research on `Promise.all()`.
+</section>  
+
 | Data Type | Verb | URL |  
 |---|---|---|  
 | User Data |GET | https://pacific-badlands-43237.herokuapp.com/api/v1/users |  

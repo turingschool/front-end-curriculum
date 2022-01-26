@@ -70,17 +70,21 @@ Items to add to the dashboard:
 
 ### Fetch
 
-You will no longer receive your data from the deployed API, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/fitlit-api){:target='blank'}. 
+You will no longer receive your data from the deployed API, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/fitlit-api){:target='blank'}.
 
-Your GET requests should not change very much, but you will need to clone down the repo for the local server and run it in a separate tab in your terminal each time you run your client (app). Below are the endpoints' setup for this project. 
+Your GET requests should not change very much, but you will need to clone down the repo for the local server and run it in a separate tab in your terminal each time you run your client (app). Below are the endpoints' setup for this project.
 
 <section class="note">
-  
+
 <h3> Why this change? </h3>
 
-Everyone was using the same exact endpoints for Part One. This is typically how things work, but can cause some headache when implementing types of requests other than GET. In this part of the project, you will start making POST requests. Creating a local server instead of using the hosted (deployed) one, gives everyone their own version of the APIs and decreases an overload of new data getting sent. 
+Everyone was using the same exact endpoints for Part One. This is typically how things work, but can cause some headache when implementing types of requests other than GET. In this part of the project, you will start making POST requests. Creating a local server instead of using the hosted (deployed) one, gives everyone their own version of the APIs and decreases an overload of new data getting sent.
 
 </section>
+
+## Remember:
+
+The expectation for Mod 2 is that you will avoid using `async/await`.  We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`.  Consider doing some research on `Promise.all()`.  
 
 
 #### Endpoints (GET and POST)

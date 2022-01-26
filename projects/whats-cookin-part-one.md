@@ -178,7 +178,13 @@ Create classes and methods that can:
 ### Iteration 3 - Fetch Calls
 	 
 You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from provided Endpoints in the table below.
-	 
+
+<section class="note">
+### Hint
+
+The expectation for Mod 2 is that you will avoid using `async/await`.  We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`.  Consider doing some research on `Promise.all()`.
+</section>  
+
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
 | Get all users |`https://what-s-cookin-starter-kit.herokuapp.com/api/v1/users`| GET | none | An array containing all users |

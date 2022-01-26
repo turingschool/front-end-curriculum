@@ -48,23 +48,26 @@ Create classes and methods that can:
 - As a user, I should be able to view what ingredients exist inside of my pantry.
 - As a user, I should be able to check my list of recipes to cook and see if my pantry has enough ingredients to cook a meal.
 - As a user, I should be told what ingredients are still needed if I don't have enough ingredients in my pantry to cook the recipe.
-- As a user, I should not be able to cook a recipe if I don't have the ingredients required. 
-- As a user, when I cook a meal, those ingredients should be removed from my pantry. 
+- As a user, I should not be able to cook a recipe if I don't have the ingredients required.
+- As a user, when I cook a meal, those ingredients should be removed from my pantry.
 - As a user, I should be able to add more ingredients to my pantry.
 
 ### Fetch
 
-You will no longer receive your data from the deployed API, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}. 
+You will no longer receive your data from the deployed API, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}.
 
-Your GET requests should not change very much, but you will need to clone down the repo for the local server and run it in a separate tab in your terminal each time you run your client (app). Below are the endpoints' setup for this project. 
+Your GET requests should not change very much, but you will need to clone down the repo for the local server and run it in a separate tab in your terminal each time you run your client (app). Below are the endpoints' setup for this project.
 
 <section class="note">
-### Why this change? 
+### Why this change?
 
-Everyone was using the same exact endpoints for Part One. This is typically how things work, but can cause some headache when implementing types of requests other than GET. In this part of the project, you will start making POST requests. Creating a local server instead of using the hosted (deployed) one, gives everyone their own version of the APIs and decreases an overload of new data getting sent. 
+Everyone was using the same exact endpoints for Part One. This is typically how things work, but can cause some headache when implementing types of requests other than GET. In this part of the project, you will start making POST requests. Creating a local server instead of using the hosted (deployed) one, gives everyone their own version of the APIs and decreases an overload of new data getting sent.
 
 </section>
 
+## Remember:
+
+The expectation for Mod 2 is that you will avoid using `async/await`.  We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`.  Consider doing some research on `Promise.all()`.  
 
 #### Endpoints (GET and POST)
 
