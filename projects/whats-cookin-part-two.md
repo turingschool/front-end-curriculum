@@ -206,8 +206,8 @@ In addition to your refactoring, you also want to make sure the application is f
 * 1: Application crashes during normal usage or does not run.
 
 ## Testing
-* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. All tests are passing.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files. All tests are passing
+* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.  Tests must be passing to be considered.
+* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.  Tests must be passing to be considered.
 * 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation. Some tests might be failing.
 * 1: Tests have not been updated to reflect changes made in refactor. There is not enough test coverage, and multiple tests might be failing.
 

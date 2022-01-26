@@ -260,9 +260,9 @@ You are *not expected* to test:
 
 ### Test-Driven Development
 * 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.
-* 2: Application makes some use of tests, but the coverage is insufficient given project requirements.
-* 1: Application does not demonstrate strong use of TDD.
+* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files. Tests must be passing to be considered.
+* 2: Application makes some use of tests, but the coverage is insufficient given project requirements.  Some tests might be failing.
+* 1: Application does not demonstrate strong use of TDD, and multiple tests might be failing.
 
 ### User Interface
 * 4: The application can stand on its own to be used by an instructor without guidance from a developer on the team. The UI does not detract from the UX.
