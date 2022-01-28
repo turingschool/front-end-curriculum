@@ -182,7 +182,7 @@ You will no longer be receiving your data from a hardcoded data file, but rather
 <section class="note">
 ### Hint
 
-The expectation for Mod 2 is that you will avoid using `async/await`.  We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`.  Consider doing some research on `Promise.all()`.
+The expectation for Mod 2 is that you will avoid using `async/await`.  We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`.  Consider doing some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all).
 </section>  
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
@@ -236,10 +236,10 @@ You are *not expected* to test:
 * 1: Application generates syntax errors or crashes during execution. Application logic shows poor decomposition with too much logic mashed together.
 
 ### Test-Driven Development
-* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.
+* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. Tests must be passing to be considered.
 * 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files. Tests must be passing to be considered.
-* 2: Application makes some use of tests, but the coverage is insufficient given project requirements.  Some tests might be failing.
-* 1: Application does not demonstrate strong use of TDD, and multiple tests might be failing.
+* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. Tests must be passing to be considered.
+* 1: Application does not demonstrate strong use of TDD, and some tests might be failing.
 
 ### User Interface
 * 4: Special consideration has been given to the usability of the application. The design is clean and the messaging for how to interact with the application is clear.
