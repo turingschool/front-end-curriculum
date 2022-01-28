@@ -17,8 +17,8 @@ mod: 2
 - `Assertion` An expression containing some testable logic
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
-- `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
-- `Test Phases` A test that is organized into the phases [Setup, Execution, Assertion, Teardown*
+- `Red Green Refactor` The process of writing a test first (which will fail), then writing the implementation code to make it pass, then refactoring the tests and/or implementation with confidence
+- `Test Phases` A test that is organized into the phases - Setup, Execution, Assertion, Teardown*
 
 <section class="call-to-action">
 ### Warmup!  Let's Review TDD!
@@ -27,22 +27,22 @@ mod: 2
 ### What is TDD?  
 
 TDD, or Test Driven Development, is the concept of writing a series of assertions in a test file BEFORE writing any of the applicable code that supports the tested functionality.
-</section> 
+</section>
 
 <section class="answer">
 ### What are some of the benefits of writing tests?
 
 * *Computers can test things faster and more accurately than humans:* testing things manually in the browser is tedious, error prone and slow
-* *Forces you to slow down and pseudocode:* which helps you think more thoroughly about potential pitfalls *before* you write your code; it's much easier to course-correct yourself before you right any code than to refactor broken code after it's been written
+* *Forces you to slow down and plan it out/pseudocode:* which helps you think more thoroughly about potential pitfalls *before* you write your code; it's much easier to course-correct yourself before you write any code than to refactor broken code after it's been written
 * *Provides a blueprint for new developers to see how the codebase should work:* if your tests are thorough and well-written, a new developer should be able to hop directly into the test folder and get a solid understanding of how each piece of the codebase works
-* *Provides future integrity for your code as you iterate on your application:* applications are never done and can always be improved, added to, pivoted, etc. Tests ensure that as we make these changes, we won't accidentally introduce new bugs
-* *Forces you to write more module, SRP-style code:* often times you'll only recognize opportunities to refactor as you go to write tests for you code and find that it's not testable
+* *Provides future integrity for your code as you iterate on your application:* applications are never done and can always be improved, added to, pivoted, etc. Tests ensure that as these changes are made, new bugs won't accidentally be introduced. *On the job it is very possible that the person making changes/additions to your code will not be you. Your tests protect your code.*
+* *Forces you to write more modular, SRP-style code:* often times you'll only recognize opportunities to refactor as you go to write tests for you code and find that it's not testable. TDD prevents this since the tests are written first
 </section>
 
 <section class="answer">
 ### Are there any downsides to using TDD?  
 
-* *It takes more time to write and maintain your codebase, which slows down development:* this can be problematic if you're working in an environment where meeting deadlines is a top priority (like working in a newsroom)
+* *It takes more time to write your codebase, which slows down development:* this can be problematic if you're working in an environment where meeting deadlines is a top priority (like working in a newsroom)
 * *They don't make the business money:* tests aren't features, and if your company is relying on investors to keep itself going, making progress on the application functionality is going to be of utmost importance
 </section>
 </section>
@@ -117,12 +117,12 @@ reverseWord('turing'); // gnirut
 ```
 </section>
 
-## Reviewing Mocha vs. Chai 
+## Reviewing Mocha vs. Chai
 
 <section class="call-to-action">
 ### In Your Notebook
 
-* What is the difference between Mocha and Chai? 
+* What is the difference between Mocha and Chai?
 * What are each of their responsibilities?
 </section>
 
@@ -144,14 +144,14 @@ describe('unicorn', function() {
 ```
 
 **Chai:**
-* An assertion is the crucial piece of the test that actually checks that when certain pieces of are code are executed, what we're getting back is what we expect. 
+* An assertion is the crucial piece of the test that actually checks that when certain pieces of are code are executed, what we're getting back is what we expect.
 * Although Chai can be inserted into many different testing frameworks, it works seamlessly with Mocha.
 </section>
 
 <section class="note">
 ### A note about the multiple syntax options provided by Chai
 
-![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png) 
+![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png)
 
 Although there are small differences, all three interfaces can accomplish the same task.  As a developer you can choose which version feels best to you.  For example, **expect** provides a function as a starting point for chaining assertions, whereas **should** extends the Object.prototype to provide a single getter as the starting point.  **Expect** works on node.js and all browsers, while **should** does not work in Internet Explorer.  For today we are going to go with the [Expect API](https://www.chaijs.com/api/bdd/).
 </section>
@@ -229,7 +229,7 @@ npm install
 
 <section class="note">
 ### Note
-
+You'll need to use `const chai = require('chai');` to have access to chai.
 If you run into an error like `expect is not defined`, think about where `expect` comes from and how you can access it.
 </section>
 
@@ -276,7 +276,7 @@ Obviously this test isn't doing anything helpful, but we know our files are wire
 </section>
 
 <section class="answer">
-### Test Solution 
+### Test Solution
 
 ```js
 // test/Box-test.js
@@ -298,7 +298,7 @@ describe('Box', function() {
     expect(box.width).to.equal(100);
   });
 
-  it('should have take a height and a width as arguments', function() {
+  it('should be able to take a height and a width as arguments', function() {
     var box = new Box(50, 40);
 
     expect(box.height).to.equal(50);
@@ -315,7 +315,7 @@ describe('Box', function() {
 </section>
 
 <section class="answer">
-### Implementation Solution 
+### Implementation Solution
 
 ```js
 // Box.js  
