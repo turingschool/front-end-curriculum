@@ -42,7 +42,7 @@ TDD, or Test Driven Development, is the concept of writing a series of assertion
 <section class="answer">
 ### Are there any downsides to using TDD?  
 
-* *It takes more time to write and maintain your codebase, which slows down development:* this can be problematic if you're working in an environment where meeting deadlines is a top priority (like working in a newsroom)
+* *It takes more time to write your codebase, which slows down development:* this can be problematic if you're working in an environment where meeting deadlines is a top priority (like working in a newsroom)
 * *They don't make the business money:* tests aren't features, and if your company is relying on investors to keep itself going, making progress on the application functionality is going to be of utmost importance
 </section>
 </section>
