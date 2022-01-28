@@ -229,7 +229,7 @@ npm install
 
 <section class="note">
 ### Note
-
+You'll need to use `const chai = require('chai');` to have access to chai.
 If you run into an error like `expect is not defined`, think about where `expect` comes from and how you can access it.
 </section>
 
@@ -298,7 +298,7 @@ describe('Box', function() {
     expect(box.width).to.equal(100);
   });
 
-  it('should have take a height and a width as arguments', function() {
+  it('should be able to take a height and a width as arguments', function() {
     var box = new Box(50, 40);
 
     expect(box.height).to.equal(50);
