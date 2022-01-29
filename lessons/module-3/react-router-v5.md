@@ -59,9 +59,7 @@ Most of the apps you've written so far have been single-page applications. One H
 If you have written a multi-page application, you may have wrestled with Webpack configs in order to get all your pages built successfully.
 </section>
 
-Fortunately, routing with React is easy! We just need to use a library called <a href="https://reacttraining.com/react-router/web/guides/quick-start" target="_blank">React Router</a>.
-
-> React Router allows us to conditionally render components based on the current url
+Fortunately, routing with React is easy! We just need to use a library called <a href="https://v5.reactrouter.com/web/guides/quick-start" target="_blank">React Router</a>.
 
 ### The Code
 
@@ -75,8 +73,6 @@ git clone https://github.com/turingschool-examples/react-router-v5
 cd react-router-v5
 npm i
 npm start
-
-# open your text editor
 ```
 
 <section class="note">
@@ -102,20 +98,23 @@ Remember that React Router conditionally renders components based on the current
 <section class="call-to-action">
 ### Setting up Router
 
-To use React Router, we need to wrap any components that will use a React Router-provided-component in some kind of [Router component](https://reacttraining.com/react-router/web/guides/primary-components/routers).
+To use React Router, we need to wrap any components that will use a React-Router-provided-component with a [Router component](https://v5.reactrouter.com/web/guides/primary-components).
 
-We'll use a [Browser Router](https://reacttraining.com/react-router/web/api/BrowserRouter), since our app will be used in the browser. This Router provides access to the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). But we won't worry abou those details just yet.
-
-<section class="note">
-### Hint
-We'll come back to this later in the lesson...
-</section>
+We'll use a [Browser Router](https://v5.reactrouter.com/web/api/BrowserRouter) component because our app will be used in the browser. This Router provides access to the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). But we won't worry about those details just yet.
 
 <section class="answer">
 ### The first step is installing react router:
 ```bash
-npm install react-router-dom
+npm install react-router-dom@5.3.0
 ```
+</section>
+
+<section class="note">
+### Router Versioning
+
+The current version of React Router is version 6. In the installation step above, you installed **version 5**. Version 6 of React Router is very different from version 5, and we are learning version 5 in this lesson.
+
+So whenever you setup React Router in your projects, be sure to use this exact installation command (`npm install react-router-dom@5.3.0`). If you use `npm install react-router-dom` without the `@5.3.0` then version 6 will be installed by default, and that will cause a lot of confusion because React Router will not behave as expected for you.
 </section>
 
 <section class="answer">
@@ -227,13 +226,21 @@ Why do you think the `Home` page is rendering at `/puppies`?
 
 ### Render `exact` matches
 
-Check out what happens when you add the [`exact`](https://reacttraining.com/react-router/web/api/Route/exact-bool) prop into one of your Routes.
+Check out what happens when you add the [`exact`](https://v5.reactrouter.com/web/api/Route/exact-bool) prop into one of your Routes.
 
 The `exact` prop can be used to make sure that partial matches of a URL don\'t trigger a render.
 
+<section class="note">
+### Documentation Versioning
+
+As with the installation step, we need to be mindful about which version of documentation we are looking at. Since we installed **version 5** of React Router, we need to view the documentation for version 5 as well.
+
+[This link](https://v5.reactrouter.com/web/guides/quick-start) will take you to the version 5 React Router documentation. Note the `v5` in the URL.
+</section>
+
 ### Render Methods
 
-According to the [docs](https://reacttraining.com/react-router/web/api/Route/route-render-methods), Routes have three possible methods for rendering a component on match:
+According to the [docs](https://v5.reactrouter.com/web/api/Route/route-render-methods), Routes have three possible methods for rendering a component on match:
 - `component`
 - `render`
 - `children`
@@ -315,12 +322,12 @@ export default class App extends Component {
 
 Let's take a close look at what happens when a Route renders.
 
-[Route render methods](https://reacttraining.com/react-router/web/api/Route/route-render-methods) all provide access to [route props](https://reacttraining.com/react-router/web/api/Route/route-props), either automatically to the component they render, or via the callback function that the methods take.
+[Route render methods](https://v5.reactrouter.com/web/api/Route/route-render-methods) all provide access to [route props](https://v5.reactrouter.com/web/api/Route/route-props), either automatically to the component they render, or via the callback function that the methods take.
 
 These props include:
-- [`history`](https://reacttraining.com/react-router/web/api/history)
-- [`location`](https://reacttraining.com/react-router/web/api/location)
-- [`match`](https://reacttraining.com/react-router/web/api/match)
+- [`history`](https://v5.reactrouter.com/web/api/history)
+- [`location`](https://v5.reactrouter.com/web/api/location)
+- [`match`](https://v5.reactrouter.com/web/api/match)
 
 ```jsx
 <Route path='/unicorns' render={ ({ history, location, match }) => <Unicorns /> }
@@ -428,10 +435,6 @@ return (
 ### Helpful Articles / Docs:
 
 - [Routing and Form Submission](https://tylermcginnis.com/react-router-programmatically-navigate/)
-- [Old lesson plan](https://frontend.turing.io/lessons/module-3/react-router-v4.html)
-- [React Router Testing Recipe from RTL](https://testing-library.com/docs/example-react-router)
-- [Memory Router docs](https://reacttraining.com/react-router/web/api/MemoryRouter)
-- [history package docs](https://github.com/ReactTraining/history)
 
 <section class="call-to-action">
 ### Check out this additional information on some Router Components:
@@ -468,7 +471,7 @@ It can take the following attributes:
 * isActive: func
 * location: object
 
-**Read about each of these [here](https://reacttraining.com/react-router/web/api/NavLink)**
+**Read about each of these [here](https://v5.reactrouter.com/web/api/NavLink)**
 
 ```jsx
 <NavLink to='/about'>About</NavLink>
@@ -505,6 +508,6 @@ _Renders the **first** child `<Route>` or `<Redirect>` that matches the location
 </Switch>
 ```
 
-The [docs](https://reacttraining.com/react-router/web/api/Switch) do a great job of quickly showing what Switch is all about.
+The [docs](https://v5.reactrouter.com/web/api/Switch) do a great job of quickly showing what Switch is all about.
 </section>
 </section>
