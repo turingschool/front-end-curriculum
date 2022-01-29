@@ -11,7 +11,7 @@ module: 3
 * Utilize URL params to build dynamic routes
 
 ## Vocab
-* `BrowserRouter` A \<Router\> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL
+* `BrowserRouter` A \<Router\> that uses the HTML5 history API to keep your UI in sync with the URL
 * `Router` The class that \<BrowserRouter\> is extended from
 * `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
 * `Link` Links provide declarative, accessible navigation around your application
@@ -44,22 +44,19 @@ In small groups, discuss the following questions:
 
 ### Why Routing?
 
-**Routing** refers to keeping a webpage up to date with the current url, and vice-versa.
+**Routing** refers to keeping a webpage up to date with the current URL, and vice-versa.
 
 Most of the apps you've written so far have been single-page applications. One HTML page whose content is updated through user interactions and JS. These DO NOT use routing.They work fine, but put some limits on the user experience of our applications.
 
 <section class="answer">
 ### What are some advantages routing can provide?
-- Users can use urls to bookmark pages
+- Users can use URLs to bookmark pages
 - Users can use the back or forward button
 - Users can easily share content from a page in the app
 </section>
 
-<section class="note">
-If you have written a multi-page application, you may have wrestled with Webpack configs in order to get all your pages built successfully.
-</section>
 
-Fortunately, routing with React is easy! We just need to use a library called <a href="https://v5.reactrouter.com/web/guides/quick-start" target="_blank">React Router</a>.
+If you have written a multi-page application, you may have wrestled with Webpack configs in order to get all your pages built successfully. Fortunately, routing with React is easier than managing Webpack configuration! We just need to use a library called <a href="https://v5.reactrouter.com/web/guides/quick-start" target="_blank">React Router</a>.
 
 ### The Code
 
@@ -93,17 +90,16 @@ Get oriented with the application. Check out all the components, try and write a
 
 The `<Home />` component is rendering a welcome message. Right now, nothing but a nav bar is being rendered by the App. Let's use router to render the `<Home />` component as a landing page.
 
-Remember that React Router conditionally renders components based on the current url. So our goal is to **render the <Home /> component when the user is at the base url**.
+Remember that React Router conditionally renders components based on the current URL. So our goal is to **render the <Home /> component when the user is at the base URL**.
 
-<section class="call-to-action">
-### Setting up Router
+### Getting Started
 
 To use React Router, we need to wrap any components that will use a React-Router-provided-component with a [Router component](https://v5.reactrouter.com/web/guides/primary-components).
 
 We'll use a [Browser Router](https://v5.reactrouter.com/web/api/BrowserRouter) component because our app will be used in the browser. This Router provides access to the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). But we won't worry about those details just yet.
 
 <section class="answer">
-### The first step is installing react router:
+### The first step, installing React Router
 ```bash
 npm install react-router-dom@5.3.0
 ```
@@ -118,7 +114,7 @@ So whenever you setup React Router in your projects, be sure to use this exact i
 </section>
 
 <section class="answer">
-### Once you have React Router installed, import your chosen Router.
+### Once React Router is installed, import the chosen Router
 
 ```jsx
 // index.js
@@ -136,7 +132,7 @@ ReactDOM.render(router, document.getElementById('root'));
 </section>
 
 <section class="answer">
-### Finally, add a Route for the `Home`  component into your `App`
+### Finally, add a Route for the `Home` component into your `App` component
 
 ```jsx
 import React, { Component } from 'react';
@@ -164,13 +160,10 @@ export default class App extends Component {
   }
 }
 ```
-We picked `/` for the path in the route becuase it designates that there won't be anything after the URL's domain name. This represents the base url.  
+We picked `/` for the path in the route because it designates that there won't be anything after the URL's domain name. This represents the base URL.  
 
 </section>
 
-</section>
-
----
 ## Exercise # 1: Render Puppies
 
 Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. The page should look something like the picture on the lesson plan. ***While you may change components*** as needed, you shouldn't outright delete content from the page to achieve this.
@@ -178,12 +171,10 @@ Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. T
 <section class="call-to-action">
 ### Take 10 minutes in pairs to get the puppies rendering
 
-<section class="note">
-### Hints:
+#### Hints:
 - Use the Creatures component. Formatting and styling is handled for you.
 - What additional react-router components should you use? Do any current components need to change?
 - How do you pass props into a component rendered by a `<Route />` ?
-</section>
 
 <section class="answer">
 ### Solution
@@ -355,7 +346,7 @@ Now change the line of code above to this:
 </section>
 
 #### `match.params`
-The `params` property of the match prop gives us an object with key value pairs of dynamic url parameters, and any strings that match them.
+The `params` property of the match prop gives us an object with key value pairs of dynamic URL parameters, and any strings that match them.
 
 For instance, we could make our routes for animals more dynamic by doing this:
 
@@ -369,11 +360,11 @@ For instance, we could make our routes for animals more dynamic by doing this:
 />
 ```
 
-and then navigate to either `/puppies` or `/sharks`, we can see that the `<Creatures />` component is rendering the correct data based on the `params` from the url.
+and then navigate to either `/puppies` or `/sharks`, we can see that the `<Creatures />` component is rendering the correct data based on the `params` from the URL.
 
-**`params` allows us to define shapes of a url that will cause a match, then access the data from that url in our components**.
+**`params` allows us to define shapes of a URL that will cause a match, then access the data from that URL in our components**.
 
-This can be great for dynamically rendering content based on things in the url, like an id. Let's do that!
+This can be great for dynamically rendering content based on things in the URL, like an id. Let's do that!
 
 ## Exercise #3: Dynamic Routing
 ---
@@ -385,13 +376,11 @@ Take a look at the CreatureDetails Component. It takes in all data for a given c
 
 For example, the URL `/puppies/1` should render a view just for the puppy with an ID of 1 in the dataset, with all of its details (name, bio, etc)
 
-<section class="note">
-Hints:
+#### Hints:
 - Use the CreatureDetails component
 - What will you need to do to ensure that the URL is updated when you click on a given puppy?
 - How can you access the id from the URL?
 - How can you find a one puppy's data in an array based on its id?
-</section>
 
 <section class="answer">
 ### Solution
