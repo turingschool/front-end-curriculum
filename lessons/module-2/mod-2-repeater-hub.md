@@ -17,7 +17,7 @@ Make sure you are part of the following channels:
 You will be added to a new Homeroom group and are expected to attend Homeroom discussions and Mix It Up on Wednesdays.  You are not required to attend the other PD sessions.  
 Repeating the module is a great opportunity not only to solidify your technical skills but also your professional development skills. [This plan](https://careerdev.turing.edu/module_two/m2_pd_repeat_plan) goes over some suggested ways to approach that.  @allison_reu_singer is always available for support and coaching at the link in her Slack bio. You can reach out to her with any questions you have.  
 
-**Gear Up expectations for repeating mod 1:**  
+**Gear Up expectations for repeating mod 2:**  
 You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters.   
 
 ## FAQs
