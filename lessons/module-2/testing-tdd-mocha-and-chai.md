@@ -222,15 +222,17 @@ npm install
 ```
 
 * Note what files exist in the tests.  Take a look at the `package.json` file as well, noting *devDependencies* and the *scripts*.
-* Move to the `/test/Box-test.js` file, and import our assertion library.
+* Move to the `/test/Box-test.js` file, and import our assertion library (see Note below).
 * Setup your `describe` block, and write a basic dummy test (such as `expect(true).to.equal(true);`) to make sure if everything works correctly.
 * Run `npm test` to see if your test passes.  If not, take note of the error message and try to fix it.
 </section>
 
 <section class="note">
 ### Note
-You'll need to use `const chai = require('chai');` to have access to chai.
-If you run into an error like `expect is not defined`, think about where `expect` comes from and how you can access it.
+You'll need to import Chai, `expect` and your Box class.  
+`const chai = require('chai');` -> gives you access to the Chai assertion library.    
+`const expect = chai.expect;` -> gives you access to the Expect syntax from Chai.  
+`const Box = require('../src/Box');` -> imports your Box class into your test file.
 </section>
 
 <section class="answer">
