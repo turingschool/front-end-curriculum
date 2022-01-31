@@ -79,12 +79,6 @@ Below are ways you can get in additional practice throughout the inning. None of
 </section>
 
 <section class="answer">
-### Local Storage
-
-* [Local Todos](https://github.com/turingschool-examples/local-todos)
-</section>
-
-<section class="answer">
 ### Refactoring
 
 * [Snow Facts](https://codepen.io/hannahhch/pen/QWEPeKb)
