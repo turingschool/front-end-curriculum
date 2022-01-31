@@ -215,7 +215,7 @@ var mythicalCreature = "unicorns";
 var creatureCount = "I have " + quantity + " very fancy " + mythicalCreature;
 ```
 
-In this instance, we're concatenating multiple values including two strings and a variable in order for the sentence to come out as `"I have 3 very fancy unicorns."`  This can make our string more dynamic depending on what value is in the variable.
+In this instance, we're concatenating multiple values including two strings and a variable in order for the sentence to come out as `"I have 3 very fancy unicorns"`.  This can make our string more dynamic depending on what value is in the variable.
 
 #### 2. Interpolation
 
