@@ -8,7 +8,7 @@ tags: js, introduction, object literals, dot notation
 
 * Describe what an object literal is
 * Define properties and methods in an object literal
-* Access values and methods from an object using dot and bracket notation
+* Access values and methods from an object using dot notation
 
 ## Vocabulary
 
@@ -87,7 +87,7 @@ The `school` object has four properties:
 
 Create a new repl.
 
-Declare a new variable called <code>yourName</code> that stores an object literal that represents you! It should have all of the following keys: `name`, `age`, `alive`, and `homeTown`. Give each of those keys an appropriate value.
+Declare a new variable called <code>myInfo</code> that stores an object literal that represents you! It should have all of the following keys: `name`, `age`, `alive`, and `homeTown`. Give each of those keys an appropriate value.
 </section>
 
 ### Access Properties
@@ -104,7 +104,7 @@ var schoolCapacity = school.capacity;
 
 Return to the repl you created with your object.
 
-Practice using dot notation to access each value on your `you` object.
+Practice using dot notation to access each value on your `myInfo` object.
 </section>
 
 <section class="call-to-action">
