@@ -6,21 +6,24 @@ tags: js, introduction, constructor functions, this, classes, objects
 
 ## Learning Goals
 
-* Understand what `this` is and how it changes based on context
-* Understand what a class is and what object instances are
+- Understand what `this` is and how it changes based on context
+- Understand what a class is and what object instances are
 
-## Vocabulary
+## New Vocabulary
+
+- `Property` Another word for a key-value pair on an object
+- `Method` A function on an Object
+- `this` A JavaScript keyword with a value that changes depending on the context in which it's used
+- `Class` A constructor that allows us to create multiple instances
+- `Object Instance` Objects that contain the data and functionality defined in the class
+
+## Familiar or Save-for-Later Vocab
 
 - `Object` A bundle of behavior (methods) and state (properties)
 - `Key` The name used to reference a Value on an Object
 - `Value` The data referenced by a Key
-- `Property` Another word for a key-value pair on an object
-- `Method` A function on an Object
 - `Dot Notation` Notation to access a Value on an Object, explicitly specifies the Key
 - `Bracket Notation` Notation to access a Value on an Object, usually specifies a Key via a variable
-- `this` A JavaScript keyword with a value that changes depending on the context in which it's used
-- `Class` A constructor that allows us to create multiple instances
-- `Object Instance` Objects that contain the data and functionality defined in the class
 
 <section class="call-to-action">
 ### Reconnecting with previous learning
@@ -29,6 +32,7 @@ In your notebook, or wherever you take notes, reflect on the following:
 - What do I already know about instances?
 
 After you've thought about those prompts - add your thoughts to [this Jamboard](https://jamboard.google.com/d/1N_G69-A-4XGHYsJEKC0hfEfWxxGFWpO9lUJmvx_t8SA/edit?usp=sharing)
+
 </section>
 
 ## Introduction to `this`
@@ -41,15 +45,15 @@ var school = {
   capacity: 250,
   languageImmersion: true,
   currentStudents: 75,
-  checkOpenSpots: function() {
+  checkOpenSpots: function () {
     return this.capacity - this.currentStudents;
-  }
+  },
 };
 ```
 
 You may have noticed that we used a familiar word, this, in a strange way in the `checkOpenSpots` method of our `school` object.
 
-Like `var` and `function`, `this` is a special keyword in JavaScript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is ***dependent on the `context` of where it is referenced***.
+Like `var` and `function`, `this` is a special keyword in JavaScript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is **_dependent on the `context` of where it is referenced_**.
 
 <div class="call-to-action">
   <h3>Warm Up</h3>
@@ -58,6 +62,7 @@ Like `var` and `function`, `this` is a special keyword in JavaScript. The value 
 </div>
 
 There are two primary rules of thumb when it comes to `this`:
+
 1. If `this` is used in the context of an object, then `this` refers to and is bound to THE OBJECT itself.
 2. Otherwise, when it is used in the _global context_, `this` refers to the global objects of `document` or `window`.
 
@@ -92,7 +97,7 @@ boom();
 ```javascript
 var width = 600;
 
-var showWidth = function() {
+var showWidth = function () {
   console.log(this.width);
 };
 
@@ -107,12 +112,11 @@ Since `room` is an object, anytime `this` is referenced inside of `room`, the co
 var room = {
   width: 800,
   height: 400,
-  getArea: function() {
+  getArea: function () {
     console.log("in the room object", this);
     return this.width * this.height;
   },
 };
-
 ```
 
 <section class="call-to-action">
@@ -131,15 +135,13 @@ This is where classes come in. **Classes** can serve as object factories that al
 The syntax for defining a class is as follows:
 
 ```javascript
-class NameOfClass {
-}
+class NameOfClass {}
 ```
 
 So, for example, if we wanted to create a Laptop class, we could do the following:
 
 ```javascript
-class Laptop {
-}
+class Laptop {}
 ```
 
 Generally we will want to put more information in our classes to make them useful to us, but those two lines (even with no other information) will create a class.
@@ -149,13 +151,12 @@ Generally we will want to put more information in our classes to make them usefu
 Let's practice together with a Fridge class.
 
 ```javascript
-class Fridge {
-}
+class Fridge {}
 
 var fridge1 = new Fridge();
 console.log(fridge1);
 
-var fridge2  = new Fridge();
+var fridge2 = new Fridge();
 console.log(fridge2);
 ```
 
@@ -164,6 +165,7 @@ We can run this to see what the fridges are showing at this point. We currently 
 <section class="call-to-action">
 
 ### Practice: Creating Object Instances
+
 - In a brand-new repl file, define a `Laptop` class, then create 2-3 object instances from that class.
 - Keep this repl file open in a tab; we will come back to it throughout the next few sections of class.
 </section>
@@ -184,7 +186,7 @@ This method is run **once and only once** during an object instance's lifetime, 
 
 ## Modeling State with Properties
 
-The object instances of the classes we've defined so far are basically useless. Remember, objects are useful because they can store *state* and *behavior*. Let's give our refrigerator some state.
+The object instances of the classes we've defined so far are basically useless. Remember, objects are useful because they can store _state_ and _behavior_. Let's give our refrigerator some state.
 
 We can leverage our good friend `this` to add some properties to our instances. Inside of a class, `this` refers to an instance of that class.
 
@@ -195,8 +197,8 @@ For instance, if we wanted to use a class to create a pizza object, here's what 
 var pizza1 = {
   crust: "thin",
   sauce: "red",
-  toppings: ["cheese", "pepperoni", "black olives"]
-}
+  toppings: ["cheese", "pepperoni", "black olives"],
+};
 
 // class
 class Pizza {
@@ -226,7 +228,11 @@ class Fridge {
 Now we are able to actually create some fridges with some variation. Let's try creating a couple of instances in our repl.
 
 ```javascript
-var fridge1 = new Fridge("silver", 36, true, ["spinach", "chicken", "strawberries"]);
+var fridge1 = new Fridge("silver", 36, true, [
+  "spinach",
+  "chicken",
+  "strawberries",
+]);
 var fridge2 = new Fridge("black", 40, true, []);
 ```
 
@@ -235,7 +241,9 @@ Note that the arguments that we pass to our `Class()` are order dependent.
 <section class="call-to-action">
 
 ### Practice: Adding Attributes
+
 Build on the Laptop class you started earlier. Give your `Laptop` class some attributes and create some instances of Laptop.
+
 </section>
 
 ## Implementing Behavior with Methods
@@ -269,6 +277,7 @@ class Fridge {
 <section class="call-to-action">
 
 ### Turn & Talk
+
 - How would one invoke the `removeStench` function/method? Be specific.
 - Describe, in detail, what the `removeStench` function/method does, and how it does it.
 - How would one invoke the `adjustTemperature` function/method? Describe, in detail, what the `adjustTemperature` function/method does, and how it does it.
@@ -279,10 +288,9 @@ class Fridge {
 <section class="call-to-action">
 
 ### Practice: Adding Behavior
-With your partner, create a `turnOn` method for your Laptop class. This should set the power of that laptop to *true*.
+
+With your partner, create a `turnOn` method for your Laptop class. This should set the power of that laptop to _true_.
 
 Finished Early? Complete the exercise in [this repl](https://repl.it/@ameseee/Classes-Extra-Practice). Remember, the quantity of work you get through is not what matters most, it's the depth of your understanding and ability to articulate your understanding of how things are working. Don't race through this and do continue to talk through each line with your partner!
+
 </section>
-
-
-
