@@ -20,7 +20,7 @@ ES5 is comfortable and familiar, but ES6 gives us a lot of great [new features](
 Constructing strings while interpolating variables:
 
 ```js
-// es5 
+// es5
 var name = 'Brittany';
 var greeting = 'Hello' + name + '!';
 
@@ -73,16 +73,16 @@ We can map over that array to create new arrays of `odds`, `pairs`, and `nums`:
 
 ```
 // es5 syntax examples
-var odds = evens.map(function (num) { 
-  return num + 1; 
+var odds = evens.map(function (num) {
+  return num + 1;
 });
 
 var pairs = evens.map(function (num) {   
-  return { even: num, odd: num + 1 }; 
+  return { even: num, odd: num + 1 };
 });
 
-var nums = evens.map(function (num, i) { 
-  return num + i; 
+var nums = evens.map(function (num, i) {
+  return num + i;
 });
 
 var fives = [];
@@ -96,15 +96,15 @@ nums.forEach(function (num) {
 Compare that to arrow function syntax:
 
 ```
-var odds = evens.map(num => 
+var odds = evens.map(num =>
   num + 1
 );
 
-var pairs = evens.map(num => 
+var pairs = evens.map(num =>
   ({ even: num, odd: num + 1 })
 );
 
-var nums = evens.map((num, i) => 
+var nums = evens.map((num, i) =>
   num + i
 );
 
@@ -123,7 +123,7 @@ Here are some features arrow functions give you:
   * multiple lines or expressions in an arrow function require the curly braces and the keyword `return`
 * drop the parentheses around a single parameter
   * if using multiple parameters or no paremeters, the parentheses must be used
-  
+
 To name an arrow function, you must save it as a variable.
 
 ```
@@ -267,3 +267,4 @@ You can read more about destructuring and the things it can do [here](https://de
 * Babel (ES6 -> ES5)		  [https://babeljs.io/repl/](https://babeljs.io/repl/)
 * ES6 Features 		    	  [http://es6-features.org](http://es6-features.org)
 * Browser Compatability		[https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
+* [Slides](https://docs.google.com/presentation/d/1HulXmc44bvbBEUgkd9A_78YEQudlXUKajMc1TlhSbLk/edit#slide=id.g11271f5cac0_0_137) showing the same function with varying ES5/ES6 syntax

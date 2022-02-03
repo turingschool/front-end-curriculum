@@ -63,8 +63,8 @@ const kittens = [
 ];
 ```
 
-* Given an array of kittens, write out an arrow function that takes an `index` as an argument, and returns the name of that specific kitten.
-* Using the same array of kittens, write out another arrow function that takes an `index` AND a `detail` (i.e. a property) that returns that kitten's specific detail.
+* Given an array of kittens, write out a function that takes an `index` as an argument, and returns the name of that specific kitten.
+* Using the same array of kittens, write out another a function that takes an `index` AND a `detail` (i.e. a property) that returns that kitten's specific detail.
 </section>
 
 <section class="answer">
@@ -107,7 +107,7 @@ const rubric = {
 };
 ```
 
-* Setup an arrow function to take a `skill` (key) and `level` (value) and add them as a key value pair to the rubric.
+* Setup a function to take a `skill` (key) and `level` (value) and add them as a key value pair to the rubric.
 </section>
 
 <section class="answer">
