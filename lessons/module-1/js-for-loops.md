@@ -24,7 +24,7 @@ tags: javascript, foundation, arrays, loops
 In a repl.it, declare a variable that stores an array, and `console.log` it. Your array should contain 3 or more JavaScript objects as its elements. Some ideas:
 
 - A list of your friends (and their birthdays or hobbies)
-- A list of Hogwarts students (name, House, "cool" status)
+- A list of characters from your favorite show or movie, and their best quotes
 
 Or, if you're not feeling creative, you can take the example below as a starter and modify it a bit:
 
@@ -54,15 +54,17 @@ var pets = [
 <section class="call-to-action">
 
 ### Part 2 - Warm Up, Explore
+  
+A reminder as we start this lesson: remember that it's okay to make a mess. We learn by trying and screwing up and debugging!
 
 Once in your breakout room, trade repl.it links with your partner. This way, you are each exposed to a new array that you will work with during activity. You will each need to fork the repl.it.
 
 - Take a moment to familiarize yourself with the array your partner declared
 
-For each step that follows, make sure to `console.log` the value(s) you are accessing/have changed!
+For each step that follows, make sure to `console.log` the value(s) you are accessing or updating!
 - Access the first element in the array
 - Access a value from the second element (an object) in the array
-- Update a value from the third element in the array
+- Update a property of the third element in the array (change the value of one of the keys in the object)
 
 If you finish before your partner, add another object to the array. Log it to the console to make sure it is stored properly.
 
@@ -87,7 +89,7 @@ Leta
 // the ordering of the names is not a typo!
 ```
 
-You can write the code in the same repl.it or a new one. Be ready to share your code with the whole group!
+You can write the code in the same repl.it or a new one. Be ready to share your code with your breakout room!
 
 _(Without using a loop)_ Can you come up with another solution in your code to get the same outcome? If so, be ready to share out. If not, be ready to explain why that was a challenge.
 </section>
@@ -123,9 +125,9 @@ If we break this down, we see that our loop is constructed from the following pa
 
 Let's dig into the three statements separated by semicolons that make up or our conditions:
 
-- We begin with **initialization**. Where do we want our loop to start? The first statement `var i = 0;` creates a variable that is assigned the value of 0. This variable is commonly named `i`, or `index`, and will act as the counter. It is created the first time the loop is run.  
-- The next statement **sets the condition** that tells the loop when to stop running: `i < 10;`. In this case, the condition indicates that the loop will stop when `i` equals 10. The condition may use a variable that is assigned a value.
-- Finally, with the statement `i++` we **update the value** of our counter `i`. This adds 1 to the value of `i`. This syntax is using the increment operator `++`, which is a way of writing `i = i + 1`. It is also possible to decrement downwards using the decrement operator `--`, which is a way of writing `i = i - 1`.
+1. We begin with **initialization**. Where do we want our loop to start? The first statement `var i = 0;` creates a variable that is assigned the value of 0. This variable is commonly named `i`, or `index`, and will act as the counter. It is created the first time the loop is run.  
+2. The next statement **sets the condition** that tells the loop when to stop running: `i < 10;`. In this case, the condition indicates that the loop will stop when `i` equals 10. The condition may use a variable that is assigned a value.
+3. Finally, with the statement `i++` we **update the value** of our counter `i`. This adds 1 to the value of `i`. This syntax is using the increment operator `++`, which is a way of writing `i = i + 1`. It is also possible to decrement downwards using the decrement operator `--`, which is a way of writing `i = i - 1`.
 
 The statement within the curly braces executes each time the loop runs. In this case, we can see we are logging the value of `i` to the console.
 
@@ -160,9 +162,9 @@ Now, type out the function above (yes, actually type it! This is a great opportu
 
 `.forEach()`, `.map()`, `.find()`, `.filter()`, `.reduce()`
 
-These are known as *iterator methods* and they each have their own uses and behaviors. They were all built into the JavaScript language with a `for` loop!
+These are known as *iterator methods* and they each have their own uses and behaviors. They were all written into the JavaScript language with a `for` loop!
 
-During your time in Mod 1, we'd like you to **only** use `for` loops when you need to iterate over an array. This is not to needlessly make your life harder. The main reason for this request is so that the logic that is applied during each step of the loop must be written explicitly by you, instead of letting the architects of those methods do that work for you. Also, it's not unlikely that in a different language you work in on the job, you won't have such handy methods available. Everything in Mod 1 can be completed with your pal `for` loop! You will get lessons and then extensive practice and experience with the iterator methods in Mods 2-4.
+During your time in Mod 1, we'd like you to **only** use `for` loops when you need to iterate over an array. This is not to needlessly make your life harder. The main reason for this request is so that the logic that is applied during each step of the loop must be written explicitly by you, instead of letting the architects of those iterator methods do that work for you. Also, it's not unlikely that in a different language you work in on the job, you won't have such handy methods available. Everything in Mod 1 can be completed with your pal `for` loop! You will get lessons and then extensive practice and experience with the iterator methods in Mods 2-4.
 </section>
 
 <section class="call-to-action">
@@ -279,12 +281,12 @@ Some ideas, but don't feel limited to these:
 You will submit your solution to the code challenge and educational resource as your exit ticket in a [private Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeQ-PUzJ-8QthmAt6UgZDrwfuUYp7mLzWd9ddt4UOwD8p590A/viewform). We'll ask for volunteers to share out their educational resources when we come back together! -->
 </section>
 
-### Additional Practice  
+### Additional Practice (Optional)
 
 * [Leveled Array Practice](array-practice.html)
 * [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) lets you experiment more with these concepts.
 
-### Dig Deeper  
+### More Resources
 
 * [JS Style Guide](https://github.com/turingschool-examples/javascript)
 * [Seven JS Quirks I Wish I'd Known About](http://developer.telerik.com/featured/seven-javascript-quirks-i-wish-id-known-about/#expdec)  
