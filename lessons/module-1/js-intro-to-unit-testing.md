@@ -9,7 +9,7 @@ tags: javascript, testing, tdd, mocha, chai
 * Learn a few of the various types of tests
 * Recognize the importance of Test Driven Development (TDD)
 * Understand the red/green testing workflow
-* Gain the ability to read and write tests
+* Gain the ability to read and pass tests
 
 ## Vocabulary
 
@@ -153,7 +153,7 @@ When we are testing code, it's usually best to have the implementation code pull
 Eventually, we'll be writing our own tests, but for now we'll
 start with some prewritten tests. This allows us to see the process, and get some practice reading error messages
 
-Head over to [that same repository](https://github.com/turingschool-examples/first-unit-tests) and begin to folow the TDD workflow - fail the tests, then write the code to pass 'em!
+Head over to [that same repository](https://github.com/turingschool-examples/first-unit-tests) and begin to follow the TDD workflow - fail the tests, then write the code to pass 'em!
 
 <section class="checks-for-understanding">
 ### Wrap Up
