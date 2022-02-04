@@ -166,10 +166,10 @@ The expectation for Mod 2 is that you will avoid using `async/await`.  We know `
 
 | Data Type | Verb | URL |  
 |---|---|---|  
-| User Data |GET | https://pacific-badlands-43237.herokuapp.com/api/v1/users |  
-| Sleep Data | GET | https://pacific-badlands-43237.herokuapp.com/api/v1/sleep |  
-| Activity Data | GET | https://pacific-badlands-43237.herokuapp.com/api/v1/activity |  
-| Hydration Data | GET | https://pacific-badlands-43237.herokuapp.com/api/v1/hydration |  
+| User Data |GET | https://fitlit-api.herokuapp.com/api/v1/users |  
+| Sleep Data | GET | https://fitlit-api.herokuapp.com/api/v1/sleep |  
+| Activity Data | GET | https://fitlit-api.herokuapp.com/api/v1/activity |  
+| Hydration Data | GET | https://fitlit-api.herokuapp.com/api/v1/hydration |  
 
 Once you've got fetch working, you can delete your hardcoded data file!
 
