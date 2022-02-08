@@ -9,7 +9,8 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 * Understand the difference between synchronous and asynchronous operations
 * Be familiar with the fetch API
 * Understand how network requests work
-* Know what a `GET`request does and how to use it
+* Understand the various levels of HTTP status codes
+* Know what a `GET` request does and how to use it
 
 ### Vocab
 
@@ -167,7 +168,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 ```
 
 * What do you get when you log the response object?  Take note of the properties there.
-* There's one problem: we can't seem to get the data we want from the Response.body.  How is data sent through requests and responses?  Think back to `localStorage` in mod 1 and what you had to do in order to access data.
+* There's one problem: we can't seem to get the data we want from the Response.body.  How is data sent through requests and responses?
 </section>
 
 <section class="answer">
