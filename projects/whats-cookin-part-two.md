@@ -6,7 +6,7 @@ tags: javascript, oop, mocha, testing, fetch, sass
 ## Goals and Objectives
 
 * Work with a local server and make network requests to API endpoints to retrieve and manipulate data.
-* Refactor your code and use inheritance to DRY up repetitive logic
+* Refactor your code to DRY up repetitive logic
 * Ensure your app follows best practices for accessibility
 * Leverage Sass to DRY up your CSS
 * Practice talking about your code and high level technical concepts
@@ -113,11 +113,10 @@ Make proper error handling for your users to ensure they get data and submit the
 
 ---
 
-### Inheritance & Refactoring
+### Refactoring
 
 * Identify redundant code in your classes and opportunities for DRYing it up
 * Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior.
-* Refactor **across** your classes to create a parent class that others inherit methods from as appropriate **OR** be able to defend your choice for *not* using inheritance.
 
 ---
 
