@@ -14,7 +14,7 @@ module: 2
 ### Vocab
 * `README` - File that reviews what the repo is used for, instructions for setting up repo, snapshot overview of the repo.
 * `Project Board` - Tool used to organize work left to do, in progress, and work that is done for a project.
-* `User Story` - Often a user facing story, that describes a piece of functionality in the app using the `Given, When, Then` syntax. `e.g Given I am on the login screen When I enter my username and password And click on login, Then I expect to be redirected to the home page. ` 
+* `User Story` - Often a user facing story, that describes a piece of functionality in the app using the `Given, When, Then` syntax. `e.g Given I am on the login screen When I enter my username and password And click on login, Then I expect to be redirected to the home page. `
 
 ### Warm Up
 
@@ -43,7 +43,7 @@ There are a lot of articles out there with different opinions on what *should* b
 
 ## Exploring & Filing GH Issues
 
-GH issues are a great way to keep track of tasks, enhancements, and bugs for your projects. Most projects that you work on use some kind of project board (e.g. Waffle, Trello, Jira, etc.) to organize and share progress and information across the team. These trackers often connect directly to GitHub issues, but offer a more robust UI experience.
+GH issues are a great way to keep track of tasks, enhancements, and bugs for your projects. Most projects that you work on use some kind of project board (e.g. GH Projects, Trello, Jira, etc.) to organize and share progress and information across the team. These trackers often connect directly to GitHub issues, but offer a more robust UI experience.
 
 Filing issues is an important part of the workflow process. It allows you to:
 
@@ -198,3 +198,4 @@ Answer the following in your journal:
 
 ### Additional Resources
 * [Issue Strategies](https://guides.github.com/features/issues/)
+* [Beginners Guide to writing a Kickass README](https://meakaakka.medium.com/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3)

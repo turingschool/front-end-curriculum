@@ -222,15 +222,17 @@ npm install
 ```
 
 * Note what files exist in the tests.  Take a look at the `package.json` file as well, noting *devDependencies* and the *scripts*.
-* Move to the `/test/Box-test.js` file, and import our assertion library.
-* Setup your `describe` block, and write a basic dummy test (such as `expect(true).to.equal(true);`) to make sure if everything works correctly.
+* Move to the `/test/Box-test.js` file, and import our assertion library (see Note below).
+* Setup your `describe` block, and write a basic dummy test (such as `expect(true).to.equal(true);`). This test should pass to make sure everything is linking/working correctly.
 * Run `npm test` to see if your test passes.  If not, take note of the error message and try to fix it.
 </section>
 
 <section class="note">
 ### Note
-You'll need to use `const chai = require('chai');` to have access to chai.
-If you run into an error like `expect is not defined`, think about where `expect` comes from and how you can access it.
+You'll need to import Chai, `expect` and your Box class.  
+`const chai = require('chai');` -> gives you access to the Chai assertion library.    
+`const expect = chai.expect;` -> gives you access to the Expect syntax from Chai.  
+`const Box = require('../src/Box');` -> imports your Box class into your test file.
 </section>
 
 <section class="answer">
@@ -262,7 +264,11 @@ Box
 
 ## Testing Practice: Iteration 1  
 
-Obviously this test isn't doing anything helpful, but we know our files are wired up. Let's add some more interesting tests. Let's pretend we just received a spec, and the first iteration looks something like this:
+Obviously this test isn't doing anything helpful, but we know our files are wired up. Let's add some more interesting tests.
+
+Work through the following iterations using TDD - meaning you will write the test first, then write the implementation code to pass each test.  
+
+Let's pretend we just received a spec, and the first iteration looks something like this:
 
 <section class="call-to-action">
 ### Iteration 1
