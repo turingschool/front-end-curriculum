@@ -201,6 +201,7 @@ As you may have noticed, your `Game` class has two methods fleshed out already: 
     * invokes `printQuestion` to kick off our helper functions that allow interaction via the CLI
 
     _Note: The helper functions are all fleshed out and fit to work with classes/methods that meet the requirements in the past iterations._
+- Your `game.start()` method should be invoked to make the game playable.
 
 <section class="answer">
 ### For Example  
@@ -263,8 +264,8 @@ Collaborate with instructors to personalize an extension for this project
 
 ### Test-Driven Development
 * 4: Application is broken into components, good use of own data, good happy and sad path testing. Has consistent use of beforeEach to DRY up tests.
-* 3: Application is well tested, but some coverage might be lacking. Smaller data files are used for testing instead of the entire data file.
-* 2: Application makes some use of tests, but the coverage is insufficient given project requirements.
+* 3: Application is well tested, but some coverage might be lacking. Smaller data files are used for testing instead of the entire data file. Some use of beforeEach to DRY up tests.
+* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. No use of beforeEach to DRY up tests.
 * 1: Application does not demonstrate strong use of TDD.
 
 ## Repeaters
