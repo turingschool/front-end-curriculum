@@ -8,7 +8,6 @@ tags: javascript, oop, mocha, testing, fetch, sass
 * Work with a local server and make network requests to API endpoints to retrieve and manipulate data.
 * Refactor your code to DRY up repetitive logic
 * Ensure your app follows best practices for accessibility
-* Leverage Sass to DRY up your CSS
 * Practice talking about your code and high level technical concepts
 * Implement feedback to improve product and process.
 
@@ -27,7 +26,6 @@ _NOTE: Creating the project demo video is a requirement, but attending and submi
 
 ## New Technologies + Tools
 
-* Sass
 * Lighthouse Accessibility Audit
 
 ---
@@ -148,19 +146,6 @@ Any DOM updating functionality will then be imported into your `scripts.js` file
 
 ---
 
-### Sass
-
-Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an `index.scss` file that imports your partials, and a `variables.scss` file that contains any of your Sass variables or function definitions.  You should also include a [normalize or reset](https://frontend.turing.io/lessons/module-1/reset-vs-normalize.html){:target='blank'} file to help with cross browser compatibility.  Identify common/re-used elements on your page to determine the remaining partials you might want.
-
-Your Sass should be making use of:
-
-* separate files
-* variables for colors, fonts, etc.
-* nesting, when/where appropriate
-* at least **two** mixins or extends
-
----
-
 ### Accessibility
 
 * You must be able to tab through your app and use it without a mouse
@@ -194,8 +179,9 @@ In addition to your refactoring, you also want to make sure the application is f
 * If you didn't get a chance to experiment with an NPM package in [Part One](https://frontend.turing.edu/projects/whats-cookin-part-one.html), try one out here! Remember to revist the list of approved NPM packages, or run a new one by your project manager first.
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
 * Create a video of your team navigating through your app via a keyboard and screen reader.
-* Implement an animation using CSS and Sass and/or make your application responsive on smaller screen sizes.
+* Implement an animation using CSS and/or make your application responsive on smaller screen sizes.
 * Create and implement a new feature for your application (run this by instructors first).
+* Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an index.scss file that imports your partials, and a variables.scss file that contains any of your Sass variables or function definitions. Identify common/re-used elements on your page to determine the remaining partials you might want. Your Sass could potentially make use of variables, nesting, mixins and/or extends
 
 ---
 
@@ -217,12 +203,6 @@ In addition to your refactoring, you also want to make sure the application is f
 * 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.  Tests must be passing to be considered.
 * 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation. Tests must be passing to be considered.
 * 1: Tests have not been updated to reflect changes made in refactor. There is not enough test coverage, and some tests might be failing.
-
-## Sass
-* 4: Application fulfills all requirements previously mentioned, and has Sass functionality that goes above and beyond an MVP (see extensions).
-* 3: The application has well-factored Sass with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
-* 2: Application adds organization for the whole stylesheet and within rules, but multiple Sass files have not been utilized. All Sass code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags.
-* 1: The application makes little to no use of Sass and is not separated into logical stylesheets. There are many instances of duplication.
 
 ## Accessibility
 * 4: Has an audit score of 100% and has gone above and beyond accessibility requirements (see extensions).
