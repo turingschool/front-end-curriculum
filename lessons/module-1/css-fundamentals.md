@@ -141,28 +141,11 @@ If you have time left, see what else you can change or add with CSS!
 
 ## Recreating Comps
 
-We can apply all the margin and padding we want, but when it comes down to it, many times Front End Developers are tasked with re-creating something a designer has provided them with, commonly called "comps". Let's use our tools to build something professional-grade.
+We can apply all the margin and padding we want, but when it comes down to it, many times Front End Developers are tasked with re-creating something a designer has provided them with, commonly called "comps". Let's use our tools to build something professional-grade.  
 
-The screen shots below are taken from the "Your Orders" page from Amazon.
+Throughout both lessons today, you are going to work on recreating a piece of the [Imperfect Foods website](https://try.imperfectfoods.com/overview).  
 
-<img class="medium" src="./assets/images/css/amazon-order.png">
-<img class="medium" src="./assets/images/css/amazon-buttons.png">
-
-<section class="call-to-action">
-### Recreating Amazon Buttons
-
-With your partner, decide who will drive and who will navigate.
-
-First, work to recreate the "Track package" button. Since the focus is box model, do not worry about the slight linear gradient in the background color; just use `#f0c14b` and `#846a29` for the border. Things to keep in mind:
-  - Approximately what percentage of the button do the words take up on Amazon's button? How closely does yours match that?
-  - About how much space is between the top of the letter and the top border?
-  - How thick is the border?
-  - What do the corners of the button look like?
-
-Now, work to recreate the 4 grey buttons. You already have a lot to work with from the code you wrote for the first one. Use `#e7e9ec` for the background and `#A2A6AC` for the border. Things to keep in mind:
-  - How much space is between each grey button?
-  - How much space is between the yellow and first grey button?
-</section>
+You will have one hour to work on `iteration 1` of [this activity](https://github.com/kaylagordon/css-intro-imperfectfoods). You will work on `iteration 2` this afternoon, after you've learned about Flexbox.
 
 ## Wrap Up
 

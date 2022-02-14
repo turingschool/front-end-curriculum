@@ -189,15 +189,7 @@ If flex isn't working the way you think it should, check the following things:
 
 ## Recreating a Comp
 
-<section class="call-to-action">
-### Instructions
-
-1. Fork [this codepen](https://codepen.io/kaylaewood/pen/wvgmOmV)
-3. Re-create the following comp. Start by building out the HTML. Then, work slowly through the CSS.
-</section>
-
-#### The Comp
-<img class="medium-large" src="./assets/images/flexbox/comp.png">
+We will now continue working on the comp from this morning. You will have one hour to work on `iteration 2` of [this activity](https://github.com/kaylagordon/css-intro-imperfectfoods). 
 
 ## Additional Resources
 
