@@ -34,6 +34,7 @@ Add your thoughts and questions to [this google document](https://docs.google.co
 
 
 ## What is CSS?
+CSS can do SO MUCH more than just add color or make things pretty. CSS can be used to create artwork like [this project](https://www.cssartist.com/inprogress) by Kassandra Sanchez. CSS can also make complex processes more intuitive and accessible users, like [TurboTax](https://turbotax.intuit.com/personal-taxes/online/) and [airbnb](https://www.airbnb.com/). CSS is a powerful tool for frontend developers. Let's jump in to see how it works!  
 
 It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ HTML element. In addition to the plain old element names themselves, these attributes allow you to create "targets" for both your CSS and JavaScript. They are hooks that you can use to manipulate the look and behavior of your HTML elements.
 
