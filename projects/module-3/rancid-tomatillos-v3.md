@@ -250,11 +250,7 @@ You are welcome to come up with your own ideas, too.
 
 ### PROJECT DUE DATE: 6pm Monday of Week 3
 
-On Tuesday, instructors will post a link to a gist in the cohort slack channel. Please add a comment to that gist with:
-
-- Both project partners' names
-- A link to your project repo
-- If applicable: any links to back-end repo and/or deployed site
+If you have created a back-end repo and/or deployed your front-end, then add links to the deployed app or additional repos in your front-end README.
 
 <section class="note">
 ### Project Evals
@@ -364,40 +360,3 @@ You will not receive a score for professionalism, but you should be meeting thes
 * Team members do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging
 * Evolution of the project (decisions made, etc) are fully and clearly documented in the git history and PRs
 * When the project is run locally, the terminal shows no errors or warnings
-
-
-<!-- ### Project Professionalism
-
-The goal of this rubric section is to continue to gauge your readiness and prepare you for workplace standards. As you ramp up your job hunt, it becomes increasingly important to demonstrate to future employers that you are not sloppy and take care with the details of your work and processes!
-
-* **4:**
-  - README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
-  - README links to all user GitHub profiles and any applicable repos/deployed sites
-  - Team uses a rebase workflow
-  - Git commits are atomic, with concise and precise descriptions of the change made
-  - PRs have full, consistent descriptions
-  - Team members do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging
-  - Evolution of the project (decisions made, etc) are fully and clearly documented in the git history and PRs
-  - When the project is run locally, the terminal shows no errors or warnings
-* **3:**
-  - README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
-  - README links to all user GitHub profiles and any applicable repos/deployed sites
-  - Git commits are atomic, with concise and precise descriptions of the change made
-  - PRs have full, consistent descriptions
-  - Team members do some code reviews of PRs, but are not always thorough or consistent
-  - Evolution of the project (decisions made, etc) is documented in the git history and PRs but is sometimes unclear
-  - When the project is run locally, the terminal shows no errors and fewer than 5 warnings
-* **2:**
-  - README concisely communicates the team's individual and joint learning goals and the evolution of the project, but does not use Markdown formatting to aid readability
-  - README links to all user GitHub profiles and any applicable repos/deployed sites
-  - Git commits are mostly atomic but sometimes document changesets that are too large
-  - PRs do not have thorough descriptions
-  - Team members mostly do not do code reviews on PRs
-  - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
-  - When the project is run locally, the terminal shows no errors and more than 5 warnings
-* **1:**
-  - README does not document the team's individual and joint learning goals, the evolution of the project, and is poorly formatted (hindering readability)
-  - README does not include links to team member's GitHub profiles
-  - Git commits are not atomic and document changesets that are too large
-  - PRs do not have thorough descriptions, and no code reviews are conducted, merging bugs into the main branch
-  - When the project is run locally, the terminal shows errors and more than 5 warnings -->
