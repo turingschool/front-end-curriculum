@@ -201,6 +201,7 @@ As you may have noticed, your `Game` class has two methods fleshed out already: 
     * invokes `printQuestion` to kick off our helper functions that allow interaction via the CLI
 
     _Note: The helper functions are all fleshed out and fit to work with classes/methods that meet the requirements in the past iterations._
+- Your `game.start()` method should be invoked to make the game playable.
 
 <section class="answer">
 ### For Example  
@@ -250,21 +251,21 @@ Collaborate with instructors to personalize an extension for this project
 ## Evaluation Rubric
 
 ### Functional Expectations
-* 4: Application fulfills all expectations of iterations 1 - 4 (at least one extension) with no bugs, crashes, or missing functionality.
-* 3: Application fulfills expectations of iterations 1 - 3 with no bugs, crashes, or missing functionality.
+* 4: Application fulfills all expectations of iterations 1 - 4 (at least one extension) with no bugs, crashes, or missing functionality. Game must be playable in the console.
+* 3: Application fulfills expectations of iterations 1 - 3 with no bugs, crashes, or missing functionality.  Game must be playable in the console.
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage.
 
 ### Fundamental JavaScript & Style
-* 4: Application demonstrates excellent knowledge of Javascript syntax, style, and refactoring.
-* 3: Application shows strong effort towards organization, content, and refactoring.
+* 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring.
+* 3: Application shows strong effort towards organization, content, and refactoring. Leverages JavaScript's truthy/falsey principles to write concise conditional logic. Does not use for loops.
 * 2: Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.
 * 1: Application generates syntax error or crashes during execution.
 
 ### Test-Driven Development
 * 4: Application is broken into components, good use of own data, good happy and sad path testing. Has consistent use of beforeEach to DRY up tests.
-* 3: Application is well tested, but some coverage might be lacking. Smaller data files are used for testing instead of the entire data file.
-* 2: Application makes some use of tests, but the coverage is insufficient given project requirements.
+* 3: Application is well tested, but some coverage might be lacking. Smaller data files are used for testing instead of the entire data file. Some use of beforeEach to DRY up tests.
+* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. No use of beforeEach to DRY up tests.
 * 1: Application does not demonstrate strong use of TDD.
 
 ## Repeaters
