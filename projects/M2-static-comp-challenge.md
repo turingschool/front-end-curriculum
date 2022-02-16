@@ -24,8 +24,7 @@ You may NOT take liberties with the layout, but your creative license includes:
 * Images
 * Icons
 * [Fonts](https://fonts.google.com/)
-* Color palette, but ONLY if you select a complementary palette. We highly encourage you to visit sites like: [material palette](https://www.materialpalette.com/) or [coolors](https://coolors.co/) or [color-hex](http://www.color-hex.com/color-palettes/)
-* Etc. 
+* Color palette, but ONLY if you select a complementary palette. We highly encourage you to visit sites like: [material palette](https://www.materialpalette.com/) or [coolors](https://coolors.co/) or [color-hex](http://www.color-hex.com/color-palettes/). 
 
 ***
 
