@@ -13,7 +13,7 @@ If you're interested in the default CSS styles that are applied in your browser,
 
 * [Chrome](http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css)
 * [Firefox](https://dxr.mozilla.org/mozilla-central/source/layout/style/res/html.css)
-* [Internet Explorer](http://www.iecss.com/)
+* [Internet Explorer](http://web.archive.org/web/20170122223926/http://www.iecss.com/)
 
 There are two approaches used to reconstruct our styles: **resetting** the default styles and **normalizing** the default styles.
 
