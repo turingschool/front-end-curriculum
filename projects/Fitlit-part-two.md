@@ -16,25 +16,24 @@ In this project, you will use your project from Fitlit' (Part One) and build on 
 ## Timeline
 Dates and deadlines to be aware of:
 
-* **Monday of Week 4** -  Project kickoff
-* **Tuesday of Week 4** - Have your project board updated with new tickets (*DTR should also already be completed but you should review and edit.*).  
+* **Tuesday of Week 4** -  Project kickoff
+* **Wednesday of Week 4** - Have your project board updated with new tickets (*DTR should also already be completed but you should review and edit based on the result of your project retro.*).  
 * **Monday of Week 5** - Project and video due at 9PM(MST)
 * **Tuesday of Week 5** - Project evaluations
-* **Tuesday of Week 5** - Project demo watch party (optional to attend)
+* **Tuesday of Week 5** - (TBD)Project demo watch party (optional to attend)
 
 _NOTE: Creating the project demo video is a requirement, but attending and submitting your video in the watch party is optional. Instructions can be found [here](https://frontend.turing.edu/projects/project-demo-pair.html)_
 
 ## New Technologies + Tools
 
 * Lighthouse Accessibility Audit
-
 ---
 
 ## Requirements
 
 ### Functionality
 
-You must complete all of the remaining user stories from the [Fitlit Spec](https://frontend.turing.edu/projects/Fitlit-part-one.html){:target='blank'}. If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part One requirements you must also add ***"Iteration Five."***
+You must complete all of the remaining user stories from the [Fitlit Spec](https://frontend.turing.edu/projects/Fitlit-part-one.html){:target='blank'}. If you did not finish parts of the original requirements, this is your chance to revisit and complete all of the functionality and implement your instructor's feedback. In addition to the Part One requirements, you must also add ***"Iteration Five."***
 
 ---
 
@@ -160,7 +159,7 @@ In addition to your refactoring, you also want to make sure the application is f
 
 - Initial values of class properties need tests
 - Class methods need tests for all expected outcomes
-- Any methods that modify class properties should be test
+- Any methods that modify class properties should be test(Happy and sad path)
 - **You are not required to test your fetch calls or dom manipulation**
 
 ---
@@ -170,13 +169,13 @@ In addition to your refactoring, you also want to make sure the application is f
 ## Strategies for Success
 * Since this project is not separated into iterations or user stories, make sure that you spend a good amount of time breaking apart tasks and using that project board wisely.
 * Every group member must fully understand and be able to speak to all of the code changes that have been made.
-* Implement feedback received in part one into part two.
+* **Implement feedback received in part one into part two.**
 </section>
 
 ---
 
 ### Extensions
-* If you didn't get a chance to experiment with an NPM package in [Part One](https://frontend.turing.edu/projects/whats-cookin-part-one.html), try one out here! Remember to revist the list of approved NPM packages, or run a new one by your project manager first.
+* If you didn't get a chance to experiment with an NPM package in [Part One](https://frontend.turing.edu/projects/whats-cookin-part-one.html), try one out here! Remember to revist the list of approved NPM packages, or run a new one by your **project manager first.**
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
 * Create a video of your team navigating through your app via a keyboard and screen reader.
 * Implement an animation using CSS and/or make your application responsive on smaller screen sizes.
