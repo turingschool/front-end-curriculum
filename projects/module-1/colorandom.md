@@ -53,7 +53,8 @@ Then, as a team:
 - When the page loads, we should see:
   -  a title
   -  5 colors labeled with their hex codes, with an unlocked lock emoji next to each hex code
-  -  two buttons (one to get a new random palette, one to save the displayed palette)
+      -  Hardcode these for now
+  -  2 buttons (one to get a new random palette, one to save the displayed palette)
   -  a section for displaying saved palettes (later iteration)
 
 The CSS in this iteration should mostly focus on LAYOUT (positioning), rather than STYLE (fonts and colors).
@@ -65,7 +66,9 @@ The CSS in this iteration should mostly focus on LAYOUT (positioning), rather th
 - Write two classes: Color and Palette
 - Color:
     - A color should have a random hex code
-    - hint: hex codes are 6 characters long, and each character is some value of 0-9 or A-F (ABCDEF0123456789)
+      - hint: hex codes are 6 characters long, and each character is some value of 0-9 or A-F (ABCDEF0123456789)
+      - Though there are many examples of this logic coded out, this type of crunchy problem solving is well within your skill set! 
+      - Don't look up how to accomplish this; challenge yourselves to use pseudocode to problem-solve through it!
     - It should have a property of `locked`, whose value is a boolean. Colors begin unlocked.
 - Palette:
     - Note: on page load, a new instance of Palette will be declared. This Palette will be used until a user decides to save that Palette. Then, a new instance will be created and used until _that_ palette is saved. Continue ad infinitum.
