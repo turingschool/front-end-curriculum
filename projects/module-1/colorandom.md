@@ -85,6 +85,8 @@ The CSS in this iteration should mostly focus on LAYOUT (positioning), rather th
     - Note: do not create a new instance of Palette here
 - Every time the user clicks the New Palette button, the new set of colors is displayed
 
+Hint: when storing information in HTML to be gathered later, instead of reaching for a `class` or `id`, consider using a [`data attribute`](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)!
+
 ### Iteration 2 - Saving Palettes
 
 <img src="./assets/colorandom/saving-palette.png" alt="Saving palette">
