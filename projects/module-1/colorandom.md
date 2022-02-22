@@ -61,7 +61,7 @@ The CSS in this iteration should mostly focus on LAYOUT (positioning), rather th
 
 **Note: The image above is only a wireframe. You are not expected to match it perfectly!** It simply provides you an idea of the basic layout and elements we expect to see.
 
-### Iteration 2 - OOP
+### Iteration 1 - OOP
 
 - Write two classes: Color and Palette
 - Color:
@@ -78,7 +78,7 @@ The CSS in this iteration should mostly focus on LAYOUT (positioning), rather th
     - It should be able to lock Colors
     - It should only replace unlocked Colors
 
-### Iteration 3 - Show Random Color Palette
+### Iteration 2 - Show Random Color Palette
 
 - Refactor: when the user first visits the page, they see a randomly generated color palette.
 - Every time the user clicks the New Palette button, a new set of colors is created
@@ -87,7 +87,7 @@ The CSS in this iteration should mostly focus on LAYOUT (positioning), rather th
 
 Hint: when storing information in HTML to be gathered later, instead of reaching for a `class` or `id`, consider using a [`data attribute`](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)!
 
-### Iteration 2 - Saving Palettes
+### Iteration 3 - Saving Palettes
 
 <img src="./assets/colorandom/saving-palette.png" alt="Saving palette">
 
@@ -99,7 +99,7 @@ Hint: when storing information in HTML to be gathered later, instead of reaching
 - _Note: Saved palettes do NOT need to persist on page load_
 
 
-### Iteration 3 - Locking colors
+### Iteration 4 - Locking colors
 
 <img src="./assets/colorandom/locking-color.png" alt="Locking a color">
 
@@ -111,7 +111,7 @@ Hint: when storing information in HTML to be gathered later, instead of reaching
 - When the New Palette button is clicked, all the colors update as expected, except for any colors that are locked
 - A user should be able to unlock colors and continue updating the colors with the New Palette button as expected
 
-### Iteration 4 - Deleting saved Palettes
+### Iteration 5 - Deleting saved Palettes
 
 <img src="./assets/colorandom/deleting-saved.png" alt="Deleting a saved palette">
 
@@ -231,6 +231,6 @@ This means, we DO NOT want to see:
 An app with many features, sloppily executed, is worse than a project with fewer features that is clean and well-refactored.
 
 * **4:** Application completes an extension without bugs.
-* **3:** Application meets all of the expectations of Iteration 4 without bugs.
-* **2:** Application meets all of the expectations of Iteration 3 without bugs.
-* **1:** Application meets all of the expectations of Iteration 2 without bugs.
+* **3:** Application meets all of the expectations of Iteration 5 without bugs.
+* **2:** Application meets all of the expectations of Iteration 4 without bugs.
+* **1:** Application meets all of the expectations of Iteration 3 without bugs.
