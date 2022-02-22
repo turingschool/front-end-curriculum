@@ -36,7 +36,7 @@ In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1C
 
 Web Accessibility Initiative - Accessible Rich Internet Applications.
 
-[WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) is a set of **attributes**  we can add to our HTML tags to make our code more semantically meaningful for screen readers. 
+[WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) is a set of **attributes**  we can add to our HTML tags to make our code more semantically meaningful for screen readers.
 
 Think about the information provided by a set of `<div></div>` tags. What do we know about the content within those tags? Really, we know nothing. It’s a semantically void element that controls the APPEARANCE of its content - by default it is a block style element, but beyond that it could theoretically be literally any kind of data - a title, a paragraph, an image, a random red decorative sidebar…etc.
 
@@ -59,7 +59,7 @@ What are some attributes you might put on an HTML element that don't show up on 
 #### Rules of ARIA Use
 The core rules to keep in mind when using ARIA are:
 
-If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time, and will annoy your screen reader users. 
+If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time, and will annoy your screen reader users.
 
 **Many "accessibility flags" come from developers _overusing_ ARIA. Only use ARIA as a last resort!!**
 
@@ -99,7 +99,7 @@ A form element has a role of 'form' by default. We can override that role using 
   - `<form>`
   - `<main>`
   - `<input>`
-- Check out some of the other elements. Is there anything suprising?
+- Check out some of the other elements. Is there anything surprising?
 - Take turns explaining what a role is.
 - What is the difference between implicit and explicit roles?
 - BONUS: Can you think of other examples for when we might want to override a default role?
@@ -153,7 +153,8 @@ States can also be implicit, imagine a checkbox element in html. If you toggle t
 
 <section class="call-to-action">
 ## In Groups
-- Checkout this [Menu-Example](https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html) with VoiceOver to see how screen readers interact with `aria-expanded`
+- Checkout this [Menubar CodePen Example](https://codepen.io/pen) with your Mac's VoiceOver utility or Chrome's [Screen Reader Plugin](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) to see how screen readers interact with `aria-expanded`.   You can read details about the accessibility features implemented in that example [here](https://www.w3.org/TR/2021/NOTE-wai-aria-practices-1.2-20211129/examples/menubar/menubar-navigation.html).
+- Play in the codepen with your mouse.  Then just using your keyboard.
 - Take turns explaining what states are.
 - What would be another example of state that your app might need?
 </section>
@@ -223,15 +224,15 @@ You can then use JavaScript to keep this information up to date - for example, o
 __Below are some things that you should ALWAYS incorporate in your web applications__
 
 <section class="answer">
-### More Accessibility Considerations 
+### More Accessibility Considerations
 
 #### Browser Focus Rings
 
-DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
+DO NOT REMOVE THE FOCUS RING (outline) that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
 
-This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options. And [this article](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) also has some alternatives to use to get rid of the focus ring while still keeping things accessible.
+This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options.
 
-A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles.
+A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles - try tabbing through it to see the options!
 
 
 #### Alt Attributes for Your Images!
@@ -249,10 +250,10 @@ yes!
 <img src="mountain.jpg" alt="The cascade mountains at sunset in January">
 ```
 
-- Wait, what if there is _already_ descriptive text below my image?? 
+- Wait, what if there is _already_ descriptive text below my image??
   - This is one of the only times were you DONT need to supply alt text. Having both would be repetive and redundant for screen reader users. To still be "valid", include an empty alt tag like this `<h3>A round, sleepy cat napping on a bed.</h3><img src="src/cat-pic.jpg" alt="">`
 - What about background images??
-  - Background images are purely for design, and should not be used to display important web content. Because of this, background images do not need alt text. 
+  - Background images are purely for design, and should not be used to display important web content. Because of this, background images do not need alt text.
 
 ![Great example of alt tag](/assets/images/alt-example.png)
 
@@ -299,7 +300,7 @@ You can use the `aria-label` below to define a label, but remember to use semant
 
 ## Additional Resources
 
-* [MDN Documnentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
+* [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 * [Aria Documentation](https://www.w3.org/TR/wai-aria)
 * [Aria Examples & Design Patterns](https://www.w3.org/TR/wai-aria-practices/#aria_ex)
 * [Web Accessibility in Mind](https://webaim.org/articles/userperspective/)
@@ -308,8 +309,8 @@ You can use the `aria-label` below to define a label, but remember to use semant
 Tools
 * [aXe Chrome Plugin](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd)
 * [ChromeVox Plugin](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en)
-* [Colorblinding](https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa/related?hl=en)
 * [Colorblind](https://chrome.google.com/webstore/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool/related?hl=en)
+* [Screen Reader Plugin](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en)
 
 Videos
 * [Aria Roles, States, and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk)
