@@ -26,7 +26,7 @@ _NOTE: Creating the project demo video is a requirement, but attending and submi
 
 ## New Technologies + Tools
 
-* Lighthouse Accessibility Audit
+- Lighthouse Accessibility Audit
 ---
 
 ## Requirements
