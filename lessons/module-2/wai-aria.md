@@ -152,9 +152,11 @@ States can also be implicit, imagine a checkbox element in html. If you toggle t
 
 
 <section class="call-to-action">
-## In Groups
+## Individual Exploration
 - Checkout this [Menubar CodePen Example](https://codepen.io/pen) with your Mac's VoiceOver utility or Chrome's [Screen Reader Plugin](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) to see how screen readers interact with `aria-expanded`.   You can read details about the accessibility features implemented in that example [here](https://www.w3.org/TR/2021/NOTE-wai-aria-practices-1.2-20211129/examples/menubar/menubar-navigation.html).
 - Play in the codepen with your mouse.  Then just using your keyboard.
+## In Groups
+- Discuss the experience of using a screen reading technology
 - Take turns explaining what states are.
 - What would be another example of state that your app might need?
 </section>
@@ -178,7 +180,7 @@ For example, take the button we mentioned when discussing states. That button sp
 </nav>
 ```
 
-The `aria-controls` property has a value of the ID of the element it is attached to. So in this case, we would assume that there is another element with an id of `sidebar-menu` that is contolled by this button.
+The `aria-controls` property has a value of the ID of the element it is attached to. So in this case, we see that there is <nav> element with an id of `sidebar-menu` that is controlled by this button.
 
 
 
