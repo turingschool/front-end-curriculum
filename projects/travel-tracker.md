@@ -15,6 +15,15 @@ For this project, you will be creating an application to manage and track differ
 - Solidify the code review process
 - Create a robust test suite that thoroughly tests all functionality of a client-side application
 
+## Timeline
+
+Dates and deadlines to be aware of:
+
+Tuesday Week 5 - Submit the following to your PM BEFORE beginning to write code via Slack:
+- Project repo
+
+Tuesday, Week 6 - Project due at 9PM.
+
 # Requirements
 
 ## Technologies
