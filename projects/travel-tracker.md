@@ -20,7 +20,6 @@ For this project, you will be creating an application to manage and track differ
 ## Technologies
 
 * **the fetch API** to retrieve and add data
-* **Sass** for getting fancy with your CSS
 * **Mocha** and **Chai** for testing your code
 
 ## Initial Setup
@@ -193,12 +192,6 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 * 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has zero error handling and only `logs` errors if a network request fails.
 * 1:  Application generates syntax error or crashes during execution.  Application is not separated into classes and there is no separation of business-side logic and view-related code. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity.
 
-## SASS
-
-* 4: Application fulfills all requirements previously mentioned, and has Sass functionality that goes above and beyond an MVP.
-* 3: The application has well-factored Sass with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
-* 2: Application adds organization for the whole stylesheet and within rules, but multiple Sass files have not been utilized. All Sass code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
-* 1: The application makes little to no use of Sass and is not separated into logical stylesheets. There are many instances of duplication
 
 ## Testing
 
