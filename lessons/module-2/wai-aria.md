@@ -222,7 +222,7 @@ You can then use JavaScript to keep this information up to date - for example, o
 * Most of the above mentioned aria attributes should be used sparingly.
 * The time to use them is if the answers to the following questions are yes:
   * Will sighted users see content that people with visual disabilities cannot?
-  * Is there information about that content that isn't already indicated in the HTML tags that make it up?  
+  * Is there information about that content that screen readers might need that isn't already indicated in the HTML tags that make it up?  
 
 __Below are some things that you should ALWAYS incorporate in your web applications__
 
