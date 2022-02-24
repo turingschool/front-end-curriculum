@@ -199,8 +199,8 @@ In addition to your refactoring, you also want to make sure the application is f
 
 ## Testing
 * 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.  Tests must be passing to be considered.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.  Tests must be passing to be considered.
-* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation. Tests must be passing to be considered.
+* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.  Some use of beforeEach to DRY up tests. Tests must be passing to be considered.
+* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation. No use of beforeEach to DRY up tests. Tests must be passing to be considered.
 * 1: Tests have not been updated to reflect changes made in refactor. There is not enough test coverage, and some tests might be failing.
 
 ## Accessibility
