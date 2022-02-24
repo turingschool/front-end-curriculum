@@ -14,9 +14,9 @@ tags: html, ARIA, accessibility
 
 - `Accessibility` Broadly, creating an experience that is available to anyone and everyone
 - `ARIA` Accessible Rich Internet Applications
-- `Role` The function an element serves on the page
-- `State` The state of an element on a page (e.g., expanded, disabled)
-- `Property` Additional information about an element or other elements its related to
+- `Role` The function an element serves on the page.  *"What is this element?"*
+- `State` The state of an element on a page (e.g., expanded, disabled). *"What is the status of this element?" (Boolean, changes and must be updated/kept current with JS as application is used)*
+- `Property` Additional information about an element or other elements its related to.  *"What other info is important about this element?"*
 
 <section class="call-to-action">
 ## Warm Up
@@ -153,9 +153,13 @@ States can also be implicit, imagine a checkbox element in html. If you toggle t
 
 <section class="call-to-action">
 ## Individual Exploration
-- Checkout this [Menubar CodePen Example](https://codepen.io/pen) with your Mac's VoiceOver utility or Chrome's [Screen Reader Plugin](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) to see how screen readers interact with `aria-expanded`.   You can read details about the accessibility features implemented in that example [here](https://www.w3.org/TR/2021/NOTE-wai-aria-practices-1.2-20211129/examples/menubar/menubar-navigation.html).
-- Play in the codepen with your mouse.  Then just using your keyboard.
+<!-- Goal is just for them to experience using a screen reader and explore using the keyboard rather than mouse. Approximately 7 minutes.-->
+- Open the CodePen example found in [this site](https://www.w3.org/TR/2021/NOTE-wai-aria-practices-1.2-20211129/examples/menubar/menubar-navigation.html).  Explore that CodePen with your Mac's VoiceOver utility or Chrome's [Screen Reader Plugin](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) to see how screen readers interact with `aria-expanded`.  
+- Play in the CodePen with your mouse.  Then just using your keyboard.  
+- Go to other sites that you commonly visit - explore them as you normally would but with the VoiceOver on.
+- If you have time, checkout where the site outlines details about the accessibility features implemented in that CodePen example.  
 ## In Groups
+<!-- Approximately 5-7 mins -->
 - Discuss the experience of using a screen reading technology
 - Take turns explaining what states are.
 - What would be another example of state that your app might need?
@@ -211,10 +215,11 @@ You can then use JavaScript to keep this information up to date - for example, o
 
 <section class="call-to-action">
 ## In Groups
-- While using VoiceOver, compare [this Codepen](https://codepen.io/damwhit/pen/WZqyEe) and compare it with [this Codepen](https://codepen.io/damwhit/pen/XeLVbw). What changes to do you notice?
-- Take turns explaining what a property is
-- Come up with a good analogy for property
-- How are properties different from state?
+-  Spend the first 2-3 minutes on mute, individually comparing [this Codepen](https://codepen.io/damwhit/pen/WZqyEe) and with [this Codepen](https://codepen.io/damwhit/pen/XeLVbw) while using your screenreader. What changes to do you notice?  
+- Then discuss as a group.
+  - Take turns explaining what a property is
+  - Come up with a good analogy for property
+  - How are properties different from state?
 </section>
 
 ## Accessibility in Practice Moving forward

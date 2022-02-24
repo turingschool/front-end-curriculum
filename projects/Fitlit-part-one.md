@@ -77,7 +77,7 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 
 - Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}  
 
-- Do not run `npm audit fix --force`.  This will update to the latest version of packages.  We need to be using `webpack-dev-server@3.11.2` which is not the latest version.
+- Do not run `npm audit fix --force`.  This will update to the latest version of packages.  We are not using the latest version of webpack (see starter-kit README for version) so updating to the latest version will cause problems.
 </section>
 
 ---
@@ -256,7 +256,7 @@ You are *not expected* to test:
 ### Fundamental JavaScript & Style / OOP / Fetch
 * 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring. Application is expertly divided into logical components each with a clean, single responsibility.
 * 3: Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. Application is effectively broken into logical components, but violate the principle of SRP.
-* 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. There is no usage of destructuring.  Divisions of logic into classes are inconsistent or unclear.
+* 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. Divisions of logic into classes are inconsistent or unclear.
 * 1: Application generates syntax error or crashes during execution. Application logic shows poor decomposition with too much logic mashed together.
 
 ### Test-Driven Development
@@ -266,7 +266,7 @@ You are *not expected* to test:
 * 1: Application does not demonstrate strong use of TDD, and some tests might be failing.
 
 ### User Interface
-* 4: The application can stand on its own to be used by an instructor without guidance from a developer on the team. The UI does not detract from the UX.
+* 4: The application can stand on its own to be used by an instructor without guidance from a developer on the team. The UI does not detract from the UX. Design is responsive across small, medium and large breakpoints.  
 * 3: The application has many strong displays/interactions.The UI does not detract from the UX.
 * 2: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the users' needs.
 * 1: The application is confusing or difficult to use.
