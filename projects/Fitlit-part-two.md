@@ -18,11 +18,10 @@ Dates and deadlines to be aware of:
 
 * **Tuesday of Week 4** -  Project kickoff
 * **Wednesday of Week 4** - Have your project board updated with new tickets (*DTR should also already be completed but you should review and edit based on the result of your project retro.*).  
-* **Monday of Week 5** - Project and video due at 9PM(MST)
+* **Monday of Week 5** - Project due at 9PM(MST)
 * **Tuesday of Week 5** - Project evaluations
 * **Tuesday of Week 5** - (TBD)Project demo watch party (optional to attend)
 
-_NOTE: Creating the project demo video is a requirement, but attending and submitting your video in the watch party is optional. Instructions can be found [here](https://frontend.turing.edu/projects/project-demo-pair.html)_
 
 ## New Technologies + Tools
 
@@ -183,12 +182,6 @@ In addition to your refactoring, you also want to make sure the application is f
 * Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an index.scss file that imports your partials, and a variables.scss file that contains any of your Sass variables or function definitions. Identify common/re-used elements on your page to determine the remaining partials you might want. Your Sass could potentially make use of variables, nesting, mixins and/or extends
 
 ---
-
-### Project demo video
-* Instead of live demo with the instructor you are required to make a video and send that to your PM.
-* You can find the instructions [here](https://frontend.turing.edu/projects/project-demo-pair.html){:target='blank'}
-
----
 # Project Requirements Rubric
 
 ## Functional Expectations
@@ -199,8 +192,8 @@ In addition to your refactoring, you also want to make sure the application is f
 
 ## Testing
 * 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.  Tests must be passing to be considered.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.  Tests must be passing to be considered.
-* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation. Tests must be passing to be considered.
+* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.  Some use of beforeEach to DRY up tests. Tests must be passing to be considered.
+* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation. No use of beforeEach to DRY up tests. Tests must be passing to be considered.
 * 1: Tests have not been updated to reflect changes made in refactor. There is not enough test coverage, and some tests might be failing.
 
 ## Accessibility
@@ -225,7 +218,6 @@ In addition to your refactoring, you also want to make sure the application is f
   * Overview of project and goals
   * Overview of technologies used, challenges, wins, and any other reflections
   * Screenshots/gifs of your app
-  * Demo video
 
 ---
 
