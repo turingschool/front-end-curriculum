@@ -29,7 +29,7 @@ It can also lead to you leaving an interview thinking:
 
 Today we are going to talk about how you can prepare for a behavioral interview by **thinking ahead** and preparing your answers **before** the interview.  
 
-You can't possible predict all of the questions that you may get asked in an interview. But you CAN predict some of the main ideas and themes that the interviewer may ask you about. For example, it's safe to say that you'll get asked about your professional background. You'll also probably get asked about how you learn, how you collaborate, and how you overcome obstacles.  
+You can't possibly predict all of the questions that you may get asked in an interview. But you CAN predict some of the main ideas and themes that the interviewer may ask you about. For example, it's safe to say that you'll get asked about your professional background. You'll also probably get asked about how you learn, how you collaborate, and how you overcome obstacles.  
 
 **You do not have to have a different answer prepared for every possible question you might get asked. Instead, should prepare answers that speak to the broad themes of what you may be asked about.**
 
