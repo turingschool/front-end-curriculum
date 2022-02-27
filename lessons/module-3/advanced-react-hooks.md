@@ -35,7 +35,6 @@ going any further please do the following:
 * Clone the repo to your machine
 * Switch to the `using-hooks-advanced` branch
 * Run `npm install` in the repo
-* Put a thumbs up in the participants panel of zoom once you're done!
 
 ## Context and useContext
 
@@ -51,7 +50,7 @@ available to all child components without passing it via props.
 ### An example
 
 Imagine we wanted to pass down a theme to all of our components, either "light"
-or "dark", which would change the appearance of our components. This would be 
+or "dark", which would change the appearance of our components. This would be
 an excellent use case for Context:
 
 First, we need to create a context which will be available to our Component
@@ -126,8 +125,8 @@ Now, we'll need to update any file that we want to access that context!
 ### The useContext hook
 
 Before hooks, we would have use of `ThemeContext.Consumer` in order get the
-context out of the component heirarchy. However, using the new `useContext`
-hook, we can eaisily tell any component to grab the value for a particular
+context out of the component hierarchy. However, using the new `useContext`
+hook, we can easily tell any component to grab the value for a particular
 context.
 
 `useContext` takes one argument, the context which it should look in the tree
@@ -221,7 +220,7 @@ const ourAction = {
 
 An action doesn't do anything by itself, it's just an instruction. However, by
 convention, all actions must have a _type_ key. This type key will be used by
-the reducer the action is ultimately dispatched to. Other key/value pairs can
+the reducer that the action is ultimately dispatched to. Other key/value pairs can
 optionally be included in the object as well.
 
 ### Reducer
@@ -250,7 +249,7 @@ const ourReducer = (state, action) {
 
 One very important rule to follow with Reducers is to make sure they are _pure_.
 This means that the arguments passed into the function must remain unchanged,
-and the same input will always yeild the same output.
+and the same input will always yield the same output.
 
 ### useReducer
 
@@ -360,7 +359,7 @@ theme, and `useState` for the ideas. That's not ideal.
 <section class="call-to-action">
 ### Your Turn
 
-Continue to refactor our App.js to make more complete use of our reducer. You
+Continue to refactor our `App.js` to make more complete use of our reducer. You
 will need to:
 
 * Update the initial state to store an array of ideas as well
@@ -451,7 +450,7 @@ Awesome!!
 So, Context gives us a way to pass information to our whole application without
 using props, and Reducers give us predictable pattern for how our state will
 update. Using these two concepts together is very powerful, and will allow you
-to build much larger applications while keeping them maintainable. 
+to build much larger applications while keeping them maintainable.
 
 Consider the following code example:
 
@@ -512,7 +511,7 @@ Consider the following code example:
 <section class="call-to-action">
 ### Time to get SPICY!!!
 
-The code example above has passed the state _and_ the dispach function returned
+The code example above has passed the state _and_ the dispatch function returned
 from the Reducer into the Context. The name of the Context has been changed
 since it's no longer just for the Theme, but the mechanics of what it is doing
 are the same.
@@ -529,7 +528,7 @@ back to the same functionality.
 <section class="answer">
 ### Don't look until you try! The learning is in the struggle!
 
-The answer is already in your repository, just swich to the branch
+The answer is already in your repository. Switch to the branch
 `using-hooks-advanced-complete` to see how you _could_ have solved the problem.
 </section>
 
