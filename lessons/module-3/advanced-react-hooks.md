@@ -226,7 +226,7 @@ optionally be included in the object as well.
 ### Reducer
 
 Just like an action, a Reducer is just plain old JavaScript, but it follows a
-very specific pattern. A Reducer takes a state and an action an argument, and
+very specific pattern. A Reducer takes a state and an action as arguments, and it
 returns a new state. Based on our previous action, our reducer might look like
 this:
 
@@ -254,7 +254,7 @@ and the same input will always yield the same output.
 ### useReducer
 
 `useReducer` is a React hook which enables the use of this advanced pattern.
-When you call useReducer, you must pass the reducer (function) that will be
+When you call `useReducer`, you must pass the reducer (function) that will be
 used, and your initial state. It's important to remember that `useReducer` is
 generally used in place of `useState` in a component, because they're solving
 the same problem.
@@ -264,7 +264,7 @@ const initialState = {
   theme: 'light',
 }
 
-const [state, dispatch] = useReducer(ourReducer)
+const [state, dispatch] = useReducer(ourReducer, initialState)
 ```
 
 From this invocation, your are given the state associated with the reducer you
