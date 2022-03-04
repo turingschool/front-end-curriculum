@@ -18,9 +18,8 @@ Dates and deadlines to be aware of:
 
 * **Tuesday of Week 4** -  Project kickoff
 * **Wednesday of Week 4** - Have your project board updated with new tickets (*DTR should also already be completed but you should review and edit based on the result of your project retro.*).  
-* **Monday of Week 5** - Project due at 9PM(MST)
-* **Tuesday of Week 5** - Project evaluations
-* **Tuesday of Week 5** - (TBD)Project demo watch party (optional to attend)
+* **Monday of Week 5** - Project due at 9PM (MST)
+* **Tuesday of Week 5** - Project evaluations  
 
 
 ## New Technologies + Tools
@@ -32,7 +31,7 @@ Dates and deadlines to be aware of:
 
 ### Functionality
 
-You must complete all of the remaining user stories from the [Fitlit Spec](https://frontend.turing.edu/projects/Fitlit-part-one.html){:target='blank'}. If you did not finish parts of the original requirements, this is your chance to revisit and complete all of the functionality and implement your instructor's feedback. In addition to the Part One requirements, you must also add ***"Iteration Five."***
+You must complete all of the remaining user stories from the [Fitlit Part 1 Spec](https://frontend.turing.edu/projects/Fitlit-part-one.html){:target='blank'}. If you did not finish parts of the original requirements, this is your chance to revisit and complete all of the functionality and implement your instructor's feedback. In addition to the Part One requirements, you must also add ***"Iteration Five."***
 
 ---
 
@@ -78,7 +77,7 @@ Everyone was using the same exact endpoints for Part One. This is typically how 
 
 </section>
 
-## Remember:
+#### Remember:
 
 The expectation for Mod 2 is that you will avoid using `async/await`.  We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`.  Consider doing some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all).  
 
@@ -120,7 +119,8 @@ For example, if the currently displayed user has an ID of 50, and you want to ad
 ### Error Handling
 
 Make proper error handling for your users to ensure they get data and submit their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user?  Also, validate the input fields on the client-side.
-
+<!-- //make sure you can't add bad data -->
+<!-- make sure there is an indication that the post succeeded -->
 </section>
 
 ---
