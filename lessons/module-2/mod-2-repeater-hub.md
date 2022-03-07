@@ -9,7 +9,7 @@ General information about repeating can be found [here](https://frontend.turing.
 
 ## Slack Channels
 Make sure you are part of the following channels:
-* **#mod_2_fe_repeaters**: The main channel for mod1 repeaters. Instructors will post announcements here so it's important to check this channel daily.
+* **#mod_2_fe_repeaters**: The main channel for mod2 repeaters. Instructors will post announcements here so it's important to check this channel daily.
 * **#the_repeaters**: A community of Turing students and alumni who have repeated or are currently repeating a module.
 
 ## Gear Ups and Professional Development  
