@@ -163,7 +163,7 @@ This project gives the team room to practice the following JavaScript concepts:
   - SRP (Single Responsibility Principle) and DRY (don't repeat yourself) conventions
   - Readability - semantic naming, consistency, conciseness
 
-Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team asks as you develop this project and continue your learning.
+Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 
 <section class="answer">
 ### OOP competency examples
@@ -216,7 +216,7 @@ This project gives the team room to practice the following skills:
 - Git
 - GitHub
 
-Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team asks as you develop this project and continue your learning.
+Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 
 <section class="answer">
 ### Collaboration competency examples
@@ -271,7 +271,7 @@ This project gives the team room to practice the following skills:
 - Reading code written by someone else (provided boilerplate)
 - Effectively making use of existing code
 
-Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team asks as you develop this project and continue your learning.
+Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 
 <section class="answer">
 ### Reading Code competency examples
