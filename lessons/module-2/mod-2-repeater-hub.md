@@ -21,16 +21,16 @@ Repeating the module is a great opportunity not only to solidify your technical 
 **Gear Up expectations for repeating mod 2:**  
 You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters.   
 
-## TIPS For Intermission To Prepare for Mod 2-Round 2  
+## Tips For Intermission To Prepare for Mod 2-Round 2  
 
 - It is not required that you re-do the Mod 2 prework. However, if there is something in the prework that you think would be valuable to review, go for it!
 - As you commit to daily iterator practice, realize that the focus should be 90% problem solving and 10% iterators.  
-  You need to be familiar with the iterator/mutator methods.  However, the main skill you need to develop in Mod 2 is the ability to digest and break down complex problems so that you can solve them.  This means you must nail down an effective problem solving process that you can apply to any problem placed in front of you.  
+  You need to be familiar with the iterator/mutator methods.  However, the main skill you need to develop in Mod 2 is the ability to digest and break down complex problems into small steps/pieces so that you can solve them.  This means you must nail down an effective problem solving process that you can apply to any problem placed in front of you.  
 - Review some of the difficult lessons and make a list of questions to ask during that lesson the following inning.  Work through exercises in the lessons to help you better understand those concepts.
 - Make a list of all the iterator and mutator methods, and go over each one’s use cases and syntax every night.  Writing them out on paper or flashcards is more valuable than typing them out. They will stick in your brain better.  
   Pay attention to what each method returns.  Pay attention to which are mutators.
 - Write out your problem solving process in detail.  Post in your channel to classmates what their process is.  Learn from each other.  Submit that written out process to your instructors via DM before the start of the next inning.  
-    - *Hint*  Don't just write `psuedocoding` in your process.  Think about and elaborate on what psuedocoding should look like.  You should be using psuedocode throughout the problem solving process, not just at the beginning.  
+    - *Hint*  Don't just write `psuedocoding` in your process.  Think about and elaborate on what psuedocoding should look like.  You should be using psuedocode throughout the problem solving process to break the problem down into small, approachable steps/pieces, not just at the beginning when you are digesting the big-picture ask.  
 
 ## FAQs
 
