@@ -9,6 +9,19 @@ tags: prototype methods
 * Gain familiarity with other prototype methods (not necessarily JUST array prototypes, some string methods too!)
 * Understand why it's important to note if a method is a mutator or accessor
 
+<section class="note">
+You will want to be familiar with these methods for your midmods and finals.
+</section>
+
+## Methods To Know
+* split()
+* join()
+* indexOf()
+* every()
+* sort()
+* reverse()
+* some()
+
 ## Structure
 In your breakout groups, you will make a presentation for your assigned prototype method (or two presentations, if you are assigned two methods). You are encouraged to be creative when choosing your presentation medium, but if you aren't sure, these might be good choices:
 * Google Slides
@@ -25,5 +38,5 @@ Presentations should include the following information:
 
 In _addition_ to making a presentation, your group should code up at least **2 examples** of using the method. (You may find that creating more than 2 examples and exercises is helpful):
 
-* **First repl:** One person from your group will share their screen, and walk the class through how the method is being used and what it’s doing. 
+* **First repl:** One person from your group will share their screen, and walk the class through how the method is being used and what it’s doing.
 * **Second repl:** Send your second repl to the class in your public slack channel - this repl should not contain solutions, but simply practice exercises/prompts for the class to work on for a couple of minutes individually.
