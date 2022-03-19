@@ -283,6 +283,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 - Provided code is used effectively (the provided Class, the provided assets, the provided HTML & CSS)
   - The team does not have to directly edit the HTML or CSS file
   - The team does not ignore provided styling
+  - No code is added that makes the provided code redundant
 
 ✨WOW✨ can look like:
 
