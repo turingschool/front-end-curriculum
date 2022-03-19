@@ -107,6 +107,9 @@ You are welcome to add your own extensions. Be sure they are thoughtful in terms
 - When a user single clicks a saved poster, create a modal to view it larger
 - Allow users to drag and drop saved posters into whatever order they want them to appear
 
+---
+---
+
 ## Notes on Project Feedback
 
 The rubric below serves as a guide for both **students** and **instructors**. 
