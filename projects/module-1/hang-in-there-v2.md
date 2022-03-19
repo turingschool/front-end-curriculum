@@ -158,6 +158,8 @@ This project has 3 evaluated concepts:
 One way these concepts are evaluated is via the final graded section:
 - Functionality (we can't properly assess the 3 main concepts if there is not enough work to grade)
 
+---
+
 ### JavaScript
 
 This project gives the team room to practice the following JavaScript concepts:  
@@ -212,6 +214,8 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 </section>
 
 Each of these "subsections" are not distinct; they are all taken into consideration when the outcome for JavaScript is determined.
+
+---
 
 ### Workflow & Professional Habits
 
@@ -269,6 +273,8 @@ Note: ⬆️this⬆️ kind of collaboration can be difficult to assess, but kno
 
 Each of these "subsections" are not distinct; they are all taken into consideration when the outcome for Workflow and Professional Habits is determined.
 
+---
+
 ### Reading Code
 
 This project gives the team room to practice the following skills:  
@@ -291,6 +297,8 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 - Creating and sharing a document (with your PM) for the team's observations of and questions about the existing code
 </section>
 
+---
+
 ### Functional Expectations
 
 Functionality is the least important piece of the rubric. It's included because it is another benchmark to gauge proficiency. However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
@@ -311,6 +319,8 @@ Well-refactored, thoughtful code is better than sloppy extra features.
 
 - An extension is successfully implemented along with thoughtful UI
 </section>
+
+---
 
 ## Feedback
 
