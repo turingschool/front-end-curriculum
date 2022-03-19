@@ -123,19 +123,19 @@ The rubric below serves as a guide for both **students** and **instructors**.
 
 When projects are graded, view the evaluation as a means to inform your learning, rather than as a static "grade". Feedback from instructors will focus on areas where you have an opportunity to deepen your understanding. 
 
-Projects may be marked as **pass**, **fail**, and **wow**. Similarly, each section of the rubric (see below) will have pass/fail/wow markings, helping you understand your progress and growth in specific areas.
+Projects may be marked as **yes**, **not yet**, and **wow**. These scores answer the only important question: **does the project demonstrate student understanding of the learning goals?** Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
 
-The overall project outcome (pass, fail, wow) is determined by "averaging" each section's outcome. You can think of a "pass" being worth a  1, a "fail" being worth a 0, and a "wow" being worth a 2. 
+The overall project outcome (yes, not yet, wow) is determined by "averaging" each section's outcome. You can think of a "yes" being worth a  1, a "not yet" being worth a 0, and a "wow" being worth a 2. 
 
-For this project, an average of 1+ is considered a pass! An average of 1.5+ is considered a wow. Anything below a 1 is considered a fail (see note in the section below).
+For this project, an average of 1+ is considered a passing project that demonstrates good student understanding! An average of 1.5+ is considered a wow. Anything below a 1 is considered a project that indicates that the concepts have not been fully understood (see note in the section below).
 
 <section class="answer">
 ### A important note about the possible outcomes
 
-**Pass** indicates that the student/team is ON TRACK in this area!  
+**Yes** indicates that the student/team is ON TRACK in this area! YES you showed us you understand the concept! 
 - The student/team demonstrates a good understanding of the concept
 
-**Fail** indicates that the student/team is BEHIND in this area
+**Not Yet** indicates that the student/team is BEHIND in this area - you showed us that you don't yet understand the concept
 - The student/team demonstrates misconceptions or confusion around the topic
 - Student/team should prioritize this concept in their studying and practice
 - ✨ A fail on a project does **not** mean the module is doomed! We want to see GROWTH. A student/team can fail a project and still be successful in Mod 1! ✨
@@ -153,6 +153,9 @@ This project has 3 evaluated concepts:
 - JavaScript
 - Workflow & Professional Habits
 - Reading Code
+
+One way these concepts are evaluated is via the final graded section:
+- Functionality (we can't properly assess the 3 main concepts if there is not enough work to grade)
 
 ### JavaScript
 
@@ -286,8 +289,29 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 - Creating and sharing a document (with your PM) for the team's observations of and questions about the existing code
 </section>
 
+### Functional Expectations
+
+Functionality is the least important piece of the rubric. It's included because it is another benchmark to gauge proficiency. However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
+
+This means, we DO NOT want to see:
+- Code that pursues extensions but is sloppy
+- One or both team members do not understand every single line of code
+- One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
+
+Well-refactored, thoughtful code is better than sloppy extra features.
+
+<section class="answer">
+### Functionality competency examples
+
+- The application completes all iterations without bugs
+
+✨WOW✨ can look like:
+
+- An extension is successfully implemented along with thoughtful UI
+</section>
+
 ## Feedback
 
-A few days after the due date, your team will receive feedback about the project's average outcome (pass/fail/wow), as well as each section's outcome. You will also receive a few pieces of team-specific feedback for each section (things done well, things to improve on for the current/next project).
+A few days after the due date, your team will receive feedback about the project's average outcome (yes/not yet/wow), as well as each section's outcome. You will also receive a few pieces of team-specific feedback for each section (things done well, things to improve on for the current/next project).
 
 Common feedback to all projects will also be shared with the cohort. There will be time in the calendar to review these items and figure out how to apply your learning to your current and future work!
