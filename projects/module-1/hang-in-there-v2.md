@@ -8,6 +8,7 @@ title: Hang In There - Pair
   * Use a provided class by creating object instances using the `new` keyword
   * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 * Begin to understand the connection between HTML, CSS and JavaScript
+  * Practice reading, understanding, and using provided code
 * Build an understanding of writing code collaboratively
   * Document changes with atomic commits & thorough code reviews
   * Communicate, troubleshoot, and plan effectively as a team
