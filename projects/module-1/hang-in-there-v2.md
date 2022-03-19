@@ -110,7 +110,7 @@ You are welcome to add your own extensions. Be sure they are thoughtful in terms
 ---
 ---
 
-## Notes on Project Feedback
+# Notes on Project Feedback
 
 The rubric below serves as a guide for both **students** and **instructors**. 
 
