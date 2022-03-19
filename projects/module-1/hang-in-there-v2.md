@@ -125,13 +125,17 @@ The rubric below serves as a guide for both **students** and **instructors**.
 
 ### Projects as Learning Tools
 
-When projects are graded, view the evaluation as a means to inform your learning, rather than as a static "grade". Feedback from instructors will focus on areas where you have an opportunity to deepen your understanding. 
+When projects are graded, we want you to view the evaluation + feedback as a means to inform your learning, rather than as static "grades". Feedback from instructors will focus on areas where you have an opportunity to deepen your understanding. 
 
-Projects may be marked as **yes**, **not yet**, and **wow**. These scores answer the only important question: **does the project demonstrate student understanding of the learning goals?** Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
+The evaluation will provide feedback by answering the only important question:
+
+**Does the project demonstrate student understanding of the learning goals & concepts?**
+
+Projects will answer that question, being marked as **yes**, **not yet**, and **wow**. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
 
 The overall project outcome (yes, not yet, wow) is determined by "averaging" each section's outcome. You can think of a "yes" being worth a  1, a "not yet" being worth a 0, and a "wow" being worth a 2. 
 
-For this project, an average of 1+ is considered a passing project that demonstrates good student understanding! An average of 1.5+ is considered a wow. Anything below a 1 is considered a project that indicates that the concepts have not been fully understood (see note in the section below).
+For this project, an average of 1+ is considered a yes - a passing project that demonstrates good student understanding! An average of 1.5+ is considered a wow. Anything below a 1 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below).
 
 <section class="answer">
 ### A important note about the possible outcomes
@@ -142,7 +146,7 @@ For this project, an average of 1+ is considered a passing project that demonstr
 **Not Yet** indicates that the student/team is BEHIND in this area - you showed us that you don't yet understand the concept
 - The student/team demonstrates misconceptions or confusion around the topic
 - Student/team should prioritize this concept in their studying and practice
-- ✨ A fail on a project does **not** mean the module is doomed! We want to see GROWTH. A student/team can fail a project and still be successful in Mod 1! ✨
+- ✨ A fail on one project does **not** mean the module is doomed! We want to see GROWTH. A student/team can fail a project and still demonstrate readiness for the next module! ✨
 
 **Wow** indicates that the student/team did extra work to teach themselves a new concept, or to achieve a deep & nuanced understanding of a concept
 - This is not an outcome to prioritize achieving
@@ -158,7 +162,7 @@ This project has 3 evaluated concepts:
 - Workflow & Professional Habits
 - Reading Code
 
-One way these concepts are evaluated is via the final graded section:
+And evaluation of these concepts is assisted through the final graded section:
 - Functionality (we can't properly assess the 3 main concepts if there is not enough work to grade)
 
 ---
