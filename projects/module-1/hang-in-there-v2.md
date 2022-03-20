@@ -146,7 +146,7 @@ For this project, an average of 1+ is considered a yes - a passing project that 
 **Not Yet** indicates that the student/team is BEHIND in this area - you showed us that you don't yet understand the concept
 - The student/team demonstrates misconceptions or confusion around the topic
 - Student/team should prioritize this concept in their studying and practice
-- ✨ A fail on one project does **not** mean the module is doomed! We want to see GROWTH. A student/team can fail a project and still demonstrate readiness for the next module! ✨
+- ✨ An overall "not yet" on one project does **not** mean the module is doomed! We want to see GROWTH. A student/team can struggle with a project and still (taking into account the rest of their work and assessments) demonstrate readiness for the next module! ✨
 
 **Wow** indicates that the student/team did extra work to teach themselves a new concept, or to achieve a deep & nuanced understanding of a concept
 - This is not an outcome to prioritize achieving
