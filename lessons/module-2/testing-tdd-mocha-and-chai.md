@@ -221,7 +221,7 @@ npm install
 ```
 
 * Note what files exist in the tests.  Take a look at the `package.json` file as well, noting *devDependencies* and the *scripts*.
-* Move to the `/test/Box-test.js` file. Make sure your assertion library, the `expect` keyword, and the Box class have been imported.
+* Move to the `/test/Box-test.js` file. Make sure your assertion library, the `expect` keyword have been imported. Wait on importing Box until Iteration 1.
 * Setup your `describe` block, and write a basic dummy test (such as `expect(true).to.equal(true);`). This test *should* pass right away to show you that everything is linked correctly.
 * Run `npm test` to see if your test passes.  If not, take note of the error message and try to fix it.
 </section>
