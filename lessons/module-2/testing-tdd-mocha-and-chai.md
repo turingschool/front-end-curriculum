@@ -265,7 +265,7 @@ Box
 
 Obviously this test isn't doing anything helpful, but we know our files are wired up. Let's add some more interesting tests.
 
-Work through the following iterations using TDD - meaning you will write the test first, then write the implementation code to pass each test.  
+**Work through the following iterations using TDD - meaning you will write the test first, then write the implementation code to pass each test.**  
 
 Let's pretend we just received a spec, and the first iteration looks something like this:
 
@@ -274,9 +274,9 @@ Let's pretend we just received a spec, and the first iteration looks something l
 
 - You should have a Box constructor which has a default height and width of 100.
 - User should be able to pass in specific height and widths if they so choose.
-- You should be able to calculate the area of your box using the method `.area()`.
+- You should be able to calculate the area of your box using the method `.calculateArea()`.
 
-1. Start with writing the tests.  Note that you'll need to import a `Box` class and create a new instance of it for each test.  Your tests will **fail** when you run `npm test`.
+1. Start with writing the tests.  Note that you'll need to import (and export) a `Box` class and create a new instance of it for each test.  Your tests will **fail** when you run `npm test`.
 2. Now work on the implementation in the `Box.js` file.  Feel free to add `.skip` to your tests so that you can focus on one at a time.
 </section>
 
@@ -313,7 +313,7 @@ describe('Box', function() {
   it('should calculate its area', function() {
     var box = new Box(30, 30);
 
-    expect(box.area()).to.equal(900);
+    expect(box.calculateArea()).to.equal(900);
   })
 });
 ```
@@ -330,7 +330,7 @@ class Box {
     this.width = width;
   }
 
-  area() {
+  calculateArea() {
     return this.height * this.width;;  
   }
 }
