@@ -86,7 +86,7 @@ There are many array prototype methods out there, but we are going to focus on s
 * `filter()`
 * `reduce()`
 
-You can take notes however you'd like. Feel free to use [this document](https://docs.google.com/spreadsheets/d/102Oa8wYA6uUN52eMO6Suc1llQqv7hzyzDsnix9m6zdc/edit#gid=0) throughout the lesson. You can go to `File` > `Make a Copy` to create your own editable version.
+Throughout this lesson, you can take notes however you'd like. Feel free to use [this document](https://docs.google.com/spreadsheets/d/102Oa8wYA6uUN52eMO6Suc1llQqv7hzyzDsnix9m6zdc/edit#gid=0) throughout the lesson. You can go to `File` > `Make a Copy` to create your own editable version.
 
 ### `Array.forEach(callbackFunction)`
 
