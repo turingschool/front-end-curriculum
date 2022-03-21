@@ -7,8 +7,7 @@ mod: 2
 ## Learning Goals:
 
 - Review the what and why of test driven development
-- Examine the structure of a test
-- Discuss the testing lifecycle  
+- Examine the structure of a test and the testing lifecycle
 - Practice writing tests
 
 ## Vocab
@@ -26,7 +25,7 @@ mod: 2
 <section class="answer">
 ### What is TDD?  
 
-TDD, or Test Driven Development, is the concept of writing a series of assertions in a test file BEFORE writing any of the applicable code that supports the tested functionality.
+TDD, or Test Driven Development, is the concept of writing tests in a test file BEFORE writing any of the implementation code.
 </section>
 
 <section class="answer">
@@ -50,7 +49,7 @@ TDD, or Test Driven Development, is the concept of writing a series of assertion
 <section class="note">
 ### The Main Benefit
 
-The main benefit of Test Driven Development is that you are forced to look at the problem you are solving at a high level and not worry about the little details for implementing your solution.
+The main benefit of Test Driven Development is that you are forced to look at the problem you are solving at a high level and not worry about the little details for implementing your solution.  It forces you to outline **what** your code should do before you think about **how** you will do it.
 </section>
 
 ## What Makes Testing Hard?
