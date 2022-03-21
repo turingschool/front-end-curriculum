@@ -19,7 +19,7 @@ module: 2
 
 In order to understand what a *prototype method* is, let's break down the terms individually:
 
-*  A **prototype** is a model of something and how it should look or behave. We can build off of prototypes to create multiple copies of similar models. 
+*  A **prototype** is a model of something and how it should look or behave. We can build off of prototypes to create multiple copies of similar models.
 * A **method** in JavaScript is simply a function that’s defined on an object
 
 Prototype methods are functions that allow you to manipulate the value of a particular data type or class. JavaScript comes with several built-in data types that each have their own prototype methods, that allow you to interact with them in certain ways. For example, you might want to add or remove an item from an array. Or inspect the properties on an object. Prototype methods allow you to perform these actions and manipulate your values.
@@ -86,6 +86,8 @@ There are many array prototype methods out there, but we are going to focus on s
 * `filter()`
 * `reduce()`
 
+You can take notes however you'd like. Feel free to use [this document](https://docs.google.com/spreadsheets/d/102Oa8wYA6uUN52eMO6Suc1llQqv7hzyzDsnix9m6zdc/edit#gid=0) throughout the lesson. You can go to `File` > `Make a Copy` to create your own editable version.
+
 ### `Array.forEach(callbackFunction)`
 
 Let's start by exploring these prototype methods with some examples.
@@ -102,9 +104,9 @@ const increasedPrices = [];
 * Using `forEach`, iterate over the array of prices and add new increased prices to the `increasedPrices` array.
 
 ```js
-const dogs = [ 
-  {name: "Fido", numLegs: 4}, 
-  {name: "Greg", numLegs: 5} 
+const dogs = [
+  {name: "Fido", numLegs: 4},
+  {name: "Greg", numLegs: 5}
 ];
 
 // console output
@@ -149,7 +151,7 @@ const degreesF = [67, 32, 55, 102]
 // const degreesC...
 
 // console output
-=> [19.44, 0, 12.77, 38.88] 
+=> [19.44, 0, 12.77, 38.88]
  ```
 
  * Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius and store them in a variable called `degreesC`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm){:target='blank'} to convert from Fahrenheit to Celsius.
