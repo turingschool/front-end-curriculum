@@ -21,7 +21,7 @@ tags: js, introduction, object literals, dot notation
 
 <section class="call-to-action">
 ## Warm Up
-Respond to the following questions on [this Jamboard](https://jamboard.google.com/d/13-bFjFETJ28KBZRIar4wl0bGbKcDfNiAHwvbP--o2FU/viewer?f=0){:target="blank"}
+Respond to the following questions on [this Jamboard](https://jamboard.google.com/d/1phYlXmE3yEpmnBwLUT96mjYzwawFA7WhR_un1q5bLsc/edit?usp=sharing){:target="blank"}
 - What do you already know about Objects from M0?
 - What feels fuzzy or do you have questions about?
 </section>
