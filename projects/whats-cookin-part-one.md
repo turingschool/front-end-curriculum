@@ -21,7 +21,7 @@ In this project, you will create a recipe tracking / meal planning application t
 <section class="note">
 
 ### Note	 
-Feel free to use the above sites as inspiration for your UI, but note that there is NO COMP provided for this project. We expect you to design your own dashboard layout that is relevant to the data being displayed.
+Feel free to use the above sites as inspiration for your UI, but note that there is *NO COMP* provided for this project. We expect you to design your own dashboard layout that is relevant to the data being displayed.
 
 **You must pull 3 inspirations from 3 different apps that you want to implement in your application**
 * Be specific about what piece you are trying to re-create
@@ -33,7 +33,7 @@ Feel free to use the above sites as inspiration for your UI, but note that there
 ## Timeline
 Dates and deadlines to be aware of:
 
-* **By EOD Monday of Week 2** - Submit the following to your PM BEFORE beginning to write code via Slack:
+* **By EOD Monday of Week 2** - Submit the following to your PM via Slack BEFORE beginning to write code:
 1. DTR (be specific about learning goals, schedules, and communication expectations)
 1. GitHub project board (this should be kept updated throughout the project and will be reviewed by PM in check-ins.
 1. Wireframes (a rough sketch of your website for planning)
@@ -70,9 +70,11 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 
 
 3. While developing, run `npm start`. Webpack will create a live version of your site on a local server, where you can see your changes happen in real time. To access it, in your browser, navigate to the `localhost` address that your terminal gives you. Be aware, if you write a breaking change, your server may crash. The terminal will give you some error report about why the crash happened.
-
+  - The command `control + c` is used to stop the local server.  Just closing the terminal without stopping the server first could mean things continue to run in the background and cause problems. This command is not specific to Webpack; make note of it for future use.  
 
 4. Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
+
+5. Do not run `npm audit fix --force`.  This will update to the latest version of packages.  We are not using the latest version of webpack (see starter-kit README for version) so updating to the latest version will cause problems.
 </section>
 
 ---
@@ -96,7 +98,7 @@ Don't get too caught up with polishing your dashboard too early. You'll want to 
 <section class="note">
 ### 3rd Party Libraries
 
-You may choose **ONE** of the following 3rd party libraries to incorporate into your app as an extension if interested. Your group may want to do a research spike over the first weekend to see what your team would like to experiment with. Please get instructor approval first before choosing to use additional 3rd-party libraries. **This is an extension and not required!**
+You may choose **ONE** of the following 3rd party libraries to incorporate into your app *as an extension* if interested. Your group may want to do a research spike over the first weekend to see what your team would like to experiment with. Please get instructor approval first before choosing to use additional 3rd-party libraries. **This is an extension and not required!**
 
 * [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'}
 * [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
@@ -206,7 +208,9 @@ _Choose at least one_
 
 You should *NOT* use the original data files in the `data` directory for testing. These are big files, to begin with, and a real-world dataset would have millions of records. That's far too big to use every time you want to run a test.
 
-Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your methods are working correctly because you can do the calculations by hand with a much smaller dataset.
+Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your methods are working correctly because you can do the calculations by hand with a much smaller dataset.  
+
+You are expected to research and implement `beforeEach` in your test files.
 
 You are *expected* to test:
 
@@ -237,13 +241,13 @@ You are *not expected* to test:
 
 ### Test-Driven Development
 * 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. Tests must be passing to be considered.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files. Tests must be passing to be considered.
-* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. Tests must be passing to be considered.
+* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.  Some use of beforeEach to DRY up tests. Tests must be passing to be considered.
+* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. No use of beforeEach to DRY up tests.  Tests must be passing to be considered.
 * 1: Application does not demonstrate strong use of TDD, and some tests might be failing.
 
 ### User Interface
-* 4: Special consideration has been given to the usability of the application. The design is clean and the messaging for how to interact with the application is clear.
-* 3: The application can stand on its own to be used by an instructor without guidance from a developer on the team.
+* 4: Special consideration has been given to the usability of the application. The application can stand on its own to be used by an instructor without guidance from a developer on the team. Design is responsive across small, medium and large breakpoints.
+* 3: The application has many strong displays/interactions.The UI does not detract from the UX.
 * 2: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the users' needs.
 * 1: The application is confusing or difficult to use.
 

@@ -21,7 +21,6 @@ Dates and deadlines to be aware of:
 * **Monday of Week 5** - Project due at 9PM (MST)
 * **Tuesday of Week 5** - Project evaluations  
 
-
 ## New Technologies + Tools
 
 - Lighthouse Accessibility Audit
@@ -31,7 +30,7 @@ Dates and deadlines to be aware of:
 
 ### Functionality
 
-You must complete all of the remaining user stories from the [Fitlit Part 1 Spec](https://frontend.turing.edu/projects/Fitlit-part-one.html){:target='blank'}. If you did not finish parts of the original requirements, this is your chance to revisit and complete all of the functionality and implement your instructor's feedback. In addition to the Part One requirements, you must also add ***"Iteration Five."***
+You must complete all of the remaining user stories from the [Fitlit Part 1 Spec](https://frontend.turing.edu/projects/Fitlit-part-one.html){:target='blank'}. If you did not finish parts of the original requirements, this is your chance to revisit and complete all of the functionality. In addition to the Part One requirements, you must also ***implement your instructor's feedback*** and add ***"Iteration Five"*** and include proper ***Error Handling***.
 
 ---
 
@@ -70,8 +69,7 @@ You will no longer receive your data from the deployed API, but rather implement
 Your GET requests should not change very much, but you will need to clone down the repo for the local server and run it in a separate tab in your terminal each time you run your client (app). Below are the endpoints' setup for this project.
 
 <section class="note">
-
-<h3> Why this change? </h3>
+### Why this change?
 
 Everyone was using the same exact endpoints for Part One. This is typically how things work, but can cause some headache when implementing types of requests other than GET. In this part of the project, you will start making POST requests. Creating a local server instead of using the hosted (deployed) one, gives everyone their own version of the APIs and decreases an overload of new data getting sent.
 
@@ -122,6 +120,15 @@ Make proper error handling for your users to ensure they get data and submit the
 <!-- //make sure you can't add bad data -->
 <!-- make sure there is an indication that the post succeeded -->
 </section>
+
+---
+
+### Refactoring and Applying Instructor Feedback
+
+* Implement instructor feedback from Part 1
+* Consider any additional refactoring opportunities:
+  * Identify redundant code in your classes and opportunities for DRYing it up
+  * Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior.
 
 ---
 ### DOM Manipulation
@@ -179,7 +186,7 @@ In addition to your refactoring, you also want to make sure the application is f
 * Create a video of your team navigating through your app via a keyboard and screen reader.
 * Implement an animation using CSS and/or make your application responsive on smaller screen sizes.
 * Create and implement a new feature for your application (run this by instructors first).
-* Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an index.scss file that imports your partials, and a variables.scss file that contains any of your Sass variables or function definitions. Identify common/re-used elements on your page to determine the remaining partials you might want. Your Sass could potentially make use of variables, nesting, mixins and/or extends
+* Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an index.scss file that imports your partials, and a variables.scss file that contains any of your Sass variables or function definitions. Identify common/re-used elements on your page to determine the remaining partials you might want. Your Sass could potentially make use of variables, nesting, mixins and/or extends.
 
 ---
 # Project Requirements Rubric

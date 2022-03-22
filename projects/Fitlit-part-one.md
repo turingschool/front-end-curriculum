@@ -231,6 +231,8 @@ You should *NOT* use the original data files in the `data` directory for testing
 
 Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your methods are working correctly because you can do the calculations by hand with a much smaller dataset.
 
+You are expected to research and implement `beforeEach` in your test files.
+
 You are *expected* to test:
 
 * All class properties
