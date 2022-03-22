@@ -4,7 +4,7 @@ length: 1 week
 tags: javascript, oop, testing
 ---
 
-1 week solo project for FE Mod 2 (Week 6)
+<!-- Final 1 week solo project for FE Mod 2 (Week 6) -->
 
 ## Background and Description
 
@@ -17,12 +17,20 @@ For this project, you will be building a hotel management tool for hotel custome
 - Solidify the code review process
 - Create a robust test suite that thoroughly tests all functionality of a client-side application
 
+## Timeline
+
+Dates and deadlines to be aware of:
+
+Tuesday Week 5 - Submit the following to your PM BEFORE beginning to write code via Slack:
+- Project repo
+
+Tuesday, Week 6 - Project due at 9PM.
+
 # Requirements
 
 ## Technologies
 
 * **the fetch API** to retrieve and add data
-* **Sass** for getting fancy with your CSS
 * **Mocha** and **Chai** for testing your code
 
 ## Initial Setup
@@ -76,7 +84,7 @@ Below are all the endpoints set up for this project. You may not use all of them
 * I should be able to select a room for booking
 * In the event that no rooms are available for the date/roomType selected, display a message fiercely apologizing to the user and asking them to adjust their room search
 
-**Refer to the "Add new booking" section from the endpoints table above!** 
+**Refer to the "Add new booking" section from the endpoints table above!**
 
 <section class="note">
 ### Note!
@@ -100,11 +108,11 @@ password: overlook2021
 
   - Upon successfully loggin in, I should see my dashboard.
 
-**Refer to the "Get single user" section from the endpoints table above!** 
+**Refer to the "Get single user" section from the endpoints table above!**
 
 ### 4. Manager Interaction
 
-Your app should now support two different types of users.  In addition to having a customer, you will now add a manager. 
+Your app should now support two different types of users.  In addition to having a customer, you will now add a manager.
 
 **As a manager:**
 - I should be able to login
@@ -176,8 +184,8 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 
 * 4: Application has clearly had special consideration around accessibility. Lighthouse accessibility audit is at a 100%.
 * 3: Application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance.The UI does not detract from the UX. Lighthouse accessibility audit is at least 90%.
-* 2: The application may be confusing or difficult to use at times.  The UI is incomplete. Accessibility has been considered, but does not have strong accessible features. 
-* 1: Application is confusing or difficult to use. The UI is incomplete. Accessibility has not been considered. 
+* 2: The application may be confusing or difficult to use at times.  The UI is incomplete. Accessibility has been considered, but does not have strong accessible features.
+* 1: Application is confusing or difficult to use. The UI is incomplete. Accessibility has not been considered.
 
 ## JavaScript Style & OOP
 
@@ -186,12 +194,6 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 * 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has zero error handling and only `logs` errors if a network request fails.
 * 1:  Application generates syntax error or crashes during execution.  Application is not separated into classes and there is no separation of business-side logic and view-related code. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity.
 
-## Sass
-
-* 4: Application fulfills all requirements previously mentioned, and has Sass functionality that goes above and beyond an MVP.
-* 3: The application has well-factored Sass with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
-* 2: Application adds organization for the whole stylesheet and within rules, but multiple Sass files have not been utilized. All Sass code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
-* 1: The application makes little to no use of Sass and is not separated into logical stylesheets. There are many instances of duplication
 
 ## Testing
 
@@ -202,4 +204,4 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 
 # Evaluation
 
-Evaluations will be done live with an intructor. You'll be asked to step through the various parts of your application including accessibility audit, the user interface, running tests and looking at Sass and JavaScript code. 
+Evaluations will be done live with an instructor. You'll be asked to step through the various parts of your application including accessibility audit, the user interface, running tests and looking at fetch calls and JavaScript code.

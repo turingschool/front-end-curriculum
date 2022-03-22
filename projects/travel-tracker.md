@@ -77,7 +77,7 @@ Below are all the endpoints set up for this project. You may not use all of them
 
 You may choose any of the following 3rd party libraries to incorporate into your app if interested. Please get instructor approval first before choosing to use additional 3rd-party libraries.  
 
-* [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'} 
+* [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'}
 * [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
 * [InteractJS](https://interactjs.io/){:target='blank'}
 * [DayJS](https://www.npmjs.com/package/dayjs)
@@ -89,21 +89,21 @@ You may choose any of the following 3rd party libraries to incorporate into your
 - I should be able to make a trip request:
     - I will select a date, duration, number of travelers and choose from a list of destinations
     - After making these selections, I should see an estimated cost (with a 10% travel agent fee) for the trip.
-    - Once I submit the trip request, it will show on my dashboard as "pending" so that the travel agency can approve or deny it. 
+    - Once I submit the trip request, it will show on my dashboard as "pending" so that the travel agency can approve or deny it.
 
-**Refer to the "Add new trip" section from the endpoints table above!** 
+**Refer to the "Add new trip" section from the endpoints table above!**
 
 <section class="note">
 ### Note!
 
-If you haven't already, focus on accessibility at this point.  Before moving to iteration 3, please **create a branch and push it up to GH** so *Lighthouse* can be ran to check your dashboard for the accessibility audit. Since Lighthouse refreshes the page, we need this code on a separate branch to test the accessibility of your dashboard instead of your log in page. 
+If you haven't already, focus on accessibility at this point.  Before moving to iteration 3, please **create a branch and push it up to GH** so *Lighthouse* can be ran to check your dashboard for the accessibility audit. Since Lighthouse refreshes the page, we need this code on a separate branch to test the accessibility of your dashboard instead of your log in page.
 </section>
 
 ### 3. Login
 
 When first arriving at the site, a user should be able to log in with a username and password.
 
-**As a traveler:** 
+**As a traveler:**
 - I should be able to login:
   - I will see a login page when I first visit the site:
   - I can log in with the following credentials:
@@ -115,11 +115,11 @@ password: travel
 
   - Upon successfully loggin in, I should see my dashboard.
 
-**Refer to the "Get single traveler" section from the endpoints table above!** 
+**Refer to the "Get single traveler" section from the endpoints table above!**
 
 ### 4. Agent Interaction
 
-Your app should now support two different types of users.  In addition to having a traveler, you will now add a travel agency. 
+Your app should now support two different types of users.  In addition to having a traveler, you will now add a travel agency.
 
 
 **As a travel agent:**
@@ -172,7 +172,7 @@ It is up to you to decide what changes warrant a PR – remember we want to subm
 - Allow the travel agent to POST suggestedActivities for user trips (see Endpoints table above). This could be based off of a user's "travelerType" value.
 - Allow the travel agent to create new destinations (see Endpoints table above)
 - Utilize an npm package - requires permission from instructors
-- Choose your own extension! 
+- Choose your own extension!
 
 ## Due Date
 
@@ -191,8 +191,8 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 
 * 4: Application has clearly had special consideration around accessibility and usability on devices. Lighthouse accessibility audit is at a 100%.
 * 3: Application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance.UI does not detract from the UX. Lighthouse accessibility audit is at least 90%.
-* 2: The application may be confusing or difficult to use at times.  The UI is incomplete, Accessibility has been considered, but does not have strong accessible features. 
-* 1: Application is confusing or difficult to use. The UI is incomplete. Accessibility has not been considered. 
+* 2: The application may be confusing or difficult to use at times.  The UI is incomplete, Accessibility has been considered, but does not have strong accessible features.
+* 1: Application is confusing or difficult to use. The UI is incomplete. Accessibility has not been considered.
 
 ## JavaScript Style & OOP
 
@@ -211,4 +211,4 @@ Make sure you turn in your project [here](https://forms.gle/dTjaDmgDog9U8dGn6){:
 
 # Evaluation
 
-Evaluations will be done live with an intructor. You'll be asked to step through the various parts of your application including reponsive design, running the accessibility audit, the user interface, running tests and looking at Sass and JavaScript code. 
+Evaluations will be done live with an instructor. You'll be asked to step through the various parts of your application including the accessibility audit, the user interface, running tests and looking at fetch calls and JavaScript code.
