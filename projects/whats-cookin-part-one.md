@@ -208,7 +208,9 @@ _Choose at least one_
 
 You should *NOT* use the original data files in the `data` directory for testing. These are big files, to begin with, and a real-world dataset would have millions of records. That's far too big to use every time you want to run a test.
 
-Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your methods are working correctly because you can do the calculations by hand with a much smaller dataset.
+Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your methods are working correctly because you can do the calculations by hand with a much smaller dataset.  
+
+You are expected to research and implement `beforeEach` in your test files.
 
 You are *expected* to test:
 
@@ -239,8 +241,8 @@ You are *not expected* to test:
 
 ### Test-Driven Development
 * 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. Tests must be passing to be considered.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files. Tests must be passing to be considered.
-* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. Tests must be passing to be considered.
+* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.  Some use of beforeEach to DRY up tests. Tests must be passing to be considered.
+* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. No use of beforeEach to DRY up tests.  Tests must be passing to be considered.
 * 1: Application does not demonstrate strong use of TDD, and some tests might be failing.
 
 ### User Interface
