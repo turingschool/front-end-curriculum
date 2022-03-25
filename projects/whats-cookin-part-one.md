@@ -120,8 +120,8 @@ Once you have looked over each data file, start with the `recipes.js` data file.
 A `RecipeRepository` should hold onto all `Recipe` objects.
 - It should have a parameter to take in recipe `data`.
 - It should have methods to determine:
-  * A filtered list of recipes based on one or more tags.
-  * A filtered list of recipes based on its name or ingredients.
+  * A filtered list of recipes based on a tag. (Extension option: filtering by multiple tags)
+  * A filtered list of recipes based on its name. (Extension option: filtering by name or ingredients)
 
 A `Recipe` represents one recipe object.
 - It should hold on to all its information (provided in the data file).
@@ -151,8 +151,8 @@ Use the `scripts.js` file to add information to the DOM. This JS file should cal
 
 - As a user, I should be able to view a list of all recipes.
 - As a user, I should be able to click on a recipe to view more information including directions, ingredients needed, and total cost.
-- As a user, I should be able to filter recipes by multiple tags.
-- As a user, I should be able to search recipes by their name or ingredients.
+- As a user, I should be able to filter recipes by a tag. (Extension option: by multiple tags)
+- As a user, I should be able to search recipes by their name. (Extension option: by name or ingredients)
 
 ---
 
@@ -163,16 +163,16 @@ Use the `scripts.js` file to add information to the DOM. This JS file should cal
 Create classes and methods that can:
 - Allow a user to favorite or unfavorite recipes (add to / remove from the user's `favoriteRecipes`)
 - Decide to cook a recipe that week (add to my `recipesToCook`)
-- Filter my `favoriteRecipes` by one or more tags.
-- Filter my `favoriteRecipes` by its name or ingredients.
+- Filter my `favoriteRecipes` by a tag. (Extension option: filter by multiple tags)
+- Filter my `favoriteRecipes` by its name. (Extension option: filter by name or ingredients)
 
 #### User Stories
 
 *On load, a user should be chosen at random.*
 
 * As a user, I should be able to favorite / unfavorite recipes that I like and can easily find again.
-* As a user, I should be able to filter my favorited recipes by one or more tags.
-* As a user, I should be able to search my favorited recipes by its name or ingredients.
+* As a user, I should be able to filter my favorited recipes by a tag. (Extension option: filter by multiple tags)
+* As a user, I should be able to search my favorited recipes by its name. (Extension option: search by name or ingredients)
 * As a user, I should be able to add a recipe to a list of recipes to cook (this functionality will be necessary for Part Two of this project).
 
 ---
@@ -199,6 +199,7 @@ Once you've got fetch working on all three arrays, you can delete your hardcoded
 ### Extensions
 _Choose at least one_
 * Implement one of the listed 3rd party libraries or one of your choosing with instructor approval.
+* Expand your filtering functionality to include multiple tags and search by name and ingredients in your RecipeRepository and User classes.
 * Favoriting recipes is nice, but implementing a rating system would be even more helpful for a user! This could include a 5 star rating system, a way to leave reviews, etc!
 * You may also collaborate with instructors to personalize an extension for this project.
 
