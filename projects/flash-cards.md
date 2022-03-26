@@ -276,4 +276,4 @@ Collaborate with instructors to personalize an extension for this project
 
 You'll have the opportunity to review code with your accountabilibuddy after submitting. Instructors will send over group feedback.
 
-Submit your GH Repo [here](https://forms.gle/dTjaDmgDog9U8dGn6) by **9PM on Thursday of Week 1**.
+Submit your GH Repo [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link) by **9PM on Thursday of Week 1**.

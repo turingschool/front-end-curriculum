@@ -45,7 +45,7 @@ Dates and deadlines to be aware of:
 
 #### Monday, Week 3 - Project due at 9PM.
 
-- Please submit your Group project part one [here](https://forms.gle/dTjaDmgDog9U8dGn6){:target='blank'}
+- Please submit your Group project part one [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link){:target='blank'}
 
 ---
 
