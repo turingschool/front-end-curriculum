@@ -94,6 +94,25 @@ Then you have to tell git what the default branch should be. You can run this co
   - `git push`
 </section>
 
+<section class="note">
+### How to Write a Good Commit Message
+
+Begin the commit message with the **type** of the commit followed by a : and brief description.
+
+Types of commits include:
+* **fix** - use if committed code is fixing a bug(broken code).
+* **feat** - stands for feature. This will likely be your most common type that you use. It should be used for any new functionality that is committed.
+* **test** - use if committed code is adding test functionality.
+* **refactor** - use if updating and/or removing existing code.
+* **docs** - duse if updating your readme.
+
+Examples of good commit messages:
+
+* `fix: broken calculation for percent high ranking cards`
+* `feat: add shuffle to deck`
+* `test: add test for shuffle`
+</section>
+
 ## Code Review
 <section class="checks-for-understanding">
 ### Partner One
