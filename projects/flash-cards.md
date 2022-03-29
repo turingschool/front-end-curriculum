@@ -258,15 +258,15 @@ Collaborate with instructors to personalize an extension for this project
 
 ### Fundamental JavaScript & Style
 * 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring.
-* 3: Application shows strong effort towards organization, content, and refactoring. Leverages JavaScript's truthy/falsey principles to write concise conditional logic. Does not use for loops.
+* 3: Application shows strong effort towards organization, content, and refactoring. Leverages JavaScript's [truthy/falsey principles](https://frontend.turing.edu/lessons/module-1/js-truthy-falsy-expressions.html) to write concise conditional logic. Does not use for loops.
 * 2: Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.
 * 1: Application generates syntax error or crashes during execution.
 
 ### Test-Driven Development
-* 4: Application is broken into components, good use of own data, good happy and sad path testing. Has consistent use of beforeEach to DRY up tests.
-* 3: Application is well tested, but some coverage might be lacking. Smaller data files are used for testing instead of the entire data file. Some use of beforeEach to DRY up tests.
-* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. No use of beforeEach to DRY up tests.
-* 1: Application does not demonstrate strong use of TDD.
+* 4: Application is broken into components, good use of own data, good happy and sad path testing. Has consistent use of beforeEach to DRY up tests.  Tests must be passing to be considered.  
+* 3: Application is well tested, but some coverage might be lacking. Smaller data files are used for testing instead of the entire data file. Some use of beforeEach to DRY up tests. Tests must be passing to be considered.  
+* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. No use of beforeEach to DRY up tests. Tests must be passing to be considered.  
+* 1: Application does not demonstrate strong use of TDD. Tests must be passing to be considered.  
 
 ## Repeaters
 - Must create a brand new repo and start the project fresh
