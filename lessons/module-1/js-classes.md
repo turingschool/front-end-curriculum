@@ -70,6 +70,11 @@ In our example `school` object above, `this` is referring to `school`. If we loo
 
 `capacity` and `currentStudents` are properties of the `school` object, so when used in this context `this` refers to `school`.
 
+<section class="note">
+Just a note:
+The browser console and Replit behave differently regarding the _'global context'_. This can be confusing because the global objects may look different. Also, you may see differences in later exercises between the browser and Replit. This is okay! The above rules still apply. 
+</section>
+
 ### Which `this` is which?
 
 The default context of `this` is the `window` object.
