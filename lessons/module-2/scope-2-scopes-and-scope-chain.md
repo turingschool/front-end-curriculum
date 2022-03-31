@@ -269,7 +269,7 @@ function logNumber() {
 
 console.log('B', number);
 
-console.log(logNumber())
+logNumber()
 
 console.log('C', number);
 ```
@@ -319,7 +319,7 @@ function logLocalNumber () {
   number = localNumber;  
 }
 
-console.log(logLocalNumber())
+logLocalNumber()
 
 console.log(number);  // what will log here?
 ```
@@ -333,8 +333,8 @@ function printGreeting() {
   console.log(`Hello ${givenName}`);
 }
 
-console.log(printGreeting('Khalid')) // what will log here?
-console.log(printGreeting())      // what will log here?
+printGreeting('Khalid') // what will log here?
+printGreeting()      // what will log here?
 ```
 
 Example 3:
@@ -354,7 +354,7 @@ function printGreeting() {
   console.log(`C: Hello ${givenName}`);
 }
 
-console.log(printGreeting())
+printGreeting()
 
 console.log(`D: Hello ${givenName}`);
 
