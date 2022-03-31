@@ -6,7 +6,7 @@ tags: javascript, dom, events, event listener, event handler
 
 ## Learning Goals
 
-* Continue to develop a basic understanding for JavaScript syntax
+* Continue to develop your understanding of the DOM
 * Understand how to attach event listeners to DOM elements
 * Understand how to write event handler functions
 
@@ -125,25 +125,14 @@ Let's break down what's happening in the CodePen above:
   - Declare a variable, `color` that takes the value the user selected and stores it
   - Applies an inline style, `backgroundColor` with that newly selected color
 
-## Anonymous Functions
+## Additional Practice
 
 <section class="call-to-action">
 ### Paired Practice
-Examine [this code](https://codepen.io/hfaerber/pen/gOmLBgJ) and talk about the following questions:
-1. Why do you think "Summer" is appearing in the screen, when "Fall" is in the original HTML?
+Examine [this code](https://codepen.io/Kalikoze/pen/vYpJQoB?editors=1010) and talk about the following questions:
+1. Why do you think "Summer" is appearing in the screen, when "Fall" is in the original header in the HTML?
 2. Why isn't the button working?
 </section>
-
-Remember that the second argument the `addEventListener` accepts is a function name, not an invoked function. This presents challenges when we need to pass parameters to that function.  
-
-You can use an **anonymous function**:  
-```js
-button.addEventListener('click', function() {
-  changeSeason('fall');
-});
-```  
-
-Too many anonymous functions can lead to unclear and hard to follow code. The important thing to remember is that you should only be reaching for an anonymous function when you need it. **If there are no arguments to be passed in, you don't need an anonymous function.**
 
 <section class="call-to-action">
 ### Think About It  
