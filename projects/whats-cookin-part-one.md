@@ -136,7 +136,9 @@ A `Recipe` represents one recipe object.
 
 To calculate the cost of a recipe, you will need to factor in the amount listed in the recipe. The price (`estimatedCostInCents`) of an ingredient is per `unit`.
 
-For example, if flour is marked as 100 cents, and the recipe calls for 1.5 cups, then it would cost 150 cents. Similarly, if a tomato is $2, and the recipe requires 2 tomatoes, then the cost would be $4.
+For example, if flour is marked as 100 cents, and the recipe calls for 1.5 cups, then it would cost 150 cents. Similarly, if a tomato is $2, and the recipe requires 2 tomatoes, then the cost would be $4.  
+  
+Please note that the prices for the recipes might be a bit higher than in realistic. That's okay - the mock data has high prices. You can always double check your math by manually calculating the price of a recipe.  
 </section>
 
 <section class="note">
