@@ -207,7 +207,6 @@ As a user,
 - That comment is still on the idea card
 
 ---
----
 
 # Notes on Project Feedback
 
@@ -255,13 +254,11 @@ For this project, an average that is above 0.5 is considered a yes - a passing p
 
 ## Rubric
 
-## Rubric
-
 This project has 4 evaluated concepts:
 
 - Professionalism
 - Comp Recreation
-- HTML && CSS
+- HTML & CSS
 - JavaScript
 
 And evaluation of these concepts is assisted through the final graded section:
@@ -279,15 +276,14 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ### Professionalism
 
 - The team's norming document is taken seriously, with thoughtful reflections from all team members regarding their skills, learning goals, work styles, etc. 
-- The work is distributed equitably; hopefully commit/code contributions are roughly even for each team member
-- PRs have clear, thorough descriptions and are consistently reviewed by other team members before work has been merged.
-
-✨WOW✨ can look like:
-
-- The team holds regular standups and retros and revisits the norming document as better perspective is gained
+- The work is distributed equitably; commit/code contributions are roughly even for each team member
 - Branches are consistently used for individual features and commit messages are descriptive and concise
 - Commits are atomic, documenting a single changeset (such as a new function being created, or a function being updated) and clearly demonstrates how the project evolved over time.
-- README is formatted and gives new contributors and employers sufficient context about the project including setup instructions, deploy link (gh-pages), images of the application, technologies used, reflections, future features, and other pertinent information.
+- PRs have clear, thorough descriptions and are consistently reviewed by other team members before work has been merged.
+- README is formatted and gives new contributors and employers sufficient context about the project including setup instructions, deploy link (gh-pages), images or video of the functioning app, technologies used, reflections, future features, and other pertinent information.
+
+✨WOW✨ can look like:
+- The team holds regular standups and retros while also revisiting the norming document as better perspective is gained
 - A [PR template](https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository) is effectively used
 </section>
 
@@ -312,19 +308,19 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together.
 
 ✨WOW✨ can look like:
-- Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, let assigned instructor know which naming convention will be used._
-- Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected.
+- Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, document it in your README and let your project manager know which naming convention will be used._
+- Application fully implements HTML that is accessible for individuals with visual disabilities. _Note: This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected._
 </section>
 
 <section class="note">
 ### Note about using the WAVE tool
 
 To get this extension to work with local files, follow these steps:
-    - Install
-    - Right click the WAVE extension
-    - Click "Manage Extensions"
-    - Flip the "Allow access to file URLs" switch
-    - Success!
+- Install
+- Right click the WAVE extension
+- Click "Manage Extensions"
+- Flip the "Allow access to file URLs" switch
+- Success!
 </section>
 
 <section class="answer">
@@ -332,8 +328,8 @@ To get this extension to work with local files, follow these steps:
 
 - Application uses the Data Model exclusively to track changes to the ideas.
 - No nested if/else statements or for loops.
-- Functions are DRY and adhere to the Single Responsibility Prinicple(SRP)
-- Event delegation is used correctly on dynamic elements for deleting, and starring an idea.
+- Functions are DRY and adhere to the Single Responsibility Prinicple (SRP)
+- Event delegation is used correctly on dynamic elements for deleting and starring an idea.
 - Data model is fully separated from the DOM.  There is no DOM manipulation in the class files.
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
 - Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
