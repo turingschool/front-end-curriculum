@@ -1,4 +1,8 @@
-# Refactor Tractor - 1 Day Challenge - Turdle
+---
+title: Refactor Tractor | Turdle (One Day Challenge)
+length: 1 day
+tags: javascript, css, html, refactor
+---
 
 ## Why?
 As a developer, you will most likely spend most of your time working with existing codebases. It'll be rare that you'll be starting a project from scratch like you've been doing at Turing. We'd like to provide some practice for you to get your hands into existing code. Today, you'll fix bugs, add features, refactor, and more! It might seem weird or intimidating at first, but follow the instructions closely and use all the habits and tricks you've learned so far. You can do this!  
@@ -28,7 +32,7 @@ The functionality for when the game is over is incomplete. Currently, when a use
 - The key on the left side of the screen resets so all letters are black.
 - A new winning word is created.  
 
-NOTE: You should not force a page reload to make this happen.
+NOTE: You should **not** force a page reload to make this happen.
 
 ## Iteration 2 - GET Words
 Currently, the words are coming from the `words.js` file. Update the codebase so that you are fetching that data. You should be able to delete `words.js` after this iteration without the user experience being affected. [Here is a link to the backend repo.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.
