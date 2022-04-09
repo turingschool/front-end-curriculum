@@ -48,6 +48,10 @@ The functionality for when the game is over is incomplete. Currently, when a use
 #### ⚠️ Important Note
 
 You should **not** force a page reload to make this happen.
+
+#### 💡 Helpful Tip
+
+Check out the existing code. I bet a lot of the logic needed for this iteration is already there 👀
 </section>
 
 <section class="answer">
