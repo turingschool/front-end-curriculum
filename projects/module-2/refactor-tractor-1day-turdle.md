@@ -15,14 +15,22 @@ There really aren't any rules here. You can change the existing codebase however
 ## Set Up
 Open up [the starter repo](https://github.com/turingschool-examples/turdle){:target='blank'} and follow the directions in the README.
 
-## Iteration 0
-First, if you've never played [Wordle](https://www.nytimes.com/games/wordle/index.html){:target='blank'}, take a couple of minutes to play a round. This will help you understand how the general game play of Turdle is meant to work. Note that Wordle is only meant to be played once a day, so you'll only get one round of gameplay. Luckily for you, Turdle can be played as much as you'd like!   
+<section class="answer">
+### Iteration 0
+First, if you've never played [Wordle](https://www.nytimes.com/games/wordle/index.html){:target='blank'}, take a couple of minutes to play it. This will help you understand how the general game play of Turdle is meant to work. Note that Wordle is only meant to be played once a day, so you'll only get one round of gameplay. Luckily for you, Turdle can be played as much as you'd like!   
 
-Once you have a good idea of how Wordle works, play a few rounds of Turdle (`open index.html`). Click around the app and find all the functionality that exists so far. You might notice that some things aren't working as expected - like nothing happens when a game is won and the game stats are missing. That's okay for now - you're going to fix those issues later :)  
+Once you have a good idea of how Wordle works, play a few rounds of Turdle (`open index.html`). Click around the app and find all the functionality that exists so far. You might notice that some things aren't working as expected - for example, nothing happens when a game ends and the game stats are missing. That's okay for now - you're going to fix those issues later 🙂  
 
-Now that we've explored the app, let's explore the code. Spend some time (at LEAST 15 minutes) exploring the existing codebase. We recommend trying to follow the logic of the gameplay in the code. Adding console.logs is a great way to check the values of variables, parameters, and function outputs. Feel free to add lots of comments to the code to help you remember all that you discover. [Here is a great article about how to digest a new codebase.](https://dev.to/ericweissman/diving-into-a-new-codebase-4b38){:target='blank'}
+Now that you've explored the app, it's time to explore the code. Spend some time (at least 15 minutes) exploring the existing codebase. We recommend trying to follow the logic of the gameplay in the code. Adding console.logs is a great way to check the values of variables, parameters, and function outputs. Feel free to add lots of comments to the code to help you remember all that you discover. [Here is a great article about how to digest a new codebase.](https://dev.to/ericweissman/diving-into-a-new-codebase-4b38){:target='blank'}
 
-## Iteration 1 - Game Over
+<section class="note">
+### Helpful Tip
+
+When working on this game, you might find it helpful to know the winning word. With the app open in your browser, you can use the console to print the `winningWord` variable and see what the correct word is.
+</section>
+</section>
+<section class="answer">
+### Iteration 1 - Game Over
 The functionality for when the game is over is incomplete. Currently, when a user guesses the word correctly, all letters turn yellow and a message logs to the console. Currently nothing happens when a user loses the game (they do not guess the word by the 6th guess). Update the codebase so the following happens when the game is over:
 - A message appears on the screen letting the user know they have won or lost.
 - If they won, the message should include how many guesses it took them to win.
@@ -33,28 +41,33 @@ The functionality for when the game is over is incomplete. Currently, when a use
 - A new winning word is created.  
 
 NOTE: You should **not** force a page reload to make this happen.
-
-## Iteration 2 - GET Words
+</section>
+<section class="answer">
+### Iteration 2 - GET Words
 Currently, the words are coming from the `words.js` file. Update the codebase so that you are fetching that data. You should be able to delete `words.js` after this iteration without the user experience being affected. [Here is a link to the backend repo.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.
-
-## Iteration 3 - Track Game Stats
+</section>
+<section class="answer">
+### Iteration 3 - Track Game Stats
 Currently, the `stats` page does not show any actual data. Update the codebase so that the following statistics are tracked*:
 - The total number of games the user has played
 - The percentage of games that the user has won
 - The average number of attempts it has taken the user to win the game  
 
 *NOTE: Don't POST yet! At this point, this data does not need to persist between page refreshes. The data only needs to exist within each user session. Meaning, if the user closes the page or refreshes the page, it is totally fine that the data will be lost.
-
-## Iteration 4 - POST Game Stats (spicy)
+</section>
+<section class="answer">
+### Iteration 4 - POST Game Stats (spicy)
 Now let's impletment a POST so that the game stats persist even when the application is closed or refreshed. Update the codebase so that you are POSTing the game stats and then GETting the stats from the server. You should be able to refresh the app and see the stats persist. [You'll use the same backend repo as iteration 2.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.  
 
 HINT: You should POST the stats when the game is over (win or lose) and you should GET the game stats when the user clicks on the `stats` button in the nav bar.
 
 If you need a refresher on POSTing, review [the POST lesson](https://frontend.turing.edu/lessons/module-2/network-requests-posts.html){:target='blank'}!
-
-## Iteration 5 - Choose Your Own Adventure (extension)
+</section>
+<section class="answer">
+### Iteration 5 - Choose Your Own Adventure (extension)
 You can choose whatever feature you'd like to add to this application. We've listed some ideas below, but feel free to think outside of the box here! Think about what you need more practice with, and let that determine your next move.
 - Refactor the codebase to use a `Guess` and `Game` class
 - Add some unit testing
 - Create a second color scheme and allow the user to toggle between them ([Here's an awesome example](https://www.joshwcomeau.com/){:target='blank'} - click the sun icon in the top right corner!)
 - Create an easy version of the game where there are no words with double letters (like `pools` or `canal`). Allow the user to choose which version of the game they'd like to play.
+</section>
