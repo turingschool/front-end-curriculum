@@ -4,6 +4,8 @@ length: 1 day
 tags: javascript, css, html, refactor
 ---
 
+![turdle desktop](/assets/images/projects/turdle/turdle.png)
+
 ## Purpose
 As a developer, you will most likely spend most of your time working with existing codebases. It'll be rare that you'll be starting a project from scratch like you've been doing at Turing. We'd like to provide some practice for you to get your hands into existing code. Today, you'll fix bugs, add features, refactor, and more! It might seem weird or intimidating at first, but follow the instructions closely and use all the habits and tricks you've learned so far. You can do this!  
 
@@ -14,7 +16,6 @@ This is meant to be a solo challenge, so try your best to work through the chall
 
 This is ungraded, so there is no pressure on today and no need to rush. Get as far as you can, but keep the focus on the learning.  
 
-![turdle desktop](/assets/images/projects/turdle/turdle-desktop.png)
 
 ## Set Up
 Open up [the starter repo](https://github.com/turingschool-examples/turdle){:target='blank'} and follow the directions in the README. Complete the following iterations in order.
