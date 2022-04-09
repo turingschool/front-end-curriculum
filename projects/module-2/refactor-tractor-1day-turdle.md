@@ -10,13 +10,14 @@ As a developer, you will most likely spend most of your time working with existi
 ## Guidelines
 You can change the existing codebase however you see fit to accomplish the tasks ahead of you. Want to add another function? Do it! Need another variable? Make it! Hate the way an existing function is written? Refactor it! Today is all about exploration, so dig in and have fun!   
 
-This is meant to be a solo challenge, so try your best to work through the challenges on your own. If you have questions or get stuck, you can (and SHOULD) use your notes, google, and DM your instructors. Don't stay stuck on the same thing for too long.  
+This is meant to be a solo challenge, so try your best to work through the challenges on your own. If you have questions or get stuck, you can (and SHOULD) use your notes, google, take poms, and DM your instructors. Don't stay stuck on the same thing for too long.  
 
 This is ungraded, so there is no pressure on today and no need to rush. Get as far as you can, but keep the focus on the learning.  
 
 ## Set Up
 Open up [the starter repo](https://github.com/turingschool-examples/turdle){:target='blank'} and follow the directions in the README. Complete the following iterations in order.
 
+## Iterations
 <section class="answer">
 ### Iteration 0 - Explore
 First, if you've never played [Wordle](https://www.nytimes.com/games/wordle/index.html){:target='blank'}, take a couple of minutes to play it. This will help you understand how the general game play of Turdle is meant to work. Note that Wordle is only meant to be played once a day, so you'll only get one round of gameplay. Luckily for you, Turdle can be played as much as you'd like!   
