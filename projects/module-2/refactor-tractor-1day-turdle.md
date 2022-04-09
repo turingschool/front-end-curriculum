@@ -22,10 +22,10 @@ Now that we've explored the app, let's explore the code. Spend some time (at LEA
 The functionality for when the game is over is incomplete. Currently, when a user guesses the word correctly, all letters turn yellow and a message logs to the console. Currently nothing happens when a user loses the game (they do not guess the word by the 6th guess). Update the codebase so the following happens when the game is over:
 - A message appears on the screen letting the user know they have won or lost.
 - If they won, the message should include how many guesses it took them to win.
-- The messages disappear after 4 seconds.
-- The game board clears of all previous guesses.
+- The message should disappear after 4 seconds.
+- The game board clears all previous guesses.
 - The focus is put back on the top left square of the game board (as it does on page load).
-- The key on the left side of the screen resets.
+- The key on the left side of the screen resets so all letters are black.
 - A new winning word is created.  
 
 NOTE: You should not force a page reload to make this happen.
