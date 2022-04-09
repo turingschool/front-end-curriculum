@@ -9,25 +9,26 @@ This is ungraded, so there is no pressure on today and no need to rush. Get as f
 There really aren't any rules here. You can change the existing codebase however you see fit to accomplish the tasks ahead of you. Want to add another function? Do it! Need another variable? Make it! Hate the way an existing function is written? Refactor it! Today is all about exploration, so dig in and have fun!
 
 ## Set Up
-Open up [the starter repo](https://github.com/turingschool-examples/turdle) and follow the directions in the README.
+Open up [the starter repo](https://github.com/turingschool-examples/turdle){:target='blank'} and follow the directions in the README.
 
 ## Iteration 0
-First, if you've never played [Wordle](https://www.nytimes.com/games/wordle/index.html), take a couple of minutes to play a round. This will help you understand how the general game play of Turdle is meant to work. Note that Wordle is only meant to be played once a day, so you'll only get one round of gameplay. Luckily for you, Turdle can be played as much as you'd like!   
+First, if you've never played [Wordle](https://www.nytimes.com/games/wordle/index.html){:target='blank'}, take a couple of minutes to play a round. This will help you understand how the general game play of Turdle is meant to work. Note that Wordle is only meant to be played once a day, so you'll only get one round of gameplay. Luckily for you, Turdle can be played as much as you'd like!   
 
 Once you have a good idea of how Wordle works, play a few rounds of Turdle (`open index.html`). Click around the app and find all the functionality that exists so far. You might notice that some things aren't working as expected - like nothing happens when a game is won and the game stats are missing. That's okay for now - you're going to fix those issues later :)  
 
-Now that we've explored the app, let's explore the code. Spend some time (at LEAST 15 minutes) exploring the existing codebase. We recommend trying to follow the logic of the gameplay in the code. Adding console.logs is a great way to check the values of variables, parameters, and function outputs. Feel free to add lots of comments to the code to help you remember all that you discover. [Here is a great article about how to digest a new codebase.](https://dev.to/ericweissman/diving-into-a-new-codebase-4b38)
+Now that we've explored the app, let's explore the code. Spend some time (at LEAST 15 minutes) exploring the existing codebase. We recommend trying to follow the logic of the gameplay in the code. Adding console.logs is a great way to check the values of variables, parameters, and function outputs. Feel free to add lots of comments to the code to help you remember all that you discover. [Here is a great article about how to digest a new codebase.](https://dev.to/ericweissman/diving-into-a-new-codebase-4b38){:target='blank'}
 
-## Iteration 1 - Winning Game
-The functionality for when a user guesses the correct word is incomplete. Currently, the letters turn green and a message logs to the console. Update the codebase so the following happens when a user guesses the correct word:
-- A message appears on the screen letting the user know they have won.
-- A message appears on the screen letting the user know how many guesses it took them to win.
+## Iteration 1 - Game Over
+The functionality for when the game is over is incomplete. Currently, when a user guesses the word correctly, all letters turn yellow and a message logs to the console. Currently nothing happens when a user loses the game (they do not guess the word by the 6th guess). Update the codebase so the following happens when the game is over:
+- A message appears on the screen letting the user know they have won or lost.
+- If they won, the message should include how many guesses it took them to win.
 - The messages disappear after 4 seconds.
 - The game board clears of all previous guesses.
 - The focus is put back on the top left square of the game board (as it does on page load).
 - The key on the left side of the screen resets.
-- A new winning word is created.
-- You should not force a page reload to make this happen.
+- A new winning word is created.  
+
+NOTE: You should not force a page reload to make this happen.
 
 ## Iteration 2 - GET Words
 Currently, the words are coming from the `words.js` file. Update the codebase so that you are fetching that data. You should be able to delete `words.js` after this iteration without the user experience being affected. [Here is a link to the backend repo.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.
@@ -41,7 +42,9 @@ Currently, the `stats` page does not show any actual data. Update the codebase s
 *NOTE: Don't POST yet! At this point, this data does not need to persist between page refreshes. The data only needs to exist within each user session. Meaning, if the user closes the page or refreshes the page, it is totally fine that the data will be lost.
 
 ## Iteration 4 - POST Game Stats (spicy)
-Now let's impletment a POST so that the game stats persist even when the application is closed or refreshed. Update the codebase so that you are POSTing the game stats and then GETting the stats from the server. You should be able to refresh the app and see the stats persist. [You'll use the same backend repo as iteration 2.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.
+Now let's impletment a POST so that the game stats persist even when the application is closed or refreshed. Update the codebase so that you are POSTing the game stats and then GETting the stats from the server. You should be able to refresh the app and see the stats persist. [You'll use the same backend repo as iteration 2.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.  
+
+HINT: You should POST the stats when the game is over (win or lose) and you should GET the game stats when the user clicks on the `stats` button in the nav bar.
 
 If you need a refresher on POSTing, review [the POST lesson](https://frontend.turing.edu/lessons/module-2/network-requests-posts.html){:target='blank'}!
 
