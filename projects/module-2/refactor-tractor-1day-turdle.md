@@ -23,12 +23,9 @@ Once you have a good idea of how Wordle works, play a few rounds of Turdle (`ope
 
 Now that you've explored the app, it's time to explore the code. Spend some time (at least 15 minutes) exploring the existing codebase. We recommend trying to follow the logic of the gameplay in the code. Adding console.logs is a great way to check the values of variables, parameters, and function outputs. Feel free to add lots of comments to the code to help you remember all that you discover. [Here is a great article about how to digest a new codebase.](https://dev.to/ericweissman/diving-into-a-new-codebase-4b38){:target='blank'}
 
-<section class="note">
-### Helpful Tip
+#### Helpful Tip
 
 When working on this game, you might find it helpful to know the winning word. With the app open in your browser, you can use the console to print the `winningWord` variable and see what the correct word is.
-</section>
-
 </section>
 
 <section class="answer">
@@ -42,12 +39,9 @@ The functionality for when the game is over is incomplete. Currently, when a use
 - The key on the left side of the screen resets so all letters are black.
 - A new winning word is created.  
 
-<section class="note">
-### Important Note
+#### Important Note
 
 NOTE: You should **not** force a page reload to make this happen.
-</section>
-
 </section>
 
 <section class="answer">
@@ -62,26 +56,20 @@ Currently, the `stats` page does not show any actual data. Update the codebase s
 - The percentage of games that the user has won
 - The average number of attempts it has taken the user to win the game  
 
-<section class="note">
-### Important Note
+#### Important Note
 
 Don't POST yet! At this point, this data does not need to persist between page refreshes. The data only needs to exist within each user session. Meaning, if the user closes the page or refreshes the page, it is totally fine that the data will be lost.
-</section>
-
 </section>
 
 <section class="answer">
 ### Iteration 4 - POST Game Stats (spicy)
 Now let's impletment a POST so that the game stats persist even when the application is closed or refreshed. Update the codebase so that you are POSTing the game stats and then GETting the stats from the server. You should be able to refresh the app and see the stats persist. [You'll use the same backend repo as iteration 2.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.  
 
-<section class="note">
-### Helpful Tip
+#### Helpful Tip
 
 HINT: You should POST the stats when the game is over (win or lose) and you should GET the game stats when the user clicks on the `stats` button in the nav bar.
 
 If you need a refresher on POSTing, review [the POST lesson](https://frontend.turing.edu/lessons/module-2/network-requests-posts.html){:target='blank'}!
-</section>
-
 </section>
 
 <section class="answer">
