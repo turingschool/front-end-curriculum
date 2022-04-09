@@ -1,18 +1,20 @@
 # Refactor Tractor - 1 Day Challenge - Turdle
 
 ## Why?
-As a developer, you will most likely spend most of your time working with existing codebases. It'll be rare that you'll be starting a project from scratch like you've been doing at Turing. We'd like to provide some practice for you to get your hands into existing code. Today, you'll fix bugs, add features, refactor, and more! It might seem weird or intimidating at first, but follow the instructions closely and use all the habits and tricks you've learned so far. This is ungraded, so there is no pressure on today and no need to rush. Get as far as you can, but keep the focus on the learning.
+As a developer, you will most likely spend most of your time working with existing codebases. It'll be rare that you'll be starting a project from scratch like you've been doing at Turing. We'd like to provide some practice for you to get your hands into existing code. Today, you'll fix bugs, add features, refactor, and more! It might seem weird or intimidating at first, but follow the instructions closely and use all the habits and tricks you've learned so far. You can do this!  
+
+This is ungraded, so there is no pressure on today and no need to rush. Get as far as you can, but keep the focus on the learning.
 
 ## Rules
 There really aren't any rules here. You can change the existing codebase however you see fit to accomplish the tasks ahead of you. Want to add another function? Do it! Need another variable? Make it! Hate the way an existing function is written? Refactor it! Today is all about exploration, so dig in and have fun!
 
 ## Set Up
-cloning
+Open up [the starter repo](https://github.com/turingschool-examples/turdle) and follow the directions in the README.
 
 ## Iteration 0
 First, if you've never played [Wordle](https://www.nytimes.com/games/wordle/index.html), take a couple of minutes to play a round. This will help you understand how the general game play of Turdle is meant to work. Note that Wordle is only meant to be played once a day, so you'll only get one round of gameplay. Luckily for you, Turdle can be played as much as you'd like!   
 
-Once you have a good idea of how Wordle works, play a few rounds of Turdle (`open index.html`). Click around the app and find all the functionality that exists so far. You might notice that some things aren't working as expected - like when a game is won or the game stats. That's okay for now - you're going to fix those issues later :)  
+Once you have a good idea of how Wordle works, play a few rounds of Turdle (`open index.html`). Click around the app and find all the functionality that exists so far. You might notice that some things aren't working as expected - like nothing happens when a game is won and the game stats are missing. That's okay for now - you're going to fix those issues later :)  
 
 Now that we've explored the app, let's explore the code. Spend some time (at LEAST 15 minutes) exploring the existing codebase. We recommend trying to follow the logic of the gameplay in the code. Adding console.logs is a great way to check the values of variables, parameters, and function outputs. Feel free to add lots of comments to the code to help you remember all that you discover. [Here is a great article about how to digest a new codebase.](https://dev.to/ericweissman/diving-into-a-new-codebase-4b38)
 
