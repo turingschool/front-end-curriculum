@@ -13,7 +13,7 @@ This is ungraded, so there is no pressure on today and no need to rush. Get as f
 There really aren't any rules here. You can change the existing codebase however you see fit to accomplish the tasks ahead of you. Want to add another function? Do it! Need another variable? Make it! Hate the way an existing function is written? Refactor it! Today is all about exploration, so dig in and have fun!
 
 ## Set Up
-Open up [the starter repo](https://github.com/turingschool-examples/turdle){:target='blank'} and follow the directions in the README.
+Open up [the starter repo](https://github.com/turingschool-examples/turdle){:target='blank'} and follow the directions in the README. Complete the following iterations in order.
 
 <section class="answer">
 ### Iteration 0
@@ -28,7 +28,9 @@ Now that you've explored the app, it's time to explore the code. Spend some time
 
 When working on this game, you might find it helpful to know the winning word. With the app open in your browser, you can use the console to print the `winningWord` variable and see what the correct word is.
 </section>
+
 </section>
+
 <section class="answer">
 ### Iteration 1 - Game Over
 The functionality for when the game is over is incomplete. Currently, when a user guesses the word correctly, all letters turn yellow and a message logs to the console. Currently nothing happens when a user loses the game (they do not guess the word by the 6th guess). Update the codebase so the following happens when the game is over:
@@ -40,29 +42,48 @@ The functionality for when the game is over is incomplete. Currently, when a use
 - The key on the left side of the screen resets so all letters are black.
 - A new winning word is created.  
 
+<section class="note">
+### Important Note
+
 NOTE: You should **not** force a page reload to make this happen.
 </section>
+
+</section>
+
 <section class="answer">
 ### Iteration 2 - GET Words
 Currently, the words are coming from the `words.js` file. Update the codebase so that you are fetching that data. You should be able to delete `words.js` after this iteration without the user experience being affected. [Here is a link to the backend repo.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.
 </section>
+
 <section class="answer">
 ### Iteration 3 - Track Game Stats
-Currently, the `stats` page does not show any actual data. Update the codebase so that the following statistics are tracked*:
+Currently, the `stats` page does not show any actual data. Update the codebase so that the following statistics are tracked:
 - The total number of games the user has played
 - The percentage of games that the user has won
 - The average number of attempts it has taken the user to win the game  
 
-*NOTE: Don't POST yet! At this point, this data does not need to persist between page refreshes. The data only needs to exist within each user session. Meaning, if the user closes the page or refreshes the page, it is totally fine that the data will be lost.
+<section class="note">
+### Important Note
+
+Don't POST yet! At this point, this data does not need to persist between page refreshes. The data only needs to exist within each user session. Meaning, if the user closes the page or refreshes the page, it is totally fine that the data will be lost.
 </section>
+
+</section>
+
 <section class="answer">
 ### Iteration 4 - POST Game Stats (spicy)
 Now let's impletment a POST so that the game stats persist even when the application is closed or refreshed. Update the codebase so that you are POSTing the game stats and then GETting the stats from the server. You should be able to refresh the app and see the stats persist. [You'll use the same backend repo as iteration 2.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.  
+
+<section class="note">
+### Helpful Tip
 
 HINT: You should POST the stats when the game is over (win or lose) and you should GET the game stats when the user clicks on the `stats` button in the nav bar.
 
 If you need a refresher on POSTing, review [the POST lesson](https://frontend.turing.edu/lessons/module-2/network-requests-posts.html){:target='blank'}!
 </section>
+
+</section>
+
 <section class="answer">
 ### Iteration 5 - Choose Your Own Adventure (extension)
 You can choose whatever feature you'd like to add to this application. We've listed some ideas below, but feel free to think outside of the box here! Think about what you need more practice with, and let that determine your next move.
