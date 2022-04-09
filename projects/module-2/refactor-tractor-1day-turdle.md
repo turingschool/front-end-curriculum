@@ -14,6 +14,8 @@ This is meant to be a solo challenge, so try your best to work through the chall
 
 This is ungraded, so there is no pressure on today and no need to rush. Get as far as you can, but keep the focus on the learning.  
 
+![turdle desktop](/assets/images/projects/turdle/turdle-desktop.png)
+
 ## Set Up
 Open up [the starter repo](https://github.com/turingschool-examples/turdle){:target='blank'} and follow the directions in the README. Complete the following iterations in order.
 
