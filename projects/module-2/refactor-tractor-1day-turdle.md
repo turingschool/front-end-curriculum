@@ -4,13 +4,15 @@ length: 1 day
 tags: javascript, css, html, refactor
 ---
 
-## Why?
+## Purpose
 As a developer, you will most likely spend most of your time working with existing codebases. It'll be rare that you'll be starting a project from scratch like you've been doing at Turing. We'd like to provide some practice for you to get your hands into existing code. Today, you'll fix bugs, add features, refactor, and more! It might seem weird or intimidating at first, but follow the instructions closely and use all the habits and tricks you've learned so far. You can do this!  
 
 This is ungraded, so there is no pressure on today and no need to rush. Get as far as you can, but keep the focus on the learning.
 
-## Rules
-There really aren't any rules here. You can change the existing codebase however you see fit to accomplish the tasks ahead of you. Want to add another function? Do it! Need another variable? Make it! Hate the way an existing function is written? Refactor it! Today is all about exploration, so dig in and have fun!
+## Guidelines
+You can change the existing codebase however you see fit to accomplish the tasks ahead of you. Want to add another function? Do it! Need another variable? Make it! Hate the way an existing function is written? Refactor it! Today is all about exploration, so dig in and have fun!   
+
+This is meant to be a solo challenge, so try your best to work through the challenges on your own. If you have questions or get stuck, you can (and SHOULD) use your notes, google, and DM your instructors. Don't stay stuck on the same thing for too long.  
 
 ## Set Up
 Open up [the starter repo](https://github.com/turingschool-examples/turdle){:target='blank'} and follow the directions in the README. Complete the following iterations in order.
@@ -67,7 +69,7 @@ Now let's impletment a POST so that the game stats persist even when the applica
 
 #### 💡 Helpful Tip
 
-You should POST the stats when the game is over (win or lose) and you should GET the game stats when the user clicks on the `stats` button in the nav bar.
+You should POST the stats when the game is over (win or lose) and you should GET the game stats when the user clicks on the **stats** button in the nav bar.
 
 If you need a refresher on POSTing, review [the POST lesson](https://frontend.turing.edu/lessons/module-2/network-requests-posts.html){:target='blank'}!
 </section>
