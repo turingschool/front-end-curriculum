@@ -147,7 +147,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
 </section>
 
 <section class="note">
-#### Promises - the quick version
+### Promises - the quick version
 
 A `Promise` is an object that represents the eventual completion of an action.
 
@@ -197,13 +197,23 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 </section>
 
 <section class="call-to-action">
-### Getting practice
+### Practice in the console
 
 Using the [Trivia API](https://opentdb.com/api_config.php){:target='blank'}, do the following in your console:
 
 - Fetch 10 science questions using fetch and console.log the entire response
 - Fetch 20 geography questions and for each trivia object console.log the answer only
 - Fetch 20 geography questions and console.log the response status code.
+</section>
+
+<section class="call-to-action">
+### Practice with a simple application
+
+Head to <a href="https://github.com/turingschool-examples/fe2-fetch-practice" target="\__blank">this repo</a> for some practice with GETting.
+
+Working with a partner, follow the setup instructions to get the server running.  Then follow the steps in order within the `client/index.js` file and test it out by opening the `client/index.html` file.
+
+Note that this repo will be used for the GET and POST lessons. Be careful to only complete the GET practice today. We'll come back to this repo later when we <a href="https://frontend.turing.edu/lessons/module-2/network-requests-posts.html" target="\__blank">learn how to POST</a>!
 </section>
 
 ## Common Misconcepion
@@ -225,7 +235,7 @@ Explanation: Parameters are scoped to their function, so you cannot reference a 
 <section class="answer">
 ### Why is data in line 4 undefined?
 
-Explanation: .then always returns a Promise, and when that promise resolves, it evaluates to whatever the callback returns and hands it off to the next .then. The callback function on line 3 does not return anything, so undefined is the value handed off to the .then in line 4, stored in the data parameter.
+Explanation: `.then` always returns a Promise, and when that promise resolves, it evaluates to whatever the callback returns and hands it off to the next `.then`. The callback function on line 3 does not return anything, so `undefined` is the value handed off to the `.then` in line 4, stored in the `data` parameter.
 </section>
 
 **Big takeaway:** Console logs are great as you're coding as a way to see what the data looks like that is coming through. BUT! Once you're ready to actually do things with that data, you'll want to remove your console logs OR have the console log in the same callback function as your logic, like this:  
