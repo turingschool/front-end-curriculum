@@ -206,7 +206,38 @@ Using the [Trivia API](https://opentdb.com/api_config.php){:target='blank'}, do 
 - Fetch 20 geography questions and console.log the response status code.
 </section>
 
+## Common Misconcepion
 
+Let's look at this code:  
+```js
+fetch('some_url')
+.then(res => res.json())
+.then(data => console.log(data))
+.then(data => /* do something with data */) /* <--- this line won't work! */
+```
+
+Let's think about these questions:  
+<section class="answer">
+### Why doesn't data in line 4 refer to the same data in line 3?
+
+Explanation: Parameters are scoped to their function, so you cannot reference a parameter from one function in another. Each callback function defines their own scope (i.e. creates their own execution context).
+</section>
+<section class="answer">
+### Why is data in line 4 undefined?
+
+Explanation: .then always returns a Promise, and when that promise resolves, it evaluates to whatever the callback returns and hands it off to the next .then. The callback function on line 3 does not return anything, so undefined is the value handed off to the .then in line 4, stored in the data parameter.
+</section>
+
+**Big takeaway:** Console logs are great as you're coding as a way to see what the data looks like that is coming through. BUT! Once you're ready to actually do things with that data, you'll want to remove your console logs OR have the console log in the same callback function as your logic, like this:  
+
+```js
+fetch('some_url')
+.then(res => res.json())
+.then(data => {
+  console.log(data);
+  /* do something with data */
+})
+```
 
 
 

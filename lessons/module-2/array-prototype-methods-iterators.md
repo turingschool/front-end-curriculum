@@ -302,7 +302,7 @@ Be sure that every member of your group has access to the document that you just
 
 ## Share Out (Start of Day 2 lesson)
 
-You will get into groups of 4, made up of one expert for each iterator method. In these groups, share the document you made yesterday. Then, walk each other through your example problems.
+You will get into groups of 4, made up of one expert for each iterator method. In these groups, share the document you made yesterday. Then, walk each other through your example problems. 
 
 ## Practice
 
