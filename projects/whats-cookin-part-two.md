@@ -20,25 +20,24 @@ Dates and deadlines to be aware of:
 * **Monday of Week 5** - Project and video due at 9PM(MST)
 * **Tuesday of Week 5** - Project evaluations
 
-## New Technologies + Tools
-
+## New Technologies + Tools  
 * Lighthouse Accessibility Audit
 ---
 
-## Requirements
+# Requirements
 
-### Functionality
+## Functionality
 
 You must complete all of the remaining user stories from the [What's Cookin Spec](https://frontend.turing.edu/projects/whats-cookin-part-one.html){:target='blank'}. If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part One requirements you must also ***implement your instructor's feedback*** and add ***"Iteration Four"*** and include proper ***Error Handling***.
 
-#### Iteration 4 - Pantries
+### Iteration 4 - Pantries
 
-##### Pantry Data
+#### Pantry Data
 Create classes and methods that can:
 - Determine whether a user's pantry has enough ingredients to cook a given meal.
 - Determine the amount of missing ingredients still needed to cook a given meal, based on what's in the user's pantry.
 
-##### User Stories
+#### User Stories
 - As a user, I should be able to view what ingredients exist inside of my pantry.
 - As a user, I should be able to check my list of recipes to cook and see if my pantry has enough ingredients to cook a meal.
 - As a user, I should be told what ingredients are still needed if I don't have enough ingredients in my pantry to cook the recipe.
@@ -46,7 +45,9 @@ Create classes and methods that can:
 - As a user, when I cook a meal, those ingredients should be removed from my pantry.
 - As a user, I should be able to add more ingredients to my pantry.
 
-### Fetch
+---
+
+## Fetch
 
 You will no longer receive your data from the deployed API, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/whats-cookin-api){:target='blank'}.
 
@@ -59,11 +60,11 @@ Everyone was using the same exact endpoints for Part One. This is typically how 
 
 </section>
 
-## Remember:
+#### Remember:
 
 The expectation for Mod 2 is that you will avoid using `async/await`.  We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`.  Consider doing some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all).  
 
-#### Endpoints (GET and POST)
+### Endpoints (GET and POST)
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
@@ -99,7 +100,8 @@ If you wanted to remove_ 3 units of that ingredient, you'd want to send a JSON t
 
 <section class="note">
 
-### Error Handling
+---
+## Error Handling
 
 Make proper error handling for your users to ensure they get data and submit their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user?  Also, validate the input fields on the client-side.
 
@@ -107,7 +109,7 @@ Make proper error handling for your users to ensure they get data and submit the
 
 ---
 
-### Refactoring and Applying Instructor Feedback
+## Refactoring and Applying Instructor Feedback
 
 * Implement instructor feedback from Part 1
 * Consider any additional refactoring opportunities:
@@ -116,7 +118,7 @@ Make proper error handling for your users to ensure they get data and submit the
 
 ---
 
-### DOM Manipulation
+## DOM Manipulation
 
 * DOM manipulation should be organized into its own `domUpdates.js` file. The file should look something like this:
 
@@ -136,7 +138,7 @@ Any DOM updating functionality will then be imported into your `scripts.js` file
 
 ---
 
-### Accessibility
+## Accessibility
 
 * You must be able to tab through your app and use it without a mouse
 * Your app must still be usable when tested with a colorblind extension
@@ -145,7 +147,7 @@ Any DOM updating functionality will then be imported into your `scripts.js` file
 
 ---
 
-### Testing
+## Testing
 In addition to your refactoring, you also want to make sure the application is fully tested. This means:
 
 - Initial values of class properties need tests
@@ -165,7 +167,7 @@ In addition to your refactoring, you also want to make sure the application is f
 
 ---
 
-### Extensions
+## Extensions
 * If you didn't get a chance to experiment with an NPM package in [Part One](https://frontend.turing.edu/projects/whats-cookin-part-one.html), try one out here! Remember to revist the list of approved NPM packages, or run a new one by your project manager first.
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
 * Create a video of your team navigating through your app via a keyboard and screen reader.
