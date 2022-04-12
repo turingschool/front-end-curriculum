@@ -23,17 +23,24 @@ Dates and deadlines to be aware of:
 ---
 
 # Requirements
-
-An overview:
+- [ ] Implementing Part 1 Feedback
 - [ ] Functionality
 - [ ] Fetch
 - [ ] Error Handling
-- [ ] Instructor Feedback
 - [ ] DOM Manipulation
 - [ ] Accessibility
 - [ ] Testing
 
-Details:
+---
+
+## Refactoring and Applying Instructor Feedback from Part 1
+
+* Implement instructor feedback from Part 1
+* Consider any additional refactoring opportunities:
+  * Identify redundant code in your classes and opportunities for DRYing it up
+  * Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior.
+
+---
 
 ## Functionality
 
@@ -111,15 +118,6 @@ If you wanted to remove_ 3 units of that ingredient, you'd want to send a JSON t
 ## Error Handling
 
 Make proper error handling for your users to ensure they get data and submit their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user?  Also, validate the input fields on the client-side.
-
----
-
-## Refactoring and Applying Instructor Feedback
-
-* Implement instructor feedback from Part 1
-* Consider any additional refactoring opportunities:
-  * Identify redundant code in your classes and opportunities for DRYing it up
-  * Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior.
 
 ---
 
