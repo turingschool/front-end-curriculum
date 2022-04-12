@@ -146,8 +146,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
 * This is a basic `GET` request to the [Trivia API](https://opentdb.com/api_config.php){:target='blank'} to send us back a random trivia question.  Does it return what you expect?
 </section>
 
-<section class="note">
-### Promises - the quick version
+## Promises - the quick version
 
 A `Promise` is an object that represents the eventual completion of an action.
 
@@ -155,7 +154,6 @@ We don't need to worry too much about them now. Just know that a Promise will ei
 
 * `.then()` runs upon the resolution of a promise. Returns another promise
 * `.catch()` runs upon the rejection of a failed promise. Used for error handling
-</section>
 
 <section class="note">
 ### Note about async/await
