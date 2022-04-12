@@ -18,7 +18,7 @@ In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1w
 </section>
 ### The challenge
 
-Visit [this repo](https://github.com/turingschool-examples/Error-handling-js/blob/main/README.md) and follow the directions in the readme to get some practice in gracefully handling errors and presenting them to the end user.
+Visit [this repo](https://github.com/turingschool-examples/Error-handling-js) and ***follow the directions in the readme carefully*** to get some practice in gracefully handling errors and presenting them to the end user.
 
 
 ## Key takeaways
