@@ -185,7 +185,7 @@ const numbers = [15, 6, 14, 2, 22, 9, 45];
 ```  
 
 
-2 - `find` the first pet that is three years old and store it in a `foundPet` variable.  
+2 - Find the first pet that is three years old and store it in a `foundPet` variable.  
 ```js
 let pets = [
   { name: 'harvey', age: 1 },
@@ -239,38 +239,42 @@ Be sure to include these in your document, if you haven't already!
 * Useful for when you need to find a subset of elements in an array that matches a given condition.
 * The callback needs to return a **boolean**. You also cannot modify the element you're finding.
 </section>
+</section>
 
 
+<section class="answer">
 ### `Array.reduce(callbackFunction, initialValue)`
+
+<section class="answer">
+### Helpful Tips
 
 Note that the `reduce` method is slightly different than the previous iterator methods.  `reduce` takes two arguments:
 
 _Callback Function_ - Within the callback, we have access to the accumulator, the current element in the iteration, the current element's index, and the original array we are looping over
 
 _Initial Value_ - The initial value to be used as the accumulator (the first argument to the first call of the callback). The accumulator is the *single value* that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.
+</section>
 
 <section class="answer">
 ### Problem Set
 
+1 - Using `reduce`, sum up all of the numbers.  
+
 ```js
 const numbers = [1, 2, 3, 4, 5];
-// const sum = numbers.reduce...
 
 // console output
 => 15
-```
+```  
 
-* Using `reduce`, sum up all of the numbers.
+2 - Using `reduce`, create a new object the stores the lengths of each word.  
 
 ```js
 const adjectives = ['fantastic', 'amazing', 'childish'];
-// const wordLengths...
 
 // console output
 => { fantastic: 9, amazing: 7, childish: 8 }
-```
-
-* Using `reduce`, create a new object the stores the lengths of each word.
+```  
 </section>
 
 <section class="answer">
@@ -282,6 +286,8 @@ Be sure to include these in your document, if you haven't already!
 * Also useful for converting an array into another data type.
 * REMEMBER...you must always return the *accumulator* in the callback function.
 </section>
+</section>
+
 
 ## Extra Paired Practice
 
@@ -294,6 +300,8 @@ The only way to get better and more comfortable with these prototype methods is 
 * What is a prototype method?
 * Name three prototype methods for an array.
 * Which prototype methods are the most confusing right now?
+what is different between filter/find?
+what is diff between map/forEach
 </section>
 
 ### Additional Resources
