@@ -114,7 +114,8 @@ First, let's do `forEach` together. The instructor will model how they would use
 const prices = [4.99, 5.50, 7.00, 10.25];
 const increasedPrices = [];
 ```
-2. Using the dogs array above, log the dog's name and how many legs it has.
+2. Using the dogs array above, log the dog's name and how many legs it has.  
+
 ```js
 const dogs = [
   {name: "Fido", numLegs: 4},
@@ -124,7 +125,8 @@ const dogs = [
 // console output
 => 'Fido has 4 legs.'
    'Greg has 5 legs.'
-```
+```  
+
 </section>
 
 <section class="answer">
@@ -134,6 +136,7 @@ const dogs = [
 * Is is the prototype method that is most similar to a `for` loop.
 * `forEach` does **NOT** return anything (even if you have return statements).  You can push element data into another array, but the array MUST exist outside of the `forEach`.
 </section>
+
 </section>
 
 
