@@ -21,7 +21,8 @@ Dates and deadlines to be aware of:
 * **Tuesday of Week 5** - Project evaluations
 
 ## New Technologies + Tools  
-* Lighthouse Accessibility Audit
+
+- Lighthouse Accessibility Audit
 ---
 
 # Requirements
