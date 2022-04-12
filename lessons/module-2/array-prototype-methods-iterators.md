@@ -108,13 +108,13 @@ First, let's do `forEach` together. The instructor will model how they would use
 <section class="answer">
 ### Problem Set
 
-1. Using `forEach`, iterate over the array of prices, increase the price by $1, and add new increased prices to the `increasedPrices` array.
+1 - Using `forEach`, iterate over the array of prices, increase the price by $1, and add new increased prices to the `increasedPrices` array.
 
 ```js
 const prices = [4.99, 5.50, 7.00, 10.25];
 const increasedPrices = [];
 ```
-2. Using the dogs array above, log the dog's name and how many legs it has.  
+2 - Using the dogs array above, log the dog's name and how many legs it has.  
 
 ```js
 const dogs = [
@@ -130,8 +130,9 @@ const dogs = [
 </section>
 
 <section class="answer">
-### Important Notes
+### Important Takeaways
 
+Be sure to include these in your document, if you haven't already!
 * `forEach` is useful when you want to perform an operation on every element in an array.
 * Is is the prototype method that is most similar to a `for` loop.
 * `forEach` does **NOT** return anything (even if you have return statements).  You can push element data into another array, but the array MUST exist outside of the `forEach`.
