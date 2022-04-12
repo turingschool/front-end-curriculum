@@ -154,16 +154,6 @@ In addition to your refactoring, you also want to make sure the application is f
 
 ---
 
-<section class="note">
-
-## Strategies for Success
-* Since this project is not separated into iterations or user stories, make sure that you spend a good amount of time breaking apart tasks and using that project board wisely.
-* Every group member must fully understand and be able to speak to all of the code changes that have been made.
-* **Implement feedback received in part one into part two.**I
-</section>
-
----
-
 ## Extensions
 * If you didn't get a chance to experiment with an NPM package in [Part One](https://frontend.turing.edu/projects/whats-cookin-part-one.html), try one out here! Remember to revist the list of approved NPM packages, or run a new one by your project manager first.
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
@@ -173,6 +163,17 @@ In addition to your refactoring, you also want to make sure the application is f
 * Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an `index.scss` file that imports your partials, and a `variables.scss` file that contains any of your Sass variables or function definitions. Identify common/re-used elements on your page to determine the remaining partials you might want.  Your Sass could potentially make use of variables, nesting, mixins and/or extends.
 
 ---
+
+<section class="note">
+
+## Strategies for Success
+* Since this project is not separated into iterations or user stories, make sure that you spend a good amount of time breaking apart tasks and using that project board wisely.
+* Every group member must fully understand and be able to speak to all of the code changes that have been made.
+* **Implement feedback received in part one into part two.**
+</section>
+
+---
+
 # Project Requirements Rubric
 
 ## Functional Expectations
