@@ -294,6 +294,12 @@ Be sure to include these in your document, if you haven't already!
 </section>
 </section>
 
+<section class="note">
+### Before we close out today...
+
+Be sure that every member of your group has access to the document that you just made. You will be split up tomorrow and responsible for teaching your peers what you've learned. Save that document somewhere easy to find so you can easily share it tomorrow.
+</section>
+
 ## Share Out (Start of Day 2 lesson)
 
 You will get into groups of 4, made up of one expert for each iterator method. In these groups, share the document you made yesterday. Then, walk each other through your example problems.
