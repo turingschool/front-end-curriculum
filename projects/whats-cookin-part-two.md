@@ -46,7 +46,7 @@ Create classes and methods that can:
 - As a user, when I cook a meal, those ingredients should be removed from my pantry.
 - As a user, I should be able to add more ingredients to my pantry.
 
----
+---  
 
 ## Fetch
 
@@ -99,14 +99,10 @@ If you wanted to remove_ 3 units of that ingredient, you'd want to send a JSON t
 ```
 </section>
 
-<section class="note">
-
 ---
 ## Error Handling
 
 Make proper error handling for your users to ensure they get data and submit their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user?  Also, validate the input fields on the client-side.
-
-</section>
 
 ---
 
