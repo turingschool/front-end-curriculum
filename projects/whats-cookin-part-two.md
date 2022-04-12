@@ -27,6 +27,17 @@ Dates and deadlines to be aware of:
 
 # Requirements
 
+An overview:
+- [ ] Functionality
+- [ ] Fetch
+- [ ] Error Handling
+- [ ] Instructor Feedback
+- [ ] DOM Manipulation
+- [ ] Accessibility
+- [ ] Testing
+
+Details:
+
 ## Functionality
 
 You must complete all of the remaining user stories from the [What's Cookin Spec](https://frontend.turing.edu/projects/whats-cookin-part-one.html){:target='blank'}. If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part One requirements you must also ***implement your instructor's feedback*** and add ***"Iteration Four"*** and include proper ***Error Handling***.
