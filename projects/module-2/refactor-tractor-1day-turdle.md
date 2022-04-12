@@ -35,7 +35,12 @@ When working on this game, you might find it helpful to know the winning word. W
 </section>
 
 <section class="answer">
-### Iteration 1 - Game Over
+### Iteration 1 - GET Words
+Currently, the words are coming from the `words.js` file. Update the codebase so that you are fetching that data. You should be able to delete `words.js` after this iteration without the user experience being affected. [Here is a link to the backend repo.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.
+</section>
+
+<section class="answer">
+### Iteration 2 - Game Over
 The functionality for when the game is over is incomplete. Currently, when a user guesses the word correctly, all letters turn yellow and a message logs to the console. Currently nothing happens when a user loses the game (they do not guess the word by the 6th guess). Update the codebase so the following happens when the game is over:
 - A message appears on the screen letting the user know they have won or lost.
 - If they won, the message should include how many guesses it took them to win.
@@ -54,10 +59,6 @@ You should **not** force a page reload to make this happen.
 Check out the existing code. I bet a lot of the logic needed for this iteration is already there 👀
 </section>
 
-<section class="answer">
-### Iteration 2 - GET Words
-Currently, the words are coming from the `words.js` file. Update the codebase so that you are fetching that data. You should be able to delete `words.js` after this iteration without the user experience being affected. [Here is a link to the backend repo.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.
-</section>
 
 <section class="answer">
 ### Iteration 3 - Track Game Stats
