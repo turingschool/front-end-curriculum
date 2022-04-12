@@ -147,19 +147,16 @@ Now that we've done that one together, let's split up into groups and have y'all
 <section class="answer">
 ### Problem Set
 
-1 - Using `map`, iterate over the array of prices and return a new array of increased prices.  Store them in a variable called `increasedPrices`.  
+1 - Using `map`, iterate over the array of prices, increase the price by $1, and return a new array of increased prices.  Store them in a variable called `increasedPrices`.  
 
 ```js
-// increase prices by 1.00
 const prices = [4.99, 5.50, 7.00, 10.25];
-// const increasedPrices =  prices.map...
 ```  
 
 2 - Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius and store them in a variable called `degreesC`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm){:target='blank'} to convert from Fahrenheit to Celsius.  
 
 ```js
 const degreesF = [67, 32, 55, 102]
-// const degreesC...
 
 // console output
 => [19.44, 0, 12.77, 38.88]
@@ -169,42 +166,40 @@ const degreesF = [67, 32, 55, 102]
 <section class="answer">
 ### Important Takeaways  
 
+Be sure to include these in your document, if you haven't already!
 * Use `map` when you want a new array based on your original, with some modification to each item.
 * Although similar to `forEach`, each time the callback is executed in `map`, whatever is returned from the callback is added to the new array
 * `map` will *ALWAYS* return a **new array of the same length** as the original array.
 </section>
 </section>
 
+<section class="answer">
 ### `Array.find(callbackFunction)`
 
 <section class="answer">
 ### Problem Set
 
+1 - Find the first number that is greater than 20.  
+
 ```js
 const numbers = [15, 6, 14, 2, 22, 9, 45];
-// const foundNum = numbers.find...
-```
+```  
 
-* `find` the first number that is greater than 20.
 
+2 - `find` the first pet that is three years old and store it in a `foundPet` variable.  
 ```js
 let pets = [
   { name: 'harvey', age: 1 },
   { name: 'julius', age: 3 },
   { name: 'mishu', age: 3 },
 ];
-
-// const foundPet...
-```
-
-* `find` the first pet that is three years old and store it in a `foundPet` variable.
-* What does the callback function in `find` expect to be returned?
-* In what scenarios is `find` useful?
+```  
 </section>
 
 <section class="answer">
 ### Important Takeaways  
 
+Be sure to include these in your document, if you haven't already!
 * Useful for when you need to find a specific item in an array that matches a given condition.
 * Always will return the first element where the callback function returns *true*.  (even if there are other matches)
 * The callback needs to return a **boolean**. You also cannot modify the element you're finding.
@@ -244,6 +239,7 @@ var beatles = [
 <section class="answer">
 ### Important Takeaways  
 
+Be sure to include these in your document, if you haven't already!
 * Instead of returning the first match like `find`, `filter` will return a new **array** with all elements that match a condition.
 * Useful for when you need to find a subset of elements in an array that matches a given condition.
 * The callback needs to return a **boolean**. You also cannot modify the element you're finding.
@@ -284,6 +280,7 @@ const adjectives = ['fantastic', 'amazing', 'childish'];
 <section class="answer">
 ### Important Takeaways  
 
+Be sure to include these in your document, if you haven't already!
 * Useful for turning an array into a single value, be it a number, string, object, or another array.
 * Useful for returning one that is a combination / sum of values from an original array.
 * Also useful for converting an array into another data type.
