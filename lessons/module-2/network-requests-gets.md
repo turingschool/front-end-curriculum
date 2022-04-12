@@ -155,6 +155,12 @@ We don't need to worry too much about them now. Just know that a Promise will ei
 * `.then()` runs upon the resolution of a promise. Returns another promise
 * `.catch()` runs upon the rejection of a failed promise. Used for error handling
 
+<section class="note">
+### async/await
+
+The expectation for Mod 2 is that you will avoid using `async/await`. We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`. Consider doing some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all).
+</section>
+
 ## What do I do with this "Promise {<pending>}"?
 
 Diving into the returned promise reveals some information, such as its status and value, but nothing that's too immediately useful. Instead we have to resolve it:
