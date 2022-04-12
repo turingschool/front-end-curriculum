@@ -47,7 +47,8 @@ Currently nothing happens when a user loses the game (they do not guess the word
 - The game board clears all previous guesses.
 - The focus is put back on the top left square of the game board (as it does on page load).
 - The key on the left side of the screen resets so all letters are black.
-- A new winning word is created.  
+- A new winning word is created.
+- The game stats should be stored in the `gamesPlayed` variable as `{ solved: false, guesses: 6 }`
 
 #### ⚠️ Important Note
 
@@ -69,6 +70,10 @@ Currently, the `stats` page does not show any actual data. Update the codebase s
 #### ⚠️ Important Note
 
 Don't POST yet! At this point, this data does not need to persist between page refreshes. The data only needs to exist within each user session. Meaning, if the user closes the page or refreshes the page, it is totally fine that the data will be lost.
+
+#### 💡 Helpful Tip
+
+Use the data you're already storing in `gamesPlayed`!
 </section>
 
 <section class="answer">
@@ -85,7 +90,7 @@ If you need a refresher on POSTing, review [the POST lesson](https://frontend.tu
 <section class="answer">
 ### Iteration 5 - Iterator Refactoring
 
-You've probably noticed quite a few for loops in this code. Ugh, that is SO last inning! Refactor those for loops using the array prototype methods you've been learning. 
+You've probably noticed quite a few for loops in this code. Ugh, that is SO last inning! Refactor those for loops using the array prototype methods you've been learning.
 </section>
 
 <section class="answer">
