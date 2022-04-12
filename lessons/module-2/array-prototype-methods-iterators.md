@@ -136,7 +136,6 @@ Be sure to include these in your document, if you haven't already!
 * Is is the prototype method that is most similar to a `for` loop.
 * `forEach` does **NOT** return anything (even if you have return statements).  You can push element data into another array, but the array MUST exist outside of the `forEach`.
 </section>
-
 </section>
 
 Now that we've done that one together, let's split up into groups and have y'all take it from here!  
@@ -206,17 +205,21 @@ Be sure to include these in your document, if you haven't already!
 </section>
 </section>
 
+<section class="answer">
 ### `Array.filter(callbackFunction)`
 
 <section class="answer">
 ### Problem Set
 
+1 - Return a new array of *odd* numbers using the `filter` prototype method.   
+
 ```js
 const numbers = [1, 2, 3, 4, 5, 6, 7];
-// const oddNumbers = numbers.filter...
-```
+```  
 
-* Return a new array of *odd* numbers using the `filter` prototype method.
+
+2 - Create a new array of *living* beatles using the `filter` method and store them in a `livingBeatles` variable.
+3 - Create another array of beatles that play the guitar use the `filter` method and store them in a `guitarPlayingBeatles` variable.  
 
 ```js
 var beatles = [
@@ -225,15 +228,7 @@ var beatles = [
   { name: 'George', living: false, instruments: ['guitar', 'sitar'] },
   { name: 'Ringo', living: true, instruments: ['drums', 'bongos'] },
 ];
-
-// const livingBeatles...
-
-// const guitarPlayingBeatles...
-```
-
-* Create a new array of *living* beatles using the `filter` method and store them in a `livingBeatles` variable.
-* Create another array of beatles that play the guitar use the `filter` method and store them in a `guitarPlayingBeatles` variable.
-* What is similar / different about `filter` compared to `find`?
+```  
 </section>
 
 <section class="answer">
@@ -244,6 +239,7 @@ Be sure to include these in your document, if you haven't already!
 * Useful for when you need to find a subset of elements in an array that matches a given condition.
 * The callback needs to return a **boolean**. You also cannot modify the element you're finding.
 </section>
+
 
 ### `Array.reduce(callbackFunction, initialValue)`
 
