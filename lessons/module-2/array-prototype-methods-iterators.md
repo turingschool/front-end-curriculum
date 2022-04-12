@@ -55,7 +55,7 @@ There are _occassional_ times when it makes more sense to use a for loop over so
 Iteration prototype methods (such as forEach, filter, etc.) **take in a callback function as an argument**. The callback function is what takes in the mandatory and optional parameters!
 
 ```js
-someArrayData.somePrototypeMethod(function callBack (mandatoryParameter [,optionalParameters... ]) {
+someArrayData.somePrototypeMethod(function callBack (/* parameter(s) */) {
   // some statements
   // often a return statement
 })
@@ -63,7 +63,7 @@ someArrayData.somePrototypeMethod(function callBack (mandatoryParameter [,option
 
 Since these prototype methods were introduced as part of ES6, most of the time you will see them written using a fat arrow like below:
 ```js
-someArrayData.somePrototypeMethod((mandatoryParameter [,optionalParameters... ]) => {
+someArrayData.somePrototypeMethod((/* parameter(s) */) => {
   // some statements
   // often a return statement
 })
@@ -86,21 +86,35 @@ There are many array prototype methods out there, but we are going to focus on s
 * `filter()`
 * `reduce()`
 
+<section class="call-to-action">
+### Exploration Activity
+
+You are going to be split into groups and be assigned one iterator method. It will be your job to research that method and then share out your learning with your peers. In your groups, you will need to create a document (use any tool you'd like: google docs, Notion, etc) and record the following information:
+- What does the callback function return?
+- What are the mandatory parameters? Optional parameters?
+- What is the basic structure/skeleton of the method?
+- What are common use cases? When would I use this method?
+- Is there anything else people should know?
+- Solve the problem(s) included below.
+
+First, let's do `forEach` together. The instructor will model how they would use documentation to research.
+</section>
+
+
+
+<section class="answer">
 ### `Array.forEach(callbackFunction)`
 
-Let's start by exploring these prototype methods with some examples.
+<section class="answer">
+### Problem Set
 
-<section class="call-to-action">
-### In Pairs
+1. Using `forEach`, iterate over the array of prices, increase the price by $1, and add new increased prices to the `increasedPrices` array.
 
 ```js
-// increase prices by 1.00
 const prices = [4.99, 5.50, 7.00, 10.25];
 const increasedPrices = [];
 ```
-
-* Using `forEach`, iterate over the array of prices and add new increased prices to the `increasedPrices` array.
-
+2. Using the dogs array above, log the dog's name and how many legs it has.
 ```js
 const dogs = [
   {name: "Fido", numLegs: 4},
@@ -111,23 +125,17 @@ const dogs = [
 => 'Fido has 4 legs.'
    'Greg has 5 legs.'
 ```
-
-* Using the dogs array above, log the dog's name and how many legs it has.
-* Afterwards, write the use cases of `forEach` and any major takeaways you discovered.
 </section>
 
 <section class="answer">
-### Major Takeaways  
+### Important Notes
 
 * `forEach` is useful when you want to perform an operation on every element in an array.
 * Is is the prototype method that is most similar to a `for` loop.
-
-<section class="note">
-### Important
-
-`forEach` does **NOT** return anything (even if you have return statements).  You can push element data into another array, but the array MUST exist outside of the `forEach`.
+* `forEach` does **NOT** return anything (even if you have return statements).  You can push element data into another array, but the array MUST exist outside of the `forEach`.
 </section>
 </section>
+
 
 ### `Array.map(callbackFunction)`
 
