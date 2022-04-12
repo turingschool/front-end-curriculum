@@ -15,6 +15,12 @@ module: 2
 - `method` A function that is defined on an object
 - `callback function` A function passed into another function as an argument, which is then invoked inside the outer function
 
+<section class="note">
+### Note About this Lesson
+
+Note that this is a 2 day lesson. That means you might be leaving today's lesson with more questions than answers. That's okay! There is **a lot** to cover, so we're going to take our time 🙂
+</section>
+
 ## Prototype Methods
 
 In order to understand what a *prototype method* is, let's break down the terms individually:
@@ -288,20 +294,22 @@ Be sure to include these in your document, if you haven't already!
 </section>
 </section>
 
+## Share Out (Start of Day 2 lesson)
 
-## Extra Paired Practice
+You will get into groups of 4, made up of one expert for each iterator method. In these groups, share the document you made yesterday. Then, walk each other through your example problems.
 
-The only way to get better and more comfortable with these prototype methods is to continue practicing them.  Here are a [few more examples](https://github.com/turingschool-examples/iterator-methods-stations){:target='blank'} to work through.
+## Practice
 
+The only way to get better and more comfortable with these prototype methods is to continue practicing them. Here are a [few more examples](https://github.com/turingschool-examples/iterator-methods-stations){:target='blank'} to work through.
 
 <section class="checks-for-understanding">
 ### Checks for Understanding
 
 * What is a prototype method?
-* Name three prototype methods for an array.
-* Which prototype methods are the most confusing right now?
-what is different between filter/find?
-what is diff between map/forEach
+* Compare and contrast `filter` and `find`.
+* Compare and contrast `forEach` and `map`.
+* When might `reduce` be a useful method?
+* Which prototype methods are the most confusing for you right now?
 </section>
 
 ### Additional Resources
