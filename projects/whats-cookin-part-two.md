@@ -216,7 +216,6 @@ In addition to your refactoring, you also want to make sure the application is f
   * Overview of project and goals
   * Overview of technologies used, challenges, wins, and any other reflections
   * Screenshots/gifs of your app
-  * Demo video
 
 ---
 
