@@ -160,11 +160,10 @@ We don't need to worry too much about them now. Just know that a Promise will ei
 <section class="note">
 ### Note about async/await
 
-You may discover other methods out there for handling asynchronous actions in JavaScript. We are currently going to handle the timing of our code by using the handy dandy `.then()` statement. Another option you may see commonly used is `async/await`. While `async/await` is super cool and useful, its not worth trying to understand right now. Everything that you'll need to do in Mod 2 can be done without `async/await`. In Mod 2, we will stick to using `.then()` statements. 
+You may discover other methods out there for handling asynchronous actions in JavaScript. We are currently going to handle the timing of our code by using the handy dandy `.then()` statement. Another option you may see commonly used is `async/await`. While `async/await` is super cool and useful, its not worth trying to understand right now. Everything that you'll need to do in Mod 2 can be done without `async/await`. In Mod 2, we will stick to using `.then()` statements.
 </section>
 
-<section class="call-to-action">
-### What do I do with this "Promise {<pending>}"?
+## What do I do with this "Promise {<pending>}"?
 
 Diving into the returned promise reveals some information, such as its status and value, but nothing that's too immediately useful. Instead we have to resolve it:
 
@@ -175,10 +174,8 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 
 * What do you get when you log the response object?  Take note of the properties there.
 * There's one problem: we can't seem to get the data we want from the Response.body.  How is data sent through requests and responses?
-</section>
 
-<section class="answer">
-### Parsing our response  
+## Parsing our response  
 
 Similar to what you did with localStorage, we'll need to parse our response!  We'll need to use the **`Body.json()`** method that comes with fetch to parse it and call another `.then()`.
 
@@ -200,7 +197,6 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .then(data => console.log(data))
   .catch(err => /* do something else */);
 ```
-</section>
 
 <section class="call-to-action">
 ### Practice in the console
