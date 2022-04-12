@@ -25,7 +25,7 @@ Open up [the starter repo](https://github.com/turingschool-examples/turdle){:tar
 ### Iteration 0 - Explore
 First, if you've never played [Wordle](https://www.nytimes.com/games/wordle/index.html){:target='blank'}, take a couple of minutes to play it. This will help you understand how the general game play of Turdle is meant to work. Note that Wordle is only meant to be played once a day, so you'll only get one round of gameplay. Luckily for you, Turdle can be played as much as you'd like!   
 
-Once you have a good idea of how Wordle works, play a few rounds of Turdle (`open index.html`). Click around the app and find all the functionality that exists so far. You might notice that some things aren't working as expected - for example, nothing happens when a game ends and the game stats are missing. That's okay for now - you're going to fix those issues later 🙂  
+Once you have a good idea of how Wordle works, play a few rounds of Turdle (`open index.html`). Click around the app and find all the functionality that exists so far. You might notice that some things aren't working as expected - for example, nothing happens when you lose and the game stats are missing. That's okay for now - you're going to fix those issues later 🙂  
 
 Now that you've explored the app, it's time to explore the code. Spend some time (at least 15 minutes) exploring the existing codebase. We recommend trying to follow the logic of the gameplay in the code. Adding console.logs is a great way to check the values of variables, parameters, and function outputs. Feel free to add lots of comments to the code to help you remember all that you discover. [Here is a great article about how to digest a new codebase.](https://dev.to/ericweissman/diving-into-a-new-codebase-4b38){:target='blank'}
 
@@ -41,9 +41,8 @@ Currently, the words are coming from the `words.js` file. Update the codebase so
 
 <section class="answer">
 ### Iteration 2 - Game Over
-The functionality for when the game is over is incomplete. Currently, when a user guesses the word correctly, all letters turn yellow and a message logs to the console. Currently nothing happens when a user loses the game (they do not guess the word by the 6th guess). Update the codebase so the following happens when the game is over:
-- A message appears on the screen letting the user know they have won or lost.
-- If they won, the message should include how many guesses it took them to win.
+Currently nothing happens when a user loses the game (they do not guess the word by the 6th guess). Update the codebase so the following happens when a player loses:
+- A message appears on the screen letting the user know they have lost.
 - The message should disappear after 4 seconds.
 - The game board clears all previous guesses.
 - The focus is put back on the top left square of the game board (as it does on page load).
