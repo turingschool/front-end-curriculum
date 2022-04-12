@@ -22,7 +22,7 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 * Text ([Lorem Ipsum generator](https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/))
 * Images & Icons ([pexels](https://www.pexels.com), [flaticon](https://www.flaticon.com/), [unsplash](https://unsplash.com/))
-* [Fonts](https://fonts.google.com/)
+* Fonts([google fonts](https://fonts.google.com/))
 * Color palette, but ONLY if you select a complementary palette. We highly encourage you to visit sites like: [material palette](https://www.materialpalette.com/) or [coolors](https://coolors.co/) or [color-hex](http://www.color-hex.com/color-palettes/).
 
 ***
