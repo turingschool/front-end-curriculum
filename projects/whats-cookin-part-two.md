@@ -17,7 +17,7 @@ In this project, you will use your project from What's Cookin' (Part One) and bu
 Dates and deadlines to be aware of:
 
 * **Tuesday of Week 4** -  Project kickoff; Have your project board updated with new tickets (*DTR should also already be completed but you should review and edit.*)
-* **Monday of Week 5** - Project and video due at 9PM(MST)
+* **Monday of Week 5** - Project due
 * **Tuesday of Week 5** - Project evaluations
 
 ## New Technologies + Tools  
