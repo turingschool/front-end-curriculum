@@ -55,7 +55,7 @@ You should **not** force a page reload to make this happen.
 
 #### 💡 Helpful Tip
 
-Check out the existing code. I bet a lot of the logic needed for this iteration is already there 👀
+Check out the existing code. I bet **a lot** of the logic needed for this iteration is already there! 👀
 </section>
 
 
@@ -83,7 +83,13 @@ If you need a refresher on POSTing, review [the POST lesson](https://frontend.tu
 </section>
 
 <section class="answer">
-### Iteration 5 - Choose Your Own Adventure (extension)
+### Iteration 5 - Iterator Refactoring
+
+You've probably noticed quite a few for loops in this code. Ugh, that is SO last inning! Refactor those for loops using the array prototype methods you've been learning. 
+</section>
+
+<section class="answer">
+### Iteration 6 - Choose Your Own Adventure (extension)
 You can choose whatever feature you'd like to add to this application. We've listed some ideas below, but feel free to think outside of the box here! Think about what you need more practice with, and let that determine your next move.
 - Refactor the codebase to use a `Guess` and `Game` class
 - Add some unit testing
