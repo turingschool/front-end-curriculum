@@ -231,6 +231,7 @@ You can then use JavaScript to keep this information up to date - for example, o
 
 __Below are some things that you should ALWAYS incorporate in your web applications__
 
+<section class="call-to-action">
 ### Browser Focus Rings
 
 DO NOT REMOVE THE FOCUS RING (outline) that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
@@ -240,6 +241,7 @@ This blog post on writing accessible css has a [section](https://medium.com/@mat
 A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles - try tabbing through it to see the options!
 
 
+<section class="call-to-action">
 ### Alt Attributes for Your Images!
 
 * Hugely important (for both accessibility and SEO!)
@@ -261,7 +263,9 @@ yes!
   - Background images are purely for design, and should not be used to display important web content. Because of this, background images do not need alt text.
 
 ![Great example of alt tag](/assets/images/alt-example.png)
+</section>
 
+<section class="call-to-action">
 ### ARIA Labels for Your Links that have no text!
 
 * Not necessary for all links, but make sure to use them for your icon anchors – you know, things like your facebook, twitter, etc icons:
@@ -269,7 +273,9 @@ yes!
 ```html
 <a class="facebook-icon" aria-label="Link to Facebook"><a/>
 ```
+</section>
 
+<section class="call-to-action">
 ### Lang attribute on Your HTML!
 
 * Is often populated by default if using Emment or other HTML boilerplates!
@@ -285,7 +291,9 @@ yes!
 ```html
 <h1 lang="es">¿Donde está la biblioteca?</h1>
 ```
+</section>
 
+<section class="call-to-action">
 ### Label Input Elements
 
 Note: you should _really_ be providing labels with all of your input fields, like this!
@@ -300,6 +308,7 @@ You can use the `aria-label` below to define a label, but remember to use semant
 ```html
 <input type="text" aria-label="First name" placeholder="Clementine">
 ```
+</section>
 
 
 ## Additional Resources
