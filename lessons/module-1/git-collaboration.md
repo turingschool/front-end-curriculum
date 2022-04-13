@@ -167,10 +167,14 @@ Yes! As long as a branch is pushed up to GitHub, _anyone_ can pull it down and w
 - When you have successfully solved a bug or fixed something broken
 
 <section class="answer">
-### Other Git Tips & Infos  
+### Other Git Tips & Infos 
+ 
 - `git branch`  
   - DOES nothing   
-  - SHOWS you what branches you have, and which branch you are currently on    
+  - SHOWS you what branches you have, and which branch you are currently on   
+  
+- `git branch feature/new-branch`
+  - creates a new branch with the specified name (feature/new-branch) but does not open that branch
 
 - `git checkout feature/sample-branch` OR `git checkout main`  
   - Takes you to the branch, checkouts that branch, puts you on that branch, now you are working on whatever branch you typed   
