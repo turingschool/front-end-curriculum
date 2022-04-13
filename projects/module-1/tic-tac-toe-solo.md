@@ -38,7 +38,10 @@ We want to see YOUR work.
 
 Here is a video demonstrating most functionality of the game:
 
-<iframe width="840" height="473" src="https://www.youtube.com/watch?v=QE17zFLT8K4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<video controls>
+    <source src="https://drive.google.com/file/d/16WIOxEOFmVaSVgRbhQBWmarUpoK8hXoZ/view">
+</video>
+
 
 There have been some changes to this project - so until we can get a new video uploaded, please refer to the bullet points below to understand the functional expectations of the project.
 
