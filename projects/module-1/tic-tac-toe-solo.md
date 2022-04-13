@@ -39,7 +39,7 @@ We want to see YOUR work.
 Here is a video demonstrating most functionality of the game:
 
 <video controls>
-    <source src="https://drive.google.com/file/d/16WIOxEOFmVaSVgRbhQBWmarUpoK8hXoZ/view">
+    <source src="./assets/Tic Tac Toe.mp4">
 </video>
 
 
