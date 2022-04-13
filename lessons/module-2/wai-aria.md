@@ -21,9 +21,9 @@ tags: html, ARIA, accessibility
 <section class="call-to-action">
 ## Warm Up
 
-Let's review from the [Intro to Accessibility Lesson](https://frontend.turing.io/lessons/module-2/intro-to-accessibility.html)
+Let's review from the [Intro to Accessibility Lesson](https://frontend.turing.io/lessons/module-2/intro-to-accessibility.html){:target='blank'}
 
-In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1LXXq44uKw42UY8fvbXB4uybsh9D_-kKYkYkMHcg5q5c/edit?usp=sharing)
+In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1LXXq44uKw42UY8fvbXB4uybsh9D_-kKYkYkMHcg5q5c/edit?usp=sharing){:target='blank'}
 
 - What have you already been implementing (or would like to implement) to make your applications accessible?
 - What are some ways we can test how accessible an application is?
@@ -36,7 +36,7 @@ In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1L
 
 Web Accessibility Initiative - Accessible Rich Internet Applications.
 
-[WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) is a set of **attributes**  we can add to our HTML tags to make our code more semantically meaningful for screen readers.
+[WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics){:target='blank'} is a set of **attributes**  we can add to our HTML tags to make our code more semantically meaningful for screen readers.
 
 Think about the information provided by a set of `<div></div>` tags. What do we know about the content within those tags? Really, we know nothing. It’s a semantically void element that controls the APPEARANCE of its content - by default it is a block style element, but beyond that it could theoretically be literally any kind of data - a title, a paragraph, an image, a random red decorative sidebar…etc.
 
@@ -73,7 +73,7 @@ These can be either **implicit** or **explicit**.
 
 Implicit roles are those that are pre-defined by default in HTML. Ie: `<h1></h1>`, `<button></button>`, `<ul></ul>`. The semantic meanings of these elements are already clear by the element themselves and assistive technologies have this information too.
 
-If you are writing good semantic HTML, the role will likely be implicit. Remember you can always check the role [here](https://www.w3.org/TR/html-aria/#docconformance)
+If you are writing good semantic HTML, the role will likely be implicit. Remember you can always check the role [here](https://www.w3.org/TR/html-aria/#docconformance){:target='blank'}
 
 Implicit Role Example:
 
@@ -94,7 +94,7 @@ A form element has a role of 'form' by default. We can override that role using 
 
 <section class="call-to-action">
 ## In Groups
-- Use the [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance) and look up the following elements and their implicit roles
+- Use the [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance){:target='blank'} and look up the following elements and their implicit roles
   - `<div>`
   - `<form>`
   - `<main>`
@@ -154,7 +154,7 @@ States can also be implicit, imagine a checkbox element in html. If you toggle t
 <section class="call-to-action">
 ## Individual Exploration
 <!-- Goal is just for them to experience using a screen reader and explore using the keyboard rather than mouse. Approximately 7 minutes.-->
-- Open the CodePen example found in [this site](https://www.w3.org/TR/2021/NOTE-wai-aria-practices-1.2-20211129/examples/menubar/menubar-navigation.html).  Explore that CodePen with your Mac's VoiceOver utility or Chrome's [Screen Reader Plugin](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) to see how screen readers interact with `aria-expanded`.  
+- Open the CodePen example found in [this site](https://www.w3.org/TR/2021/NOTE-wai-aria-practices-1.2-20211129/examples/menubar/menubar-navigation.html){:target='blank'}.  Explore that CodePen with your Mac's VoiceOver utility or Chrome's [Screen Reader Plugin](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en){:target='blank'} to see how screen readers interact with `aria-expanded`.  
 - Play in the CodePen with your mouse.  Then just using your keyboard.  
 - Go to other sites that you commonly visit - explore them as you normally would but with the VoiceOver on.
 - If you have time, checkout where the site outlines details about the accessibility features implemented in that CodePen example.  
@@ -215,7 +215,7 @@ You can then use JavaScript to keep this information up to date - for example, o
 
 <section class="call-to-action">
 ## In Groups
--  Spend the first 2-3 minutes on mute, individually comparing [this Codepen](https://codepen.io/damwhit/pen/WZqyEe) and with [this Codepen](https://codepen.io/damwhit/pen/XeLVbw) while using your screenreader. What changes to do you notice?  
+-  Spend the first 2-3 minutes on mute, individually comparing [this Codepen](https://codepen.io/damwhit/pen/WZqyEe){:target='blank'} and with [this Codepen](https://codepen.io/damwhit/pen/XeLVbw){:target='blank'} while using your screenreader. What changes to do you notice?  
 - Then discuss as a group.
   - Take turns explaining what a property is
   - Come up with a good analogy for property
@@ -236,7 +236,7 @@ __Below are some things that you should ALWAYS incorporate in your web applicati
 
 DO NOT REMOVE THE FOCUS RING (outline) that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
 
-This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options.
+This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939){:target='blank'} that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/){:target='blank'} offers a list of alternative styling options.
 
 A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles - try tabbing through it to see the options!
 </section>
@@ -313,20 +313,20 @@ You can use the `aria-label` below to define a label, but remember to use semant
 
 ## Additional Resources
 
-* [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
-* [Aria Documentation](https://www.w3.org/TR/wai-aria)
-* [Aria Examples & Design Patterns](https://www.w3.org/TR/wai-aria-practices/#aria_ex)
-* [Web Accessibility in Mind](https://webaim.org/articles/userperspective/)
-* [9 Tools for Website Accessibility Testing](https://www.shopify.com/partners/blog/website-accessibility-testing)
+* [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA){:target='blank'}
+* [Aria Documentation](https://www.w3.org/TR/wai-aria){:target='blank'}
+* [Aria Examples & Design Patterns](https://www.w3.org/TR/wai-aria-practices/#aria_ex){:target='blank'}
+* [Web Accessibility in Mind](https://webaim.org/articles/userperspective/){:target='blank'}
+* [9 Tools for Website Accessibility Testing](https://www.shopify.com/partners/blog/website-accessibility-testing){:target='blank'}
 
 Tools
-* [aXe Chrome Plugin](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd)
-* [ChromeVox Plugin](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en)
-* [Colorblind](https://chrome.google.com/webstore/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool/related?hl=en)
-* [Screen Reader Plugin](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en)
+* [aXe Chrome Plugin](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd){:target='blank'}
+* [ChromeVox Plugin](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en){:target='blank'}
+* [Colorblind](https://chrome.google.com/webstore/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool/related?hl=en){:target='blank'}
+* [Screen Reader Plugin](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en){:target='blank'}
 
 Videos
-* [Aria Roles, States, and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk)
-* [ARIA, Accessibility APIs and Coding Like You Give A Damn!](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
-* [describedBy vs labeledBy video](https://www.youtube.com/watch?v=U8_VjI-Z1LA)
-* [History of Accessibility Tech](https://www.youtube.com/watch?v=qdB8SRhqvFc)
+* [Aria Roles, States, and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk){:target='blank'}
+* [ARIA, Accessibility APIs and Coding Like You Give A Damn!](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s){:target='blank'}
+* [describedBy vs labeledBy video](https://www.youtube.com/watch?v=U8_VjI-Z1LA){:target='blank'}
+* [History of Accessibility Tech](https://www.youtube.com/watch?v=qdB8SRhqvFc){:target='blank'}
