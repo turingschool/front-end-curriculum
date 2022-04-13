@@ -239,7 +239,7 @@ DO NOT REMOVE THE FOCUS RING (outline) that appears on interactive elements with
 This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options.
 
 A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles - try tabbing through it to see the options!
-
+</section>
 
 <section class="call-to-action">
 ### Alt Attributes for Your Images!
