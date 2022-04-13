@@ -38,7 +38,7 @@ We want to see YOUR work.
 
 Here is a video demonstrating most functionality of the game:
 
-<video controls>
+<video controls width="75%">
     <source src="./assets/Tic Tac Toe.mp4" type="video/mp4">
 </video>
 
