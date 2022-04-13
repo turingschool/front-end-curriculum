@@ -64,8 +64,8 @@ In this project, we will not be providing detailed iterations. We want you to ex
 
 Notes:
 * A timeout is used after a completed game to reset the board.
-* YOU DO NOT NEED TO DISPLAY EACH INDIVIDUAL WIN BOARD. WE ONLY NEED TO SEE NUMBER OF WINS.
 * No need to match colors or icons, but the overall layout should be the same. You can get as creative as you would like with your Tic Tac Toe design!
+* You can simply use emoji instead of actual icons (the video demo above just used the ⭐ and ❤️ emoji!)
 
 ### Architecture
 
@@ -73,9 +73,8 @@ Your entire application will consist of one HTML file and one CSS file. You will
 
 1. A `player.js` file that contains a `Player` class.
 	* `Player` methods must include, _but are not limited to_:
-		1. `constructor` - properties should include: `id` (ex: `'one'`), `token` (ex: `'⭐️'`), `wins` (ex: `[]`)
-		2. `saveWinsToStorage` - only necessary if you choose the localStorage extension
-		3. `retrieveWinsFromStorage`- only necessary if you choose the localStorage extension
+		1. `constructor` - properties should include: `id` (ex: `'one'`), `token` (ex: `'⭐️'`), `wins` (ex: `0`)
+		2. `increaseWins` - increases the count of the player's wins
 2. A `game.js` file that contains a Game class.
   * A `Game` should include:
       - Two `Player` instances
