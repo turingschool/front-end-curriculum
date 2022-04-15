@@ -10,7 +10,29 @@ This is a small static Jekyll site that contains the front end program's lessons
 
 ### Prerequisites
 
-In order to get this repo up and running you will need to have Ruby 2.4.1 installed and active. You will also need the `bundler` and `jekyll` gems installed.
+In order to get this repo up and running you will need to have Ruby 2.4.7 installed and active. 
+
+Install Homebrew if you don't already have it:  
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Follow prompts if necessary (you may need to enter your computer password, as well as run a few scripts prompted in the terminal output).
+
+Install Ruby Version Manager:  
+
+```shell
+\curl -sSL https://get.rvm.io | bash -s stable
+```
+
+Install Ruby version 2.7.4 using RVM:  
+
+```shell
+rvm unstall 2.7.4
+```
+
+You will also need the `bundler` and `jekyll` gems installed.
 
 ```shell
 gem install bundler
