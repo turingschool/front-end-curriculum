@@ -10,7 +10,7 @@ This is a small static Jekyll site that contains the front end program's lessons
 
 ### Prerequisites
 
-In order to get this repo up and running you will need to have Ruby 2.4.7 installed and active. 
+In order to get this repo up and running you will need to have Ruby 2.7.4 installed and active. 
 
 Install Homebrew if you don't already have it:  
 
