@@ -206,7 +206,7 @@ As mentioned above, functionality does have more weight in this final project in
 
 - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
 - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. _Example: classes should be named using kabab-case, ids should be used sparingly_
-- Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). If `<div>` or `span` elements are used, they are only for styling purposes.
+- Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). If `<div>` or `<span>` elements are used, they are only for styling purposes.
 
 ✨WOW✨ can look like:
 - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, document it in your README and let your project manager know which naming convention will be used._
