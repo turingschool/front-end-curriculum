@@ -29,7 +29,7 @@ Install Ruby Version Manager:
 Install Ruby version 2.7.4 using RVM:  
 
 ```shell
-rvm unstall 2.7.4
+rvm install 2.7.4
 ```
 
 You will also need the `bundler` and `jekyll` gems installed.
