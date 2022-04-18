@@ -23,10 +23,10 @@ Let's talk more about JavaScript and it's ability to be asynchronous. What does 
 <section class="call-to-action">
 ### Review
 
-Using sticky notes in [this Jamboard](https://jamboard.google.com/d/1LZb7HhtV9IDzehlzd7B33A4lgiT8EaBFAVTyb7rwznA/viewer?f=0), answer the following with your breakout group:
-- Everything you know about / questions you still have on asynchronous code
-- Everything you know about / questions you still have on fetch
-- Everything you know about / questions you still have on execution contexts & the call stack
+Using sticky notes in [this Jamboard](https://jamboard.google.com/d/1xtmrE1B76eE5HRNdyBmtJ1ThvyiDx3HePa6Mrhn0VFY/edit?usp=sharing), answer the following with your breakout group:
+- Everything you know about & questions you still have on **asynchronous code**
+- Everything you know about & questions you still have on **fetch**
+- Everything you know about & questions you still have on **execution contexts & the call stack**
 </section>
 
 ## Introduction
@@ -66,7 +66,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 console.log('burrito');
 ```
 
-* How does `fetch` fit in with the code above and below it? 
+* How does `fetch` fit in with the code above and below it?
 * What order will the console logs show up in and why?
 * Using terms like the call stack, Web API, & callback queue, explain this is working behind the scenes.
 </section>
