@@ -39,7 +39,7 @@ For this project, you will want to use this [Webpack Starter Kit](https://github
 
 ### Endpoints
 
-Below are all the endpoints set up for this project. You may not use all of them -- some apply to extensions. Pay attention to the functionality required of each iteration when picking the appropriate endpoint.
+Below are all the endpoints set up for this project. You may not use all of them. Pay attention to the functionality required of each iteration when picking the appropriate endpoint.
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
