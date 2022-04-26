@@ -178,3 +178,7 @@ Take a few minutes to write about each prompt below:
 Whenever you face a challenge you don't know how to approach, practice pseudocoding. And practice pseudocoding even when you know exactly what code you would write to solve a problem!
 
 Pseudocoding is a tool you will use to chip away at a big, challenging problem. It's a way of looking at towering cliffside and being able to see the first couple hand- and foot- holds that will help you climb it.
+
+### Additional Resources
+
+- [Problem Solving - Odin Project](https://www.theodinproject.com/lessons/foundations-problem-solving)
