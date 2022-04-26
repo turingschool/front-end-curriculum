@@ -238,7 +238,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 - The team's norming document is taken seriously, with thoughtful reflections from all team members regarding their skills, learning goals, work styles, etc. 
 - The team plans and executes an agreed upon process for working, troubleshooting, and handling conflicts.
-- Each member of the team reflects meaningfully on the collaboration and can point to specific behaviors they wwant to continue, and those they want to modify for future collaboration
+- Each member of the team reflects meaningfully on the collaboration and can point to specific behaviors they want to continue, and those they want to modify for future collaboration
 - The work is distributed equitably; hopefully commit/code contributions are roughly even for each team member
 
 ✨WOW✨ can look like:
