@@ -4,14 +4,9 @@ title: RomCom - Pair
 
 ## Learning Goals
 
-* Write clean, DRY JavaScript
-  * Use a provided class by creating object instances using the `new` keyword
-  * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
-* Explore the connection between HTML, CSS, and JavaScript
-  * Practice reading, understanding, and using provided code
-* Write code collaboratively
-  * Document changes with atomic commits & thorough code reviews
-  * Communicate, troubleshoot, and plan effectively as a team
+* Write clean, DRY JavaScript to store our data
+* Use a provided class by creating object instances using the `new` keyword
+* Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 
 ## Overview
 
@@ -22,11 +17,11 @@ People say that romance novels are formulaic. Well ... maybe that's true. We're 
 To begin, choose ONE PARTNER to do the following:
 
 1. Fork the boilerplate repository found [here](https://github.com/turingschool-examples/romcom/)
-2. Clone down your new, forked repo. While cloning, name it what you want your project to be named, should not include “boilerplate”. `git clone <url> <newNameYouWantItToHave>`
+2. Clone down your new, forked repo
 3. `cd` into the repository
 4. Open it in your text editor
 5. View the project in the browser by running `open index.html` in your terminal
-6. Add all project partners and your assigned instructor as collaborators on the repository
+5. Add all project partners and your assigned instructor as collaborators on the repository
 
 Then, as a team:
 
@@ -42,27 +37,32 @@ Then, as a team:
 **By EOD on Kick Off Day:** complete the following tasks:
 
 * As a team, read the entire project spec and rubric
-* As a team, complete [the Norming Document](https://docs.google.com/forms/d/e/1FAIpQLSche5cvtlYQ_SaBDqqoF3H9gFiy2p60AOPoUMbhgIHlg-vRlQ/viewform?usp=sf_link)
+* As a team, complete [the DTR Form](https://docs.google.com/forms/d/e/1FAIpQLSche5cvtlYQ_SaBDqqoF3H9gFiy2p60AOPoUMbhgIHlg-vRlQ/viewform?usp=sf_link)
 * Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the following links:
   - the forked GitHub repo
   - the GitHub Pages deployed site
     - Instructions for deploying: Repo Settings >> Pages >> Select the `main` branch as your Source branch >> Save >> Send us the URL they give you in the pop up that says "Your site is ready to be published at [URL]"
-* Add all teammates and your assigned instructor as collaborators to your forked repository (Please find instructor GitHub usernames in their Slack profile)
+* Add all teammates and your assigned instructor as collaborators to your forked repository
 
 ## Progression
 
 ### Iteration 0 - Main Page
 
-<img src="./assets/romcom/romcom-random.png" alt="Randomize">
+<img src="./assets/romcom/romcom-home.png" alt="Homepage">
 
 - When the page loads, we should see a cover with a randomly selected image, title, and tagline which includes two random descriptors
+
+### Iteration 1 - Show Random Cover
+
+<img src="./assets/romcom/romcom-random.png" alt="Randomize">
+
 - Every time the user clicks the Show New Random Cover button, a new random cover is created
     - hint: you may need to update the value of the provided `currentCover` variable
     - hint: use that Cover class!
 - Every time the user clicks the Show New Random Cover button, the random cover is displayed
     - hint: you may need to create a function that displays information on the DOM
 
-### Iteration 1 - Switching Views
+### Iteration 2 - Switching Views
 
 **NOTE:** in this iteration, you are not worrying about making the form WORK, and you are not worrying about saving or displaying covers. You simply want to make sure the views can be switched when you click the appropriate buttons.
 
@@ -89,7 +89,7 @@ For both the Make New Cover form section and the Saved Covers section:
 
 _Hint: go check out the HTML and CSS files to see how the form and saved covers sections are being hidden in the first place_
 
-## Iteration 2 - Creating a New Cover
+## Iteration 3 - Creating a New Cover
 
 - In the new cover form view, users should be able to fill out the four input fields and then hit the Make My Book button
 - When the Make My Book button is clicked, several things will happen:
@@ -98,7 +98,7 @@ _Hint: go check out the HTML and CSS files to see how the form and saved covers 
   - Change back to the main home view (hiding the form view again)
   - Display the newly created cover image, title, and descriptors in the main cover
 
-## Iteration 3 - Saving & Viewing Covers
+## Iteration 4 - Saving & Viewing Covers
 
 - When a user clicks the "Save Cover" button, the current cover will be added to the `savedCovers` array
 - If a user clicks the "Save Cover" more than once on a single cover, it will still only be saved once (no duplicates)
@@ -107,11 +107,12 @@ _Hint: go check out the HTML and CSS files to see how the form and saved covers 
 
 _Note: None of this needs to persist on page load_
 
-## Iteration 4 - Deleting Saved Covers
+## Iteration 5 - Deleting Saved Covers
 
 - From the saved covers view, if a user double clicks a saved poster, it will be deleted
 
 _Hint: How will you update the data model to achieve this?_
+_Hint: Look into [this user event](https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event)_
 _Note: None of this needs to persist on page load_
 
 
@@ -125,231 +126,87 @@ You are welcome to add your own extensions. Be sure they are thoughtful in terms
 - When a user single clicks a saved cover, create a modal to view it larger
 - Allow users to drag and drop saved posters into whatever order they want them to appear
 
----
----
-
-# Notes on Project Feedback
-
-The rubric below serves as a guide for both **students** and **instructors**. 
-
-**Students:**
-- It should be used as a reference throughout the project to keep on track and guide learning.
-- It should also be used by students to self-assess their work.
-
-**Instructors:**
-- It should be used to evaluate the project at its final due date/time.
-- It should be a guide to provide relevant feedback to students so they can grow and improve in the areas that need deeper understanding.
-
-<section class="answer">
-### Projects as Learning Tools
-
-When projects are graded, we want you to view the evaluation + feedback as a means to inform your learning, rather than as static "grades". Feedback from instructors will focus on areas where you have an opportunity to deepen your understanding. 
-
-The evaluation will provide feedback by answering the only important question:
-
-**Does the project demonstrate student understanding of the learning goals & concepts?**
-
-Projects will answer that question, being marked as **yes**, **not yet**, and **wow**. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
-
-The overall project outcome (yes, not yet, wow) is determined by "averaging" each section's outcome. You can think of a "yes" being worth a  1, a "not yet" being worth a 0, and a "wow" being worth a 2. 
-
-For this project, an average of 1+ is considered a yes - a passing project that demonstrates good student understanding! An average of 1.5+ is considered a wow. Anything below a 1 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below).
-
-
-** 🚨 A important note about the possible outcomes**
-
-**Yes** indicates that the student/team is ON TRACK in this area! YES you showed us you understand the concept! 
-- The student/team demonstrates a good understanding of the concept
-
-**Not Yet** indicates that the student/team is BEHIND in this area - you showed us that you don't yet understand the concept
-- The student/team demonstrates misconceptions or confusion around the topic
-- Student/team should prioritize this concept in their studying and practice
-- ✨ An overall "not yet" on one project does **not** mean the module is doomed! We want to see GROWTH. A student/team can struggle with a project and still (taking into account the rest of their work and assessments) demonstrate readiness for the next module! ✨
-
-**Wow** indicates that the student/team did extra work to teach themselves a new concept, or to achieve a deep & nuanced understanding of a concept
-- This is not an outcome to prioritize achieving
-- "Wow" should not come at the expense of another concept
-- "Wow" often does not look like extra features, but instead looks like thoughtful refactoring and polish 💅
-</section>
-
 ## Rubric
 
-This project has 3 evaluated concepts:
+This rubric should serve as a guide for students as they progress through the project, as well as to self-evaluate. Instructors will use it to evaluate the project at its final due date/time, and provide detailed feedback so students know what areas to focus on in future projects.
 
-- JavaScript
-- Workflow & Professional Habits
-- Reading Code
+Scores land in a range between 1 and 4. Below is a breakdown of what those numbers represent.
 
-And evaluation of these concepts is assisted through the final graded section:
-- Functionality (we can't properly assess the 3 main concepts if there is not enough work to grade)
+* **4 (exceptional)** - went beyond set learning goals; did self-teaching to go above and beyond in this area
+* **3 (proficient)** - exactly on track! you're where you need to be in this area! great work!
+* **2 (trailing)** - a little behind where we want to see you right now; in a good place to build familiarity/competency in this area; study in this area to level up and grow
+* **1 (dragging)** - significantly behind where we want to see you; major growth needs to be shown in this area; set up a pairing session with an instructor as soon as possible
 
----
+To earn a given score, an application must meet the requirements listed in that score explanation and all scores lower.
 
-### JavaScript
+### Professionalism
 
-This project gives the team room to practice the following JavaScript concepts:  
-- OOP (Object Oriented Programming)
-- DOM (Document Object Model) manipulation
-- Style
-  - SRP (Single Responsibility Principle) and DRY (don't repeat yourself) conventions
-  - Readability - semantic naming, consistency, conciseness
+* **4:**
+  - Team uses a [PR template](https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository) consistently
+  - Team habitually conducts thorough code reviews in the GitHub GUI to document the progress of the application
+  - Team has sought out code reviews from one or more mentors. Mentors must add their code review to a pull request that can be viewed.
 
-Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
+* **3:**
+  - Commits are atomic and frequent, effectively documenting the evolution/progression of the application. Remember, a commit should be one “unit” of work.
+  - Commit messages are consistent, descriptive, concise and begin with a verb and capital letter
+  - Team uses PRs to screen/verify code before adding it to the main branch
+  - There is no more than a 10% disparity in code contributions between teammates. Note: this is checked via the “Insights” and “Contributors” tab in your GitHub repo.
+  - Branches are consistently used for individual features
+  - README is well formatted and gives good context about the project. At minimum, a sufficient README should contain - contributors, technologies used, instructions for running and viewing the project, deploy link (gh-pages), images/GIFs if necessary, future additions, etc. Think about what a user needs to understand and get the full picture of the application.
 
-<section class="answer">
-### OOP competency examples
+* **2:**
+  - Commits are large and do not effectively communicate the progression of the application.
+  - Team uses PRs but do not review code before merging into the main branch
+  - During evaluations with PM, all teammates can speak to the purpose and functionality of any/every line of code.  
+  - Branches are sometimes used for individual features
+  - There is a 20% disparity in code contributions between teammates
+  - README is brief and does not provide full context for the project
 
-- Project makes use of the provided class, creating instances to encapsulate & store unique data
-- Team considers when and how to create new instances or update existing instances, coming to a clear and consistent decision
-- Team effectively creates/accesses instance properties when applicable
-- Team effectively invokes instance methods when applicable
+* **1:**
+  - During evaluations with PM, teammates are unable to describe the purpose and functionality of every line of code
+  - Some commits are pushed directly to the main branch
+  - PRs are used inconsistently or not at all
+  - There is a 50% disparity in code contributions between teammates There is no README, or the “boilerplate” README is left in the project.
 
-✨WOW✨ can look like:  
+### JavaScript Style & Implementation
 
-- Creating effective, clean methods in the provided class to manipulate class properties
-</section>
-
-<section class="answer">
-### DOM Manipulation competency examples
-
-- Project makes use of the DOM to access and update the displayed information
-- Team is thoughtful about elements being targeted, limiting global variables to only the ones needed for current functionality
-- Team succesfully renders the appropriate data to the page without bugs
-
-✨WOW✨ can look like:
-
-- Team keeps the data model logic separate from the render/display logic
-</section>
-
-<section class="answer">
-### JavaScript Style competency examples
-
-- The main JS file is organized thoughtfully (DOM variables together, event listeners together, functions together)
-- Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
-- Functions are DRY and demonstrate SRP
-- Variable and function naming is meaningful & readable
-- JS is formatted according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
-- Only semantic/organizational comments remain in file (if any); no "dead" commented out code remain in the file
-
-✨WOW✨ can look like:
-
-- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
-- Code has clearly been refactored; no functions show evidence of vestigial functionality (aka when functionality changes, all relevant code is updated)
-- No extraneous or unused lines of code
-</section>
-
-Each of these "subsections" are not distinct; they are all taken into consideration when the outcome for JavaScript is determined.
-
----
+* **4:**
+  - There are no global variables aside from query selectors, `currentCover` and `savedCovers`.
+  - Application uses event delegation correctly on dynamic elements
+  - All functions strictly adhere to the [Single Responsibility Principle (SRP)](https://dev.to/skill_pathway/single-responsibility-principle-for-dummies-59gb) and are all 10 lines of code or less
+  - Uses logical operators instead of nesting conditional statements
+  - Conditionals are written in a way that demonstrates an understanding of [truthy/falsy values](https://frontend.turing.io/lessons/module-1/js-truthy-falsy-expressions.html). For example, the developer avoids using logic like `=== true` and `!== 0`.
 
 
-### Workflow & Professional Habits
+* **3:**
+  - Demonstrate understanding of DOM manipulation by adding, removing, and updating elements on the DOM, after the page has loaded
+  - Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and observe [SRP](https://dev.to/skill_pathway/single-responsibility-principle-for-dummies-59gb) - and most are around 10 lines of code or less
+  - Most functions and variables are semantically and concisely named. Functions should start with a verb, array names should be plural, etc. Function and variable names describe their role in the program. Examples: The name of the data type should not ever be in a variable name (ex: “petArray”); the name itself should be clear enough to indicate the type of data it holds (ex: “allPets” or “pets”).
+  - An event handler should not have the word “handler” in the name (ex: “clickHandler”); the name should indicate the handler’s purpose (ex: “addNewPet”).
+  - Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
+  - Whenever possible, function declarations are used over anonymous functions in event listeners. There should be no logic present in an event listener.
+  - All console logs, debuggers and comments are removed from code before submitting.
 
-This project gives the team room to practice the following skills:  
-- Collaboration
-- Git
-- GitHub
+* **2:**
+  - Uses named functions instead of anonymous functions as event handlers in event listeners.
+  - Correctly uses if/else statements to handle multiple paths of logic & error handling.
+  - Inconsistently uses parameters and arguments to craft short and reusable functions. There might be parameters or arguments in functions that are unused.
+  - Most console logs, debuggers and comments are removed from code before submitting.
 
-Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
+* **1:**
+  - Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
 
-<section class="answer">
-### Collaboration competency examples
-
-- The team's norming document is taken seriously, with thoughtful reflections from all team members regarding their skills, learning goals, work styles, etc. 
-- The team plans and executes an agreed upon process for working, troubleshooting, and handling conflicts.
-- Each member of the team reflects meaningfully on the collaboration and can point to specific behaviors they want to continue, and those they want to modify for future collaboration
-- The work is distributed equitably; hopefully commit/code contributions are roughly even for each team member
-
-✨WOW✨ can look like:
-
-- The team's norming document is regularly revisted and revised as better perspective is gained
-- When conflicts arise, the team works together to find ways to re-focus on individual and group learning objectives
-</section>
-
-Note: ⬆️this⬆️ kind of collaboration can be difficult to assess, but know that this is a crucial and vital part of your learning and marketability as a developer! 
-
-<section class="answer">
-### Git competency examples
-
-- Team understands the importance & utility of documenting a single change with every commit; changesets are small
-- Commit messages are descriptive and concise
-- The team keeps the main branch clean by using branches for new, unreviewed code
-
-✨WOW✨ can look like:
-
-- The team's commit messages clearly tell the story of how the project evolved over time
-- Commits are atomic, documenting a single changeset (such as a new function being created, or a function being updated).
-</section>
-
-<section class="answer">
-### GitHub competency examples
-
-- Team understands the point of the PR process, making strong use of code reviews & pushing up requested changes before merging
-- PRs have clear, thorough descriptions, such that a new person joining the codebase can clearly understand the proposed changes and evolution of the codebase
-- The team understands that the README is an opportunity to document their work and growth
-- The team understands that the README is a new contributor or potential employer's first glimpse into the project, and includes thorough setup instructions, context, reflections, and other pertinent information
-
-✨WOW✨ can look like:
-
-- A PR template is effectively used (not a checkbox to complete, but an opportunity to document the changes being proposed)
-- Meaningful decisions are documented through code reviews; suggested/requested edits are made before merging
-- No bugs or poor code are merged into the main branch
-- The README effectivelly communicates the team's learning and growth as students
-</section>
-
-Each of these "subsections" are not distinct; they are all taken into consideration when the outcome for Workflow and Professional Habits is determined.
-
----
-
-### Reading Code
-
-This project gives the team room to practice the following skills:  
-- Reading code written by someone else (provided boilerplate)
-- Effectively making use of existing code
-
-Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
-
-<section class="answer">
-### Reading Code competency examples
-
-- The team takes time to thoroughly understand the provided code
-- Provided code is used effectively (the provided Class, the provided assets, the provided HTML & CSS)
-  - The team does not have to directly edit the HTML or CSS file
-  - The team does not ignore provided styling
-  - No code is added that makes the provided code redundant
-
-✨WOW✨ can look like:
-
-- Creating and sharing a document (with your PM) for the team's observations of and questions about the existing code
-</section>
-
----
 
 ### Functional Expectations
 
 Functionality is the least important piece of the rubric. It's included because it is another benchmark to gauge proficiency. However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
 
 This means, we DO NOT want to see:
-- Code that pursues extensions but is sloppy
+- Code that completes iterations but is sloppy
 - One or both team members do not understand every single line of code
 - One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
 
-Well-refactored, thoughtful code is better than sloppy extra features.
-
-<section class="answer">
-### Functionality competency examples
-
-- The application completes all iterations without bugs
-
-✨WOW✨ can look like:
-
-- An extension is successfully implemented along with thoughtful UI
-</section>
-
----
-
-## Feedback
-
-A few days after the due date, your team will receive feedback about the project's average outcome (yes/not yet/wow), as well as each section's outcome. You will also receive a few pieces of team-specific feedback for each section (things done well, things to improve on for the current/next project).
-
-Common feedback to all projects will also be shared with the cohort. There will be time in the calendar to review these items and figure out how to apply your learning to your current and future work!
+* **4:** Applications completes one or more of the extensions without bugs
+* **3:** Application completes all the expectations of Iteration 4 without bugs
+* **2:** Application completes all the expectations of Iteration 3 without bugs
+* **1:** Application completes all the expectations of Iteration 2 without bugs
