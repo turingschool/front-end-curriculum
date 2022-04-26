@@ -51,7 +51,7 @@ Then, as a team:
 
 ## Progression
 
-### Iteration 0 - Main Page
+## Iteration 0 - Main Page
 
 <img src="./assets/romcom/romcom-random.png" alt="Randomize">
 
@@ -62,7 +62,7 @@ Then, as a team:
 - Every time the user clicks the Show New Random Cover button, the random cover is displayed
     - hint: you may need to create a function that displays information on the DOM
 
-### Iteration 1 - Switching Views
+## Iteration 1 - Switching Views
 
 **NOTE:** in this iteration, you are not worrying about making the form WORK, and you are not worrying about saving or displaying covers. You simply want to make sure the views can be switched when you click the appropriate buttons.
 
