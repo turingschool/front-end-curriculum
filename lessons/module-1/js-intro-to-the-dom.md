@@ -17,9 +17,6 @@ tags: javascript, dom, browser
 - `Interface` a shared boundary across which two separate components exchange information.
 - `DOM` Document Object Model, the JS interface used to interact with HTML
 
-## Note
-
-While you haven't officially learned about HTML yet, you'll be working with HTML in this lesson. Don't panic! For this lesson, you need to know the definition of `HTML Element` and you need to be ready to explore and try new things. 
 
 ## Warm Up
 
