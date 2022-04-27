@@ -4,20 +4,28 @@ tags: git, github
 ---
 
 ## Learning Goals
-- Understand how to prevent and resolve merge conflicts
+- Resolve Merge Conflicts
+- Identify ways to prevent Merge Conflicts
 
 ## Merge Conflicts
 
 Merge conflicts will happen to you at some point, and its important to learn how to resolve them successfully. A merge conflict happens when two branches change code in the same spot of a file and are attempted to be merged. Git doesn't know which of the changes to keep, and needs our help to resolve the conflict.
 
 <section class="checks-for-understanding">
-### Partner One
+### Instructions To Create a Merge Conflict
 
-- Make sure you are on your `main` branch
-- DONT pull down the changes that have been merged in (NOTE: This is BAD practice, we're only doing it to trigger a merge conflict)
-- Make a change to the README
-- Add, commit and push those changes to `main` (NOTE: BAD PRACTICE - DONT DO IN REAL LIFE)
-- Resolve merge conflict in your text editor
+* Partner A makes a new repository on GitHub
+* Partner A adds Partner B as collaborator on GitHub
+* Partner B clones the repo
+* Partner A creates a README.md file and adds a sentence on line 1
+* Partner A adds, commits, and pushes the README.md to GitHub while on the main branch (Bad practice - we are doing this to trigger a merge conflict)
+* Partner B does NOT pull down the latest changes (Bad practice - we are doing this to trigger a merge conflict)
+* Partner B creates a new branch and checks it out
+* Partner B makes changes to line 1 of the README.md on their new branch
+* Partner B adds, commits, and pushes their changes to GitHub
+* Partner B creates a Pull Request on GitHub from their branch to main. You should see the warning "Can't Automatically Merge when making the PR. After making the PR, it should say "This branch has conflicts that must be resolved."
+* Partner B should share their screen with Partner A. Follow the steps below to resolve this conflict!
+* If you have time, swap tasks as partners so that each partner can experience creating a conflict and resolving it. 
 
 </section>
 
@@ -36,3 +44,7 @@ Merge conflicts will happen to you at some point, and its important to learn how
 
 - You also have the option to resolve merge conflict in the GitHub GUI directly.  We highly recommend resolving conflicts in your terminal.  This is an important process to be familiar with as a developer.  
 - GitHub offers instructions on the GUI for how to resolve a merge conflict through the command line.  Test out these instructions when you encounter a merge conflict.  
+
+
+#### Discussion Questions:
+- What are some steps you can do as a team to avoid merge conflicts? (Hint: review the steps we took earlier to create a merge conflict)
