@@ -18,7 +18,7 @@ Dates and deadlines to be aware of:
 
 * **Tuesday of Week 4** -  Project kickoff; Have your project board updated with new tickets (*DTR should also already be completed but you should review and edit.*)
 * **Monday of Week 5** - Project due
-* **Tuesday of Week 5** - Project evaluations
+* **Tuesday of Week 5** - Project evaluations (Technical Interviews)
 
 ---
 
@@ -27,7 +27,6 @@ Dates and deadlines to be aware of:
 - [ ] Functionality
 - [ ] Fetch
 - [ ] Error Handling
-- [ ] DOM Manipulation
 - [ ] Accessibility
 - [ ] Testing
 
@@ -92,7 +91,8 @@ The expectation for Mod 2 is that you will avoid using `async/await`.  We know `
 <section class="note">
 ### Note about Adding / Removing Ingredients
 
-For the currently displayed user, you must add and remove ingredients from their pantry.
+* For the currently displayed user, you must add and remove ingredients from their pantry.
+* Users should be able to see the pantry update with the updated data *without having to refresh the page.*
 
 For example, if the currently displayed user has an ID of 50, and you want to add __ 3 units of an ingredient with an ID of 123, you would want to send a JSON object through with your POST request that looks like:
 

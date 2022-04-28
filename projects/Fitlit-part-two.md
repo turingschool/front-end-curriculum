@@ -16,17 +16,30 @@ In this project, you will use your project from Fitlit' (Part One) and build on 
 ## Timeline
 Dates and deadlines to be aware of:
 
-* **Tuesday of Week 4** -  Project kickoff
-* **Wednesday of Week 4** - Have your project board updated with new tickets (*DTR should also already be completed but you should review and edit based on the result of your project retro.*).  
+* **Tuesday of Week 4** -  Project kickoff; Have your project board updated with new tickets (*DTR should also already be completed but you should review and edit based on the result of your project retro.*).  
 * **Monday of Week 5** - Project due at 9PM (MST)
-* **Tuesday of Week 5** - Project evaluations  
+* **Tuesday of Week 5** - Project evaluations (Technical Interviews)
 
-## New Technologies + Tools
-
-- Lighthouse Accessibility Audit
 ---
 
-## Requirements
+# Requirements
+- [ ] Implementing Part 1 Feedback
+- [ ] Functionality
+- [ ] Fetch
+- [ ] Error Handling
+- [ ] Accessibility
+- [ ] Testing
+
+---
+
+## Refactoring and Applying Instructor Feedback from Part 1
+
+* Implement instructor feedback from Part 1
+* Consider any additional refactoring opportunities:
+  * Identify redundant code in your classes and opportunities for DRYing it up
+  * Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior.
+
+---
 
 ### Functionality
 
@@ -96,7 +109,9 @@ The expectation for Mod 2 is that you will avoid using `async/await`.  We know `
 
 <h3> Note about Adding Sleep, Hydration and activity data</h3>
 
-For the currently displayed user, you must be able to add a new sleep, hydration and activity data entry for that user.
+* You must be able to add a new sleep, hydration and activity data entry for that user.
+* Your user should see the dashboard update to include the newly added data *without having to refresh the page.*
+
 
 For example, if the currently displayed user has an ID of 50, and you want to add new sleep data you would want to send a JSON object through with your POST request that looks like:
 
@@ -112,23 +127,13 @@ For example, if the currently displayed user has an ID of 50, and you want to ad
 
 </section>
 
-<section class="note">
 
-### Error Handling
+
+## Error Handling
 
 Make proper error handling for your users to ensure they get data and submit their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user?  Also, validate the input fields on the client-side.
 <!-- //make sure you can't add bad data -->
 <!-- make sure there is an indication that the post succeeded -->
-</section>
-
----
-
-### Refactoring and Applying Instructor Feedback
-
-* Implement instructor feedback from Part 1
-* Consider any additional refactoring opportunities:
-  * Identify redundant code in your classes and opportunities for DRYing it up
-  * Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior.
 
 ---
 
