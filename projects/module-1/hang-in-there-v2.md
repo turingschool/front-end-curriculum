@@ -135,7 +135,7 @@ Projects will answer that question, being marked as **yes**, **not yet**, and **
 
 The overall project outcome (yes, not yet, wow) is determined by "averaging" each section's outcome. You can think of a "yes" being worth a  1, a "not yet" being worth a 0, and a "wow" being worth a 2. 
 
-For this project, an average of 1+ is considered a yes - a passing project that demonstrates good student understanding! An average of 1.5+ is considered a wow. Anything below a 1 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below).
+For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below).
 
 <section class="answer">
 ### A important note about the possible outcomes
