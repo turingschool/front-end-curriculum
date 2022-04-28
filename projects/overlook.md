@@ -21,8 +21,8 @@ For this project, you will be building a hotel management tool for hotel custome
 
 Dates and deadlines to be aware of:
 
-Tuesday Week 5 - Submit the following to your PM BEFORE beginning to write code via Slack:
-- Project repo
+Day One Deliverable:
+Please submit your project [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link){:target='blank'}
 
 Tuesday, Week 6 - Project due at 9PM.
 
@@ -39,7 +39,7 @@ For this project, you will want to use this [Webpack Starter Kit](https://github
 
 ### Endpoints
 
-Below are all the endpoints set up for this project. You may not use all of them -- some apply to extensions. Pay attention to the functionality required of each iteration when picking the appropriate endpoint.
+Below are all the endpoints set up for this project. You may not use all of them. Pay attention to the functionality required of each iteration when picking the appropriate endpoint.
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
@@ -86,13 +86,15 @@ Below are all the endpoints set up for this project. You may not use all of them
 
 **Refer to the "Add new booking" section from the endpoints table above!**
 
-<section class="note">
-### Note!
 
-If you haven't already, focus on accessibility at this point.  Before moving to iteration 3, please **create a branch and push it up to GH** so instructors can run *Lighthouse* and check your dashboard for it's accessibility audit.
-</section>
+### 3. Accessibility
 
-### 3. Login
+* Create a branch for accessibility.  
+* Use this branch to make your dashboard as accessible as possible.  
+* Push this branch up to GH.  You can merge the changes into main but do not delete this branch.  
+  * This branch should not have a login page so that during the live eval, we can run the Lighthouse audit and check tabbability of your dashboard (without the login page).  
+
+### 4. Login
 
 When first arriving at the site, a user should be able to log in with a username and password.
 
@@ -110,7 +112,7 @@ password: overlook2021
 
 **Refer to the "Get single user" section from the endpoints table above!**
 
-### 4. Manager Interaction
+### 5. Manager Interaction
 
 Your app should now support two different types of users.  In addition to having a customer, you will now add a manager.
 
@@ -176,30 +178,30 @@ Make sure you submit your project [here](https://docs.google.com/forms/d/e/1FAIp
 ## Specification Adherence
 
 * 4: The application completes all iterations above without error.
-* 3: The application completes the first 3 iterations above without error. **Note: Must be completed in order to pass.**
+* 3: The application completes the first 4 iterations above without error. **Note: Must be completed in order to pass.**
 * 2: The application completes the first 2 iterations and is in a usable state, but has some miscellaneous bugs.
 * 1: The application completes only the first iteration, displaying the user's data, but has no additional functionality.
 
 ## UI/UX & Accessibility
 
-* 4: Application has clearly had special consideration around accessibility. Lighthouse accessibility audit is at a 100%.
-* 3: Application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance.The UI does not detract from the UX. Lighthouse accessibility audit is at least 90%.
+* 4: Application has clearly had special consideration around accessibility. Lighthouse accessibility audit is at a 100% and application is fully tabbable.
+* 3: Application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance. The UI does not detract from the UX. Lighthouse accessibility audit is at least 90% and application is fully tabbable.
 * 2: The application may be confusing or difficult to use at times.  The UI is incomplete. Accessibility has been considered, but does not have strong accessible features.
 * 1: Application is confusing or difficult to use. The UI is incomplete. Accessibility has not been considered.
 
 ## JavaScript Style & OOP
 
 * 4: Application has exceptionally well-factored code with little or no duplication.  The business-logic code driving functionality is cleanly separated from rendering, view-related code.   Excellent usage of `fetch` and updates DOM based on results of network requests.  Handles all scenarios for error handling.
-* 3: Application is thoughtfully put together with some duplication.  Application is organized into classes with some misplaced logic. Business-logic code is mostly separated from view-related code.  Great usage of `fetch` and updates DOM based on results in most scenarios, but may update DOM before a network request is complete.  Handles some scenarios for error handling.
-* 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has zero error handling and only `logs` errors if a network request fails.
+* 3: Application is thoughtfully put together with some duplication.  Application is organized into classes with some misplaced logic. Business-logic code is mostly separated from view-related code.  Great usage of `fetch` and updates DOM based on results in most scenarios, but may update DOM before a network request is complete.  Handles most scenarios for error handling.
+* 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has little error handling and only `console logs` errors if a network request fails.
 * 1:  Application generates syntax error or crashes during execution.  Application is not separated into classes and there is no separation of business-side logic and view-related code. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity.
 
 
 ## Testing
 
-* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths.
-* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
+* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. Tests must be passing to be considered.
+* 3: Application is well tested but fails to cover some features and only tests for happy paths.  Tests must be passing to be considered.
+* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.  Tests must be passing to be considered.
 * 1: There is little or no evidence of testing in the application.
 
 # Evaluation

@@ -18,7 +18,7 @@ Dates and deadlines to be aware of:
 
 * **Tuesday of Week 4** -  Project kickoff; Have your project board updated with new tickets (*DTR should also already be completed but you should review and edit.*)
 * **Monday of Week 5** - Project due
-* **Tuesday of Week 5** - Project evaluations
+* **Tuesday of Week 5** - Project evaluations (Technical Interviews)
 
 ---
 
@@ -27,7 +27,6 @@ Dates and deadlines to be aware of:
 - [ ] Functionality
 - [ ] Fetch
 - [ ] Error Handling
-- [ ] DOM Manipulation
 - [ ] Accessibility
 - [ ] Testing
 
@@ -50,15 +49,15 @@ You must complete all of the remaining user stories from the [What's Cookin Spec
 
 #### Pantry Data
 Create classes and methods that can:
-- Determine whether a user's pantry has enough ingredients to cook a given meal.
-- Determine the amount of missing ingredients still needed to cook a given meal, based on what's in the user's pantry.
+- Determine whether a user's pantry has enough ingredients to cook a given recipe.
+- Determine the amount of missing ingredients still needed to cook a given recipe, based on what's in the user's pantry.
 
 #### User Stories
 - As a user, I should be able to view what ingredients exist inside of my pantry.
-- As a user, I should be able to check my list of recipes to cook and see if my pantry has enough ingredients to cook a meal.
+- As a user, I should be able to check my list of recipes to cook and see if my pantry has enough ingredients to cook a recipe.
 - As a user, I should be told what ingredients are still needed if I don't have enough ingredients in my pantry to cook the recipe.
 - As a user, I should not be able to cook a recipe if I don't have the ingredients required.
-- As a user, when I cook a meal, those ingredients should be removed from my pantry.
+- As a user, when I cook a recipe, those ingredients should be removed from my pantry.
 - As a user, I should be able to add more ingredients to my pantry.
 
 ---  
@@ -92,7 +91,8 @@ The expectation for Mod 2 is that you will avoid using `async/await`.  We know `
 <section class="note">
 ### Note about Adding / Removing Ingredients
 
-For the currently displayed user, you must add and remove ingredients from their pantry.
+* For the currently displayed user, you must add and remove ingredients from their pantry.
+* Users should be able to see the pantry update with the updated data *without having to refresh the page.*
 
 For example, if the currently displayed user has an ID of 50, and you want to add __ 3 units of an ingredient with an ID of 123, you would want to send a JSON object through with your POST request that looks like:
 
@@ -118,26 +118,6 @@ If you wanted to remove_ 3 units of that ingredient, you'd want to send a JSON t
 ## Error Handling
 
 Make proper error handling for your users to ensure they get data and submit their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user?  Also, validate the input fields on the client-side.
-
----
-
-## DOM Manipulation
-
-* DOM manipulation should be organized into its own `domUpdates.js` file. The file should look something like this:
-
-```js
-// domUpdates.js
-
-let domUpdates = {
-  updateDomMethod1(){...},
-  updateDomMethod2(){...},
-  ...
-};
-
-export default  domUpdates;
-```
-
-Any DOM updating functionality will then be imported into your `scripts.js` file to be called along with your other class methods.  This helps to create an even more modular structure.
 
 ---
 
@@ -184,7 +164,7 @@ In addition to your refactoring, you also want to make sure the application is f
 
 ### Functional Expectations
 * 4: Application fulfills all requirements *as well as* an extension.
-* 3: Application fulfills all requirements.
+* 3: Application fulfills all requirements, including implementing feedback from Part 1.
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage or does not run.
 
@@ -209,6 +189,7 @@ In addition to your refactoring, you also want to make sure the application is f
 ---
 
 ### Minimum Professionalism Expectations
+* Team collaborates effectively.  Team holds daily standups throughout project.
 * Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
 * The Project Board is utilized (and updated) with Github issues and labels.
 * Developer uses PRs from feature branches before adding new code to the main branch.

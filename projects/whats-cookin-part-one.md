@@ -12,7 +12,7 @@ tags: javascript, oop, mocha, testing, fetch
 - **Implement a robust testing suite using TDD**
 - **Make network requests to retrieve data**
 
-In this project, you will create a recipe tracking / meal planning application that allows users to view their favorite recipes and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should view a list of recipes, favorite their own recipes, and choose recipes to cook.
+In this project, you will create a recipe tracking / meal planning application that allows users to view recipes they want to cook and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should view a list of recipes and choose recipes to cook.
 
 ## New Technologies
 - Fetch API
@@ -163,19 +163,18 @@ Use the `scripts.js` file to add information to the DOM. This JS file should cal
 #### User Data
 
 Create classes and methods that can:
-- Allow a user to favorite or unfavorite recipes (add to / remove from the user's `favoriteRecipes`)
-- Decide to cook a recipe that week (add to my `recipesToCook`)
-- Filter my `favoriteRecipes` by a tag. (Extension option: filter by multiple tags)
-- Filter my `favoriteRecipes` by its name. (Extension option: filter by name or ingredients)
+- Allow a user to add/remove a recipe to their recipesToCook list (add to my `recipesToCook`)
+- Filter my `recipesToCook` by a tag. (Extension option: filter by multiple tags)
+- Filter my `recipesToCook` by its name. (Extension option: filter by name or ingredients)
 
 #### User Stories
 
 *On load, a user should be chosen at random.*
 
-* As a user, I should be able to favorite / unfavorite recipes that I like and can easily find again.
-* As a user, I should be able to filter my favorited recipes by a tag. (Extension option: filter by multiple tags)
-* As a user, I should be able to search my favorited recipes by its name. (Extension option: search by name or ingredients)
-* As a user, I should be able to add a recipe to a list of recipes to cook (this functionality will be necessary for Part Two of this project).
+* As a user, I should be able to add/remove a recipe to a list of recipes to cook
+* As a user, I should be able to filter my `toCook` recipes by a tag. (Extension option: filter by multiple tags)
+* As a user, I should be able to search my `toCook` recipes by its name. (Extension option: search by name or ingredients)
+
 
 ---
 
@@ -202,7 +201,7 @@ Once you've got fetch working on all three arrays, you can delete your hardcoded
 _Choose at least one_
 * Implement one of the listed 3rd party libraries or one of your choosing with instructor approval.
 * Expand your filtering functionality to include multiple tags and search by name and ingredients in your RecipeRepository and User classes.
-* Favoriting recipes is nice, but implementing a rating system would be even more helpful for a user! This could include a 5 star rating system, a way to leave reviews, etc!
+* Implementing a rating system would be helpful for a user! This could include a 5 star rating system, a way to leave reviews, etc!
 * You may also collaborate with instructors to personalize an extension for this project.
 
 ---
@@ -257,6 +256,7 @@ You are *not expected* to test:
 ------------------------------------------------------------------
 
 ### Minimum Professionalism Expectations
+* Team collaborates effectively.  Team holds daily standups throughout project.
 * Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
 * The Project Board is utilized (and updated throughout the project) with Github issues and labels.
 * Developer uses PRs from feature branches before adding new code to the main branch.
