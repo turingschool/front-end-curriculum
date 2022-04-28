@@ -12,10 +12,7 @@ $('.instructor-notes-container :header').click(function(event) {
 
   if (targetHeader.offset() !== undefined) {
     const topOffset = targetHeader.offset().top - 40;
-  
+
     $('html').animate({ scrollTop: topOffset }, 300);
   }
 });
-
-$('.instructor-notes').hide();
-$('.instructor-notes-container').hide();
