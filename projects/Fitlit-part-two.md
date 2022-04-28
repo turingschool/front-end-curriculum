@@ -204,6 +204,7 @@ In addition to your refactoring, you also want to make sure the application is f
 ---
 
 ### Minimum Professionalism Expectations
+* Team collaborates effectively.  Team holds daily standups throughout project.
 * Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
 * The Project Board is utilized (and updated) with Github issues and labels.
 * Developer uses PRs from feature branches before adding new code to the main branch.

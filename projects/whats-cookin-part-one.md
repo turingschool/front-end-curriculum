@@ -256,6 +256,7 @@ You are *not expected* to test:
 ------------------------------------------------------------------
 
 ### Minimum Professionalism Expectations
+* Team collaborates effectively.  Team holds daily standups throughout project.
 * Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
 * The Project Board is utilized (and updated throughout the project) with Github issues and labels.
 * Developer uses PRs from feature branches before adding new code to the main branch.
