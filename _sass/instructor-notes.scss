@@ -1,0 +1,8 @@
+.instructor-notes-container {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  padding: 40px 20px;
+  background-color: lighten($back-end-primary, 20);
+  border-right: 5px solid $back-end-secondary;
+}
