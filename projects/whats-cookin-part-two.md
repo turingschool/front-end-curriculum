@@ -164,7 +164,7 @@ In addition to your refactoring, you also want to make sure the application is f
 
 ### Functional Expectations
 * 4: Application fulfills all requirements *as well as* an extension.
-* 3: Application fulfills all requirements.
+* 3: Application fulfills all requirements, including implementing feedback from Part 1.
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage or does not run.
 
