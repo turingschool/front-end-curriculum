@@ -8,9 +8,13 @@ $('.instructor-notes-container').html($('.instructor-notes').html());
 $('.instructor-notes-container :header').click(function(event) {
   const title = event.target.innerText;
 
-  const topOffset = $($(`.content :header:contains(${title})`)[1]).offset().top - 40;
+  const targetHeader = $($(`.content :header:contains(${title})`)[1]);
 
-  $('html').animate({ scrollTop: topOffset }, 300);
+  if (targetHeader.offset() !== undefined) {
+    const topOffset = targetHeader.offset().top - 40;
+  
+    $('html').animate({ scrollTop: topOffset }, 300);
+  }
 });
 
 $('.instructor-notes').hide();

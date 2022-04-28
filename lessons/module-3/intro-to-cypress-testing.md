@@ -8,7 +8,59 @@ module: 3
 <aside class="instructor-notes">
 ## Instructor Notes
 
+### Key Takeaways
+
+- What acceptance testing is (why it's useful, how it differs from unit testing)
+- Enough of an intro to Cypress that students can continue learning/practicing/researching on their own
+
+### Builds on
+
+- [Testing: TDD, Mocha, Chai (Mod 2)](./module-2/testing-tdd-mocha-and-chai.html){:target='blank'}
+- [Agile: User Stories (Mod 3)](./user-stories.html){:target='blank'}
+
+### Foundation for
+
+- n/a 
+
+### Common issues  
+
 Installation is tricky with Cypress - sometimes it fails without a reproducible reason. Keep trying to run the Cypress command, and it will install. The same goes for Cypress trying to open Chrome - sometimes it doesn't connect. Close Cypress and try again.
+
+Students can often think that acceptance testing is MORE ADVANCED than unit tests. Do your best to remind them that acceptance tests are simply another layer to add in order to thoroughly test a codebase.
+
+### Teaching Strategies
+
+Lecture or demo are tempting, but long breakout rooms with instructors floating around to help answer questions can be really effective! Remember: in M3 we expect students to do a lot of heavy lifting on learning themselves (since this is how they'll mostly learn new things on the job in a few short weeks!). 
+
+### Breakout Room Strategies
+
+Here are some options for good ways to run breakout rooms in this lesson:  
+
+- Create small groups of 3, and have students use these same groups for the entire lesson.
+- Create small groups of 3, mixing people up for each breakout room (best if each time in a room is 15+ minutes long)
+- Create Choose Your Own rooms: some for small groups to work together, some for people to work quietly solo but with a small group to help with troubleshooting or questions, and the main room for silent solo work
+
+When students are in small groups, it's best for the instructor and co-instructor to move between rooms to help answer questions. This is complex stuff!
+
+### CFU Bank
+
+- When might unit and integration tests pass but the app still malfunctions?
+- What is an advantage of mocking data (especially mocking a network request)?
+- If we're using fake data, what's even the point?
+
+### Student Reassurance Strategies
+
+😱 [😭] 😕 🙂 [😄]
+
+Students either hate or love this lesson. Cypress can be a lightbulb for students who like seeing an app working from a user perspective, or it can be a headache for students who really thrive thinking about testing from an implementation standpoint (more aligned with unit testing).
+
+It's good to provide reminders that acceptance testing is quite advanced!  
+
+- "Many experienced developers struggle with testing!"
+- "This will set you apart from other job seekers during the job hunt."
+- "You won't be an expert by the end of the lesson. You'll still need to research, practice, ask questions, and help each other!"
+- "The lesson is a great resource to return to as you continue to learn and practice Cypress."
+
 
 ### Enough Talk Already!
 
