@@ -21,8 +21,8 @@ For this project, you will be building a hotel management tool for hotel custome
 
 Dates and deadlines to be aware of:
 
-Tuesday Week 5 - Submit the following to your PM BEFORE beginning to write code via Slack:
-- Project repo
+Day One Deliverable:
+Please submit your project [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link){:target='blank'}
 
 Tuesday, Week 6 - Project due at 9PM.
 
