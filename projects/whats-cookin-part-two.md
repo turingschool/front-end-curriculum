@@ -121,26 +121,6 @@ Make proper error handling for your users to ensure they get data and submit the
 
 ---
 
-## DOM Manipulation
-
-* DOM manipulation should be organized into its own `domUpdates.js` file. The file should look something like this:
-
-```js
-// domUpdates.js
-
-let domUpdates = {
-  updateDomMethod1(){...},
-  updateDomMethod2(){...},
-  ...
-};
-
-export default  domUpdates;
-```
-
-Any DOM updating functionality will then be imported into your `scripts.js` file to be called along with your other class methods.  This helps to create an even more modular structure.
-
----
-
 ## Accessibility
 
 * You must be able to tab through your app and use it without a mouse
