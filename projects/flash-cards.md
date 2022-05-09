@@ -23,7 +23,7 @@ Through each iteration, you should use TDD to drive implementation of your code.
 
 For this project, you need to use this [Flashcards Starter](https://github.com/turingschool-examples/flashcards-starter) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.
 
-Please note that there is logic provided to you (util.js) to make this game playable via the command line. Completion of Iterations I and II are required before you are able to utilize the command line interface to verify that your code is functioning properly. Prior to this, you should be using your tests to confirm functionality is working as you expect.
+Please note that there is logic provided to you (util.js) to make this game playable via the command line. You will not need to edit the util.js file. Completion of Iterations I and II are required before you are able to utilize the command line interface to verify that your code is functioning properly. Prior to this, you should be using your tests to confirm functionality is working as you expect.
 
 ## README
 
@@ -201,7 +201,8 @@ As you may have noticed, your `Game` class has two methods fleshed out already: 
     * invokes `printQuestion` to kick off our helper functions that allow interaction via the CLI
 
     _Note: The helper functions are all fleshed out and fit to work with classes/methods that meet the requirements in the past iterations._
-- Your `game.start()` method should be invoked to make the game playable.
+- Your `game.start()` method should be invoked to make the game playable in the console.
+  - Look at the file being run when we want to start the game. Think about where you need to invoke your `Game.start` method.
 
 <section class="answer">
 ### For Example  
@@ -211,11 +212,6 @@ game.currentRound; // => Round {...} (The new Round object that has been instati
 ```
 </section>
 
-<section class="note">
-### HINT
-
-Look at the file being  run when we want to start the game. Think about where you need to invoke your `Game.start` method.
-</section>
 
 
 ## Iteration 4:
