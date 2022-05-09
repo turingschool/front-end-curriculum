@@ -149,7 +149,7 @@ If `Developer A` submits a bug and then `Developer B` merges it, they are both a
 Code reviews can be one of the main interactions you will have with the people on your team. Conversations can be recorded so that you have one centralized place for discussions.  Be it you, other devs, or your project manager, one can read why certain decissions were made months/years later!
 
 ##### ASK QUESTIONS
-Tying into the above, this is an excellent place to ask questions or point out where things could be refactored *before* things are mereged in.
+Tying into the above, this is an excellent place to ask questions or point out where things could be refactored *before* things are merged in.
 </section>
 
 ### Code Review Examples
