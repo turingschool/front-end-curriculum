@@ -25,6 +25,9 @@ For this project, you need to use this [Flashcards Starter](https://github.com/t
 
 Please note that there is logic provided to you (util.js) to make this game playable via the command line. You will not need to edit the util.js file. Completion of Iterations I and II are required before you are able to utilize the command line interface to verify that your code is functioning properly. Prior to this, you should be using your tests to confirm functionality is working as you expect.
 
+## Day One Deliverable
+- By end of day on kick off day: Submit your GH Repo [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link) 
+
 ## README
 
 Your README should include the following, in this order:
@@ -270,6 +273,6 @@ Collaborate with instructors to personalize an extension for this project
 
 # Evaluations / Submission
 
-You'll have the opportunity to review code with your accountabilibuddy after submitting. Instructors will send over group feedback.
+You'll have the opportunity to review code with your accountabilibuddy after submitting. Instructors will share group feedback.
 
-Submit your GH Repo [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link) by **9PM on Thursday of Week 1**.
+Project is due at **9PM on Thursday of Week 1**.
