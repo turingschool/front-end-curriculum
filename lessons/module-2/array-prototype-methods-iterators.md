@@ -323,7 +323,5 @@ The only way to get better and more comfortable with these prototype methods is 
 
 ### Additional Resources
 * [Why and when to use forEach, map, filter, reduce, and find in JavaScript](https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c)
-* [ForEach vs For Loops](https://alligator.io/js/foreach-vs-for-loops/)
-* [Finally Understand the JavaScript Reduce Method](https://alligator.io/js/finally-understand-reduce/)
 * [JavaScript Callback Functions - What are Callbacks in JS and How to Use Them](https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/)
 * [Callback Functions MDN](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
