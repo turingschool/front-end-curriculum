@@ -372,4 +372,4 @@ ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`
 </section>
 
 ### Further Reading
-* <a href="https://frontend.turing.io/lessons/module-2/testing-with-hooks-and-linting.html" target="\__blank">Hooks</a>
+* <a href="https://frontend.turing.edu/lessons/module-2/testing-with-hooks-and-linting.html" target="\__blank">Hooks</a>
