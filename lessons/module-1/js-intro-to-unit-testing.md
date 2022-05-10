@@ -5,11 +5,11 @@ tags: javascript, testing, tdd, mocha, chai
 
 ## Learning Goals
 
-* Understand what testing is and why it is important
-* Learn a few of the various types of tests
-* Recognize the importance of Test Driven Development (TDD)
-* Understand the red/green testing workflow
-* Gain the ability to read and pass tests
+* Explain what testing is
+* Define Unit and Integration testing
+* Justify the importance of Test Driven Development (TDD)
+* Utilize red/green testing workflow
+* Read and pass tests
 
 ## Vocabulary
 
