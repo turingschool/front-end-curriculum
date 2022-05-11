@@ -22,7 +22,7 @@ We've broken this project down into iterations. Please be sure to read them clos
 **Turn in all deliverables via [this google sheet](https://docs.google.com/spreadsheets/d/1YDI4TAFdkOhpcFatdGONR7QtlDZVOpsvJVimtX77M6I/edit?usp=sharing).**
 
 By the end of the day, Day 1:
-* The link to your repo (hint: use [Create-React-App](https://frontend.turing.io/lessons/module-3/react-2-the-how.html) to start your project!)
+* The link to your repo (hint: use [Create-React-App](https://frontend.turing.edu/lessons/module-3/react-2-the-how.html) to start your project!)
 * The link to your DTR
 * The link to your Project Board with at least a few user stories entered  
 
@@ -51,13 +51,13 @@ import movieData from 'put your filepath here'
 - As a user, when I visit the app, all movies should be displayed
 
 **Suggested completion date**  
-- End of Day 2 (Wednesday of Week 1)
+- End of Day 2
 
 ---
 
 ### Iteration 2 - Displaying an individual movie
 
-For the second iteration, we'll use [`conditional rendering`](https://frontend.turing.io/lessons/module-3/react-3-advanced-data-management.html) to show a single movie's details.
+For the second iteration, we'll use [`conditional rendering`](https://frontend.turing.edu/lessons/module-3/react-3-advanced-data-management.html) to show a single movie's details.
 
 In the future, when we use the actual API to get individual movie details, the information will change. For now, you can use some default "dummy" data, and know that it will eventually change and be dynamic:
 
@@ -153,7 +153,7 @@ The point of these code reviews is to get you familiar with common code review p
 
 ### Iteration 4 - Refactoring with Router
 
-In the fourth iteration, we will be refactoring our application to use [Router](https://frontend.turing.io/lessons/module-3/react-router-v5.html) instead of conditional rendering to change the view!
+In the fourth iteration, we will be refactoring our application to use [Router](https://frontend.turing.edu/lessons/module-3/react-router-v5.html) instead of conditional rendering to change the view!
 
 So far the application has worked like a single page applicaiton. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes.
 
@@ -248,7 +248,7 @@ You are welcome to come up with your own ideas, too.
 
 ---
 
-### PROJECT DUE DATE: 6pm Monday of Week 3
+### PROJECT DUE DATE: 9pm Monday of Week 3
 
 If you have created a back-end repo and/or deployed your front-end, then add links to the deployed app or additional repos in your front-end README.
 
