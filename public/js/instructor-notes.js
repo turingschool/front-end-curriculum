@@ -1,5 +1,5 @@
 function showInstructorNotes() {
-  $('.instructor-notes-container').show();
+  $('.instructor-notes-container').show(200);
   $('.container, nav').css('padding-left', '400px');
 }
 
