@@ -70,6 +70,9 @@ If you finish before your partner, add another object to the array. Log it to th
 
 _💬 Before moving on to Part 3, check in with each other and make sure both partners were able to accomplish the task and know what their code is doing._
 
+</section>
+
+<section class="call-to-action">
 ### Part 3 - Collaborate
 
 For this part, use the `pets` array that is at the top of the Warm Up section. The variable that stores the array needs to be in the repl.it file you are working in.  
@@ -93,6 +96,7 @@ You can write the code in the same repl.it or a new one. Be ready to share your 
 
 _(Without using a loop)_ Can you come up with another solution in your code to get the same outcome? If so, be ready to share out. If not, be ready to explain why that was a challenge.
 </section>
+
 
 ## Loops
 
