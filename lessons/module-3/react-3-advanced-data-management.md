@@ -143,7 +143,9 @@ Setting state in this method **WILL** trigger a re-render - but will not cause a
 
 ### componentDidUpdate()
 
-This method is invoked *after* updating occurs.  It is **NOT** called for the initial render.  Per the [docs](https://reactjs.org/docs/react-component.html#componentdidupdate): "Use this as an opportunity to operate on the DOM when the component has been updated. This is also a good place to do network requests as long as you compare the current props to the previous props (e.g. a network request may not be necessary if the props have not changed)."  For example, if the `userId` in your new props is not the same as the one that is being currently displayed, you could fetch the new user.
+This method is invoked *after* updating occurs.  It is **NOT** called for the initial render.  Per the [docs](https://reactjs.org/docs/react-component.html#componentdidupdate): "Use this as an opportunity to operate on the DOM when the component has been updated. This is also a good place to do network requests as long as you compare the current props to the previous props (e.g. a network request may not be necessary if the props have not changed)."  For example, if the `userId` in your new props is not the same as the one that is being currently displayed, you could fetch the new user.  
+
+If you're interested in learning more, [here is a short blog post](https://dev.to/cesareferrari/how-to-use-componentdidupdate-in-react-30en) that offers an example of how `componentDidUpdate` works.
 
 <section class="note">
 ### Note
