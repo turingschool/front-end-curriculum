@@ -18,7 +18,7 @@ In this project, you will be given data from an activity tracker for many users 
 
 ## New Technologies
 - Fetch API
-- [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'}
+- [Webpack](https://frontend.turing.edu/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'}
 
 
 <section class="note">
@@ -61,7 +61,7 @@ This [article](https://survivejs.com/webpack/what-is-webpack/){:target='blank'} 
 
 ### Notes on Webpack
 
-Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
+Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.edu/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
 
 - You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ){:target='blank'} syntax
 	- Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.
