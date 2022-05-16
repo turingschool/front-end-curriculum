@@ -20,7 +20,7 @@ module: 2
 
 # How JavaScript is Read
 
-A fundamental part of writing better code and digging into more advanced topics is understanding how JavaScript is read by the browser. Can you build out applications without this knowledge? Of course. But a lot of developers find that having a good grasp on what is going on 'under the hood' ends up making other things infinitely easier - including, but not limited to, self-teaching new concepts, debugging, and writing solid JavaScript code. 
+A fundamental part of writing better code and digging into more advanced topics is understanding how JavaScript is read by the browser. Can you build out applications without this knowledge? Of course. But a lot of developers find that having a good grasp on what is going on 'under the hood' ends up making other things infinitely easier - including, but not limited to, self-teaching new concepts, debugging, and writing solid JavaScript code.
 
 Each browser has what's called a 'JavaScript Engine' that translates (or interprets) your code line by line as it executes, which allows your application to perform the behaviors and interactions you've programmed. For example, if you've written the following code:
 
@@ -33,7 +33,7 @@ The JavaScript engine will read and interpret these two lines in the order they'
 
 ## Understanding the Order of Execution
 
-In our previous example, we mentioned the JS Engine will read the two lines of code in the order they were written. Just like we might read a book, we must completely finish reading one line before we move onto the next (otherwise that book wouldn't make much sense to us)! In programming languages, this is what we call **single-threaded**. 
+In our previous example, we mentioned the JS Engine will read the two lines of code in the order they were written. Just like we might read a book, we must completely finish reading one line before we move onto the next (otherwise that book wouldn't make much sense to us)! In programming languages, this is what we call **single-threaded**.
 
 JavaScript is a **single-threaded** language, which means each line of code must fully finish executing before it can move onto the next -- only one task can be executed at a time.
 
@@ -81,7 +81,7 @@ Based on this order of execution, we ultimately receive NaN as our result becaus
 3  function mooLikeACow() {
 4    return 'Moooo!';
 5  }
-6 
+6
 7  console.log('Animal Sound: ', moo);
 ```
 
@@ -124,7 +124,7 @@ Our function is also hoisted to the top of our code block, with its entire defin
 7  console.log('Animal Sound: ', moo);
 ```
 
-When functions are hoisted to the top of our code block, it hoists not just the function name, but the code inside of it as well. This means we can invoke functions before we've declared them without running into errors. 
+When functions are hoisted to the top of our code block, it hoists not just the function name, but the code inside of it as well. This means we can invoke functions before we've declared them without running into errors.
 
 This hoisting behavior adds some complexity to the JavaScript language, and is important to understand thoroughly in order to anticipate the values of your variables at any given time.
 
@@ -137,7 +137,7 @@ With a partner, take turns explaining how the following JavaScript code would be
 
 ```js
 1  const hungriestDog = 'Tess';
-2 
+2
 3  function begForTreats(seconds) {
 4   const result = seconds * 2;
 5
@@ -147,7 +147,7 @@ With a partner, take turns explaining how the following JavaScript code would be
 9    return 'Yum, human food!';
 10  }
 11 }
-12 
+12
 13 let beggingTime = 1;
 14
 15 let beg = begForTreats(beggingTime);
@@ -157,24 +157,24 @@ With a partner, take turns explaining how the following JavaScript code would be
 ```
 </section>
 
-## Execution Call Stack 
+## Execution Call Stack
 
-Chances are good that you have come across information that references `The stack`, `The call stack`, or the `Execution Call Stack`. A [call stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack) is a way for the JavaScript interpreter to keep track of its place (its current execution context) in a script that calls multiple functions — what function is currently being run, what functions are called from within that function and should be called next, etc. 
+Chances are good that you have come across information that references `The stack`, `The call stack`, or the `Execution Call Stack`. A [call stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack) is a way for the JavaScript interpreter to keep track of its place (its current execution context) in a script that calls multiple functions — what function is currently being run, what functions are called from within that function and should be called next, etc.
 A stack is a fundamental data structure in Computer Science that follows "First-In-Last-Out" (FILO) semantics. Any time a new function is invoked (and a new execution context is created) this execution context is pushed to the stack. Once a function has returned, the call is popped off the stack. The stack is used to determine in what order the code runs. Let's look at this example:  
 
 ```js  
 function buildLaser () {  
   var message = 'Laser Built';  
-  console.log(message); 
+  console.log(message);
 }
 
 function buildMoonBase () {  
   var message = 'Moon Base Built';  
-  buildLaser(); 
-  console.log(message); 
+  buildLaser();
+  console.log(message);
 }
 
-function ransomTheWorld () { 
+function ransomTheWorld () {
   buildMoonBase();  
 }
 
@@ -186,35 +186,35 @@ ransomTheWorld();
 
 As the call stack builds up, each function has its own execution context.  
 1. We start in the global execution context  
-1. `ransomTheWorld` is called, creating a new call on the stack 
-1. `buildMoonBase` is called creating a new call on the stack. Within this funciton, a variable is decalred and `buildLaser` is called  
-1. `buildLaser` being invoked creates a new call on the stack 
+1. `ransomTheWorld` is called, creating a new call on the stack
+1. `buildMoonBase` is called creating a new call on the stack. Within this function, a variable is declared and `buildLaser` is called  
+1. `buildLaser` being invoked creates a new call on the stack
 1. `buildLaser` declares a variable, prints the variable to the console, and is returned and popped off the call stack... bringing us back to the context of `buildMoonBase`  
 1. `buildMoonBase` prints the previously declared variable to the console and is returned and popped off the call stack... bringing us back to the context of `ransomTheWorld`
 1. `ransomTheWorld` returns and is popped off. Our stack frame is empty and we are back in the global execution context.  
 
-![callstack building up](https://media.giphy.com/media/3ohs4rkYvzISB83cqY/giphy.gif) 
-</section> 
+![callstack building up](https://media.giphy.com/media/3ohs4rkYvzISB83cqY/giphy.gif)
+</section>
 
 <section class="call-to-action">
-### Turn and Talk 
+### Turn and Talk
 
 With a partner, take turns explaining how the the following JavaScript code would be translated by the interpreter. While one person is speaking, the other person should be diagramming this process.
 
 ```js  
-const myNum = 21; 
+const myNum = 21;
 
-function addTwo(num) { 
+function addTwo(num) {
   hello();  
-  return num + 2; 
+  return num + 2;
 }
 
-function hello() { 
-  console.log('hello'); 
+function hello() {
+  console.log('hello');
 }
 
-const sum = addTwo(myNum); 
-console.log(sum); 
+const sum = addTwo(myNum);
+console.log(sum);
 ```
 </section>
 
