@@ -99,7 +99,7 @@ var myVariableName;
 <section class="call-to-action">
 ### Console Practice
 
-**Declare** 2 variables, one named "quantity" and one named "name".
+**Declare** 2 variables, one named "quantity" and one named "myName".
 
 Then, **call** each variable by typing out its name, then hitting `return`. What is returned?
 </section>
