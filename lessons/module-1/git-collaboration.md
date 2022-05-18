@@ -104,7 +104,7 @@ Types of commits include:
 * **feat** - stands for feature. This will likely be your most common type that you use. It should be used for any new functionality that is committed.
 * **test** - use if committed code is adding test functionality.
 * **refactor** - use if updating and/or removing existing code.
-* **docs** - duse if updating your readme.
+* **docs** - use if updating your readme.
 
 Examples of good commit messages:
 
