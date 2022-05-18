@@ -59,12 +59,12 @@ Take for example the "heart" icon on CodePen. CodePen has 4 levels of "love" - 0
 
 <img class="medium" src="./assets/images/dom-manipulation-1/codepen-heart-click.gif">
 
-To do this, we need to combine what we just learned about event listeners with what we learned about changing styles programmatically earlier [this week](https://frontend.turing.io/lessons/module-1/js-intro-to-the-dom.html).
+Note: We will get more practice with the following concept in Part 2 of Intro to the [DOM](https://frontend.turing.io/lessons/module-1/js-intro-to-the-dom.html).
 
 <section class="call-to-action">
 ### Pair Challenge
 
-We are putting a few pieces together now, so this may seem a bit more challenging. That's when it is especially important to pseudo-code, or write human-readable notes that give you a roadmap for the code you will later write.
+We are putting a few pieces together now, so this may seem a bit more challenging. It will help if you pseudo-code, or write human-readable notes that give you a roadmap for the code you will later write.
 
 You will be building off of [this Codepen](https://codepen.io/hannahhudson/pen/NWbRZmQ) to create a single `div` that is gray. Then, when it is clicked, it turns pink!
 
