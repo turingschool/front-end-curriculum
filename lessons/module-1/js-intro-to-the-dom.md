@@ -13,7 +13,7 @@ tags: javascript, dom, browser
 ## Vocabulary
 
 - `HTML Element` A building block that makes up the structure of a web page.
-- `CSS Selector` A way to identify a set elements, typically using a tag, class or id.
+- `CSS Selector` A way to identify a set of elements to which a set of CSS styles apply, typically using a tag, class or id.
 - `Interface` a shared boundary across which two separate components exchange information.
 - `DOM` Document Object Model, the JS interface used to interact with HTML
 
