@@ -27,9 +27,9 @@ Spend 15-20 minutes reading, watching, and completing the content in the [Chrome
 <section class="call-to-action">
 ### Warm Up
 
-Go the the [Turing Home Page](https://turing.io/) and open up your Dev Tools.
+Go the the [Turing Home Page](https://turing.edu/) and open up your Dev Tools.
 - Click on the "Elements" tab. Stay in the "Elements" tab throughout this Warm Up.
-- Dig into the `<main>`. What are some things you see nested inside of this element? Can you associate any of the things you see in the code to what you see on the page?
+- Dig into the `<body>`. What are some things you see nested inside of this element? Can you associate any of the things you see in the code to what you see on the page?
 - In many of the elements, you'll notice a `class`. What do you think those are used for?
 - How can you search for a specific HTML element in the HTML document? For example, `<nav>`.
 - Click around a bit more. What else do you notice in the "Elements" view of the Dev Tools?
