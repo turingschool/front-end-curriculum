@@ -12,9 +12,12 @@ tags: git, github
 Merge conflicts will happen to you at some point, and its important to learn how to resolve them successfully. A merge conflict happens when two branches change code in the same spot of a file and are attempted to be merged. Git doesn't know which of the changes to keep, and needs our help to resolve the conflict.
 
 <section class="checks-for-understanding">
+
 ### Instructions To Create a Merge Conflict
-##### Your goal is to see an error that says something like "error: failed to push some refs to github"
-##### When you see that error, follow the instructions at the bottom of the page to solve it!
+
+##### Your goal is to create a pull request that says "Can't Automatically Merge when making the PR", if you get that error, proceed to the 'Resolving Merge Conflicts' section. 
+
+##### You may also see an error that says something like "error: failed to push some refs to github" when you try to push code. This is another situation where branches have gotten out of sync! Proceed to the 'Resolving Merge Conflicts' section. 
 
 * Partner A makes a new repository on GitHub, select the option to Add a README file so that your repository is initialized with a README.md file.
 * Partner A adds Partner B as collaborator on GitHub
