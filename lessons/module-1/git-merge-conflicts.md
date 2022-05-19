@@ -16,7 +16,7 @@ Merge conflicts will happen to you at some point, and its important to learn how
 ##### Your goal is to see an error that says something like "error: failed to push some refs to github"
 ##### When you see that error, follow the instructions at the bottom of the page to solve it!
 
-* Partner A makes a new repository on GitHub
+* Partner A makes a new repository on GitHub, select the option to Add a README file so that your repository is initialized with a README.md file.
 * Partner A adds Partner B as collaborator on GitHub
 * Partner B clones the repo
 * Partner A creates a README.md file and adds a sentence on line 1
