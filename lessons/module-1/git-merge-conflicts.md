@@ -18,9 +18,10 @@ Merge conflicts will happen to you at some point, and its important to learn how
 
 * Partner A makes a new repository on GitHub, select the option to Add a README file so that your repository is initialized with a README.md file.
 * Partner A adds Partner B as collaborator on GitHub
-* Partner B clones the repo
-* Partner A creates a README.md file and adds a sentence on line 1
-* Partner A adds, commits, and pushes the README.md to GitHub while on the main branch (Bad practice - we are doing this to trigger a merge conflict)
+* Partner A clones that repo down
+* Partner B clones the repo, doesn't do anything else
+* Partner A adds a sentence on line 1 of the README
+* Partner A adds, commits, and pushes the changes to GitHub while on the main branch (Bad practice - we are doing this to trigger a merge conflict)
 * Partner B does NOT pull down the latest changes (Bad practice - we are doing this to trigger a merge conflict)
 * Partner B creates a new branch and checks it out
 * Partner B makes changes to line 1 of the README.md on their new branch
