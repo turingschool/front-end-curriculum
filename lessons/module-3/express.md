@@ -21,7 +21,7 @@ tags: node, express, back-end, server, http
 * CRUD
 
 ### Prework
-Download the [Postman desktop app](https://app.getpostman.com/app/download/osx64)
+Download the [Postman desktop app](https://app.getpostman.com/app/download/osx64) and watch [this video](https://www.youtube.com/watch?v=MRw07FQRscI).
 
 ## What is Express?
 Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify and organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features.
@@ -332,7 +332,7 @@ Without it, you will get cors errors if you try to make a request from a react r
 
 Babel is a compiler that takes newer flavors of javascript and turns it into more compatible code.
 
-By default, create-react-app pulls in babel so that we can use more modern javascript feature such as importing and exporting. 
+By default, create-react-app pulls in babel so that we can use more modern javascript feature such as importing and exporting.
 If we want to be able to use import export statements, we'll manually have to pull in babel. Let's do that.
 
 First, let's install the dependencies we'll need for development:
@@ -347,7 +347,7 @@ Inside of that file, add these contents:
 {
   "presets": ["@babel/preset-env"]
 }
-``` 
+```
 
 Now, we can add a start script so that when we start our development server, it'll use babel to compile our code into something node can understand.
 Add `nodemon --exec babel-node server.js` as the start script.
