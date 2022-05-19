@@ -13,6 +13,8 @@ Merge conflicts will happen to you at some point, and its important to learn how
 
 <section class="checks-for-understanding">
 ### Instructions To Create a Merge Conflict
+##### Your goal is to see an error that says something like "error: failed to push some refs to github"
+##### When you see that error, follow the instructions at the bottom of the page to solve it!
 
 * Partner A makes a new repository on GitHub
 * Partner A adds Partner B as collaborator on GitHub
