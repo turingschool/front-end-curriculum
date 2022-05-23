@@ -29,7 +29,7 @@ Read through [Intro to CSS Pre-Work document](./intro-to-css-prework.html) and a
 ## Warm Up
 
 <section class="call-to-action">
-Add your thoughts and questions to [this google document](https://docs.google.com/document/d/1q0rv8RN5w4ECL0CSOhB-QbqQ2HQsYPRQ-7aCf30bo3g/edit?usp=sharing).
+Follow the prompts in [this jamboard](https://jamboard.google.com/d/1yTjsi9F5jFsDXLKDbeSgW1eXLKtk7uuqFZglYHKRb4I/edit?usp=sharing)
 </section>
 
 
@@ -103,7 +103,7 @@ Directly from the CSS pane, we can edit the CSS and see the changes reflected im
 Let's make the following edits on [kodewithklossy.com](https://www.kodewithklossy.com/):
 
 * Change the background color of the div that holds the mission to `rebeccapurple`
-* Change the background color of the nav to `orange`.
+* Change the background of the 'Get Involved' button to `orange`.
 * Change the "Kode With Klossy" logo in the nav bar to have a height of 90px and a width of 320px
 * Change the background color of the right side "donate" button to a color of your choosing. Try out different color formats. Hint - this [HTML Color Codes](https://htmlcolorcodes.com/) website will help!
 * Experiment with deselecting a few CSS styles. What happens?
@@ -112,7 +112,7 @@ Let's make the following edits on [kodewithklossy.com](https://www.kodewithkloss
 
 ## The Box Model
 
-Each elements content is in a rectangular box. CSS leverages **the box model** to control layout and design. An HTML element is comprised of its content and the padding, borders, and margins surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane.
+Each element's content is in a rectangular box. CSS leverages **the box model** to control layout and design. An HTML element is comprised of its content and the padding, borders, and margins surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane.
 
 This diagram can be found in the CSS Dev Tools and the same color coding is used when we hover over elements in the browser with the inspector selected.
 
@@ -157,9 +157,6 @@ You will have one hour to work on `iteration 1` of [this activity](https://githu
 - What questions do you still have about CSS?
 
 </section>
-
-Next week we will learn how to create layouts using the CSS display property!
-
 
 ## Additional Resources
 
