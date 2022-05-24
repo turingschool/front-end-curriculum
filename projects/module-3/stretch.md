@@ -200,7 +200,7 @@ Your instructors will do a stand-up meeting in the mornings to see where the gro
 </section>
 
 <section class="answer">
-### Day 4
+### Day 3
 
 * In a DM with both instructors, send us the link to a recent PR
 * Choose a PR that is related to your Stretch Tech, and use the PR description to fill us in on your learning.
@@ -220,7 +220,7 @@ Your instructors will do a formal check-in with your group. At this check-in, in
 </section>
 
 <section class="answer">
-### Day 7 (10 AM MT)
+### Day 6 (9:30 AM MT)
 
 Share your app progress with the class for Show and Tell! Be prepared to tell the story of what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes (shoot for 5 minutes).
 
