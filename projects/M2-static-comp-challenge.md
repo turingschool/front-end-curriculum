@@ -16,7 +16,7 @@ We have not provided you with any assets, nor native files. You will have to sou
   - Basic site setup with `index.html` and `styles.css`
   - Create a repo on github
   - Push your final work to [github pages](https://pages.github.com/)
-  - Submit your repo and GH pages links [here](https://docs.google.com/forms/d/14PYHQEw4MpoAvixC6q9_iz11jI2BPgFBTDyBylcS0lU/edit)
+  - Submit your repo and GH pages links [here](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit)
 
 ### Creative License
 You may NOT take liberties with the layout, but your creative license includes:
