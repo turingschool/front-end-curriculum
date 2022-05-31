@@ -97,8 +97,8 @@ The expectation for Mod 2 is that you will avoid using `async/await`.  We know `
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
-| Get all users |`http://localhost:3001/api/v1/users`| GET  | none | An array containing all users |
-| Get all sleep data |`	http://localhost:3001/api/v1/sleep` | GET | none | An array containing all sleep datas |
+| Get all users | `http://localhost:3001/api/v1/users` | GET  | none | An array containing all users |
+| Get all sleep data | `http://localhost:3001/api/v1/sleep` | GET | none | An array containing all sleep datas |
 | Get all activity data | `http://localhost:3001/api/v1/activity` | GET | none | An array containing all activities |
 | Get all hydration data | `http://localhost:3001/api/v1/hydration` |GET | none | An array containing all hydration data |
 | Add A User sleep data |`http://localhost:3001/api/v1/sleep`| POST | `{ userID: <number>, date: <string> , hoursSlept: <number> , sleepQuality:<number> }` | `{ userID: #, date: "some dates ex("12/12/2020")" , hoursSlept: # , sleepQuality: # }`|
