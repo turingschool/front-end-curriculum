@@ -21,7 +21,7 @@ tags: html, ARIA, accessibility
 <section class="call-to-action">
 ## Warm Up
 
-Let's review from the [Intro to Accessibility Lesson](https://frontend.turing.io/lessons/module-2/intro-to-accessibility.html){:target='blank'}
+Let's review from the [Intro to Accessibility Lesson](https://frontend.turing.edu/lessons/module-2/intro-to-accessibility.html){:target='blank'}
 
 In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1LXXq44uKw42UY8fvbXB4uybsh9D_-kKYkYkMHcg5q5c/edit?usp=sharing){:target='blank'}
 
