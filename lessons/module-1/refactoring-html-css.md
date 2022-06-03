@@ -6,7 +6,7 @@ tags: html, css, refacoring
 
 ## Learning Goals
 
-* Understand the importance of consistent formatting and convention in a code base
+* Justify the importance of consistent formatting and convention in a code base
 * Create a checklist to ensure that our HTML and CSS code is accessible for our users and other developers
 
 ## Vocabulary
@@ -32,49 +32,34 @@ Looking at the definition of refactoring above, why do you think refactoring cod
 </section>
 
 <section class="answer">
+
 ### HTML Rubric
+✅On Track✅
+- Crafts markup according to the Turing HTML style guide
+- Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly
+- Application uses an appropriate amount of HTML semantic elements. If <div> or <span> elements are used, they are only for styling purposes.
 
-* **4:**
+✨WOW✨ can look like:
 
-  - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes.
-  - Application fully implements HTML that is accessible for individuals with visual disabilities.
-
-* **3:**
-
-  - Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should use camelCase and be used sparingly.
-
-* **2:**
-
-  - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). Semantic elements like `<button>`, `<li>`, etc. are used instead of `<div>` or `<span>`. If `<div>` or `<span` elements are used, they are only for styling purposes.
-
-* **1:**
-
-  - Style and syntax meets the criteria of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html).
+- Developers use BEM, SMACCS, or another set of naming conventions for classes. Note: If going this route, document it in your README and let your project manager know which naming convention will be used.
+- Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using the Chrome Extenstion WAVE audit tool, and 0 errors & 0 contrast errors are expected.
 </section>
 
 <section class="answer">
+
 ### CSS Rubric
 
-* **4:**
+✅On Track✅
+- Crafts CSS according to the Turing CSS style guide
+- Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together.
+- CSS includes several examples of using a class to apply a styling rule block to multiple elements.
+- The design of the page is cohesive and ensures an intuitive user experience. Any user could navigate the application without any guidance from the developer.
 
-  - CSS is DRY, utilizing classes/rules to cut down on repetitive styles.
-  - Microinteractions such as hover states and animations have been thoughtfully added to improve the user experience.
-  - Design is responsive across small, medium and large breakpoints.
+✨WOW✨ can look like:
 
-* **3:**
-
-  - CSS includes several examples of using a class to apply a styling rule block to multiple elements.
-  - The design of the page is cohesive and ensures an intuitive user experience. Any user could navigate the application without any guidance from the developer.
-
-* **2:**
-
-  - Developer makes attempts to write DRY CSS by having at least 1 example of using a class to apply a styling rule block to multiple elements.
-  - There is no use of the `!important` tag. One exception may be for a `.hidden` class.
-  - The design of the page does not match the overall layout provided in the comp.
-
-* **1:**
-
-  - Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/css).
+- CSS is DRY, utilizing classes/rules to cut down on repetitive styles.
+- Micro-interactions such as hover states and animations have been thoughtfully added to improve the user experience.
+- Design is responsive across small, medium and large breakpoints.
 </section>
 
 ## Group Discussion
