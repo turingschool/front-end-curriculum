@@ -34,7 +34,7 @@ Looking at the definition of refactoring above, why do you think refactoring cod
 <section class="answer">
 
 ### HTML Rubric
-✅On Track✅
+✅On Track✅ can look like:
 - Crafts markup according to the Turing HTML style guide
 - Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly
 - Application uses an appropriate amount of HTML semantic elements. If <div> or <span> elements are used, they are only for styling purposes.
@@ -49,7 +49,7 @@ Looking at the definition of refactoring above, why do you think refactoring cod
 
 ### CSS Rubric
 
-✅On Track✅
+✅On Track✅ can look like:
 - Crafts CSS according to the Turing CSS style guide
 - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together.
 - CSS includes several examples of using a class to apply a styling rule block to multiple elements.
