@@ -156,7 +156,7 @@ Here is what the final score means in terms of completing the module:
 <section class="note">
 ### Note about the below criteria
 
-Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide you as you develop this project and showcase your learning.
+Competency & understanding of these concepts can be demonstrated in many ways. **With the exception of the functionality expectations, the following examples are not checklists to complete!** They are illustrations to guide you as you develop this project and showcase your learning.
 </section>
 
 ---
