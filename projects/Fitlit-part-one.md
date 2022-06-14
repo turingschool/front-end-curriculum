@@ -101,7 +101,8 @@ Don't get too caught up with polishing your dashboard too early. You'll want to 
 <section class="note">
 
 ### Note
-For this dataset, when "today" is referenced in iterations, it is the last date in the data. The latest week is the most recent 7 days in the data.
+For this dataset, when "today" is referenced in iterations, it is the last date in the data. The latest week is the most recent 7 days in the data (even if they aren't consecutive).   
+- You should not be hardcoding the date.  You should be using code to find the last (most recent) date in the dataset for the current user, using that date as "today", and displaying data based on that date. Not that different users may have a different date as their most recent date - once you are dynamically pulling this date from the data, it shouldn't matter that it changes for different users.
 </section>
 
 <section class="note">
@@ -147,7 +148,7 @@ new User(userData);
 #### Dashboard
 Use the `scripts.js` file to add information to the DOM. This JS file should call methods from your classes to retrieve information. There should not be any DOM manipulation within the _User_ or _UserRepository_ class files.
 
-To develop this dashboard, first choose a user at random - someone with a randomly generated name that speaks to you. On the dashboard for a user:
+To develop this dashboard, you should randomly generate a user. On the dashboard for the user:
 
 * Create an info card on the dashboard with all of user's info on the page
 * Display their first name somewhere prominently on the page to welcome them

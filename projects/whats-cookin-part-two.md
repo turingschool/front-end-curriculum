@@ -177,7 +177,7 @@ In addition to your refactoring, you also want to make sure the application is f
 ### Accessibility
 * 4: Has an audit score of 100% and has gone above and beyond accessibility requirements (see extensions).
 * 3: All accessibility areas have been considered and tested. An accessibility audit with a score of at least 95%.  
-* 2: One accessibility area has not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML.
+* 2: One accessibility area has not been tested or considered. This may be: an accessibility audit with a score of 94% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML.
 * 1: Two or more accessibility areas have not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML.
 
 ### JavaScript Refactoring
