@@ -76,8 +76,15 @@ Don't POST yet! At this point, this data does not need to persist between page r
 Use the data you're already storing in `gamesPlayed`!
 </section>
 
+### Iteration 4 - Iterator Refactoring
+
+You've probably noticed quite a few for loops in this code. Ugh, that is SO last inning! Refactor those for loops using the array prototype methods you've been learning.
+</section>
+
 <section class="answer">
-### Iteration 4 - POST Game Stats (🌶 spicy!)
+
+<section class="answer">
+### Iteration 5 - POST Game Stats (🌶 spicy!)
 Now let's impletment a POST so that the game stats persist even when the application is closed or refreshed. Update the codebase so that you are POSTing the game stats and then GETting the stats from the server. You should be able to refresh the app and see the stats persist. [You'll use the same backend repo as iteration 2.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.  
 
 #### 💡 Helpful Tip
@@ -88,12 +95,7 @@ If you need a refresher on POSTing, review [the POST lesson](https://frontend.tu
 </section>
 
 <section class="answer">
-### Iteration 5 - Iterator Refactoring
 
-You've probably noticed quite a few for loops in this code. Ugh, that is SO last inning! Refactor those for loops using the array prototype methods you've been learning.
-</section>
-
-<section class="answer">
 ### Iteration 6 - Choose Your Own Adventure (extension)
 You can choose whatever feature you'd like to add to this application. We've listed some ideas below, but feel free to think outside of the box here! Think about what you need more practice with, and let that determine your next move.
 - Refactor the codebase to use a `Guess` and `Game` class
