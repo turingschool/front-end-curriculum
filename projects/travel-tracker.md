@@ -69,7 +69,7 @@ Below are all the endpoints set up for this project. You may not use all of them
 
 **As a traveler:**
 - I should see a dashboard page that shows me:
-    - All of my trips (past, present, upcoming and pending)
+    - All of my trips (past, upcoming and pending)
     - Total amount I have spent on trips this year. This should be calculated from the trips data and include a travel agent's 10% fee
 
 <section class="note">
