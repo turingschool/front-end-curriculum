@@ -76,12 +76,12 @@ Don't POST yet! At this point, this data does not need to persist between page r
 Use the data you're already storing in `gamesPlayed`!
 </section>
 
+<section class="answer">
 ### Iteration 4 - Iterator Refactoring
 
 You've probably noticed quite a few for loops in this code. Ugh, that is SO last inning! Refactor those for loops using the array prototype methods you've been learning.
 </section>
 
-<section class="answer">
 
 <section class="answer">
 ### Iteration 5 - POST Game Stats (🌶 spicy!)
