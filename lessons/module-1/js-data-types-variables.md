@@ -14,9 +14,9 @@ Since this is your first mod 1 lesson, let's go over some general classroom expe
 
 ## Learning Goals
 
-* Be able to list the primitive data types used in JavaScript
+* List the primitive data types used in JavaScript
 * Create and use variables to store values
-* Be able to add variables to strings (concatenation and interpolation)
+* Add variables to strings (concatenation and interpolation)
 
 ## Vocabulary
 
