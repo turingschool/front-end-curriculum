@@ -53,15 +53,16 @@ To open the console in Chrome, either:
 
 There are different data types in JavaScript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
 
-Javascript has six primitive data types:
+Javascript has seven primitive data types:
 - Boolean
 - `undefined`
 - `null`
 - Number
 - String
 - Symbol (new in ECMAScript 6; we won't focus on this in Mod 1)
+- BigInt (new in ECMAScript 2020; you don't need to know this at this time)
 
-**Pro Tip**: Remember these with the acronym _BUNNSS_
+**Pro Tip**: Remember these with the acronym _BUNNSS_ (just ignore BigInt for now)
 
 <section class="call-to-action">
 ### Data Types Jigsaw
