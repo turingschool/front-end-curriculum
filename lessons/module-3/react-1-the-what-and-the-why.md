@@ -21,12 +21,12 @@ module: 3
 
 - `framework` A software framework provides a standard way to build and deploy applications. It is a universal, reusable software environment that provides particular functionality as part of a larger software platform to facilitate development of software applications, products and solutions
 - `Virtual DOM` An in-memory object that represents a DOM structure and can be manipulated with JavaScript before updating the real DOM
-- `JSX` A mix of JavaScript and XML that facilitates rendering the appropriate HTML Components: standalone, independent parts of an application that are responsible for handling only a single UI element
+- `JSX` A mix of JavaScript and XML that facilitates rendering the appropriate HTML
 - `Components` Components are standalone, independent parts of an application that are responsible for handling only a single UI element
 - `Functional components` Functional Components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing
-- `Class Components` Class components are ES6 classes that extend an abstract ‘Component’ class, given to us by default by React. They typicall keep track of some sort of application data
-- `Props` This is shorthand for properties.  Props is an object that is given from it's parent component down to the child functional/class component.  Props should remain immutable
-- `State` State holds data that represents the actual state of an application.  State can be changed and mutated through user interactions
+- `Class Components` Class components are ES6 classes that extend an abstract ‘Component’ class, given to us by default by React. They typicaly keep track of some sort of application data
+- `Props` This is shorthand for properties. Props is an object that is given from its parent component down to the child functional/class component. Props should remain immutable
+- `State` State holds data that represents the actual state of an application. State can be changed and mutated through user interactions
 
 <section class="call-to-action">
 ## What do we already know?
@@ -195,7 +195,7 @@ When we pass props down to a child component, it comes through as a simple JavaS
 <section class="call-to-action">
 ### Your Turn
 
-Imagine if we have 50 different grocery items.  That is going to make our code look messy if we have to write the GroceryItem component 50 times.  How could we refactor this using an array of data and the `.map()` array prototype method?
+Imagine if we have 50 different grocery items. That is going to make our code look messy if we have to write the GroceryItem component 50 times. How could we refactor this using an array of data and the `.map()` array prototype method?
 </section>
 
 ### State
