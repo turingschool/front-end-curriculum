@@ -14,16 +14,16 @@ module: 3
 * Use JSX
 
 ## Before you get started...
-You will complete this lesson on your own. You have lots of time in the calendar over the next two days to work through this lesson. Read each section carefully and completely. Moving quickly through this lesson is **not** the goal. You should move through the lesson at a pace that allows you to take solid notes and fully understand the code you are writing. We will provide lots of code blocks for you, which means you *could* simply copy and paste the code and call it a day. Doing this will only hurt you in the end, as you'll be missing out on a lot, a lot, a lot of learning.    
+You will complete this lesson on your own. You have lots of time in the calendar over the next two days to work through this lesson. Read each section carefully and completely. Moving quickly through this lesson is **not** the goal. You should move through the lesson at a pace that allows you to take solid notes and fully understand the code you are writing. We will provide lots of code blocks for you, which means you *could* simply copy and paste the code and call it a day. Doing this will only hurt you in the end, as you'll be missing out on a lot, a lot, a lot of learning.
 
-On Wednesday, your instructors will lead a review session where we will cover the major themes and key points from this lesson. As you are working through it, please write down any questions that pop up for you. We will give lots of time for y'all to ask these questions on Wednesday.  
+On Wednesday, your instructors will lead a review session where we will cover the major themes and key points from this lesson. As you are working through it, please write down any questions that pop up for you. We will give lots of time for y'all to ask these questions on Wednesday.
 
-Can't wait until Wednesday? Come to office hours! We will be hosting office hours on Tuesday to help you move past any major blockers. Show up any time to ask your questions! If a major blocker pops up outside of office hours, post your question in the cohort slack channel.  
+Can't wait until Wednesday? Come to office hours! We will be hosting office hours on Tuesday to help you move past any major blockers. Show up any time to ask your questions! If a major blocker pops up outside of office hours, post your question in the cohort slack channel.
 
 Your goal should be to complete this entire lesson by Wednesday morning. Please keep your instructors in the loop if you find that you're not on track to finish on time.
 
 ## What You're Building
-Here is a peak at what you're going to build during this lesson:  
+Here is a peak at what you're going to build during this lesson:
 
 ![ideabox preview](https://media.giphy.com/media/MHPLTw4hmBOpaSteSc/giphy.gif)
 
@@ -96,7 +96,7 @@ Inside that directory, you can run several commands:
     Removes this tool and copies build dependencies, configuration files
     and scripts into the app directory. If you do this, you can’t go back!
 
-We suggest that you begin by typing:
+**We suggest that you begin by typing:**
 
   cd ideabox
   npm start
@@ -143,13 +143,13 @@ Let's figure out what should be a component in our app.
 
 ![IdeaBox wireframe](https://i.imgur.com/2bSfaXK.jpg)
 
-- We have an App component. That should probably hold onto our list of ideas.  
+- We have an App component. That should probably hold onto our list of ideas.
 
-- We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.  
+- We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.
 
-- We need a Card component to display our ideas.  
+- We need a Card component to display our ideas.
 
-- We can create an Ideas component to hold all of our Cards.  
+- We can create an Ideas component to hold all of our Cards.
 
 ![IdeaBox wireframe with component boxes](https://i.imgur.com/xWggABx.jpg)
 
@@ -208,9 +208,9 @@ Let's take a minute and examine that return statement in our `render` method.
 <section class="note">
 ### Understanding JSX
 
-It looks like our `render` method is returning some HTML! Very easy to read, right?  
+It looks like our `render` method is returning some HTML! Very easy to read, right?
 
-What we're actually writing here is known as JSX. It's an abstraction that makes React easier to write!  
+What we're actually writing here is known as JSX. It's an abstraction that makes React easier to write!
 
 JSX is "JavaScript and XML" - it's a handy mashup language that allows us to write HTML with a bit of JavaScript injected in. You can read more on it [here](https://reactjs.org/docs/introducing-jsx.html) (and a bit more in depth [here](https://reactjs.org/docs/jsx-in-depth.html)). But in the meantime, we'll see how JSX makes our lives easier throughout this lesson!
 </section>
@@ -241,7 +241,7 @@ If we think about this logically, it makes sense! The method `render` is just a 
 Since this is our App component, let's wrap everything in a `<main>` tag!
 
 <section class="note">
-### NOTE  
+### NOTE
 
 If you're just looking for an unflavored container for your elements (aka they are not semantically related to one another, and the best element to use would be a `<div>`), then instead, use a `<React.Fragment>`! You can read more about Fragments [here](https://reactjs.org/docs/fragments.html).
 </section>
@@ -344,7 +344,7 @@ We already said that we want to have a container for all of our idea Cards. So l
 <section class="note">
 ### Note
 
-You may have noticed that our App component was capitalized. And now our Ideas component is capitalized, too. Why do you think this is? What did you learn about the naming conventions for JS classes in Mod 2?  
+You may have noticed that our App component was capitalized. And now our Ideas component is capitalized, too. Why do you think this is? What did you learn about the naming conventions for JS classes in Mod 2?
 
 When an element starts with a lowercase letter, it refers to (and will be treated as) a built-in component like `<div>` or `<span>`, which can lead to silent errors or unexpected side-effects. It's also import to note that capitalizing class names makes for good developer empathy. Now, at a glance, a dev knows they are dealing with a class.
 </section>
@@ -491,7 +491,7 @@ We can destructure props ON THE WAY IN. Whoa! It's accomplishing the same thing 
 
 
 <section class="note">
-### State vs. Props  
+### State vs. Props
 
 Understanding the difference between props and state can be tricky. Read through the top three answers on this [stackoverflow question](https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react), and go through any links or resources provided in the answers. Just because one answer has the most upvotes, doesn't mean it's going to be the one that makes everything click for you. Take your time reading through the explanations here.
 </section>
@@ -644,7 +644,7 @@ I created a button to delete the Card, but we'll get to that later. For now, let
 Before me move on, lets tighten up the UX here a bit.
 
 <section class="call-to-action">
-### Explore  
+### Explore
 
 * Try making App.state.ideas an empty array.
 * What happens? Why?
@@ -778,7 +778,12 @@ class Form extends Component {
 export default Form;
 ```
 
-But we need to write some functions. Let's start by making sure that when we type into our inputs, they update the Form's state.
+But we need to write some functions. Let's start by making sure that when we type into our inputs, they update the Form's state. Don't forget to import Form.js in App.js by adding the following:
+```js
+import Form from './Form';
+```
+
+
 
 ```js
 // Form.js
@@ -982,6 +987,10 @@ export default App;
 Second, pass the `deleteIdea` function to each Card that the Ideas component creates:
 
 ```js
+//******NOTE TO EDITOR: remove "Fragment" below
+
+// Ideas.js
+
 import React, { Fragment } from 'react';
 import Card from './Card';
 import './Ideas.css';
@@ -1013,6 +1022,8 @@ export default Ideas;
 Third, create an event listener on the Card button:
 
 ```js
+// Card.js
+
 import React from 'react';
 import './Card.css';
 
