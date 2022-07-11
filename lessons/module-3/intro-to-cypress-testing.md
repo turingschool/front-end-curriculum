@@ -106,7 +106,7 @@ Let's experiment ourselves and see how great Cypress is firsthand.  Using the ap
 
 * First setup the FE with Cypress following the instructions [here](https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing){:target='blank'}
 * Although there are multiple ways of opening up Cypress, setup a `script` in your `package.json` to open up Cypress.
-* Open Cypress with the script you added and take note of the new window opened.  Also take a look at some of the new directories and files added to your application.
+* Open Cypress with the script you added and take note of the new window opened. A window will appear with two testing options.  For now, select **E2E Testing**.  There are some config options on the next window...but for now just select **Continue** at the bottom.  Then selector your browser (*Chrome*) and you'll be set to go.  Having completed these steps, you shoult notice some new directories and files added to your application.
 </section>
 
 <section class="answer">
@@ -123,7 +123,7 @@ Let's experiment ourselves and see how great Cypress is firsthand.  Using the ap
 ```js
 {
   "scripts": {
-    "cypress": "./node_modules/.bin/cypress open"
+    "cypress": "cypress open"
   }
 }
 ```
@@ -133,22 +133,28 @@ Let's experiment ourselves and see how great Cypress is firsthand.  Using the ap
 
 ## Writing our first test!
 
-You might be overwhelmed by the number of directories & files added.  For now, let's focus on the newly added `integration` directory living inside of the `Cypress` directory.  **Delete the `examples` directory since these are just examples of the various ways you can test.**
+<section class="call-to-action">
+### Creating some test files
+
+You'll notice that there are a few directories including `downloads`, `fixtures`, and `support` inside of a `cypress` directory.  For now, don't worry about these directories and go back to the main window on Cypress and follow the [instructions here](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test#What-you-ll-learn){:target="_blank"} for adding your first test file.
 
 As we consider what we will be testing, let's consider a few ways to set up our files.
 
-We could make one giant file and test absolutely everything there: `feedback_loop_spec.js`
+We could make one giant file and test absolutely everything there: `feedback_loop_spec.cy.js`.  But it's probably more maintainable to group up our related user flows. 
 
-But it's probably more maintainable to group up our related user flows. 
+Create a few files using the UI in the `e2e` directory (located inside the `cypress` directory):
+- `cypress/e2e/login_spec.cy.js`
+- `cypress/e2e/dashboard_spec.cy.js`
+- `cypress/e2e/form_spec.cy.js`
+</section>
 
-Let's create a few files in the `integration` directory (located inside the `cypress` directory):
-- `login_spec.js`
-- `dashboard_spec.js`
-- `form_spec.js`
+<section class="note">
+### Note
 
 Notice that each of these describes actions tied to our data/server/network requests. When viewing feedback from coworkers, there are several different user flows. But they all involve GETTING feedback data from the back end.
 
 Figuring out how to group user flows/stories can be tricky, and ultimately there are no hard-and-fast rules about how to do so. Over time, you'll develop a sense of what to put together, just like how you are learning what to break out into a React component and what to leave as is. And, of course, these conventions change from team to team. 
+</section>
 
 Inside `login_spec.js`, we'll first write a dummy test to make sure things are hooked up correctly.
 
@@ -211,7 +217,7 @@ describe('Feedback Loop login', () => {
     cy.visit('http://localhost:3000')
       .contains('Feedback Loop')
       .get('form')
-        .contains('Please Sign In');
+      .contains('Please Sign In');
   });
 });
 ```
@@ -383,8 +389,8 @@ To learn about creating a custom login command that does not have to go through 
 </section>
 
 Inside the `cypress` directory, you'll find another directory called `support`. Inside that are two files:
-- `index.js`
 - `commands.js`
+- `e2e.js`
 
 Before we replace the commented out code in `commands.js`, let's take a look at the `App.js` file and see what happens when we click our login button.
 
@@ -529,7 +535,7 @@ describe('Dashboard view', () => {
     cy.login();
   })
 
-  it('should render the title', () => {
+  it('should render the title, feedback, and teammates', () => {
     cy.contains('h1', 'Feedback Loop');
     cy.contains('.feedback', 'Scott Ertmer')
     cy.contains('.feedback', 'Your feedback game is TOO strong');
