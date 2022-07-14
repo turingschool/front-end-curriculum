@@ -12,7 +12,7 @@ By the end of this lesson, you will:
 * Know what CRUD is
 * Know what an API is
 * Know what REST is and what some alternatives are
-* Understand a little more about the language and terminology of back-end developers
+
 
 ## Vocab
 
@@ -58,7 +58,7 @@ Take 5 minutes to think about API endpoints that you've used before. How were th
 
 ## RESTful API design
 
-During your time as a frontend developer, you've already been hitting RESTful endpoints. What is rest exactly?
+During your time as a frontend developer, you've already been hitting RESTful endpoints. What is REST exactly?
 
 REST stands for representational state transfer. This means that web resources communicate using a set of stateless, uniform operations.
 
