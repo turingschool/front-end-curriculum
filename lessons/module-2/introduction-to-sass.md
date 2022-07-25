@@ -34,9 +34,7 @@ Sass was originally part of another preprocessor called Haml. It used no curly b
 
 <img width="50%" src="../../assets/images/lessons/sass/sass-syntax.png" alt="diagram of sass syntax code"/>
 
-With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now. 
-
-Check out this [Sass Codepen Example](https://codepen.io/hannahhch/pen/eYmdpLj){:target="_blank"} to see this classic Sass syntax in action.  
+With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now.   
 
 Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in. 
 
