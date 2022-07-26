@@ -1,5 +1,8 @@
 ---
-title: READMEs: The Why and the What
+title: "READMEs: The What and The Why"
+length: 120
+tags: readme, professionalism
+module: 3
 ---
 
 ## Learning Goals
