@@ -22,6 +22,7 @@ title: READMEs: The Why and the What
 
 ## The Why
 
+READMEs are SO important! We often think of them as an afterthought
 - the project doesn't matter - the learning, the experience does
 - first impression of the work you've done
 - helps people know how to see your project (you have write it in a way that non-technical folks can access)
