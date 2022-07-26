@@ -68,8 +68,8 @@ Here are some that we came up with:
 ## The What
 
 So what should we include in a README? Well, it's not a one-size-fits-all thing. Depending on your project, what you're the most proud of, etc., you may want to highlight different things in your README. Here are some things we recommend including:
-- **Set up instructions**
-- **Deploy link** (if applicable)
+- **Set Up Instructions**
+- **Deploy Link** (if applicable)
 - **Abstract/Elevator Pitch** (what problem is app trying to solve?)
 - **Contributors** (including who owned what pieces?)
 - **Links to Wireframe/Planning docs** (if applicable)
