@@ -22,14 +22,13 @@ title: READMEs: The Why and the What
 
 ## The Why
 
-READMEs are SO important! We often think of them as an afterthought
-- the project doesn't matter - the learning, the experience does
-- first impression of the work you've done
-- helps people know how to see your project (you have write it in a way that non-technical folks can access)
-- sometimes employers only scan readme, they don't open the project
-- ways to document your experience (gives context to person viewing readme)
-- reminds you
-- taken cumulatively, it documents your growth
+We often think of READMEs as an afterthought in our projects, but they are SO important! Here are some ways that READMEs matter to you and your eventual job hunt:
+- To an employer, your README is often the first impression of the work you've done
+- Sometimes employers only scan the README and don't even open the project
+- Your README is how someone knows how to access your project (It should be written in a way that non-technical people can understand)
+- The README documents your experience and process to an employer (which is way more important than the project itself!)
+- Looking back at past READMEs is a great way to remind yourself of all you've done and prepare for interviews
+- **Taken cumulatively, your READMEs document your technical and professional growth**
 
 <section class="call-to-action">
   <h3>Judging READMEs</h3>
@@ -47,12 +46,13 @@ READMEs are SO important! We often think of them as an afterthought
 </section>
 
 <section class="answer">
-### Take Aways
+### Let's share some takeaways!
 
-- Too many images
-- Not enough content
-- Unclear instructions
-
+Here are some that we came up with:
+- Too many images can make it too chaotic
+- When information isn't shared in a logical order, it's hard to follow
+- Deploy links and install instructions should be one of the first things you see
+- Lacking information can make it impossible to open the application or hit the endpoints
 </section>
 
 <section class="call-to-action">
@@ -67,18 +67,20 @@ READMEs are SO important! We often think of them as an afterthought
 
 ## The What
 
-- set up instructions
-- deploy link (if applicable)
-- abstract/elevator pitch
-- contributors (who did what - what did YOU contribute?)
-- wireframe/comp link (only if strong)
-- tech stack (include testing + accessibility)
-- context (time, # of people, mod, learning goals, what problem is app trying to solve)
-- wins/challenges
-- future additions (these should be issues as well)
+So what should we include in a README? Well, it's not a one-size-fits-all thing. Depending on your project, what you're the most proud of, etc., you may want to highlight different things in your README. Here are some things we recommend including:
+- Set up instructions
+- Deploy link (if applicable)
+- Abstract/Elevator Pitch (what problem is app trying to solve?)
+- Contributors (including who owned what pieces?)
+- Links to Wireframe/Planning docs (if applicable)
+- Tech Stack (including testing + accessibility)
+- Context (time allotted, # of people, mod, learning goals)
+- Wins/Challenges (personal or team)
+- Future Additions (these should be entered as Issues and on your Project Board as well)
 - ONE gif of the highest impact feature of your app
+- You can add comments in your README for things you want to document but don't want shown (just remember these are still viewable to everyone in the raw file)
 
-- not one size fits all, think about what you want someone to know AND what you want to remember about this project
+Obviously including all of this would be a bit much. Think about - What do you want someone to know about this project AND what do you want to remember about this project?
 
 <section class="call-to-action">
   <h3>Updating a README</h3>
