@@ -123,6 +123,29 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```
 </section>
 
+## Modular File Structure
+
+We've talked about React being modular many times, but what does it look like to have our code and project files be modular?
+
+One small example is to keep a modular file structure. This means that any and all files related to a particular component live in the same directory! This is pretty common in React projects, so we recommend setting up your file strucure like this each time you build a new project. Here's an example :)
+
+src 📁
+- components 📁
+    - App 📁
+        - App.js
+        - App.css
+        - App.test.js
+    - Form 📁
+        - Form.js
+        - Form.css
+        - Form.test.js
+    - Ideas 📁
+        - Ideas.js
+        - Ideas.css
+        - Ideas.test.js
+    - Etc
+
+
 ## Ideabox
 
 Let's get rid of all the boilerplate inside the `App.js` file. Yep. Just ERASE THAT CODE!
