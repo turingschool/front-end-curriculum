@@ -32,8 +32,8 @@ the lifecycle of the component.
 
 ### Some Important Rules
 
-* **ONLY CALL HOOKS FROM REACT FUNCTIONS** (THEY DON'T WORK INSIDE CLASSES & THEY DON'T WORK OUTSIDE OF REACT)
-* **DON'T CALL HOOKS INSIDE LOOPS, CONDITIONS, OR NESTED FUNCTIONS** 
+* **Only call hooks from within react functions** (They don't work inside of class-based components and they don't work outside of React)
+* **Don't call hooks inside of loops, conditions, or nested functions** 
 
 ### Benefits of Hooks
 
@@ -57,7 +57,7 @@ going any further please do the following:
 
 ### State Hook
 
-We call this hook inside a function component to add some local state to it. React will preserve this state between re-renders. `useState` returns a pair: the current state value an a function that lets you update it. `useState` takes 1 argument - the initial state. This value is only used during the first render.
+We call this hook inside a functional component to add some local state to it. React will preserve this state between re-renders. `useState` returns a pair: the current state value and a function that lets you update it. `useState` takes 1 argument - the initial state. This value is only used during the first render.
 
 What if your component needs more than 1 piece of state? No worries... you can use the state hook multiple times in a single component. 
 
