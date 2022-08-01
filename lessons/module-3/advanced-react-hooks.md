@@ -73,7 +73,7 @@ Here's how we can provide that context to everything inside of App, and toggle
 the theme based on the click of a button. Note the import of ThemeContext, the
 new call to useState, the toggleTheme function, and the updates to the return.
 
-```javascript
+```jsx
 // App.js
 
 import React, { useState, useEffect } from 'react';
@@ -135,7 +135,7 @@ for, and returns the value that it finds for that context.
 Here, we're getting the theme in our Card component, and then passing that theme
 as a new className to our Card div.
 
-```javascript
+```jsx
 // Card.js
 
 import React, { useContext } from 'react';
@@ -292,10 +292,10 @@ In the code below, we've replaced our `useState` for theme with a Reducer, and
 have updated the `toggleTheme` method to make use of our `dispatch` method. All
 the logic for how the theme should be updated now lives in the reducer.
 
-```javascript
+```jsx
 // App.js
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import Ideas from './Ideas';
 import Form from './Form';
 import ThemeContext from './ThemeContext';
@@ -377,7 +377,7 @@ will need to:
 <section class="answer">
 ### Here's how to do it, don't look until you try!!
 
-```javascript
+```jsx
 import React, { useState, useEffect, useReducer } from 'react';
 import Ideas from './Ideas';
 import Form from './Form';
@@ -454,7 +454,7 @@ to build much larger applications while keeping them maintainable.
 
 Consider the following code example:
 
-```javascript
+```jsx
  import React, { useState, useEffect, useReducer } from 'react';
  import Ideas from './Ideas';
  import Form from './Form';
