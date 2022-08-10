@@ -55,7 +55,7 @@ When a win occurs
   - The dom updates to state how many wins the player has total
   - The game RESTARTS ITSELF after a brief pause, (long enough that the winner message can be read before resetting)
   - The player who didn’t begin the previous game now is the first player to go in the new game
-A draw can occur, in which case:
+- A draw can occur, in which case:
   - The top banner declares a draw
   - Neither player’s win count increases or decreases
   - The game restarts after a brief pause, with the opposite player beginning the game (just like when a game restarts after a player wins)
