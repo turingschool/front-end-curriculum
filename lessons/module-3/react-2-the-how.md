@@ -720,11 +720,11 @@ if (! this.state.ideas.length) {
 
 We want this logic to live inside of our `render()` method, so we can use curly braces to inject JS into our JSX. However, we need whatever is inside of our curlies to _evaluate_ to the HTML we want rendered, so we'll use some syntax like this:
 
-```
+```js
 // App.js
 
 render() {
-  <main className="App>
+  <main className="App">
     <h1>IdeaBox</h1>
     {!this.state.ideas.length && <h2>No ideas yet -- add some!</h2> }
     <Ideas ideas={this.state.ideas} />
