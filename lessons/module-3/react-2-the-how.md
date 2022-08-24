@@ -119,7 +119,12 @@ What happens if you:
 You'll also notice an `index.js` file. What is going on in there?
 
 ```js
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 ```
 </section>
 
@@ -152,7 +157,7 @@ Let's get rid of all the boilerplate inside the `App.js` file. Yep. Just ERASE T
 
 You'll notice that as soon as we save our changes, the browser re-renders. Look into the terminal, and you'll see another build kick off. This is because `create-react-app` gives us hot-reloading. Any time we make a change, the browser will update to show our changes.
 
-If we look at the browser now that we've deleted our `App.js` code, you'll see an error that reads:
+Look at the console in our dev tools now that we've deleted our `App.js` code, and you'll see an error that reads:
 
 "Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."
 
