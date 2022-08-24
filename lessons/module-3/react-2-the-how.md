@@ -724,11 +724,13 @@ We want this logic to live inside of our `render()` method, so we can use curly 
 // App.js
 
 render() {
+ return ( 
   <main className="App">
     <h1>IdeaBox</h1>
     {!this.state.ideas.length && <h2>No ideas yet -- add some!</h2> }
     <Ideas ideas={this.state.ideas} />
   </main>
+ )
 }
 
 ```
