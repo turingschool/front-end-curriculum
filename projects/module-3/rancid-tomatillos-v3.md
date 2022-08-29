@@ -151,11 +151,18 @@ The point of these code reviews is to get you familiar with common code review p
 
 ---
 
-### Iteration 4 - Refactoring with Router
+### Iteration 4 - Refactoring with Router, Testing with Cypress
 
-In the fourth iteration, we will be refactoring our application to use [Router](https://frontend.turing.edu/lessons/module-3/react-router-v5.html) instead of conditional rendering to change the view!
+In the fourth iteration, we will be testing with Cypress, and refactoring our application to use [Router](https://frontend.turing.edu/lessons/module-3/react-router-v5.html) instead of conditional rendering to change the view!
 
-So far the application has worked like a single page applicaiton. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes.
+For Cypress, add the following tests to start:
+
+- As a user, when I load the application, I can see the title of the application
+- As a user, when I load the application, I can see a collection of movies.
+- As a user, when I click on a movie, I'm shown additional details about that movie
+- Any other user stories you might have already should also be tested.
+
+So far the application has worked like a single page application. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes.
 
 To crete a better UX, we're going to be using [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) to conditionally render our views based on the URL.
 
