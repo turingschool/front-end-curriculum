@@ -43,7 +43,7 @@ Dates and deadlines to be aware of:
 - Wireframes
 - 3 design inspirations (Please include links and details on what you're trying to re-create).
 
-#### Monday, Week 3 - Project due at 9PM.
+#### Sunday, Week 3 - Project due at 9PM.
 
 - Please submit your Group project part one [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link){:target='blank'}
 
