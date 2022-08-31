@@ -245,7 +245,7 @@ Here are some ideas:
   - Create your own Express microservice to store user ratings for movies; build FE functionality to use and display that service
   - Create your own Express microservice to store user favorites; build FE functionality to use and display that service
   - Create your own Express microservice to store which movies the user has watched; build FE functionality to use and display that service
-  - Deploy your React app (to GitHub Pages or Heroku)
+  - Deploy your React app (to GitHub Pages or similar service)
 
 You are welcome to come up with your own ideas, too.
 </section>
