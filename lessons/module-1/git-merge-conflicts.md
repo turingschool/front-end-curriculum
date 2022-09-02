@@ -31,10 +31,10 @@ Sometimes you won't even be able to push the branch up to GitHub because you wil
   `error: failed to push some refs to github`  
 This is another situation where branches have gotten out of sync. You can use the same steps below to resolve. The only difference is that when you push the conflict-resolved changes up, you won't already have a PR open and will need to create one as usual.
 
-# Resolving Merge Conflicts
+## Resolving Merge Conflicts
 Merge conflicts can be resolved in the GitHub GUI (there on the GitHub web interface) or in your text editor.  Either option is fine.  However, as a developer, you might find it valuable to know how to resolve merge conflicts in your text editor.  When you get a job, who knows if your company will use GitHub, BitBucket or some other tool.  If you only know how to resolve merge conflicts on the GitHub GUI, that might be problematic.  For that reason, we encourage you to resolve merge conflicts in your text editor right from the start.
 
-## Steps to resolve using your text editor
+### Steps to resolve using your text editor
 When you run into the merge conflict on GitHub, go ahead and create the PR, then follow these steps in your text editor:  
   1. Checkout the `main` branch using `git checkout main`  
   1. Pull down the most up-to-date code from the remote repo's main branch (your "source of truth") using `git pull origin main`  
@@ -47,14 +47,14 @@ When you run into the merge conflict on GitHub, go ahead and create the PR, then
 
 GitHub offers instructions for how to resolve a merge conflict through the command line (using your text editor).  They are essentially the same steps as outlined above.  Test out these instructions when you encounter a merge conflict.  
 
-# Best practices to avoid merge conflicts
+## Best practices to avoid merge conflicts
 - Do your edits/work on branches.  Do not edit the main branch directly. Do not push to main.
   - If you accidentally start coding on main, don't worry!  You can create a new branch and it will bring those edits to the new branch.
 - Create pull requests and do thorough code review before merging them.
 - Always be sure to pull down the most up-to-date code from your remote repo's main branch before creating a new branch and starting to add/edit code yourself.
 - Communicate with your collaboration partners to ensure everyone knows who is working on what, and when.
 
-# Best practices when you encounter a merge conflict
+## Best practices when you encounter a merge conflict
 - Pause, breathe, remember this is a GOOD thing - chance for you to make sure everything merges exactly how you want it to.
 - Get in touch with your project team.  Especially in Mod 1, it's best to get everyone on the call together to make sure you are keeping the correct code and avoiding errors as you resolve the conflict.  Plus, you all need as much exposure and practice as possible when it comes to resolving merge conflicts.
 - Triple check your work, including the adjacent code that may not be directly highlighted as part of the conflict.  This is the time for extreme attention to detail.
