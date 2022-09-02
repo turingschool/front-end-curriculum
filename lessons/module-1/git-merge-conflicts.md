@@ -10,13 +10,25 @@ tags: git, github
 
 ## Merge Conflicts
 
+Watch [this merge conflict demo video](https://www.youtube.com/watch?v=j0MW7jSc25I) which walk through a merge conflict and how to resolve it. Then read through the key points which are outlined in the lesson content below.
+
 ### What are they and how do they happen?  
 Merge conflicts will happen to you at some point, and its important to learn how to resolve them successfully. A merge conflict happens when two branches change code in the same spot of a file and are attempted to be merged. Git isn't sure how to cleanly merge them, and needs our help to resolve the conflict.  
 
 Merge conflicts don't necessarily mean someone 'messed up'.  Sometimes two devs are working on code that has some overlap.  Thats ok!  Running into a merge conflict means you get to take the reins and be explicit about exactly what changes you want to keep.  This is a good safety net to have!  
 
-###When do they happen and what does it look like?
-You will usually run into a merge conflict when you push up a branch and create the PR on GitHub.
+### How will I know and what does it look like?
+You will usually run into a merge conflict when you push up a branch and create the PR on GitHub.  
+
+As soon as you start to create a PR in GitHub, you might see this red indicator stating "can't automatically merge".  But you can continue to create the PR.
+<img class="small" src="./assets/images/cant-automatically-merge.png">  
+
+After you've created the PR, you will notice that the "Merge pull request" button is greyed out instead of green.  GitHub will offer you options to resolve the conflict in the GitHub GUI, or instructions for how to resolve it in your text editor (recommended).
+<img class="small" src="./assets/images/merge-conflict-buttons.png">
+
+Sometimes you wont even be able to push the branch up to GitHub because you will encounter an error like this in your terminal when you try:  
+  `error: failed to push some refs to github`
+This is another situation where branches have gotten out of sync! You can use the same steps below to resolve. The only difference is that when you push the conflict-resolved changes up, you won't already have a PR open and will need to create one as usual.
 
 # Resolving Merge Conflicts
 Merge conflicts can be resolved in the GitHub GUI (there on the GitHub web interface) or in your text editor.  Either option is fine.  However, as a developer, you might find it valuable to know how to resolve merge conflicts in your text editor.  When you get a job, who knows if your company will use GitHub, BitBucket or some other tool.  If you only know how to resolve merge conflicts on the GitHub GUI, that might be problematic.  For that reason, we encourage you to resolve merge conflicts in your text editor right from the start.
@@ -32,41 +44,17 @@ When you run into the merge conflict on GitHub, go ahead and create the PR, then
 6) After resolving the conflict, stage and commit the file(s)  
 7) Push up the updated/conflict-resolved files using `git push origin yourFeatureBranchName`.  Those changes will go into the already-open PR which should then be able to be merged.
 
-- GitHub offers instructions on the GUI for how to resolve a merge conflict through the command line.  They are essentially the same steps as outlined above.  Test out these instructions when you encounter a merge conflict.  
-
-- To
+- GitHub offers instructions for how to resolve a merge conflict through the command line (using your text editor).  They are essentially the same steps as outlined above.  Test out these instructions when you encounter a merge conflict.  
 
 # Best practices to avoid merge conflicts
+- Do your edits/work on branches.  Do not edit the main branch directly. Do not push to main.
+  - If you accidentally start coding on main, dont worry!  You can create a new branch and it will bring those edits to the new branch.
+- Create pull requests and do thorough code review before merging them.
+- Always be sure to pull down the most up-to-date code from your remote repo's main branch before creating a new branch and starting to add/edit code yourself.
+- Communicate with your collaboration partners to ensure everyone knows who is working on what, and when.
 
-
-
-<section class="checks-for-understanding">
-
-### Instructions To Create a Merge Conflict
-
-##### Your goal is to create a pull request that says "Can't Automatically Merge when making the PR", if you get that error, proceed to the 'Resolving Merge Conflicts' section.
-
-##### You may also see an error that says something like "error: failed to push some refs to github" when you try to push code. This is another situation where branches have gotten out of sync! Proceed to the 'Resolving Merge Conflicts' section.
-
-* Partner A makes a new repository on GitHub, select the option to Add a README file so that your repository is initialized with a README.md file.
-* Partner A adds Partner B as collaborator on GitHub
-* Partner A clones that repo down
-* Partner B clones the repo, doesn't do anything else
-* Partner A adds a sentence on line 1 of the README
-* Partner A adds, commits, and pushes the changes to GitHub while on the main branch (Bad practice - we are doing this to trigger a merge conflict)
-* Partner B does NOT pull down the latest changes (Bad practice - we are doing this to trigger a merge conflict)
-* Partner B creates a new branch and checks it out
-* Partner B makes changes to line 1 of the README.md on their new branch
-* Partner B adds, commits, and pushes their changes to GitHub
-* Partner B creates a Pull Request on GitHub from their branch to main. You should see the warning "Can't Automatically Merge when making the PR. After making the PR, it should say "This branch has conflicts that must be resolved."
-* Partner B should share their screen with Partner A. Follow the steps below to resolve this conflict!
-* If you have time, swap tasks as partners so that each partner can experience creating a conflict and resolving it.
-
-</section>
-
-#### Resolving Merge conflicts
-
-
-
-#### Discussion Questions:
-- What are some steps you can do as a team to avoid merge conflicts? (Hint: review the steps we took earlier to create a merge conflict)
+# Best practices when you encounter a merge conflict
+- Pause, breath, remember this is a GOOD thing - chance for you to make sure everything merges exactly how you want it to.
+- Get in touch with your project team.  Especially in Mod 1, it's best to get everyone on the call together to make sure you are keeping the correct code and avoiding errors as you resolve the conflict.  Plus, you all need as much exposure and practice as possible when it comes to resolving merge conflicts.
+- Triple check your work, including the adjacent code that may not be directly highlighted as part of the conflict.  This is the time for extreme attention to detail.
+- Ask for help.  Use your classmates, mentors, etc.  Any extra set of eyes is helpful.
