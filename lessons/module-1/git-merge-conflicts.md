@@ -21,11 +21,11 @@ Merge conflicts don't necessarily mean someone 'messed up'.  Sometimes two devs 
 ### How will I know and what does it look like?
 You will usually run into a merge conflict when you push up a branch and create the PR on GitHub.  
 
-As soon as you start to create a PR in GitHub, you might see this red indicator stating "can't automatically merge".  But you can continue to create the PR anyways.
-<img class="small" src="../../assets/images/lessons/merge-conflicts/cant-automatically-merge.png">  
+As soon as you start to create a PR in GitHub, you might see this red indicator stating "can't automatically merge".  But you can continue to create the PR anyways.  
+<img src="../../assets/images/lessons/merge-conflicts/cant-automatically-merge.png">  
 
 After you've created the PR, you will notice that the "Merge pull request" button is greyed out instead of green.  GitHub will offer you options to resolve the conflict in the GitHub GUI, or instructions for how to resolve it with the command line and your text editor (recommended).
-<img class="small" src="../../assets/images/lessons/merge-conflicts/merge-conflict-buttons.png">
+<img src="../../assets/images/lessons/merge-conflicts/merge-conflict-buttons.png">
 
 Sometimes you won't even be able to push the branch up to GitHub because you will encounter an error like this in your terminal when you try:  
   `error: failed to push some refs to github`  
