@@ -36,14 +36,14 @@ Merge conflicts can be resolved in the GitHub GUI (there on the GitHub web inter
 
 ## Steps to resolve using your text editor
 When you run into the merge conflict on GitHub, go ahead and create the PR, then follow these steps in your text editor:  
-  1) Checkout the `main` branch using `git checkout main`  
-  2) Pull down the most up-to-date code from the remote repo's main branch (your "source of truth") using `git pull origin main`  
-  3) Checkout your feature branch using `git checkout yourFeatureBranchName`  
-  4) Bring the updated code from the main branch into your feature branch using `git merge main`  
+  1. Checkout the `main` branch using `git checkout main`  
+  1. Pull down the most up-to-date code from the remote repo's main branch (your "source of truth") using `git pull origin main`  
+  1. Checkout your feature branch using `git checkout yourFeatureBranchName`  
+  1. Bring the updated code from the main branch into your feature branch using `git merge main`  
     * You will likely run into the merge conflict at this point  
-  5) In your text editor, select exactly which lines of code you want to keep  
-  6) After resolving the conflict, stage and commit the file(s)  
-  7) Push up the updated/conflict-resolved files using `git push origin yourFeatureBranchName`.  Those changes will go into the already-open PR which should then be able to be merged.
+  1. In your text editor, select exactly which lines of code you want to keep  
+  1. After resolving the conflict, stage and commit the file(s)  
+  1. Push up the updated/conflict-resolved files using `git push origin yourFeatureBranchName`.  Those changes will go into the already-open PR which should then be able to be merged.
 
 GitHub offers instructions for how to resolve a merge conflict through the command line (using your text editor).  They are essentially the same steps as outlined above.  Test out these instructions when you encounter a merge conflict.  
 
