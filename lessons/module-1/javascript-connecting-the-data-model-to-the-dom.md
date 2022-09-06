@@ -16,6 +16,16 @@ tags: javascript, dom, data model
   think of it as a single source of truth for what should display on the page.
 - `DOM` The Document Object Model, the visual representation of our application.
 
+<div class="call-to-action">
+## Warm Up
+
+Open up [this codepen](https://codepen.io/kaylaewood/pen/KKRdVmE) and look through the code/functionality of the application. Then, talk through the following questions:
+
+- If we wanted to track how many sunny (or cloudy or rainy, etc.) days we had in a week, what about our code would make that difficult to do?  
+- How could we change our code so that tracking those stats would be easier? Note: Don't actually change the code, just think about it!  
+- 🌶 Spicy: If we wanted this data to persist (i.e. still be there after we close and reopen the page), what about our code would make that difficult to do?
+</div>
+
 ## Abstract
 
 As you've realized by now, it doesn't take very much code for a project to get
