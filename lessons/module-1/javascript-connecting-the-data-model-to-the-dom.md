@@ -237,6 +237,17 @@ Interested in learning more about data attributes? Check out [this article](http
 </section>
 
 <div class="call-to-action">
+## Revisiting the Warm Up
+
+Spend some time updating [this codepen](https://codepen.io/kaylaewood/pen/KKRdVmE) so that there is a strong Data Model. Remember, we want to ask ourselves these guiding questions:  
+- What represents the data model?  
+- Am I updating the data model?  
+- Am I updating the DOM using the data model? Is the DOM manipulation dependent on the data model?  
+
+If you get stuck or want inspiration, [here is one way you could tackle it](https://codepen.io/kaylaewood/pen/OJZyNRG)!
+</div>
+
+<div class="call-to-action">
 ## Enough with the fruit! Let's look at a REAL project!
 
 Now that we have more context for how to separate the data model and the DOM, let's look back at your paired project!  
