@@ -141,7 +141,7 @@ Now you will get in a breakout room with a partner and share what you worked on.
 
 ## When Should We Use This?
 
-This process is appropriate to use anytime you're tackling a complex task with code. It could be used for technical challenges like the ones we saw in class. It is also useful for when you're building out a feature of an application or trying to pass a particularly difficult test in Medusa.
+This process is appropriate to use anytime you're tackling a complex task with code. It could be used for technical challenges like the ones we've seen so far in class. It is also useful for when you're building out a feature of an application or trying to pass a particularly difficult test in Medusa 😉.
 
 Let's look at one more example so we can see how this process works in a different context.
 
@@ -165,7 +165,6 @@ Take a few minutes to write about each prompt below:
 - This problem solving process seems like it slows down the overall coding process. Why would anyone bother doing it?
 - Why don't we just tell you to pseudocode? Why even bother with the other steps?
 - What are the characteristics of solid, beneficial pseudocode?
-- If you were to explain to a non-developer what pseudocoding is, and if you needed to teach them to be able to pseudocode, what would you tell them?
 </section>
 
 ### Additional Resources
