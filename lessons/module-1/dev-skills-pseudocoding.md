@@ -8,33 +8,60 @@ tags: js, introduction, pseudocoding, articulation, problem solving
 
 * Understand what pseudocoding is and its purpose
 * Practice talking about code without writing code
-<!-- * Sit in the eustress! -->
+* Develop a strong strategy for approaching complex problems
 
 ## Vocabulary
 
 - `pseudocoding` Literally, fake code! Writing out steps to solve a problem or achieve functionality, without writing actual code
 - `terms of art` Technical vocabulary, the words and terms that accurately describe code
-<!-- - `eustress` Beneficial stress; the motivating sensation of discomfort that occurs when you don't know something, which compels you to figure it out (different from _distress_, which paralyzes) -->
 
 <section class="call-to-action">
 ## Warm Up
 
-In your notebook, journal about the following prompts:
-
-- What skill do you have that you are proud of? Perhaps a recipe you're good at, or a sick kick flip on a skateboard, or maybe you're very good at remembering people's names, or you play an instrument.
-- Do you remember what it was like when you first began learning the skill?
-- Although it may feel easy now, or like something you've always been good at, push yourself to describe the work you had to put in to achieve proficiency!
+Your friend asked you to build them a bookcase and you said yes! Before you started actually building the bookshelf...
+1. ...what questions would you have for your friend?
+2. ...what materials would you need to gather?
+3. ...what research would you need to do?
+4. ...what other planning would you need to do?
 </section>
 
-## So what is pseudocoding?
+## Problem Solving
+
+Approaching complex tasks in code is very similar to approaching complex tasks in real life! For example, let think about this scenario: Your Turing instructor asked you to build an application that helps track her dog's meals. Before you started coding...
+1. ...what questions would you have for your instructor?
+2. ...what research would you need to do?
+3. ...what other planning would you need to do?
+
+Just like there is a lot to think through before we start building that bookcase, there is a lot that we need to think through **before** we start to code. Today, we will develop a strategy for how to approach complex problems in our code.
+
+## Problem Solving Process
+
+1. **Restate the goal** in your own words. Take note of EXACTLY what the final output(s) should be.
+2. **Consider the data** that you’re working with. What data types are you working with? Are there any parameters/arguments? What data in particular do you need access to?
+3. **Ask clarifying questions** that you have about the goal and/or the data. Is there anything that still unclear? It is critical that you have a complete and accurate idea of the goal and data before you move on.
+4. **Pseudocode** the steps needed to get to the goal. Write out your plan, with specific steps, in plain English. What will you need to do first? Then what?… Note: You may only be able to pseudocode out the first couple of steps - that’s okay! Plan out as much as possible now.
+5. **Research what you don’t know**. Is there something you’ve noted in your pseudocode that you don’t know how to do? Take note of that and google.  
+6. **Start coding** by referencing the pseudocode you’ve written.
+7. **Stuck? Go back** to step 4 and **repeat** steps 4-6 until you’ve reached your goal.
+
+## What is Pseudocoding?
 
 One of the greatest tools in your developer toolbelt is **pseudocoding**.
 
 Pseudocoding is the secretly-complex skill of writing down what you want your code to do, without writing any code.
 
-It's harder than you think, but we're going to break it down and help furnish you with skills you can lean on as you are learning!
+Pseudocode is written in plain English and outlines the steps necessary to complete the task at hand.
 
-It helps to think about your code as a series of instructions for a well-meaning but VERY LITERAL and kind of foolish robot.
+<section class="call-to-action">
+## Your First Pseudocode
+
+In your notebook, write down step by step instructions on how to get in your car and back out of the driveway. Below are some examples of steps to show you the level of detail we are looking for.
+```
+Step 1: Grab your car keys (a piece of black plastic with a metal stick coming out).
+Step 2: Point those keys in the direction of your car and click the button that has an unluck symbol.  
+...
+```
+</section>
 
 ### Cool, but what about when it's a coding problem?
 
