@@ -15,8 +15,6 @@ Throughout the rest of this inning, you'll have time carved out in most days to 
 3. **Ask clarifying questions** that you have about the goal and/or the data. Is there anything that still unclear? It is critical that you have a complete and accurate idea of the goal and data before you move on.
 4. **Pseudocode** the steps needed to get to the goal. Write out your plan, with specific steps, in plain English. What will you need to do first? Then what?… Note: You may only be able to pseudocode out the first couple of steps - that’s okay! Plan out as much as possible now.
 5. **Research what you don’t know**. Is there something you’ve noted in your pseudocode that you don’t know how to do? Take note of that and google.  
-
-`(For these activities, stop here!)`
 6. **Start coding** by referencing the pseudocode you’ve written.
 7. **Stuck? Go back** to step 4 and **repeat** steps 4-6 until you’ve reached your goal.
 
