@@ -1,5 +1,5 @@
 ---
-title: "Dev Skills: Pseudocoding"
+title: "Dev Skills: Problem Solving & Pseudocoding"
 length: 90
 tags: js, introduction, pseudocoding, articulation, problem solving
 ---
@@ -8,13 +8,13 @@ tags: js, introduction, pseudocoding, articulation, problem solving
 
 * Understand what pseudocoding is and its purpose
 * Practice talking about code without writing code
-* Sit in the eustress!
+<!-- * Sit in the eustress! -->
 
 ## Vocabulary
 
 - `pseudocoding` Literally, fake code! Writing out steps to solve a problem or achieve functionality, without writing actual code
 - `terms of art` Technical vocabulary, the words and terms that accurately describe code
-- `eustress` Beneficial stress; the motivating sensation of discomfort that occurs when you don't know something, which compels you to figure it out (different from _distress_, which paralyzes)
+<!-- - `eustress` Beneficial stress; the motivating sensation of discomfort that occurs when you don't know something, which compels you to figure it out (different from _distress_, which paralyzes) -->
 
 <section class="call-to-action">
 ## Warm Up
@@ -35,10 +35,6 @@ Pseudocoding is the secretly-complex skill of writing down what you want your co
 It's harder than you think, but we're going to break it down and help furnish you with skills you can lean on as you are learning!
 
 It helps to think about your code as a series of instructions for a well-meaning but VERY LITERAL and kind of foolish robot.
-
-If you had to explain to a robot how to make a peanut butter sandwich, what instructions would you need to give it? Watch the following video to get an idea of the level of detail we have to get into in our pseudocode:
-
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/FN2RM-CHkuI?start=9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 ### Cool, but what about when it's a coding problem?
 
@@ -178,6 +174,91 @@ Take a few minutes to write about each prompt below:
 Whenever you face a challenge you don't know how to approach, practice pseudocoding. And practice pseudocoding even when you know exactly what code you would write to solve a problem!
 
 Pseudocoding is a tool you will use to chip away at a big, challenging problem. It's a way of looking at towering cliffside and being able to see the first couple hand- and foot- holds that will help you climb it.
+
+
+## Daily Practice: Problem Solving
+
+Throughout the rest of this inning, you'll have time carved out in most days to practice the skills we learned today. For each challenge, you'll spend 15 minutes PLANNING and PSEUDOCODING. You will **not** actually solve or code anything. We'll say it again for good measure: You will use the following prompts to flex and strengthen your problem solving skills, not your coding knowledge or syntax. Focus on running through steps 1-5 in this lesson for each prompt.
+
+<section class="answer">
+### Day 1
+
+[Summation (Code Challenge)](https://replit.com/@kaylaewood/SummationPseudocode#index.js)
+
+Do NOT write any code! Practice planning out how you would approach the prompt. Your planning process should include thorough pseudocode.
+</section>
+
+<section class="answer">
+### Day 2
+
+[DNA (Code Challenge)](https://replit.com/@kaylaewood/DNAPseudocode#index.js)
+
+Do NOT write any code! Practice planning out how you would approach the prompt. Your planning process should include thorough pseudocode.
+</section>
+
+<section class="answer">
+### Day 3
+
+[Phone (Test Suite)](https://replit.com/@kaylaewood/PhonePseudocode#index.js)
+
+Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the tests.js file. Your planning process should include thorough pseudocode.
+</section>
+
+<section class="answer">
+### Day 4
+
+[Appearing Text (FE Feature)](https://codepen.io/kaylaewood/pen/WNzWraY)
+
+Do NOT write any code! Practice planning out how you would approach the user stories listed in the JS file. Your planning process should include thorough pseudocode.
+</section>
+
+<section class="answer">
+### Day 5
+
+[Calculator (Code Challenge)](https://replit.com/@kaylaewood/CalculatorPseudocode#index.js)
+
+Do NOT write any code! Practice planning out how you would approach the prompt. Your planning process should include thorough pseudocode.
+</section>
+
+<section class="answer">
+### Day 6
+
+[Classroom (Test Suite)](https://replit.com/@kaylaewood/ClassroomPseudocode#index.js)
+
+Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the tests.js file. Your planning process should include thorough pseudocode.
+</section>
+
+<section class="answer">
+### Day 7
+
+[Changing Colors (FE Feature)](https://codepen.io/kaylaewood/pen/JjLVXQv)
+
+Do NOT write any code! Practice planning out how you would approach the user stories listed in the JS file. Your planning process should include thorough pseudocode.
+</section>
+
+<section class="answer">
+### Day 8
+
+[Credit Card Mask (Code Challenge)](https://replit.com/@kaylaewood/CCMaskPseudocode#index.js)
+
+Do NOT write any code! Practice planning out how you would approach the prompt. Your planning process should include thorough pseudocode.
+</section>
+
+<section class="answer">
+### Day 9
+
+[Football (Test Suite)](https://replit.com/@kaylaewood/FootballPseudocode#index.js)
+
+Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the tests.js file. Your planning process should include thorough pseudocode.
+</section>
+
+<section class="answer">
+### Day 10
+
+[Guess That Number (FE Feature)](https://codepen.io/kaylaewood/pen/LYdvGKW?editors=1011)
+
+Do NOT write any code! Practice planning out how you would approach the user stories listed in the JS file. Your planning process should include thorough pseudocode.
+</section>
 
 ### Additional Resources
 
