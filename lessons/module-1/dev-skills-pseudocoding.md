@@ -47,7 +47,7 @@ Pseudocode functions as a way for you to work logically through a problem, even 
 We will write pseudocode in the space where we will eventually write code. We won't just think about it in our heads. This is important! Draw a line on your map! If you try to memorize your route through unfamiliar cities and roads, when you're actually driving, you're sure to forget something or to get lost or distracted. If you wrote it down, you can be reminded of where you're trying to go.
 
 <section class="call-to-action">
-## Your First Pseudocode
+### Your First Pseudocode
 
 In your notebook, write down step by step instructions on how to get in your car and back out of the driveway. Below are some examples of steps to show you the level of detail we are looking for.
 ```
@@ -118,12 +118,12 @@ Take some time to reflect on the following questions and then we will share out 
 - What might make this process difficult to do?
 - Do we need to go through this process every single time we are writing code?
 
-## Let's Practice!
+## Time for YOU to Practice!
 
 <section class="call-to-action">
-## Solo Practice
+### Solo Practice
 
-Strengthen your problem solving skills by going through steps 1-5 of the `Problem Solving Process` with this challenge. We do not expect you to write any code.
+Strengthen your problem solving skills by going through steps 1-5 of the `Problem Solving Process` with this challenge. We do not want you to write any code.
 ```js
 // Write a function that will capitalize the first letter of a person's name. For example, "Scott Ertmer"
 
@@ -134,33 +134,39 @@ var person = "scott ertmer";
 </section>
 
 <section class="call-to-action">
-## Swap and Share
+### Swap and Share
 
 Now you will get in a breakout room with a partner and share what you worked on. You will each time a few minutes to screen share and talk through your process.
 </section>
 
-## 
+## When Should We Use This?
 
-## Summary
+This process is appropriate to use anytime you're tackling a complex task with code. It could be used for technical challenges like the ones we saw in class. It is also useful for when you're building out a feature of an application or trying to pass a particularly difficult test in Medusa.
 
-This was just an introduction to pseudocoding. It's a skill that you will continue to develop for years, so don't beat yourself up if it's still confusing or hard!
+Let's look at one more example so we can see how this process works in a different context.
+
+<section class="call-to-action">
+### Paired Practice
+
+Work through steps 1-5 of the `Problem Solving Process` with the prompt found in the JS file of [this codepen](https://codepen.io/kaylaewood/pen/oNdxMvq). We do not want you to write any code.
+</section>
+
+## Continuing to Strengthen this Skill
+
+This was just an introduction to problem solving and pseudocoding. It's a skill that you will continue to develop for years, so don't beat yourself up if it's still confusing or hard!
+
+Throughout the rest of mod 1, we have [daily practice](https://frontend.turing.edu/lessons/module-1/daily-problem-solving-practice.html) worked into the calendar to give you more opportunities to develop your problem solving process.
 
 <section class="checks-for-understanding">
-### Stop and Reflect
+### Final Reflections
 
 Take a few minutes to write about each prompt below:
 
-- Pseudocoding seems like it slows down the coding process. Why would anyone bother doing it?
-- What is a benefit of spending your time pseudocoding?
+- This problem solving process seems like it slows down the overall coding process. Why would anyone bother doing it?
+- Why don't we just tell you to pseudocode? Why even bother with the other steps?
 - What are the characteristics of solid, beneficial pseudocode?
-- What was helpful about your partners' pseudocode? What was confusing?
 - If you were to explain to a non-developer what pseudocoding is, and if you needed to teach them to be able to pseudocode, what would you tell them?
 </section>
-
-Whenever you face a challenge you don't know how to approach, practice pseudocoding. And practice pseudocoding even when you know exactly what code you would write to solve a problem!
-
-Pseudocoding is a tool you will use to chip away at a big, challenging problem. It's a way of looking at towering cliffside and being able to see the first couple hand- and foot- holds that will help you climb it.
-
 
 ### Additional Resources
 
