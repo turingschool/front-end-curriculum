@@ -4,7 +4,7 @@ length: 90
 tags: pseudocode, problem solving, process
 ---
 
-Throughout the rest of this inning, you'll have time carved out in most days to practice the skills we learned today. For each challenge, you'll spend 15 minutes PLANNING and PSEUDOCODING. You will **not** actually solve or code anything. You will use the following prompts to flex and strengthen your problem solving skills, not your coding knowledge or syntax.
+Throughout the rest of this inning, you'll have time carved out in most days to practice the skills we learned today. For each challenge, you'll spend 15 minutes **planning** and **pseudocoding**. You will **not** actually solve or code anything. You will use the following prompts to flex and strengthen your problem solving skills, not your coding knowledge or syntax.
 
 **Focus on running through steps 1-5 for each prompt.**
 
