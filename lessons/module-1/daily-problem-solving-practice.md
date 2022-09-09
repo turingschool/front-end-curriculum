@@ -6,9 +6,9 @@ tags: pseudocode, problem solving, process
 
 # Daily Practice: Problem Solving
 
-Throughout the rest of this inning, you'll have time carved out in most days to practice the skills we learned today. For each challenge, you'll spend 15 minutes PLANNING and PSEUDOCODING. You will **not** actually solve or code anything.  
+Throughout the rest of this inning, you'll have time carved out in most days to practice the skills we learned today. For each challenge, you'll spend 15 minutes PLANNING and PSEUDOCODING. You will **not** actually solve or code anything. You will use the following prompts to flex and strengthen your problem solving skills, not your coding knowledge or syntax.
 
-We'll say it again for good measure: You will use the following prompts to flex and strengthen your problem solving skills, not your coding knowledge or syntax. **Focus on running through steps 1-5 for each prompt.**
+**Focus on running through steps 1-5 for each prompt.**
 
 ## Problem Solving Process
 
@@ -17,6 +17,7 @@ We'll say it again for good measure: You will use the following prompts to flex 
 3. **Ask clarifying questions** that you have about the goal and/or the data. Is there anything that still unclear? It is critical that you have a complete and accurate idea of the goal and data before you move on.
 4. **Pseudocode** the steps needed to get to the goal. Write out your plan, with specific steps, in plain English. What will you need to do first? Then what?… Note: You may only be able to pseudocode out the first couple of steps - that’s okay! Plan out as much as possible now.
 5. **Research what you don’t know**. Is there something you’ve noted in your pseudocode that you don’t know how to do? Take note of that and google.
+`(For these activities, stop here!)`
 6. **Start coding** by referencing the pseudocode you’ve written.
 7. **Stuck? Go back** to step 4 and **repeat** steps 4-6 until you’ve reached your goal.
 
@@ -41,7 +42,7 @@ Do NOT write any code! Practice planning out how you would approach the prompt. 
 
 [Phone (Test Suite)](https://replit.com/@kaylaewood/PhonePseudocode#index.js)
 
-Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the tests.js file. Your planning process should include thorough pseudocode.
+Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the `tests.js` file. Your planning process should include thorough pseudocode.
 </section>
 
 <section class="answer">
@@ -65,7 +66,7 @@ Do NOT write any code! Practice planning out how you would approach the prompt. 
 
 [Classroom (Test Suite)](https://replit.com/@kaylaewood/ClassroomPseudocode#index.js)
 
-Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the tests.js file. Your planning process should include thorough pseudocode.
+Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the `tests.js` file. Your planning process should include thorough pseudocode.
 </section>
 
 <section class="answer">
@@ -89,7 +90,7 @@ Do NOT write any code! Practice planning out how you would approach the prompt. 
 
 [Football (Test Suite)](https://replit.com/@kaylaewood/FootballPseudocode#index.js)
 
-Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the tests.js file. Your planning process should include thorough pseudocode.
+Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the `tests.js` file. Your planning process should include thorough pseudocode.
 </section>
 
 <section class="answer">
