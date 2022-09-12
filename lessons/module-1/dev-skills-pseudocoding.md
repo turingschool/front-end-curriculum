@@ -68,6 +68,7 @@ While pseudocoding is a very important part of the problem solving process, it i
 5. **Research what you don’t know**. Is there something you’ve noted in your pseudocode that you don’t know how to do? Take note of that and google.  
 6. **Start coding** by referencing the pseudocode you’ve written.
 7. **Stuck? Go back** to step 4 and **repeat** steps 4-6 until you’ve reached your goal.
+8. **Refactor** your code, if necessary. You should not be worried about writing the "best" code possible while solving the problem. Get it to work, then you can work on improving the code.
 
 
 ## Problem Solving in Action!
