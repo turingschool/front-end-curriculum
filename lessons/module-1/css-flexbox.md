@@ -24,7 +24,7 @@ Read through [Intro to Layout Pre-Work document](./intro-to-layout-prework.html)
 <section class="checks-for-understanding">
 ## Warm Up
 
-- With a partner, fork [this codepen](https://codepen.io/hannahhch/pen/zYqdVyp)
+- With a partner, fork [this codepen](https://codepen.io/kaylaewood/pen/oNBdGEx)
 - Explore the CSS that's already present. Without googling, what do you think `:nth-child` means?
 - In your CSS, add the property of "display" with a value of "flex" to the `.wrapper` selector. What happened? Which elements visually changed?
 </section>
@@ -189,7 +189,7 @@ If flex isn't working the way you think it should, check the following things:
 
 ## Recreating a Comp
 
-We will now continue working on the comp from this morning. You will have one hour to work on `iteration 2` of [this activity](https://github.com/kaylagordon/css-intro-imperfectfoods). 
+We will now continue working on the comp from this morning. You will have one hour to work on `iteration 2` of [this activity](https://github.com/kaylagordon/css-intro-imperfectfoods).
 
 ## Additional Resources
 
