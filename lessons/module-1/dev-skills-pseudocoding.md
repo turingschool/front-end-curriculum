@@ -46,6 +46,12 @@ Pseudocode functions as a way for you to work logically through a problem, even 
 
 We will write pseudocode in the space where we will eventually write code. We won't just think about it in our heads. This is important! Draw a line on your map! If you try to memorize your route through unfamiliar cities and roads, when you're actually driving, you're sure to forget something or to get lost or distracted. If you wrote it down, you can be reminded of where you're trying to go.
 
+### Reflect
+
+Take some time to reflect on the following questions and then we will share out as a class.
+
+- Why do you think we write our pseudocode down? Can you think of a time where not writing something down ended up backfiring?
+
 <section class="call-to-action">
 ### Your First Pseudocode
 
@@ -89,24 +95,40 @@ var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola
 
 var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola", "Mayhew"];
 
-// goal: Delete all names that have 5 or more letters
+// goal: Delete all names that have more than 5 letters
 
 // data: Taking an array of strings (names) and returning an array of strings (without 5+ letter names)
 
 // questions: Will there ever be spaces? If so, do those spaces count as a character?
 
 // pseudocode:
-  // Look at each name one at a time
+  // Create a function
+  // Create a temporary array to hold short names
+  // Look at each name one at a time from names array
   // Determine how many letters are in each name*
-  // If 5 or more, delete it**
-  // If 4 or less, keep it (do nothing)
+  // If more than 5, do nothing; skip it
+  // If 5 or less, push into the short names array
   // Continue until we've gone through every name
+  // Reassign the names array to the short names array
 
 // research:
   // *How do you find the number of letters in a string? --> .length
-  // **How do you delete an element in an array? --> .splice
 
-// now we can code!
+// code:
+  function removeLongNames() {
+    var shortNamesOnly = [];
+
+    for (var i = 0; i < names.length; i++) {
+      var letterCount = names[i].length;
+
+      if (letterCount <= 5) {
+        shortNamesOnly.push(names[i]);
+      }
+    }
+
+    names = shortNamesOnly;
+  }
+
 ```
 </section>
 
@@ -117,7 +139,6 @@ Take some time to reflect on the following questions and then we will share out 
 - What are some takeaways you have from that example?
 - What do you like about this process?
 - What might make this process difficult to do?
-- Do we need to go through this process every single time we are writing code?
 
 ## Time for YOU to Practice!
 
