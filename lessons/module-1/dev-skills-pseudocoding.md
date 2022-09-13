@@ -136,7 +136,7 @@ var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola
 
 Take some time to reflect on the following questions and then we will share out as a class.
 
-- What are some takeaways you have from that example?
+- Compare the code to the pseudocode. What do you notice?
 - What do you like about this process?
 - What might make this process difficult to do?
 
@@ -172,6 +172,45 @@ Let's look at one more example so we can see how this process works in a differe
 
 Work through steps 1-5 of the `Problem Solving Process` with the prompt found in the JS file of [this codepen](https://codepen.io/kaylaewood/pen/oNdxMvq). We do not want you to write any code.
 </section>
+
+<section class="answer">
+### Here's an example for what that problem solving approach could look like:
+
+```js
+// goal: When the button is clicked, the div's background color should change to whatever color is selected in the drop down menu
+
+// data/what do I need access to?:
+  // HTML elements: div, select, button
+  // CSS properties: background-color
+  // JS variables: none that exist, but I will make some to store HTML elements
+
+// steps:
+  // grab 3 HTML elements and store as variables
+  // add event listener to button and fire function on click
+  // function:
+    // grab value from select (?)
+    // update background color of div (using style.backgrounColor)
+
+// code:
+var box = document.querySelector('div');
+var colorSelector = document.querySelector('select');
+var button = document.querySelector('button');
+
+button.addEventListener('click', changeBoxColor);
+
+function changeBoxColor() {
+  var newColor = colorSelector.value;
+  box.style.backgroundColor = newColor;
+}
+```
+</section>
+
+### Reflect
+
+Take some time to reflect on the following questions and then we will share out as a class.
+
+- What felt different when applying thie process to a frontend application versus a technical code challenge?
+- What did you take notes on for the `Consider the data` step?
 
 ## Continuing to Strengthen this Skill
 
