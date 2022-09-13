@@ -138,6 +138,7 @@ Take some time to reflect on the following questions and then we will share out 
 - Compare the code to the pseudocode. What do you notice?
 - What do you like about this process?
 - What might make this process difficult to do?
+- Are there any steps you would add/change?
 
 ## Time for YOU to Practice!
 
