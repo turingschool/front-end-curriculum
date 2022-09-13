@@ -79,7 +79,7 @@ While pseudocoding is a very important part of the problem solving process, it i
 
 ## Problem Solving in Action!
 
-Let's go through an example together.
+Let's go through an example together. ([Link to repl](https://replit.com/@kaylaewood/problemSolvingexample1#index.js))
 
 ```js
 // Write a function that removes all names that are longer than 5 letters from the array
@@ -145,7 +145,7 @@ Take some time to reflect on the following questions and then we will share out 
 <section class="call-to-action">
 ### Solo Practice
 
-Strengthen your problem solving skills by going through steps 1-5 of the `Problem Solving Process` with this challenge. We do not want you to write any code.
+Strengthen your problem solving skills by going through steps 1-5 of the `Problem Solving Process` with this challenge. We do not want you to write any code. ([Link to repl](https://replit.com/@kaylaewood/problemSolvingexample2#index.js))
 ```js
 // Write a function that will capitalize the first letter of a person's name. For example, "Scott Ertmer"
 
