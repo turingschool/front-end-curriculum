@@ -55,10 +55,9 @@ Take some time to reflect on the following questions and then we will share out 
 <section class="call-to-action">
 ### Your First Pseudocode
 
-In your notebook, write down step by step instructions on how to get in your car and back out of the driveway. Below are some examples of steps to show you the level of detail we are looking for.
+In your notebook, write down step by step instructions on how to get in your car and back out of the driveway. Below is the first step to show you the level of detail we are looking for.
 ```
-Step 1: Grab your car keys (a piece of black plastic with a metal stick coming out).
-Step 2: Point those keys in the direction of your car and click the button that has an unlock symbol. You should hear a beep to indicate the car is unlocked.
+Step 1: Point your car keys in the direction of your car and click the button that has an unlock symbol. You should hear a beep to indicate the car is unlocked.
 ...
 ```
 </section>
@@ -209,7 +208,7 @@ function changeBoxColor() {
 
 Take some time to reflect on the following questions and then we will share out as a class.
 
-- What felt different when applying thie process to a frontend application versus a technical code challenge?
+- What felt different when applying this process to a frontend application versus a technical code challenge?
 - What did you take notes on for the `Consider the data` step?
 
 ## Continuing to Strengthen this Skill
