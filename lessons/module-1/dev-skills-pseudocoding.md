@@ -187,8 +187,8 @@ Work through steps 1-5 of the `Problem Solving Process` with the prompt found in
   // grab 3 HTML elements and store as variables
   // add event listener to button and fire function on click
   // function:
-    // grab value from select (?)
-    // update background color of div (using style.backgrounColor)
+    // grab value from select element (can I use .value?)
+    // reassign background color of div (using style.backgroundColor)
 
 // code:
 var box = document.querySelector('div');
