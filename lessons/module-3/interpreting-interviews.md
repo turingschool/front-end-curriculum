@@ -22,6 +22,8 @@ module: 3
 
 ## Thinking Like an Interviewer
 
+**Note - your interviewer won't always say it, but you can and should ask questions throughout the entire proccess. Given a code challenge in a language you aren't familar with? Ask to complete it in Ruby or JS. Unclear about what they are looking for in the challenge? Ask them to clarify.**
+
 Many people approach interviews with the mindset that they need to improvise their answer for every question they are asked. This approach can lead to lots of nerves going into the interviews because you're thinking:  
 *What if I can't think of a good answer on the spot?*  
 It can also lead to you leaving an interview thinking:  
