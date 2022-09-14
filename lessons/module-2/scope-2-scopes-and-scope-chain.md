@@ -26,7 +26,7 @@ Now that we understand the order of execution a bit, we can dive deeper into the
 <section class="call-to-action">
 ### Warmup
 
-ES5 variables often are described as having either global scope or local (function) scope.
+Pre-ES6 variables often are described as having either global scope or local (function) scope.
 
 * How would you describe the differences between a *globally* vs *locally* scoped variable?
 * Looking at the below example, does our `makeNoise` function have access to the `cowNoise` and `catNoise` variables?
@@ -115,7 +115,7 @@ console.log(greeting + question + response);
 ### Function/Local Scope Takeaways  
 
 - Variables declared in the function (using `var`, `let`, or `const`) can only be accessed by the other code inside the function.
-- You control what's in the function scope, it cannot be meddled with by anyone or anything else.
+- Because these variables are only used and accessible within the function, it is clearer for another developer to understand the impact of changing them and is less likely to result in issues when compared to globally scoped variables.
 - The global scope cannot access function scope.
 </section>
 
@@ -182,7 +182,7 @@ console.log('getFirstNumber(): ', getFirstNumber())
 // console.log('getSecondNumber(): ', getSecondNumber())
 
 // console.log('secondNumber: ', secondNumber);
-// console.log('secondNumber: ', firstNumber);
+// console.log('firstNumber: ', firstNumber);
 ```
 
 * Run the `getFirstNumber` either in a Repl or your console.  What happens & why?

@@ -16,6 +16,16 @@ tags: javascript, dom, data model
   think of it as a single source of truth for what should display on the page.
 - `DOM` The Document Object Model, the visual representation of our application.
 
+<div class="call-to-action">
+## Warm Up
+
+Open up [this codepen](https://codepen.io/kaylaewood/pen/KKRdVmE) and look through the code/functionality of the application. Then, talk through the following questions:
+
+- If we wanted to track how many sunny (or cloudy or rainy, etc.) days we had in a week, what about our code would make that difficult to do?  
+- How could we change our code so that tracking those stats would be easier? Note: Don't actually change the code, just think about it!  
+- 🌶 Spicy: If we wanted this data to persist (i.e. still be there after we close and reopen the page), what about our code would make that difficult to do?
+</div>
+
 ## Abstract
 
 As you've realized by now, it doesn't take very much code for a project to get
@@ -225,6 +235,17 @@ Data Model, we re-render the model to see the change.
 
 Interested in learning more about data attributes? Check out [this article](https://www.abeautifulsite.net/posts/working-with-html5-data-attributes/)!
 </section>
+
+<div class="call-to-action">
+## Revisiting the Warm Up
+
+Spend some time updating [this codepen](https://codepen.io/kaylaewood/pen/KKRdVmE) so that there is a strong Data Model. Remember, we want to ask ourselves these guiding questions:  
+- What represents the data model?  
+- Am I updating the data model?  
+- Am I updating the DOM using the data model? Is the DOM manipulation dependent on the data model?  
+
+If you get stuck or want inspiration, [here is one way you could tackle it](https://codepen.io/kaylaewood/pen/OJZyNRG)!
+</div>
 
 <div class="call-to-action">
 ## Enough with the fruit! Let's look at a REAL project!

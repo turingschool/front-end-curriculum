@@ -97,8 +97,8 @@ Companies with large apps are likely to be using a state management tool like th
 Writing bug-free code can be made easier by adding some very common workflow tooling. Here are just a few you will see on the job, and learning these will make you productive in your job sooner. If you're interested in this category, then you must complete all listed here:
 
 * Continuous Integration (using Travis CI or Github Actions)
-* Deployment to production with Heroku
-* Automatic deployment to Heroku when a PR is merged to `main` on GitHub
+* Deployment to production using any depolyment service
+* Automatic deployment when a PR is merged to `main` on GitHub
 </section>
 
 <section class="answer">
@@ -146,7 +146,7 @@ You can add TypeScript in React! This is a big shift in writing JavaScript like 
 <section class="answer">
 ### Building a Backend
 
-Not feeling excited about any of the free data APIs? Build your own! If you choose this category, you would be responsible for building your own server in Express, connecting it to a PostgreSQL database (usually with Knex), and hosting it on Heroku. You would not be required to use a separate data API.
+Not feeling excited about any of the free data APIs? Build your own! If you choose this category, you would be responsible for building your own server in Express, connecting it to a PostgreSQL database (usually with Knex), and hosting it on some deployment service. You would not be required to use a separate data API.
 </section>
 
 <section class="answer">
