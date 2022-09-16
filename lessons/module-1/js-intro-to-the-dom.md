@@ -26,7 +26,7 @@ Head over to [Josh W Comeau's website](https://joshwcomeau.com/)! Take 90 second
 - Open dropdown menus!
 - Mouse over the blog category buttons
 
-<section class="call-to-action">
+<section id="in-your-notebook" class="call-to-action">
 ### In Your Notebook
 
 Let's focus on the light-mode/dark-mode toggle button. How do you think this bit of functionality was built? Brainstorm for 2 minutes in your notebook.
@@ -52,7 +52,7 @@ This is an abstract concept and can be hard to wrap your mind around - we'll com
 1. The DOM is essential to building functionality on a page
 2. We can use the `document` variable in our JavaScript file to interact with the DOM. From there, we can travel through the DOM and ask for specific elements, or instruct the program to change elements.
 
-<section class="call-to-action">
+<section id="check-it-out-1" class="call-to-action">
 ### Check It Out
 
 In your browser dev tools, type in `document`. Click that small arrow to the left of the output.  
@@ -74,7 +74,7 @@ title;
 //=> <h1>JS: Intro to the DOM</h1>
 ```
 
-<section class="call-to-action">
+<section id="explore" class="call-to-action">
 ### Explore
 
 Open the Dev Tools while you are looking at this lesson. In the console, paste this in:
@@ -87,6 +87,7 @@ Then, call the `box` variable (by typing in `box`, then hitting `return`).
 - What is returned?
 - Where does that element appear in the browser?
 - There are several sections with that class name on this page - why do you think that only _one_ of them is stored in the `box` variable?
+- Is there a unique identifier on each of those sections that we could use if we wanted to be more specific when querying?  
 </section>
 
 ## Updating Content of an Element
@@ -109,14 +110,14 @@ This is a property which holds the text that lives inside of a given element. Ri
 
 After running the code in the console that is pictured above, the text of the `h1` changed from `Intro to DOM Manipulation` to `Hello, World!`. Now, this may feel a bit disconnected because we know that we usually write our JavaScript in a file in atom, not in the Dev Tools. **If we wrote this in the JavaScript file associated with the page, we'd have the exact same result.** To reinforce this, you're going to have some time to practice applying this concept.
 
-<section class="call-to-action">
+<section id="try-it" class="call-to-action">
 ### Try It
 
 Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR) and complete the steps listed below, in the `JS` file of the CodePen.
 
-- Declare a variable `studentName` and assign the value of the element with the class of `student` to it 
-- Declare a variable `schoolName` and assign the value of the `h3` element to it 
-- Declare a variable `bestGrade` and assign the value of the element with a class of `grade-2` to it 
+- Declare a variable `studentName` and assign the value of the element with the class of `student` to it
+- Declare a variable `schoolName` and assign the value of the `h3` element to it
+- Declare a variable `bestGrade` and assign the value of the element with a class of `grade-2` to it
 - Declare a variable `newData` and assign an object with keys of `studentName`, `schoolName`, and `bestGrade` (whose values are new strings with whatever information you want to display on the page instead) to it
 - Change the `innerText` of the `studentName` variable to the `studentName` value from your `newData` object
 - Change the `innerText` of the `schoolName` variable to the `schoolName` value from your object
@@ -130,7 +131,7 @@ This property essentially works the same, but has the capacity to do something a
 It can not only insert plain text, but it can insert HTML elements. For the example below, we will go back to using the "call to action" box.
 
 ```javascript
-var box = document.querySelector('.call-to-action');
+var box = document.querySelector('#try-it');
 
 var pageData = {
   title: "Pizza is Tasty",
@@ -145,7 +146,7 @@ box.innerHTML = `
 
 Turn and talk with a partner - BEFORE you run this code, what do you think is happening? What do you think will happen when it's run?
 
-Try running this code in the browser and see what happens to the first "call to action" box that appears on the page!
+Try running this code in the browser and see what happens to the "Try It" box just above on the page!
 
 ## Changing Styles Programmatically
 
@@ -168,14 +169,14 @@ We will briefly discuss two ways to do this:
 We can call the `.style` property on an element, then any CSS property:
 
 ```javascript
-var box = document.querySelector('.call-to-action');
+var box = document.querySelector('#check-it-out-2');
 
 box.style.borderColor = "red";
 ```
 
-This will result in:
+This will result in the check it out box below looking like this:
 
-<img class="medium" src="./assets/images/dom-manipulation-1/inline-style.png">
+<img class="medium" src="./assets/images/dom-manipulation-1/inline-style-border-change.png">
 
 The reason this is not preferred is we usually want to make more than one tiny change; and each change requires one line of code. This can make for long functions that are difficult to read. Adding or removing classes (examples below) is strongly preferred.
 
@@ -191,7 +192,7 @@ As a developer, a huge part of your job is researching and learning on your own.
 
 Since it's common to need to change multiple CSS declarations, we can instead add or remove a class from the list of classes a given element has on it.
 
-<section class="call-to-action">
+<section id="check-it-out-2" class="call-to-action">
 ### Check It Out
 
 Fork [this CodePen](https://codepen.io/hannahhudson/pen/JjyKBpW) and follow the directions below:
@@ -208,7 +209,7 @@ Read up on [this documentation](https://developer.mozilla.org/en-US/docs/Web/API
 
 Let's take a few minutes to look back at what we've started to learn!
 
-<section class="call-to-action">
+<section id="one-more-time" class="call-to-action">
 ### One more time...
 
 Head back over to [Josh W Comeau's website](https://joshwcomeau.com/). Look around again, with new eyeballs.
