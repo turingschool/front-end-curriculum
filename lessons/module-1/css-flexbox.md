@@ -189,7 +189,7 @@ If flex isn't working the way you think it should, check the following things:
 
 ## Recreating a Comp
 
-We will now continue working on the comp from this morning. You will have one hour to work on `iteration 2` of [this activity](https://github.com/kaylagordon/css-intro-imperfectfoods).
+We will now continue working on the comp from the CSS Fundamentals lesson. You will have one hour to work on `iteration 2` of [this activity](https://github.com/kaylagordon/css-intro-imperfectfoods).
 
 ## Additional Resources
 
