@@ -131,12 +131,10 @@ The purpose of this is to give you an opportunity to begin experiencing what it 
 
 ### Eval process
 
-We will send out the link to the submission form sometime on the due date.
-
 In order to ensure that we have time to give relevant feedback to everyone, we are going to do asynchronous project evals.
 
 1. We will DM you your scores
-  * _Note: in the interest of time, the feedback for this project will not be as specific as it has been for previous projects_
+  * _Note: in the interest of time, the feedback for this project will be limited - but feel free to ask questions about your code!
 2. In a DM, we will send you a link to part of your project code.
   * Please describe that code in your own words:
     - what does that code do,
