@@ -4,14 +4,6 @@ length: 90
 tags: javascript, foundation, variables, data types, interpolation, concatenation
 ---
 
-## Welcome to your first official Turing lesson!
-
-Since this is your first mod 1 lesson, let's go over some general classroom expectations:  
-- **We prefer cameras ON, if possible.** Being able to see each other helps us build relationships with one another. It also helps us teach you because we can read your facial/body language for cues on how the lesson is landing. That said, we want you to feel comfortable, so we understand if you need to have the camera off. Also, feel free to use a virtual background! Virtual backgrounds are a great way to give you some privacy and show off your personality!  
-- **Ask questions. LOTS of questions!** Each instructor will set up their preferred method for questions - whether it’s raising your hand, using the chat, or simply unmuting. It’s less important how you ask the question - we just care that you ask! No developer knows everything. One of the strongest skills a junior developer can bring to their team is their questions. Every single person on the call will learn from the questions you ask. Do it!  
-- **We do NOT record lessons.** We find that rewatching old lessons isn’t a great use of your time. If you’re going to be absent, ask a classmate to share their notes and/or record using QuickTime or via the 'Record' feature on Zoom.
-- **We will always turn on Live Captioning.** It’s totally up to you if you want to have the captions ON or OFF! You cannot save the transcript.  
-
 ## Learning Goals
 
 * Review what you know about the primitive data types used in JavaScript
@@ -21,13 +13,12 @@ Since this is your first mod 1 lesson, let's go over some general classroom expe
 ## Vocabulary
 
 - `Data Type` A kind of data, defined by the values it can hold and the operations that can be done on it
-- `Primitive type` Also know as a `simple` data type. The primitives in Javascript that we will care about are Boolean, Undefined, Null, Number, String (BUNNS).  
+- `Primitive type` Also known as a `simple` data type. The primitives in Javascript that we will care about are Boolean, Undefined, Null, Number, String (BUNNS).  
 - `Variable` A container for a value. The main building block for all programming
 - `Declare` Creating a new variable (distinct from assignment)
 - `Assignment` Assigning a value to a variable
 - `Concatenation` The binding of multiple strings together using the `+` string operator
 - `Interpolation` The process of injecting a variable directly into a string.
-- `Template literal` Template literals are string literals that provide an easy way to interpolate a variable or expression into a string.
 
 ## Part 1: Student Exploration
 
@@ -50,6 +41,11 @@ If you get stuck...
 After this hour, we will continue with the remainder of this lesson guided primarily by your questions.
 
 ## Part 2: Class Discussion
+
+Since this is your first mod 1 lesson, let's go over some general classroom expectations:  
+- **We prefer cameras ON, if possible.** Being able to see each other helps us build relationships with one another. It also helps us teach you because we can read your facial/body language for cues on how the lesson is landing. That said, we want you to feel comfortable, so we understand if you need to have the camera off sometimes. Also, feel free to use a virtual background! Virtual backgrounds are a great way to give you some privacy and show off your personality!  
+- **Ask questions. LOTS of questions!** Each instructor will set up their preferred method for questions - whether it’s raising your hand, using the chat, or simply unmuting. It’s less important how you ask the question - we just care that you ask! No developer knows everything. One of the strongest skills a junior developer can bring to their team is their questions. Every single person on the call will learn from the questions you ask. Do it!  
+- **We will always turn on Live Captioning.** It’s totally up to you if you want to have the captions ON or OFF!  
 
 ### Questions
 
@@ -130,7 +126,6 @@ var interpolatedString = `My friend ${name} is ${age} years old and lives in ${D
 ```
 
 </section>
-
 
 <section class="answer">
 ### What is type coercion?
