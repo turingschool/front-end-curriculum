@@ -35,3 +35,54 @@ If you get stuck...
 After this hour, we will get on the zoom call in your calendar and continue with the remainder of this lesson.
 
 ## Part 2: Class Discussion
+
+### Questions
+
+Asking questions is an essential part of being a developer. Take a few minutes right now to look through your notes from the last hour. What questions do you have about arrays? Everyone should have at least one question! Let's add those questions to [this jamboard](https://jamboard.google.com/d/1JwoZ0xbAGtREcnw4-cHTAlyEhQbVEBiP15JWRLNMwUA/edit?usp=sharing).
+
+### Key Points
+
+We just went through **a lo** of information. Let's go over the most important things we need to know about arrays.  
+
+<section class="answer">
+### How should we name our arrays?
+
+Since arrays hold a list of elements, we want to name arrays using a plural noun, describing the elements in the array. For example, `pets`, `people`, `days`...
+</section>
+
+<section class="answer">
+### What type of data should arrays hold?
+
+Arrays can hold any data type! They can even hold other arrays. Or objects with values that are arrays. It can get wild!   
+
+That said, the elements in an array should always be consistent with each other. Meaning, they should be the same data type AND they should represent the same type of information.
+</section>
+
+For the remaining points, let's use this example:
+
+```js
+var craftSupplies = [
+  { type: 'yarn', colorsAvailable: ['turquoise', 'black', 'beige', 'terracotta'] },
+  { type: 'paint', colorsAvailable: ['red', 'yellow', 'blue'] },
+  { type: 'fabric', colorsAvailable: ['black', 'white', 'purple'] }
+];
+```
+
+<section class="answer">
+### How would we access the first element in this array?
+
+Since the first element of an array starts at 0, we would access the first element with bracket notation at index 0: `craftSupplies[0]`
+</section>
+
+<section class="answer">
+### How would we reassign the second element in this array?
+
+Just like we can reassign a variable to a new value, we can access any element in the array using bracket notation and then reassign it:
+`craftSupplies[1] = { name: 'thread', colorsAvailable: ['gray'] };`
+</section>
+
+<section class="answer">
+### How can we access nested data?
+
+By combining what we know about objects and arrays, we can use bracket notation and dot notation to access nested information. For example, I can access the string of `'yellow'` with `craftSupplies[1].colorsAvailable[1]`
+</section>
