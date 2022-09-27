@@ -73,16 +73,17 @@ When this code is read, `makePizza()` is "invoked," all 5 statements within the 
 
 Try creating your own functions in that same Repl!
 
-* Write a function that logs to the console a message of "Let's add!", and then logs a sum of five different integers.
-* Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.
-* Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name.
-* Write a function that logs a [random number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) to the console.
+  1. Write a function that logs to the console a message of "Let's add!", and then logs a sum of five different integers.  
+  1. Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name.  
+  1. Write a function that assigns three different math equations (adding 3 numbers, dividing 2 numbers, etc) to three different variables, then logs the sum of the values of all three variables.
+  1. Write a function that logs a [random number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) to the console. 🌶 Spicy
+
 
 _Make sure you're thinking about your naming conventions!_
 </section>
 
 ### Passing Information to a Function:
-Sometimes you need to give a function some information in order for it to do its job. You can give that function the information it needs by providing _parameters_ in the function declaration. These are place holders that you identify with appropriately named labels inside the parentheses of your named function. The words you use for your parameters act like variables INSIDE the function, which means they serve as a means to pass values.
+Sometimes you need to give a function some information in order for it to do its job. You can give that function the information it needs by providing _parameters_ in the function declaration. These are place holders that act like variables INSIDE the function, which means they serve as a means to pass values.
 
 ### Parameters vs. Arguments
 When you declare a function, and you stipulate the function will accept some bits of information, those are parameters. Then, when you pass in values for those parameters as you invoke the function, those are called arguments.  
@@ -111,16 +112,19 @@ A good way to think of parameters and arguments is this:
 
 Write the following functions in that same Repl!
 
-1. Write a function called `sayHi` that takes 1 argument - a name (as a string).
-  - The function should log the phrase "Hi, <u>_nameBeingPassed_</u>!".   
+1. Write a function called `sayHi` that takes in 1 argument - a name (as a string).
+  - The function should log the phrase "Hi, `nameBeingPassed`!".   
+    - eg. `sayHi("Nick")` should log: "Hi, Nick!"
   - Invoke your function 3 times, passing a different name argument each time.
 
 1. Write a function called `greetFriend` that takes in 2 arguments - a name (string) and the timeOfDay (string of either "morning", "afternoon", "evening").
-  - The function should log the phrase "Good _timeOfDayBeingPassedIn_, _nameBeingPassedIn_!"
+  - The function should log the phrase "Good `timeOfDayBeingPassedIn`, `nameBeingPassedIn`!"
+    - eg. `greetFriend("Nick", "morning")` should log: "Good morning, Nick!"
   - Invoke your function 3 times, passing in different arguments each time.
 
-1. Write a function called `countPets` that takes in 2 arguments - a type of pet (string - example "dog", "cat", etc) and a number.
-  - The function should log the phrase "I have _numberBeingPassedIn_ _typeOfPetBeingPassedIn_."
+1. Write a function called `countPets` that takes in 2 arguments - a type of pet (string - example "dogs", "cats", etc) and a number.
+  - The function should log the phrase "I have `numberBeingPassedIn` `typeOfPetBeingPassedIn`."
+    - eg. `countPets("lizards", 11)` should log: "I have 11 lizards."
   - Invoke your function 3 times, passing in different arguments each time.
 
   _Hint: you'll be using concatenation or interpolation_
@@ -128,8 +132,8 @@ Write the following functions in that same Repl!
 
 <section class="note">
 ### Make Note:
-  - You should have the same number of arguments and parameters.  For example, if your function has 2 parameters, you need to pass 2 arguments everytime you invoke the function.
-  - Parameters and arguments allow us to make our code more dynamic and reusable because we can pass different values to a function on each invocation to get a different result.
+  - You should have the same number of arguments and parameters.  For example, if your function has 2 parameters, you need to pass 2 arguments every time you invoke the function.
+  - Parameters and arguments allow us to make our code more dynamic and reusable because we can pass different values to the same function on each invocation to get a different result.
 </section>
 
 ## Functions, part II
