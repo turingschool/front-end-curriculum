@@ -44,19 +44,16 @@ var fruits = [
   {
     name: 'Lemon',
     img: 'https://bit.ly/2wQwmYG',
-    rotten: false,
     id: 0
   },
   {
     name: 'Lime',
     img: 'https://bit.ly/344kBtA',
-    rotten: false,
     id: 1
   },
   {
     name: 'Apple',
     img: 'https://bit.ly/2X1v3AJ',
-    rotten: true,
     id: 2
   }
 ]
@@ -77,8 +74,9 @@ Data Model, we can use that same method anytime our data model changes.
 ## Try it #1
 
 Taking a look at [this codepen](https://codepen.io/kaylaewood/pen/PopKYYm)
-you'll find the Data Model from above, as well as some HTML and CSS. Read through all the existing code, then try adding a `render` method,
-which will create one displayed fruit for every fruit in the Data Model.
+you'll find the Data Model from above, as well as some HTML and CSS. Read through all the existing code. Notice that the `renderFruit` function is hard coded to only render the lemon.  
+
+Update the code so that the `renderFruit` function uses the Data Model to display all the fruit in the `fruits` array to the page.
 
 Be an advocate for your own learning, don't read ahead!
 </div>
@@ -88,45 +86,17 @@ Be an advocate for your own learning, don't read ahead!
 
 ```javascript
 function render() {
-  for(var i = 0; i < fruits.length; i++) {
+  for(var i = 0; i < fruits.length; i++) { // the DOM update is reliant on the data in the Data Model
     fruitBox.innerHTML += `
     <section class="fruit">
       <h2>${fruits[i].name}</h2>
       <img src=${fruits[i].img} />
-      <button id=${fruits[i].id}>Lick</button>
+      <button id=${fruits[i].id}>Eat</button>
     </section>`
   }
 }
 ```
-This code iterates through all the fruits, and builds up an HTML string based on
-the values in our Data Model. Finally, after it's finished building, it makes
-_one_ reference to the DOM, to update what our user actually _sees_. Critically,
-the Data Model is our source of truth. With out the Data Model, our render
-method is pretty meaningless.
-</section>
-
-<div class="call-to-action">
-## Try it #2
-What if we don't want the rotten fruit to render? Update the code you have so that only the fruit with a `rotten: false` render to the page.
-</div>
-
-<section class="answer">
-### Possible Solution to #2  
-
-```javascript
-function render() {
-  for(var i = 0; i < fruits.length; i++) {
-    if (!fruits[i].rotten) {
-      fruitBox.innerHTML += `
-      <section class="fruit">
-        <h2>${fruits[i].name}</h2>
-        <img src=${fruits[i].img} />
-        <button id=${fruits[i].id}>Lick</button>
-      </section>`
-    }
-  }
-}
-```
+This code iterates through all the fruits, and builds up an HTML string based on the values in our Data Model. Finally, after it's finished building, it makes _one_ reference to the DOM, to update what our user actually _sees_. Critically, the Data Model is our source of truth. With out the Data Model, our render method is pretty meaningless.
 </section>
 
 ## Making a change to our Data Model
@@ -136,36 +106,51 @@ Remember, our Data Model is our _*source of truth*_, so if a function is going
 to add something to our code, it better be updating our Data Model.
 
 <div class="call-to-action">
-## Try it #3
+## Try it #2
 
-Continuing to work in the same codepen, create a function with three arguments:
-`name`, `img`, and `rotten`. This function should be able to add a new object to the
-Data Model. Once you've finished, call your function with 3 arguments of your
-choice (we've provided a banana example for you!). Does your Data Model update? What about what the user sees?
+Continuing to work in the same codepen, let's make that `Add Fruit` button work! Uncomment the code under `Try It #2` and then create the `addFruit` function. Your function should 1. update the Data Model and 2. display the new fruit on the page.
+
+Hint: How can we reuse the `renderFruit` function?
 </div>
 
 <section class="answer">
-### Possible Solution to #3
+### Possible Solution to #2
 
 ```javascript
-function addFruit(name, img, rotten) {
-  var newFruit = {name: name, img: img, rotten: rotten, id: Date.now()};
+function addFruit(name, img) {
+  var newFruit = { name: name, img: img, id: Date.now() };
 
-  fruits.push(newFruit);
+  fruits.push(newFruit); // update the Data Model
 
-  render();
+  console.log(fruits); // see the update on the Data Model
+
+  renderFruit(); // update the DOM
 }
 ```
-You might be tempted to start using some DOM
-selectors to add in the new fruit you create, but this is an anti-pattern.
-Remember, we already have a function that is specifically designed to render our
-fruits. We're reusing our render method to show what's in our data model
-whenever anything changes. Cool!!
+You might be tempted to start using some DOM selectors to add in the new fruit you create, but this is an anti-pattern. Remember, we already have a function that is specifically designed to render our fruits. We're reusing our render method to show what's in our data model whenever anything changes. Cool!!
+
+But uh oh...the original fruits are doubling when we click the button. Let's think about what we can change in the `renderFruit` function:
+
+```js
+function renderFruit() {
+  fruitBox.innerHTML = '';
+
+  for(var i = 0; i < fruits.length; i++) {
+    fruitBox.innerHTML += `
+    <section class="fruit">
+      <h2>${fruits[i].name}</h2>
+      <img src=${fruits[i].img} />
+      <button id=${fruits[i].id}>Eat</button>
+    </section>`
+  }
+}
+```
+
 </section>
 
 
 <div class="call-to-action">
-## Try It #4
+## Try It #3
 
 It's great to be able to add fruit to our Data Model, but what about removing
 them? Create a new function that takes an id parameter, removes the fruit with
@@ -173,67 +158,22 @@ that id from our Data Model, and updates the presentation layer for our user.
 </div>
 
 <section class="answer">
-### Possible Solution to #4
+### Possible Solution to #3
 
 ```javascript
-function removeFruit(id) {
+function deleteFruit(id) {
   for (var i = 0; i < fruits.length; i++) {
     if (fruits[i].id === id) {
-      fruits.splice(i, 1);
+      fruits.splice(i, 1); // update the Data Model
     }
   }
 
-  render();
+  console.log(fruits); // see the update on the Data Model
+
+  renderFruit() // update the DOM
 }
 ```
-Notice that we are once again using the render method! Look how clean our code is!
-</section>
-
-## Challenge Time 🌶
-
-Great, so we can render, add, and remove fruits from our data model, and we're
-doing it all with only one DOM element! That's all well and good when we're just
-writing the code ourselves, but what if our user actually wants to interact with
-our page?
-
-If something our user does should change the look of the page, then it probably
-needs to change our Data Model as well.
-
-Notice those 'Lick' buttons? They all have _id attributes_ on them which
-match the id of the fruit above. We could use them in conjuction with an event
-listener to make our fruit rotten!
-
-<div class="call-to-action">
-## Try It #5
-
-Set an event listener on the `fruitBox` DOM element. Whenever someone clicks on
-one of the 'Lick' buttons, that fruit should now be labeled as 'Rotten' in the data model and no longer appear on the page.
-</div>
-
-<section class="answer">
-### Possible Solution to #5
-```javascript
-fruitBox.addEventListener('click', function (event) {
-  makeRotten(event);
-});
-
-function makeRotten(event) {
-  var id = parseInt(event.target.id);
-
-  for (var i = 0; i < fruits.length; i++) {
-    if (fruits[i].id === id) {
-      fruits[i].rotten = true;
-    }
-  }
-
-  render();
-}
-```
-We loop through all our fruits, find the one where the fruit.id matches the
-id on the button, and update it's property to indicate it is now rotten. After we've updated our
-Data Model, we re-render the model to see the change.  
-
-Interested in learning more about data attributes? Check out [this article](https://www.abeautifulsite.net/posts/working-with-html5-data-attributes/)!
+Notice that we are once again using the `renderFruits` method! Look how clean our code is!
 </section>
 
 <div class="call-to-action">
