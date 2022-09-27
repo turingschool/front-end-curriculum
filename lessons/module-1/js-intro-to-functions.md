@@ -114,7 +114,7 @@ Write the following functions in that same Repl!
 
 1. Write a function called `sayHi` that takes in 1 argument - a name (as a string).
   - The function should log the phrase "Hi, `nameBeingPassed`!".   
-    - eg. `sayHi("Nick")` should log: "Hi, Nick!"  
+  - eg. `sayHi("Nick")` should log: "Hi, Nick!"  
   - Invoke your function 3 times, passing a different name argument each time.
 
 1. Write a function called `greetFriend` that takes in 2 arguments - a name (string) and the timeOfDay (string of either "morning", "afternoon", "evening").
@@ -124,7 +124,7 @@ Write the following functions in that same Repl!
 
 1. Write a function called `countPets` that takes in 2 arguments - a type of pet (string - example "dogs", "cats", etc) and a number.
   - The function should log the phrase "I have `numberBeingPassedIn` `typeOfPetBeingPassedIn`."  
-    - eg. `countPets("lizards", 11)` should log: "I have 11 lizards."  
+  - eg. `countPets("lizards", 11)` should log: "I have 11 lizards."  
   - Invoke your function 3 times, passing in different arguments each time.
 
   _Hint: you'll be using concatenation or interpolation_
