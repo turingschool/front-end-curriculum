@@ -44,7 +44,7 @@ After the name, notice the opening and closing parentheses (note: there is NO sp
 
 The parentheses are followed by a space, and then by a pair of curly brackets! Your function code will go inside the curly brackets, in the order that you want the statements to run when the function is invoked (which we will get to in a little bit!).
 
-Let's take a look at an example function.
+Let's take a look at the example function below [in this Repl: Functions1](https://replit.com/@hfaerber/Functions1#index.js). Go ahead and fork the repl.
 
 ```javascript
 function makePizza() {
@@ -71,7 +71,7 @@ When this code is read, `makePizza()` is "invoked," all 5 statements within the 
 <section class="call-to-action">
 ### Your Turn
 
-Try creating your own functions in the console!
+Try creating your own functions in that same Repl!
 
 * Write a function that logs to the console a message of "Let's add!", and then logs a sum of five different integers.
 * Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.
@@ -85,15 +85,17 @@ _Make sure you're thinking about your naming conventions!_
 Sometimes you need to give a function some information in order for it to do its job. You can give that function the information it needs by providing _parameters_ in the function declaration. These are place holders that you identify with appropriately named labels inside the parentheses of your named function. The words you use for your parameters act like variables INSIDE the function, which means they serve as a means to pass values.
 
 ### Parameters vs. Arguments
-Its a subtle difference. Basically, when you declare a function, and you stipulate the function will accept some bits of information, those are parameters. Then, when you pass the values of the parameters, those are called arguments. Like this:
+Its a subtle difference. Basically, when you declare a function, and you stipulate the function will accept some bits of information, those are parameters. Then, when you pass the values of the parameters, those are called arguments.  
+
+Let's check out the example below [in this Repl: Functions2-Parameters&Arguments](https://replit.com/@hfaerber/Functions2-ParametersandArguments#index.js). Fork the repl.
 
 ```javascript
-// parameters named on declaration of function
+// parameters are named in the declaration of a function
 function bakeCake(flavor, frosting, decoration) {
   return `I am baking a ${flavor} cake with ${frosting}. It will be decorated with ${decoration}.`
 }
 
-// arguments passed into a called function
+// arguments are passed in when the function is called/invoked
 bakeCake("carrot", "cream cheese icing", "walnuts");
 ```
 
@@ -102,6 +104,26 @@ What is returned? Could I call this function again but with different arguments?
 A good way to think of parameters and arguments is this:  
 * Parameters are the *placeholders* declared in the function declaration (similar to declaring a variable).  
 * Arguments are the *assigned values* for each parameter/placeholder which are passed in each time the function is invoked.  
+
+<section class="call-to-action">
+### Your Turn
+
+Write the following functions in that same Repl!
+
+1. Write a function called `sayHi` that takes 1 argument - a name (as a string).
+  - The function should log the phrase "Hi, _nameBeingPassed_!".   
+  - Invoke your function 3 times, passing a different name argument each time.
+
+1. Write a function called `greetFriend` that takes in 2 arguments - a name (string) and the timeOfDay (string of either "morning", "afternoon", "evening").
+  - The function should log the phrase "Good _timeOfDayBeingPassedIn_, _nameBeingPassedIn_!"
+  - Invoke your function 3 times, passing in different arguments each time.
+
+1. Write a function called `countPets` that takes in 2 arguments - a type of pet (string - example "dog", "cat", etc) and a number.
+  - The function should log the phrase "I have _numberBeingPassedIn_ _typeOfPetBeingPassedIn_."
+  - Invoke your function 3 times, passing in different arguments each time.
+
+
+</section>
 
 ## Functions, part II
 
