@@ -22,7 +22,7 @@ tags: javascript, foundation, arrays
 
 We will not get on a zoom call until about halfway through this lesson. We want to give YOU a chance to dig into the code and explore before we all get together and talk about arrays. It's okay (and expected!) that some of this activity will be difficult on your own. We want you to get used to that feeling - not knowing all the answers - and start to enjoy the process of diving in and getting your hands dirty in the code!
 
-Spend **one hour** working through [this repl](https://replit.com/@kaylaewood/arrays-1#index.js). As you're working, write down the following things in your notes:
+**Spend one hour working through [this repl](https://replit.com/@kaylaewood/arrays-1#index.js)**. As you're working, write down the following things in your notes:
 * Ah-ha moments/Key Points (for example: `The index of the first element of the array is 0, not 1.`)
 * Questions (for example: `When would you want to have an array of nested arrays?`)
 
