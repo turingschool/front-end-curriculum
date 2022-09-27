@@ -133,7 +133,7 @@ But uh oh...the original fruits are doubling when we click the button. Let's thi
 
 ```js
 function renderFruit() {
-  fruitBox.innerHTML = '';
+  fruitBox.innerHTML = ''; // reset the HTML
 
   for(var i = 0; i < fruits.length; i++) {
     fruitBox.innerHTML += `
