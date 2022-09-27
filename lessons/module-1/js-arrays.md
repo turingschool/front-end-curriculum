@@ -20,7 +20,9 @@ tags: javascript, foundation, arrays
 
 ## Part 1: Student Exploration
 
-We will not get on a zoom call until about halfway through this lesson. We want to give YOU a chance to dig into the code and explore before we all get together and talk about arrays. It's okay (and expected!) that some of this activity will be difficult on your own. We want you to get used to that feeling - not knowing all the answers - and start to enjoy the process of diving in and getting your hands dirty in the code!
+We will start this lesson with a BIG chunk of work time. You might be thinking - *What! We haven't learned anything yet!* That's not true! You already know some stuff about arrays from Mod 0. Plus, you have problem solving skills (and googling skills 😉).
+
+We want to give YOU a chance to dig into the code and explore before we all get together and talk about arrays. It's okay (and expected!) that some of this activity will be difficult on your own. We want you to get used to that feeling - not knowing all the answers - and start to enjoy the process of diving in and getting your hands dirty in the code!
 
 **Spend one hour working through [this repl](https://replit.com/@kaylaewood/arrays-1#index.js)**. As you're working, write down the following things in your notes:
 * Ah-ha moments/Key Points (for example: `The index of the first element of the array is 0, not 1.`)
@@ -30,9 +32,10 @@ If you get stuck...
 * Reference [this Intro to Arrays lesson](https://frontend.turing.edu/lessons/module-1/js-intro-to-arrays.html)
 * Reference [javascript arrays documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 * Google (for example: `reassign element in array javascript`)
-* Write down your question/what exactly you're stuck on and move on. Then ask that question when we get on the zoom call!
+* Press that `Ask for help` button in your breakout room - the instructor will pop in and support!
+* Write down your question and move on. Then ask that question when we come back together!
 
-After this hour, we will get on the zoom call in your calendar and continue with the remainder of this lesson.
+After this hour, we will come back together and continue with the remainder of this lesson.
 
 ## Part 2: Class Discussion
 
