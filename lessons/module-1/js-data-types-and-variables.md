@@ -37,7 +37,7 @@ We want to give YOU a chance to dig into the code and explore before we all get 
 
 
 
-**Spend one hour working through [this repl]( )**. As you're working, write down the following things in your notes:
+**Spend one hour working through [this repl](https://replit.com/@hfaerber/DataTypesandVariables#index.js)**. As you're working, write down the following things in your notes:
 * Ah-ha moments/Key Points (for example: `A boolean is always a true or false value.`)
 * Questions (for example: `Do you ever use null or undefined on purpose?`)
 
@@ -47,7 +47,7 @@ If you get stuck...
 * Google (for example: `null vs undefined javascript`)
 * Write down your question/what exactly you're stuck on and move on. Then ask that question when we get on the zoom call!
 
-After this hour, we will get on the zoom call in your calendar and continue with the remainder of this lesson.
+After this hour, we will continue with the remainder of this lesson guided primarily by your questions.
 
 ## Part 2: Class Discussion
 
