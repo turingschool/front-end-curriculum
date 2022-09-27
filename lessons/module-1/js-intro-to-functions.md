@@ -130,39 +130,42 @@ Write the following functions in that same Repl!
 
 ### Getting A Value from A Function
 
-Some functions return information to the code that called them. When a function performs a calculation, like 2 + 2, it will return the "answer" of 4, right?
+Some functions need to return information to the code that called them. If we want to get a value back from our function when it's invoked, we need to use the `return` keyword.
 
-<section class="call-to-action">
-### Try it out
+```js
+function addTwoNumbers(num1, num2) {
+  return num1 + num2;
+}
+```
 
-In your Repl:
-1. Write a function called `performSimpleMath` that adds 2 + 2
-1. Invoke `performSimpleMath` - what happened?
-1. What if you needed to use the result of `performSimpleMath` somewhere else in your code? For example, what if you needed to concatenate the result into a string: `"I need " + performSimpleMath() + " pizzas!"`
-  - Try it out and see what happens
-  - Journal some ideas about why this is happening!
+<section class="answer">
+### But why would we need to do that?
+
+Sometimes we have functions that need to do some sort of calculation or data manipulation, then give us back the result so that we can use that value elsewhere in our code.  Often, we will take that returned value and use it to update what is being displayed to our user in an application.  
+For example:
+  - A user enters their birthday.  
+  - We have a function that takes in that birthdate and uses it to calculate their age.  
+  - Our function will then _return_ their age value.
+  - We use that returned age value in our code that displays user info on the webpage.
+
+You will often be invoking functions within other functions and using their return values elsewhere as you build your code.
+Some functions return something, other functions just _do_ something.  
 
 </section>
 
-<section class="answer">
-### Why This is Happening
 
-We still need the keyword _return_ in order to return that value back from a function. Let's work with some return statements in functions with parameters in the console next!
+<section class="call-to-action">
+### Try it out with [this Repl](https://replit.com/@hfaerber/Functions2-Returns#index.js). Fork the Repl.
+
+- Take time to read through and understand the example.  Talk through the **Think About It** questions.
+- Work through the **Try It** exercise.  Note any questions that come up.  Play around with it. Get weird!
+
 </section>
 
 ### The Return Statement
 
-
 ```javascript
 // take note of what is returned or logged when each function is invoked!
-
-function addTwoNumbers(num1, num2) {
-  num1 + num2;
-}
-
-function addTwoNumbers(num1, num2) {
-  return num1 + num2;
-}
 
 function buildAHouse(material, cost) {
   console.log("I'm building a house!");
@@ -179,27 +182,15 @@ function buildAHouse(material, cost) {
 
 <section class="note">
 ### Make Note:
-- If there is no return statement in a function, `undefined` is returned instead.  
-- The return statement halts the execution of the function. This means any lines of code after the return statement will not run.
-- A function can only return 1 value on any given invocation.
+  - If there is no return statement in a function, `undefined` is returned instead.  
+  - The return statement halts the execution of the function. This means any lines of code after the return statement will not run.  
+  - A function can only return 1 value on any given invocation.  
 </section>
 
-The following return statements are all examples that would halt function execution:
-
-```javascript
-return;
-return true;
-return false;
-return x;
-return x + y / 3;
-return "We've stopped executing!";
-
-// and so many more!
-```
 
 <section class="call-to-action">
 ### Paired Practice
-Work through <a href="https://repl.it/repls/LegalCadetblueAddresses">this practice REPL</a> with a partner
+Work through <a href="https://replit.com/@hfaerber/Functions3-MorePractice#index.js">this practice REPL</a> with a partner
 </section>
 
 ## Conditionals
