@@ -44,7 +44,7 @@ After the name, notice the opening and closing parentheses (note: there is NO sp
 
 The parentheses are followed by a space, and then by a pair of curly brackets! Your function code will go inside the curly brackets, in the order that you want the statements to run when the function is invoked (which we will get to in a little bit!).
 
-Let's take a look at the example function below [in this Repl: Functions1](https://replit.com/@hfaerber/Functions1#index.js). Go ahead and fork the repl.
+Let's take a look at the example function below [in this Repl](https://replit.com/@hfaerber/Functions1#index.js). Go ahead and fork the repl.
 
 ```javascript
 function makePizza() {
@@ -87,7 +87,7 @@ Sometimes you need to give a function some information in order for it to do its
 ### Parameters vs. Arguments
 Its a subtle difference. Basically, when you declare a function, and you stipulate the function will accept some bits of information, those are parameters. Then, when you pass the values of the parameters, those are called arguments.  
 
-Let's check out the example below [in this Repl: Functions2-Parameters&Arguments](https://replit.com/@hfaerber/Functions2-ParametersandArguments#index.js). Fork the repl.
+In your repl, copy/paste the example below:
 
 ```javascript
 // parameters are named in the declaration of a function
@@ -99,7 +99,8 @@ function bakeCake(flavor, frosting, decoration) {
 bakeCake("carrot", "cream cheese icing", "walnuts");
 ```
 
-What is returned? Could I call this function again but with different arguments?
+1. What is returned?  
+2. What happens when you invoke the function again passing in different arguments?  Try it a few times. Get weird!
 
 A good way to think of parameters and arguments is this:  
 * Parameters are the *placeholders* declared in the function declaration (similar to declaring a variable).  
@@ -111,7 +112,7 @@ A good way to think of parameters and arguments is this:
 Write the following functions in that same Repl!
 
 1. Write a function called `sayHi` that takes 1 argument - a name (as a string).
-  - The function should log the phrase "Hi, _nameBeingPassed_!".   
+  - The function should log the phrase "Hi, <u>_nameBeingPassed_</u>!".   
   - Invoke your function 3 times, passing a different name argument each time.
 
 1. Write a function called `greetFriend` that takes in 2 arguments - a name (string) and the timeOfDay (string of either "morning", "afternoon", "evening").
@@ -122,7 +123,7 @@ Write the following functions in that same Repl!
   - The function should log the phrase "I have _numberBeingPassedIn_ _typeOfPetBeingPassedIn_."
   - Invoke your function 3 times, passing in different arguments each time.
 
-
+  _Hint: you'll be using concatenation or interpolation_
 </section>
 
 ## Functions, part II
@@ -134,12 +135,12 @@ Some functions return information to the code that called them. When a function 
 <section class="call-to-action">
 ### Try it out
 
-Open up a browser window, and head to the console
-* Write a function called `performSimpleMath` that adds 2 + 2
-* Invoke `performSimpleMath` - what happened?
-* What if you needed to use the result of `performSimpleMath` somewhere else in your code? For example, what if you needed to concatenate the result into a string: `"I need " + performSimpleMath() + " pizzas!"`
-* Try it out and see what happens
-* Journal some ideas about why this is happening!
+In your Repl:
+1. Write a function called `performSimpleMath` that adds 2 + 2
+1. Invoke `performSimpleMath` - what happened?
+1. What if you needed to use the result of `performSimpleMath` somewhere else in your code? For example, what if you needed to concatenate the result into a string: `"I need " + performSimpleMath() + " pizzas!"`
+  - Try it out and see what happens
+  - Journal some ideas about why this is happening!
 
 </section>
 
@@ -177,11 +178,13 @@ function buildAHouse(material, cost) {
 ```
 
 <section class="note">
-### Note
-If the expression is omitted/there is no return statement, `undefined` is returned instead.
+### Make Note:
+- If there is no return statement in a function, `undefined` is returned instead.  
+- The return statement halts the execution of the function. This means any lines of code after the return statement will not run.
+- A function can only return 1 value on any given invocation.
 </section>
 
-The following return statements are all examples that would break function execution:
+The following return statements are all examples that would halt function execution:
 
 ```javascript
 return;
