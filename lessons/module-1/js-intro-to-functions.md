@@ -85,7 +85,7 @@ _Make sure you're thinking about your naming conventions!_
 Sometimes you need to give a function some information in order for it to do its job. You can give that function the information it needs by providing _parameters_ in the function declaration. These are place holders that you identify with appropriately named labels inside the parentheses of your named function. The words you use for your parameters act like variables INSIDE the function, which means they serve as a means to pass values.
 
 ### Parameters vs. Arguments
-Its a subtle difference. Basically, when you declare a function, and you stipulate the function will accept some bits of information, those are parameters. Then, when you pass the values of the parameters, those are called arguments.  
+When you declare a function, and you stipulate the function will accept some bits of information, those are parameters. Then, when you pass in values for those parameters as you invoke the function, those are called arguments.  
 
 In your repl, copy/paste the example below:
 
@@ -124,6 +124,12 @@ Write the following functions in that same Repl!
   - Invoke your function 3 times, passing in different arguments each time.
 
   _Hint: you'll be using concatenation or interpolation_
+</section>
+
+<section class="note">
+### Make Note:
+  - You should have the same number of arguments and parameters.  For example, if your function has 2 parameters, you need to pass 2 arguments everytime you invoke the function.
+  - Parameters and arguments allow us to make our code more dynamic and reusable because we can pass different values to a function on each invocation to get a different result.
 </section>
 
 ## Functions, part II
@@ -254,9 +260,11 @@ Try invoking findLocation with an argument of "taco bell". What happens? Why?
 <section class="call-to-action">
 ### Your Turn
 
-In your Repl, declare and assign a variable named `favoriteAnimal`. Then, write a function with a conditional that logs a different message based on your favorite kind of animal.  Invoke the function and run the Repl.
+In your Repl,
+  - Write a function called "readTheRoom" that takes in one argument - a vibe (string of "happy", "sad", etc)
+  - In the function, write a conditional that logs a different statement based on the vibe you pass as an argument when you invoke. Try including an "if", "else if" and an "else".
+  - Invoke the function a few times with different vibes passed in to see that conditional logic working.
 
-Then change the value assigned to "favoriteAnimal", and run the Repl again to ensure your conditional is behaving as you expect.
 </section>
 
 
