@@ -260,8 +260,8 @@ Then change the value assigned to "favoriteAnimal", and run the Repl again to en
 </section>
 
 
-### ES5 vs ES6 Functions
-So far we've only been working with ES5 functions. **In Mod 1, we will focus only on ES5 functions.**  ES6 functions are also called arrow functions.  You might see them in your exploration but we prefer you stick to ES5 functions for now.  You'll dive into arrow functions in Mod 2 as you learn the nuances of their sometimes unexpected behavior.
+### ES5 "Regular" functions vs ES6 Arrow Functions
+So far we've only been working with plain ol' ES5 functions. **In Mod 1, we will focus only on ES5 functions.**  You might see ES6 arrow functions in your exploration and research but we prefer you stick to ES5 functions for now.  You'll dive into arrow functions in Mod 2 as you learn the nuances of their sometimes unexpected behavior.
 
 <!-- So far in this lesson, we've only looked at regular functions, also known as **ES5 functions**. This refers to ECMAScript 2009, also known as ES5, which was the first major revision to JavaScript. ECMAScript 2015, also known as ES6, was the second major revision to JavaScript. With ES6 came **ES6 functions**, also called **arrow functions**.  
 
@@ -273,7 +273,6 @@ Arrow functions are really cool, but they can sometimes cause unexpected behavio
 * In a breakout room, complete the exercise found on [this repl](https://repl.it/@kaylaewood/functionsPractice#index.js).
 * Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
 </section> -->
-
 
 
 ### Wrap Up
