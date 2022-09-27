@@ -81,7 +81,13 @@ Technically also:
 
 <section class="answer">
 ### Whats the difference and use cases for undefined vs null?
-Both mean "nothing".  Null is like a placeholder where someone proactively decided to specifically declare "nothing".  Undefined is kind of unintentional. Like, it's nothing because no one got around to declaring anything so it defaults to "nothing".
+Both mean "nothing".  
+Null is like a placeholder where someone proactively decided to specifically declare "nothing".  
+Undefined is kind of unintentional. Like, it's nothing because no one got around to declaring anything so it defaults to "nothing".
+
+A use case for null might be creating a `userEmail` variable and assigning it to null in case the user does not provide an email.   
+
+You aren't likely to specifically assign a value of `undefined` so there's not a great use case to use as an example.  
 </section>
 
 <section class="answer">
@@ -153,9 +159,5 @@ As you move through the program, you'll work with `let` and `const` more and mor
 
 </section>
 
-
-## More Practice
-
-If you'd like more practice with arrays, work through the exercises in [this repl](https://replit.com/@kaylaewood/NestedDataPractice#index.js).
 
 Post any questions you still have in your main cohort channel!
