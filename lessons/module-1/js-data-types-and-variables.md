@@ -21,13 +21,12 @@ Since this is your first mod 1 lesson, let's go over some general classroom expe
 ## Vocabulary
 
 - `Data Type` A kind of data, defined by the values it can hold and the operations that can be done on it
-- `Primitive type` Also know as a `simple` data type. The primitives in Javascript that we will care about are Boolean, Undefined, Null, Number, String (BUNNS).  
+- `Primitive type` Also known as a `simple` data type. The primitives in Javascript that we will care about are Boolean, Undefined, Null, Number, String (BUNNS).  
 - `Variable` A container for a value. The main building block for all programming
 - `Declare` Creating a new variable (distinct from assignment)
 - `Assignment` Assigning a value to a variable
 - `Concatenation` The binding of multiple strings together using the `+` string operator
 - `Interpolation` The process of injecting a variable directly into a string.
-- `Template literal` Template literals are string literals that provide an easy way to interpolate a variable or expression into a string.
 
 ## Part 1: Student Exploration
 
@@ -130,7 +129,6 @@ var interpolatedString = `My friend ${name} is ${age} years old and lives in ${D
 ```
 
 </section>
-
 
 <section class="answer">
 ### What is type coercion?
