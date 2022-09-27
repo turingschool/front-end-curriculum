@@ -119,7 +119,7 @@ Write the following functions in that same Repl!
 
 1. Write a function called `greetFriend` that takes in 2 arguments - a name (string) and the timeOfDay (string of either "morning", "afternoon", "evening").
   - The function should log the phrase "Good `timeOfDayBeingPassedIn`, `nameBeingPassedIn`!"  
-    - eg. `greetFriend("Nick", "morning")` should log: "Good morning, Nick!"  
+  - eg. `greetFriend("Nick", "morning")` should log: "Good morning, Nick!"  
   - Invoke your function 3 times, passing in different arguments each time.
 
 1. Write a function called `countPets` that takes in 2 arguments - a type of pet (string - example "dogs", "cats", etc) and a number.
