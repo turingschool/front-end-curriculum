@@ -219,23 +219,7 @@ Some examples of expressions we could use for a conditional are:
 * `userCity === "Denver"`
 * `isTired`
 
-Now for some real conditional examples.
-
-```javascript
-var hoursOfSleep = 8;
-function evaluateSleep() {  
-  if (hoursOfSleep < 6) {
-    console.log("I am groggy.");
-  } else {
-    console.log("I feel fantastic!");
-  }
-}
-
-evaluateSleep();
-```
-
-<section class="answer">
-### See it improved with a parameter and argument
+Now for some real conditional examples. Copy paste these into a Repl and play around!
 
 ```javascript
 function evaluateSleep(hoursOfSleep) {  
@@ -248,25 +232,8 @@ function evaluateSleep(hoursOfSleep) {
 
 evaluateSleep(8);
 ```
-</section>
+Try invoking evaluatesSleep with an argument of 4. What happens? Why?
 
-```javascript
-var nextLocation = "home";
-function findLocation() {  
-  if (nextLocation === "home") {
-    console.log("It's been a long day, let's go home!");
-  } else if (nextLocation === "work") {
-    console.log("Good morning, finding the fastest route to work!");
-  } else {
-    console.log("Finding location.  Found it!  Let's go!");
-  }
-}
-
-findLocation();
-```
-
-<section class="answer">
-### See it improved with a parameter and argument
 
 ```javascript
 function findLocation(nextLocation) {  
@@ -281,31 +248,33 @@ function findLocation(nextLocation) {
 
 findLocation("home");
 ```
-</section>
+
+Try invoking findLocation with an argument of "taco bell". What happens? Why?
 
 <section class="call-to-action">
 ### Your Turn
 
-In your console, declare and assign a variable named `favoriteAnimal`. Then, write a function with a conditional that logs a different message based on your favorite kind of animal.
+In your Repl, declare and assign a variable named `favoriteAnimal`. Then, write a function with a conditional that logs a different message based on your favorite kind of animal.  Invoke the function and run the Repl.
 
-**Tip:** You can use the `up arrow` in the Dev Tools console to search through previous commands you have run.
-
-Use the `up arrow` to avoid waiting time re-typing. Before you hit return, change the value assigned to "favoriteAnimal", to ensure your conditional is behaving as you expect.
+Then change the value assigned to "favoriteAnimal", and run the Repl again to ensure your conditional is behaving as you expect.
 </section>
 
 
-
 ### ES5 vs ES6 Functions
-So far in this lesson, we've only looked at regular functions, also known as **ES5 functions**. This refers to ECMAScript 2009, also known as ES5, which was the first major revision to JavaScript. ECMAScript 2015, also known as ES6, was the second major revision to JavaScript. With ES6 came **ES6 functions**, also called **arrow functions**.  
+So far we've only been working with ES5 functions. **In Mod 1, we will focus only on ES5 functions.**  ES6 functions are also called arrow functions.  You might see them in your exploration but we prefer you stick to ES5 functions for now.  You'll dive into arrow functions in Mod 2 as you learn the nuances of their sometimes unexpected behavior.
 
-**In Mod 1, we will focus on ES5 functions.** Arrow functions are really cool, but they can sometimes cause unexpected behavior if you're not careful. The concepts surrounding this behavior will be covered in Mod 2. That said, we want to show you some arrow functions now as a preview!
+<!-- So far in this lesson, we've only looked at regular functions, also known as **ES5 functions**. This refers to ECMAScript 2009, also known as ES5, which was the first major revision to JavaScript. ECMAScript 2015, also known as ES6, was the second major revision to JavaScript. With ES6 came **ES6 functions**, also called **arrow functions**.  
+
+Arrow functions are really cool, but they can sometimes cause unexpected behavior if you're not careful. The concepts surrounding this behavior will be covered in Mod 2. That said, since you might run into some arrow functions here is a self-teachable preview!
 
 <section class="call-to-action">
 ### Paired Practice
 
 * In a breakout room, complete the exercise found on [this repl](https://repl.it/@kaylaewood/functionsPractice#index.js).
 * Be prepared to discuss as a whole group after. Write down any questions that pop up along the way so we can discuss as a group!
-</section>
+</section> -->
+
+
 
 ### Wrap Up
 
