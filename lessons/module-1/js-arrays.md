@@ -86,3 +86,9 @@ Just like we can reassign a variable to a new value, we can access any element i
 
 By combining what we know about objects and arrays, we can use bracket notation and dot notation to access nested information. For example, I can access the string of `'yellow'` with `craftSupplies[1].colorsAvailable[1]`
 </section>
+
+## More Practice
+
+If you'd like more practice with arrays, work through the exercises in [this repl](https://replit.com/@kaylaewood/NestedDataPractice#index.js).
+
+Post any questions you still have in your main cohort channel!
