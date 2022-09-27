@@ -6,8 +6,9 @@ tags: javascript, foundation, arrays
 
 ## Learning Goals
 
-* Understand array literals (arrays)
+* Review what you know about arrays
 * Add and change values to arrays via their indices  
+* Access nested data (arrays and objects)
 
 ## Vocabulary
 
@@ -17,121 +18,20 @@ tags: javascript, foundation, arrays
 - `Bracket Notation` How we access individual elements of an array. Either to
   express the element, or assign a new element.
 
-<section class="call-to-action">
-### Warm Up
+## Part 1: Student Exploration
 
-* Add your responses to the prompts on [this JamBoard](https://jamboard.google.com/d/1YTS-L4g4FT87J-SQbHgZQQl3DATxgiNx24GnFJHT0Cg/edit?usp=sharing). You don't have to answer every prompt!
-</section>
+We will not get on a zoom call until about halfway through this lesson. We want to give YOU a chance to dig into the code and explore before we all get together and talk abotu arrays. It's okay (and expected!) that some of this activity will be difficult on your own. We want you to get used to that feeling - not knowing all the answers - and start to enjoy the process of diving in and getting your hands dirty in the code!
 
-## Arrays
+Spend **one hour** working through [this repl](https://replit.com/@kaylaewood/arrays-1#index.js). As you're working, write down the following things in your notes:
+* Ah-ha moments/Key Points (for example: `The index of the first element of the array is 0, not 1.`)
+* Questions (for example: `When would you want to have an array of nested arrays?`)
 
-An array is a complex data type. Instead of storing just one value, it stores an ordered list of values. Each value is referred to as an `element`. You should consider using an array whenever you are working with a collection of values of the same data type, or values that are related to one another.
+If you get stuck...
+* Reference [this Intro to Arrays lesson](https://frontend.turing.edu/lessons/module-1/js-intro-to-arrays.html)
+* Reference [javascript arrays documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+* Google (for example: `reassign element in array javascript`)
+* Write down your question/what exactly you're stuck on and move on. Then ask that question when we get on the zoom call!
 
-An array is capable of holding any type of data (even objects and other arrays!), but generally each array should hold just one type of data. There is not a certain number of elements an array can or should contain:
+After this hour, we will get on the zoom call in your calendar and continue with the remainder of this lesson.
 
-```js
-// Good practice - each array only holds one type of data
-var rainbowColors = ['Red', 'Orange', 'Yellow'];
-var lotteryNumbers = [33, 72, 64, 18, 17, 85];
-
-var denver = "Denver, CO";
-var raleigh = "Raleigh, NC";
-var atlanta = "Atlanta, GA";
-
-var locations = [denver, raleigh, atlanta];
-
-
-// Bad practice - this array holds a mix of data types
-var randomData = ['hello', true, 100, denver, [1, 2, 3]];
-```
-You can create an array just like you would any other variable, using the `var` keyword followed by the name of your array. The values are assigned to the array inside a pair of square brackets (`[]`), and each element is comma-separated. The above technique for creating an array is known as an **array literal**.
-
-You can also write an array with values on separate lines, like so:
-
-```javascript
-var modOneLessons = [
-  'JS: Data Types, Variables, Conditionals',
-  'JS: Intro to Functions',
-  'JS: Intro to Unit Testing'
-];
-```
-This is good practice when you have lengthy content!
-
-<section class="call-to-action">
-### Stop and Think
-
-- Consider social media applications that you use (or other favorite websites).
-- What are some examples of related data that the application might store in an array?
-</section>
-
-## Accessing Values in Arrays
-
-Each value in an array is automatically given a number called an **index**. This index can be used to access a particular value in any given array.
-
-Indices begin at 0 and order incrementally. So in the following `colors` example, the following is true:
-
-- color white has an index of 0
-- color black has an index of 1
-- color pink has an index of 2
-
-You can change and access values in an array by using their index. Walk through the following in the console or in a repl:
-
-```javascript
-// Create the array
-var colors = ['white', 'black', 'pink'];
-
-// Check the value of colors
-colors;
-
-// Update the third value in the array
-colors[2] = 'blue';
-
-// Check the value of colors
-colors;
-
-// Get the value of the 1st element
-colors[0];
-```
-
-<section class="call-to-action">
-### Practice!
-
-* Fork [this repl](https://replit.com/@HannahHudson/03-arrays#index.js) and complete the prompts.
-</section>
-
-## Accessing and Updating Nested Data
-
-Often, arrays and objects will be used in tandem to hold data. We can dig into data by putting together what we've learned about accessing objects and arrays. Look below for an example:
-
-```javascript
-var instructors = [
-  { name: 'Will', program: 'FE', modsTaught: [1, 2, 3, 4] },
-  { name: 'Hannah', program: 'FE', modsTaught: [1, 2] },
-  { name: 'Heather', program: 'FE', modsTaught: [1] },
-  { name: 'Ian', program: 'BE', modsTaught: [1, 2, 3, 4] }
-];
-
-instructors[0];
-// { name: 'Will', program: 'FE', modsTaught: [ 1, 2, 3, 4 ] }
-
-instructors[1].name;
-// 'Hannah'
-
-instructors[2].modsTaught[0];
-// 1
-
-instructors[1].program = 'BE';
-instructors[1];
-// { name: 'Hannah', program: 'BE', modsTaught: [ 1, 2 ] }
-```
-
-<section class="call-to-action">
-### More Practice!
-
-Start by forking [this repl](https://replit.com/@kaylaewood/NestedDataPractice#index.js) and then complete all the exercises.
-</section>
-
-### Dig Deeper
-
-* [JS Style Guide](https://github.com/turingschool-examples/javascript)
-* [Seven JS Quirks I Wish I'd Known About](http://developer.telerik.com/featured/seven-javascript-quirks-i-wish-id-known-about/#expdec)  
+## Part 2: Class Discussion
