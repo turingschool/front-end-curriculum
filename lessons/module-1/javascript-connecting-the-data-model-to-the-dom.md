@@ -188,7 +188,7 @@ If you get stuck or want inspiration, [here is one way you could tackle it](http
 </div>
 
 <div class="call-to-action">
-## Enough with the fruit! Let's look at a REAL project!
+## Enough with the codepens! Let's look at a REAL project!
 
 Now that we have more context for how to separate the data model and the DOM, let's look back at your paired project!  
 
