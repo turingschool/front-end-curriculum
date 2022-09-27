@@ -42,7 +42,7 @@ Asking questions is an essential part of being a developer. Take a few minutes r
 
 ### Key Points
 
-We just went through **a lo** of information. Let's go over the most important things we need to know about arrays.  
+We just went through **a lot** of information. Let's go over the most important things we need to know about arrays.  
 
 <section class="answer">
 ### How should we name our arrays?
