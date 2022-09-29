@@ -40,7 +40,7 @@ We want you to feel empowered to skip some classes if you feel like there is a b
 
 If you decide to skip a lesson...
 * You should always read through the lesson on your own. If you can complete all of the activities in the lesson without help, you should feel confident skipping that lesson. We recommend doing this no later than the day before the lesson is scheduled. That way, if you realize that you need to attend the class, it's not too late!  
-* You should be spending this time productively. It's not to your benefit to use this time as "off" time. You can use this time to pre-teach an upcoming lesson, review or update your notes, or work on anything in the [Extra Practice page](https://frontend.turing.io/lessons/module-1/extra-practice.html).
+* You should be spending this time productively. It's not to your benefit to use this time as "off" time. You can use this time to pre-teach an upcoming lesson, review or update your notes, or work on anything in the [Extra Practice page](https://frontend.turing.edu/lessons/module-1/extra-practice.html).
 * DM all instructors prior to the start of class to let us know. If you do not tell us ahead of time, you will be marked absent.
 
 
@@ -62,5 +62,5 @@ If you decide to skip a lesson...
 
 <!--
   TO DO:
-  
+
 -->
