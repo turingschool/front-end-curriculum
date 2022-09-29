@@ -41,9 +41,12 @@ Here is a video demonstrating most functionality of the game:
 
 In this project, we will not be providing detailed iterations. We want you to exercise your skills in planning out work!
 
-Notes:
-* A timeout is used after a completed game to reset the board.
-* No need to match colors or icons, but the overall layout should be the same. You can get as creative as you would like with your Rock Paper Scissors design!
+**Required Features:**
+* Both players' wins should be displayed.
+* Both players' selected fighter icon should be displayed each round.
+* Winner (or Draw) should be announced each round.
+* A timeout is used after a completed round to reset the board.
+* The overall layout should be the same but you can choose different colors and icons if you want to get creative with your with your Rock Paper Scissors design!
 * This game is played by one user against a computer. The computer player should be an instantiation of Player and have the ability to make a random choice.
 * You'll need to make two versions of Rock, Paper, Scissors - "classic" and some variation. The variation should include more than 3 options (the one in the video has 5). You can invent your own variation, or do some research on variations [here](https://www.wrpsa.com/different-variations-of-rock-paper-scissors/). Make sure you communicate the rules to your user!
 
@@ -95,7 +98,7 @@ This workflow is not required, but will help you meet the overall requirements o
 
 # Notes on Project Feedback
 
-The rubric below serves as a guide for both **students** and **instructors**. 
+The rubric below serves as a guide for both **students** and **instructors**.
 
 **Students:**
 - It should be used as a reference throughout the project to keep on track and guide learning.
@@ -113,14 +116,14 @@ The evaluation will provide feedback by answering the only important question:
 
 This project will answer that question, being marked as **yes**, **not yet**, and **wow**. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
 
-The overall project outcome (yes, not yet, wow) is determined by "averaging" each section's outcome. You can think of a "yes" being worth a  1, a "not yet" being worth a 0, and a "wow" being worth a 2. 
+The overall project outcome (yes, not yet, wow) is determined by "averaging" each section's outcome. You can think of a "yes" being worth a  1, a "not yet" being worth a 0, and a "wow" being worth a 2.
 
 An average that is above 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. An average of 0.5 or below is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below).
 
 <section class="answer">
 ### A important note about the possible outcomes
 
-**Yes** indicates that the student/team is ON TRACK in this area! YES you showed us you understand the concept! 
+**Yes** indicates that the student/team is ON TRACK in this area! YES you showed us you understand the concept!
 - The student/team demonstrates a good understanding of the concept
 
 **Not Yet** indicates that the student/team is BEHIND in this area - you showed us that you don't yet understand the concept
@@ -134,7 +137,7 @@ An average that is above 0.5 is considered a yes - a passing project that demons
 - "Wow" often does not look like extra features, but instead looks like thoughtful refactoring and polish 💅
 </section>
 
---- 
+---
 
 ## Rubric
 
@@ -151,7 +154,7 @@ Here is what the final score means in terms of completing the module:
 * **Yes:** Student will complete module if prior project work, attendance, and final assessment corroborate readiness
 * **Not Yet** Student needs more time with concepts and work covered in module
 
-**Please note that a passing project must include a fully playable game.**
+**Please note that a passing project must include a fully playable game that includes all the required features outlined above.**
 
 <section class="note">
 ### Note about the below criteria
@@ -168,11 +171,11 @@ As mentioned above, functionality does have more weight in this final project in
 <section class="answer">
 ### Functionality competency examples
 
-- The user is able to play an entire game successfully (win, draw, display player data updates).
+- Application is fully complete (matches all required features listed above without bugs).
 
 ✨WOW✨ can look like:
 
-- Application is fully complete (matches all functionality from demo without bugs) and implements additional functionality devised by the student..
+- Application is fully complete (matches all required features listed above without bugs) _and_ implements additional functionality devised by the student.
 </section>
 
 <section class="answer">
