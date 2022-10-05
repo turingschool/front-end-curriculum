@@ -109,8 +109,12 @@ Testing Tip:
 When writing tests for classes, you should test:  
   * each class property  
   * each class method  
-    * what does the method return?  
-    * does the method update any class properties?  
+
+Remember to test all possible outcomes (happy path/sad path/etc).  Ask yourself:  
+  - What is the value of each property?  
+  - Does the method return anything?  
+  - Does the method update any properties?
+  - Are there different possible outcomes to test for based on different arguments being passed in?
 </section>
 
 <section class="call-to-action">
