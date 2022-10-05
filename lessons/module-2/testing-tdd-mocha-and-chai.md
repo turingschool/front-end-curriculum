@@ -255,17 +255,11 @@ describe('Player', function() {
 ```
 
 <section class="call-to-action">
-### In your notebook  
+### In Your Notebook  
   1. Could we use one of the following assertion statements instead? Why/why not?  
-  ```js  
-  //check that winningWords is an array  
-  expect(player.winningWords)to.be.an('array');  
-
-  //check the length of the winningWords array  
-  expect(player.winningWords.length).to.equal(1);  
-  ```
-
-  2. How would we write our test for the sad path (if playerWord is not the correctWord)?  
+    1. `expect(player.winningWords)to.be.an('array');`  
+    1. `expect(player.winningWords.length).to.equal(1);`  
+  1. How would we write our test for the sad path (if playerWord is not the correctWord)?  
 </section>  
 
 <section class="note">
