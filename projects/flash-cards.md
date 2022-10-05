@@ -21,7 +21,10 @@ Through each iteration, you should use TDD to drive implementation of your code.
 
 ## Initial Setup
 
-For this project, you need to use this [Flashcards Starter](https://github.com/turingschool-examples/flashcards-starter) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.
+For this project, you need to use this [Flashcards Starter](https://github.com/turingschool-examples/flashcards-starter) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.  
+
+**Tip:** You should rename your repo from "flashcards-starter" to "flashcards" (or whatever you'd like) when you clone it.  
+`git clone git@github.com:turingschool-examples/flashcards-starter.git flashcards`
 
 Please note that there is logic provided to you (util.js) to make this game playable via the command line. You will not need to edit the util.js file. Completion of Iterations I and II are required before you are able to utilize the command line interface to verify that your code is functioning properly. Prior to this, you should be using your tests to confirm functionality is working as you expect.
 
@@ -43,9 +46,14 @@ You should be using the prompts below to develop tests that will drive your impl
 
 Your testing suite should test all of the functionality of the game, including the following:
 
-* Class default properties
+* Class properties
 * Class methods
-* Anything that updates class properties
+
+Remember to test all possible outcomes (happy/sad/etc).  Ask yourself:  
+  - What is the value of each property?  
+  - Does the method return anything?  
+  - Does the method update any properties?
+  - Are there different possible outcomes to test for based on different arguments being passed in?
 
 <!-- <section class="note">
 ### Note
@@ -203,7 +211,10 @@ As you may have noticed, your `Game` class has two methods fleshed out already: 
     * invokes `printMessage` to display the message in the CLI
     * invokes `printQuestion` to kick off our helper functions that allow interaction via the CLI
 
-    _Note: The helper functions are all fleshed out and fit to work with classes/methods that meet the requirements in the past iterations._
+    _Implementation Note: The helper functions are all fleshed out and fit to work with classes/methods that meet the requirements in the past iterations._  
+    
+    _Testing Tip: You'll notice it difficult to test game.start. If you invoke it in your test file, it hangs the test suite by starting the game while running the tests. Sometimes as front end developers, we run into pieces of code that aren't possible, or worth it, to test.  In this case, instead of testing game.start, consider trying to extract what you can out of game.start and into a separate function, and test those functions on their own._  
+
 - Your `game.start()` method should be invoked to make the game playable in the console.
   - Look at the file being run when we want to start the game. Think about where you need to invoke your `Game.start` method.
 

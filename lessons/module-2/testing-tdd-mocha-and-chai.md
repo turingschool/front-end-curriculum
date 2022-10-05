@@ -67,24 +67,25 @@ For example, let's say we have a quiz application that checks a user's answers a
 
 ```js
 class Question {
-  constructor(questionText, correctAnswer, player) {
+  constructor(questionText, correctAnswer) {
     this.questionText = questionText;
     this.correctAnswer = correctAnswer;
-    this.player = player;
+    this.score = 0;
   }
 
   checkAnswer(playerAnswer) {
     if (playerAnswer === this.correctAnswer) {
-      this.player.score++
+      this.score++
     } else {
-      this.player.score--
+      this.score--
     }
+    return this.score
   }
 }
 ```
 
 <section class="answer">
-### What would we want to verify about the `checkAnswer` method? What should this method do?  
+### What would we want to test about the `checkAnswer` method? What should this method do?  
 
 ```js
 describe('Question Class', () => {
@@ -95,8 +96,25 @@ describe('Question Class', () => {
   it('should decrement a player score when their answer is incorrect', () => {
 
   });
+
+  it('should return the updated score', () => {
+
+  });  
 });
 ```
+</section>  
+
+<section class="note">
+Testing Tip:  
+When writing tests for classes, you should test:  
+  * each class property  
+  * each class method  
+
+Remember to test all possible outcomes (happy path/sad path/etc).  Ask yourself:  
+  - What is the value of each property?  
+  - Does the method return anything?  
+  - Does the method update any properties?
+  - Are there different possible outcomes to test for based on different arguments being passed in?
 </section>
 
 <section class="call-to-action">
@@ -145,6 +163,12 @@ describe('unicorn', function() {
 **Chai:**
 * An assertion is the crucial piece of the test that actually checks that when certain pieces of are code are executed, what we're getting back is what we expect.
 * Although Chai can be inserted into many different testing frameworks, it works seamlessly with Mocha.
+
+```js
+
+  expect(unicorn.calories).to.equal(300);
+
+```
 </section>
 
 <section class="note">
@@ -168,32 +192,80 @@ Good tests have **Four Phases**:
 
 All of these phases deal with the **Subject Under Test** (`SUT`, or just `subject`).
 
-Look at the following example and read the comments that talk about each line of our test:  
+Look at the following code example and make note of what we need to test:
+
 
 ```js
-// Before anything can happen, we need a describe block to group related tests together
-// In this case, the tests within our describe block are all related to the 'Unicorn' class
-describe('Unicorn', function() {
+class Player {
+  constructor(name) {
+    this.name = name;
+    this.winningWords = [];
+  }
 
-  // Next, an 'it block' contains the context of each specific test
-  it('should add 100 calories after eating', function() {
+  checkForWin(playerWord, correctWord) {
+    if(playerWord === correctWord) {
+      this.winningWords.push(word)
+    }
+  }
+}
+```
 
-    // 1. "Setup"
-    // Instantiate an instance of our unicorn
-    var unicorn = new Unicorn('Susan');
+<section class="answer">
+### What would we want to test about the `checkForWin` method? What should this method do?  
 
-    // 2. "Execution"
-    // Run appropriate functions that execute the behavior indicated by our test title
-    unicorn.eat();
-    unicorn.eat();
-    unicorn.eat();
+```js
+describe('Player Class', () => {
+  it('should add word to winningWords when answer is correct', () => {
 
-    // 3. "Assertion"
-    // Make an assertion to verify that after executing certain functions, we end up with what we expect
-    expect(unicorn.calories).to.equal(300);
+  });
+
+  it('should not update winningWords when answer is incorrect', () => {
+
   });
 });
 ```
+</section>  
+
+Now that we've determined what we need to test, read the comments that talk about each line of our tests
+
+```js
+// Before anything can happen, we need a describe block to group related tests together
+// In this case, the tests within our describe block are all related to the 'Player' class
+describe('Player', function() {
+
+  // Next, an 'it block' contains the context of each specific test
+  it('should add word to winningWords when answer is correct', () => {
+
+    // 1. "Setup"
+    // Create the mock data we need to use in this test
+        // Instantiate an instance of our player
+        // Create variable to hold the correctWord we'll use for this test
+    var player = new Player('Susan');
+    var correctWord = 'adore';
+
+    // 2. "Execution"
+    // Run appropriate functions that execute the behavior indicated by our test title
+    player.checkForWin('adore', correctWord);
+
+    // 3. "Assertion"
+    // Make an assertion to verify that after executing certain functions, we end up with what we expect
+    expect(player.winningWords).to.deep.equal(['adore']]);
+  });
+});
+```
+
+In your notes:  
+  1. Could we use one of the following assertion statements instead? Why/why not?  
+  ```js
+  //check that winningWords is an array
+  expect(player.winningWords)to.be.an('array');
+
+  //check the length of the winningWords array
+  expect(player.winningWords.length).to.equal(1);
+
+  ```
+
+  2. How would we write our test for the sad path (if playerWord is not the correctWord)?  
 
 <section class="note">
 ### What makes a good test?
@@ -202,6 +274,7 @@ describe('Unicorn', function() {
 - Do not have control flow (`if`, `when`, `for`) statements
 - Can be used as documentation for the code they test
 - Are clear and easy to read
+- Assertions are specific, testing for exactly what value is expected, not just length or data type.
 </section>
 
 
