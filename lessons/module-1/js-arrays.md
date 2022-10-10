@@ -34,7 +34,7 @@ If you get stuck...
 * Google (for example: `reassign element in array javascript`)
 * Write down your question and move on. Then ask that question when we come back together!
 
-After this hour, we will come back together and continue with the remainder of this lesson.
+After this hour, we will continue with the remainder of this lesson guided primarily by your questions.
 
 ## Part 2: Class Discussion
 
