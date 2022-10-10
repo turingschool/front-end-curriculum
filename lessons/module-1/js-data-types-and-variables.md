@@ -33,7 +33,7 @@ We want to give YOU a chance to dig into the code and explore before we all get 
 * Questions (for example: `Do you ever use null or undefined on purpose?`)
 
 If you get stuck...
-* Reference [this Intro to Data Types & Variables lesson](https://frontend.turing.edu/lessons/module-1/js-data-types-variables.html)
+* Reference [this Intro to Data Types & Variables lesson](https://frontend.turing.edu/lessons/module-1/js-intro-to-data-types-variables.html)
 * Reference [javascript mdn documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Overview).  Use the search bar and Command+F to search for specific terms and concepts
 * Google (for example: `null vs undefined javascript`)
 * Write down your question/what exactly you're stuck on and move on. Then ask that question when we get on the zoom call!
