@@ -1,7 +1,7 @@
 ---
-title: "JS: Data Types & Variables"
+title: "JS: Objects"
 length: 90
-tags: javascript, foundation, variables, data types, interpolation, concatenation
+tags: javascript, foundation, objects, dot notation, bracket notation, method
 ---
 
 ## Learning Goals
