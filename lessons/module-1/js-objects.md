@@ -195,6 +195,8 @@ person[lookUpKey];
 You might be wondering *When will be ever need to access a key via a variable?* and that's a great question! We'll definitely see use cases for this in M1. For now, get comfortable with dot notation, but remember that bracket notation is always there if (when) you need it!
 </section>
 
+## More Practice
 
+If you'd like more practice with arrays, work through the exercises in [this lesson](https://frontend.turing.edu/lessons/module-1/objects-review.html).
 
 Post any questions you still have in your main cohort channel!
