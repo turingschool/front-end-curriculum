@@ -6,9 +6,9 @@ tags: javascript, foundation, variables, data types, interpolation, concatenatio
 
 ## Learning Goals
 
-* Review what you know about objects
-* Review how to create and access objects and their methods
-* Work with nested objects and use objects in functions
+* Describe what an object is
+* Define properties and methods in an object
+* Access values and methods from an object using dot notation
 
 ## Vocabulary
 
@@ -17,7 +17,8 @@ tags: javascript, foundation, variables, data types, interpolation, concatenatio
 - `Value` The data referenced by a key
 - `Property` How we refer to one of the key-value pairs of an object
 - `Method` A function on an object
-- `Dot Notation` Notation to access a value on an object, explicitly specifies the key
+- `Dot Notation` Notation to access a value on an object; explicitly specifies the key
+- `Bracket Notation` Notation to access a value on an object; can be dynamic
 
 ## Part 1: Student Exploration
 
