@@ -32,7 +32,6 @@ If you get stuck...
 * Reference [this Intro to Arrays lesson](https://frontend.turing.edu/lessons/module-1/js-intro-to-arrays.html)
 * Reference [javascript arrays documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 * Google (for example: `reassign element in array javascript`)
-* Press that `Ask for help` button in your breakout room - the instructor will pop in and support!
 * Write down your question and move on. Then ask that question when we come back together!
 
 After this hour, we will come back together and continue with the remainder of this lesson.

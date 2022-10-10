@@ -50,9 +50,139 @@ Asking questions is an essential part of being a developer. Take a few minutes r
 We just went through **a lot** of information. Let's go over the most important things we need to know.  
 
 <section class="answer">
-### title
+### Why are objects useful?
 
-something
+Objects bundle together information in a way that is much more readable and accessible. Fofr example, think about modeling a car's features in code. You might do something like this:
+```js
+var carMake = 'subaru';
+var carModel = 'forester';
+var carMiles = 34506;
+var carPassengers = ['Joy', 'Khalid', 'Billy', 'Leah'];
+```
+That's all fine, but those variables aren’t tied together in any sensible way. Here's where an object can be super helpful!
+```js
+var car = {
+  make: 'subaru',
+  model: 'forester',
+  miles: 34506,
+  passengers: ['Joy', 'Khalid', 'Billy', 'Leah']
+};
+```
 </section>
+
+<section class="answer">
+### How do we reassign values in an object?
+
+Just like variables, you can reassign the value in an object at any time. You can even add new properties!
+```js
+var fruit = {
+  type: 'banana',
+  ripe: false
+}
+```
+Bananas ripen SO fast! Let's update the object:
+```js
+fruit.ripe = true;
+```
+Notice that we don't need to use the keyword `var` when we reassign the value - just like when we reassign variables!  
+
+Uh oh! Now the banana has ripened too much. Let's add a new property:
+```js
+fruit.rotten = true;
+```
+Now, the object's properties are:
+```js
+{
+  type: 'banana',
+  ripe: true,
+  rotten: true
+}
+```
+</section>
+
+<section class="answer">
+### What are methods and how do we invoke them?
+
+When we assign a function as the value to one of our keys, we call that function a method. Just like other properties, we use a key name followed by a colon. Then, the value is an **anonymous function** (an unnamed function). Check this out:
+
+```js
+var car = {
+  make: 'subaru',
+  model: 'forester',
+  miles: 34506,
+  passengers: ['Joy', 'Khalid', 'Billy', 'Leah'],
+  reportMiles: function() {
+    this.passengers.push(newPassenger);
+  }
+};
+```
+Then, we invoke the method by combining what we know about objects and functions:
+```js
+car.pickUpPassenger('Quinn');
+```
+Now, the car's passengers array would include Quinn!
+
+Note: Don't worry about `this` in that code block - we'll cover that soon :)
+</section>
+
+<section class="answer">
+### Can we have objects inside of objects?
+
+Yeah we can! For example here's an object with properties that have object values:
+```js
+var meals = {
+  breakfast: { time: 9, dish: 'scrambled eggs' },
+  lunch: { time: 12, dish: 'salad' },
+  dinner: { time: 6, dish: 'burrito' }
+}
+```
+We can **chain** multiple properties to dig into the values we want.
+```js
+meals.breakfast.time
+// 9
+
+meals.dinner.dish
+// 'burrito'
+```
+There's no limit to how nested this data can get! Gnarly!
+</section>
+
+<section class="answer">
+### What's the difference between dot and bracket notation? When and how do I use them?
+
+Dot and bracket notation are both ways to access data in an object. While you'll mostly reach for dot notation because it's syntactically easier, there will be times where bracket notation is required.
+
+Dot notation accesses a key name like this: `person.age`.
+Bracket notation accesses a key name like this: `person['age']`.
+
+Notice that bracket notation expects the key name to be a string. Dot notation does not require the quotes. You can see how dot notation might be more direct and easier.
+
+Dot notation is limited because you have to use the actual, literal key name. You can never use a variable as a key name. For example:
+```js
+var person = {
+  name: 'Hannah',
+  age: 32
+}
+
+var lookUpKey = 'name';
+
+person.name;
+// 'Hannah'
+
+person[name];
+// 'Hannah'
+
+person.lookUpKey;
+// undefined
+
+person[lookUpKey];
+// 'Hannah'
+```
+In the third example, JS is looking for a key that is literally called "lookUpKey" and can't find it. it returns `undefined`. In the fourth example, the variable `lookUpKey` resolves into a string of 'name', resulting in `person['name']` which is 'Hannah'.
+
+You might be wondering *When will be ever need to access a key via a variable?* and that's a great question! We'll definitely see use cases for this in M1. For now, get comfortable with dot notation, but remember that bracket notation is always there if (when) you need it!
+</section>
+
+
 
 Post any questions you still have in your main cohort channel!
