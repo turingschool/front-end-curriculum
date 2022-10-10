@@ -43,7 +43,7 @@ After this hour, we will continue with the remainder of this lesson guided prima
 
 ### Questions
 
-Asking questions is an essential part of being a developer. Take a few minutes right now to look through your notes from the last hour. What questions do you have about data types, variables, interpolation and concatenation? Everyone should have at least one question! Let's add those questions to [this jamboard](https://jamboard.google.com/d/1QP1MDfmj3yrAKrWTcAA1WoSk5HmlBMDHybWyI7oLELk/edit?usp=sharing).
+Asking questions is an essential part of being a developer. Take a few minutes right now to look through your notes from the last hour. What questions do you have about data types, variables, interpolation and concatenation? Everyone should have at least one question! Let's add those questions to [this jamboard](https://jamboard.google.com/d/1e3bH0_5I3gb3Jn8pzML9gFH0PelpzzPVZDWVm0nPycA/edit?usp=sharing).
 
 ### Key Points
 
