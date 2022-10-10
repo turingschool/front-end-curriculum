@@ -169,17 +169,28 @@ var lookUpKey = 'name';
 
 person.name;
 // 'Hannah'
+// Explanation: Literally looks for a key of 'name' and finds it, returns the value of 'Hannah'
+
+person['name'];
+// 'Hannah'
+// Explanation: Literally looks for a key of 'name' and finds it, returns the value of 'Hannah'
 
 person[name];
-// 'Hannah'
+// error
+// Explanation: Looks for a variable of `name` and doesn't find it. Resolves to person[undefined] and returns error
 
 person.lookUpKey;
 // undefined
+// Explanation: Looks for a key that is literally called "lookUpKey" and can't find it. It returns `undefined`.
+
+person['lookUpKey'];
+// undefined
+// Explanation: Looks for a key that is literally called "lookUpKey" and can't find it. It returns `undefined`.
 
 person[lookUpKey];
 // 'Hannah'
+// Explanation: The variable `lookUpKey` resolves into a string of 'name', resulting in `person['name']` which is 'Hannah'.
 ```
-In the third example, JS is looking for a key that is literally called "lookUpKey" and can't find it. it returns `undefined`. In the fourth example, the variable `lookUpKey` resolves into a string of 'name', resulting in `person['name']` which is 'Hannah'.
 
 You might be wondering *When will be ever need to access a key via a variable?* and that's a great question! We'll definitely see use cases for this in M1. For now, get comfortable with dot notation, but remember that bracket notation is always there if (when) you need it!
 </section>
