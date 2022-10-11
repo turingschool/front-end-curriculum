@@ -10,7 +10,7 @@ tags: javascript, foundation, objects, dot notation, bracket notation, method
 * Define properties and methods in an object
 * Access values and methods from an object using dot notation
 
-## Vocabulary
+## Vocabularygit
 
 - `Object` A bundle of behavior (methods) and state (properties)
 - `Key` The name used to reference a value on an object
@@ -53,7 +53,7 @@ We just went through **a lot** of information. Let's go over the most important 
 <section class="answer">
 ### Why are objects useful?
 
-Objects bundle together information in a way that is much more readable and accessible. Fofr example, think about modeling a car's features in code. You might do something like this:
+Objects bundle together information in a way that is much more readable and accessible. For example, think about modeling a car's features in code. You might do something like this:
 ```js
 var carMake = 'subaru';
 var carModel = 'forester';
@@ -112,7 +112,7 @@ var car = {
   model: 'forester',
   miles: 34506,
   passengers: ['Joy', 'Khalid', 'Billy', 'Leah'],
-  reportMiles: function() {
+  pickUpPassenger: function(newPassenger) {
     this.passengers.push(newPassenger);
   }
 };
