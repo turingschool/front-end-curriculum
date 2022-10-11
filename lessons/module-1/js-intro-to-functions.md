@@ -93,14 +93,14 @@ In your repl, copy/paste the example below:
 ```javascript
 // parameters are named in the declaration of a function
 function bakeCake(flavor, frosting, decoration) {
-  return `I am baking a ${flavor} cake with ${frosting}. It will be decorated with ${decoration}.`
+  console.log(`I am baking a ${flavor} cake with ${frosting}. It will be decorated with ${decoration}.`);
 }
 
 // arguments are passed in when the function is called/invoked
 bakeCake("carrot", "cream cheese icing", "walnuts");
 ```
 
-1. What is returned?  
+1. What is logged?  
 2. What happens when you invoke the function again passing in different arguments?  Try it a few times. Get weird!
 
 A good way to think of parameters and arguments is this:  
