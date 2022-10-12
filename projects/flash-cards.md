@@ -212,7 +212,7 @@ As you may have noticed, your `Game` class has two methods fleshed out already: 
     * invokes `printQuestion` to kick off our helper functions that allow interaction via the CLI
 
     _Implementation Note: The helper functions are all fleshed out and fit to work with classes/methods that meet the requirements in the past iterations._  
-    
+
     _Testing Tip: You'll notice it difficult to test game.start. If you invoke it in your test file, it hangs the test suite by starting the game while running the tests. Sometimes as front end developers, we run into pieces of code that aren't possible, or worth it, to test.  In this case, instead of testing game.start, consider trying to extract what you can out of game.start and into a separate function, and test those functions on their own._  
 
 - Your `game.start()` method should be invoked to make the game playable in the console.
@@ -258,8 +258,116 @@ At the beginning of the game, give options for choosing to study different subje
 ***CYOE (Choose Your Own Extension)***  
 Collaborate with instructors to personalize an extension for this project
 
+---
+
+# Notes on Project Evaluations
+
+The rubric below serves as a guide for students:  
+- It should be used as a reference throughout the project to keep on track and guide learning.
+- It should also be used by students to self-assess their work.
+
+<section class="answer">
+
+### Projects as Learning Tools
+When projects are graded, we want you to view the evaluation + feedback as a means to inform your learning, rather than as static "grades". Feedback from instructors will focus on areas where you have an opportunity to deepen your understanding.
+
+The evaluation will provide feedback by answering the only important question:
+
+**Does the project demonstrate student understanding of the learning goals & concepts?**
+
+Projects will answer that question, being marked as **yes**, **not yet**, and **wow**. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
+
+The overall project outcome (yes, not yet, wow) is determined by "averaging" each section's outcome. You can think of a "yes" being worth a  1, a "not yet" being worth a 0, and a "wow" being worth a 2.
+
+For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below).
+
+** 🚨 A important note about the possible outcomes**
+
+**Yes** indicates that the student/team is ON TRACK in this area! YES you showed us you understand the concept!
+- The student/team demonstrates a good understanding of the concept
+
+**Not Yet** indicates that the student/team is BEHIND in this area - you showed us that you don't yet understand the concept
+- The student/team demonstrates misconceptions or confusion around the topic
+- Student/team should prioritize this concept in their studying and practice
+- ✨ An overall "not yet" on one project does **not** mean the module is doomed! We want to see GROWTH. A student/team can struggle with a project and still (taking into account the rest of their work and assessments) demonstrate readiness for the next module! ✨
+
+**Wow** indicates that the student/team did extra work to teach themselves a new concept, or was able to demonstrate a deep & nuanced understanding of a concept  
+- This is not an outcome to prioritize achieving
+- "Wow" should not come at the expense of another concept
+- "Wow" often does not look like extra features, but instead looks like thoughtful refactoring and polish 💅
+</section>
+
+
 ## Evaluation Rubric
 
+This project has 3 evaluated concepts:
+- Functionality
+- JavaScript & Style
+- Test Driven Development
+
+### Minimum Professionalism Expectations
+Note: Professionalism is not a separately graded competency of this project because by now, it is a standard expectation for all your work.  
+
+- Commits are atomic and frequent, effectively documenting the evolution/progression of the application  
+- Developer uses PRs from feature branches before adding new code to the main branch  
+- The README is formatted well and gives new contributors and employers sufficient context about the project:  
+  - Overview of project and goals, technologies used, your code architecture, future features, challenges, wins, and any other reflections  
+  - Setup instructions  
+  - Screenshots or video of your functioning app  
+
+### Functional Expectations
+
+Note: Functionality is important because it is another benchmark to gauge proficiency. However, you should not pursue functionality at the expense of code quality or your learning/growth.  Well-refactored, thoughtful code is better than sloppy extra features.
+
+<section class="answer">
+### Functionality competency examples
+
+- Application fulfills expectations of iterations 1 - 3 with no bugs, crashes, or missing functionality. Game must be playable in the console.
+
+✨WOW✨ can look like:
+
+- Application fulfills expectations of iterations 1 - 4 (iteration 4 means at least one extension) with no bugs, crashes, or missing functionality. Game must be playable in the console.
+</section>
+
+---
+<section class="answer">
+### Fundamental JavaScript & Style competency examples
+
+- Application shows strong effort towards organization, content, and refactoring.  
+- Code leverages JavaScript's [truthy/falsey principles](https://frontend.turing.edu/lessons/module-1/js-truthy-falsy-expressions.html) to write concise conditional logic.  
+- Variable and function naming is meaningful, readable and consistent.  
+- Functions are DRY and demonstrate SRP.  
+- Array prototype methods are used for iteration rather than for loops.  
+- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
+
+✨WOW✨ can look like:
+
+- Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring.
+- Code has clearly been refactored; no functions show evidence of vestigial functionality (aka when functionality changes, all relevant code is updated)
+- No extraneous or unused lines of code
+</section>
+
+---
+<section class="answer">
+### Test-Driven Development competency examples
+
+- Application demonstrates strong use of TDD.  
+- Application has a thorough test suite with tests for all class properties and methods.  All tests are passing.  
+- All possible scenarios/paths/outcomes are tested (happy and sad).  
+- Tests are broken into modular it blocks that each test just one piece of functionality.  
+- Tests are checking for the actual expected value, not just length or data type.  
+- Smaller data files are created and used for testing instead of the entire data file.  
+- Test suite includes use of beforeEach hook to DRY up tests.  
+
+✨WOW✨ can look like:
+
+- Test suite is clean, readable and able to serve as documentation for the code.  
+- Tests use more than one data point to help ensure accuracy.  
+- Excellent demonstration of using TDD to write a thorough test suite that tests for all possible paths.  
+
+</section>
+---
+<!--
 ### Functional Expectations
 * 4: Application fulfills all expectations of iterations 1 - 4 (at least one extension) with no bugs, crashes, or missing functionality. Game must be playable in the console.
 * 3: Application fulfills expectations of iterations 1 - 3 with no bugs, crashes, or missing functionality.  Game must be playable in the console.
@@ -276,7 +384,7 @@ Collaborate with instructors to personalize an extension for this project
 * 4: Application is broken into components, good use of own data, good happy and sad path testing. Has consistent use of beforeEach to DRY up tests.  Tests must be passing to be considered.  
 * 3: Application is well tested, but some coverage might be lacking. Smaller data files are used for testing instead of the entire data file. Some use of beforeEach to DRY up tests. Tests must be passing to be considered.  
 * 2: Application makes some use of tests, but the coverage is insufficient given project requirements. No use of beforeEach to DRY up tests. Tests must be passing to be considered.  
-* 1: Application does not demonstrate strong use of TDD. Tests must be passing to be considered.  
+* 1: Application does not demonstrate strong use of TDD. Tests must be passing to be considered.   -->
 
 ## Repeaters
 - Must create a brand new repo and start the project fresh
