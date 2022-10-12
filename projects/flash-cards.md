@@ -337,7 +337,7 @@ Note: Functionality is important because it is another benchmark to gauge profic
 - Code leverages JavaScript's [truthy/falsey principles](https://frontend.turing.edu/lessons/module-1/js-truthy-falsy-expressions.html) to write concise conditional logic.  
 - Variable and function naming is meaningful, readable and consistent.  
 - Functions are DRY and demonstrate SRP.  
-- Array prototype methods are used for iteration rather than for loops.  
+- Array prototype methods are used to iterate instead of *for loops*.  
 - Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
 
 ✨WOW✨ can look like:
