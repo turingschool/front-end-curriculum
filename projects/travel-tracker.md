@@ -151,11 +151,21 @@ password: travel
 ## Testing
 You should be testing the correctness of your code throughout your project. Each JavaScript class file in your project should have its own test file.
 
-Your testing suite should test all of the functionality of the application, including the following:
+Your testing suite should test:
 
-* Class default properties
+* Class properties
 * Class methods
-* Anything that updates class properties
+
+Remember to test all possible outcomes (happy/sad/etc).  Ask yourself:  
+  - What is the value of each property?  
+  - Does the method return anything?  
+  - Does the method update any properties?
+  - Are there different possible outcomes to test for based on different arguments being passed in?
+
+You are *not expected* to test:
+
+* DOM manipulation / DOM manipulating methods (like `document.querySelector(...)`)
+* Fetch calls
 
 ## Workflow
 You will want to submit PRs to your accountabilibuddy to:
