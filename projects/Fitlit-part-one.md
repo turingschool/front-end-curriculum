@@ -28,7 +28,7 @@ In this project, you will be given data from an activity tracker for many users 
 The image above is *not* a comp. We expect you to design your own dashboard layout that is relevant to the data that was logged or calculated for a user or group of users. Use inspiration from Fitbit and other fitness/activity apps, but do not copy an app directly.
 
 **You must pull 3 inspirations from 3 different apps that you want to implement in your application**
-* Be specific about what piece you are trying to re-create
+* Be specific about what piece you are trying to re-create. What specifically do you want to replicate from this site? (i.e. layout, color palette, flat design, font, etc)
 * You may also pull inspirations from other sites such as [Dribbble](https://dribbble.com/)
 </section>
 
@@ -40,7 +40,7 @@ Dates and deadlines to be aware of:
 - DTR (be specific about learning goals, schedules, and communication expectations)
 - Project board (this should be kept updated throughout the project and will be reviewed by PM in check-ins).
 - Planned out Class structure, for example, for a User setup, you can have a ```UserRepository Class ``` and ```User Class```.
-- Wireframes
+- Wireframes (a rough sketch of your website for planning - worth googling!)
 - 3 design inspirations (Please include links and details on what you're trying to re-create).
 
 #### Sunday, Week 3 - Project due at 9PM.
@@ -234,10 +234,14 @@ Instead, for your tests, you should create small, sample datasets that match the
 You are expected to research and implement `beforeEach` in your test files.
 
 You are *expected* to test:
+* Class properties
+* Class methods
 
-* All class properties
-* All class methods and updates to their properties
-* Any helper methods you build out
+Remember to test all possible outcomes (happy/sad/etc).  Ask yourself:  
+  - What is the value of each property?  
+  - Does the method return anything?  
+  - Does the method update any properties?
+  - Are there different possible outcomes to test for based on different arguments being passed in?
 
 You are *not expected* to test:
 

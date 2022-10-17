@@ -24,7 +24,7 @@ In this project, you will create a recipe tracking / meal planning application t
 Feel free to use the above sites as inspiration for your UI, but note that there is *NO COMP* provided for this project. We expect you to design your own dashboard layout that is relevant to the data being displayed.
 
 **You must pull 3 inspirations from 3 different apps that you want to implement in your application**
-* Be specific about what piece you are trying to re-create
+* Be specific about what piece you are trying to re-create.  What specifically do you want to replicate from this site? (i.e. layout, color palette, flat design, font, etc)
 * You may also pull inspirations from other sites, such as [Dribbble](https://dribbble.com/){:target='blank'}
 </section>
 
@@ -36,7 +36,7 @@ Dates and deadlines to be aware of:
 * **By EOD Monday of Week 2** - Submit the following to your PM via Slack BEFORE beginning to write code:
 1. DTR (be specific about learning goals, schedules, and communication expectations)
 1. GitHub project board (this should be kept updated throughout the project and will be reviewed by PM in check-ins.
-1. Wireframes (a rough sketch of your website for planning)
+1. Wireframes (a rough sketch of your website for planning - worth googling!)
 1. 3 design inspirations (Please include links and details on what you're trying to re-create).
 
 * **Monday of Week 3** - Project due at 9PM.
@@ -215,9 +215,14 @@ Instead, for your tests, you should create small, sample datasets that match the
 You are expected to research and implement `beforeEach` in your test files.
 
 You are *expected* to test:
+* Class properties
+* Class methods
 
-* All class properties
-* All class methods and updates to their properties
+Remember to test all possible outcomes (happy/sad/etc).  Ask yourself:  
+  - What is the value of each property?  
+  - Does the method return anything?  
+  - Does the method update any properties?
+  - Are there different possible outcomes to test for based on different arguments being passed in?
 
 You are *not expected* to test:
 

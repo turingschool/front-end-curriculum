@@ -149,10 +149,20 @@ Make proper error handling for your users to ensure they get data and submit the
 ### Testing
 In addition to your refactoring, you also want to make sure the application is fully tested. This means:
 
-- Initial values of class properties need tests
-- Class methods need tests for all expected outcomes
-- Any methods that modify class properties should be test(Happy and sad path)
-- **You are not required to test your fetch calls or dom manipulation**
+You are *expected* to test:
+* Class properties
+* Class methods
+
+Remember to test all possible outcomes (happy/sad/etc).  Ask yourself:  
+  - What is the value of each property?  
+  - Does the method return anything?  
+  - Does the method update any properties?
+  - Are there different possible outcomes to test for based on different arguments being passed in?
+
+You are *not expected* to test:
+
+* DOM manipulation / DOM manipulating methods (like `document.querySelector(...)`)
+* Fetch calls
 
 ---
 

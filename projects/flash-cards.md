@@ -44,6 +44,8 @@ Your README should include the following, in this order:
 
 You should be using the prompts below to develop tests that will drive your implementation of code. Each JavaScript file in your project should have its own test file. (e.g. Your `Turn.js` class file should have a corresponding testing file called `Turn-test.js`)
 
+You are expected to research and implement `beforeEach` in your test files.  
+
 Your testing suite should test all of the functionality of the game, including the following:
 
 * Class properties
@@ -212,7 +214,7 @@ As you may have noticed, your `Game` class has two methods fleshed out already: 
     * invokes `printQuestion` to kick off our helper functions that allow interaction via the CLI
 
     _Implementation Note: The helper functions are all fleshed out and fit to work with classes/methods that meet the requirements in the past iterations._  
-    
+
     _Testing Tip: You'll notice it difficult to test game.start. If you invoke it in your test file, it hangs the test suite by starting the game while running the tests. Sometimes as front end developers, we run into pieces of code that aren't possible, or worth it, to test.  In this case, instead of testing game.start, consider trying to extract what you can out of game.start and into a separate function, and test those functions on their own._  
 
 - Your `game.start()` method should be invoked to make the game playable in the console.
