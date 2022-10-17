@@ -91,7 +91,7 @@ Then you have to tell git what the default branch should be. You can run this co
 - **Commit a file (with a message)**
   - `git commit -m "description of work here"`
 - **Push changes**
-  - `git push`
+  - `git push origin feature/name-of-feature-branch`
 </section>
 
 <section class="note">
@@ -108,9 +108,9 @@ Types of commits include:
 
 Examples of good commit messages:
 
-* `fix: broken calculation for percent high ranking cards`
-* `feat: add shuffle to deck`
-* `test: add test for shuffle`
+* `fix: Broken calculation for percent high ranking cards`
+* `feat: Add shuffle to deck`
+* `test: Add test for shuffle`
 </section>
 
 ## Code Review
