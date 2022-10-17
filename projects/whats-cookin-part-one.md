@@ -16,7 +16,7 @@ In this project, you will create a recipe tracking / meal planning application t
 
 ## New Technologies
 - Fetch API
-- [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'}
+- [Webpack](https://frontend.turing.edu/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'}
 
 <section class="note">
 
@@ -218,7 +218,6 @@ You are *expected* to test:
 
 * All class properties
 * All class methods and updates to their properties
-* Any helper methods you build out
 
 You are *not expected* to test:
 
