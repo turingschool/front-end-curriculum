@@ -5,8 +5,9 @@ tags: javascript, testing, tdd, mocha, chai
 
 ## Learning Goals
 
-* Ability to read/create tests for Classes
-* Understand how to import/export files specifically for testing
+* Review structure of a test and importing/exporting files specifically for testing
+* Ability to read tests w/ Classes and pass them
+* Review some solid habits to build while practicing
 
 <section class="call-to-action">
 ### Warm Up
