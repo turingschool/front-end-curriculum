@@ -158,7 +158,7 @@ CSS can now support variables _without_ the use of a preprocessor. In fact, ther
 <section class="call-to-action">
 #### Paired Practice
 
-Fork a copy of [this codepen sandbox page](https://codepen.io/hannahhch/pen/bGVJvJz){:target="_blank"} and work on the following:
+Fork a copy of [this codepen sandbox page](https://codepen.io/nicktu12/pen/BaxgyJq){:target="_blank"} and work on the following:
 
 * Take note of which styles get reused, and work with a partner to add in some variables.
 </section>
