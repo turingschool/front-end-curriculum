@@ -21,7 +21,13 @@ tags: node, express, back-end, server, http
 * CRUD
 
 ### Prework
-Download the [Postman desktop app](https://app.getpostman.com/app/download/osx64) and watch [this video](https://www.youtube.com/watch?v=MRw07FQRscI).
+Download Postman and watch [this video](https://www.youtube.com/watch?v=MRw07FQRscI).
+
+To download Postman:
+1. Check your Mac's chip type by searching `About This Mac` with `cmd + spacebar`
+2. Choose the correct Postman download at [this link](https://www.postman.com/downloads/). 
+
+Most likely you will have a Mac M1 chip and will download the version for "Mac Apple Chip".
 
 ## What is Express?
 Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify and organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features.
