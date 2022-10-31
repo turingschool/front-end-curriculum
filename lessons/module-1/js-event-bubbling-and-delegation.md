@@ -53,7 +53,7 @@ You should see three buttons labeled "Click me!" as well as a button for adding 
 </section>
 
 <section class="answer">
-### What Did you notice?  
+### What did you notice?  
 
 *The event listeners are only bound to the buttons that were present when the page code was first loaded.*
 
@@ -182,9 +182,11 @@ In ***event delegation***, we take advantage of the fact that events bubble in t
 
 The steps:
  1. Put a single handler (event listener and function) on a parent container/area  
- 2. In our function, check the source element (whichever element the event directly occurred on) using `event.target.____(some property)` (whatever property we can use to identify the element(s) we care about)  
- 3. If the event happened on an element that we care about, THEN 'handle' that event (aka, do all the behaviors outlined in the code in the function)  
- Remember to use console.log(event) to figure out what info you have to work with for whichever element. Remember that the 'target' will depend on where/what you 'click' on.
+ 2. In our function, check the source element (whichever element the event directly occurred on) using `event.target[some property]` (whatever property we can use to identify the element(s) we care about)  
+ 3. If the event happened on an element that we care about, THEN 'handle' that event (aka, do all the behaviors outlined in the code in the function).  Remember to use console.log(event) to figure out what info you have to work with for whichever element. Remember that the 'target' will depend on where/what you 'click' on.
+
+<section class="call-to-action">
+### Your Turn
 
 ```js
 var parent = document.querySelector('.parent');
@@ -196,13 +198,9 @@ parent.addEventListener('click', function(event) {
 });
 ```
 
-<section class="call-to-action">
-### Your Turn
-
-- Add the previous code to `example3/script.js`
-- Replace the commented out code
+- Add the above to `example3/script.js`
+- What should happen inside of your conditional?  What function should be called when a user clicks on any button?
 - Run the code with `open example3/index.js`
-- Add some other if statements. How often is this eventListener being activated?
 
 </section>
 
