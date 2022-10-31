@@ -52,14 +52,17 @@ You should see three buttons labeled "Click me!" as well as a button for adding 
 5. Click on your new button and observe the results.
 </section>
 
-What did you notice?
+<section class="answer">
+### What Did you notice?  
 
 *The event listeners are only bound to the buttons that were present when the page code was first loaded.*
 
 The buttons we added later (using the `createButton` function) were not around when we added the listeners. Even though the newly created buttons are given the same class name that we are targeting with the `eventListener`, they didn't exist at the time the listeners were attached, so they aren't able to listen for those clicks, and thus they can't call any functions at all.
 
 Could we modify the function that adds new buttons so that it adds an event listener to the element before it appends to the page?  Yes we can, but unfortunately this isn't preferred for reasons below.
+</section>
 
+<section class="note">
 ### A Note About Add/Removing Event Listeners
 
 Setting event listeners on specific newly created DOM nodes is one way to set event listeners. However, if you're not careful, you may end up setting multiple listeners on the same node.
@@ -67,6 +70,7 @@ Setting event listeners on specific newly created DOM nodes is one way to set ev
 Also, you can cause a [memory leak](http://crockford.com/javascript/memory/leak.html) if an event listeners are not unbound from an element when it is removed from the DOM. See also, [memory management and garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management), and [4 Types of Memory Leaks in Javascript and How to Get Rid of Them](https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/).
 
 So how else can we listen for events on dynamic content?  Let's dive into how events work a little more first and then come back to this question.
+</section>
 
 ## Event Propagation
 
@@ -79,49 +83,26 @@ Event propagation is an important yet misunderstood topic/term when talking abou
 * **Event bubbling phase** - This is the final phase to occur, although many people think this is the first phase. In the bubbling phase a notice is passed from the target Node up through all of the parent Nodes all the way back to the top root of the DOM.
 * **OK but what is actually *happening* during these phases?** When an event occurs -  JavaScript/the browser start at the 'top' of the DOM tree then looks down/zooms into the target (whatever element the event occurred on), then looks back up/out element by element *to see if there are any event listeners/handlers that need fired*
 
-<section class="call-to-action">
-### On Your Own
-
-- Create your own visual representation of event propagation.
-
-### With a Partner
-
-- Create an analogy to show how these event phases occur behind the scenes.
-</section>
-
 ## Event Bubbling
 
 Now we've talked about the fundamentals of events, let's turn our attention to the **event bubbling phase**, which refers to the ability of events that occur on DOM nodes to "bubble up" and also apply to ancestors of those nodes.
 
+<section class="note">
+### But what about the capturing phase?
+
 Many people question why more attention isn't paid to the capturing phase. Simply put, it's VERY unlikely that you'll have to use it. IE < 9 uses only event bubbling, whereas IE9+ and all major browsers support both.
 
 Legend has it that back in the day, Netscape Navigator and Internet Explorer had different, incompatible ways of propagating events to multiple handlers; Netscape "captured" while Internet Explorer "bubbled." W3C has very sensibly decided to take a middle position in this dispute. According to the W3C event model, any event taking place is first captured until it reaches the target element... and then bubbles up again.
+</section>
 
 <section class="call-to-action">
 ### Pair Practice
 
 Using your repo from earlier, `open example2/index.html` for this pair practice, and modify `script.js`
 
-* Add a click event to the button, that logs the element that was clicked on using the keyword `this`.
-* Move the event listener to the `.parent` element. Which element is logged when you click on the button?
-* Move the event listener to the `.grandparent` element.
-  * What is the result when you click on the button?
-  * What is is the result when you click the `.parent` element?
-</section>
-
-### Discussion
-
-You may have noticed that the event listeners on a parent element are fired whenever the action occurs on one of its children. Even though the click happens on the child node, the parent and grandparent nodes still "hear" it. **This just means that when you add an event listener, it 'listens' for events on the entire element/area, *including* all the elements that may be nested inside that element (it's children).**
-
-When an event occurs, the browser checks the element to see if there are any event listeners registered. After it checks the element where the event occurred, the browser works its way up the DOM tree to see if any of the parents have a listener registered, then grandparents, and so on. It checks every element all the way up to the root. This process is known as _event bubbling_.
-
-Try out the following code by copying it into example2/script.js, saving and then reloading your browser:
+Add the following lines below your query selectors:
 
 ```js
-  var grandParent = document.querySelector('.grandparent');
-  var parent = document.querySelector('.parent');
-  var button = document.querySelector('#click-me');
-
   grandParent.addEventListener('click', function() {
     console.log('Grandparent');
   });
@@ -135,7 +116,18 @@ Try out the following code by copying it into example2/script.js, saving and the
   });
 ```
 
-If you click on the button, you'll see that the events all bubble up through the `.parent` and `.grandparent` elements — this provides a more explicit proof than the solutions you may come up with for the previous question.
+* Talk through what each line is doing.
+* What is the result when you click on the `button`?  The `parent`?  
+* What do you predict will happen when you click the `grandparent`?
+</section>
+
+<section class="answer">
+### What is happening here?  
+
+You may have noticed that the event listeners on a parent element are fired whenever the action occurs on one of its children. Even though the click happens on the child node, the parent and grandparent nodes still "hear" it. **This just means that when you add an event listener, it 'listens' for events on the entire element/area, *including* all the elements that may be nested inside that element (it's children).**
+
+When an event occurs, the browser checks the element to see if there are any event listeners registered. After it checks the element where the event occurred, the browser works its way up the DOM tree to see if any of the parents have a listener registered, then grandparents, and so on. It checks every element all the way up to the root. This process is known as _event bubbling_.
+</section>
 
 <!-- As noted above, we are focusing on the bubbling phase because there are _very_ few instances where you will have to be consciously aware of the event phases. In the event that you DID want to use the capturing phase (so that the parent element's event handler is triggered before the target) you would want to take advantage of the optional `useCapture` parameter that is available to you with [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
 
@@ -171,29 +163,15 @@ Each type of event supports a number of different properties. `MouseEvent`s cont
 
 Let's make some changes to the code from earlier. Instead of logging a description of each element where an event was triggered, either by a click or through event bubbling, let's log the `target` property of the event.
 
-```js
-grandParent.addEventListener('click', function(event) {
-  console.log(event.target);
-});
-
-parent.addEventListener('click', function(event) {
-  console.log(event.target);
-});
-
-button.addEventListener('click', function(event) {
-  console.log(event.target);
-});
-```
-
 <section class="call-to-action">
 ### Pair Practice
 
-Modify the code above to log the event itself (as opposed to the `target` property on the event). In that console.log, you should be able to open up the whole `event` object.  
+Modify your code so that instead of logging a description of each element where an event was triggered, log the `event` object.
 - What other properties on the event object look particularly useful or interesting?  
 - Dig into the event's `target` property.  Look for the following properties: className, classList, id  
   - Look for the target's `parentNode` property.  Look for that parent's parentNode.  Look for *that* parent's parentNode. How far up the DOM tree can you dig into the parent's parents?  
   - Look for the target's `childNodes` property and `children` property. How far down the DOM tree can you dig into the children's children?  
-  - What other properties on the `event.target` look useful or noteworthy?   
+- Now update your `console.log` to log `event.target`.  Click the grantparent, parent, and then button.  What do you notice about the target?  Do you see any similarties with the diagram we drew out earlier?
 </section>
 
 ## Event Delegation
