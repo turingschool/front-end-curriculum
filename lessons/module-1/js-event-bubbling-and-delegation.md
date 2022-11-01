@@ -161,12 +161,10 @@ Sometimes inside an event handler function, you might see a parameter specified 
 
 Each type of event supports a number of different properties. `MouseEvent`s contain information about the `x` and `y` coordinates where the mouse was clicked. `KeyboardEvent` has information about which key was pressed. The `target` property on the `Event` object can be useful during the event bubbling phase.
 
-Let's make some changes to the code from earlier. Instead of logging a description of each element where an event was triggered, either by a click or through event bubbling, let's log the `target` property of the event.
-
 <section class="call-to-action">
 ### Pair Practice
 
-Modify your code so that instead of logging a description of each element where an event was triggered, log the `event` object.
+Modify your code from earlier so that instead of logging a description of each element where an event was triggered, log the `event` object.
 - What other properties on the event object look particularly useful or interesting?  
 - Dig into the event's `target` property.  Look for the following properties: className, classList, id  
   - Look for the target's `parentNode` property.  Look for that parent's parentNode.  Look for *that* parent's parentNode. How far up the DOM tree can you dig into the parent's parents?  
