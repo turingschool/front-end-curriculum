@@ -340,7 +340,6 @@ When you have completed this functionality, compare it to the solution on the `r
 - [React Lifecycle Docs](https://reactjs.org/docs/react-component.html)
 - [The React Life Cycle](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/introduction.html)
 - [Understanding Component Lifecycle](https://medium.com/@baphemot/understanding-reactjs-component-life-cycle-823a640b3e8d)
-- [Lifecycle Simulators](https://reactarmory.com/guides/lifecycle-simulators)
 - [Dan Abramov's Twitter chart/convo on modern React lifecycle methods](https://twitter.com/dan_abramov/status/981712092611989509)
 - [Error handling in React 16](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html)
 - [Update on Async Rendering](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
