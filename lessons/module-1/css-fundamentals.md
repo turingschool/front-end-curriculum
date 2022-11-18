@@ -108,6 +108,8 @@ Let's make the following edits on this lesson page:
 * Change the font of the whole page to `serif`
 * Experiment with deselecting a few CSS styles. What happens?
 * Experiment with any other changes you want to try!
+
+[Here is a great resource](https://developer.chrome.com/docs/devtools/css/) on manipulating CSS through the Chrome Dev Tools.
 </section>
 
 ## The Box Model
@@ -165,3 +167,4 @@ You will have one hour to work on `iteration 1` of [this activity](https://githu
 * [Visual Guide to CSS](http://cssreference.io/)
 * [MDN CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 * [CSS Border Box](https://dev.to/ameseee/meet-border-box-my-best-friend-a56)
+* [Chrome Dev Tools - CSS](https://developer.chrome.com/docs/devtools/css/)
