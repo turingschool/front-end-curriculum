@@ -16,7 +16,7 @@ In this lesson, we will hand-roll a boilerplate repo that we'll use for our Sort
     ```bash
     mkdir boilerplate && cd boilerplate
     ```
-    
+
 2. Create sub-directories called `lib` and `test`
     ```bash
     mkdir lib test
@@ -24,10 +24,10 @@ In this lesson, we will hand-roll a boilerplate repo that we'll use for our Sort
 
 3. Create three files: `lib/index.js`, `test/index-test.js` and `README.md`
     ```bash
-    touch lib/index.js test/index-test.js README.md 
+    touch lib/index.js test/index-test.js README.md
     ```
 
-4. Initialize git and push your repo to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github.html#incorporating-github) from Mod 1)
+4. Initialize git and push your repo to GitHub (hint: you can use [this lesson](http://frontend.turing.edu/lessons/module-1/git-and-github.html#incorporating-github) from Mod 1)
 
 ## Vocab
 
@@ -191,7 +191,7 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
     ```bash
     npm install --save-dev mocha chai eslint
     ```
-  
+
 4. Install the following dependencies:
   - webpack
   - webpack-cli
@@ -366,7 +366,7 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 
     ```js
     import { assert } from 'chai';
-    
+
     describe('test', function() {
       it('should return true', function() {
         assert.equal(true, true);

@@ -24,7 +24,7 @@ The rules of your assigned game will serve as the requirements for the spec.
 - Write a program from scratch
 - Synthesize knowledge of OOP, classes, and JS fundamentals to create a playable game
 - Demonstrate good GitHub collaboration and workflow within a large group
-- Write modular, reusable code that follows SRP (Single Responibility Principle) 
+- Write modular, reusable code that follows SRP (Single Responibility Principle)
 - Create a robust test suite that thoroughly tests all functionality of a client-side application
 - Implement array iterator and mutator methods to work with game data
 
@@ -60,7 +60,7 @@ To populate the data for your assigned game, you will be using one of the follow
 * [Jeopardy](https://repl.it/@Khalid_Williams/Jeopardy)
 * [Family Feud](https://repl.it/@Khalid_Williams/FamilyFeud)
 
-Copy your assigned data into a separate `js` file that you can then include in your repository. 
+Copy your assigned data into a separate `js` file that you can then include in your repository.
 
 You will be using the following JavaScript libraries:
 
@@ -75,7 +75,7 @@ You will be using the following JavaScript libraries:
 
 For this project, you need to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.
 
-There are additional notes in the README about where your game logic code goes and where your test code goes as well. Be sure to read through the README before you start coding because for this starter kit to work correctly, it has some underlying assumptions of where files live. 
+There are additional notes in the README about where your game logic code goes and where your test code goes as well. Be sure to read through the README before you start coding because for this starter kit to work correctly, it has some underlying assumptions of where files live.
 
 ## Code Organization
 
@@ -98,10 +98,10 @@ Your testing suite should test all of the functionality of the game, including t
 
 For the purposes of this project, you will keep your state logic completely separate from your view logic. In other words, your business logic (classes/methods) should not handle anything that deals with the UI (DOM Manipulation).
 
-To do this, you will utlize a separate `domUpdates.js` file that handles any DOM manipulation that is triggered by your business logic. This is covered in more depth in the testing lesson, which you can find [here](http://frontend.turing.io/lessons/module-2/testing-with-chai-spies.html).
+To do this, you will utlize a separate `domUpdates.js` file that handles any DOM manipulation that is triggered by your business logic. This is covered in more depth in the testing lesson, which you can find [here](http://frontend.turing.edu/lessons/module-2/testing-with-chai-spies.html).
 
 <section class="note">
-  domUpdates will hold your DOM updating logic. Some of this logic may be called on by methods in your class files. You won't test actual methods in domUpdates, but you will test class methods that call on DOM updates. This is done with [spies](http://frontend.turing.io/lessons/module-2/testing-with-chai-spies.html).
+  domUpdates will hold your DOM updating logic. Some of this logic may be called on by methods in your class files. You won't test actual methods in domUpdates, but you will test class methods that call on DOM updates. This is done with [spies](http://frontend.turing.edu/lessons/module-2/testing-with-chai-spies.html).
 </section>
 
 
@@ -129,9 +129,9 @@ You can retrieve all the high scores by doing a GET request to the same endpoint
 
 These user stories may be worked on in any order that makes sense to your pair. Do take time to think about which ones must be completed before you can make progress on others. This will help you prioritize the work that you do.
 
-* [Wheel of Fortune User Stories](http://frontend.turing.io/projects/module-2/wheel-of-fortune)
-* [Jeopardy User Stories](http://frontend.turing.io/projects/module-2/jeopardy)
-* [Family Feud User Stories](http://frontend.turing.io/projects/module-2/family-feud)
+* [Wheel of Fortune User Stories](http://frontend.turing.edu/projects/module-2/wheel-of-fortune)
+* [Jeopardy User Stories](http://frontend.turing.edu/projects/module-2/jeopardy)
+* [Family Feud User Stories](http://frontend.turing.edu/projects/module-2/family-feud)
 
 ## GitHub Collab & Workflow
 
@@ -186,8 +186,8 @@ Your README should include the following, in this order:
 ### JavaScript Style & OOP
 
 * [ ] Novice - Application is not separated into classes, or methods and properties are illogically assigned to classes. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity. Business-side logic and view-related code are not separated.
-* [ ] Advanced Beginner - Application has a significant amount of duplication. Application is organized into classes that do not display a good understanding of encapsulation, and logic is not well-divided. Developer cannot articulate what each line of code is doing. 
-* [ ] Proficient - Application is thoughtfully put together with some duplication. Developers can speak to choices made in the code and knows what every line of code is doing. Application is organized into classes (and correctly uses inheritance) with some misplaced logic. Business-logic code is mostly separated from view-related code. 
+* [ ] Advanced Beginner - Application has a significant amount of duplication. Application is organized into classes that do not display a good understanding of encapsulation, and logic is not well-divided. Developer cannot articulate what each line of code is doing.
+* [ ] Proficient - Application is thoughtfully put together with some duplication. Developers can speak to choices made in the code and knows what every line of code is doing. Application is organized into classes (and correctly uses inheritance) with some misplaced logic. Business-logic code is mostly separated from view-related code.
 * [ ] Exceptional - Meets all requirements of `Proficient`. In addition, application has exceptionally well-factored code with little or no duplication. SRP (single responsibility principle) and DRY (don't repeat yourself) principles are utilized. There are _zero_ instances where an instructor would recommend taking a different approach. There are no instances where instructor would suggest moving logic or data to another class. The business-logic code driving functionality is cleanly separated from rendering, view-related code.
 
 ### Testing
@@ -207,14 +207,14 @@ Your README should include the following, in this order:
 ### Presentation
 
 * [ ] Novice - Not all presenters speak. Presenters give too much or too little information about the application. Presenters do not use audio/visual aids or media.
-* [ ] Advanced Beginner - Everyone in the group speaks. Presenters do a live demo of the application. The group may speak about the planning/challenges/rewards of the project; however, the delivery does not seem thought out/well-planned. 
+* [ ] Advanced Beginner - Everyone in the group speaks. Presenters do a live demo of the application. The group may speak about the planning/challenges/rewards of the project; however, the delivery does not seem thought out/well-planned.
 * [ ] Proficient - Everyone in the group has an opporunity to speak during the presentation. The group has a visual of the application to demo (e.g. slides, recordings of interactions, live demo). The group talks about the app, speaking to the challenges, rewards, and collaborative aspects of the project.
 * [ ] Exceptional - Meets all expectations of `Proficient`. In addition, the presentation runs smoothly w/no hiccups - indicating that it was planned/rehearsed/polished. The presentation is so engaging that there is no time that the evaluators find themselves checking the time/clock.
 
 
-### Technical Articulation 
+### Technical Articulation
 * [ ] Expert - Responds to the question accurately and gracefully. Uses the correct vocabulary when discussing the concept, and is sure of their response. Gives an appropriate amount of detail to thoroughly answer the question, but responds well to any follow-up questions that may arise.
-* [ ] Proficient -  Responds to the question with accuracy, but may be a bit vague or unsure of themselves. May answer the question by describing an example rather than having an eloquent articulation of the concept. May not be able to dig much deeper to respond to follow-up questions that may arise. 
+* [ ] Proficient -  Responds to the question with accuracy, but may be a bit vague or unsure of themselves. May answer the question by describing an example rather than having an eloquent articulation of the concept. May not be able to dig much deeper to respond to follow-up questions that may arise.
 * [ ] Advanced Beginner - Cannot respond to the question with accuracy. May discuss related ideas, but does not quite stay on topic for the question we're asking. May ramble a bit until they throw out the correct term, looking to the interviewer for signs of being on the right track.
 * [ ] Novice - Cannot respond to the question with accuracy. Interviewer may reprhase the question several times or pivot to ask a simpler question. May find a way to gracefully say "I don't know".
 

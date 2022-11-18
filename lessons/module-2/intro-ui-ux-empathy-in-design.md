@@ -14,7 +14,7 @@ module: 2
 
 - `UI` User interface; what the user actually sees and interacts with in an app
 - `UX` User experience; the overall experience of using an app - what it's like to use an app in pursuit of a goal (buying something, getting information, etc)
-- `UXD` User experience design: the art and science of creating apps that seamlessly meet user needs and create a painless experience 
+- `UXD` User experience design: the art and science of creating apps that seamlessly meet user needs and create a painless experience
 - `Usability` How easy your design is to understand and use
 
 ## User Experience Design
@@ -33,9 +33,9 @@ User experience design is simple and also very complex. It's the act of making y
 
 ### Turn and Talk
 
-What are some examples of apps that you use (think about the sites you use for social media, looking up info, booking travel, etc). 
+What are some examples of apps that you use (think about the sites you use for social media, looking up info, booking travel, etc).
 
-* What apps are easy to use? What apps are really fun to use? 
+* What apps are easy to use? What apps are really fun to use?
 
 * What apps are the worst? Think of times when you had a very frustrating experience with a website (making a payment, filling out a form, etc).
 
@@ -143,7 +143,7 @@ It's important to anticipate what a user needs to know. It's poor UXD to withhol
 **Contextual Design**
 
 When designing an app, keep in mind the user's context:
-- Metadata (time of day, location, language, etc) 
+- Metadata (time of day, location, language, etc)
     - Example: food delivery apps notifying a user that a particular restaurant is closed at that time
 - Explicit interaction (the user actively and consciously changes the design of the app)
     - Changes the color in the settings
@@ -153,7 +153,7 @@ When designing an app, keep in mind the user's context:
     - Remembering the user's last search and showing that info
     - Detecting the location and updating displayed info
 - Give the information a user needs when they need it
-    - Microinteractions to improve the onboarding experience 
+    - Microinteractions to improve the onboarding experience
     - Real-time feedback through error-messaging
 
 
@@ -174,7 +174,7 @@ No matter how empathetic and diligent you are, you can't assume you know everyth
 <section class="call-to-action">
 
 ## Paired Activity
-Let's get some practice with user testing! You and a partner will be assigned a website to test out. Make sure you read the instructions so you know what your tasks are. 
+Let's get some practice with user testing! You and a partner will be assigned a website to test out. Make sure you read the instructions so you know what your tasks are.
 
 
 * [Website A](https://github.com/turingschool-examples/user-experience-activities/blob/master/website-a.md)
@@ -186,9 +186,9 @@ Let's get some practice with user testing! You and a partner will be assigned a 
 ## Additional Resources
 
 * [7 Practical Tips for Cheating at Design](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886)
-* [Intro to Personas](https://frontend.turing.io/lessons/module-2/ux-ui-intro-to-personas.html)
+* [Intro to Personas](https://frontend.turing.edu/lessons/module-2/ux-ui-intro-to-personas.html)
 * [A Worst-Practice UI Experiment](https://userinyerface.com/)
-* [Type Scale](https://type-scale.com/) - tool for visualizing font size balance 
+* [Type Scale](https://type-scale.com/) - tool for visualizing font size balance
 * [Baymard Institute Page Designs](https://baymard.com/ecommerce-design-examples) - page examples with UX annotations
 * [Color Patterns from MailChimp](https://ux.mailchimp.com/patterns/color)
 * [Ultimate Guide to User Flow Diagrams](https://creately.com/blog/diagrams/user-flow-diagram/)

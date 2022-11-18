@@ -7,11 +7,11 @@ Do you remember that project Ideabox?
 
 We thought they were pretty great, but, I think it's time to pivot those projects over to something we like to call 2DoBox.
 
-You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox. 
+You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox.
 
-Your projects will utilize webpack & its awesome development server. 
+Your projects will utilize webpack & its awesome development server.
 
-Keeping accessibility in mind we will be grading you based on how accessible your application is. 
+Keeping accessibility in mind we will be grading you based on how accessible your application is.
 
 Now that we're using Webpack, we can use some fancy es6 syntax. You will be expected to attempt to get some es6 syntax in your project (and make sure that Webpack uses Babel to transpile it).
 
@@ -168,7 +168,7 @@ Your webpack setup will help you install Sass - a CSS preprocessor - but to comp
   * Re-read [this intermission assignment](http://thesassway.com/beginner/how-to-structure-a-sass-project) for an idea of how to set up a structure for Sass
 
 * CSS code should be exceptionally DRY (Do Not Repeat Yourself) - meaning that there is _no_ repetion of CSS that could be broken reasonably into variables and mixins.
-  * Read through this [lesson](http://frontend.turing.io/lessons/introduction-to-sass.html) for an idea of what Sass can do
+  * Read through this [lesson](http://frontend.turing.edu/lessons/introduction-to-sass.html) for an idea of what Sass can do
 
 * Atleast one advanced feature of Sass should be used to enhance the project.
   * Developer should be able to speak to what this feature does and why it improves the code for future developers.
