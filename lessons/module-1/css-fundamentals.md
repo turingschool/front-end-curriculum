@@ -106,7 +106,8 @@ Let's make the following edits on this lesson page:
 * Change the left border color of all elements with a `.call-to-action` class to purple.
 * Make all of the `h2` elements red.
 * Change the font of the whole page to `serif`
-* Experiment with any other changes! 
+* Experiment with deselecting a few CSS styles. What happens?
+* Experiment with any other changes you want to try!
 </section>
 
 ## The Box Model
