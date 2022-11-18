@@ -20,7 +20,7 @@ In this project, you will be building on top of somebody else's pre-existing cod
 Dates and deadlines to be aware of:
 
 * **Monday of Week 4** -  Project kickoff
-* **Tuesday of Week 4** - Have your project chosen and let PM know. Make sure to have GitHub project board ready with tickets (*DTR should also be complete*). 
+* **Tuesday of Week 4** - Have your project chosen and let PM know. Make sure to have GitHub project board ready with tickets (*DTR should also be complete*).
 * **Monday of Week 5** - Project due at 9PM
 * **Tuesday of Week 5** - Project evals
 
@@ -40,13 +40,13 @@ Both Fitlit and What's Cookin' will give you practice with Sass, Fetch, Web Acce
 - Since you are already familiar with the application and its requirements, you'll spend less time understanding the new spec
 - You'll get more experience and exposure to how someone could have solved the same problems differently than you
 
-#### Choosing the new project 
+#### Choosing the new project
 - This will give you valuable practice ramping up on a brand new project
 - You might have less temptation to look at your old code
 
 **Note: There are two different versions of each project. You will be assigned the A or B version.**
 
-Once you have choosen either Fitlit or Whats' Cookin' and have been assigned a verion. You can get started with your starter repo below: 
+Once you have choosen either Fitlit or Whats' Cookin' and have been assigned a verion. You can get started with your starter repo below:
 - [Fitlit A](https://github.com/turingschool-examples/refactor-tractor-fitlit-a)
 - [Fitlit B](https://github.com/turingschool-examples/refactor-tractor-fitlit-b)
 - [WC A](https://github.com/turingschool-examples/refactor-tractor-whats-cookin-a)
@@ -65,7 +65,7 @@ This [article](https://survivejs.com/webpack/what-is-webpack/){:target='blank'} 
 <section class="answer">
 ### Notes on Webpack
 
-Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
+Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.edu/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
 
 1. You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ){:target='blank'} syntax
   - Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.
@@ -93,12 +93,12 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 
 #### Functionality
 
-You must complete all of the User Stories outlined in the [FitLit Spec](https://frontend.turing.io/projects/fitlit.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
+You must complete all of the User Stories outlined in the [FitLit Spec](https://frontend.turing.edu/projects/fitlit.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
 
 **NOTE: You must complete through iteration 5**
 
 #### Fetch
-  
+
 You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/fitlit-api){:target='blank'}.  You will need to clone this down and have it running in a separate tab in your terminal each time you run your client.  Here are the endpoints setup for this project:
 
 ##### Retrieve all data from an endpoint (GET)
@@ -130,9 +130,9 @@ Do proper error handling for your users to ensure that they are getting data and
 
 #### Extensions
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
-* Create a video of your team navigating through your app via a keyboard and screen reader. 
+* Create a video of your team navigating through your app via a keyboard and screen reader.
 * Implement an animation using CSS and Sass.
-* Create and implement a new feature for your application (run this by instructors first). 
+* Create and implement a new feature for your application (run this by instructors first).
 
 ---
 
@@ -143,7 +143,7 @@ Do proper error handling for your users to ensure that they are getting data and
 
 #### Functionality
 
-You must complete all of the User Stories outlined in the [What's Cookin Spec](https://frontend.turing.io/projects/whats-cookin.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
+You must complete all of the User Stories outlined in the [What's Cookin Spec](https://frontend.turing.edu/projects/whats-cookin.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
 
 **NOTE: You must complete through iteration 4**
 
@@ -195,9 +195,9 @@ Do proper error handling for your users to ensure that they are getting data and
 
 #### Extensions
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
-* Create a video of your team navigating through your app via a keyboard and screen reader. 
+* Create a video of your team navigating through your app via a keyboard and screen reader.
 * Implement an animation using CSS and Sass.
-* Create and implement a new feature for your application (run this by instructors first). 
+* Create and implement a new feature for your application (run this by instructors first).
 
 ---
 
@@ -211,7 +211,7 @@ Do proper error handling for your users to ensure that they are getting data and
 
 ---
 
-### DOM Manipulation 
+### DOM Manipulation
 
 * DOM manipulation should be organized into its own `domUpdates.js` file. The file should look something like this:
 
@@ -233,7 +233,7 @@ Any DOM updating functionality will then be imported into your `scripts.js` file
 
 ### Sass
 
-Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an `index.scss` file that imports your partials, and a `variables.scss` file that contains any of your Sass variables or function definitions.  You should also include a [normalize or reset](https://frontend.turing.io/lessons/module-1/reset-vs-normalize.html){:target='blank'} file to help with cross browser compatibility.  Identify common/re-used elements on your page to determine the remaining partials you might want.
+Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an `index.scss` file that imports your partials, and a `variables.scss` file that contains any of your Sass variables or function definitions.  You should also include a [normalize or reset](https://frontend.turing.edu/lessons/module-1/reset-vs-normalize.html){:target='blank'} file to help with cross browser compatibility.  Identify common/re-used elements on your page to determine the remaining partials you might want.
 
 Your Sass should be making use of:
 
@@ -262,11 +262,11 @@ In addition to your refactoring, you also want to make sure the application is f
 - Any methods that modify class properties should be test
 - **You are not required to test your fetch calls**
 
---- 
+---
 
 <section class="note">
 ## Strategies for Success
-* Make sure you are reviewing the original ["FitLit" spec](https://frontend.turing.io/projects/fitlit.html) or ["What's Cooking" spec](https://frontend.turing.io/projects/whats-cookin.html) so you have a good idea for what the project and its requirements are.
+* Make sure you are reviewing the original ["FitLit" spec](https://frontend.turing.edu/projects/fitlit.html) or ["What's Cooking" spec](https://frontend.turing.edu/projects/whats-cookin.html) so you have a good idea for what the project and its requirements are.
 * Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well.
 * Every group member must fully understand and be able to speak to all of the code changes that have been made.
 </section>
@@ -292,13 +292,13 @@ In addition to your refactoring, you also want to make sure the application is f
 ## Sass
 * 4: Application fulfills all requirements previously mentioned, and has Sass functionality that goes above and beyond an MVP (see extensions).
 * 3: The application has well-factored Sass with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
-* 2: Application adds organization for the whole stylesheet and within rules, but multiple Sass files have not been utilized. All Sass code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags. 
+* 2: Application adds organization for the whole stylesheet and within rules, but multiple Sass files have not been utilized. All Sass code lives in a single file, and only makes use of variables. There is some duplication in the codebase, and there may be some unnecessary selectors or tags.
 * 1: The application makes little to no use of Sass and is not separated into logical stylesheets. There are many instances of duplication.
 
 ## Accessibility
 * 4: Has an audit score of 100% and has gone above and beyond accessibility requirements (see extensions).
 * 3: All accessibility areas have been considered and tested. An accessibility audit with a score of at least 95%.  
-* 2: One accessibility area has not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML. 
+* 2: One accessibility area has not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML.
 * 1: Two or more accessibility areas have not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML.
 
 ## JavaScript Refactoring

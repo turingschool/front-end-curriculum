@@ -40,7 +40,7 @@ JavaScript has the following data types:
 * Undefined
 * Number
 * String
-* Symbol 
+* Symbol
 * Object
 
 Data types allow us to declare what kind of information it is that we're working with. Programming languages provide us with data types so that we can more easily interact and manipulate them in a useful way. For example, if we declare a variable that's a Number, we can assume some common things we might want to do with that number:
@@ -89,7 +89,7 @@ var pizza = {
   sauce: 'vodka',
   size: 'large',
   delivery: true
-} 
+}
 ```
 
 But objects are actually quite a bit more than that. Read through the documentation [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Objects) to identify what else is considered an object in JavaScript.
@@ -115,7 +115,7 @@ This provides some insight into why primitives are immutable. The string primiti
 
 So even though we have these primitive data types, an important generalization we can make is that **everything in JavaScript is an object**.
 
-If you read the comments on this blog post over at [CSS-Tricks](https://css-tricks.com/the-javascript-ah-ha-moment/) you'll see how this concept set a lightbulb off for many developers. It's ok if that moment isn't quite there yet for you, just file this information away in the back of your mind and it will come :) 
+If you read the comments on this blog post over at [CSS-Tricks](https://css-tricks.com/the-javascript-ah-ha-moment/) you'll see how this concept set a lightbulb off for many developers. It's ok if that moment isn't quite there yet for you, just file this information away in the back of your mind and it will come :)
 
 
 <hr />
@@ -123,7 +123,7 @@ If you read the comments on this blog post over at [CSS-Tricks](https://css-tric
 
 ## ES5 vs ES6 Review
 
-[ES6 Overview](http://frontend.turing.io/lessons/module-2/es5-vs-es6.html)
+[ES6 Overview](http://frontend.turing.edu/lessons/module-2/es5-vs-es6.html)
 
 ### Main Themes:
 

@@ -42,7 +42,7 @@ const port = 3000
 
 Express is a small framework built on top of the web server functionality provided by Node.js.  It allows us to more easily interact with the networking capabilities of the machine using JavaScript syntax that will feel familiar.
 
-- `const app` creates a new instance of an Express application, which is just a fancy Object with lots of built in methods. 
+- `const app` creates a new instance of an Express application, which is just a fancy Object with lots of built in methods.
 - `const port` is exactly what it looks like, a variable containing the
 integer 3000.
 
@@ -55,8 +55,8 @@ Now, let's drop down to the bottom of the file and break down this line of code:
 app.listen(port, () => console.log(`Listening on port ${port}`)
 ```
 
-- Based on the previous lesson, [how the web works](https://frontend.turing.io/lessons/module-2/how-the-web-works.html){:target='blank'}, what do you think the app is listening for? 
-- What arguments does this method take?  What do you think a port is? 
+- Based on the previous lesson, [how the web works](https://frontend.turing.edu/lessons/module-2/how-the-web-works.html){:target='blank'}, what do you think the app is listening for?
+- What arguments does this method take?  What do you think a port is?
 - Try running `node index.js` and note what you see in the terminal.
 </section>
 
@@ -67,7 +67,7 @@ Running `node index.js` will start up the server to wait for incoming connection
 </section>
 
 <section class="answer">
-### Reviewing what app.listen() does 
+### Reviewing what app.listen() does
 
 Let's start by reviewing what a server does. A server is waiting for requests to come in from clients. `app.listen` is the method that tells our Express application to start listening for those requests.  Without this line, our server would never start!
 
@@ -95,10 +95,10 @@ app.get('/welcome', (request, response) => {
 This is known as a **request handler**.  Let's break this down and explore what is happening here:
 
 *  How would you describe `app.get` using JavaScript terminology?  What do you think this is doing?
-* What arguments does `app.get` take? 
-1. Run `node index.js` in your terminal and visit [localhost:3000/welcome](http://localhost:3000/welcome){:target='blank'}. 
+* What arguments does `app.get` take?
+1. Run `node index.js` in your terminal and visit [localhost:3000/welcome](http://localhost:3000/welcome){:target='blank'}.
 2. Now visit [localhost:3000/yolo](http://localhost:3000/yolo){:target='blank'}.  Do you see anything different?
-3. Reviewing [how the web works](https://frontend.turing.io/lessons/module-2/how-the-web-works.html){:target='blank'}, what do you think the `request` and `response` parameters are for?
+3. Reviewing [how the web works](https://frontend.turing.edu/lessons/module-2/how-the-web-works.html){:target='blank'}, what do you think the `request` and `response` parameters are for?
 4. Diving deeper, in your own words describe what `response.send` is doing.  Change the string to be an object including your name, birthday, and favorite quote.  Visit [localhost:3000/welcome](http://localhost:3000/welcome){:target='blank'} once more and see if anything different happens.
 </section>
 

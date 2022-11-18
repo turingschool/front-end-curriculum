@@ -13,7 +13,7 @@ tags: javascript, js, this, keyword
 
 - `Invoke` / `Execute` To run a function. e.g., "I've invoked the function here"
 - `Declare` To write a function definition. Usually distinct from function execution
-- `Constructor Function` The function called to create a new instance of an object. Usually contains the code to set up the object 
+- `Constructor Function` The function called to create a new instance of an object. Usually contains the code to set up the object
 
 ## Defining rules about "this"
 
@@ -37,7 +37,7 @@ class Unicorn {
     console.log(this);  
   }
 
-  says() { 
+  says() {
     console.log(`${this.name} is my favorite ${this.color} pony`, this);
   }
 }
@@ -86,7 +86,7 @@ const voyager2 = {
   logThis: logThis
 }
 
-voyager1.logThis(); 
+voyager1.logThis();
 voyager2.logThis();  
 ```
 
@@ -134,18 +134,18 @@ const denver = {
 
 Taking turns for each prompt in driver/navigator fashion, use the code snippet below and complete the following:
 
-1. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following: 
+1. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
 ```js
 { buildings: {…}, restaurants: Array(2), logThis: ƒ}
 ```
 2. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
 ```js
-{ 
-  name: "Swedish Medical Center", 
-  floors: 6, 
-  completed: 1905, 
-  height: 65, 
-  beds: 368, 
+{
+  name: "Swedish Medical Center",
+  floors: 6,
+  completed: 1905,
+  height: 65,
+  beds: 368,
   logThis: ƒ
 }
 ```
@@ -226,7 +226,7 @@ print(); // What will print here? Why?
 
 ## The difference between `function () {}` and `() => {}`
 
-ES6 introduced arrow functions, which allow us to write functions with shorter syntax [among other things](http://frontend.turing.io/lessons/module-2/es5-vs-es6.html#arrow-functions). Beside being quicker to write/read, the way arrow functions bind `this` is a bit different:
+ES6 introduced arrow functions, which allow us to write functions with shorter syntax [among other things](http://frontend.turing.edu/lessons/module-2/es5-vs-es6.html#arrow-functions). Beside being quicker to write/read, the way arrow functions bind `this` is a bit different:
 
 <section class="call-to-action">
 ### In Breakout Groups

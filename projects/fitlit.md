@@ -33,7 +33,7 @@ The image above is *not* a comp. We expect you to design your own dashboard layo
 Dates and deadlines to be aware of:
 
 * **Monday of Week Two** - Submit the following to your PM BEFORE beginning to write code via Slack:
-1. DTR (be specific about learning goals, schedules, and communication expectations ) 
+1. DTR (be specific about learning goals, schedules, and communication expectations )
 1. Project board (this should be kept updated throughout the project and will be reviewed by PM in check ins)
 1. Planned out class structure
 1. Wireframes
@@ -58,7 +58,7 @@ This [article](https://survivejs.com/webpack/what-is-webpack/){:target='blank'} 
 <section class="answer">
 ### Notes on Webpack
 
-Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
+Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.edu/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
 
 1. You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ){:target='blank'} syntax
   - Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.

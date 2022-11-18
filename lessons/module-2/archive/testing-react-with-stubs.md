@@ -57,7 +57,7 @@ Like now...
 
 # Alphabet Soup: Why Is It So Hard to Google React Testing?
 
-When you wrote tests for [GameTime](http://frontend.turing.io/projects/game-time.html), or for our [data structures sessions](https://github.com/turingschool/data_structures_and_algorithms/blob/master/linked_lists/javascript/linkedList_test.js) you used a test runner called [MochaJS](https://mochajs.org/) and an assertion library called [ChaiJS](http://chaijs.com/).
+When you wrote tests for [GameTime](http://frontend.turing.edu/projects/game-time.html), or for our [data structures sessions](https://github.com/turingschool/data_structures_and_algorithms/blob/master/linked_lists/javascript/linkedList_test.js) you used a test runner called [MochaJS](https://mochajs.org/) and an assertion library called [ChaiJS](http://chaijs.com/).
 
 The problems you were solving were relatively simple. Well not the problems, but the set up. You had vanilla JS, maybe some jQuery, a little bit of putting things on the DOM...
 
@@ -84,7 +84,7 @@ You will see many different tech stacks as you google things - but this is our t
 
 ### Additional Resources:
 
-- [Testing React with Enzyme](http://frontend.turing.io/lessons/testing-react.html) (read but don't follow code examples)
+- [Testing React with Enzyme](http://frontend.turing.edu/lessons/testing-react.html) (read but don't follow code examples)
 - [Jest](https://facebook.github.io/jest) (Just read the first page)
 - [Jest to Enzyme Blog Post](https://www.codementor.io/vijayst/tutorials/unit-testing-react-components-jest-or-enzyme-du1087lh8) (read but don't follow code examples)
 

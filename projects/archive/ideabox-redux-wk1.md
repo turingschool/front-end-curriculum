@@ -173,7 +173,7 @@ You will need the `svg` files for the star, delete, upvote, downvote, and menu i
 * [ ]  Advanced Beginner - Application adds to the above by using appropriate semantic elements and using `data-*` attributes for all data related things
 * [ ]  Proficient - Applications adds to the above with markup that is easy to read and follow across naming conventions
 * [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes and:
-  * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson](http://frontend.turing.io/lessons/floating/web-accessibility.html)
+  * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson](http://frontend.turing.edu/lessons/floating/web-accessibility.html)
 
 ------------------------------------------------------------------
 

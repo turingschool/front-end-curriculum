@@ -12,8 +12,8 @@ module: 2
 
 ## Vocab
 
-- `CSS Preprocessor` a program that lets you generate CSS from the preprocessor's own unique syntax. It extends the default capabilities of CSS. Examples include: Sass, LESS, Stylus and more. 
-- `Compiler` converts our preprocessed code into css code so that the browser can understand it. Examples include: Webpack, Node-Sass, Gulp-Sass and many more! 
+- `CSS Preprocessor` a program that lets you generate CSS from the preprocessor's own unique syntax. It extends the default capabilities of CSS. Examples include: Sass, LESS, Stylus and more.
+- `Compiler` converts our preprocessed code into css code so that the browser can understand it. Examples include: Webpack, Node-Sass, Gulp-Sass and many more!
 
 <section class="call-to-action">
 ### Warm Up
@@ -26,7 +26,7 @@ Before diving into SASS, the history behind it, and some of the tools it provide
 
 ## Intro to Sass
 
-<a target="_blank" href="https://sass-lang.com/">Sass</a> stands for Syntactically Awesome StyleSheets. Sass allows you to add more advanced syntax - like variables and functions - to your stylesheets. 
+<a target="_blank" href="https://sass-lang.com/">Sass</a> stands for Syntactically Awesome StyleSheets. Sass allows you to add more advanced syntax - like variables and functions - to your stylesheets.
 
 ### Some background on Sass
 
@@ -36,7 +36,7 @@ Sass was originally part of another preprocessor called Haml. It used no curly b
 
 With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now.   
 
-Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in. 
+Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.
 
 <!-- <section class="call-to-action">
 ### SASS vs. SCSS
@@ -59,7 +59,7 @@ For another example of SCSS, take a look at [this codepen](https://codepen.io/th
 * Bad indentation won't break your code.
 
 **Differences**
-* Variables that store values are created and used in multiple places.  (Note the syntax for variables is akin to the syntax for jQuery variables) 
+* Variables that store values are created and used in multiple places.  (Note the syntax for variables is akin to the syntax for jQuery variables)
 * Some styles are nested inside of each other using `{}`!
 </section> -->
 
@@ -100,7 +100,7 @@ Some of the cool tricks include:
 * defining variables that can be peppered across multiple CSS files
 * nesting elements to visibly reflect the HTML element relationships
 * using math equations to adjust sizes and values
-* adjusting colors using more intuitive language like "darken" and "lighten" 
+* adjusting colors using more intuitive language like "darken" and "lighten"
 * bundling groups of styles together to easily reference throughout your CSS
 
 <hr />
@@ -184,8 +184,8 @@ header {
   nav {
     background-color: $red-dark;
 
-    a { 
-      color: $grey-light; 
+    a {
+      color: $grey-light;
     }
   }
 }
@@ -195,16 +195,16 @@ header {
 ### CSS Output  
 
 ```css
-header { 
-  color: #2f3640; 
+header {
+  color: #2f3640;
 }
 
-header nav { 
-  background-color: #ff0000; 
+header nav {
+  background-color: #ff0000;
 }
 
-header nav a { 
-  color: #dcdde1; 
+header nav a {
+  color: #dcdde1;
 }
 ```
 </section>
@@ -212,7 +212,7 @@ header nav a {
 <section class="note">
 ### Use nesting with CAUTION
 
-Be aware that having _too_ much nesting can be a problem - resulting in hard to maintain CSS that is overly specific (remember specificity?). Try to avoid excessive levels of nesting unless absolutely necessary. 
+Be aware that having _too_ much nesting can be a problem - resulting in hard to maintain CSS that is overly specific (remember specificity?). Try to avoid excessive levels of nesting unless absolutely necessary.
 </section>
 
 #### Nesting & Psuedo-Selectors
@@ -225,8 +225,8 @@ To target a parent element and apply a psuedo selector, use `&:psuedo-selector`,
 a {
   color: black;
 
-  &:hover { 
-    color: pink; 
+  &:hover {
+    color: pink;
   }
 }
 ```
@@ -235,7 +235,7 @@ a {
 #### Paired Practice
 
 * Revisit your Sass Sandbox Codepen and add in some nesting
-* What other situations can you think of where nesting could be beneficial? 
+* What other situations can you think of where nesting could be beneficial?
 </section>
 
 <hr />
@@ -298,8 +298,8 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 <section class="call-to-action">
 #### Paired Practice
 
-* How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS? 
-* In your Sassy Sandbox, find two different ways to set up your file structure with Sass. Separate this code out with comments. 
+* How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS?
+* In your Sassy Sandbox, find two different ways to set up your file structure with Sass. Separate this code out with comments.
 * What other files might make sense to have in a project?
 </section>
 
@@ -363,7 +363,7 @@ In your Sassy Sandbox, implement the following `mixins`:
   1. Create a mixin called `level-one-header` that has a font size of 32px, a
      font weight of 800, and a color of your choice.
   1. Create a second mixin called `level-two-header` that specifies a font size of 24px, a font weight of 300, and a color of your choice.
-  1. Create another mixin on your own 
+  1. Create another mixin on your own
 </section>
 
 <section class="note">
@@ -449,7 +449,7 @@ Finished early? What other useful color functions can you find?
 </section>
 
 ## Summary
-We've covered the basics (and more!) of Sass, but Sass can do a lot! If you're looking for more, check out the [Sass documentation](https://sass-lang.com/documentation/modules) for things like functions, operators, more at-rules, etc. 
+We've covered the basics (and more!) of Sass, but Sass can do a lot! If you're looking for more, check out the [Sass documentation](https://sass-lang.com/documentation/modules) for things like functions, operators, more at-rules, etc.
 
 CSS can be messy. If you're looking for more ways to think about organizing your styles (CSS or SASS), look into some of the modular architecture methodologies, like OOCSS, BEM or SMACSS.
 
@@ -466,6 +466,4 @@ We've talked about a lot of the strengths/advantages of using Sass without ackno
 - [Downsides of using a CSS preprocessor](https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/)
 - [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
 - [Sass to CSS Translator](http://www.sassmeister.com/)
-- [Advanced Sass Tutorials](http://thesassway.com/advanced)
 - [How to Organize Your CSS with a Modular Architecture](https://snipcart.com/blog/organize-css-modular-architecture)
-
