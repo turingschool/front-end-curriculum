@@ -100,14 +100,13 @@ To the right of the HTML pane, there's a small sidebar that gives us styling inf
 
 Directly from the CSS pane, we can edit the CSS and see the changes reflected immediately.
 
-Let's make the following edits on [kodewithklossy.com](https://www.kodewithklossy.com/):
+Let's make the following edits on this lesson page:
 
-* Change the background color of the div that holds the mission to `rebeccapurple`
-* Change the background of the 'Get Involved' button to `orange`.
-* Change the "Kode With Klossy" logo in the nav bar to have a height of 90px and a width of 320px
-* Change the background color of the right side "donate" button to a color of your choosing. Try out different color formats. Hint - this [HTML Color Codes](https://htmlcolorcodes.com/) website will help!
-* Experiment with deselecting a few CSS styles. What happens?
-
+* Make the title of this page have a font size of 200 pixels.
+* Change the left border color of all elements with a `.call-to-action` class to purple.
+* Make all of the `h2` elements red.
+* Change the font of the whole page to `serif`
+* Experiment with any other changes! 
 </section>
 
 ## The Box Model
