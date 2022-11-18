@@ -27,7 +27,7 @@ Discuss in groups:
 
 In groups, add some stickies to [this Jamboard](https://jamboard.google.com/d/1IxfF8lH5n4rWk-o40ahxb7x3gotGXlo1LkrFkDUMxBs/viewer?f=0)
 
-- What are some of the benefits of Object Oriented Programming? Think about why we organize code into classes. 
+- What are some of the benefits of Object Oriented Programming? Think about why we organize code into classes.
 </section>
 
 <section class="answer">
@@ -68,7 +68,7 @@ The basic inheritance syntax will look something like this:
 class Childclass extends Parentclass {...}
 ```
 
-Let's go back to our previous example with an Instructor used in the [last lesson](https://frontend.turing.io/lessons/module-2/oop-2-objects-and-prototype-chain.html):
+Let's go back to our previous example with an Instructor used in the [last lesson](https://frontend.turing.edu/lessons/module-2/oop-2-objects-and-prototype-chain.html):
 
 ```js
 class Instructor {
@@ -94,7 +94,7 @@ class Instructor {
 let instructor = new Instructor('Hannah', 2, ['hungry', 'calm']);
 ```
 
-Similar to an instructor, we might have a teaching assistant class to keep track of this data. Teaching Assistants should have a name, module, and traits property, just like instructors do. They should also be able to teach lessons, grade projects, and schedule check-ins. 
+Similar to an instructor, we might have a teaching assistant class to keep track of this data. Teaching Assistants should have a name, module, and traits property, just like instructors do. They should also be able to teach lessons, grade projects, and schedule check-ins.
 
 Instead of creating another class and re-creating these methods, we can create a **child class** or a **sub class** that inherits all of the properties and methods from our `Instructor` class. The only new behavior we need TAs to perform is to schedule check-ins.
 
@@ -119,7 +119,7 @@ let bob = new TA('Bob', 2, ['serious']);
 
 - What is `super`?  Try commenting it out and accessing `bob`'s properties.  What error do you get?
 - Comment `super` back in and then log each of the properties including the `name`, `module`, and `traits`.
--  Check out the [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super) on `super`. 
+-  Check out the [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super) on `super`.
 - Add a new property of `experience` to signify years of experience that TA has.  Check both the `Instructor` and `TA` to see which class has the added property.
 - Should a `TA` still have access to their parent's methods?  Try having `bob` "teach a lesson" or "grade a project."
 </section>
@@ -135,7 +135,7 @@ let bob = new TA('Bob', 2, ['serious']);
 
 <section class="note">
 ### What is super?  
- 
+
 The `super` keyword in JavaScript acts as a reference variable to the parent class.
 The `super` keyword is used to access and invoke methods on the parent class. In the example above, the `super` keyword is used to invoke the constructor method of the parent class.
 
@@ -151,15 +151,15 @@ Calling super() initializes `this` in `TA` class. It acts as the `Instructor` cl
 
 With a partner, think about an arcade game such as Frogger, Galaga, Centipede, or Snake and come up with what parts could be templated with a class.
 
-- What properties and methods might our **parent class** have? 
-- Come up with a **sub class** that could inherit from it and either add new behaviors or override existing ones. 
+- What properties and methods might our **parent class** have?
+- Come up with a **sub class** that could inherit from it and either add new behaviors or override existing ones.
 - Create a Repl and build out atleast one **parent class** and two **sub classes**!
 </section>
 
 <section class="checks-for-understanding">
 ### Checks for Understanding
 
-* Explain how inheritance works. How does this play into the Prototype Chain? 
+* Explain how inheritance works. How does this play into the Prototype Chain?
 * Why do we call `super()` in the inherited class's constructor?
 </section>
 

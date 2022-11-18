@@ -11,7 +11,7 @@ tags: React, challenge
 
 - [Our Template React Starter Kit](https://github.com/turingschool-examples/react-starter-kit)
 - [The create-react-app module](https://github.com/facebookincubator/create-react-app)
-  - [Walkthrough here](http://frontend.turing.io/lessons/unit-testing-react.html)
+  - [Walkthrough here](http://frontend.turing.edu/lessons/unit-testing-react.html)
 - [Codepen Playground](http://codepen.io/chriscoyier/pen/BGFhn)
 
 # Challenge 1: DnD Die
@@ -77,4 +77,3 @@ Write silly components that will allow you to use the following enzyme API metho
 - [.setState()](http://airbnb.io/enzyme/docs/api/ReactWrapper/setState.html)
 - [.simulate()](http://airbnb.io/enzyme/docs/api/ReactWrapper/simulate.html)
 - [.filter()](http://airbnb.io/enzyme/docs/api/ReactWrapper/filter.html)
- 

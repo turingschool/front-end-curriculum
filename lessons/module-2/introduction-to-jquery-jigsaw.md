@@ -170,7 +170,7 @@ Get some practice reading the <a href="https://api.jquery.com/category/traversin
 
 ## Extra Practice
 
-Check out this <a href="https://frontend.turing.io/lessons/module-2/introduction-to-jquery.html" target="\__blank">lesson plan</a> to get more practice traversing and manipulating the DOM with jQuery.
+Check out this <a href="https://frontend.turing.edu/lessons/module-2/introduction-to-jquery.html" target="\__blank">lesson plan</a> to get more practice traversing and manipulating the DOM with jQuery.
 
 <!-- Play around with the following example using jQuery.
 

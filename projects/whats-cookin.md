@@ -15,7 +15,7 @@ In this project, you will be creating a recipe tracking / meal planning applicat
 
 ## New Technologies
 - Fetch
-- [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'}
+- [Webpack](https://frontend.turing.edu/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'}
 
 <section class="note">
 ### Note
@@ -34,7 +34,7 @@ Feel free to use the above sites as inspiration for your UI, but note that there
 Dates and deadlines to be aware of:
 
 * **Monday, May 17th** - Submit the following to your PM BEFORE beginning to write code via Slack:
-1. DTR (be specific about learning goals, schedules, and communication expectations ) 
+1. DTR (be specific about learning goals, schedules, and communication expectations )
 1. Project board (this should be kept updated throughout the project and will be reviewed by PM in check ins)
 1. Planned out class structure
 1. Wireframes
@@ -58,7 +58,7 @@ This [article](https://survivejs.com/webpack/what-is-webpack/){:target='blank'} 
 <section class="answer">
 ### Notes on Webpack
 
-Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
+Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.edu/lessons/module-2/build-processes-with-npm-webpack.html){:target='blank'} is a great place to start). But there are a few things that you should know when starting to work with it:
 
 1. You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ){:target='blank'} syntax
   - Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.
@@ -99,7 +99,7 @@ Don't get too caught up with polishing your dashboard too early. You'll want to 
 
 You may choose **ONE** of the following 3rd party libraries to incorporate into your app as an extension if interested.  Your group may want to do a research spike over the first weekend to see what your team would like to experiment with.  Please get instructor approval first before choosing to use additional 3rd-party libraries.  
 
-* [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'} 
+* [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'}
 * [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
 * [InteractJS](https://interactjs.io/){:target='blank'}
 </section>

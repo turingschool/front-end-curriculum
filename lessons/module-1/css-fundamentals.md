@@ -100,14 +100,24 @@ To the right of the HTML pane, there's a small sidebar that gives us styling inf
 
 Directly from the CSS pane, we can edit the CSS and see the changes reflected immediately.
 
-Let's make the following edits on [kodewithklossy.com](https://www.kodewithklossy.com/):
+Let's make the following edits on this lesson page:
+* Make the title of this page have a font size of 200 pixels.
+* Change the left border color of all elements with a `.call-to-action` class to purple.
+* Make all of the `h2` elements red.
+* Change the font of the whole page to `serif`
 
-* Change the background color of the div that holds the mission to `rebeccapurple`
-* Change the background of the 'Get Involved' button to `orange`.
-* Change the "Kode With Klossy" logo in the nav bar to have a height of 90px and a width of 320px
-* Change the background color of the right side "donate" button to a color of your choosing. Try out different color formats. Hint - this [HTML Color Codes](https://htmlcolorcodes.com/) website will help!
+Discussion Questions:
 * Experiment with deselecting a few CSS styles. What happens?
+* What do you think it means when a style is crossed out?
+* Refresh the page. What happened to your changes? Given that they don't persist, why/when would using the Dev Tools be useful?
+</section>
 
+<section class="answer">
+### Chrome Dev Tools Takeaways
+
+* When a CSS property is crossed out, it means that the style was overridden by another style - either because there is a more specific selector somewhere else in your CSS file or because there is a competing style applied later in your file (Remember: CSS reads top to bottom!)
+* The Dev Tools are a great tool when you are working on your app's CSS. It's helpful to see the changes in real time and be able to mess with the styles until it's just right. It's also helpful for debugging to see what styles are being unintentionally overridden. Since the styles don't persist, you want to be careful to not make too many changes at a time without updating your CSS file!
+* [Here is a great resource](https://developer.chrome.com/docs/devtools/css/) on manipulating CSS through the Chrome Dev Tools.
 </section>
 
 ## The Box Model
@@ -165,3 +175,4 @@ You will have one hour to work on `iteration 1` of [this activity](https://githu
 * [Visual Guide to CSS](http://cssreference.io/)
 * [MDN CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 * [CSS Border Box](https://dev.to/ameseee/meet-border-box-my-best-friend-a56)
+* [Chrome Dev Tools - CSS](https://developer.chrome.com/docs/devtools/css/)

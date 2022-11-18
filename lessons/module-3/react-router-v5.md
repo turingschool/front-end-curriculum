@@ -418,8 +418,8 @@ return (
 ### Tutorials / Guides:
 
 - [React Training's 13 minute overview of React Router](https://www.youtube.com/watch?v=Mf0Fy8iHp8k&feature=youtu.be)
-- [The Hitchhiker's Guide to React Router - learn Router in 20 minutes](https://www.freecodecamp.org/news/hitchhikers-guide-to-react-router-v4-a957c6a5aa18/)
-- [The Hitchhiker's Guide to React Router - match, location, history](https://www.freecodecamp.org/news/hitchhikers-guide-to-react-router-v4-4b12e369d10/)
+- [A Beginner's Tutorial - 5 Minutes](https://www.freecodecamp.org/news/react-router-in-5-minutes/)
+- [Router Cheatsheet](https://www.freecodecamp.org/news/react-router-cheatsheet/)
 
 ### Helpful Articles / Docs:
 
