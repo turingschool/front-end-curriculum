@@ -287,7 +287,7 @@ Inside of our component, we're going to need a few different numbers. In pairs, 
 
 We'll use the excellent [Immutable][] by our friends at Facebook (the makers of React in case you forgot), to save ourselves the hassle of jumping through hoops to not accidently mutate objects. You can read more about it [here][auth0imm].
 
-[Immutable]: https://facebook.github.io/immutable-js/
+[Immutable]:https://immutable-js.com/
 [auth0imm]: https://auth0.com/blog/intro-to-immutable-js/
 
 ```js
