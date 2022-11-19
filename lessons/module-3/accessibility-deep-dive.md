@@ -152,10 +152,7 @@ Never adjust the focus on your application. Without the focus there is literally
 
 One thing you want to consider is utilizing the ``tabindex`` attribute. What's great about this is if you set the ``tabindex`` of something to zero it acts like a ``stop sign`` that makes the screen reader and or tab focus move to a specific part of the page.
 
-consider the following [article](http://archive.tlt.psu.edu/accessibility/tabindex0.html#whyzero) (make sure to inspect the ``html``)
-
 If you're tired of reading watch this [video](https://youtu.be/rvG7L-gsSuo) instead.
-
 
 #### Discussion
 
