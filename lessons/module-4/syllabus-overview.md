@@ -8,15 +8,15 @@ title: Syllabus Overview & Expectations
 * [__Mod 4 Homework Assignments__](https://github.com/turingschool/front-end-submissions-public/blob/master/1608/4-module/homework-submissions.md)
 * [__Portfolio Template__](https://raw.githubusercontent.com/turingschool/portfolios/master/template.markdown)
 * [__Mod 4 Portfolio Requirements__](https://github.com/turingschool/portfolios#module-4-front-end) (Note: these requirements may change)
-* [Index of Lessons](http://frontend.turing.io/lessons/)
+* [Index of Lessons](http://frontend.turing.edu/lessons/)
 
 ## Module Overview
 
 | Instructors    | Slack         | Email            |
 | -------------- |---------------| -----------------|
-| Alex Tideman   | @alex_tideman | alex@turing.io   |
-| Meeka Gayhart  | @meeka        | meeka@turing.io  | 
-| Brittany Storoz| @brittany     | brittany@turing.io |
+| Alex Tideman   | @alex_tideman | alex@turing.edu   |
+| Meeka Gayhart  | @meeka        | meeka@turing.edu  | 
+| Brittany Storoz| @brittany     | brittany@turing.edu |
 
 #### Big Goals
 
@@ -36,16 +36,16 @@ In order to graduate, you must complete the following:
 | ------------------------- | ------------------ |
 | Pass the final assessment | Thursday of Week 5 |
 | Pass 4 out of 5 projects  | Homework Documentation Project Added |
-| Complete Professional Skills Requirements | [See requirements here](http://backend.turing.io/professional_development/modacule_four/outreach_plan) |
+| Complete Professional Skills Requirements | [See requirements here](http://backend.turing.edu/professional_development/modacule_four/outreach_plan) |
 | Pass the Portfolio        | [Repo Here](https://github.com/turingschool/portfolios) |
 
 ## Projects
 
-- [Jet Fuel](http://frontend.turing.io/projects/jet-fuel.html) - Eval Friday Week 1
-- [Real Time](http://frontend.turing.io/projects/real-time.html) - Eval Thursday Week 2
-- [Imposter Syndrome](http://frontend.turing.io/projects/imposter-syndrome.html) - Eval Monday Week 4
-- [Capstone](http://frontend.turing.io/projects/capstone.html) - Eval Wednesday Week 6
-- [Homework Documentation Project](http://frontend.turing.io/projects/mod-4-assignments-assignment.html)
+- [Jet Fuel](http://frontend.turing.edu/projects/jet-fuel.html) - Eval Friday Week 1
+- [Real Time](http://frontend.turing.edu/projects/real-time.html) - Eval Thursday Week 2
+- [Imposter Syndrome](http://frontend.turing.edu/projects/imposter-syndrome.html) - Eval Monday Week 4
+- [Capstone](http://frontend.turing.edu/projects/capstone.html) - Eval Wednesday Week 6
+- [Homework Documentation Project](http://frontend.turing.edu/projects/mod-4-assignments-assignment.html)
   - Soft Due Monday Week 6
   - Hard Due Thursday Week 6
   - Emergency Hard Due Friday of Intermission Week
@@ -64,7 +64,7 @@ In order to graduate, you must complete the following:
 - Partner project (Jet Fuel)
 - Deploying to Heroku
 - Fundamental Javascript Practice
-- [PD: Outreach and Expectations](http://backend.turing.io/professional_development/module_four/outreach_plan)
+- [PD: Outreach and Expectations](http://backend.turing.edu/professional_development/module_four/outreach_plan)
 
 ### WK 2: Getting Complex with Node: Realtime, Websockets, Security
 

@@ -5,7 +5,7 @@ module: 4
 
 ## (PreWork or Warmup) Promises Warmup
 
-[Lesson Plan Here](http://frontend.turing.io/lessons/module-3/promises-warmup.html)
+[Lesson Plan Here](http://frontend.turing.edu/lessons/module-3/promises-warmup.html)
 
 ## Intro to Browser Automation and Scraping 
 
@@ -24,7 +24,7 @@ var Nightmare = require('nightmare');
 var nightmare = Nightmare({ show: true }); // this opens a browser. Normally we don't want that to happen, as it slows things down
 
 nightmare
-  .goto('https://turing.io/team/')
+  .goto('https://turing.edu/team/')
   .click('a[href="/team/instructors"]')
   .wait('h3')
   .evaluate(function () {

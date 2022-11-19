@@ -288,7 +288,7 @@ You will submit your solution to the code challenge and educational resource as 
 ### Additional Practice (Optional)
 
 * [Leveled Array Practice](array-practice.html)
-* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) lets you experiment more with these concepts.
+* [JavaScript Playground](http://frontend.turing.edu/lessons/module-1/javascript-playground.html) lets you experiment more with these concepts.
 
 ### More Resources
 

@@ -112,7 +112,7 @@ In your groups, use the following semantic HTML tags to create the basic structu
 # Additional Resources
 
 * [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
-* [Check out the cheat sheets in independent study](http://frontend.turing.io/independent-study/)
+* [Check out the cheat sheets in independent study](http://frontend.turing.edu/lessons/independent-study/)
 * [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
 * [MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)

@@ -1,3 +1,7 @@
+---
+title: Codewars Exercises
+module: 2
+--- 
 # Codewars Exercises
 
 ## 8

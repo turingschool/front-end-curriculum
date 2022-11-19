@@ -455,7 +455,7 @@ describe('submitLoginUser', () => {
   beforeAll(() => {
     mockAction = {
       type: 'SUBMIT_LOGIN_USER',
-      email: 'will@turing.io',
+      email: 'will@turing.edu',
       password: 'password'
     }
 
@@ -471,7 +471,7 @@ describe('submitLoginUser', () => {
   it('should put the next action into place', () => {
     const mockUser = {
       id: 0,
-      email: 'will@turing.io'
+      email: 'will@turing.edu'
     }
     const value = iterator.next(mockUser).value
     const expected = put(actions.loginUser(mockUser))
@@ -499,7 +499,7 @@ describe('submitLoginUser on error', () => {
   beforeAll(() => {
     mockAction = {
       type: 'SUBMIT_LOGIN_USER',
-      email: 'will@turing.io',
+      email: 'will@turing.edu',
       password: 'password'
     }
 

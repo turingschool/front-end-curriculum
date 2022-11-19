@@ -1,3 +1,7 @@
+---
+title: Extra Practice
+---
+
 # Extra Practice
 
 Below are ways you can get in additional practice throughout the inning. None of these exercises are mandatory, but we find that the more unique problem sets students encounter and complete, the better their coding and problem-solving skills become.
@@ -24,7 +28,7 @@ Below are ways you can get in additional practice throughout the inning. None of
 * [Functions 1 (parameters, arguments, conditionals)](https://repl.it/@eric_turing/Functions-Workshop)
 * [Functions 2 (parameters, arguments, conditionals)](https://replit.com/@kaylagordon/functionsPractice-1#index.js)
 * [Objects 1](https://repl.it/@ameseee/Partner-Practice#index.js)
-* [Objects 2](https://frontend.turing.io/lessons/module-1/objects-review.html)
+* [Objects 2](https://frontend.turing.edu/lessons/module-1/objects-review.html)
 * [Objects 3](https://repl.it/@letakeane/02-objects)
 * [Arrays 1](https://gist.github.com/ameseee/b818a24a4b06cdd2c14b88ad146ea508)
 * [Arrays 2](https://repl.it/@letakeane/03-arrays)
@@ -89,9 +93,9 @@ Below are ways you can get in additional practice throughout the inning. None of
 ### Deprecated Projects
 
 * [MadLibs](https://github.com/turingschool-examples/winter-mad-libs)
-* [Build A Bear](https://frontend.turing.io/projects/module-1/build-a-bear-group.html)🌶
-* [Number Guesser](https://frontend.turing.io/projects/module-1/number-guesser-pair.html)🌶
-* [SlapJack](https://frontend.turing.io/projects/module-1/slapjack.html)🌶
-* [Which Beyonce?](https://frontend.turing.io/projects/module-1/which-beyonce-solo.html)🌶
-* [Check Yo'Self](https://frontend.turing.io/projects/module-1/check-yo-self-solo.html)🌶
+* [Build A Bear](https://frontend.turing.edu/projects/module-1/build-a-bear-group.html)🌶
+* [Number Guesser](https://frontend.turing.edu/projects/module-1/number-guesser-pair.html)🌶
+* [SlapJack](https://frontend.turing.edu/projects/module-1/slapjack.html)🌶
+* [Which Beyonce?](https://frontend.turing.edu/projects/module-1/which-beyonce-solo.html)🌶
+* [Check Yo'Self](https://frontend.turing.edu/projects/module-1/check-yo-self-solo.html)🌶
 </section>

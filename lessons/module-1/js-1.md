@@ -364,7 +364,7 @@ When this code is read, `makeStatements()` is "invoked", all three statements wi
   <ul>
     <li>Write a function that logs to the console a message of "YO!", and then logs a sum of eight different integers.</li>
      <li>Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.</li>
-    <li>Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a <a href="http://frontend.turing.io/independent-study/random-numbers.html">random number</a> to the console.</li>
+    <li>Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a <a href="http://frontend.turing.edu/independent-study/random-numbers.html">random number</a> to the console.</li>
   </ul>
 </section>
 
@@ -445,4 +445,4 @@ return x + y / 3;
 ### Additional Resources & Practice
 
 * [JS Style Guide](https://github.com/turingschool-examples/javascript)
-* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
+* [JavaScript Playground](http://frontend.turing.edu/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
