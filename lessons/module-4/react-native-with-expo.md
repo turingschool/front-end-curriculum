@@ -197,7 +197,7 @@ This opens up a browser window where you have access to the console and debugger
 <section class="note">
 ### A Refresher in the React Component Lifecycle
 
-Just like normal React, we have access to the component lifecycle API. This includes some of the newer *static* methods like `getDerivedStateFromProps` as well as the more common lifecycle methods like `render`, `componentDidMount`, and `componentDidUpdate`.  To review the available lifecycle methods, you can visit either [this lesson](https://frontend.turing.io/lessons/module-3/react-iii.html) or [the docs](https://reactjs.org/docs/react-component.html) 
+Just like normal React, we have access to the component lifecycle API. This includes some of the newer *static* methods like `getDerivedStateFromProps` as well as the more common lifecycle methods like `render`, `componentDidMount`, and `componentDidUpdate`.  To review the available lifecycle methods, you can visit either [this lesson](https://frontend.turing.edu/lessons/module-3/react-iii.html) or [the docs](https://reactjs.org/docs/react-component.html) 
 </section>
 
 ## Conclusion

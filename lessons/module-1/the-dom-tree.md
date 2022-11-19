@@ -48,7 +48,7 @@ With a partner, share your diagram.
 
 ## Taking a Closer Look at the DOM
 
-We've [already learned](https://frontend.turing.io/lessons/module-1/dom-manipulation-1-rewrite.html) that the DOM (the Document Object Model) is a representation of the HTML file, and that it is an interface that allows us to interact with the HTML file and browser using JavaScript.
+We've [already learned](https://frontend.turing.edu/lessons/module-1/dom-manipulation-1-rewrite.html) that the DOM (the Document Object Model) is a representation of the HTML file, and that it is an interface that allows us to interact with the HTML file and browser using JavaScript.
 
 We've looked at the `document` object in the browser console. We've dug into individual elements using `querySelector`, and discovered that each element in the DOM has properties such as `classList`, `innerText`, and `innerHTML`, and some have more, like `src`, and `value`.
 

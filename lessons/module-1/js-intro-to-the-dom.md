@@ -224,5 +224,5 @@ What else about the DOM do you think you would need to know to build something l
 In order to keep learning about the DOM and DOM manipulation, here are some suggestions:
 
 - Use CodePen to practice creating HTML elements to interact with using JavaScript
-- Read up more about [the DOM (and node trees)](https://frontend.turing.io/lessons/module-1/the-dom-tree.html)
+- Read up more about [the DOM (and node trees)](https://frontend.turing.edu/lessons/module-1/the-dom-tree.html)
 - Practice manipulating the DOM of various websites through the developer tools, using `document.querySelector()` - have fun creating ridiculous things to screenshot

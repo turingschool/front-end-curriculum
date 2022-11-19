@@ -7,7 +7,7 @@ title: Submission Guide
 Below is a submission guide from your instructional team. All weekly due dates for the technical and professional development curricula are listed here, week-by-week. If you come across an error, please DM your instructors for clarfication.
 
 ## Professional Development Resources
-- [Career Development Curriculum Site](https://careerdev.turing.io/module_three/)
+- [Career Development Curriculum Site](https://careerdev.turing.edu/module_three/)
 - [Career Journal Prompts](https://github.com/turingschool/career-development-curriculum-site/blob/master/module_three/mod3_career_journal_prompts.md)
 
 ## Deliverables by Week:

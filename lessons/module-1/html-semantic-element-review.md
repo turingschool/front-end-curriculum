@@ -61,7 +61,7 @@ Let's try this with a layout that has a little bit more going on. As you tackle 
 # Additional Resources
 
 * [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
-* [Check out the cheat sheets in independent study](http://frontend.turing.io/independent-study/)
+* [Check out the cheat sheets in independent study](http://frontend.turing.edu/independent-study/)
 * [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
 * [MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)

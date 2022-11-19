@@ -28,7 +28,7 @@ In this lesson we'll cover:
 
 ## Vocab
 
-- See [vocab](http://frontend.turing.io/lessons/module-1/js-1.html) for JS I
+- See [vocab](http://frontend.turing.edu/lessons/module-1/js-1.html) for JS I
 - `DRY` Programming principle that means `Don't Repeat Yourself`
 - `Refactoring` - the process of cleaning up your working code to be more concise
 - `Anonymous Function` A function without a name
@@ -521,8 +521,7 @@ We can see that this condition will never return `false` and we'll be stuck in t
 
 ### Additional Practice  
 
-* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
-
+* [JavaScript Playground](http://frontend.turing.edu/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
 ### Dig Deeper  
 
 * [JS Style Guide](https://github.com/turingschool-examples/javascript)
