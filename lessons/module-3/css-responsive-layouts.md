@@ -128,7 +128,7 @@ Review the two media queries written above. Predict the result of this code. Be 
 
 Before writing any queries, you'll want to add a viewport meta tag in the `head` of your main html file (which is often named `index.html`).  This ensures that the site will work on devices.  Without it, you might find that your responsive site works locally and on device simulators, but not on the actual device itself.
 
-The [viewport meta tag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag){:target='blank'} gives the browser instructions on how to control the pages dimensions and sets the width of the page based on the screen width of the device it is being viewed on.
+The [viewport meta tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag){:target='blank'} gives the browser instructions on how to control the pages dimensions and sets the width of the page based on the screen width of the device it is being viewed on.
 
 Here's what the tag looks like:
 
