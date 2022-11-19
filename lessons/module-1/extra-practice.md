@@ -1,3 +1,7 @@
+---
+title: Extra Practice
+---
+
 # Extra Practice
 
 Below are ways you can get in additional practice throughout the inning. None of these exercises are mandatory, but we find that the more unique problem sets students encounter and complete, the better their coding and problem-solving skills become.
