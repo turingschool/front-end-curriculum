@@ -17,7 +17,6 @@ Turns out, CSS has some "behaviour tricks" up its sleeve as well. Through CSS tr
 * [Code Pen: Page Flip](http://codepen.io/fbrz/pen/whxbF?editors=1100#0)
 * [Movie Posters](http://demo.marcofolio.net/3d_animation_css3/)
 * [Coke Can](http://www.romancortes.com/ficheros/css-coke.html)
-* [Album Covers](http://www.bluedashed.com/covers/)...okay, so there is some JS happening in this one, but the covers were recreated using pure CSS.
 
 ### Definitions:
 
