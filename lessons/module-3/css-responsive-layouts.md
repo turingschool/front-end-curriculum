@@ -27,9 +27,9 @@ In this session, we'll be diving into responsive page layouts and using media qu
 <section class="call-to-action">
 ## Exploration: Page Layouts
 
-*Page Layout* refers to the arrangement and sizing of visual elements on a web page. You and a partner will explore the four primary page layout types [blog post](https://magnusbenoni.com/different-layouts-css/)target='blank'}.
+*Page Layout* refers to the arrangement and sizing of visual elements on a web page. You and a partner will explore the four primary page layout types [blog post](https://magnusbenoni.com/different-layouts-css/){:target='blank'}.
 
-What characteristics are shared between layouts?  What is different?
+* What characteristics are shared between layouts?  What is different?
 </section>
 
 <section class="answer">
@@ -151,7 +151,6 @@ Before you start to build out the HTML, familiarize yourself with all required l
 
 ## Documentation & Resources
 
-* The site [Liquidapsive](http://www.liquidapsive.com/) is a great resource showing simple examples of all the layout types in action.
 * [MDN's Using Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-* [MDN's Explanation Viewport Meta Tag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)
+* [MDN's Explanation Viewport Meta Tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag)
 * Brad Frost's [This is Responsive](http://bradfrost.github.io/this-is-responsive/), patterns and resources for creating responsive websites. He also created [this](https://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/#relative) brief read.
