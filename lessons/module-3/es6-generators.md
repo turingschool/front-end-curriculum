@@ -509,6 +509,5 @@ for (let n of fibonacci()) {
 
 ### Read
 
-[Entertaining Article about Generators with Lots of Swear Words](https://medium.com/@dtothefp/why-can-t-anyone-write-a-simple-es6-generators-tutorial-ec2bbdf6ff45#.rmqbhf1zl)  
 [MDN Docs on Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)  
 [The Basics of ES6 Generators](https://davidwalsh.name/es6-generators)  
