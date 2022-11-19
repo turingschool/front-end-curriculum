@@ -23,7 +23,7 @@ Over the next two weeks, you'll work with a teammate to build a two-player game!
 - Create a project on your machine title `number-guesser`
   - Touch `index.html`, `styles.css`, and `main.js` files inside the project
   - Create a `assets` directory inside the project
-- Follow the directions [here](https://frontend.turing.io/lessons/module-1/github-repo.html) to set up a local Git repository and connect it to a remote GitHub repository.
+- Follow the directions [here](https://frontend.turing.edu/lessons/module-1/github-repo.html) to set up a local Git repository and connect it to a remote GitHub repository.
 - In the "Settings" tab, click "Collaborators & teams", then type your partners email or GitHub handle in to invite them. Either send them the provided link in Slack or tell them to check their email for the link.
 
 **Now, the other partner should follow these directions:**

@@ -152,7 +152,7 @@ To earn a given score, an application must meet the requirements listed in that 
   - Application uses event delegation correctly on dynamic elements
   - All functions strictly adhere to the [Single Responsibility Principle (SRP)](https://dev.to/skill_pathway/single-responsibility-principle-for-dummies-59gb) and are all 10 lines of code or less
   - Uses logical operators instead of nesting conditional statements
-  - Conditionals are written in a way that demonstrates an understanding of [truthy/falsy values](https://frontend.turing.io/lessons/module-1/js-truthy-falsy-expressions.html). For example, the developer avoids using logic like `=== true` and `!== 0`.
+  - Conditionals edu written in a way that demonstrates an understanding of [truthy/falsy values](https://frontend.turing.edu/lessons/module-1/js-truthy-falsy-expressions.html). For example, the developer avoids using logic like `=== true` and `!== 0`.
 
 * **3:**
   - Demonstrate understanding of DOM manipulation by adding, removing, and updating elements on the DOM, after the page has loaded
