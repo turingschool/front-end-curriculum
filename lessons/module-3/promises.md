@@ -125,7 +125,6 @@ Converting the body to a JSON data structure with `response.json()` actually ret
 If the function fails for any reason, our Promise object is considered **rejected**, and our `.catch()` block will execute instead. Within this block, we are automatically given an error that we can use to notify the user that something went wrong.  
 
 ![Image of Promise Flow](https://wtcindia.files.wordpress.com/2016/06/promises.png?w=605)
-(Photo credit from [WalkingTree](https://blogs.walkingtree.tech/2016/07/03/using-promises-in-ext-js-6/))
 
 ### Passing the Options Argument
 
