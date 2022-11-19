@@ -356,7 +356,7 @@ Our changes are now completely synced. The master branch locally is the same as 
 
 #### A Typical Workflow
 
-To summarize the example above, a typical workflow for a project tracked with Git and GitHub is layed out well [here](http://frontend.turing.edu/lessons/module-1/git-team-workflow.html).
+To summarize the example above, a typical workflow for a project tracked with Git and GitHub is layed out well [here](http://frontend.turing.edu/lessons/module-1/dev-skills-git-team-workflow.html).
 
 ### Your Turn: using the workflow
 
@@ -416,7 +416,7 @@ Optional:
 
 ### Additional Resources
 
-  * [Team Workflow](http://frontend.turing.edu/lessons/module-1/git-team-workflow.html)
+  * [Team Workflow](http://frontend.turing.edu/lessons/module-1/dev-skills-git-team-workflow.html)
   * [Common git commands and a link to a giant cheetsheet](http://frontend.turing.edu/lessons/module-1/git-commands.html)
   * [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commit/)
   * [GitHub Tutorials](https://guides.github.com/)
