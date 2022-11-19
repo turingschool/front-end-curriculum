@@ -330,13 +330,3 @@ class App extends Component {
 
 export default App;
 ```
-
-### Level Three: Regular Bar Graph
-
-![Interactive Bar Graph](http://g.recordit.co/8Kk2T3HIiS.gif)
-
-Some tips:
-
-- Be okay with it rendered upside down at first.
-- You should _barely_ need to change the `<App/>` component. The only real change is swapping out the name of the component.
-- It's simpler than the stacked bar graph. You can use the previous example as a template.
