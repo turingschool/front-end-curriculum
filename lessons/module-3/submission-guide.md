@@ -1,3 +1,7 @@
+---
+title: Submission Guide
+---
+
 # Submission Guide
 
 Below is a submission guide from your instructional team. All weekly due dates for the technical and professional development curricula are listed here, week-by-week. If you come across an error, please DM your instructors for clarfication.
