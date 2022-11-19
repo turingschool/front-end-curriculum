@@ -307,6 +307,6 @@ Things to remember about *async/await*:
 
 - [Promise It Wont Hurt Workshop](https://github.com/stevekane/promise-it-wont-hurt)  
 - ["You're Missing the Point of Promises" by Domenic Denicola](https://gist.github.com/domenic/3889970)
-- [MDN Promises](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise)
+- [MDN Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [MDN Promise.Race()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
 - [MDN Promise.All()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
