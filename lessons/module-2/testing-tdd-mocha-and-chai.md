@@ -249,7 +249,7 @@ describe('Player', function() {
 
     // 3. "Assertion"
     // Make an assertion to verify that after executing certain functions, we end up with what we expect
-    expect(player.winningWords).to.deep.equal(['adore']]);
+    expect(player.winningWords).to.deep.equal(['adore']);
   });
 });
 ```
