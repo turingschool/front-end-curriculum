@@ -97,7 +97,7 @@ To be able to store pieces of data in a way that we can reference and use them l
 
 <section class="answer">
 ### What are best practices for naming variables?
-  - Variable names can begin cannot begin with a number.  The can begin with a letter, dollar sign, or an underscore.  
+  - Variable names cannot begin with a number.  They can begin with a letter, dollar sign, or an underscore.  
   - You cannot use a dash (-) or a period (.) within a variable name
   - You cannot use keywords or reserved words (such as var or for)
   - Variables are case sensitive.  
