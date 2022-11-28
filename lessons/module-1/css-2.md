@@ -80,7 +80,7 @@ Give instructors group questions so we can circle back around on them at a later
 
 ### Reset v. Normalize CSS Files & Idiomatic CSS
 
-* Start with the [Reset vs Normalize](https://frontend.turing.io/lessons/module-1/reset-vs-normalize) lesson
+* Start with the [Reset vs Normalize](https://frontend.turing.edu/lessons/module-1/reset-vs-normalize) lesson
 * What are the differences Reset v. Normalize files and when/why would they matter to us as FE Devs?
 * Who are the creators of normalize and why should we care?
 * Anything else of interest to note? Think output of the CSS, bug issues, performance, documentation, maintainability, legacy and future support, etc.
@@ -109,7 +109,7 @@ Give instructors group questions so we can circle back around on them at a later
 
 ### Transitions, Transformations, Animations
 
-* Start with the [CSS Transitions, Transformations, Animations](https://frontend.turing.io/lessons/module-1/css-transitions-transformations) lesson
+* Start with the [CSS Transitions, Transformations, Animations](https://frontend.turing.edu/lessons/module-1/css-transitions-transformations) lesson
 * Articulate the differences between transitions, transformations, and animations.
 * Are there accessibility concerns with CSS animations? What are they and what can we do about it?
 * Create your own code pen examples of various transitions, transformations, and at least one multi-stage animation (goal: 5 code pens, different from the lesson provided above)

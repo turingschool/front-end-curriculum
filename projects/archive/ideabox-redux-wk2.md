@@ -6,7 +6,7 @@ title: IdeaBox Redux - Week 2
 
 We've got a pretty good MVP for your application now, but our client thinks it would be great to have a little more control of the content that is viewed.  Our application won't be as effective if we have over a 100 ideas, and no way to view our ideas by their quality or favorites.  It would also be awesome if we had some extra features like managing the names and number of qualities we have.  Time for sprint 2, let's finish our product for our client!
 
-##### NOTE: All functionality from [IdeaBox Redux - Week 1](http://frontend.turing.io/projects/ideabox-redux-wk1.html) must be completed before you begin working on the Week 2 Spec/Additions.
+##### NOTE: All functionality from [IdeaBox Redux - Week 1](http://frontend.turing.edu/projects/ideabox-redux-wk1.html) must be completed before you begin working on the Week 2 Spec/Additions.
 
 ### Phase Three: Specifying what Content is Viewed
 
@@ -115,7 +115,7 @@ Full mobile layout with open navigation:
 * [ ]  Advanced Beginner - Application adds to the above by using appropriate semantic elements and using `data-*` attributes for all data related things
 * [ ]  Proficient - Applications adds to the above with markup that is easy to read and follow across naming conventions
 * [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes and:
-  * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/web-accessibility.html)
+  * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.edu/lessons/floating/web-accessibility.html)
 
 ------------------------------------------------------------------
 

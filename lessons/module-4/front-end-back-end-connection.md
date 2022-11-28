@@ -168,7 +168,7 @@ Questions:
 
 ### Backend
 
-So we're set up locally, and everything seems to be working correctly! So far we've taken care of our development environment. What about production and deploying our application? Let's deploy the back-end application to Heroku first. Go ahead! (Reference the [lesson](https://frontend.turing.io/lessons/module-4/deploy-to-heroku.html) we've already had about deploying a back-end app to Heroku.)
+So we're set up locally, and everything seems to be working correctly! So far we've taken care of our development environment. What about production and deploying our application? Let's deploy the back-end application to Heroku first. Go ahead! (Reference the [lesson](https://frontend.turing.edu/lessons/module-4/deploy-to-heroku.html) we've already had about deploying a back-end app to Heroku.)
 
 Test it with Postman to make sure the API is working.
 

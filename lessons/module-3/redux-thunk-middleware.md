@@ -330,7 +330,7 @@ describe('fetchStaff', () => {
 })
 ```
 
-Ok, here's where we get into async land. We've kicked off our network request and now need to test what gets dispatched if the response is ok/not ok. If you need a refresher on how to mock fetch or resolve a Promise in our tests, take some time to go back and review the [Testing Async Javascript & API Calls](http://frontend.turing.io/lessons/module-3/testing-async.html) lesson.
+Ok, here's where we get into async land. We've kicked off our network request and now need to test what gets dispatched if the response is ok/not ok. If you need a refresher on how to mock fetch or resolve a Promise in our tests, take some time to go back and review the [Testing Async Javascript & API Calls](http://frontend.turing.edu/lessons/module-3/testing-async.html) lesson.
 
 ```javascript
 // thunks/__tests__/fetchStaff.js

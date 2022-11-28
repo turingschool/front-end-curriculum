@@ -2,10 +2,10 @@
 
 ### Functionality
 
-You must complete all of the User Stories outlined in the [FitLit Spec](https://frontend.turing.io/projects/fitlit.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
+You must complete all of the User Stories outlined in the [FitLit Spec](https://frontend.turing.edu/projects/fitlit.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
 
 ### Fetch
-  
+
 You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/fitlit-api){:target='blank'}.  You will need to clone this down and have it running in a separate tab in your terminal each time you run your client.  Here are the endpoints setup for this project:
 
 #### Retrieve all data from an endpoint (GET)
@@ -43,7 +43,7 @@ Do proper error handling for your users to ensure that they are getting data and
 
 ---
 
-### DOM Manipulation 
+### DOM Manipulation
 
 * DOM manipulation should be organized into its own `domUpdates.js` file. The file should look something like this:
 
@@ -65,7 +65,7 @@ Any DOM updating functionality will then be imported into your `scripts.js` file
 
 ### Sass
 
-Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an `index.scss` file that imports your partials, and a `variables.scss` file that contains any of your Sass variables or function definitions.  You should also include a [normalize or reset](https://frontend.turing.io/lessons/module-1/reset-vs-normalize.html){:target='blank'} file to help with cross browser compatibility.  Identify common/re-used elements on your page to determine the remaining partials you might want.
+Refactor the existing CSS into Sass. You should break your Sass out into separate files. At a minimum, you will want an `index.scss` file that imports your partials, and a `variables.scss` file that contains any of your Sass variables or function definitions.  You should also include a [normalize or reset](https://frontend.turing.edu/lessons/module-1/reset-vs-normalize.html){:target='blank'} file to help with cross browser compatibility.  Identify common/re-used elements on your page to determine the remaining partials you might want.
 
 Your Sass should be making use of:
 
@@ -94,7 +94,7 @@ In addition to your refactoring, you also want to make sure the application is f
 
 <section class="note">
 ## Strategies for Success
-* Make sure you are reviewing the original ["FitLit" spec](https://frontend.turing.io/projects/fitlit.html) so you have a good idea for what the project and its requirements are.
+* Make sure you are reviewing the original ["FitLit" spec](https://frontend.turing.edu/projects/fitlit.html) so you have a good idea for what the project and its requirements are.
 * Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well.
 * Every group member must fully understand and be able to speak to all of the code changes that have been made.
 </section>
@@ -103,9 +103,8 @@ In addition to your refactoring, you also want to make sure the application is f
 
 ### Extensions
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
-* Create a video of your team navigating through your app via a keyboard and screen reader. 
+* Create a video of your team navigating through your app via a keyboard and screen reader.
 * Implement an animation using CSS and Sass.
-* Create and implement a new feature for your application (run this by instructors first). 
+* Create and implement a new feature for your application (run this by instructors first).
 
 ---
-

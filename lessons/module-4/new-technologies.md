@@ -63,7 +63,7 @@ measuring your apps performance. Learning how to use your developer tools will e
 Umm...when you want something to be faster.
 
 #### Resources and Tutorials
-* [Intro to Performance lesson](http://frontend.turing.io/lessons/module-4/intro-to-performance.html)
+* [Intro to Performance lesson](http://frontend.turing.edu/lessons/module-4/intro-to-performance.html)
 * [Chrome Performance Tools](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference)
 
 #### Expectations
@@ -81,7 +81,7 @@ localization is not just about translation.
 When you anticipate having users outside of the United States or other language speakers users your app even withing the United States.
 
 #### Resources and Tutorials
-* [Localization and Internationalization](http://frontend.turing.io/lessons/module-4/localization.html)
+* [Localization and Internationalization](http://frontend.turing.edu/lessons/module-4/localization.html)
 
 #### Expectations
 Use a internationalization and localization libraries to localize your application for at least one other locale.
@@ -98,7 +98,7 @@ When an application needs a fast, two-way connection between the client and serv
 group messages in Slack).
 
 #### Resources and Tutorials
-* [Websockets lesson](http://frontend.turing.io/lessons/module-4/websockets.html)
+* [Websockets lesson](http://frontend.turing.edu/lessons/module-4/websockets.html)
 
 #### Expectations
 Incorporate a websocket connection - you can use websocket libraries such as [socket.io](https://socket.io/).

@@ -801,7 +801,7 @@ Challenge yourself to try and finish out the remaining components by copying the
 
 Remember, only components needing to interact with state actually need container components. Present components won't look all that different that what you're already used to seeing.
 
-If you want to finish up the app functionality, you can [finish things up here](https://frontend.turing.io/lessons/starting-up-redux-wrapup.html).
+If you want to finish up the app functionality, you can [finish things up here](https://frontend.turing.edu/lessons/starting-up-redux-wrapup.html).
 
 ### Resources
 

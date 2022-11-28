@@ -301,12 +301,12 @@ var propertyName = 'name';
 
 console.log(school[propertyName]); // 'International School of Denver
 
-var properties = [ 
-	'name', 
-	'capacity', 
-	'languageImmersion', 
-	'currentStudents', 
-	'checkOpenSpots' 
+var properties = [
+	'name',
+	'capacity',
+	'languageImmersion',
+	'currentStudents',
+	'checkOpenSpots'
 ];
 
 properties.forEach( prop => {
@@ -521,7 +521,7 @@ return x + y / 3;
 
 ### Additional Practice
 
-* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
+* [JavaScript Playground](http://frontend.turing.edu/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
 
 # More on Functions
 

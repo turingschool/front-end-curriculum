@@ -62,4 +62,4 @@ Let's build some stuff!
 
 ### Homework
 
-For your homework please make sure to build out phases 1 through 3 in the Flash Cards [project](http://frontend.turing.io/projects/flash-cards.html). This will help you understand the role of objects as you start your game time journey. 
+For your homework please make sure to build out phases 1 through 3 in the Flash Cards [project](http://frontend.turing.edu/projects/flash-cards.html). This will help you understand the role of objects as you start your game time journey.

@@ -15,7 +15,7 @@ But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.c
 
 ## Pre-Work
 
-Come prepared to class by reading [CSS Specificity + Combinators](https://frontend.turing.io/lessons/module-1/css-specificity-combinators.html)
+Come prepared to class by reading [CSS Specificity + Combinators](https://frontend.turing.edu/lessons/module-1/css-specificity-combinators.html)
 
 ## Warm Up
 

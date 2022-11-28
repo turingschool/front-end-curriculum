@@ -27,7 +27,7 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 ### Additional Requirements
  - Site must work across Firefox, Safari, Chrome
- - Developer must use [normalize or reset](https://frontend.turing.io/lessons/module-1/reset-vs-normalize.html){:target='blank'} file in CSS
+ - Developer must use [normalize or reset](https://frontend.turing.edu/lessons/module-1/reset-vs-normalize.html){:target='blank'} file in CSS
  - You should definitely experiment with `flex-box` and/or `grid`
  - Ask your mentor for a review on one of your pull requests
  - Ask your accountabilibuddy for a review on one of your pull requests and give them one in return
@@ -35,7 +35,7 @@ You may NOT take liberties with the layout, but your creative license includes:
  <section class="note">
 ### First time with CSS Grid?
 
-This [slideshow](https://frontend.turing.io/lessons/module-1/css-grid-slides.html){:target='blank'} provides a nice demonstration of some of the neat things you can do with CSS Grid.  Alternatively there is a more common [lesson](https://frontend.turing.io/lessons/module-1/css-grid-tutorial.html){:target='blank'} that covers similar content as well.  There are also many great resources online such as [CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/){:target='blank'} and even a [fun game](https://cssgridgarden.com/){:target='blank'}!
+This [slideshow](https://frontend.turing.edu/lessons/module-1/css-grid-slides.html){:target='blank'} provides a nice demonstration of some of the neat things you can do with CSS Grid.  Alternatively there is a more common [lesson](https://frontend.turing.edu/lessons/module-1/css-grid-tutorial.html){:target='blank'} that covers similar content as well.  There are also many great resources online such as [CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/){:target='blank'} and even a [fun game](https://cssgridgarden.com/){:target='blank'}!
 </section>
 
 ***

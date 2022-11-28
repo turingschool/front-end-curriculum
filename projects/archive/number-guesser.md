@@ -29,7 +29,7 @@ The application should have the following user interface components:
 - Input fields,regardless of their "type" attribute, store their values in strings. You'll need to use `parseInt()` to turn it back into a number.
 - You'll need a strategy for [generating random numbers][rand].
 
-[rand]: http://frontend.turing.io/independent-study/random-numbers.html
+[rand]: http://frontend.turing.edu/independent-study/random-numbers.html
 
 ## Phase Two: More Better
 
@@ -76,7 +76,7 @@ Color and font spec:
 
 # Scoring Rubric
 
-Remember to [check out the Syllabus](http://frontend.turing.io/lessons/module-1/syllabus-eval-progression.html) for more details on how we evaluate your progression!
+Remember to [check out the Syllabus](http://frontend.turing.edu/lessons/module-1/syllabus-eval-progression.html) for more details on how we evaluate your progression!
 
 ## Functional Expectations
 

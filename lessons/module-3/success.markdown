@@ -31,14 +31,14 @@ Students must earn a 3 or greater on *each* segment of the End of Module Assessm
   Deliverables:  
   - Write up at least 2 specific things that you learned from these exercises. For example "I had forgotten how to create a JavaScript class, these exercises reminded me how files communicate." (<-- cant use that one tho).  
 
-[Walker Texas Rangerbox](http://frontend.turing.io/projects/walker-texas-rangerbox.html)  
-[Self-Directed Project](http://frontend.turing.io/projects/self-directed-project.html)  
+[Walker Texas Rangerbox](http://frontend.turing.edu/projects/walker-texas-rangerbox.html)  
+[Self-Directed Project](http://frontend.turing.edu/projects/self-directed-project.html)  
 
 ### Group Work
 
-[Weather Forecast](http://frontend.turing.io/projects/weather-forecast.html) or [Movie Tracker](#)  
-[remEMBER](http://frontend.turing.io/projects/remember.html)  
-[Ultimate UX Design Challenge](http://frontend.turing.io/projects/ultimate-ux-ui-team-challenge.html)  
+[Weather Forecast](http://frontend.turing.edu/projects/weather-forecast.html) or [Movie Tracker](#)  
+[remEMBER](http://frontend.turing.edu/projects/remember.html)  
+[Ultimate UX Design Challenge](http://frontend.turing.edu/projects/ultimate-ux-ui-team-challenge.html)  
 
 ### Professional Skills
 
@@ -46,9 +46,9 @@ The Professional Skills segment is made up of several pieces, most of which are 
 
 * Flower Exercise is submitted as a gist or uploaded PDF to your portfolio. **However, you will need a draft of it on the first day of week 5 for the Job Search Action Plan session.** Be prepared to have that finished at the beginning of week 5.
 * Following up on the *Organize Your Shit* session, ensure that your GitHub, LinkedIn, and StackOverflow accounts are properly setup by linking to them in your Census account. We will run an automated check on these and send you a follow up if needed. No submission is necessary beyond putting the info in your Census account.
-* Following up on the *Portfolio Tips & Tricks* tutorial, notify [Meg via email](mailto:mstewart@turing.io) that your portfolio is complete with your name, photo, description, three projects, and resume.
-* Following the *Finding Opportunities* session, add [Meg](mailto:mstewart@turing.io) as a collaborator to your Trello board with 10 companies. No other submission is necessary.
-* Following up on the *Job Search Action Plan* & *Flower Exercise Follow-Up*, submit to [Meg via email](mailto:mstewart@turing.io) a plan following the supplied template in a gist by the submission time above and include the gist in your portfolio.
+* Following up on the *Portfolio Tips & Tricks* tutorial, notify [Meg via email](mailto:mstewart@turing.edu) that your portfolio is complete with your name, photo, description, three projects, and resume.
+* Following the *Finding Opportunities* session, add [Meg](mailto:mstewart@turing.edu) as a collaborator to your Trello board with 10 companies. No other submission is necessary.
+* Following up on the *Job Search Action Plan* & *Flower Exercise Follow-Up*, submit to [Meg via email](mailto:mstewart@turing.edu) a plan following the supplied template in a gist by the submission time above and include the gist in your portfolio.
 
 ### Community & Feedback
 

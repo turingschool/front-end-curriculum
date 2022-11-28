@@ -92,7 +92,7 @@ Fork the CodePen above.
 - Change the value provided to `grid-template-columns` to `2fr 2fr 2fr`. What happens?
 - Change the value a few more times until you feel like you understand how the `fr` unit works.
 
-If you need some more time with it, [here](https://gridbyexample.com/video/series-the-fr-unit/) is a great video and [here](https://alligator.io/css/css-grid-layout-fr-unit/) is another written explanation.
+If you need some more time with it, [here](https://gridbyexample.com/video/series-the-fr-unit/) is a great video and [here](https://www.geeksforgeeks.org/css-grid-layout-the-fr-unit/) is another written explanation.
 </section>
 
 ## The `grid-template-rows` Property

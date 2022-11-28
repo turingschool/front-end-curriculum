@@ -20,7 +20,7 @@ A few good starting points can be:
 * [GitHub Projects](https://help.github.com/en/articles/creating-a-project-board)
 
 ### Our "new project"
-[Foto Finder](http://frontend.turing.io/projects/foto-finder-final.html)
+[Foto Finder](http://frontend.turing.edu/projects/foto-finder-final.html)
 
 We'll be tackling Foto Finder, an old mod 1 project. Our steps will be as follows:
 

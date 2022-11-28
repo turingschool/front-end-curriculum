@@ -27,11 +27,8 @@ In this session, we'll be diving into responsive page layouts and using media qu
 <section class="call-to-action">
 ## Exploration: Page Layouts
 
-*Page Layout* refers to the arrangement and sizing of visual elements on a web page. You and a partner will explore the four primary page layout types [Liquidapsive](https://web.archive.org/web/20190602161514/http://www.liquidapsive.com/){:target='blank'}.
+*Page Layout* refers to the arrangement and sizing of visual elements on a web page. You and a partner will explore the four primary page layout types [blog post](https://magnusbenoni.com/different-layouts-css/){:target='blank'}.
 
-In the top right corner, there is a dropdown for which layout you'd like to use:
-
-* Take note of oberservations between each of the layouts and how they function between difference screen sizes.
 * What characteristics are shared between layouts?  What is different?
 </section>
 
@@ -128,7 +125,7 @@ Review the two media queries written above. Predict the result of this code. Be 
 
 Before writing any queries, you'll want to add a viewport meta tag in the `head` of your main html file (which is often named `index.html`).  This ensures that the site will work on devices.  Without it, you might find that your responsive site works locally and on device simulators, but not on the actual device itself.
 
-The [viewport meta tag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag){:target='blank'} gives the browser instructions on how to control the pages dimensions and sets the width of the page based on the screen width of the device it is being viewed on.
+The [viewport meta tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag){:target='blank'} gives the browser instructions on how to control the pages dimensions and sets the width of the page based on the screen width of the device it is being viewed on.
 
 Here's what the tag looks like:
 
@@ -154,7 +151,6 @@ Before you start to build out the HTML, familiarize yourself with all required l
 
 ## Documentation & Resources
 
-* The site [Liquidapsive](http://www.liquidapsive.com/) is a great resource showing simple examples of all the layout types in action.
 * [MDN's Using Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-* [MDN's Explanation Viewport Meta Tag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)
+* [MDN's Explanation Viewport Meta Tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag)
 * Brad Frost's [This is Responsive](http://bradfrost.github.io/this-is-responsive/), patterns and resources for creating responsive websites. He also created [this](https://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/#relative) brief read.

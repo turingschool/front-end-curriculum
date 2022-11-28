@@ -23,13 +23,13 @@ Even as a front-end developer, it's important to have a basic understanding of w
 
 A server is simply a computer or program that handles sending, retrieving, and manipulating resources for a client. There are many different types of servers, but when we build web applications, we're most concerned with what's called a **Web Server** or an **HTTP Server**. You'll often hear these two terms used interchangeably or simply shortened to 'server'.
 
-An **HTTP Server** handles any network requests by providing responses that can be HTML pages, files, data, etc. For example, when we navigate to [https://www.turing.io/](https://www.turing.io/) in our browser (**Web Client**), we are really making a request to an HTTP server. The server is then responding with all of the HTML needed to render the page. We can even visually see this by looking in the **Network** tab of our developer tools:
+An **HTTP Server** handles any network requests by providing responses that can be HTML pages, files, data, etc. For example, when we navigate to [https://www.turing.edu/](https://www.turing.edu/) in our browser (**Web Client**), we are really making a request to an HTTP server. The server is then responding with all of the HTML needed to render the page. We can even visually see this by looking in the **Network** tab of our developer tools:
 
-Open the Network tab, navigate to `https://www.turing.io/`, and you can see the requests and responses.
+Open the Network tab, navigate to `https://www.turing.edu/`, and you can see the requests and responses.
 
 ![network requests][network-requests]
 
-The Network tab will list any requests you make to a server. If we search for `www.turing.io`, in the top left of the network panel, we can see that the type of request we made was for a `document`. Select that request, and you can also see detailed information about the request itself, as well as the response that was given.
+The Network tab will list any requests you make to a server. If we search for `www.turing.edu`, in the top left of the network panel, we can see that the type of request we made was for a `document`. Select that request, and you can also see detailed information about the request itself, as well as the response that was given.
 
 Click on the **Response** tab, and you'll see the entire markup of the HTML document we requested:
 

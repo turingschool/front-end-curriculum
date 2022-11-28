@@ -74,7 +74,7 @@ INSERT INTO table_name ( column_1, column_2 ) VALUES ( value_1, value_2 );
 ```
 
 ```SQL
-INSERT INTO users ( name, email ) VALUES ( 'Nate Allen', 'nate@turing.io' );
+INSERT INTO users ( name, email ) VALUES ( 'Nate Allen', 'nate@turing.edu' );
 ```
 
 [More complicated examples](https://www.postgresql.org/docs/9.6/static/sql-insert.html#AEN88506)
@@ -129,7 +129,7 @@ This will return us the `title`, `description` and `author` of each post for the
   - Return the number of customers from each country
 
 - Some Backend Mod 2 lessons:
-  - http://backend.turing.io/module2/lessons/visualising_and_implementing_database_relationships
+  - http://backend.turing.edu/module2/lessons/visualising_and_implementing_database_relationships
   - https://github.com/turingschool/lesson_plans/blob/master/ruby_02-web_applications_with_ruby/outlines/introduction_to_sql.markdown
 - A Backend Mod 3 lesson: <https://github.com/turingschool/lesson_plans/blob/master/ruby_03-professional_rails_applications/intermediate_sql.md>
 - [A nifty sandbox](http://www.dofactory.com/sql/sandbox). Try these things:
@@ -203,7 +203,7 @@ Map and Reduce are commonly used together when querying a document store DB. You
 
 `db.collectionName.insert({some: {javascript: object}})`
 
-`db.users.insert({name: "Nate Allen", email: "nate@turing.io"})`
+`db.users.insert({name: "Nate Allen", email: "nate@turing.edu"})`
 
 #### Find
 

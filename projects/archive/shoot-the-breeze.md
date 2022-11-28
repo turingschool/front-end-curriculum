@@ -41,15 +41,15 @@ title: Shoot The Breeze
 
 #### Desktop (Logged In)
 
-![Shoot The Breeze UI - Logged In](http://frontend.turing.io/assets/images/projects/shoot-the-breeze/shoot-the-breeze-desktop-logged-in.jpg)
+![Shoot The Breeze UI - Logged In](http://frontend.turing.edu/assets/images/projects/shoot-the-breeze/shoot-the-breeze-desktop-logged-in.jpg)
 
 #### Desktop (Not Logged In)
 
-![Shoot The Breeze UI (Desktop - Not Logged In)](http://frontend.turing.io/assets/images/projects/shoot-the-breeze/shoot-the-breeze-desktop-not-logged-in.jpg)
+![Shoot The Breeze UI (Desktop - Not Logged In)](http://frontend.turing.edu/assets/images/projects/shoot-the-breeze/shoot-the-breeze-desktop-not-logged-in.jpg)
 
 #### Mobile
 
-![Shoot The Breeze UI (Mobile)](http://frontend.turing.io/assets/images/projects/shoot-the-breeze/shoot-the-breeze-mobile.jpg)
+![Shoot The Breeze UI (Mobile)](http://frontend.turing.edu/assets/images/projects/shoot-the-breeze/shoot-the-breeze-mobile.jpg)
 
 ## Rubric
 
