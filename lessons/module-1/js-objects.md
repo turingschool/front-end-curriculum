@@ -10,7 +10,7 @@ tags: javascript, foundation, objects, dot notation, bracket notation, method
 * Define properties and methods in an object
 * Access values and methods from an object using dot notation
 
-## Vocabularygit
+## Vocabulary
 
 - `Object` A bundle of behavior (methods) and state (properties)
 - `Key` The name used to reference a value on an object
@@ -197,6 +197,6 @@ You might be wondering *When will be ever need to access a key via a variable?* 
 
 ## More Practice
 
-If you'd like more practice with arrays, work through the exercises in [this lesson](https://frontend.turing.edu/lessons/module-1/objects-review.html).
+If you'd like more practice with objects, work through the exercises in [this lesson](https://frontend.turing.edu/lessons/module-1/objects-review.html).
 
 Post any questions you still have in your main cohort channel!
