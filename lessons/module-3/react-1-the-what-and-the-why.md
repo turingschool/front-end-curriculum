@@ -24,7 +24,7 @@ module: 3
 - `JSX` A mix of JavaScript and XML that facilitates rendering the appropriate HTML
 - `Components` Components are standalone, independent parts of an application that are responsible for handling only a single UI element
 - `Functional components` Functional Components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing
-- `Class Components` Class components are ES6 classes that extend an abstract ‘Component’ class, given to us by default by React. They typicaly keep track of some sort of application data
+- `Class Components` Class components are ES6 classes that extend an abstract ‘Component’ class, given to us by default by React. They typically keep track of some sort of application data
 - `Props` This is shorthand for properties. Props is an object that is given from its parent component down to the child functional/class component. Props should remain immutable
 - `State` State holds data that represents the actual state of an application. State can be changed and mutated through user interactions
 

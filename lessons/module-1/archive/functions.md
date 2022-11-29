@@ -134,4 +134,4 @@ return x + y / 3;
 ### Additional Resources & Practice
 
 * [JS Style Guide](https://github.com/turingschool-examples/javascript)
-* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
+* [JavaScript Playground](http://frontend.turing.edu/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.

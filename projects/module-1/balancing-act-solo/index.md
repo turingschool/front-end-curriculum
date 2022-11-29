@@ -32,7 +32,7 @@ balancing-act
 
 Find the provided icons [here](https://drive.google.com/drive/folders/1tinxJcBu8lf5dHIJZtmOgXnzGu8yhKRK?usp=sharing). Download them into your assets directory for this project.
 
-Lastly, create a repository on GitHub and connect to this local repository. If you aren't sure how to do that, follow the steps in [this tutorial](https://frontend.turing.io/lessons/module-1/github-repo.html).
+Lastly, create a repository on GitHub and connect to this local repository. If you aren't sure how to do that, follow the steps in [this tutorial](https://frontend.turing.edu/lessons/module-1/github-repo.html).
 
 ## Progression
 
