@@ -126,15 +126,42 @@ Beyond the issue of general motivation — let's face it, you're never going to 
 
 In Mod 1, we will be using the Mocha testing framework along with the assertion library Chai.
 
-* [Mocha](https://mochajs.org/) is a testing framework that runs on `Node.js` in your terminal. This is what allows us to organize and execute our tests.
+* [Mocha](https://mochajs.org/){:target="_blank"} is a testing framework that runs on `Node.js` in your terminal. This is what allows us to organize and execute our tests.
 
-* [Chai](http://www.chaijs.com/) is an assertion library that plugs into Mocha. The assertion library is what actually runs the specs and determines whether any given condition is valid or not.
+* [Chai](http://www.chaijs.com/){:target="_blank"} is an assertion library that plugs into Mocha. The assertion library is what actually runs the specs and determines whether any given condition is valid or not.
 
 <section class="note">
 #### On NPM 
 When we ran `npm install` we brought Mocha and Chai into the first-unit-tests warm up repo! You'll learn about `npm` in depth in M2, but for now it allows us to install packages like Mocha and Chai.
 
 You won't need to run this every time, just when you initially clone a new repo that utilizes packages.  
+</section>
+
+<section class="answer">
+### A Note About the Syntax
+
+**Mocha:**
+* As mentioned above, Mocha itself is the framework that runs the tests and dictates the syntax of the test block as a whole. This is separate from the assertion library Chai.
+
+```js
+describe('addTwoNumbers', function() {
+  it('should be able to add zero to zero', function() {
+
+  });
+
+  it.skip('should be able to add 1 to 1', function() {
+
+  });
+});
+```
+
+**Chai:**
+* An assertion is the crucial piece of the test that actually checks that when certain pieces of are code are executed, what we're getting back is what we expect.
+* Although Chai can be inserted into many different testing frameworks, it works seamlessly with Mocha.
+
+```js
+  assert.equal(addTwoNumbers(1, 1), 2);
+```
 </section>
 
 
@@ -153,7 +180,7 @@ When we are testing code, it's usually best to have the implementation code pull
 Eventually, we'll be writing our own tests, but for now we'll
 start with some prewritten tests. This allows us to see the process, and get some practice reading error messages
 
-Head over to [that same repository](https://github.com/turingschool-examples/first-unit-tests) and begin to follow the TDD workflow - fail the tests, then write the code to pass 'em!
+Head over to [that same repository](https://github.com/turingschool-examples/first-unit-tests){:target="_blank"} and begin to follow the TDD workflow - fail the tests, then write the code to pass 'em!
 
 <section class="checks-for-understanding">
 ### Wrap Up
@@ -165,3 +192,6 @@ In your journal or notebook, reflect on the following:
 * What is Mocha? What is Chai? Write an example of the code that comes from Chai.
 
 </section>
+
+## Extra Resources
+* [Unit Testing Practice](https://github.com/turingschool-examples/unit-testing-practice){:target="_blank"}
