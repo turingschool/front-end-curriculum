@@ -4,9 +4,9 @@ layout: page
 
 ## Notes from 1610
 
-[Lesson Plan](http://frontend.turing.io/lessons/introduction-to-sass.html)
+[Lesson Plan](http://frontend.turing.edu/lessons/introduction-to-sass.html)
 
-And here are the [slides](http://frontend.turing.io/lessons/introduction-to-sass-slides.html)
+And here are the [slides](http://frontend.turing.edu/lessons/introduction-to-sass-slides.html)
 
 And here is a [repo with Sass, Ideabox and Webpack](https://github.com/rrgayhart/intro-sass-ideabox) that we'll look at
 
@@ -58,7 +58,7 @@ So Sass is a CSS pre-processor
 
 It has two syntaxes
 
-Sass, when it was first created, the first syntax (also called Sass) was inspired by a templating language called haml - which depended on spacing. 
+Sass, when it was first created, the first syntax (also called Sass) was inspired by a templating language called haml - which depended on spacing.
 
 6
 
@@ -104,7 +104,7 @@ Looks like this.
 
 Does anyone know what the `@import` does
 
-16 
+16
 
 Really short little practice - in this example codepen, convert to using variables
 
@@ -170,4 +170,3 @@ END SLIDES
 Walk through how to use the Intro Sass Ideabox repo
 
 Talk about advanced features
-

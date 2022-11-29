@@ -17,12 +17,12 @@ In this lesson, you will learn how to:
 - `Remote` Remote, as in, a remote repository. As in, not a local repository. A remote is a repository that's stored somewhere that's not your local machine
 - `Feature Branch` A branch created to hold a new feature while it's in development, as opposed to committing parts of an unfinished feature on master
 - `Pull Request` A request to merge a branch into the default branch (usually master). Allows for control of the merge process as well as providing a place to review changes
-- `Merge Conflicts` Two different sets of changes to the same code result in merge conflicts. It's your job to figure out how to merge the two 
-- `Fork` A copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. 
+- `Merge Conflicts` Two different sets of changes to the same code result in merge conflicts. It's your job to figure out how to merge the two
+- `Fork` A copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
 ## GitHub
 
-### Prework Setup: 
+### Prework Setup:
 
 #### Add a public key to your github account
 
@@ -195,7 +195,7 @@ In this case, enter the command: `git pull origin master`
 
 Our changes are now completely synced. The master branch locally is the same as the master branch on GitHub. We can make more feature branches, add more features, and repeat the same process!
 
-### Fetching 
+### Fetching
 
 Let's say that one of your co-worker's is working on a feature branch, and is having trouble finding a bug. As long as your co-worker has pushed up their feature branch to GitHub, we can use the `git fetch` command to pull that branch, and all other remote branches to our local machine.
 
@@ -252,13 +252,13 @@ To summarize the example above, a typical workflow for a new project with Git an
 10. Go on GitHub, view the PR, and merge the PR
 11. Locally, pull down master to your local master branch (to sync the remote with your local repository)
 
-[Here is an excellent team workflow](http://frontend.turing.io/lessons/module-1/git-team-workflow.html)
+[Here is an excellent team workflow](http://frontend.turing.edu/lessons/module-1/git-team-workflow.html)
 
-## Cloning 
+## Cloning
 
 # ![Git Clone Diagram](/assets/images/lessons/git/github-diagrams.003.jpeg)
 
-In order to move a remote repository to your local machine (a process known as cloning), you can use the `git clone [remote url]` command. GitHub makes this easy for us by providing a big green button that says 'Clone or Download' on all repository pages. 
+In order to move a remote repository to your local machine (a process known as cloning), you can use the `git clone [remote url]` command. GitHub makes this easy for us by providing a big green button that says 'Clone or Download' on all repository pages.
 
 Let's clone the repo you just created in a new directory. Go to a new directory on your local machine that does not contain the `github-intro` directory. Go to the `github-intro` repository page on GitHub. Click on the 'Clone or Download' button, and copy the expanded url to your clipboard.
 
@@ -279,4 +279,4 @@ Practice by pushing up your Dog Party or Number Guesser project to GitHub.
 ### More GitHub
 
   * [GitHub Tutorials](https://guides.github.com/)
-  * [Common git commands and a link to a giant cheetsheet](http://frontend.turing.io/lessons/module-1/git-commands.html)
+  * [Common git commands and a link to a giant cheetsheet](http://frontend.turing.edu/lessons/module-1/git-commands.html)

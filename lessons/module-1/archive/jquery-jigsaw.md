@@ -27,7 +27,7 @@ What is a jigsaw lesson? What is the purpose? Why can't you just talk at us?
   * Report out on what you've learned to someone else
   * Have questions about the topic that are still unclear that you can ask to a team member that has experience in that subject
 
-## Warm Up 
+## Warm Up
 
 Take 5 minutes to read this blog post:
 
@@ -78,7 +78,7 @@ Let's review and attempt to answer all the questions on the board together.
 
 ## Homework (Additional Resources)
 
-Go through [this lesson](http://frontend.turing.io/lessons/module-1/introduction-to-jquery.html) to review jQuery and get more practice actually using the library.
+Go through [this lesson](http://frontend.turing.edu/lessons/module-1/introduction-to-jquery.html) to review jQuery and get more practice actually using the library.
 
 ***
 

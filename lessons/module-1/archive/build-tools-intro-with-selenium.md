@@ -296,7 +296,7 @@ Now start up the server again using the command `webpack-dev-server`, and head o
 
 ## Our First Selenium Test
 
-If you haven't already, go through the lesson on Selenium testing so your computer is setup with the correct drivers: http://frontend.turing.io/lessons/module-1/selenium-testing
+If you haven't already, go through the lesson on Selenium testing so your computer is setup with the correct drivers: http://frontend.turing.edu/lessons/module-1/selenium-testing
 
 We have to install the selenium webdriver dependency using the command:
 

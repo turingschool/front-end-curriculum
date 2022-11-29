@@ -143,7 +143,7 @@ To earn a given score, an application must meet the requirements listed in that 
 
 ### HTML
 
-* 4 - Application fully implements HTML that is accessible for folks with visual disabilities. Reference [this lesson plan](https://frontend.turing.io/lessons/floating/aria-accessibility.html) as a resource!
+* 4 - Application fully implements HTML that is accessible for folks with visual disabilities. Reference [this lesson plan](https://frontend.turing.edu/lessons/floating/aria-accessibility.html) as a resource!
 * 3 - Semantic tags are used to convey meaning of content. Elements are not added in for the sole purpose of making styling easier (`<br>`s should not be used, excessive `<div>`s or other containing elements, etc.)
 * 2 - Class and ID names follow a convention and describe the content in a consistent manner.
 * 1 - Use of spaces, white space and indentation meet requirements of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html).

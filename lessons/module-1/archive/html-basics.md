@@ -247,7 +247,7 @@ _Inline_ elements do not take up the whole line they fall on, which allows other
 Links are what the web is all about! They are made up of three components, let's take a look at one and then we'll walk through what it's made up of:
 
 ```HTML
-<a href="https://www.turing.io/" title="Turing School">Turing School of Software and Design</a>
+<a href="https://www.turing.edu/" title="Turing School">Turing School of Software and Design</a>
 ```
 
 Like any HTML element, we start with a tag. For a link, it's a `<a>`, or anchor, tag. Next, we have an `href` attribute. This stands for "hypertext reference". Then, we see  a title. Titles in links are important for accessibility reasons, and they also provide additional information in the event that your link is broken for some reason.
@@ -256,7 +256,7 @@ Now, if we were to click on the link about, it would take us to the new page in 
 
 
 ```HTML
-<a href="https://www.turing.io/" title="Turing School" target="_blank">Turing School of Software and Design</a>
+<a href="https://www.turing.edu/" title="Turing School" target="_blank">Turing School of Software and Design</a>
 ```
 
 We add `target=_"blank"` in our opening `<a>` tag, and ta-da! Now our link will open in a new window.
