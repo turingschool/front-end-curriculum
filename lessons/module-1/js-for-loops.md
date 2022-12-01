@@ -17,18 +17,46 @@ tags: javascript, foundation, arrays, loops
 - `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops
 - `Bracket Notation` How we access individual elements of an array. Either to express the element, or assign a new element
 
+<section class="call-to-action">
 ## Warm Up
 
+<section class="answer">
 ### Part 1 - Set Up
 
-In a repl.it, declare a variable that stores an array, and `console.log` it. Your array should contain 3 or more JavaScript objects as its elements. Some ideas:
+In a repl.it, declare a variable that stores an array. Your array should contain 3 or more JavaScript **objects** as its elements, with each object having 3 or more key:value pairs. Some ideas:
 
 - A list of your friends (and their birthdays or hobbies)
 - A list of characters from your favorite show or movie, and their best quotes
+</section>
 
-Or, if you're not feeling creative, you can take the example below as a starter and modify it a bit:
+<section class="answer">
+### Part 2 - Warm Up, Explore
+  
+A reminder as we start this lesson: remember that it's okay to make a mess. We learn by trying and screwing up and debugging!
 
-```javascript
+Once in your breakout room, trade repl.it links with your partner. This way, you are each exposed to a new array that you will work with during activity. You will each need to fork the repl.it.
+
+- Take a moment to familiarize yourself with the array your partner declared
+
+For each step that follows, make sure to `console.log` the value(s) you are accessing or updating!
+- Access the first element in the array
+- Access a value from the second element (an object) in the array
+- Update a property of the third element in the array (change the value of one of the keys in the object)
+- Log a sentence that uses at least 2 properties from the first element in the array
+
+If you finish before your partner, add another object to the array. Log it to the console to make sure it is stored properly.
+
+_💬 Before moving on to Part 3, check in with each other and make sure both partners were able to accomplish the task and know what their code is doing._
+</section>
+</section>
+
+
+## Loops
+
+There are times when we want to repeat the same operation multiple times over a set of data. Loops allow us to do just that by running through our data one by one and executing code to accomplish a goal.
+
+For example, let's take this array:
+```js
 var pets = [
   {
     name: 'Tilly',
@@ -50,59 +78,12 @@ var pets = [
   }
 ];
 ```
-
-<section class="call-to-action">
-
-### Part 2 - Warm Up, Explore
-  
-A reminder as we start this lesson: remember that it's okay to make a mess. We learn by trying and screwing up and debugging!
-
-Once in your breakout room, trade repl.it links with your partner. This way, you are each exposed to a new array that you will work with during activity. You will each need to fork the repl.it.
-
-- Take a moment to familiarize yourself with the array your partner declared
-
-For each step that follows, make sure to `console.log` the value(s) you are accessing or updating!
-- Access the first element in the array
-- Access a value from the second element (an object) in the array
-- Update a property of the third element in the array (change the value of one of the keys in the object)
-
-If you finish before your partner, add another object to the array. Log it to the console to make sure it is stored properly.
-
-_💬 Before moving on to Part 3, check in with each other and make sure both partners were able to accomplish the task and know what their code is doing._
-
-</section>
-
-<section class="call-to-action">
-### Part 3 - Collaborate
-
-For this part, use the `pets` array that is at the top of the Warm Up section. The variable that stores the array needs to be in the repl.it file you are working in.  
-Your task is to write the code that uses data from that array to print out (using `console.log`):
-
+What if we wanted to print the following sentence for each pet:
 ```js
-Tilly
-Sodie
-Pumpernickel
+// Leta's cat, Tilly, loves cheese.
+// Amy's dog, Sodie, loves milkbones.
+// Eric's cat, Pumpernickel, loves kibble.
 ```
-
-Then, print out:
-```js
-Eric
-Amy
-Leta
-// the ordering of the names is not a typo!
-```
-
-You can write the code in the same repl.it or a new one. Be ready to share your code with your breakout room!
-
-_(Without using a loop)_ Can you come up with another solution in your code to get the same outcome? If so, be ready to share out. If not, be ready to explain why that was a challenge.
-</section>
-
-
-## Loops
-
-There are times when we want to repeat the same operation multiple times over a set of data. Loops allow us to do just that by running through our data one by one and executing code to accomplish a goal.
-
-For example, for each element in an array, if a conditional returns `true`, a code block will be run and the condition will be checked again. This pattern will be repeated until the conditional returns `false`.
 
 Let's take a look at the structure of the most commonly used type, the `for` loop:
 
@@ -158,6 +139,15 @@ The `for` loop is not magically tied to the `fruits` array in the example above.
 Now, type out the function above (yes, actually type it! This is a great opportunity for attention to detail and catching your small errors). Replace `8` for `fruits.length`. Run the code and reflect on your prediction.
 </section>
 
+Now let's revisit a previous example. 
+
+<section class="call-to-action">
+
+### Revisiting Pets
+
+Spend some time completing the exercises in [this repl](https://replit.com/@kaylaewood/forloopspets#index.js).
+</section>
+
 <section class='note'>
 
 ### Iterator Methods
@@ -170,6 +160,38 @@ These are known as *iterator methods* and they each have their own uses and beha
 
 During your time in Mod 1, we'd like you to **only** use `for` loops when you need to iterate over an array. This is not to needlessly make your life harder. The main reason for this request is so that the logic that is applied during each step of the loop must be written explicitly by you, instead of letting the architects of those iterator methods do that work for you. Also, it's not unlikely that in a different language you work in on the job, you won't have such handy methods available. Everything in Mod 1 can be completed with your pal `for` loop! You will get lessons and then extensive practice and experience with the iterator methods in Mods 2-4.
 </section>
+
+## Returning a Value
+
+<section class="answer">
+### Thinking back to our previous lessons, what do we know about `return`?   
+
+We can only return ONE TIME in a function. Once that `return` occurs, the function ends.
+</section>
+
+Let's looks at this code:
+```js
+var greetings = ['hello', 'hey', 'hi', 'hey there'];
+
+function sayAllTheGreetings() {
+  for (var i = 0; i < greetings.length; i++) {
+    return greetings[i];
+  }
+}
+```
+
+<section class="answer">
+### What would you expect `sayAllTheGreetings` to return? Why?
+
+The function will return `'hello'` and then the function will end.
+</section>
+
+Okay...does this mean we can never return something out of a for loop? **No!** It just means we need to be careful to ensure that our function is working the way we expect it to. Let's look at a couple more examples in [this repl](https://replit.com/@kaylaewood/forloopsreturns#index.js).
+
+
+
+
+
 
 <section class="call-to-action">
 
@@ -275,14 +297,6 @@ Pick one of the 4 options linked below as a code challenge. Write a solution and
 - [Cacti](https://repl.it/@turingschool/cacti-1) 🔥🔥
 - [School Supplies](https://repl.it/@turingschool/school-supplies-1#index.js) 🔥🔥
 
-<!-- **Step 2:** Your next task is to create an educational resource - we can say it's for the next cohort of students - to understand the concepts behind the code, using the code challenge you just solved as an example. If this is a stretch for you, consider how you best learn and what type of resources are helpful for you!
-
-Some ideas, but don't feel limited to these:
-- Video
-- Write-up (think blog post)
-- Series of images/diagrams
-
-You will submit your solution to the code challenge and educational resource as your exit ticket in a [private Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeQ-PUzJ-8QthmAt6UgZDrwfuUYp7mLzWd9ddt4UOwD8p590A/viewform). We'll ask for volunteers to share out their educational resources when we come back together! -->
 </section>
 
 ### Additional Practice (Optional)
