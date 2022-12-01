@@ -45,7 +45,6 @@ For each step that follows, make sure to `console.log` the value(s) you are acce
 
 If you finish before your partner, add another object to the array. Log it to the console to make sure it is stored properly.
 
-_💬 Before moving on to Part 3, check in with each other and make sure both partners were able to accomplish the task and know what their code is doing._
 </section>
 </section>
 
