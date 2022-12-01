@@ -29,7 +29,7 @@ In a repl.it, declare a variable that stores an array. Your array should contain
 </section>
 
 <section class="answer">
-### Part 2 - Warm Up, Explore
+### Part 2 - Share & Explore
   
 A reminder as we start this lesson: remember that it's okay to make a mess. We learn by trying and screwing up and debugging!
 
@@ -198,12 +198,7 @@ Okay...does this mean we can never return something out of a for loop? **No!** I
 
 Join the breakout room associated with the problem you are _currently_ working on. This is meant to mainly be done independently (no one should be screen sharing or "leading" anything), but we want you to have a source of support/place to ask questions if needed.
 
-### Mild Heat ⚡️: Annoying Zoo Kid 1
-
-1. Declare a variable that stores an array of four animals called `animals`.
-1. Write a `for loop` that logs `"Mommy, I want to see [insert animal name here]! Waaah!"`
-
-### Medium Heat 🔥: Annoying Zoo Kid 2
+### Medium Heat 🔥: Annoying Zoo Kid 
 
 1. Declare a variable that stores an array of four animals called `animals`.
 1. Declare a function called `nameAnimals`.
@@ -257,8 +252,7 @@ Use the array of users above
 
 ### Solo Practice Solutions
 
-- [Solution:](https://repl.it/@turingschool/mild-solution#index.js) Mild Heat ⚡️: Annoying Zoo Kid 1
-- [Solution:](https://repl.it/@turingschool/medium-solution#index.js) Medium Heat 🔥: Annoying Zoo Kid 2
+- [Solution:](https://repl.it/@turingschool/medium-solution#index.js) Medium Heat 🔥: Annoying Zoo Kid 
 - [Solution:](https://repl.it/@turingschool/spicy-heat#index.js) Spicy 🔥🔥: User Sentences
 - [Solution:](https://repl.it/@turingschool/extra-spicy-heat#index.js) Extra Spicy 🔥🔥🔥: Some User Info
 
