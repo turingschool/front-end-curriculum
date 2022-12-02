@@ -102,7 +102,7 @@ Don't get too caught up with polishing your dashboard too early. You'll want to 
 
 ### Note
 For this dataset, when "today" is referenced in iterations, it is the last date in the data. The latest week is the most recent 7 days in the data (even if they aren't consecutive).   
-- You should not be hardcoding the date.  You should be using code to find the last (most recent) date in the dataset for the current user, using that date as "today", and displaying data based on that date. Not that different users may have a different date as their most recent date - once you are dynamically pulling this date from the data, it shouldn't matter that it changes for different users.
+- You should not be hardcoding the date.  You should be using code to find the last (most recent) date in the dataset for the current user, using that date as "today", and displaying data based on that date. Note that different users may have a different date as their most recent date - once you are dynamically pulling this date from the data, it shouldn't matter that it changes for different users.
 </section>
 
 <section class="note">
