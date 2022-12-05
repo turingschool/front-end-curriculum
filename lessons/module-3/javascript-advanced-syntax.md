@@ -115,7 +115,7 @@ Yet again, another shortcut for our lazy developer selves. Start with this short
 <section class="call-to-action">
 ### Go Through this Article
 
-Take 5 minutes to look at [article on Object Property Value Shorthand](https://alligator.io/js/object-property-shorthand-es6/).
+Take 5 minutes to look at [article on Object Property Value Shorthand](https://attacomsian.com/blog/javascript-object-property-shorthand).
 </section>
 
 
