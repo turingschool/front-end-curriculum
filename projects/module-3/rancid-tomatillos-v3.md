@@ -164,7 +164,7 @@ For Cypress, add the following tests to start:
 
 So far the application has worked like a single page application. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes.
 
-To crete a better UX, we're going to be using [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) to conditionally render our views based on the URL.
+To crete a better UX, we're going to be using [React Router](https://v5.reactrouter.com/) to conditionally render our views based on the URL.
 
 This iteration is all about refactoring. Use the table below to add in appropriate routes.
 
