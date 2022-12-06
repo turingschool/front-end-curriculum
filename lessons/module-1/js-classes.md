@@ -57,9 +57,40 @@ Like `var` and `function`, `this` is a special keyword in JavaScript. The value 
 
 <div class="call-to-action">
   <h3>Warm Up</h3>
-  <p>Choose a driver and a navigator. The driver should start by forking <a href="https://repl.it/@ameseee/this" target="_blank">this repl.it</a>.</p>
-  <p>Together, un-comment out each <code>console.log</code> one at a time, starting with line 10. Before you run the code, predict what will print out.</p>
+  <p>Choose a driver and a navigator. The driver should start by copying the following object into your console.</p>
+  <p>Together, un-comment out each <code>console.log</code> one at a time, starting with <code>console.log(this.name)</code>. Before you run the code, predict what will print out.</p>
 </div>
+
+```javascript
+  var user1 = {
+  name: "Sodie",
+  age: 8,
+  breed: "Shih-tzu",
+  hobbies: ["Sun bathing", "Bossing people around", "Napping"],
+  bark: function() {
+    return "woof!";
+  },
+  checkMyProfile: function() {
+    // console.log(this.name);
+    // console.log(this.age);
+    // console.log(this.breed);
+    // console.log(this.hobbies);
+    // console.log(this.bark);
+  },
+}
+
+// after un-commenting a console.log
+// invoke the method in your console --> user1.checkMyProfile();
+// after you have made your prediction, and seen the actual result
+// repeat until you have seen the result for each log in the checkMyProfile method.
+
+// then predict, and uncomment each of the following console.logs
+// console.log(this.name);
+// console.log(this.age);
+// console.log(this);
+// console.log(this.hobbies);
+// console.log(this.bark);
+```
 
 There are two primary rules of thumb when it comes to `this`:
 
