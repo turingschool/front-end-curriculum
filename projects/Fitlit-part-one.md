@@ -43,7 +43,7 @@ Dates and deadlines to be aware of:
 - Wireframes (a rough sketch of your website for planning - worth googling!)
 - 3 design inspirations (Please include links and details on what you're trying to re-create).
 
-#### Sunday, Week 3 - Project due at 9PM.
+#### Monday, Week 3 - Project due at 6PM.
 
 - Please submit your Group project part one [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link){:target='blank'}
 
@@ -102,7 +102,7 @@ Don't get too caught up with polishing your dashboard too early. You'll want to 
 
 ### Note
 For this dataset, when "today" is referenced in iterations, it is the last date in the data. The latest week is the most recent 7 days in the data (even if they aren't consecutive).   
-- You should not be hardcoding the date.  You should be using code to find the last (most recent) date in the dataset for the current user, using that date as "today", and displaying data based on that date. Not that different users may have a different date as their most recent date - once you are dynamically pulling this date from the data, it shouldn't matter that it changes for different users.
+- You should not be hardcoding the date.  You should be using code to find the last (most recent) date in the dataset for the current user, using that date as "today", and displaying data based on that date. Note that different users may have a different date as their most recent date - once you are dynamically pulling this date from the data, it shouldn't matter that it changes for different users.
 </section>
 
 <section class="note">

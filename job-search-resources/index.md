@@ -17,7 +17,7 @@ For example, if you're on vacation, commit to doing two hours of code with your 
 
 ## Interview Practice
 
-### [Interview Practice and Lesson Plan Links](http://frontend.turing.io/lessons/module-4/practice-interview-questions/interview-questions.html)
+### [Interview Practice and Lesson Plan Links](http://frontend.turing.edu/lessons/module-4/practice-interview-questions/interview-questions.html)
 
 ## Code Resources
 
@@ -30,7 +30,7 @@ This is a guide that anyone could use to learn about the practice of front-end d
 If you'd like a downloaded version of the old handbook (a downloadable version of 2018 isn't available), download the 2017 version in .pdf, .epub or .mobi [here](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/details)
 
 
-Review this book when you're feeling imposter syndrome coming on. Think about how many of the topics listed here you already know! 
+Review this book when you're feeling imposter syndrome coming on. Think about how many of the topics listed here you already know!
 
 Dig in to some of the resources and review.
 
@@ -85,7 +85,7 @@ Reach out early and often with Meg, Lia and the rest of the professional skills 
 
 Reach out to your instructors for advice.
 
-Most importantly, use your cohort-mates and don't let your groups slack channel go silent. 
+Most importantly, use your cohort-mates and don't let your groups slack channel go silent.
 
 ## Contributing
 

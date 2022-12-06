@@ -57,7 +57,7 @@ Today we'll be focusing on how to do a **GET** request on the frontend side.
 Every request we make, successful or not, will receive a response.  When looking at the **Network** tab in the dev tools, you might have noticed some requests had different response codes. The HTTP protocol lays a series of [Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target='blank'} to give more information on the status of a request.
 
 <section class="call-to-action">
-### Reviewing status code levels
+### Reviewing Status Code Levels
 
 What do each of the status codes mean on a high level?
 - 1XX
@@ -68,7 +68,7 @@ What do each of the status codes mean on a high level?
 </section>
 
 <section class="answer">
-### Here's a few common status codes
+### Common Status Codes
 
 * `200 OK` -- successful request
 * `201 Created`-- successful POST request
@@ -88,7 +88,7 @@ Network requests are expensive no matter what we do. However, we can run them *a
 `Asynchronous` operations refer to things that can happen outside the normal order of execution. Network requests can be `synchronous` or `asynchronous`, but most modern applications do them `asynchronously` to improve performance / the user experience.
 
 <section class="note">
-### Multiple ways of making requests
+### Multiple Ways of Making Requests
 
 Note that there are a few ways to make a request.  One way you might see is through a process called AJAX, or [**A**synchronous **J**avaScript **A**nd **X**ML](https://developer.mozilla.org/en-US/docs/AJAX){:target='blank'}. AJAX was a huge advancement for the web, as it allowed developers to update part of a webpage without reloading the entire thing.
 
@@ -111,7 +111,7 @@ Using the [fetch API docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetc
 </section>
 
 <section class="note">
-### Not all browsers support fetch
+### Not All Browsers Support `fetch`
 
 It's important to note that not every browser supports the fetch api; [polyfills](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill) (code used to provide modern functionality to older browsers that do not natively support it) are available, but many legacy codebases use other apis that are supported by older browsers, such as `Axios` or `Superagent`.  You can see what [browsers support fetch here](https://caniuse.com/#search=fetch){:target='blank'}!
 </section>
@@ -130,7 +130,7 @@ fetch(resourceUrl, {/*init object with `method`, `body`, and other optional prop
 - `fetch` will *always* return a promise that either *resolves* or *rejects*.
 </section>
 
-### GET with fetch
+### GET with Fetch
 
 By default, fetch performs a `GET` request. This means that if we only add a resource url to the fetch call, we'll try and `GET` information from that resource.
 
@@ -146,7 +146,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
 * This is a basic `GET` request to the [Trivia API](https://opentdb.com/api_config.php){:target='blank'} to send us back a random trivia question.  Does it return what you expect?
 </section>
 
-## Promises - the quick version
+## Promises - The Quick Version
 
 A `Promise` is an object that represents the eventual completion of an action.
 
@@ -156,7 +156,7 @@ We don't need to worry too much about them now. Just know that a Promise will ei
 * `.catch()` runs upon the rejection of a failed promise. Used for error handling
 
 <section class="note">
-### async/await
+### `async/await`
 
 The expectation for Mod 2 is that you will avoid using `async/await`. We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`. Consider doing some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all).
 </section>
@@ -173,7 +173,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 * What do you get when you log the response object?  Take note of the properties there.
 * There's one problem: we can't seem to get the data we want from the Response.body.  How is data sent through requests and responses?
 
-## Parsing our response  
+## Parsing Our Response  
 
 Similar to what you did with localStorage, we'll need to parse our response!  We'll need to use the **`Body.json()`** method that comes with fetch to parse it and call another `.then()`.
 
@@ -197,7 +197,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 ```
 
 <section class="call-to-action">
-### Practice in the console
+### Practice in the Console
 
 Using the [Trivia API](https://opentdb.com/api_config.php){:target='blank'}, do the following in your console:
 
@@ -207,7 +207,7 @@ Using the [Trivia API](https://opentdb.com/api_config.php){:target='blank'}, do 
 </section>
 
 <section class="call-to-action">
-### Practice with a simple application
+### Practice with an Application
 
 Head to <a href="https://github.com/turingschool-examples/fe2-fetch-practice" target="\__blank">this repo</a> for some practice with GETting.
 

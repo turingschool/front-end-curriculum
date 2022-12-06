@@ -6,13 +6,13 @@ status: draft
 
 ## Getting Set Up
 
-[Continuing from the multiple windows lesson.](http://frontend.turing.io/lessons/module-4/electron-multiple-windows.html)
+[Continuing from the multiple windows lesson.](http://frontend.turing.edu/lessons/module-4/electron-multiple-windows.html)
 
 ## Adding Menu Items
 
 Having a button for opening and saving files is pretty neat, but it's not the pattern we're used to in desktop applications. Typically, desktop applications have a "File" menu "Open" and "Save" items. Up to this point, Electron has given us some sensible defaults for menu items. (Fire up your application and check out the menu bar if haven't already.)
 
-Let's create a new file called `application-menu.js`, and import our app and the Menu module from electron: 
+Let's create a new file called `application-menu.js`, and import our app and the Menu module from electron:
 
 ```js
 const { app, Menu } = require('electron');

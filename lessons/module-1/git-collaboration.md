@@ -34,12 +34,12 @@ Pick one person to create the repo. The other person should be watching and advi
 <section class="answer">
 ### Git Commands
 - **Make a new directory**
-  - `mkdir name-of-directory`
+  - `mkdir [name-of-directory]`
 - **Change directories**
-  - `cd name-of-directory`
+  - `cd [name-of-directory]`
 - **Create a new file**
-  - `touch` README.md
-  - `touch` main.js`
+  - `touch README.md`
+  - `touch main.js`
   - //etc.
 </section>
 
