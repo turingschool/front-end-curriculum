@@ -288,6 +288,7 @@ Score key:
   - Frontend data (state) always matches the backend data
   - Data fetched from API is run through a cleaning function (which is defined in a separate `utilities` file)
   - Implements excellent error handling if movie database server is down or fetch fails (this includes loading images as well as error messages on the frontend)
+  - PropTypes or type-checking of props is complete and specific (all data passed into a component is correctly and specifically identified)
 * **3:**
   - A consistent, modular file structure is used
   - A clear understanding of class components vs function components is demonstrated
@@ -296,6 +297,7 @@ Score key:
   - There are some issues with the asynchronous JS where the frontend is not matching with the backend
   - There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
   - Data fetched from API is not cleaned before being set to state
+  - PropTypes or type-checking of props is mostly complete
 * **2:**
   - The file structure is inconsistent and/or not modular
   - There is some confusion about when to use a class or function component, but it does not strongly hinder functionality
@@ -303,6 +305,7 @@ Score key:
   - `return` statements contain logic that should be refactored out for the sake of readability and performance
   - There are methods that are being created inside of functional components that should be passed down through props from a parent class component
   - API calls have not been broken out into their own file
+  - PropTypes or type-checking of props is incomplete
 * **1:**
   - Project shows little understanding of React and significant refactoring is required, including but not limited to:
     - component structure is inconsistent or buggy
@@ -311,6 +314,7 @@ Score key:
     - props are being mutated
     - state is directly mutated
   - File structure is not modular.
+  - PropTypes or type-checking of props is not implemented
 
 ### Testing
 
