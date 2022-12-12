@@ -49,7 +49,7 @@ In this lesson, we're going to learn about **acceptance testing** and **end-to-e
 
 ## What are acceptance tests?
 
-In our User Stories lesson, we learned about describing user flows. We also learned about writing _acceptance criteria_. A user story describes the WHAT of a user flow: what is supposed to happen? Acceptance criteria describes the HOW of a user flow: how is that accomplished? 
+In our User Stories lesson, we learned about describing user flows. We also learned about writing _acceptance criteria_. A user story describes the WHAT of a user flow: what is supposed to happen? Acceptance criteria describes the HOW of a user flow: how is that accomplished?
 
 Acceptance testing ensures that the acceptance criteria were successfully implemented. It doesn't just manually call functions - it runs the actual application and walks through a user flow via the app UI. When we run acceptance tests, we use the client, and stub out (we'll learn about this later) our network requests and other services.
 
@@ -66,7 +66,7 @@ This is the final layer that should be added in addition to `unit` and `integrat
 
 ##  What is Cypress?
 
-Cypress is an automated testing tool used for the functional aspects of web applications.  It's actually built on *Node.js* and allows you to write tests using JavaScript.  It allows you to test a number of aspects of your application including `integration` and `end-to-end` tests.  It's a bit different from how you may have tested in the past because it actually operates directly in the browser. 
+Cypress is an automated testing tool used for the functional aspects of web applications.  It's actually built on *Node.js* and allows you to write tests using JavaScript.  It allows you to test a number of aspects of your application including `integration` and `end-to-end` tests.  It's a bit different from how you may have tested in the past because it actually operates directly in the browser.
 
 <section class="answer">
 ### Major Features of Cypress
@@ -106,7 +106,7 @@ Let's experiment ourselves and see how great Cypress is firsthand.  Using the ap
 
 * First setup the FE with Cypress following the instructions [here](https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing){:target='blank'}
 * Although there are multiple ways of opening up Cypress, setup a `script` in your `package.json` to open up Cypress.
-* Open Cypress with the script you added and take note of the new window opened. A window will appear with two testing options.  For now, select **E2E Testing**.  There are some config options on the next window...but for now just select **Continue** at the bottom.  Then selector your browser (*Chrome*) and you'll be set to go.  Having completed these steps, you shoult notice some new directories and files added to your application.
+* Open Cypress with the script you added and take note of the new window opened. A window will appear with two testing options.  For now, select **E2E Testing**.  There are some config options on the next window...but for now just select **Continue** at the bottom.  Then selector your browser (*Chrome*) and you'll be set to go.  Having completed these steps, you should notice some new directories and files added to your application.
 </section>
 
 <section class="answer">
@@ -140,7 +140,7 @@ You'll notice that there are a few directories including `downloads`, `fixtures`
 
 As we consider what we will be testing, let's consider a few ways to set up our files.
 
-We could make one giant file and test absolutely everything there: `feedback_loop_spec.cy.js`.  But it's probably more maintainable to group up our related user flows. 
+We could make one giant file and test absolutely everything there: `feedback_loop_spec.cy.js`.  But it's probably more maintainable to group up our related user flows.
 
 Create a few files using the UI in the `e2e` directory (located inside the `cypress` directory):
 - `cypress/e2e/login_spec.cy.js`
@@ -153,7 +153,7 @@ Create a few files using the UI in the `e2e` directory (located inside the `cypr
 
 Notice that each of these describes actions tied to our data/server/network requests. When viewing feedback from coworkers, there are several different user flows. But they all involve GETTING feedback data from the back end.
 
-Figuring out how to group user flows/stories can be tricky, and ultimately there are no hard-and-fast rules about how to do so. Over time, you'll develop a sense of what to put together, just like how you are learning what to break out into a React component and what to leave as is. And, of course, these conventions change from team to team. 
+Figuring out how to group user flows/stories can be tricky, and ultimately there are no hard-and-fast rules about how to do so. Over time, you'll develop a sense of what to put together, just like how you are learning what to break out into a React component and what to leave as is. And, of course, these conventions change from team to team.
 </section>
 
 Inside `login_spec.js`, we'll first write a dummy test to make sure things are hooked up correctly.
@@ -241,7 +241,7 @@ This helps to ensure that we start anew before each test.  A [best practice](htt
 
 Here is a link to [commonly used assertions](https://docs.cypress.io/guides/references/assertions.html#Common-Assertions) in Cypress!
 
-**User flow to test:** I will receive an error message when I click the Submit button without filling out both inputs. 
+**User flow to test:** I will receive an error message when I click the Submit button without filling out both inputs.
 
 * Write another test that asserts an error message is displayed when the Submit button is [clicked](https://docs.cypress.io/api/commands/click.html){:target='blank'} without filling both inputs.
 
@@ -277,7 +277,7 @@ To add the React Dev Tools to your cypress browser window, take a look at [this 
 
 **User Story:** As a user, I can fill out the `email` and `password` inputs and click the Submit button and be directed to a different URL.
 
-* This builds off of what we have done previously, however we now want to test that the we log in successfully and visit the new url `http://localhost:3000/dashboard`.  It's okay if the page doesn't display all of the data on the next page, just assert that the url has updated.
+* This builds off of what we have done previously, however we now want to test that when we log in successfully and visit the new url `http://localhost:3000/dashboard`.  It's okay if the page doesn't display all of the data on the next page, just assert that the url has updated.
 
 <section class="note">
 ### Note
@@ -334,8 +334,8 @@ All we need to worry about is that our URL has updated to the page we expect to 
     },
     {
       statusCode: 401,
-      body: { 
-        message: `Email and password do not match.  Please try again.` 
+      body: {
+        message: `Email and password do not match.  Please try again.`
       }
     })
     .get('input[type="email"]')
@@ -355,8 +355,8 @@ Once again we have intercepted the `POST` request, but this time changed the sta
 
 Take note of the different arguments passed through `should` when checking the values of an element on the page.  
 
-* **Input:** `.should('have.value', [some value])`. 
-* **URL:** `.should('include', [some url])` 
+* **Input:** `.should('have.value', [some value])`.
+* **URL:** `.should('include', [some url])`
 * **Other DOM elements:** `.should('contain', [some text]')`.
 </section>
 
@@ -482,7 +482,7 @@ Cypress.Commands.add('login', () => {
     email: "travis@turing.edu",
     password: "rollins20",
   });
-  
+
   // Fill in our UI to trigger the network requests and send us to /dashboard
   cy.visit('http://localhost:3000/')
     .get('input[name=email]').type('leta@turing.edu')
@@ -513,7 +513,7 @@ describe('Dashboard view', () => {
 ```
 </section>
 
-Now that that is written, run this spec **(hint: you can run a single spec file at a time)**. 
+Now that that is written, run this spec **(hint: you can run a single spec file at a time)**.
 
 We can see two pieces of feedback and two teammates rendered.
 
@@ -550,11 +550,11 @@ describe('Dashboard view', () => {
 
 ### Note about mocking data
 
-Many of the projects you will be working on often require that you load a significant amount of data. To take the above example to the next step, we would need to load a user's teammates.  To help with readability of our tests, it would be good to use a [fixture](https://docs.cypress.io/api/commands/fixture.html#Syntax){:target='blank'} to load a fixed set of data from another file. 
+Many of the projects you will be working on often require that you load a significant amount of data. To take the above example to the next step, we would need to load a user's teammates.  To help with readability of our tests, it would be good to use a [fixture](https://docs.cypress.io/api/commands/fixture.html#Syntax){:target='blank'} to load a fixed set of data from another file.
 
 ### Testing the form
 
-See what you can do on your own! 
+See what you can do on your own!
 
 Here's a `beforeEach` to get you started:
 
