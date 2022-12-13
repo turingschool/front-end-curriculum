@@ -98,6 +98,12 @@ _Hint: go check out the HTML and CSS files to see how the form and saved covers 
   - Change back to the main home view (hiding the form view again)
   - Display the newly created cover image, title, and descriptors in the main cover
 
+<section class="note">
+### Hint!
+
+Is something weird happening when you click the button? Try googling `event.preventDefault()`! 
+</section>
+
 ## Iteration 3 - Saving & Viewing Covers
 
 - When a user clicks the "Save Cover" button, the current cover will be added to the `savedCovers` array

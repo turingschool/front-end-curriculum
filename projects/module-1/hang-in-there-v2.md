@@ -82,6 +82,12 @@ Result after clicking Show My Poster button:
   - Change back to the main poster view (hiding the form view again)
   - Use the new instance of the Poster class (part of your data model) to display the newly created poster image, title, and quote in the main view on the DOM
 
+<section class="note">
+### Hint!
+
+Is something weird happening when you click the button? Try googling `event.preventDefault()`! 
+</section>
+
 ## Iteration 3 - Saving & Viewing Posters
 
 - When a user clicks the "Save This Poster" button, the current main poster will be added to the `savedPosters` array.
