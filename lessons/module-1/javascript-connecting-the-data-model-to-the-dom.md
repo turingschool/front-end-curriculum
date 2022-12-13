@@ -85,7 +85,7 @@ Be an advocate for your own learning, don't read ahead!
 ### Possible Solution to #1  
 
 ```javascript
-function render() {
+function renderFruit() {
   for(var i = 0; i < fruits.length; i++) { // the DOM update is reliant on the data in the Data Model
     fruitBox.innerHTML += `
     <section class="fruit">
