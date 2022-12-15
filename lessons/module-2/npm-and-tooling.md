@@ -53,7 +53,7 @@ In the real world, you're going to see codebases that contain many more files, o
 
 You can expect the apps you work on in the future to be much closer to this size and structure than the simple 5-file, 3-folder structure you've started out with. It's important that we feel comfortable navigating large codebases and understand the how and why they require the complexity that we see here.
 
-In order to demystify some of the complex structure we'll see in the future, let's explore the [Paired Project Starter Kit](https://github.com/turingschool-examples/whats-cookin-starter-kit) repo.
+In order to demystify some of the complex structure we'll see in the future, let's explore the [Paired Project Starter Kit](https://github.com/turingschool-examples/fitlit-starter-kit) repo.
 
 
 ## Configuration Files
