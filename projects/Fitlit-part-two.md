@@ -131,7 +131,7 @@ For example, if the currently displayed user has an ID of 50, and you want to ad
 
 ## Error Handling
 
-Make proper error handling for your users to ensure they get data and submit their POST requests successfully.  An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user?  Also, validate the input fields on the client-side.
+Make proper error handling for your users to ensure they GET data and submit their POST requests successfully. An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user? Also, validate the input fields on the client-side.
 <!-- //make sure you can't add bad data -->
 <!-- make sure there is an indication that the post succeeded -->
 
