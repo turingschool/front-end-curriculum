@@ -362,7 +362,7 @@ Then, back in our `App.js`, we can import our shiny new Ideas component and rend
 
 import React, { useState } from 'react';
 import './App.css';
-import Ideas from 'Ideas';
+import Ideas from './Ideas';
 
 const initialIdeas = [
   { id: 1, title: 'Sweaters for pugs', description: 'Sweaters but only for pugs to wear' },
