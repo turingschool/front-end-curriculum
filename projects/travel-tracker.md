@@ -222,4 +222,4 @@ Make sure you submit your project [here](https://docs.google.com/forms/d/e/1FAIp
 
 # Evaluation
 
-This will be graded by instructors during Week 6. You will not receive extensive feedback (since this project is about demonstrating your skills, rather than being a learning tool). Your PM will message you on Slack to let you know your scores.
+Evaluations will be done live with an instructor. You'll be asked to step through the various parts of your application including accessibility audit, the user interface, running tests and looking at fetch calls and JavaScript code.
