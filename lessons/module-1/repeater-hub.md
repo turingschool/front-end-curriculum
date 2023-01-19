@@ -16,11 +16,10 @@ You will continue to add your weekly goals to that document every Monday through
 
 ## Gear Ups and Professional Development  
 **PD expectations for repeating Mod 1:**  
-You will be added to a new Homeroom group and are expected to attend Homeroom discussions and Mix It Up on Wednesdays.  You are not required to attend the other PD sessions.  
-Repeating the module is a great opportunity not only to solidify your technical skills but also your professional development skills. [This plan](https://careerdev.turing.edu/module_one/m1_PD_repeat_plan) goes over some suggested ways to approach that. Emma Byers is always available for support and coaching at the link in her Slack bio. You can reach out to her with any questions you have.  
+Repeating the module is a great opportunity not only to solidify your technical skills but also your professional development skills. [This plan](https://careerdev.turing.edu/module_one/m1_PD_repeat_plan) goes over some suggested ways to approach that. Allison Reu Singer is always available for support and coaching at the link in her Slack bio. You can reach out to her with any questions you have.  
 
-**Gear Up expectations for repeating mod 1:**  
-You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters.   
+<!-- **Gear Up expectations for repeating mod 1:**  
+You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters.    -->
 
 ## Alternative Learning Opportunities
 We want you to feel empowered to skip some classes if you feel like there is a better way to spend your time. **You can choose to miss up to 3 classes from the first few weeks of the inning:**  
