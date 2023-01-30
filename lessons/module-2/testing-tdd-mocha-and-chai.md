@@ -204,7 +204,7 @@ class Player {
 
   checkForWin(playerWord, correctWord) {
     if(playerWord === correctWord) {
-      this.winningWords.push(word)
+      this.winningWords.push(playerWord)
     }
   }
 }
