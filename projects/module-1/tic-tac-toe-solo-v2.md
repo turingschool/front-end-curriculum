@@ -82,7 +82,7 @@ Your entire application will consist of one HTML file and one CSS file. You will
       6. A function that detects when a game is a draw (no one has won)
       7. A function that resets the game board's data to begin a new game
 2. An 'index.js' file that contains all the DOM related JavaScript
-  * This includes functions that:
+  * This includes:
     1. Query selectors
     2. Function(s) to display the game board and user data
     3. Event listeners
