@@ -5,7 +5,7 @@ title: Hang In There - Pair
 ## Learning Goals
 
 * Write clean, DRY JavaScript
-  * Use a provided class by creating object instances using the `new` keyword
+  * Use a provided createPoster function to create your `poster`'s
   * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 * Begin to understand the connection between HTML, CSS and JavaScript
   * Practice reading, understanding, and using provided code
@@ -31,7 +31,7 @@ Then, as a team:
 
 * Explore the repository to see what's going on in the code
 * What pieces of code might you use to complete iterations, and what pieces will you have to create?
-* All of your work will take place in `main.js` - you will not need to change any other files.
+* All of your JavaScript will be written in `domUpdates.js` - you will not need to change any other files.
 
 ## Day 1 Deliverables
 
@@ -77,10 +77,10 @@ Result after clicking Show My Poster button:
 
 - On the new poster form view, users should be able to fill out the three input fields and then hit the Show My Poster button
 - When the Show My Poster button is clicked, several things will happen:
-  - Use the values from the inputs to create a new instance of our Poster class  (part of your data model)
+  - Use the values from the inputs to create a new, unique poster object (part of your data model)
   - Save the submitted data into the respective arrays (image URL into the images array, etc - all part of your data model) so that future random posters can use the user-created data
   - Change back to the main poster view (hiding the form view again)
-  - Use the new instance of the Poster class (part of your data model) to display the newly created poster image, title, and quote in the main view on the DOM
+  - Use the new, unique poster object (part of your data model) to display the newly created poster image, title, and quote in the main view on the DOM
 
 <section class="note">
 ### Hint!
@@ -98,7 +98,7 @@ Is something weird happening when you click the button? Try googling `event.prev
 ## Iteration 4 - Deleting Saved Posters
 
 - From the saved posters view, if a user double clicks a saved poster, it will be deleted
-  -  `onclick` functionality should not be used in any HTML code - all functionality should be through JavaScript.  
+  -  HTML `onclick` attributes should not be used in any HTML code - all functionality should be through JavaScript.  
 
 _Hint: How will you update the data model to achieve this?_
 
@@ -176,7 +176,7 @@ And evaluation of these concepts is assisted through the final graded section:
 ### JavaScript
 
 This project gives the team room to practice the following JavaScript concepts:  
-- OOP (Object Oriented Programming)
+- Functional Programming concepts such as pure functions
 - DOM (Document Object Model) manipulation
 - Style
   - SRP (Single Responsibility Principle) and DRY (don't repeat yourself) conventions
@@ -185,16 +185,16 @@ This project gives the team room to practice the following JavaScript concepts:
 Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 
 <section class="answer">
-### OOP competency examples
+### Functional Programing competency examples
 
-- Project makes use of the provided class, creating instances to encapsulate & store unique data
-- Team considers when and how to create new instances or update existing instances, coming to a clear and consistent decision
-- Team effectively creates/accesses instance properties when applicable
-- Team effectively invokes instance methods when applicable
+- Project makes use of the provided `createPoster` function, creating objects to encapsulate & store unique data
+- Team considers when and how to create poster objexts or update existing poster objects, coming to a clear and consistent decision
+- Team effectively creates/accesses object properties when applicable
+- Team effectively invokes object methods when applicable
 
 ✨WOW✨ can look like:  
 
-- Creating effective, clean methods in the provided class to manipulate class properties
+- Creating effective, clean methods in the provided createPoster function to manipulate object properties
 </section>
 
 <section class="answer">
@@ -214,7 +214,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 - The main JS file is organized thoughtfully (DOM variables together, event listeners together, functions together)
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
-- Functions are DRY and demonstrate SRP
+- Functions are pure, DRY, and demonstrate SRP
 - Variable and function naming is meaningful & readable
 - JS is formatted according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
 - Only semantic/organizational comments remain in file (if any); no "dead" commented out code remain in the file
@@ -222,6 +222,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ✨WOW✨ can look like:
 
 - Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
+- Functions are pure
 - Code has clearly been refactored; no functions show evidence of vestigial functionality (aka when functionality changes, all relevant code is updated)
 - No extraneous or unused lines of code
 </section>
