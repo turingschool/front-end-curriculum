@@ -6,23 +6,23 @@ title: IdeaBox Group
 
 Every developer has more ideas than time. As David Allen likes to say "the human brain is for creating ideas, not remembering them." In this project, we'll be building an application that records and archives our ideas (good and bad alike).
 
-Throughout the project, one of our focuses will be on providing a fluid and responsive client-side interface. To this end, we'll rely on JavaScript to implement snappy filtering in the browser.
+Throughout the project, one of our focuses will be on providing the user with a usable, intuitive client-side interface. To this end, we'll rely on JavaScript to implement snappy filtering in the browser.
 
 ## Learning Goals
 
 * Gain an understanding of how to write clean HTML and CSS to match a provided comp
-* Understand what it looks like to have a separate data model (using a class) and DOM model
+* Understand how a developer might separate the data model from the DOM model
 * Incorporate & iterate over arrays in order to filter what is being displayed
-* Craft code with clean style, using small functions that show trends toward DRYness and SRP
+* Craft code with clean style, using small functions that show trends toward DRYness, SRP, and purity
 
 ## Day One Deliverables
 
 - One person should create a new directory called `ideabox`.You'll need to initialize git in your local repo. You can brush up on that process with [this article](https://guides.github.com/introduction/git-handbook/).
   It should contain:
-  - `index.html`
+  - `index.html` 
   - `styles.css`
-  - `Idea.js`
-  - `main.js`
+  - `app.js` (this is where you will write the logic for the data model)
+  - `index.js` (this is where your DOM manipulation will occur)
   - `assets` (this is a directory that will hold your icon files)
 -  As a team, complete [the DTR Form](https://docs.google.com/forms/d/e/1FAIpQLSche5cvtlYQ_SaBDqqoF3H9gFiy2p60AOPoUMbhgIHlg-vRlQ/viewform?usp=sf_link)
 -  Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the following links:
@@ -34,7 +34,7 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 
 ## Progression
 
-### Iteration 0 - Desktop Layout
+### Iteration 0 - App Layout
 
 Plan to write the HTML and CSS so that your application matches this comp. Based on what you are building, you can anticipate that the Idea "cards" will not always be there on page load, but for now, they should.
 
@@ -50,26 +50,26 @@ You will need the `svg` image files for the star and delete icons. [Here's the l
 
 ### Iteration 1 and beyond
 
-We strongly recommend that you complete Iteration 0 before moving on to the next iterations!
+We **strongly recommend** that you complete Iteration 0 **before** moving on to the next iterations!
 
 ### Architecture
 
 For this project, we'll be increasingly thinking about the "data model" and "DOM model" as separate entities. We'll be using:
 
-- JavaScript to manage client-side interactions.
+- JavaScript to manage the data model and the client-side interactions.
 - HTML, CSS and the DOM to display our data
 
 Your entire application will consist of one HTML page or template. You will have two JavaScript files, for now:
 
-1. An `Idea.js` file that contains an `Idea` class.
-  * `Idea` methods must include, but are not limited to:
-    1. `constructor`
-    2. `saveToStorage`* - only used for extensions (should only have one job which is to save the instance to storage)
-    3. `deleteFromStorage`* - only used for extensions
-    4. `updateIdea` (should update the idea's starred state)
-2. A `main.js` file that contains all DOM related JavaScript.
+1. An `app.js` file that contains the logic for the data model.
+  * You'll need to be able to:
+    1. create an idea (see details below in "Data Model")
+    2. store ideas (hint: store idea objects in an array)
+    3. update the stored ideas array (to remove ideas, add new ideas, etc)
+    4. update a single idea's information (ex: you will need to be able to change an idea's "star" property's value)
+2. An `index.js` file that contains all DOM related JavaScript.
 
-**Note** The `Idea.js` file  must be the first script in your HTML so that your `main.js` file has access to your `Idea` class.
+**Note** The `app.js` file  must be the first script in your HTML so that your `index.js` file has access to the functions in your `app.js` file!
 
 ### Data Model
 
@@ -78,24 +78,26 @@ Your entire application will consist of one HTML page or template. You will have
   * _title_ and _body_ are strings.
   * _star_ is a boolean.
 
-Each idea should be created as an object instance of the `Idea` class. Once an idea object is created, all that data can be used to update the DOM. That object should also be added to a `list` of all the ideas your application currently has. This should probably be a global variable in your `main.js`.
+Each idea should be an object that is created by a function. Once an idea object is created, that data can be used to update the DOM. That idea object should also be added to a "list" of all the ideas your application currently has. This should probably be a global variable in your `app.js` file.
+
+Remember: as users interact with the DOM, you should use that information to first update the data model, and then use that data model to dislay the information onto the DOM.
 
 ### Iteration 2 - Adding Ideas
 
 As a user,
 - When I click "Save",
 - If I entered information in both the "Title" and "Body" input fields,
-- I should see a new Idea instance with the provided title and body appear in the ideas array
+- I should see a new idea object with the provided title and body appear in the ideas array
 - I should see a new idea card with the provided title and body appear on the DOM
 
 As a user,
 - When I click "Save",
 - If I entered information in both the "Title" and "Body" input fields,
-- I should see the "Title" and "Body" input fields clear out
+- I should see the "Title" and "Body" input fields clear out (so that they are ready for the user to add a different idea)
 
 As a user,
 - When I look at the "Save" button,
-- When either the "Title" or "Body" inputs are empty,
+- When both or either of the "Title" or "Body" input is empty,
 - I should notice that the "Save" button is disabled because it is a lighter color and the cursor is not a pointer when I hover over it
 
 As a user,
@@ -107,14 +109,14 @@ As a user,
 
 As a user,
 - When I click the "Delete" button on an idea card,
-- The card instance should be permanently removed from the ideas array
-- The card should be permanently removed from my view
+- That idea object should be permanently removed from the ideas array
+- The idea card should be permanently removed from the DOM
 
 As a user,
 - When I click the "Star" button on an idea card,
-- The card instance's star property should be updated in the ideas array
+- The star property of that idea's object should be updated (in the ideas array)
 - When the button was an outline of a star (not favorited), the button should now be a filled in star (favorited)
-  - and vice versa (for unfavoriting)
+- **and vice versa (for unfavoriting)**
 
 As a user,
 - When I delete or favorite any card,
@@ -137,7 +139,7 @@ As a user,
 
 As a user,
 - When I type a letter or phrase into the search bar, the cards should start filtering (no click needed)
-- I now only see the cards that include the letter/phrase in the title or body
+- I now only see the idea cards that include the letter/phrase in either the title or body
 
 As a user,
 - When I backspace and delete something from the search bar, so that it's empty
@@ -147,16 +149,16 @@ As a user,
 
 ### localStorage 
 
-Typically, frontend developers work with API's to serve up data that lives elsewhere. However, sometimes you might want to store some information `Client Side` - meaning we store it on the users local browser. Interested in this extension? Check out the lesson on [localStorage](https://frontend.turing.edu/lessons/module-1/json-and-localstorage.html). We don't officially teach this lesson, but it's a good one to know.
+Typically, frontend developers work with APIs to serve up data that is stored on an external server/database. However, sometimes you might want to store some information `Client Side` - meaning we store it on the user's local browser. Interested in this extension? Check out the lesson on [localStorage](https://frontend.turing.edu/lessons/module-1/json-and-localstorage.html). We don't officially teach this lesson, but it's a good one to know.
 
 As a user,
-- When I create one idea successfully, then refresh the page,
-- The idea card instance is still in the ideas array
+- When I create one idea successfully, then manually refresh the page,
+- The idea object is still saved in the ideas array
 - The idea card is still visible on the DOM
 
 As a user,
 - When I create two cards successfully, delete one, then refresh the page,
-- One idea instance is still in the ideas array (the one I did not delete)
+- One idea object is still in the ideas array (the one I did not delete)
 - One idea card is still visible on the DOM (the one I did not delete)
 
 As a user,
@@ -165,29 +167,18 @@ As a user,
 
 ### Commenting on Ideas
 
-### Architecture
+This extension adds the ability for your user to add comments to an idea.
 
-In addition to your `Idea.js` and `main.js`, you now need to have a `Comment.js` file.
+#### Data Model
 
-This file should hold a class, `Comment`. `Comment` methods must include, but are not limited to:
-1. `constructor`
-2. `saveToStorage` (should only have one job which is to save the instance to storage)
-3. `deleteFromStorage`
-
-### Data Model
-
-* An idea now also has a _comments_ property
-  * The _id_ should be a unique identifier. (Note: generating a random number does _not_ guarantee it will be unique)
-  * _title_ and _body_ are strings.
-  * _star_ is a boolean.
-  * _comments_ is an array.
-
-* A comment should have _content_ - a string that holds the content of a comment.
+* The idea objects should now include a new property: `comments`. This will begin as an empty array.  
+* You will need to write functions that allow you to add new comments to an idea's `comments` array.  
+* A comment will be an object with the following properties: `id` (should be unique), `content` (a string of the comment itself).
 
 
 As a user,
 - When I click the "Add" icon on an idea card,
-- A form to add a comment appears
+- A form to add a comment appears on that idea card
 
 As a user,
 - When I open the comment form on a card, type something in, and click "Add Comment",
@@ -203,6 +194,7 @@ As a user,
 - I should notice that the "Add Comment" button is disabled because it is a lighter color and the cursor is not a pointer when I hover over it
 
 As a user,
+- If I have implemented localStorage,
 - When I comment on an idea card, then refresh the page,
 - That comment is still on the idea card
 
@@ -283,17 +275,20 @@ To earn a given score, an application must meet the requirements listed in that 
   * All functions strictly adhere to the Single Responsibility Principle (SRP)
   * There are no nested if/else statements
   * Functions and code are well-refactored and show developer empathy
+  * Most functions are pure and do not rely on or cause side effects
 * **3:**
   * Application uses the Data Model exclusively to track changes to the ideas.
     Display of ideas on the DOM happens after the Data Model has been updated and *uses* the updated Data Model  
   * There are no nested for loops
   * Functions are DRY and observe SRP - and most are around 10 lines of code or less
+  * A few functions are pure and do not rely on or cause side effects
   * There are no global variables aside from query selectors and an array for your ideas
   * Uses event delegation correctly on dynamic elements for deleting, and starring an idea.  `onclick` functionality should not be used in the HTML for idea cards - all functionality should be through JavaScript.  
-  * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
+  * Uses parameters and arguments to craft short and reusable functions. There are no unused parameters or arguments in functions.
 * **2:**
   * Data model is built to the specifications detailed in the spec sheet and is fully separated from the DOM. Example: There should not be any DOM manipulation in class files.
   * All console logs, debuggers and comments are removed from code before submitting.
+  * No functions are pure.
 * **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 
 ### Functional Expectations
@@ -301,7 +296,7 @@ Functionality is the least important piece of the rubric. It’s included becaus
 
 This means, we DO NOT want to see:
 
-* Code that completes iterations but is sloppy
+* Code that completes extensions but is sloppy
 * One or both team members do not understand every single line of code
 * One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
 * A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
