@@ -198,110 +198,244 @@ As a user,
 - When I comment on an idea card, then refresh the page,
 - That comment is still on the idea card
 
+---
+
+## Notes on Project Feedback
+
+The rubric below serves as a guide for both **students** and **instructors**. 
+
+**Students:**
+- It should be used as a reference throughout the project to keep on track and guide learning.
+- It should also be used by students to self-assess their work.
+
+**Instructors:**
+- It should be used to evaluate the project at its final due date/time.
+- It should be a guide to provide relevant feedback to students so they can grow and improve in the areas that need deeper understanding.
+
+
+### Projects as Learning Tools
+
+When projects are graded, we want you to view the evaluation + feedback as a means to inform your learning, rather than as static "grades". Feedback from instructors will focus on areas where you have an opportunity to deepen your understanding. 
+
+The evaluation will provide feedback by answering the only important question:
+
+**Does the project demonstrate student understanding of the learning goals & concepts?**
+
+Projects will answer that question, being marked as **yes**, **not yet**, and **wow**. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
+
+The overall project outcome (yes, not yet, wow) is determined by "averaging" each section's outcome. You can think of a "yes" being worth a  1, a "not yet" being worth a 0, and a "wow" being worth a 2. 
+
+For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below).
+
+<section class="answer">
+### An important note about the possible outcomes
+
+**Yes** indicates that the student/team is ON TRACK in this area! YES, you showed us you understand the concept! 
+- The student/team demonstrates a good understanding of the concept
+
+**Not Yet** indicates that the student/team is BEHIND in this area - you showed us that you don't yet understand the concept
+- The student/team demonstrates misconceptions or confusion around the topic
+- **Student/team should prioritize this concept in their studying and practice**
+-  An overall "not yet" on one project does **not** mean the module is doomed! We want to see GROWTH. A student/team can struggle with a project and still (taking into account the rest of their work and assessments) demonstrate readiness for the next module! 
+
+**Wow** indicates that the student/team did extra work to teach themselves a new concept, or to achieve a deep & nuanced understanding of a concept
+- Please note: this is not an outcome to prioritize achieving! A "Yes" is an excellent outcome.
+- "Wow" is here as something to reach for if you have a solid understanding of the concepts and want to push yourselves.
+- "Wow" should not come at the expense of another concept
+- "Wow" often does not look like extra features, but instead looks like thoughtful refactoring and polish 💅
+</section>
 
 ## Rubric
 
-This rubric should serve as a guide for students as they progress through the project, as well as to self-evaluate. Instructors will use it to evaluate the project at its final due date/time, and provide detailed feedback so students know what areas to focus on in future projects.
+This project has 3 evaluated concepts:
 
-Scores land in a range between 1 and 4. Below is a breakdown of what those numbers represent.
+- Workflow & Professional Habits
+- Comp Recreation with HTML & CSS
+- JavaScript
 
-* **4 (exceptional)** - went beyond set learning goals; did self-teaching to go above and beyond in this area
-* **3 (proficient)** - exactly on track! you're where you need to be in this area! great work!
-* **2 (trailing)** - a little behind where we want to see you right now; in a good place to build familiarity/competency in this area; study in this area to level up and grow
-* **1 (dragging)** - significantly behind where we want to see you; major growth needs to be shown in this area; set up a pairing session with an instructor as soon as possible
+And evaluation of these concepts is assisted through the final graded section:
+- Functionality (we can't properly assess the 3 main concepts if there is not enough work to grade)
 
-To earn a given score, an application must meet the requirements listed in that score explanation and all scores lower.
+---
 
+### Workflow & Professional Habits
 
-### Professionalism
-* **4:**
-  - Team uses a PR template for every pull request
-  - Team habitually conducts thorough code reviews in the GitHub GUI to document the progress of the application
-  - Team has sought out code reviews from one or more mentors
-* **3:**
-  - Commits are atomic and frequent, effectively documenting the evolution/progression of the application
-  - Commit messages are consistent, descriptive, and concise and begin with a verb and capital letter
-  - Team uses PRs to screen/verify code before adding it to the main branch
-  - Branches are consistently used for individual features
-  - There is no more than a 10% disparity in project contributions between teammates
-  - README is well formatted and gives good context about the project, including links to both contributors’ GitHub profiles, and to the deployed GitHub Pages site
-* **2:**
-  - Commits are large and do not effectively communicate the progression of the application
-  - Team uses PRs but do not review code before merging into the main branch
-  - Branches are sometimes used for individual features
-  - There is a 20% disparity in project contributions between teammates
-  - README is brief and does not provide context for the project
-* **1:**
-  - Some commits are pushed directly to the main branch
-  - PRs are used inconsistently
-  - There is a 50% disparity in project contributions between teammates
-  - There is no README, or the “boilerplate” README is left in the project.
+This project gives the team room to practice the following skills:  
+- Collaboration
+- Git
+- GitHub
 
-### Comp Recreation
+Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 
-* **4:**
-  - Additional elements and animations have been added that match the visuals established in the comps, and/or design is responsive across small, medium and large breakpoints.
-* **3:**
-  - Application implements all major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment, etc).
-  - If additional elements were added, they generally match the visuals established in the comps, but may be slightly awkward.
-  - Careful attention was given to the little details like spacing, alignment, and hover states.
-* **2:**
-  - Application implements most major comp details accurately and correctly (colors, fonts, icons, spacing, alignment, etc.).
-* **1:**
-  - Application has a significant mismatch when compared to the provided comp.
+<section class="answer">
+### Collaboration competency examples
 
-### HTML && CSS - Style and Implementation
-* **4:**
-  - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, let assigned instructor know which naming convention will be used._
-   - Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected. To get this extension to work with local files, follow these steps:
+- The team's norming document is taken seriously, with thoughtful reflections from all team members regarding their skills, learning goals, work styles, etc. 
+- The team plans and executes an agreed upon process for working, troubleshooting, and handling conflicts.
+- Each member of the team reflects meaningfully on the collaboration and can point to specific behaviors they want to continue, and those they want to modify for future collaboration
+- The work is distributed equitably; hopefully commit/code contributions are roughly even for each team member
+
+WOW can look like:
+
+- The team's norming document is regularly revisted and revised as better perspective is gained
+- When conflicts arise, the team works together to find ways to re-focus on individual and group learning objectives
+</section>
+
+Note: ⬆️this⬆️ kind of collaboration can be difficult to assess, but know that this is a crucial and vital part of your learning and marketability as a developer! 
+
+<section class="answer">
+### Git competency examples
+
+- Team understands the importance & utility of documenting a single change with every commit; changesets are small
+- Commit messages are descriptive and concise
+- The team keeps the main branch clean by using branches for new, unreviewed code
+
+WOW can look like:
+
+- The team's commit messages clearly tell the story of how the project evolved over time
+- Commits are atomic, documenting a single changeset (such as a new function being created, or a function being updated).
+</section>
+
+<section class="answer">
+### GitHub competency examples
+
+- Team understands the point of the PR process, making strong use of code reviews & pushing up requested changes before merging
+- PRs have clear, thorough descriptions, such that a new person joining the codebase can clearly understand the proposed changes and evolution of the codebase
+- The team understands that the README is an opportunity to document their work and growth
+- The team understands that the README is a new contributor or potential employer's first glimpse into the project, and includes thorough setup instructions, context, reflections, and other pertinent information
+
+WOW can look like:
+
+- A PR template is effectively used (not a checkbox to complete, but an opportunity to document the changes being proposed)
+- Meaningful decisions are documented through code reviews; suggested/requested edits are made before merging
+- No bugs or poor code are merged into the main branch
+- The README effectivelly communicates the team's learning and growth as students
+</section>
+
+---
+
+### Comp Recreation with HTML & CSS
+
+This project gives the team room to practice using semantic HTML & CSS to recognizably recreate a provided comp, a critical skill for front-end developers.
+
+Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
+
+<section class="answer">
+### HTML & CSS competency examples
+
+- The team thoughtfully constructs their HTML document using semantic HTML tags
+- HTML elements are thoughtfully chosen, reducing extraneous or unnecessary elements 
+- The team uses HTML classes and id attributes effectively, following good HTML naming conventions, to target and style elements
+- The CSS file is organized and readable, perhaps using comments to label sections of styling
+  - e.g. `/* FONTS */` or `/* NAVIGATION */`
+- The team attempts to reduce redundancy in the CSS file, making it as DRY as possible, using existing classes/rules to cut down on repetitive styles. There is evidence of reused styles in the application.
+
+WOW can look like:
+
+- The application is accessible for individuals with visual impairment
+  - This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected. To get this extension to work with local files, follow these steps:
     - Install
     - Right click the WAVE extension
     - Click "Manage Extensions"
     - Flip the "Allow access to file URLs" switch
     - Success!
-* **3:**
-  - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly.
-  - CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles. There is evidence of reused styles in the application.
-* **2:**
-  - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). Semantic elements like `<button>`, `<li>`, etc. are used instead of `<div>`. If `<div>` elements are used, they are only for styling purposes.
-  - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together.
-* **1:**
-  - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
-  - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
+- CSS is organized according to [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, let assigned instructor know which naming convention will be used._
+</section>
+
+<section class="answer">
+### Comp Recreation competency examples
+
+- The application interface recreates the provided spec, matching fonts, colors, icons, and layout
+- If any additional elements are created (for example if the team implements an extension), all new elements match the style/spirit of the comp
+
+WOW can look like:
+
+- The application interface is responsive and can be viewed/used at various screen widths, maintaining legibility and usability at each size.
+- The team makes thoughtful decisions about the UI that makes the user experience easier and more pleasant
+</section>
+
+---
 
 ### JavaScript - Style and Implementation
 
-* **4:**
-  * All functions strictly adhere to the Single Responsibility Principle (SRP)
-  * There are no nested if/else statements
-  * Functions and code are well-refactored and show developer empathy
-  * Most functions are pure and do not rely on or cause side effects
-* **3:**
-  * Application uses the Data Model exclusively to track changes to the ideas.
-    Display of ideas on the DOM happens after the Data Model has been updated and *uses* the updated Data Model  
-  * There are no nested for loops
-  * Functions are DRY and observe SRP - and most are around 10 lines of code or less
-  * A few functions are pure and do not rely on or cause side effects
-  * There are no global variables aside from query selectors and an array for your ideas
-  * Uses event delegation correctly on dynamic elements for deleting, and starring an idea.  `onclick` functionality should not be used in the HTML for idea cards - all functionality should be through JavaScript.  
-  * Uses parameters and arguments to craft short and reusable functions. There are no unused parameters or arguments in functions.
-* **2:**
-  * Data model is built to the specifications detailed in the spec sheet and is fully separated from the DOM. Example: There should not be any DOM manipulation in class files.
-  * All console logs, debuggers and comments are removed from code before submitting.
-  * No functions are pure.
-* **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
+This project gives the team room to practice the following JavaScript concepts:  
+- Separation of the data model and the DOM
+- DOM (Document Object Model) manipulation
+- Style
+  - SRP (Single Responsibility Principle) and DRY (don't repeat yourself) conventions
+  - Function purity
+  - Readability - semantic naming, consistency, conciseness
 
-### Functional Expectations
+Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
+
+<section class="answer">
+### Separation of the data model competency examples
+
+- All DOM manipulation happens in the `index.js` file
+- The team updates the data model, then uses the data model to display those changes on the DOM
+- The team writes functions that demonstrate SRP and DRYness
+  - DRY: Functions make use of arguments and parameters to be dynamic, reducing redundancy 
+  - SRP: Functions each handle a single task, and are named to describe that task
+    - ex: `createIdea` is a function that creates an idea object.
+
+WOW can look like:  
+
+- Most functions are pure and do not rely on or cause side effects
+- Variables are not mutated; instead, values are updated through reassignment
+</section>
+
+<section class="answer">
+### DOM Manipulation competency examples
+
+- Project makes use of the DOM to access and update the displayed information
+- Team is thoughtful about elements being targeted, limiting global variables to only the ones needed for current functionality
+- Team succesfully renders the appropriate data to the page without bugs or page refreshes
+
+WOW can look like:
+
+- All changes to the DOM are the result of changes to the data model first
+</section>
+
+<section class="answer">
+### JavaScript Style competency examples
+
+- The main JS file is organized thoughtfully (DOM variables together, event listeners together, functions together)
+- Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
+- Functions are DRY, demonstrate SRP, and make an attempt at purity
+- Variable and function naming is meaningful & readable
+- JS is formatted according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
+- Only semantic/organizational comments remain in file (if any); no "dead" commented out code remain in the file
+
+WOW can look like:
+
+- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
+- Code has clearly been refactored; no functions show evidence of vestigial functionality (aka when functionality changes, all relevant code is updated)
+- No extraneous or unused lines of code
+</section>
+
+Each of these "subsections" are not distinct; they are all taken into consideration when the outcome for JavaScript is determined.
+
+---
+
+### Functional Expectations  
+
 Functionality is the least important piece of the rubric. It’s included because it is another benchmark to gauge proficiency (for example, we can’t grade your JS if there isn’t enough of it written!). However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
 
 This means, we DO NOT want to see:
 
 * Code that completes extensions but is sloppy
-* One or both team members do not understand every single line of code
-* One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
+* One or more team members do not understand every single line of code
+* One or more team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
 * A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
 
-* **4:** Application meets all of the expectations from Iteration 4 and at least one extension without bugs.
-* **3:** Application meets all of the expectations from Iteration 4 without bugs.
-* **2:** Application meets all of the expectations of Iteration 3 without bugs.
-* **1:** Application meets all of the expectations of Iteration 2 without bugs.
+Well-refactored, thoughtful code is better than sloppy extra features.
+
+<section class="answer">
+### Functionality competency examples
+
+- The application completes all iterations without bugs
+
+✨WOW✨ can look like:
+
+- An extension is successfully implemented along with thoughtful UI
+</section>
