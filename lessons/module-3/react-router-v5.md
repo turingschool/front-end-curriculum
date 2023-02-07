@@ -387,7 +387,7 @@ For example, the URL `/puppies/1` should render a view just for the puppy with a
 
 It could look something like this:
 ```jsx
-// **Creatures.js**
+// **CreatureDetails.js**
 // ...
 return (
   <NavLink to={`/${name}/${id}`}>
