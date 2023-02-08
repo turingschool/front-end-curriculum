@@ -62,32 +62,32 @@ For this project, we'll be increasingly thinking about the "data model" and "DOM
 Your entire application will consist of one HTML page or template. You will have two JavaScript files, for now:
 
 1. An `app.js` file that contains the logic for the data model.
-  * You'll need to be able to:
-    1. create an idea (see details below in "Data Model")
-    2. store ideas (hint: store idea objects in an array)
-    3. update the stored ideas array (to remove ideas, add new ideas, etc)
-    4. update a single idea's information (ex: you will need to be able to change an idea's "star" property's value)
+  * You'll need:
+    1. A function that can create an idea (see details below in "Data Model")
+    2. A way to store ideas (hint: store idea objects in an array)
+    3. Functions to update the stored ideas array (one to remove ideas, one to add new ideas, etc)
+    4. A function to update a single idea's information (ex: you will need to be able to change an idea's "star" property's value)
 2. An `index.js` file that contains all DOM related JavaScript.
 
 **Note** The `app.js` file  must be the first script in your HTML so that your `index.js` file has access to the functions in your `app.js` file!
 
 ### Data Model
 
-* An idea has an _id_, _title_, _body_, and _star_.
+* An idea is represented by an object that has an _id_, _title_, _body_, and _star_.
   * The _id_ should be a unique identifier. (Note: generating a random number does _not_ guarantee it will be unique)
   * _title_ and _body_ are strings.
   * _star_ is a boolean.
 
 Each idea should be an object that is created by a function. Once an idea object is created, that data can be used to update the DOM. That idea object should also be added to a "list" of all the ideas your application currently has. This should probably be a global variable in your `app.js` file.
 
-Remember: as users interact with the DOM, you should use that information to first update the data model, and then use that data model to dislay the information onto the DOM.
+Remember: as users interact with the DOM, you should use that information to first update the data model, and then use that data model to display the information onto the DOM.
 
 ### Iteration 2 - Adding Ideas
 
 As a user,
 - When I click "Save",
 - If I entered information in both the "Title" and "Body" input fields,
-- I should see a new idea object with the provided title and body appear in the ideas array
+- A new idea object with the provided title and body should be added to the ideas array
 - I should see a new idea card with the provided title and body appear on the DOM
 
 As a user,
@@ -97,7 +97,7 @@ As a user,
 
 As a user,
 - When I look at the "Save" button,
-- When both or either of the "Title" or "Body" input is empty,
+- When both or either of the "Title" or "Body" input fields is empty,
 - I should notice that the "Save" button is disabled because it is a lighter color and the cursor is not a pointer when I hover over it
 
 As a user,
@@ -247,14 +247,15 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 
 ## Rubric
 
-This project has 3 evaluated concepts:
+This project has 4 evaluated concepts:
 
 - Workflow & Professional Habits
-- Comp Recreation with HTML & CSS
+- HTML & CSS
+- Comp Recreation
 - JavaScript
 
 And evaluation of these concepts is assisted through the final graded section:
-- Functionality (we can't properly assess the 3 main concepts if there is not enough work to grade)
+- Functionality (we can't properly assess the 4 main concepts if there is not enough work to grade)
 
 ---
 
@@ -301,46 +302,54 @@ WOW can look like:
 
 - Team understands the point of the PR process, making strong use of code reviews & pushing up requested changes before merging
 - PRs have clear, thorough descriptions, such that a new person joining the codebase can clearly understand the proposed changes and evolution of the codebase
-- The team understands that the README is an opportunity to document their work and growth
-- The team understands that the README is a new contributor or potential employer's first glimpse into the project, and includes thorough setup instructions, context, reflections, and other pertinent information
+- The team uses the README as an opportunity to document their work and growth
+- The team uses the README as documentation, understanding that it is a new contributor or potential employer's first glimpse into the project, and includes thorough setup instructions, context, reflections, and other pertinent information
 
 WOW can look like:
 
 - A PR template is effectively used (not a checkbox to complete, but an opportunity to document the changes being proposed)
 - Meaningful decisions are documented through code reviews; suggested/requested edits are made before merging
 - No bugs or poor code are merged into the main branch
-- The README effectivelly communicates the team's learning and growth as students
+- The README effectively communicates the team's learning and growth as students
 </section>
 
 ---
 
-### Comp Recreation with HTML & CSS
+### HTML & CSS
 
-This project gives the team room to practice using semantic HTML & CSS to recognizably recreate a provided comp, a critical skill for front-end developers.
-
-Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
+This project gives the team room to practice using semantic HTML & CSS.
 
 <section class="answer">
-### HTML & CSS competency examples
+### HTML & CSS
 
-- The team thoughtfully constructs their HTML document using semantic HTML tags
-- HTML elements are thoughtfully chosen, reducing extraneous or unnecessary elements 
-- The team uses HTML classes and id attributes effectively, following good HTML naming conventions, to target and style elements
-- The CSS file is organized and readable, perhaps using comments to label sections of styling
-  - e.g. `/* FONTS */` or `/* NAVIGATION */`
-- The team attempts to reduce redundancy in the CSS file, making it as DRY as possible, using existing classes/rules to cut down on repetitive styles. There is evidence of reused styles in the application.
+- Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
+- Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
+- Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions.
+- Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). If `<div>` elements are used, they are only for styling purposes.
+- Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together.
+- Application utilizes data attributes to store information in the HTML
 
-WOW can look like:
-
-- The application is accessible for individuals with visual impairment
-  - This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected. To get this extension to work with local files, follow these steps:
-    - Install
-    - Right click the WAVE extension
-    - Click "Manage Extensions"
-    - Flip the "Allow access to file URLs" switch
-    - Success!
-- CSS is organized according to [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, let assigned instructor know which naming convention will be used._
+✨WOW✨ can look like:
+- Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, document it in your README and let your project manager know which naming convention will be used._
+- Application fully implements HTML that is accessible for individuals with visual disabilities. _Note: This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected._
 </section>
+
+<section class="note">
+### Note about using the WAVE tool
+
+To get this extension to work with local files, follow these steps:
+- Install
+- Right click the WAVE extension
+- Click "Manage Extensions"
+- Flip the "Allow access to file URLs" switch
+- Success!
+</section>
+
+---
+
+### Comp Recreation 
+
+Being able to recreate a provided design comp accurately is a critical skill for front-end developers.
 
 <section class="answer">
 ### Comp Recreation competency examples
@@ -369,51 +378,23 @@ This project gives the team room to practice the following JavaScript concepts:
 Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 
 <section class="answer">
-### Separation of the data model competency examples
+### Javascript
 
-- All DOM manipulation happens in the `index.js` file
-- The team updates the data model, then uses the data model to display those changes on the DOM
-- The team writes functions that demonstrate SRP and DRYness
-  - DRY: Functions make use of arguments and parameters to be dynamic, reducing redundancy 
-  - SRP: Functions each handle a single task, and are named to describe that task
-    - ex: `createIdea` is a function that creates an idea object.
+- Application uses the Data Model exclusively to track changes to the ideas.
+- No nested if/else statements or for loops.
+- Functions are DRY and adhere to the Single Responsibility Prinicple (SRP).
+- At least some functions are pure.
+- Event delegation is used correctly on dynamic elements for deleting and starring an idea.
+- Data model is fully separated from the DOM.  There is no DOM manipulation in the `app.js` file.
+- Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local.
+- Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 
-WOW can look like:  
-
-- Most functions are pure and do not rely on or cause side effects
-- Variables are not mutated; instead, values are updated through reassignment
+✨WOW✨ can look like:
+- Changes to the DOM only happen after the Data Model has been updated.  The Data Model is then used to update the DOM.
+- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering.
+- Functions are pure and do not rely on or cause side effects.
+- Bracket notation is utilized effectively to make accessing properties of class instances more dynamic.
 </section>
-
-<section class="answer">
-### DOM Manipulation competency examples
-
-- Project makes use of the DOM to access and update the displayed information
-- Team is thoughtful about elements being targeted, limiting global variables to only the ones needed for current functionality
-- Team succesfully renders the appropriate data to the page without bugs or page refreshes
-
-WOW can look like:
-
-- All changes to the DOM are the result of changes to the data model first
-</section>
-
-<section class="answer">
-### JavaScript Style competency examples
-
-- The main JS file is organized thoughtfully (DOM variables together, event listeners together, functions together)
-- Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
-- Functions are DRY, demonstrate SRP, and make an attempt at purity
-- Variable and function naming is meaningful & readable
-- JS is formatted according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
-- Only semantic/organizational comments remain in file (if any); no "dead" commented out code remain in the file
-
-WOW can look like:
-
-- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
-- Code has clearly been refactored; no functions show evidence of vestigial functionality (aka when functionality changes, all relevant code is updated)
-- No extraneous or unused lines of code
-</section>
-
-Each of these "subsections" are not distinct; they are all taken into consideration when the outcome for JavaScript is determined.
 
 ---
 
