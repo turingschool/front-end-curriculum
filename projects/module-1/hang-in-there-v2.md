@@ -5,7 +5,7 @@ title: Hang In There - Pair
 ## Learning Goals
 
 * Write clean, DRY JavaScript
-  * Use a provided createPoster function to create your `poster`'s
+  * Use a provided createPoster function to create your `poster`s
   * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 * Begin to understand the connection between HTML, CSS and JavaScript
   * Practice reading, understanding, and using provided code
