@@ -188,7 +188,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ### Functional Programing competency examples
 
 - Project makes use of the provided `createPoster` function, creating objects to encapsulate & store unique data
-- Team considers when and how to create poster objexts or update existing poster objects, coming to a clear and consistent decision
+- Team considers when and how to create poster objects or update existing poster objects, coming to a clear and consistent decision
 - Team effectively creates/accesses object properties when applicable
 - Team effectively invokes object methods when applicable
 
