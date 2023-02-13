@@ -194,7 +194,7 @@ Now that we have more context for how to separate the data model and the DOM, le
 
 Note: This repo contains an example of the RomCom project. If you didn't work on that project, don't panic -- It's nearly identical to the Hang in There project!
 
-Clone down [this repo](https://github.com/kaylaewood/romcom)!
+Clone down [this repo](https://github.com/turingschool-examples/datamodel-dom)!
 </div>
 
 ## Guiding Questions:
