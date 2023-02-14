@@ -17,9 +17,9 @@ tags: javascript, functions, functional programming
 
 ## What is a pure function?
 
-Over the last few weeks, you've begun writing multiple functions that complete different tasks and utilize parameters & arguments in different ways.  These tasks can include generating a random number, returning a new object, manipulating data, or making an update to the DOM.
+Over the last few weeks, you've begun writing multiple functions that complete various tasks and utilize parameters & arguments in different ways.  These tasks can include generating a random number, returning a new object, manipulating data, or making an update to the DOM.
 
-A **pure function** is a function that is predictable and always returns the same results or output when given the same input.  Another way of describing this is it's a function that has no side effects, (*it does not make any updates to the outside world*).  It is very likely that you have already written some *pure* functions in past projects.  Let's take a look at an example:
+A **pure function** is a function that is predictable and always returns the same results or output when given the same input.  It is very likely that you have already written some *pure* functions in past projects.  Let's take a look at an example:
 
 <section class="answer">
 ### Impure vs Pure Function Example
@@ -53,13 +53,32 @@ confirmEmail("jeremiah@turing.edu") // "Your email address is currently jeremiah
 <section class="call-to-action">
 ### On Your Own
 
-Based on the above examples and defintions, answer the following:
+Based on the above examples and definitions, answer the following:
 
-1. What makes the first function impure?  What is the side effect?
+1. What makes the first function impure?
 2. In the second example, what makes the function pure?  If you call the function with the same argument, will you always get the same result?
 3. What are the pros of making pure functions?  Are there any downsides?
-4. **Spicy:** 🌶️ Is it possible to make all functions pure?  What is an example where it would be impossible to make a function pure? 🌶️
+4. Which of these do you think would be easier to test?  Why?
+5. **Spicy:** 🌶️ Is it possible to make all functions pure?  What is an example where it would be impossible to make a function pure? 🌶️
 </section>
+
+## Side Effects!  What are they?
+Another way of describing a pure function is that it's a function that has no **side effects**.  In other words, *it does not make any updates to the outside world*.  What do we mean by the outside world though?  This can involve anything outside of the function's scope such as making an update to a global variable like in the previous example.  Let's look at another example of a side effect:
+
+```js
+var totalSpent = 100;
+
+function addCost(cost) {
+  totalSpent += cost
+}
+
+addCost(20)
+```
+
+Take note of the global variable that is keeping track of how much a user has spent.  Can you tell if this function is pure or not?  Experiment running this code in the console and then log the `totalSpent` variable.  Did the value change?  Note that there are actually **TWO** side effects here:
+
+1. Our `addCost` function is dependant on `totalSpent` in order to succesfully perform it's task.  `addCost` will return an error if for some reason `totalSpent` was no longer available.  It is not completely dependant on it's input.
+2. The second side effect is that `addCost` is programmed to mutate the `totalSpent` variable.  It is making an "update to the outside world."
 
 <section class="note">
 ### Notes To Remember
@@ -67,7 +86,7 @@ By keeping much of the logic of an application built on **pure functions**, it c
 
 **Pure functions** will always have a `return` statement as well as arguments/parameters.  Remember a pure function returns the same output if given the same input.  If there is no `return` statement, this is likely because it is updating something else in the "outside" world.
 
-Not all functions are going to be pure.  Functions that must mutate data outside of the function's scope, update the DOM, or rely on some outside source are impure.  This is *okay*.  The goal is to make as much of the program as pure as possible and save the functions that require side effects for last!
+Not all functions are going to be pure.  Functions that must mutate data outside of the function's scope, update the DOM, or rely on some outside source are impure.  This is *okay*.  The goal is to make as much of the program as pure as possible and save the functions that require side effects for last!  By doing so, we are helping our future selves as well as future developers by calling out which functions are impure since that's where errors are most likely to occur! 
 </section>
 
 ## Getting More Practice
