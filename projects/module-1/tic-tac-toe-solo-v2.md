@@ -17,12 +17,13 @@ Now that you've got the main foundations down to build out a frontend applicatio
 
 ## Solo Project Expectations
 
-This project is an important step in demonstrating you are ready to start Module 2. To ensure we can accurately assess that, it's important you meet the expectations:
+This project is an important step in demonstrating that you are ready to start Module 2. To ensure we can accurately assess this, it's important you meet the expectations:
 
-- You are the only one who should type code - no copy-pasting code!
-- For any code that you didn't write entirely by yourself (mentor or rock supported), you should be able delete it and re-write it yourself
+- You are the only one who should type code - and no copy-pasting code from elsewhere!
+- For any code that you didn't write entirely by yourself (mentor or rock supported), you should be able to explain the concepts used, and be able to delete it and re-write it yourself 
+    - (we don't mean you should memorize everything, but that you should understand it so well that you could re-implement the concepts)
 - No youtube videos or tutorials of programming Tic Tac Toe. If you have an opportunity and are tempted, do the right thing for YOUR learning and don't do it!
-- Any peer-to-peer collaboration should be discussions about IDEAS, not coding together or sharing code.
+- Any peer-to-peer collaboration should be discussions about IDEAS and CONCEPTS, not coding together or sharing code.
 
 We want to see YOUR work.
 
@@ -52,7 +53,7 @@ There have been some changes to this project - so until we can get a new video u
 - A player can win by connecting 3 horizontally, vertically, or diagonally.
 When a win occurs
   - The top banner changes to declare the winner
-  - The dom updates to state how many wins the player has total
+  - The dom updates to display how many wins the player has in total
   - The game RESTARTS ITSELF after a brief pause, (long enough that the winner message can be read before resetting)
   - The player who didn’t begin the previous game now is the first player to go in the new game
 - A draw can occur, in which case:
@@ -60,7 +61,7 @@ When a win occurs
   - Neither player’s win count increases or decreases
   - The game restarts after a brief pause, with the opposite player beginning the game (just like when a game restarts after a player wins)
 
-In this project, we will not be providing detailed iterations. We want you to exercise your skills in planning out work!
+**In this project, we will not be providing detailed iterations. We want you to exercise your skills in planning out work!**
 
 Notes:
 * A timeout is used after a completed game to reset the board.
@@ -69,21 +70,22 @@ Notes:
 
 ### Architecture
 
-Your entire application will consist of one HTML file and one CSS file. You will have three JavaScript files:
+Your entire application will consist of one HTML file and one CSS file. You will have two JavaScript files:
 
-1. A `player.js` file that contains a `Player` class.
-	* `Player` methods must include, _but are not limited to_:
-		1. `constructor` - properties should include: `id` (ex: `'one'`), `token` (ex: `'⭐️'`), `wins` (ex: `0`)
-		2. `increaseWins` - increases the count of the player's wins
-2. A `game.js` file that contains a Game class.
-  * A `Game` should include:
-      - Two `Player` instances
-      - A way to keep track of the data for the game board
-      - A way to keep track of which player's turn it currently is
-      - A way to check the Game's board data for win conditions
-      - A way to detect when a game is a draw (no one has won)
-      - A way to reset the Game's board to begin a new game
-3. A `main.js` file that contains all DOM related JavaScript
+1. An 'app.js' file that contains your game's logic.
+  * Your game logic methods must include, _but are not limited to_:
+      1. A function that creates the objects that store each players' informations - properties should include: `id` (ex: `'one'`), `token` (ex: `'⭐️'`), `wins` (ex: `0`)
+      2. A function called `increaseWins` - increases the count of a player's wins (should work for either player)
+      3. A function that keeps track of the data for the game board
+      4. A function that keeps track of which player's turn it currently is
+      5. A function that checks the game board data for win conditions
+      6. A function that detects when a game is a draw (no one has won)
+      7. A function that resets the game board's data to begin a new game
+2. An 'index.js' file that contains all the DOM related JavaScript
+  * This includes:
+    1. Query selectors
+    2. Function(s) to display the game board and user data
+    3. Event listeners
 
 ### Data Model
 
@@ -94,14 +96,14 @@ In a game like Tic Tac Toe, it is tempting to manipulate the DOM first. Remember
 This workflow is not required, but will help you meet the overall requirements of the project.
 
 1. Plan out the HTML layout (colors and icons do not need to match, but overall layout should closely match the demo video)
-2. Create the Player class
-3. Create the Game class
-4. Make game fully playable without the DOM (manually updating the Game.board data, etc, from your console) to force yourself to think data-model-first
-5. Create central game board on the DOM
-6. Connect Game data model to the DOM
-7. Display the Player data in the sidebars
+2. Create the functions that describe/update the players and their data
+3. Create the functions that describe/update the game board and gameplay
+4. Reflect: without thinking about the DOM, could you call all the necessary functions that a game would need in order to function? Would your data update properly? Would your game be able to know when someone has won? etc
+5. Create central game board on the DOM and connect it to the game's data
+6. Display each player's data in the sidebars
+7. Connect the data model to the DOM - ensure that the data model updates based on user interaction
 8. Automatically reset the game board to allow for a new game to be played after the previous game is won
-9. Extension: Persist Player data using local storage (number of wins should persist across page refreshes)
+9. Extension: Persist player data using local storage (number of wins should persist across page refreshes)
 
 ---
 
@@ -123,7 +125,7 @@ The evaluation will provide feedback by answering the only important question:
 
 **Does the project demonstrate student understanding of the learning goals & concepts of this module?**
 
-This project will answer that question, being marked as **yes**, **not yet**, and **wow**. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
+This project will answer that question, being marked as **YES**, **NOT YET**, and **WOW**. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
 
 The overall project outcome (yes, not yet, wow) is determined by "averaging" each section's outcome. You can think of a "yes" being worth a  1, a "not yet" being worth a 0, and a "wow" being worth a 2. 
 
@@ -182,7 +184,7 @@ As mentioned above, functionality does have more weight in this final project in
 
 ✨WOW✨ can look like:
 
-- Application is fully complete (matches all functionality from demo without bugs) and implements additional functionality devised by the student..
+- Application is fully complete (matches all functionality from demo without bugs) and implements additional functionality devised by the student, such as player data persisting across page refreshes, or allowing a player to choose their own emoji icon, etc.
 </section>
 
 <section class="answer">
@@ -192,8 +194,8 @@ As mentioned above, functionality does have more weight in this final project in
 - No nested if/else statements or for loops.
 - Functions are DRY and adhere to the Single Responsibility Prinicple (SRP)
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
-- The application correctly implements a data model for the `Player` and `Game` classes, including all required methods. The data model is kept up to date.
-- Data model is fully separated from the DOM. All DOM manipulation is handled exclusively in `main.js`.
+- The application correctly implements a data model to describe the player and game data, including all required methods. The data model is kept up to date when players interact with the DOM
+- Data model is fully separated from the DOM. All DOM manipulation is handled exclusively in `index.js`.
 
 ✨WOW✨ can look like:
 - Changes to the DOM only happen after the Data Model has been updated.  The Data Model is then used to update the DOM.
