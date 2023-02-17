@@ -13,6 +13,8 @@ tags: javascript, mocha, testing, fetch, agile
 
 In this project, you will use your project from What’s Cookin’ (Part 1) and build on top of that. This is an opportunity to refactor your code, utilize agile processes, complete unfinished work, build new features, and take advantage of instructor feedback.
 
+These are all aspects of your future job. Code is important, but process allows for great applications to be built. This part of the project focuses heavily on process so that you have an opportunity to talk about process in your future interviews.
+
 ## Timeline
 
 Dates and deliverables to be aware of:
@@ -36,10 +38,10 @@ Your daily check-in schedule (sometimes called “stand-ups”) should be outlin
 
 ## Retrospective
 
-A retrospective (retro) is a look back at the recent development period, in this case, Part 1 of the project, in order to improve future development work as a team. For your retrospective, meet with your team to discuss the following questions:
+A retrospective (retro) is a look back at the recent development period, in this case, Part 1 of the project, in order to improve future development **process** and **workflow** as a team. For your retrospective, meet with your team to discuss the following questions:
 
 - What helped you to be successful as a team?
-- What caused the problems that you had in Part 1?
+- What caused the problems that you had in Part 1? For example: When we got stuck, how long did we grind before reaching out for help?
 - Were daily check-ins productive and helpful? If not, what would you change?
 - What questions do we have about Part 2 of the project?
 - Is there anything we should change in our DTR?
@@ -48,7 +50,7 @@ When you’ve finished your retro, DM your project manager two things from your 
 
 ## Applying Instructor Feedback from Part 1
 
-- Implement instructor feedback from Part 1
+- Implement instructor feedback from Part 1. Be sure to ask your instructor about any clarifying questions you have about feedback.
 - Consider any additional refactoring opportunities:
     - Identify redundant code in your classes and opportunities for DRYing it up
     - Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior.
@@ -98,7 +100,7 @@ Make proper error handling for your users to ensure they get data and submit the
 
 ## Iteration 5 - Differentiation Tracks
 
-Each team will get **one** of these tracks to work through.
+Instructors will assign each team **one** of these tracks to work through.
 
 - The user wants to be able to decide what to make based on the cost of the recipe.
 - Users often print out recipes, but they don’t want to waste ink and paper. How can we give them a print layout with only the information they need from the recipe?
@@ -112,7 +114,7 @@ Each team will get **one** of these tracks to work through.
 
 As developers, we can get so accustomed to the features we create that we forget that users don’t have any background or know how to use a feature for the first time. That’s why it’s important to observe unbiased users try out your features and see where they succeed or have trouble. These observations are called usability tests.
 
-Once your track’s feature is at a point where it’s usable and ready for some feedback, but before you think everything is finalized, that’s the right time to perform the usability test.
+Once your track’s feature is at a point where it’s usable and ready for some feedback, but before you think everything is finalized, that’s the right time to perform the usability test for the track's feature.
 
 Your group will create a usability test for another group to go through. Here is the process:
 
@@ -125,6 +127,10 @@ Your group will create a usability test for another group to go through. Here is
     4. The usability test should not last for more than 30 minutes
 4. Perform the test and take notes
 5. Incorporate any valuable feedback into your application
+
+You want to give the participant a specific task, but also balance that specificity with letting them try to find out how to do something. Try not to ask them leading questions like, "What was the source of your navigational difficulties?" This question assumes that the user had difficulties and that the difficulties came from software, specifically "navigation". Instead, you could ask "What has been your experience with this application?"
+
+Once your usability test is complete, incorporate any useful and interesting feedback into your application. This is a feedback cycle that would ordinarily happen many times in your future job to improve your application.
 
 ## Accessibility
 
