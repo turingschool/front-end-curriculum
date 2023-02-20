@@ -177,14 +177,14 @@ Once your usability test is complete, incorporate any useful and interesting fee
 
 ### Minimum Professionalism Expectations
 
-- Team collaborates effectively. Team holds daily standups throughout project.
+- Team collaborates effectively. Team holds daily check-ins throughout project.
 - Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
 - The Project Board is utilized (and updated) with Github issues and labels.
 - Developer uses PRs from feature branches before adding new code to the main branch.
 - The README is formatted well and at a minimum contains:
     - Overview of project and goals
     - Overview of technologies used, challenges, wins, and any other reflections
-    - Screenshots/gifs of your app
+    - Screenshots/GIFs of your app
 
 ---
 
