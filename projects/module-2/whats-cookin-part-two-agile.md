@@ -96,7 +96,7 @@ Also, for POST requests, your request will need a header of `Content-Type: appli
 | Get all recipes | http://localhost:3001/api/v1/recipes | GET | none | An array containing all recipes |
 | Add recipe to cook for a user | http://localhost:3001/api/v1/usersRecipes | POST | { userID: `<number>`, recipeID: `<number>` } | {message: "Recipe #`<recipeID>` was added for User #`<userID>`" } |
 
-## Error Handling
+### Error Handling
 
 Make proper error handling for your users to ensure they know if the GET or POST requests have been submitted successfully. An example is handling the case where they submit a request and an error message returns from the request. How would you show helpful feedback to a user?
 
