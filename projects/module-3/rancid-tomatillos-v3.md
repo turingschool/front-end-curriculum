@@ -79,7 +79,7 @@ In the future, when we use the actual API to get individual movie details, the i
 
 ### Iteration 3 - Network Requests & Async JS
 
-For the third iteration, we'll refactor our application to use actual data from the database (information is below) instead of our mocked `movieData` file.
+For the third iteration, we'll refactor our application to use actual data from the database (information is below) instead of our mocked `movieData` file. We'll also add some type checking with [PropTypes](https://frontend.turing.edu/lessons/module-3/proptypes.html)
 
 The information about the API we are using is located
 
@@ -123,6 +123,7 @@ Also note: there are some endpoints here that you will not be using! Read the do
 **Suggested testing progress by end of iteration**  
 - Project board has been updated so functionality is described as user stories
 - Each user story includes thorough acceptance criteria
+- All components with that receive props utilize type checking with PropTypes
 
 ---
 
