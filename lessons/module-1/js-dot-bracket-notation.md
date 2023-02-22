@@ -11,8 +11,6 @@ tags: javascript, foundation, arrays, objects, bracket, dot, notation
 * Determine appropriate use cases for each notation
 * Apply our knowledge of each notation to gain a deeper understanding about a familiar concept
 
-## Pre-Work
-Watch the first 7 minutes of [this video](https://www.youtube.com/watch?v=DJ0deyVQZPw) about dot and bracket notation. If you want to watch the whole thing, go ahead! Just know that it covers some Mod 2 concepts that may be a little intimidating at this point :)
 
 ## Vocabulary
 
@@ -22,6 +20,8 @@ Watch the first 7 minutes of [this video](https://www.youtube.com/watch?v=DJ0dey
 
 <section class="call-to-action">
 ### Warm Up
+
+Watch the first 7 minutes of [this video](https://www.youtube.com/watch?v=DJ0deyVQZPw) about dot and bracket notation. 
 
 * Independently, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt1#main.js).
 * When you finish, use the zoom chat to **DM** me your answer to this question: *Which of the following expressions is equivalent to `car.brand`?*  
