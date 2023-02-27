@@ -18,29 +18,29 @@ tags: javascript, arrays, prototypes, mutator, accessor
 - `Accessor` - methods that do not mutate the original array, rather just give us some information about the array
 
 <section class="call-to-action">
-  ### Warm Up
+### Warm Up
 
-  <div class="answer">
+<div class="answer">
 
-    ### Exploration
+### Exploration
 
-    In your notebook, brainstorm how you might complete the following challenges. Don't use any code. Instead, write down your thought process as a set of instructions; this is sometimes referred to as 'pseudocode'. 
+In your notebook, brainstorm how you might complete the following challenges. Don't use any code. Instead, write down your thought process as a set of instructions; this is sometimes referred to as 'pseudocode'. 
 
-    ```javascript
-    var instructors = ["Scott", "Heather", "Jeremiah"];
-    ```
+```javascript
+var instructors = ["Scott", "Heather", "Jeremiah"];
+```
 
-    For the array above,
-    - Oops! We're missing an instructor in this array. We need to add "Kayla" to the list. What are the **instructions** you would want to tell the computer to take in order to add a new instructor to the array? 
-    - I need to know if a certain instructor named "Heather" is in the instructors array. What are the **instructions** you would want to tell the computer to take in order to find out if "Heather" is included in the array?
-  </div>
+For the array above,
+- Oops! We're missing an instructor in this array. We need to add "Kayla" to the list. What are the **instructions** you would want to tell the computer to take in order to add a new instructor to the array? 
+- I need to know if a certain instructor named "Heather" is in the instructors array. What are the **instructions** you would want to tell the computer to take in order to find out if "Heather" is included in the array?
+</div>
 
-  <div class="answer">
-    ### Discuss
+<div class="answer">
+### Discuss
 
-    - Consider the processes you just thought through. Both of the challenges above are based on array prototype methods. One is based on a mutator method and one is based on an accessor method. Which do you think was which? Why? (Refer to the vocabular words for a reminder on what `Mutator` and `Accessor` mean.)
+- Consider the processes you just thought through. Both of the challenges above are based on array prototype methods. One is based on a mutator method and one is based on an accessor method. Which do you think was which? Why? (Refer to the vocabular words for a reminder on what `Mutator` and `Accessor` mean.)
 
-  </div>
+</div>
 </section>
 
 ### Accessor Methods
@@ -49,12 +49,18 @@ Sometimes we need to access information about an array or certain elements in ou
 
 In the warmup, we wrote some pseudocode to check if an element exists inside of an array. There's actually an Accessor Method that we can use to implement that functionality in JavaScript. It's called `includes`. The `includes` method is an accessor method because it doesn't modify or mutate the original array.
 
+Implementation using the `includes` method might look like this: 
+
+// TODO add code example here. 
+
 ### Mutator Methods
 
 In other cases, we will want to change the data our array holds. **Mutator** methods actually mutate, or change, the data in the array. If we needed to remove an instructor element from the `instructors` array, we'd need to use a mutator method.
 
-In the warm up, we wrote some pseudocode to add an element to an array. There's a mutator method we can use to implement this functionality in code! It's called `push` and it is a mutator method because mutates the original array. 
+In the warm up, we wrote some pseudocode to add an element to an array. There's a mutator method we can use to implement this functionality in code! It's called `push` and it is a mutator method because it mutates the original array. 
 
+
+// TODO code example here. 
 <section class="call-to-action">
 
 ### Research
@@ -87,18 +93,20 @@ For each array prototype method, follow this protocol carefully:
 </section>
 
 <section class="call-to-action">
-  ### Share
 
-  In groups, discuss your experience. 
+### Share
 
-  Some questions to get you started: 
-    - What strategies helped you learn best? 
-    - What strategies were most difficult for you? 
-    - Which methods were accessor methods and which were mutator methods?
-    - What questions do you have about these mutator and accessor methods?
+In groups, discuss your experience. 
+
+Some questions to get you started: 
+  - What strategies helped you learn best? 
+  - What strategies were most difficult for you? 
+  - Which methods were accessor methods and which were mutator methods?
+  - What questions do you have about these mutator and accessor methods?
 </section>
 
 <section class="checks-for-understanding">
+
 ### Practice
 Work through the exercises in <a target="_blank" href="https://repl.it/@letakeane/02-array-methods#index.js">this REPL</a>.
 </section>
@@ -128,7 +136,7 @@ After all are complete, each group will do a short presentation on their assigne
 If you aren't 100% of something you are about add to your presentation - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates. -->
 
 ## Wrap Up
-
+// TODO wrap this stuff in a note style... it's not really a wrap up, it's a side note. 
 ### What should you memorize?
 
 Often times, especially when we are starting to code, we put pressure on ourselves to memorize every little thing. This is NOT necessary and not a good use of your brain space! There will be some methods you use so frequently that you just memorize them, but for the most part, the things you "memorize" should be bigger ideas and how things work together.
@@ -146,5 +154,6 @@ It's not a good use of time to attempt to memorize every array prototype and its
 
 1. Which learning strategy helped you learn the best? Rubber ducking? Spending time in the docs? Playing with a method in `repl.it`? Visualizing it without code?
 2. Which array prototype method was most interesting to you? Why? 
-3. Open your notebooks to the last page, and write "When I'm stuck, I will:" and then add the learning strategies that worked best for you!
+3. Which array prototype method is the most confusing right now? 
+4. Open your notebooks to the last page, and write "When I'm stuck, I will:" and then add the learning strategies that worked best for you!
 </section>
