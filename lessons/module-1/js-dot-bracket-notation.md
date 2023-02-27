@@ -147,6 +147,36 @@ Remember: a variable represents some other value, and that value could be reassi
 We must use bracket notation whenever we are accessing an object's property using a *variable* or when the property's key is a *number* or includes a *symbol* or is *two words with a space*.
 </section>
 
+Take a moment to read through this code:
+```js
+function checkForFood(restaurant, food) {
+  if (restaurant.menus[food.type].includes(food)) {
+    return `Yes, we're serving ${food.name} today!`;
+  }
+  return `Sorry, we aren't serving ${food.name} today.`
+}
+
+var foodItem = {
+  name: "Quiche",
+  price: "6.49",
+  type: "lunch"
+};
+
+var restaurant = {
+  name: 'Butcher Block Cafe',
+  menus: {
+    breakfast: [{name: 'Quiche', price: '6.49', type: 'breakfast'}],
+    lunch: [{name: 'Ham and Swiss', price: '10.00', type: 'lunch'}],
+    dinner: [{name: 'Country Fried Steak', price: '14.00', type: 'dinner'}]
+  }
+}
+
+checkForFood(restaurant, foodItem)
+```
+
+What will be returned from the `checkForFood` function? 
+
+
 ## Applying What We've learned
 
 Even if these concepts are new to you, you've actually been putting them into practice for awhile now! Let's take a deeper look into something familiar to you: **for loops**.
