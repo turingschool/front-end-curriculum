@@ -51,7 +51,13 @@ In the warmup, we wrote some pseudocode to check if an element exists inside of 
 
 Implementation using the `includes` method might look like this: 
 
-// TODO add code example here. 
+```js
+var instructors = ["Scott", "Heather", "Jeremiah"];
+
+var instructorExists = instructors.includes('Heather');
+
+console.log(instructorExists); // logs true
+```
 
 ### Mutator Methods
 
@@ -60,7 +66,13 @@ In other cases, we will want to change the data our array holds. **Mutator** met
 In the warm up, we wrote some pseudocode to add an element to an array. There's a mutator method we can use to implement this functionality in code! It's called `push` and it is a mutator method because it mutates the original array. 
 
 
-// TODO code example here. 
+```js
+var instructors = ["Scott", "Heather", "Jeremiah"];
+
+instructors.push('Kayla');
+
+console.log(instructors) // logs ["Scott", "Heather", "Jeremiah", "Kayla"];
+```
 <section class="call-to-action">
 
 ### Research
@@ -135,8 +147,8 @@ After all are complete, each group will do a short presentation on their assigne
 
 If you aren't 100% of something you are about add to your presentation - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates. -->
 
-## Wrap Up
-// TODO wrap this stuff in a note style... it's not really a wrap up, it's a side note. 
+<section class="note">
+
 ### What should you memorize?
 
 Often times, especially when we are starting to code, we put pressure on ourselves to memorize every little thing. This is NOT necessary and not a good use of your brain space! There will be some methods you use so frequently that you just memorize them, but for the most part, the things you "memorize" should be bigger ideas and how things work together.
@@ -148,6 +160,7 @@ You should have enough of an understanding of arrays that you know you could goo
 ### What is not worth memorizing?
 
 It's not a good use of time to attempt to memorize every array prototype and its syntax.
+</section>
 
 <section class="checks-for-understanding">
 ## Reflection
