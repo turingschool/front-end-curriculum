@@ -98,7 +98,6 @@ If you need a refresher on POSTing, review [the POST lesson](https://frontend.tu
 
 ### Iteration 6 - Choose Your Own Adventure (extension)
 You can choose whatever feature you'd like to add to this application. We've listed some ideas below, but feel free to think outside of the box here! Think about what you need more practice with, and let that determine your next move.
-- Refactor the codebase to use a `Guess` and `Game` class
 - Add some unit testing
 - Create a second color scheme and allow the user to toggle between them ([Here's an awesome example](https://www.joshwcomeau.com/){:target='blank'} - click the sun icon in the top right corner!)
 - Create an easy version of the game where there are no words with double letters (like `pools` or `canal`). Allow the user to choose which version of the game they'd like to play.
