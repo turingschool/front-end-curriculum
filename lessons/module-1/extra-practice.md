@@ -56,18 +56,12 @@ Below are ways you can get in additional practice throughout the inning. None of
 </section>
 
 <section class="answer">
-### DOM Maniputation & Event Listeners
+### DOM Maniputation, Event Listeners & Event Bubbling
 
 * [Puppies + Kittens](https://gist.github.com/kaylagordon/0d5621f9b4cb1c5a0d4da7a0405c8890)
-* [Compliment Generator](https://repl.it/@kaylagordon/04-DOM-manipulation-2#script.js)
-* [Holiday Card Generator](https://codepen.io/hannahhch/pen/OJXGpxJ)
-</section>
-
-<section class="answer">
-### DOM Maniputation, Event Listeners, & Event Bubbling
-
+* [Holiday Card Generator](https://codepen.io/kaylaewood/pen/QWVdOBe)
 * [Bear, Muffin, Bird](https://github.com/turingschool/bear-muffin-bird)
-* [Add A Friend](https://codepen.io/ameseee/pen/mdbmBmq?editors=1010)
+* [Add A Friend](https://codepen.io/ameseee/pen/mdbmBmq)
 * [Spooky Friends](https://codepen.io/kaylagordon/pen/jOrzYWM)
 * [Munchie Madness](https://codepen.io/eric_turing/pen/GRKEeEY)
 </section>
