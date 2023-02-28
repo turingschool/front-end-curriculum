@@ -53,14 +53,14 @@ Below are all the endpoints set up for this project. You may not use all of them
 <section class="note">
 ### Note
 
-* All POST and DELETE requests should have the following headers:
+All POST and DELETE requests should have the following headers:
 ```js
 {
   "Content-Type": "application/json"
 }
 ```
 
-* Remember, a `.catch` won't necessarily run on a bad response (ie 4xx level status) from the server. Make sure you're checking your response status codes and messages if something isn't working as expected
+Remember, a `.catch` won't necessarily run on a bad response (ie 4xx level status) from the server. Make sure you're checking your response status codes and messages if something isn't working as expected
 </section>
 
 
@@ -108,7 +108,7 @@ username: customer50 (where 50 is the ID of the user)
 password: overlook2021
 ```
 
-  - Upon successfully loggin in, I should see my dashboard.
+  - Upon successfully logging in, I should see my dashboard.
 
 **Refer to the "Get single user" section from the endpoints table above!**
 
@@ -181,7 +181,7 @@ It is up to you to decide what changes warrant a PR – remember we want to subm
 
 ## Due Date
 
-Make sure you submit your project [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link){:target='blank'} by **Tuesday of Week 6 at 9pm**.
+Make sure you submit your project [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link){:target='blank'} by **Tuesday of Week 6 at 12pm**.
 
 # Rubric
 
