@@ -37,12 +37,12 @@ Below are ways you can get in additional practice throughout the inning. None of
 <section class="answer">
 ### Looping & Nested Data
 
-* [Animals](https://repl.it/@letakeane/01-for-loops)
-* [Mars Rovers](https://repl.it/@letakeane/04-spicy)
-* [Gifts](https://repl.it/@HannahHudson1/AdventDay1#index.js)
-* [Party](https://repl.it/@HannahHudson1/Advent5#index.js)
-* [Ugly Sweater Generator](https://repl.it/@HannahHudson1/Advent8)
-* [Villians](https://repl.it/@letakeane/05-spicy)
+* [Animals](https://replit.com/@frontend-instructors/01-for-loops#index.js)
+* [Mars Rovers](https://replit.com/@frontend-instructors/Mars-Rover#index.js)
+* [Gifts](https://replit.com/@frontend-instructors/Gifts#index.js)
+* [Party](https://replit.com/@frontend-instructors/Party#index.js)
+* [Ugly Sweater Generator](https://replit.com/@frontend-instructors/Ugly-Sweater#index.js)
+* [Villians](https://replit.com/@frontend-instructors/Villans#index.js)
 </section>
 
 <section class="answer">
