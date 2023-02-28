@@ -86,7 +86,7 @@ Do NOT write any code! Practice planning out how you would approach the prompt. 
 <section class="answer">
 ### Day 9
 
-[Library (Test Suite)](https://replit.com/@letakeane/FootballPseudocode#index.js)
+[Library (Test Suite)](https://replit.com/@letakeane/LibraryPseudocode#index.js)
 
 Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the `tests.js` file. Your planning process should include thorough pseudocode.
 </section>
