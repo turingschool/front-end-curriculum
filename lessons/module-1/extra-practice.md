@@ -69,24 +69,20 @@ Below are ways you can get in additional practice throughout the inning. None of
 <section class="answer">
 ### Bracket & Dot Notation
 
-* [Bracket & Dot Notation 1](https://repl.it/@kaylagordon/bracketVsDotHomework#index.js)
+* [Bracket & Dot Notation 1](https://replit.com/@frontend-instructors/Bracket-Dot-Notation)
 * [Bracket & Dot Notation 2](https://codepen.io/kaylagordon/pen/wvGrQxV?editors=1010)
 </section>
 
 <section class="answer">
 ### Refactoring
 
-* [Snow Facts](https://codepen.io/hannahhch/pen/QWEPeKb)
+* [Snow Facts](https://codepen.io/kaylaewood/pen/ZEMLaVW)
 * **Refactor an old project.** Look back at one of your projects from last inning. Find the feedback that you received on that project from an instructor. Apply some of the recommended refactor opportunities mentioned in your feedback. *Can you use parameters to create a reusable function and DRY up your JavaScript? Can you make your HTML more semantic? Can you organize your CSS in a better way?*
 </section>
 
-<!-- <section class="answer">
+<section class="answer">
 ### Deprecated Projects
 
 * [MadLibs](https://github.com/turingschool-examples/winter-mad-libs)
-* [Build A Bear](https://frontend.turing.edu/projects/module-1/build-a-bear-group.html)🌶
 * [Number Guesser](https://frontend.turing.edu/projects/module-1/number-guesser-pair.html)🌶
-* [SlapJack](https://frontend.turing.edu/projects/module-1/slapjack.html)🌶
-* [Which Beyonce?](https://frontend.turing.edu/projects/module-1/which-beyonce-solo.html)🌶
-* [Check Yo'Self](https://frontend.turing.edu/projects/module-1/check-yo-self-solo.html)🌶
-</section> -->
+</section>
