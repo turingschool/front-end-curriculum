@@ -24,7 +24,7 @@ Dates and deadlines to be aware of:
 Day One Deliverable:
 Please submit your project [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link){:target='blank'}
 
-Tuesday, Week 6 - Project due at 9PM.
+Tuesday, Week 6 - Project due at 12PM.
 
 # Requirements
 
