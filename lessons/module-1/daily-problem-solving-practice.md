@@ -38,7 +38,7 @@ Do NOT write any code! Practice planning out how you would approach the prompt. 
 <section class="answer">
 ### Day 3
 
-[Phone (Test Suite)](https://replit.com/@kaylaewood/PhonePseudocode#index.js)
+[Phone (Test Suite)](https://replit.com/@letakeane/PhonePseudocode#index.js)
 
 Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the `tests.js` file. Your planning process should include thorough pseudocode.
 </section>
@@ -62,7 +62,7 @@ Do NOT write any code! Practice planning out how you would approach the prompt. 
 <section class="answer">
 ### Day 6
 
-[Classroom (Test Suite)](https://replit.com/@kaylaewood/ClassroomPseudocode#index.js)
+[Classroom (Test Suite)](https://replit.com/@letakeane/ClassroomPseudocode#tests.js)
 
 Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the `tests.js` file. Your planning process should include thorough pseudocode.
 </section>
@@ -86,7 +86,7 @@ Do NOT write any code! Practice planning out how you would approach the prompt. 
 <section class="answer">
 ### Day 9
 
-[Football (Test Suite)](https://replit.com/@kaylaewood/FootballPseudocode#index.js)
+[Library (Test Suite)](https://replit.com/@letakeane/FootballPseudocode#index.js)
 
 Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the `tests.js` file. Your planning process should include thorough pseudocode.
 </section>
