@@ -17,24 +17,21 @@ Below are ways you can get in additional practice throughout the inning. None of
 ### Test Suites
 
 * [JavaScript Foundations repo](https://github.com/turingschool-examples/javascript-foundations)
-* **Create a new Mythical Creature.** Start by making a new test file in the `test` directory and write all of the tests. Then, add in a file in the `exercises` directory and write the code necessary to pass all of the tests you wrote. Send your new creature to your instructors - We may add it into the official test suite!
+* **Create a new test suite.** Start by making a new test file in a `test` directory and write all of the tests. Then, add in a file in an `exercises` directory and write the code necessary to pass all of the tests you wrote. Send your new suite to your instructors - We may add it into the official test suite!
 </section>
 
 <section class="answer">
 ### Data Types & Functions
 
-* [typeof](https://repl.it/@letakeane/01-datatypes)
-* [Statements & Expressions](https://replit.com/@kaylagordon/15-statements-expressions-1#index.js)
-* [Functions 1 (parameters, arguments, conditionals)](https://repl.it/@eric_turing/Functions-Workshop)
-* [Functions 2 (parameters, arguments, conditionals)](https://replit.com/@kaylagordon/functionsPractice-1#index.js)
-* [Objects 1](https://repl.it/@ameseee/Partner-Practice#index.js)
+* [typeof](https://replit.com/@frontend-instructors/typeofpractice#index.js)
+* [Functions 1 (parameters, arguments, conditionals)](https://replit.com/@frontend-instructors/Functions-Workshop#index.js)
+* [Objects 1](https://replit.com/@frontend-instructors/Objects-Practice#index.js)
 * [Objects 2](https://frontend.turing.edu/lessons/module-1/objects-review.html)
-* [Objects 3](https://repl.it/@letakeane/02-objects)
-* [Arrays 1](https://gist.github.com/ameseee/b818a24a4b06cdd2c14b88ad146ea508)
-* [Arrays 2](https://repl.it/@letakeane/03-arrays)
-* [Arrays 3](https://repl.it/@sertmer/ArrayPractice)
-* [Array Methods](https://repl.it/@letakeane/02-array-methods)
-* [Classes](https://repl.it/@letakeane/03-classes)
+* [Objects 3](https://replit.com/@frontend-instructors/Objects-Practice-2#index.js)
+* [Arrays 1](https://replit.com/@frontend-instructors/Arrays-Practice-1#index.js)
+* [Arrays 2](https://replit.com/@frontend-instructors/Arrays-Practice-2#index.js)
+* [Arrays 3](https://replit.com/@frontend-instructors/Array-Practice-3#index.js)
+* [Array Methods](https://replit.com/@frontend-instructors/Array-Methods#index.js)
 </section>
 
 <section class="answer">
@@ -89,7 +86,7 @@ Below are ways you can get in additional practice throughout the inning. None of
 * **Refactor an old project.** Look back at one of your projects from last inning. Find the feedback that you received on that project from an instructor. Apply some of the recommended refactor opportunities mentioned in your feedback. *Can you use parameters to create a reusable function and DRY up your JavaScript? Can you make your HTML more semantic? Can you organize your CSS in a better way?*
 </section>
 
-<section class="answer">
+<!-- <section class="answer">
 ### Deprecated Projects
 
 * [MadLibs](https://github.com/turingschool-examples/winter-mad-libs)
@@ -98,4 +95,4 @@ Below are ways you can get in additional practice throughout the inning. None of
 * [SlapJack](https://frontend.turing.edu/projects/module-1/slapjack.html)🌶
 * [Which Beyonce?](https://frontend.turing.edu/projects/module-1/which-beyonce-solo.html)🌶
 * [Check Yo'Self](https://frontend.turing.edu/projects/module-1/check-yo-self-solo.html)🌶
-</section>
+</section> -->
