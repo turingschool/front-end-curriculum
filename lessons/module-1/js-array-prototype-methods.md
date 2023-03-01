@@ -120,7 +120,7 @@ Some questions to get you started:
 <section class="checks-for-understanding">
 
 ### Practice
-Work through the exercises in <a target="_blank" href="https://repl.it/@letakeane/02-array-methods#index.js">this REPL</a>.
+Work through the exercises in <a target="_blank" href="https://replit.com/@frontend-instructors/js-prototype-array-methods-practice#index.js">this REPL</a>.
 </section>
 
 
