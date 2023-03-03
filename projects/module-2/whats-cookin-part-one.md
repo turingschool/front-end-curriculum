@@ -92,7 +92,7 @@ There is some boilerplate for testing in the starter-kit repo. You will need to 
 ## Project Iterations
 Each iteration has a "Data" section and "User Stories" section. Data deals with using the data to calculate something meaningful for the user. The user stories section deals with what to display on the page and what the user flow looks like. Unlike your week-1 project, the function names are not completely drawn out for you.
 
-Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on the data and calculation methods, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there.
+Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on the data and calculation functions, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there.
 
 <section class="note">
 ### 3rd Party Libraries
@@ -144,7 +144,7 @@ You as the developer will need to make decisions about the shape of data you'll 
 
 #### User Stories (Dashboard)
 
-Use the `domUpdates.js` file to add information to the DOM. This JS file should call methods from `index.js`. There should not be any DOM manipulation within your `index.js` file.
+Use the `domUpdates.js` file to add information to the DOM. This JS file should call functions from `index.js`. There should not be any DOM manipulation within your `index.js` file.
 
 - As a user, I should be able to view all recipes.
 - As a user, I should be able to click on a recipe to view more information including directions, ingredients needed, and total cost.
@@ -162,7 +162,7 @@ You should have functions that:
 - Filter my `recipesToCook` by a tag. (Extension option: filter by multiple tags)
 - Filter my `recipesToCook` by its name. (Extension option: filter by name or ingredients)
 
-<!-- The last two methods above should be the same as they already build, they shouldn't build a duplicate -->
+<!-- The last two functions above should be the same as they already build, they shouldn't build a duplicate -->
 
 #### User Stories
 
@@ -254,12 +254,13 @@ For the rubric sections below, You will be scored as Wow, Yes or Not Yet dependi
 - All DOM manipulation is held in the `domUpdates.js`.  No DOM manipulation outside of this file.
 - Variables and functions are consistently and appropriately named
 - Code leverages JavaScript's truthy/falsey principles
+<!-- purity?  closures? -->
 
 ### Test-Driven Development
-- Application has a robust and thorough test suite that covers all class methods and class properties.
+- Application has a robust and thorough test suite that covers all functions that do not update the dom.
 - Test suite is organized.
-  - Each class method/class property is tested in its own it block.
-- All scenarios/outcomes/paths are tested for your methods including happy and sad paths.
+  - Each function is tested in its own it block.
+- All scenarios/outcomes/paths are tested for your functions including happy and sad paths.
   - Each path is tested in its own it block.
 - Rather than using the production data, small sample data is stored in its own file and used for testing.
   - Sample data has been crafted to create the scenarios needed for thorough testing.
