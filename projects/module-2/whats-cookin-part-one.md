@@ -9,6 +9,7 @@ tags: javascript, mocha, testing, fetch
 - Write modular, reusable code that follows SRP (Single Responsibility Principle)
 - **Implement a robust testing suite using TDD**
 - **Make network requests to retrieve data**
+- **Work productively and professionally as a team. Ensure all team members are able to be heard and contribute throughout the project.**
 
 In this project, you will create a recipe tracking / meal planning application that allows users to view recipes they want to cook and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should view a list of recipes and choose recipes to cook.
 
@@ -227,33 +228,7 @@ You are *not expected* to test:
 
 ## Rubric
 
-### Functional Expectations
-* 4: Application fulfills all requirements *as well as* an extension.
-* 3: Application fulfills all requirements of iteration 3 without bugs.
-* 2: Application is usable but has some missing functionality or bugs.
-* 1: Application crashes during normal usage.
-
-### Fundamental JavaScript & Style / OOP / Fetch
-* 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring. Application is expertly divided into logical components each with a clean, single responsibility.
-* 3: Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. Application is effectively broken into logical components, but may violate the principle of SRP. There is no DOM manipulation present in class components.
-* 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. Divisions of logic into classes are inconsistent or unclear.
-* 1: Application generates syntax errors or crashes during execution. Application logic shows poor decomposition with too much logic mashed together.
-
-### Test-Driven Development
-* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. Tests must be passing to be considered.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files.  Some use of beforeEach to DRY up tests. Tests must be passing to be considered.
-* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. No use of beforeEach to DRY up tests.  Tests must be passing to be considered.
-* 1: Application does not demonstrate strong use of TDD, and some tests might be failing.
-
-### User Interface
-* 4: Special consideration has been given to the usability of the application. The application can stand on its own to be used by an instructor without guidance from a developer on the team. Design is responsive across small, medium and large breakpoints.
-* 3: The application has many strong displays/interactions.The UI does not detract from the UX.
-* 2: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the users' needs.
-* 1: The application is confusing or difficult to use.
-
-------------------------------------------------------------------
-
-### Minimum Professionalism Expectations
+### Minimum Collaboration and Professionalism Expectations
 * Team collaborates effectively.  Team holds daily standups throughout project.
 * Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
 * The Project Board is utilized (and updated throughout the project) with Github issues and labels.
@@ -263,3 +238,40 @@ You are *not expected* to test:
   * Overview of technologies used, challenges, wins, and any other reflections
   * Screenshots/gifs of your app
   * List of contributors
+* **Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
+  * Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.
+
+
+### For the rubric sections below, You will be scored as Wow, Yes or Not Yet depending on whether you have demonstrate competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  There are just some examples. 
+
+### Functional Expectations
+* WOW: Application fulfills all requirements *as well as* an extension.
+* Yes: Application fulfills all requirements of iteration 3 without bugs.
+* Not Yet: Application crashes or has missing functionality or bugs.
+
+### Fundamental JavaScript & Style / OOP / Fetch
+- Code is divided into logical components each with a clean, single responsibility
+- Array prototype methods are used to iterate instead of for loops
+- All DOM manipulation is held in the `domUpdates.js`.  No DOM manipulation outside of this file.
+- Variables and functions are consistently and appropriately named
+- Code leverages JavaScript's truthy/falsey principles
+
+### Test-Driven Development
+- Application has a robust and thorough test suite that covers all class methods and class properties.
+- Test suite is organized.
+  - Each class method/class property is tested in its own it block.
+- All scenarios/outcomes/paths are tested for your methods including happy and sad paths.
+  - Each path is tested in its own it block.
+- Rather than using the production data, small sample data is stored in its own file and used for testing.
+  - Sample data has been crafted to create the scenarios needed for thorough testing.
+  - For example: If you need to test a sad path of searching for recipes with a tag that no recipes match, you need test data that creates that scenario so you can test it.
+- beforeEach hook is used to DRY up test files
+- There are no failing/pending tests upon submission
+
+### User Interface
+- The application can stand on its own to be used by an instructor without guidance from a developer on the team.
+- UI/UX is intuitive and easy to read/use
+- Helpful messaging is displayed to prevent user confusion
+  - For example: If a user searches for a recipe and finds no matching results, a message is displayed to indicated that the search worked, nothing is broken, there just aren't any matching recipes found.
+- WOW > Design is responsive across small, medium and large breakpoints.
+
