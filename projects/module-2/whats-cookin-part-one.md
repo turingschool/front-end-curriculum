@@ -224,25 +224,24 @@ You are *not expected* to test:
 * DOM manipulation / DOM manipulating function (like `document.querySelector(...)`)
 * Fetch calls
 
----
-
-## Rubric
-
 ### Minimum Collaboration and Professionalism Expectations
-* Team collaborates effectively.  Team holds daily standups throughout project.
+* Team holds daily standups throughout project.
 * Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
-* The Project Board is utilized (and updated throughout the project) with Github issues and labels.
-* Developer uses PRs from feature branches before adding new code to the main branch.
+* A project board is utilized (and updated throughout the project) with Github issues and labels.
+* Team uses branches, PRs and thorough code reviews to add new code to the main branch.
 * The README is formatted well and at a minimum contains:
   * Overview of project and goals
   * Overview of technologies used, challenges, wins, and any other reflections
   * Screenshots/gifs of your app
   * List of contributors
-* **Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
+* **Team collaborates effectively to accomplish the shared goal.  Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
   * Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.
 
+---
 
-### For the rubric sections below, You will be scored as Wow, Yes or Not Yet depending on whether you have demonstrate competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  There are just some examples. 
+## Rubric
+
+For the rubric sections below, You will be scored as Wow, Yes or Not Yet depending on whether you have demonstrate competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  There are just some examples. 
 
 ### Functional Expectations
 * WOW: Application fulfills all requirements *as well as* an extension.
@@ -275,3 +274,7 @@ You are *not expected* to test:
   - For example: If a user searches for a recipe and finds no matching results, a message is displayed to indicated that the search worked, nothing is broken, there just aren't any matching recipes found.
 - WOW > Design is responsive across small, medium and large breakpoints.
 
+
+### Collaboration and Professionalism 
+- See "Minimum Collaboration and Professionalism Expectations" above.  
+- While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. Failure to do can result in an individual failing the project, even if the group/project is otherwise passing.
