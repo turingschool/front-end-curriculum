@@ -22,7 +22,7 @@ Throughout the rest of this inning, you'll have time carved out in most days to 
 <section class="answer">
 ### Day 1
 
-[Summation (Code Challenge)](https://replit.com/@kaylaewood/SummationPseudocode#index.js)
+[Summation (Code Challenge)](https://replit.com/@frontend-instructors/SummationPseudocode#index.js)
 
 Do NOT write any code! Practice planning out how you would approach the prompt. Your planning process should include thorough pseudocode.
 </section>
@@ -30,7 +30,7 @@ Do NOT write any code! Practice planning out how you would approach the prompt. 
 <section class="answer">
 ### Day 2
 
-[DNA (Code Challenge)](https://replit.com/@kaylaewood/DNAPseudocode#index.js)
+[DNA (Code Challenge)](https://replit.com/@frontend-instructors/DNAPseudocode#index.js)
 
 Do NOT write any code! Practice planning out how you would approach the prompt. Your planning process should include thorough pseudocode.
 </section>
@@ -38,7 +38,7 @@ Do NOT write any code! Practice planning out how you would approach the prompt. 
 <section class="answer">
 ### Day 3
 
-[Phone (Test Suite)](https://replit.com/@kaylaewood/PhonePseudocode#index.js)
+[Phone (Test Suite)](https://replit.com/@frontend-instructors/PhonePseudocode#index.js)
 
 Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the `tests.js` file. Your planning process should include thorough pseudocode.
 </section>
@@ -54,7 +54,7 @@ Do NOT write any code! Practice planning out how you would approach the user sto
 <section class="answer">
 ### Day 5
 
-[Calculator (Code Challenge)](https://replit.com/@kaylaewood/CalculatorPseudocode#index.js)
+[Calculator (Code Challenge)](https://replit.com/@frontend-instructors/CalculatorPseudocode#index.js)
 
 Do NOT write any code! Practice planning out how you would approach the prompt. Your planning process should include thorough pseudocode.
 </section>
@@ -62,7 +62,7 @@ Do NOT write any code! Practice planning out how you would approach the prompt. 
 <section class="answer">
 ### Day 6
 
-[Classroom (Test Suite)](https://replit.com/@kaylaewood/ClassroomPseudocode#index.js)
+[Classroom (Test Suite)](https://replit.com/@frontend-instructors/ClassroomPseudocode#index.js)
 
 Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the `tests.js` file. Your planning process should include thorough pseudocode.
 </section>
@@ -78,7 +78,7 @@ Do NOT write any code! Practice planning out how you would approach the user sto
 <section class="answer">
 ### Day 8
 
-[Credit Card Mask (Code Challenge)](https://replit.com/@kaylaewood/CCMaskPseudocode#index.js)
+[Credit Card Mask (Code Challenge)](https://replit.com/@frontend-instructors/CCMaskPseudocode#index.js)
 
 Do NOT write any code! Practice planning out how you would approach the prompt. Your planning process should include thorough pseudocode.
 </section>
@@ -86,7 +86,7 @@ Do NOT write any code! Practice planning out how you would approach the prompt. 
 <section class="answer">
 ### Day 9
 
-[Football (Test Suite)](https://replit.com/@kaylaewood/FootballPseudocode#index.js)
+[Library (Test Suite)](https://replit.com/@frontend-instructors/LibraryPseudocode#index.js)
 
 Do NOT write any code! Practice planning out how you would approach your code to pass the tests listed in the `tests.js` file. Your planning process should include thorough pseudocode.
 </section>
