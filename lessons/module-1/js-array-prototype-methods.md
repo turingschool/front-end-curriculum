@@ -33,6 +33,7 @@ var instructors = ["Scott", "Heather", "Jeremiah"];
 For the array above,
 - Oops! We're missing an instructor in this array. We need to add "Kayla" to the list. What are the **instructions** you would want to tell the computer to take in order to add a new instructor to the array? 
 - I need to know if a certain instructor named "Heather" is in the instructors array. What are the **instructions** you would want to tell the computer to take in order to find out if "Heather" is included in the array?
+- Extra: How would you programmatically find the number of elements in the array above? 
 </div>
 
 <div class="answer">
