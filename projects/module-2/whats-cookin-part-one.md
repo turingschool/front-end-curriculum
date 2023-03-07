@@ -9,7 +9,7 @@ tags: javascript, mocha, testing, fetch
 - Write modular, reusable code that follows SRP (Single Responsibility Principle)
 - **Implement a robust testing suite using TDD**
 - **Make network requests to retrieve data**
-- **Work productively and professionally as a team. Ensure all team members are able to be heard and contribute throughout the project.**
+- **Collaborate productively and professionally as a team. Ensure all team members are able to be heard and contribute throughout the project.**
 
 In this project, you will create a recipe tracking / meal planning application that allows users to view recipes they want to cook and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should view a list of recipes and choose recipes to cook.
 
@@ -113,9 +113,6 @@ Checkout the `data` directory and explore the data. Get a sense of what each pro
 
 #### Recipe functionality
 
-<!-- A `RecipeRepository` should hold onto all `Recipe` objects. -->
-<!-- - It should have a parameter to take in recipe `data`. -->
-<!-- ??should there be a recipe repo -->
 You should have functions that:
   * Return a filtered list of recipes based on a tag. (Extension option: filtering by multiple tags)
   * Return a filtered list of recipes based on a recipe name. (Extension option: filtering by name or ingredients)
@@ -162,7 +159,7 @@ You should have functions that:
 - Filter my `recipesToCook` by a tag. (Extension option: filter by multiple tags)
 - Filter my `recipesToCook` by its name. (Extension option: filter by name or ingredients)
 
-<!-- The last two functions above should be the same as they already build, they shouldn't build a duplicate -->
+<!-- The last two functions above should be the same as 2 they already built, they shouldn't build a duplicate -->
 
 #### User Stories
 
@@ -224,6 +221,8 @@ You are *not expected* to test:
 * DOM manipulation / DOM manipulating function (like `document.querySelector(...)`)
 * Fetch calls
 
+---
+
 ### Minimum Collaboration and Professionalism Expectations
 * Team holds daily standups throughout project.
 * Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
@@ -237,15 +236,13 @@ You are *not expected* to test:
 * **Team collaborates effectively to accomplish the shared goal.  Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
   * Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.
 
----
-
 ## Rubric
 
-For the rubric sections below, You will be scored as Wow, Yes or Not Yet depending on whether you have demonstrate competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  There are just some examples. 
+For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  There are just some examples. 
 
 ### Functional Expectations
-* WOW: Application fulfills all requirements *as well as* an extension.
-* Yes: Application fulfills all requirements of iteration 3 without bugs.
+* Wow: Application fulfills all requirements *as well as* an extension.
+* Yes: Application fulfills all requirements of iterations 1-3 without bugs.
 * Not Yet: Application crashes or has missing functionality or bugs.
 
 ### Fundamental JavaScript & Style / OOP / Fetch
@@ -260,12 +257,12 @@ For the rubric sections below, You will be scored as Wow, Yes or Not Yet dependi
 - Application has a robust and thorough test suite that covers all functions that do not update the dom.
 - Test suite is organized.
   - Each function is tested in its own it block.
-- All scenarios/outcomes/paths are tested for your functions including happy and sad paths.
+- All scenarios/outcomes/paths are tested for your functions, including happy and sad paths.
   - Each path is tested in its own it block.
 - Rather than using the production data, small sample data is stored in its own file and used for testing.
   - Sample data has been crafted to create the scenarios needed for thorough testing.
   - For example: If you need to test a sad path of searching for recipes with a tag that no recipes match, you need test data that creates that scenario so you can test it.
-- beforeEach hook is used to DRY up test files
+- `beforeEach` hook is used to DRY up test files
 - There are no failing/pending tests upon submission
 
 ### User Interface
@@ -273,8 +270,7 @@ For the rubric sections below, You will be scored as Wow, Yes or Not Yet dependi
 - UI/UX is intuitive and easy to read/use
 - Helpful messaging is displayed to prevent user confusion
   - For example: If a user searches for a recipe and finds no matching results, a message is displayed to indicated that the search worked, nothing is broken, there just aren't any matching recipes found.
-- WOW > Design is responsive across small, medium and large breakpoints.
-
+- WOW option: Design is responsive across small, medium and large breakpoints.
 
 ### Collaboration and Professionalism 
 - See "Minimum Collaboration and Professionalism Expectations" above.  
