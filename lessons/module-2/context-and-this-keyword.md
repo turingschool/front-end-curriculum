@@ -236,13 +236,12 @@ vampire.whatDoYouDislike()
 
 On a high level, here's what to remember:
 
-1. There are three main rules that apply to the keyword *this*.
-* *this* within function code invoked using the `new` operator refers to the new instance of that object.
+1. There are two main rules that apply to the keyword *this*.
 * When executing a function as a method on an object, *this* refers to that object.
 * By default, *this* refers to the global object (or in the browser, the window).
 2. When considering using a traditional function vs an arrow function note that:
 *  `function () {}`: The value of _this_ is set when the function is *executed*.
-* `() => {}`: The value of _this_ is set when the function is *created*.
+* `() => {}`: The value of _this_ is set when the function is *declared*.
 </section>
 
 <section class="checks-for-understanding">
