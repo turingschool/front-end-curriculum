@@ -25,25 +25,25 @@ As we have discussed earlier, the keyword *this* in JavaScript can be confusing.
 Consider the following `Unicorn` class:
 
 ```javascript
-class Unicorn {
-  constructor(name, color) {
-    // What is logged here?
-    console.log(this);  
-
-    this.name = name;
-    this.color = color;
-
-    // What changes about "this"?
-    console.log(this);  
+function createUnicorn(name, color) {
+  // What is logged here?
+  console.log('value of this:', this)
+  
+  
+  return {
+    name: name,
+    color: color,
+    says: function says() {
+    console.log(`${this.name} is my favorite ${this.color} pony, `, 'value of this:', this)
   }
-
-  says() {
-    console.log(`${this.name} is my favorite ${this.color} pony`, this);
-  }
+  // what changes about `this` inside of the object?
+  }  
 }
+
+var newUnicorn = createUnicorn('Baby', 'Black and White')
 ```
 
-* Create a `new` instance of the `Unicorn`.  What rule can we infer about *this* when creating a `new` instance?
+* Create a new `unicorn` object.  What rule can we infer about *this* when creating an object?
 * Now try running it's method, `says`.  What does *this* refer to now?  Has it changed?
 </section>
 
