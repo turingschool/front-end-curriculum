@@ -6,7 +6,7 @@ tags: javascript, mocha, testing, fetch
 
 - **Use object and array prototype methods to perform data manipulation**
 - Create a user interface that is easy to use and clearly displays information.
-- Write modular, reusable code that follows SRP (Single Responsibility Principle)
+- Write DRY, reusable code that follows SRP (Single Responsibility Principle)
 - **Implement a robust testing suite using TDD**
 - **Make network requests to retrieve data**
 - **Collaborate productively and professionally as a team. Ensure all team members are able to be heard and contribute throughout the project.**
@@ -62,14 +62,13 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 - Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.
 
 2. Webpack needs to know where to look for your files. Look [here](https://github.com/turingschool-examples/webpack-starter-kit#where-to-add-your-code){:target='blank'} for a description of where webpack is set up to look for your HTML, CSS, JS and image files. Some general points:
-- You need to import images into the entrypoint file (usually `scripts.js` or `index.js`).
+- You need to import images into the entrypoint file (usually `scripts.js` or `app.js`).
 - You need to `import` your CSS files into the entrypoint file too
 - Make sure HTML, JS and CSS files are all in the `/src` directory
 - You have to `import` any required modules and code for tests into your test files
 
-
 3. While developing, run `npm start`. Webpack will create a live version of your site on a local server, where you can see your changes happen in real time. To access it, in your browser, navigate to the `localhost` address that your terminal gives you. Be aware, if you write a breaking change, your server may crash. The terminal will give you some error report about why the crash happened.
-  - The command `control + c` is used to stop the local server.  Just closing the terminal without stopping the server first could mean things continue to run in the background and cause problems. This command is not specific to Webpack; make note of it for future use.  
+  - The command `control + c` is used to stop the local server.  Just closing the terminal without stopping the server first could mean things continue to run in the background and cause problems and lead you to an `EADDRINUSE` error. This `control + c` command is not specific to Webpack; make note of it for future use.  
 
 4. Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
 
@@ -93,17 +92,6 @@ There is some boilerplate for testing in the starter-kit repo. You will need to 
 Each iteration has a "Data" section and "User Stories" section. Data deals with using the data to calculate something meaningful for the user. The user stories section deals with what to display on the page and what the user flow looks like. Unlike your week-1 project, the function names are not completely drawn out for you.
 
 Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on the data and calculation functions, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there.
-
-<section class="note">
-### 3rd Party Libraries
-
-You may choose **ONE** of the following 3rd party libraries to incorporate into your app *as an extension* if interested. Your group may want to do a research spike over the first weekend to see what your team would like to experiment with. Please get instructor approval first before choosing to use additional 3rd-party libraries. **This is an extension and not required!**
-
-* [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'}
-* [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
-* [InteractJS](https://interactjs.io/){:target='blank'}
-
-</section>
 
 ---
 
@@ -141,7 +129,7 @@ You as the developer will need to make decisions about the shape of data you'll 
 
 #### User Stories (Dashboard)
 
-Use the `domUpdates.js` file to add information to the DOM. This JS file should call functions from `index.js`. There should not be any DOM manipulation within your `index.js` file.
+Use the `index.js` file to update the DOM. This JS file should call functions from `app.js`. There should not be any DOM manipulation within your `app.js` file.
 
 - As a user, I should be able to view all recipes.
 - As a user, I should be able to click on a recipe to view more information including directions, ingredients needed, and total cost.
@@ -158,8 +146,7 @@ You should have functions that:
 - Allow a user to add/remove a recipe to/from their recipesToCook list (add to my `recipesToCook`)
 - Filter my `recipesToCook` by a tag. (Extension option: filter by multiple tags)
 - Filter my `recipesToCook` by its name. (Extension option: filter by name or ingredients)
-
-<!-- The last two functions above should be the same as 2 they already built, they shouldn't build a duplicate -->
+***Consider: Do you already have functions that are filtering recipes?  How can you ensure those existing functions are dynamic and reusable in a way that can accomplish the filtering required in this iteration as well?***
 
 #### User Stories
 
@@ -168,7 +155,6 @@ You should have functions that:
 * As a user, I should be able to add/remove a recipe to a list of recipes to cook
 * As a user, I should be able to filter my `toCook` recipes by a tag. (Extension option: filter by multiple tags)
 * As a user, I should be able to search my `toCook` recipes by its name. (Extension option: search by name or ingredients)
-
 
 ---
 
@@ -190,14 +176,6 @@ The expectation for Mod 2 is that you will avoid using `async/await`.  We know `
 
 Once you've got fetch working on all three arrays, you can delete your hardcoded data file!
 
-
-### Extensions
-_Choose at least one_
-* Implement one of the listed 3rd party libraries or one of your choosing with instructor approval.
-* Expand your filtering functionality to include multiple tags and be able to search by both name and ingredients.
-* Implement a rating system would be helpful for a user! This could include a 5 star rating system, a way to leave reviews, etc!
-* You may also collaborate with instructors to personalize an extension for this project.
-
 ---
 
 ### Testing
@@ -209,17 +187,35 @@ Instead, you should create small, sample datasets that match the structure of th
 You are expected to research and implement `beforeEach` in your test files.
 
 You are *expected* to test:
-* All functions that do not update the DOM.  This means everything in your index.js file.
+* All functions that do not update the DOM.  This means everything in your `app.js` file should be tested.
 
 Remember to test all possible outcomes (happy/sad/etc).  Ask yourself:  
   - Does the function return anything?  
   - Are there different possible outcomes to test for based on different arguments being passed in?
-  <!-- - What do I expect if an argument is missing? -->
 
 You are *not expected* to test:
 
 * DOM manipulation / DOM manipulating function (like `document.querySelector(...)`)
 * Fetch calls
+
+---
+
+### Extension Options
+* Implement one of the listed 3rd party libraries or one of your choosing with instructor approval.
+* Expand your filtering functionality to include multiple tags and be able to search by both name and ingredients.
+* Implement a rating system would be helpful for a user! This could include a 5 star rating system, a way to leave reviews, etc!
+* You may also collaborate with instructors to personalize an extension for this project.
+
+<section class="note">
+## 3rd Party Libraries
+
+You may choose **ONE** of the following 3rd party libraries to incorporate into your app *as an extension (aka not expected, not required)* if interested. Your group may want to do a research spike to see which library, if any, makes sense for your application. Please get instructor approval first before implementing any 3rd-party libraries (including these). 
+
+* [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'}
+* [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
+* [InteractJS](https://interactjs.io/){:target='blank'}
+
+</section>
 
 ---
 
@@ -236,6 +232,8 @@ You are *not expected* to test:
 * **Team collaborates effectively to accomplish the shared goal.  Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
   * Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.
 
+---
+
 ## Rubric
 
 For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  There are just some examples. 
@@ -248,10 +246,10 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 ### Fundamental JavaScript & Style / OOP / Fetch
 - Code is divided into logical components each with a clean, single responsibility
 - Array prototype methods are used to iterate instead of for loops
-- All DOM manipulation is held in the `domUpdates.js`.  No DOM manipulation outside of this file.
+- All DOM manipulation is held in the `index.js` file.  No DOM manipulation occurs outside of this file.
 - Variables and functions are consistently and appropriately named
 - Code leverages JavaScript's truthy/falsey principles
-<!-- purity?  closures? -->
+- Demonstrates efforts towards making functions pure when possible. Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.
 
 ### Test-Driven Development
 - Application has a robust and thorough test suite that covers all functions that do not update the dom.
