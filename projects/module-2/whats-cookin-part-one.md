@@ -68,7 +68,9 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 - You have to `import` any required modules and code for tests into your test files
 
 3. While developing, run `npm start`. Webpack will create a live version of your site on a local server, where you can see your changes happen in real time. To access it, in your browser, navigate to the `localhost` address that your terminal gives you. Be aware, if you write a breaking change, your server may crash. The terminal will give you some error report about why the crash happened.
-  - The command `control + c` is used to stop the local server.  Just closing the terminal without stopping the server first could mean things continue to run in the background and cause problems and lead you to an `EADDRINUSE` error. This `control + c` command is not specific to Webpack; make note of it for future use.  
+  - **Use the command `control + c` to stop the local server.**  
+    Just closing the terminal without stopping the server first could mean things continue to run in the background and cause problems and lead you to an `EADDRINUSE` error.  
+    This `control + c` command is not specific to Webpack; make note of it for future use.  
 
 4. Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages){:target='blank'}
 
@@ -145,8 +147,10 @@ Use the `index.js` file to update the DOM. This JS file should call functions fr
 You should have functions that:
 - Allow a user to add/remove a recipe to/from their recipesToCook list (add to my `recipesToCook`)
 - Filter my `recipesToCook` by a tag. (Extension option: filter by multiple tags)
-- Filter my `recipesToCook` by its name. (Extension option: filter by name or ingredients)
-***Consider: Do you already have functions that are filtering recipes?  How can you ensure those existing functions are dynamic and reusable in a way that can accomplish the filtering required in this iteration as well?***
+- Filter my `recipesToCook` by its name. (Extension option: filter by name or ingredients)  
+
+Consider:  
+*Do you already have functions that are filtering recipes?  How can you ensure those existing functions are dynamic and reusable in a way that can accomplish the filtering required in this iteration as well?*
 
 #### User Stories
 
@@ -174,7 +178,7 @@ The expectation for Mod 2 is that you will avoid using `async/await`.  We know `
 | Get all ingredients |`https://what-s-cookin-starter-kit.herokuapp.com/api/v1/ingredients` | GET | none | An array containing all ingredients |
 | Get all recipes | `https://what-s-cookin-starter-kit.herokuapp.com/api/v1/recipes` | GET | none | An array containing all recipes |
 
-Once you've got fetch working on all three arrays, you can delete your hardcoded data file!
+- Once you've got fetch working on all three arrays, **delete your hardcoded data file!**  Make sure you are not using this data file for your testing.  Instead, create smaller sample datasets in their own file to use for testing.
 
 ---
 
@@ -186,15 +190,14 @@ Instead, you should create small, sample datasets that match the structure of th
 
 You are expected to research and implement `beforeEach` in your test files.
 
-You are *expected* to test:
+**You are *expected* to test:**
 * All functions that do not update the DOM.  This means everything in your `app.js` file should be tested.
 
 Remember to test all possible outcomes (happy/sad/etc).  Ask yourself:  
   - Does the function return anything?  
   - Are there different possible outcomes to test for based on different arguments being passed in?
 
-You are *not expected* to test:
-
+**You are *not expected* to test:**
 * DOM manipulation / DOM manipulating function (like `document.querySelector(...)`)
 * Fetch calls
 
@@ -249,7 +252,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 - All DOM manipulation is held in the `index.js` file.  No DOM manipulation occurs outside of this file.
 - Variables and functions are consistently and appropriately named
 - Code leverages JavaScript's truthy/falsey principles
-- Demonstrates efforts towards making functions pure when possible. Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.
+- Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 
 ### Test-Driven Development
 - Application has a robust and thorough test suite that covers all functions that do not update the dom.
@@ -272,4 +275,4 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 
 ### Collaboration and Professionalism 
 - See "Minimum Collaboration and Professionalism Expectations" above.  
-- While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. Failure to do can result in an individual failing the project, even if the group/project is otherwise passing.
+- While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. **Failure to do can result in an individual failing the project, even if the group/project is otherwise passing**.
