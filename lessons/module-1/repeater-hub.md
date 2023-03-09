@@ -16,7 +16,7 @@ You will continue to add your weekly goals to that document every Monday through
 
 ## Gear Ups and Professional Development  
 **PD expectations for repeating Mod 1:**  
-Repeating the module is a great opportunity not only to solidify your technical skills but also your professional development skills. [This plan](https://careerdev.turing.edu/module_one/m1_PD_repeat_plan) goes over some suggested ways to approach that. Allison Reu Singer is always available for support and coaching at the link in her Slack bio. You can reach out to her with any questions you have.  
+Repeating the module is a great opportunity not only to solidify your technical skills but also your professional development skills. [This plan](https://careerdev.turing.edu/module_one/m1_PD_repeat_plan) goes over some suggested ways to approach that. Paige Hellman Millar is always available for support and coaching at the link in her Slack bio. You can reach out to her with any questions you have.  
 
 <!-- **Gear Up expectations for repeating mod 1:**  
 You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters.    -->
@@ -31,8 +31,6 @@ We want you to feel empowered to skip some classes if you feel like there is a b
 * JS: Intro to Unit Testing
 * JS: Intro to the DOM
 * JS: Event Listeners
-* JS: Classes
-* JS: Unit Testing Classes
 * Dev Skills: Git Workflow
 * HTML Fundamentals
 * CSS Fundamentals
