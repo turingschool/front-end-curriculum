@@ -275,4 +275,4 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 
 ### Collaboration and Professionalism 
 - See "Minimum Collaboration and Professionalism Expectations" above.  
-- While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. **Failure to do can result in an individual failing the project, even if the group/project is otherwise passing**.
+- While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. **Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing**.
