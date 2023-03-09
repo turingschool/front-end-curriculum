@@ -21,7 +21,8 @@ tags: javascript, foundation, arrays, objects, bracket, dot, notation
 <section class="call-to-action">
 ### Warm Up
 
-Watch the first 7 minutes of [this video](https://www.youtube.com/watch?v=DJ0deyVQZPw) about dot and bracket notation. 
+Watch the first 7 minutes of [this video](https://www.youtube.com/watch?v=DJ0deyVQZPw) about dot and bracket notation.
+<!-- This video is from Pam Lovett, covering bracket and dot notation and dives into details around using strings and or variables in bracket notation  -->
 
 * Independently, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt1#main.js).
 * When you finish, use the zoom chat to **DM** me your answer to this question: *Which of the following expressions is equivalent to `car.brand`?*  
