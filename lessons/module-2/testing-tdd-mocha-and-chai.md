@@ -20,7 +20,7 @@ mod: 2
 - `Test Phases` A test that is organized into the phases - Setup, Execution, Assertion, Teardown*
 
 <section class="call-to-action">
-### Warmup!  Let's Review TDD!
+### Warmup!  Let's Review Testing and TDD!
 
 <section class="answer">
 ### What is TDD?  
@@ -39,7 +39,7 @@ TDD, or Test Driven Development, is the concept of writing tests in a test file 
 </section>
 
 <section class="answer">
-### Are there any downsides to using TDD?  
+### Are there any downsides to writing tests?  
 
 * *It takes more time to write your codebase, which slows down development:* this can be problematic if you're working in an environment where meeting deadlines is a top priority (like working in a newsroom)
 * *They don't make the business money:* tests aren't features, and if your company is relying on investors to keep itself going, making progress on the application functionality is going to be of utmost importance
