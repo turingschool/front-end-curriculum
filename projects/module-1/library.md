@@ -82,11 +82,11 @@ problem.
     different way you could make the tests pass?
 
 
-### Extension (not part of the project, just stuff to do if you get to it): Complete the Librarian tests
-  - Unskip the first test in `test/librarian-test.js`, and get to work passing the tests
-  - Run `npm test test/librarian-test.js`  
-  - This test involves using a class. It will require self-teaching in order to complete.
-  - Ensure that all of the skips are removed from the test file when you push up to GitHub.
+### Extension: Refactoring
+  - Preteach yourself the [Dot & Bracket Notation](https://frontend.turing.edu/lessons/module-1/js-dot-bracket-notation.html){:target="_blank"} lesson.
+  - Revisit your `addBook` and `checkoutBook` functions.  Consider any similar lines of code and how you might refactor both functions to make use of bracket notation. 
+  - Refactor `takeStock` so that it dynamically checks to see if the book exists in the correct shelf.  Note you will need to make use of bracket notation in this solution as well.  
+  - Ensure that all tests still pass after refactors have been made.
 
 ## Self-Assessment
 
