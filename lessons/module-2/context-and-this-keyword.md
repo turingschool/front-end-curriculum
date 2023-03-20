@@ -22,7 +22,7 @@ As we have discussed earlier, the keyword *this* in JavaScript can be confusing.
 <section class="call-to-action">
 ### In Pairs
 
-Consider the following `Unicorn` class:
+Consider the following `createUnicorn` function:
 
 ```javascript
 function createUnicorn(name, color) {
