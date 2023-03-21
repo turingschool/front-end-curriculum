@@ -33,8 +33,8 @@ Then, as a team:
 
 * Explore the repository to see what's going on in the code. Look at each file.
 * What pieces of code might you use to complete iterations, and what pieces will you have to create?
-* All of your Javascript will take place in `index.js` - you will not need to change any other files!
-<!-- IS THIS TRUE? -->
+* Your DOM manipulation (rendering to the DOM and updating what is being rendered) will occur in the `index.js` file
+* All other logic (creating and manipulating covers) will occur in the `app.js` file. No DOM updates should occur in `app.js`
 
 ## Day 1 Deliverables
 
@@ -56,7 +56,7 @@ Then, as a team:
 
 - When the page loads, we should see a cover with a randomly selected image, title, and tagline which includes two random descriptors
 - Every time the user clicks the Show New Random Cover button, the random cover is displayed
-    <!-- - hint: you may need to update the value of the provided `currentCover` variable -->
+    - hint: you may need to update the value of the provided `currentCover` variable
     - hint: you may need to create a function that displays information on the DOM
 
 ## Iteration 1 - Switching Views
@@ -210,7 +210,6 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ✨WOW✨ can look like:  
 
 - Creating effective, clean functions to manipulate the data model
-<!-- Hang in there says "creating effective, clean methods in the provided createPoster function..." but they aren't going to be creating methods in that function - they'll be creating methods that maybe take in the result of that function as an argument? -->
 </section>
 
 <section class="answer">
