@@ -196,7 +196,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 ✨WOW✨ can look like:  
 
-- Creating effective, clean methods in the provided createPoster function to manipulate object properties
+- Functions are pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.* 
 </section>
 
 <section class="answer">
@@ -224,7 +224,6 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ✨WOW✨ can look like:
 
 - Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
-- Functions are pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.* 
 - Code has clearly been refactored; no functions show evidence of vestigial functionality (aka when functionality changes, all relevant code is updated)
 - No extraneous or unused lines of code
 </section>

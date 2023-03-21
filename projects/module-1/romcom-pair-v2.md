@@ -202,14 +202,14 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 <section class="answer">
 ### Functional Programing competency examples
 
-- Project makes use of the provided createCover function, creating objects to encapsulate & store unique data
+- Project makes use of the provided `createCover` function, creating objects to encapsulate & store unique data
 - Team considers when and how to create new cover objects or update existing cover objects, coming to a clear and consistent decision
-- Team effectively creates/accesses instance properties when applicable
+- Team effectively creates/accesses object properties when applicable
 - Team effectively invokes object methods when applicable
 
 ✨WOW✨ can look like:  
 
-- Creating effective, clean functions to manipulate the data model
+- Functions are pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.* 
 </section>
 
 <section class="answer">
@@ -237,7 +237,6 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ✨WOW✨ can look like:
 
 - Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
-- Functions are pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.* 
 - Code has clearly been refactored; no functions show evidence of vestigial functionality (aka when functionality changes, all relevant code is updated)
 - No extraneous or unused lines of code
 </section>
@@ -301,7 +300,7 @@ Every team member is expected to fully participate, contribute, communicate and 
 - A PR template is effectively used (not a checkbox to complete, but an opportunity to document the changes being proposed)
 - Meaningful decisions are documented through code reviews; suggested/requested edits are made before merging
 - No bugs or poor code are merged into the main branch
-- The README effectivelly communicates the team's learning and growth as students
+- The README effectively communicates the team's learning and growth as students
 </section>
 
 Each of these "subsections" are not distinct; they are all taken into consideration when the outcome for Workflow and Professional Habits is determined.
