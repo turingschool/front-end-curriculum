@@ -11,7 +11,8 @@ title: Hang In There - Pair
   * Practice reading, understanding, and using provided code
 * Build an understanding of writing code collaboratively
   * Document changes with atomic commits & thorough code reviews
-  * Communicate, troubleshoot, and plan effectively as a team
+  * Communicate, troubleshoot, and plan effectively as a team  
+  * Ensure all team members are able to be heard and contribute throughout the project
 
 ## Overview
 
@@ -19,13 +20,14 @@ Sometimes you need a pick me up. Remember those motivational posters that were a
 
 ## Set Up
 
-To begin, choose one partner to do the following:
+To begin, choose **ONE** partner to do the following:
 
 1. Fork the repository found here: [https://github.com/turingschool-examples/hang-in-there-boilerplate/](https://github.com/turingschool-examples/hang-in-there-boilerplate/).
 2. Clone down your new, forked repo.  While cloning, name it what you want your project to be named, should not include "boilerplate". `git clone <url> <newNameYouWantItToHave>`
 3. `cd` into the repository
 4. Open it in your text editor
-5. Add all project partners and your assigned instructor as collaborators on the repository
+5. View the project in the browser by running `open index.html` in your terminal
+6. Add all project partners and your assigned instructor as collaborators on the repository
 
 Then, as a team:
 
@@ -214,15 +216,15 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 - The main JS file is organized thoughtfully (DOM variables together, event listeners together, functions together)
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
-- Functions are pure, DRY, and demonstrate SRP
-- Variable and function naming is meaningful & readable
+- Functions are DRY and demonstrate SRP
+- Variable and function naming is meaningful, readable and consistent
 - JS is formatted according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
 - Only semantic/organizational comments remain in file (if any); no "dead" commented out code remain in the file
 
 ✨WOW✨ can look like:
 
 - Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
-- Functions are pure
+- Functions are pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.* 
 - Code has clearly been refactored; no functions show evidence of vestigial functionality (aka when functionality changes, all relevant code is updated)
 - No extraneous or unused lines of code
 </section>
@@ -252,9 +254,12 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 - The team's norming document is regularly revisted and revised as better perspective is gained
 - When conflicts arise, the team works together to find ways to re-focus on individual and group learning objectives
-</section>
 
 Note: ⬆️this⬆️ kind of collaboration can be difficult to assess, but know that this is a crucial and vital part of your learning and marketability as a developer! 
+</section>
+
+#### Important Note on Collaboration and Professionalism:
+Every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing.
 
 <section class="answer">
 ### Git competency examples
