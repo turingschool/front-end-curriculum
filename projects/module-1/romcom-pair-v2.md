@@ -32,9 +32,9 @@ To begin, choose **ONE** partner to do the following:
 Then, as a team:
 
 * Explore the repository to see what's going on in the code. Look at each file.
-* What pieces of code might you use to complete iterations, and what pieces will you have to create?
-* Your DOM manipulation (rendering to the DOM and updating what is being rendered) will occur in the `index.js` file
-* All other logic (creating and manipulating covers) will occur in the `app.js` file. No DOM updates should occur in `app.js`
+  * What pieces of code might you use to complete iterations, and what pieces will you have to create?
+  * Your DOM manipulation (rendering to the DOM and updating what is being rendered) will occur in the `index.js` file
+  * All other logic (creating and manipulating covers) will occur in the `app.js` file. No DOM updates should occur in `app.js`
 
 ## Day 1 Deliverables
 

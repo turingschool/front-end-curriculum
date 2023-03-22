@@ -5,7 +5,7 @@ title: Hang In There - Pair
 ## Learning Goals
 
 * Write clean, DRY JavaScript
-  * Use a provided createPoster function to create your `poster`s
+  * Build out functionality using functions that show trends toward SRP and purity
   * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 * Begin to understand the connection between HTML, CSS and JavaScript
   * Practice reading, understanding, and using provided code
@@ -31,9 +31,10 @@ To begin, choose **ONE** partner to do the following:
 
 Then, as a team:
 
-* Explore the repository to see what's going on in the code
-* What pieces of code might you use to complete iterations, and what pieces will you have to create?
-* All of your JavaScript will be written in `domUpdates.js` - you will not need to change any other files.
+* Explore the repository to see what's going on in the code. Look at each file.
+  * What pieces of code might you use to complete iterations, and what pieces will you have to create?
+  * Your DOM manipulation (rendering to the DOM and updating what is being rendered) will occur in the `index.js` file
+  * All other logic (creating and manipulating covers) will occur in the `app.js` file. No DOM updates should occur in `app.js`
 
 ## Day 1 Deliverables
 
