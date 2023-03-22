@@ -80,7 +80,7 @@ Since the first element of an array starts at 0, we would access the first eleme
 ### How would we reassign the second element in this array?
 
 Just like we can reassign a variable to a new value, we can access any element in the array using bracket notation and then reassign it:
-`craftSupplies[1] = { name: 'thread', colorsAvailable: ['gray'] };`
+`craftSupplies[1] = { type: 'thread', colorsAvailable: ['gray'] };`
 </section>
 
 <section class="answer">
