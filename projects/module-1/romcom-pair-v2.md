@@ -200,7 +200,7 @@ This project gives the team room to practice the following JavaScript concepts:
 Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 
 <section class="answer">
-### Functional Programing competency examples
+### Functional Programming competency examples
 
 - Project makes use of the provided `createCover` function, creating objects to encapsulate & store unique data
 - Team considers when and how to create new cover objects or update existing cover objects, coming to a clear and consistent decision
@@ -319,7 +319,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ### Reading Code competency examples
 
 - The team takes time to thoroughly understand the provided code
-- Provided code is used effectively (the provided Class, the provided assets, the provided HTML & CSS)
+- Provided code is used effectively (the provided createCover function, the provided assets, the provided HTML & CSS)
   - The team does not have to directly edit the HTML or CSS file
   - The team does not ignore provided styling
   - No code is added that makes the provided code redundant
