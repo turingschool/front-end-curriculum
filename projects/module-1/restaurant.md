@@ -26,10 +26,11 @@ problem.
 
 ## Learning goals
 
-  - Understand what JavaScript primitives are, and how/when to use them
+  - Understand JavaScript data types and how/when to use them
   - Understand how to declare variables and assign data to them
-  - Practice using objects and arrays
-  - Write functions that require conditional logic and `return`
+  - Practice using objects and arrays, including `for loops`
+  - Write functions that require conditional logic, parameters/arguments, and `return`
+  - Read and understand unit tests, and pass them
 
 ## Setup
 
