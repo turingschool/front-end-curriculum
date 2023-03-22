@@ -209,13 +209,16 @@ ARIA attributes should be utilized for any UI elements that are not understood b
 
 For the rubric sections below, you will be scored as Wow, Yes or Not Yet depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency. There are just some examples.
 
+<section class="answer">
+### Functional Expectations
 
-## Functional Expectations
-Wow: Application fulfills all requirements as well as an extension.
-Yes: Application fulfills all requirements of iterations 1-3 without bugs. **Notes: Must be completed in order to pass**
-Not Yet: Application crashes or has missing functionality or bugs.
+- Wow: Application fulfills all requirements as well as an extension.
+- Yes: Application fulfills all requirements of iterations 1-3 without bugs. **Note: Must be completed in order to pass**
+- Not Yet: Application crashes or has missing functionality or bugs.
+</section>
 
-## UI/UX & Accessibility
+<section class="answer">
+### UI/UX & Accessibility
 
 * The application can stand on its own to be used by an instructor without guidance from a developer on the team.
 UI/UX is intuitive and easy to read/use
@@ -227,8 +230,10 @@ For example: For example: If a user searches for a room, but none are available 
 ✨WOW✨ can look like: 
 * Design is responsive across small, medium and large breakpoints
 * Special consideration was made around accessibility
+</section>
 
-## Fundamental JavaScript and Style / Fetch
+<section class="answer">
+### Fundamental JavaScript and Style / Fetch
 
 * Code is divided into logical components each with a clean, single responsibility
 * Array prototype methods are used to iterate instead of for loops
@@ -242,13 +247,10 @@ For example: For example: If a user searches for a room, but none are available 
 ✨WOW✨ can look like: 
 * All data manipulation is cleanly separated from rendering code. 
 * All errors are handled and messages are displayed to a user when an error occurs
+</section>
 
-## Testing
-
-* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. Tests must be passing to be considered.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths.  Tests must be passing to be considered.
-* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.  Tests must be passing to be considered.
-* 1: There is little or no evidence of testing in the application.
+<section class="answer">
+### Testing
 
 * Tests cover most features and test for happy paths
 * Test suite is organized.
@@ -262,6 +264,7 @@ For example: For example: If a user searches for a room, but none are available 
 ✨WOW✨ can look like: 
 * All scenarios/outcomes/paths are tested for functions, including happy and sad paths.
 * Application has a robust and thorough test suite that covers all functions that do not update the dom.
+</section>
 
 ## Collaboration and Professionalism
 
