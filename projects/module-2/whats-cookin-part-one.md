@@ -131,7 +131,7 @@ You as the developer will need to make decisions about the shape of data you'll 
 
 #### User Stories (Dashboard)
 
-Use the `index.js` file to update the DOM. This JS file should call functions from `app.js`. There should not be any DOM manipulation within your `app.js` file.
+Use the `domUpdates.js` file to update the DOM. There should not be any DOM manipulation within your `scripts.js` file.
 
 - As a user, I should be able to view all recipes.
 - As a user, I should be able to click on a recipe to view more information including directions, ingredients needed, and total cost.
@@ -191,7 +191,7 @@ Instead, you should create small, sample datasets that match the structure of th
 You are expected to research and implement `beforeEach` in your test files.
 
 **You are *expected* to test:**
-* All functions that do not update the DOM.  This means everything in your `app.js` file should be tested.
+* All functions that do not update the DOM.  This means everything in your `scripts.js` file should be tested.
 
 Remember to test all possible outcomes (happy/sad/etc).  Ask yourself:  
   - Does the function return anything?  
@@ -249,7 +249,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 ### JavaScript & Style / Functional Programming / Fetch
 - Code is divided into logical components each with a clean, single responsibility
 - Array prototype methods are used to iterate instead of for loops
-- All DOM manipulation is held in the `index.js` file.  No DOM manipulation occurs outside of this file.
+- All DOM manipulation is held in the `domUpdates.js` file.  No DOM manipulation occurs outside of this file.
 - Variables and functions are consistently and appropriately named
 - Code leverages JavaScript's truthy/falsey principles
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
