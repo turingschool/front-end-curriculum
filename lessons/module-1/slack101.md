@@ -25,11 +25,11 @@ You can use mentions to notify specific people by typing `@` and the person's na
 
 ### Direct Messages
 
-While we primarily use channels to communicate with your cohort and other students/alumni, you may need to send a private message to someone. Direct messages (DMs) can be one-to-one, or include up to nine people. DMs work well for one-off conversations that don’t require an entire channel of people to weigh in. DMs to instructors should include **all instructors** to keep communication streamlined. 
+While we primarily use channels to communicate with your cohort and other students/alumni, you may need to send a private message to someone. Direct messages (DMs) can include up to nine people. DMs work well for one-off conversations that don’t require an entire channel of people to weigh in. DMs to instructors should include **all instructors** to keep communication streamlined. 
 
 ### Threads
 
-Slack channels can get unruly very quickly! To avoid this, we respond to related messages in threads. Threads will keep all related discussion together, while not clogging up the channel.
+Slack channels can get unruly very quickly! To avoid this, respond to related messages in threads. Threads will keep all related discussion together, while not clogging up the channel.
 
 ![thread image](./assets/images/slack/thread.png)
 
@@ -45,7 +45,7 @@ Important messages can be pinned so that they are easy to find later. You can al
 
 Depending on your settings, Slack will mark things as read the moment you view them. This can be problematic, leading to situations in which you click on something to see if it needs your immediate attention, it doesn’t, but now it’s been marked as read, and you forget to follow up on it. There are a few solutions to this issue:  
   
-1 - Navigate to Slack in your menu bar, and select Preferences > Sidebar > enable Unreads. This collects any unread messages into one place, regardless of which channel the message is in. Conveniently, you can read these messages without them being marked as read. You can use this to collect the messages you need to deal with later, and only mark them as read when you've dealt with them.  
+1 - Navigate to Slack in your menu bar, and select `Preferences` > `Sidebar` > enable `Unreads`. This collects any unread messages into one place, regardless of which channel the message is in. Conveniently, you can read these messages without them being marked as read. You can use this to collect the messages you need to deal with later, and only mark them as read when you've dealt with them.  
 
 ![unread](./assets/images/slack/unread.png)
 
@@ -63,13 +63,13 @@ In any channel, press the command key and “F” (`cmd + f`) to bring up the se
 
 ### Sidebar Organization
 
-You’ll quickly acquire TOO MANY channels to keep track of. Organizing these channels or DMs by creating sidebar sections. Just right click any DM, group message, or channel and select Move Conversation. You’ll be given the option to create new sections here. You can organize your side bar however you'd like!
+You’ll quickly acquire TOO MANY channels to keep track of. You can organize these channels or DMs by creating sidebar sections. Just right click any DM, group message, or channel and select `Move Conversation` or `Move Channel`. You’ll be given the option to create new sections here. You can organize your side bar however you'd like!
 
 ![sidebar](./assets/images/slack/sidebar.png)
 
 ### Preventing Accidental Messages
 
-It is easy to accidentally send messages before you mean to in Slack because the `enter` button defaults to send messages. In Preferences, navigate to Advanced and under When writing a message, press Enter to… section, choose “Start a new line”. This means that pressing enter will start a new line, rather than send it. Now, to actually send the message is to press cmd + enter. 
+It is easy to accidentally send messages before you mean to in Slack because the `enter` button defaults to send messages. In `Preferences`, navigate to `Advanced` and under `When writing a message, press Enter to…` section, choose “Start a new line”. This means that pressing enter will start a new line, rather than send it. Now, to actually send the message is to press `cmd + enter`. 
 
 Additionally if you have an important message and you want to draft a version of it first, practice by DMing yourself. You can use the DM with yourself to save important things for later, draft messages, or try things out.
 
@@ -87,6 +87,10 @@ To see a general list of shortcuts, press `cmd + /`. Here are some of our favori
 
 You can add a gif to your message by using a slash command: `/giphy [search phrase goes here]`. For example, if I wanted to post a gif about partying, I’d type `/giphy party` into my message box, and then “send” it. After you “send”, it won’t actually appear for anyone else but you just yet. What you’ll see is a preview of the gif, and a shuffle button to select the right one. This is a good one to practice by DMing yourself. Sometimes, it will present some, uh, questionable content for your consideration so PLEASE be sure you send gifs that are appropriate. 
 
-You can access the emoji panel via shortcuts too. Just type `:` followed by the name of the emoji, and finally one more `:`. so if I type `:smile:` , I’ll get this: 😀. You can make your own emoji! click the smiley face on the bottom right of the message box, then click add emoji. The Turing slack has **a lot** of custom emojis.
+You can access the emoji panel via shortcuts too. Just type `:` followed by the name of the emoji, and finally one more `:`. so if I type `:smile:` , I’ll get this: 😀.  
+
+You can make your own emoji! click the smiley face on the bottom right of the message box, then click add emoji. The Turing slack has **a lot** of custom emojis.
 
 Type `/shrug` and SEND IT. Just trust us.
+
+That's it! You're a Slack whiz now! If you ever have questions about Slack or communication at Turing, just post a question about it...**in Slack**! 😉
