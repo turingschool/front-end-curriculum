@@ -4,12 +4,12 @@ tags: javascript, mocha, testing, fetch
 ---
 ## Goals and Objectives
 
-- **Use object and array prototype methods to perform data manipulation**
+- Use object and array prototype methods to perform data manipulation
 - Create a user interface that is easy to use and clearly displays information.
-- Write DRY, reusable code that follows SRP (Single Responsibility Principle)
-- **Implement a robust testing suite using TDD**
-- **Make network requests to retrieve data**
-- **Collaborate productively and professionally as a team. Ensure all team members are able to be heard and contribute throughout the project.**
+- Write DRY, reusable code that follows SRP and trends toward function purity
+- Implement a robust testing suite using TDD
+- Make network requests to retrieve data
+- Collaborate productively and professionally as a team. Ensure all team members are able to be heard and contribute throughout the project.
 
 In this project, you will create a recipe tracking / meal planning application that allows users to view recipes they want to cook and plan shopping trips around them. The idea is similar to sites like [All Recipes](https://www.allrecipes.com/){:target='blank'} or [New York Times Cooking](https://cooking.nytimes.com/){:target='blank'}. Users should view a list of recipes and choose recipes to cook.
 
@@ -124,7 +124,7 @@ Please note that the prices for the recipes might be higher than is realistic. T
 <section class="note">
 ### Hint
 
-A common theme when dealing with data is not to manipulate the original data, but to create copies to work with.  
+A common theme in functional programming when dealing with data is not to manipulate the original data, but to create copies to work with.  
 
 You as the developer will need to make decisions about the shape of data you'll want back from various functions.  Consider how you will be using this data to update the DOM. 
 </section>
