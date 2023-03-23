@@ -69,7 +69,7 @@ You’ll quickly acquire TOO MANY channels to keep track of. Organizing these ch
 
 ### Preventing Accidental Messages
 
-It is easy to accidentally send messages before you mean to in Slack because the `enter` button defaults to send messages. In Preferences, navigate to Ddvanced and under When writing a message, press Enter to… section, choose “Start a new line”. This means that pressing enter will start a new line, rather than send it. Now, to actually send the message is to press cmd + enter. 
+It is easy to accidentally send messages before you mean to in Slack because the `enter` button defaults to send messages. In Preferences, navigate to Advanced and under When writing a message, press Enter to… section, choose “Start a new line”. This means that pressing enter will start a new line, rather than send it. Now, to actually send the message is to press cmd + enter. 
 
 Additionally if you have an important message and you want to draft a version of it first, practice by DMing yourself. You can use the DM with yourself to save important things for later, draft messages, or try things out.
 
