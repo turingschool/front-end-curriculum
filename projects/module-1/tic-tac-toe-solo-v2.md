@@ -199,7 +199,8 @@ As mentioned above, functionality does have more weight in this final project in
 
 ✨WOW✨ can look like:
 - Changes to the DOM only happen after the Data Model has been updated.  The Data Model is then used to update the DOM.
-- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
+- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering.
+- Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 - Bracket notation is utilized effectively to make accessing properties of class instances more dynamic.
 </section>
 
