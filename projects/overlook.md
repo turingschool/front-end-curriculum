@@ -49,7 +49,9 @@ It is up to you to decide what changes warrant a PR – remember we want to subm
 
 ## Initial Setup
 
-For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit){:target='blank'} repo. Setup instructions are in the README.  You will also need to clone down this [local server](https://github.com/turingschool-examples/overlook-api){:target='blank'} and have it running in a separate tab in your terminal each time you run your client.
+For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit){:target='blank'} repo. Setup instructions are in the README.  
+
+You will also need to clone down this [local server](https://github.com/turingschool-examples/overlook-api){:target='blank'} and have it running in a separate tab in your terminal each time you run your client.
 
 ### Endpoints
 
@@ -81,6 +83,7 @@ Remember, a `.catch` won't necessarily run on a bad response (ie 4xx level statu
 ## Iterations
 
 <section class="note">
+### Note
 Consider how past projects specified a 'Data' section and a 'User Stories' section throughout the iterations description. You'll noticed that you're only supplied with User Stories below. Analyze each user story to determine what data you'll need to work with and plan what functions you'll create to manipulate that data. 
 
 Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on the data and calculation functions, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there
@@ -189,8 +192,6 @@ A user should be able to interact with all functionality of your application by 
 ARIA attributes should be utilized for any UI elements that are not understood by the screen reader
 
 
-
-<!-- Todo -->
 ## Minimum Collaboration and Professionalism Expectations
 
 - Team holds daily standups throughout project.
@@ -205,9 +206,11 @@ ARIA attributes should be utilized for any UI elements that are not understood b
 - Team collaborates effectively to accomplish the shared goal. Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.
 - Instructors are available to offer support and guidance but conversations around what is and what is not working are expected to be led by the team members themselves.
 
+---
+
 # Rubric
 
-For the rubric sections below, you will be scored as Wow, Yes or Not Yet depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency. There are just some examples.
+For the rubric sections below, you will be scored as Wow, Yes or Not Yet depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency. The following examples are not checklists to complete! There are just some examples.
 
 <section class="answer">
 ### Functional Expectations
@@ -222,30 +225,33 @@ For the rubric sections below, you will be scored as Wow, Yes or Not Yet dependi
 
 * The application can stand on its own to be used by an instructor without guidance from a developer on the team.
 UI/UX is intuitive and easy to read/use
-* Helpful messaging is displayed to prevent user confusion
-For example: For example: If a user searches for a room, but none are available then a message is displayed to indicate that the search worked, nothing is broken, there just aren't any matching rooms available.
+* Helpful messaging is displayed to prevent user confusion. For example: For example: If a user searches for a room, but none are available then a message is displayed to indicate that the search worked, nothing is broken, there just aren't any matching rooms available.
 * The Lighthouse accessibility audit score is at least 90%
 * The application is fully tabbable 
 
 ✨WOW✨ can look like: 
+
 * Design is responsive across small, medium and large breakpoints
 * Special consideration was made around accessibility
 </section>
 
 <section class="answer">
-### Fundamental JavaScript and Style / Fetch
+### Fundamental JavaScript and Style / Fetch Competency Examples
 
 * Code is divided into logical components each with a clean, single responsibility
 * Array prototype methods are used to iterate instead of for loops
 * All DOM manipulation is held in the scripts.js file. No DOM manipulation occurs outside of this file.
 * Variables and functions are consistently and appropriately named
 * Code leverages JavaScript's truthy/falsey principles
-* Demonstrates efforts towards making functions pure when possible. Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
-* Application implements Fetch and updates DOME based on the results of that Fetch. 
+* Demonstrates efforts towards making functions pure when possible. **Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.**
+* Implements GET and POST Fetch requests
+* When utilizing Fetch, the DOM is updated based on the results of that Fetch
 * Most errors are handled and messages are displayed to a user when an error occurs
 
 ✨WOW✨ can look like: 
+
 * All data manipulation is cleanly separated from rendering code. 
+* Code has clearly been refactored; functions are DRY and adhere to the Single Responsibility Principle. 
 * All errors are handled and messages are displayed to a user when an error occurs
 </section>
 
@@ -262,6 +268,7 @@ For example: For example: If a user searches for a room, but none are available 
 * There are no failing/pending tests upon submission 
 
 ✨WOW✨ can look like: 
+
 * All scenarios/outcomes/paths are tested for functions, including happy and sad paths.
 * Application has a robust and thorough test suite that covers all functions that do not update the dom.
 </section>
