@@ -57,7 +57,7 @@ Depending on your settings, Slack will mark things as read the moment you view t
 
 ### Searching Messages
 
-In any channel, press the command key and “F” (cmd + f) to bring up the search bar. Initially, you’ll be searching just within the current channel you are viewing, but you can press delete a few times and then type a different channel. You’ll then be able to search by keyword. You can also search by sender by typing `from:@username`
+In any channel, press the command key and “F” (`cmd + f`) to bring up the search bar. Initially, you’ll be searching just within the current channel you are viewing, but you can press delete a few times and then type a different channel. You’ll then be able to search by keyword. You can also search by sender by typing `from:@username`
 
 ![search](./assets/images/slack/search.png)
 
@@ -87,6 +87,6 @@ To see a general list of shortcuts, press `cmd + /`. Here are some of our favori
 
 You can add a gif to your message by using a slash command: `/giphy [search phrase goes here]`. For example, if I wanted to post a gif about partying, I’d type `/giphy party` into my message box, and then “send” it. After you “send”, it won’t actually appear for anyone else but you just yet. What you’ll see is a preview of the gif, and a shuffle button to select the right one. This is a good one to practice by DMing yourself. Sometimes, it will present some, uh, questionable content for your consideration so PLEASE be sure you send gifs that are appropriate. 
 
-You can access the emoji panel via shortcuts too. Just type `:` followed by the name of the emoji, and finally one more `:`. so if I type :smile:` , I’ll get this: 😀. You can make your own emoji! click the smiley face on the bottom right of the message box, then click add emoji. The Turing slack has **a lot** of custom emojis.
+You can access the emoji panel via shortcuts too. Just type `:` followed by the name of the emoji, and finally one more `:`. so if I type `:smile:` , I’ll get this: 😀. You can make your own emoji! click the smiley face on the bottom right of the message box, then click add emoji. The Turing slack has **a lot** of custom emojis.
 
 Type `/shrug` and SEND IT. Just trust us.
