@@ -253,6 +253,7 @@ UI/UX is intuitive and easy to read/use
 * All data manipulation is cleanly separated from rendering code. 
 * Code has clearly been refactored; functions are DRY and adhere to the Single Responsibility Principle. 
 * All errors are handled and messages are displayed to a user when an error occurs
+* Effectively implements one or more closure throughout project.
 </section>
 
 <section class="answer">
