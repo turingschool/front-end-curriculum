@@ -191,8 +191,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 - Project makes use of the provided `createPoster` function, creating objects to encapsulate & store unique data
 - Team considers when and how to create poster objects or update existing poster objects, coming to a clear and consistent decision
-- Team effectively creates/accesses object properties when applicable
-- Team effectively invokes object methods when applicable
+- Functions are DRY and demonstrate SRP
 
 ✨WOW✨ can look like:  
 
@@ -216,7 +215,6 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 - The main JS file is organized thoughtfully (DOM variables together, event listeners together, functions together)
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
-- Functions are DRY and demonstrate SRP
 - Variable and function naming is meaningful, readable and consistent
 - JS is formatted according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
 - Only semantic/organizational comments remain in file (if any); no "dead" commented out code remain in the file
