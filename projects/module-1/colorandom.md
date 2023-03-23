@@ -54,7 +54,11 @@ Then, as a team:
   -  a title
   -  5 colors labeled with their hex codes, hardcoded for now
 
-You should be matching the comp closely. Act like you're a frontend dev on a team and this is the design you've been given to match. Details and spacing matter!
+You should be matching the comp closely. Act like you're a frontend dev on a team and this is the design you've been given to match. Details and spacing matter! 
+
+Comp Details:
+  - background color: #E7F1F1
+  - font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
 
 ### Iteration 1 - Generating Random Palettes
 
@@ -76,6 +80,8 @@ Hint: Hex codes are 6 characters long, and each character is some value of 0-9 o
 - When a user clicks on the unlocked icon, a locked icon should appear. The locked/unlocked icons should toggle back and forth as the user clicks them.
 - When the `New Palette` button is clicked, only the unlocked colors should change. Locked colors should remain.
 - When the palette is updated, your Data Model should be updated too
+
+Note: [The locked and unlocked icons can be found here!](https://drive.google.com/drive/folders/1ZX31xVFdRAsLPzsL8G2_ujNQNXgFmKxD?usp=sharing)
 
 ### Iteration 3 - Saving Palettes
 
@@ -99,6 +105,8 @@ Note: Saved palettes do NOT need to persist on page load
 - When a saved palette's delete button is clicked:
   - the palette is removed from your Data Model
   - that palette is removed from the page
+
+Note: [The delete icon can be found here!](https://drive.google.com/drive/folders/1ZX31xVFdRAsLPzsL8G2_ujNQNXgFmKxD?usp=sharing)
 
 ### Iteration 5 - Editing Saved Palettes
 
@@ -124,100 +132,113 @@ Options:
 
 ## Rubric
 
-This rubric should serve as a guide for students as they progress through the project, as well as to self-evaluate. Instructors will use it to evaluate the project at its final due date/time, and provide detailed feedback so students know what areas to focus on in future projects.
+This project has 4 evaluated concepts:
 
-Scores land in a range between 1 and 4. Below is a breakdown of what those numbers represent.
+- Professionalism
+- Comp Recreation
+- HTML & CSS
+- JavaScript
+- Functionality
 
-* **4 (exceptional)** - went **beyond** set learning goals; did self-teaching to go above and beyond in this area. If other scores are below a 3, redirect effort spent in this area to the weaker areas.
-* **3 (proficient)** - exactly on track! you're where you need to be in this area! great work!
-* **2 (trailing)** - a little behind where we want to see you right now; in a good place to build familiarity/competency in this area; study in this area to level up and grow
-* **1 (dragging)** - significantly behind where we want to see you; major growth needs to be shown in this area; set up a pairing session with an instructor as soon as possible
+<section class="note">
+### Note about the below criteria
 
-To earn a given score, an application must meet the requirements listed in that score explanation and all scores lower.
+Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
+</section>
 
+---
+
+<section class="answer">
 ### Professionalism
 
-* **4:**
-  - Team uses a PR template for every pull request
-  - Team habitually conducts thorough code reviews in the GitHub GUI to document the progress of the application
-  - Team has sought out technical code reviews from one or more mentors and documented them in the GitHub GUI
-* **3:**
-  - Commits are atomic and frequent, effectively documenting the evolution/progression of the application
-  - Commit messages are consistent, descriptive, and concise and begin with a verb and capital letter
-  - Team uses PRs to screen/verify code before adding it to the main branch
-  - Branches are consistently used for individual features
-  - There is no more than a 10% disparity in project contributions between teammates
-  - README is well formatted and gives good context about the project, including links to both contributors’ GitHub profiles, and to the deployed GitHub Pages site
-* **2:**
-  - Commits are large and do not effectively communicate the progression of the application
-  - Team uses PRs but do not review code before merging into the main branch
-  - Branches are sometimes used for individual features
-  - There is a 20% disparity in project contributions between teammates
-  - README is brief and does not provide context for the project
-* **1:**
-  - Some commits are pushed directly to the main branch
-  - PRs are used inconsistently
-  - There is a 50% disparity in project contributions between teammates
-  - There is no README, or the “boilerplate” README is left in the project.
+- The team's norming document is taken seriously, with thoughtful reflections from all team members regarding their skills, learning goals, work styles, etc. 
+- The work is distributed equitably; commit/code contributions are roughly even for each team member in the final product and throughout the process
+- Branches are consistently used for individual features and commit messages are descriptive and concise
+- Commits are atomic, documenting a single changeset (such as a new function being created, or a function being updated) and clearly demonstrates how the project evolved over time.
+- PRs have clear, thorough descriptions and are consistently reviewed by other team members before work has been merged.
+- README is formatted and gives new contributors and employers sufficient context about the project including setup instructions, deploy link (gh-pages), images or video of the functioning app, technologies used, reflections, future features, and other pertinent information.
 
-### HTML && CSS - Style and Implementation
+✨WOW✨ can look like:
+- The team holds regular standups and retros while also revisiting the norming document as better perspective is gained
+- A [PR template](https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository) is effectively used
+</section>
 
-* **4:**
-  - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, let assigned instructor know which naming convention will be used._
-  - Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected. To get this extension to work with local files, follow these steps:
-    - Install
-    - Right click the WAVE extension
-    - Click "Manage Extensions"
-    - Flip the "Allow access to file URLs" switch
-    - Success!
-* **3:**
-  - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly.
-  - CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles. There is evidence of reused styles in the application.
-  - CSS properties are organized in a consistent manner (such as alphabetizing properties within a rule).
-  - In CSS, specificity is balanced with DRY conventions.
-* **2:**
-  - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). Semantic elements like `<button>`, `<li>`, etc. are used instead of `<div>`. If `<div>` elements are used, they are only for styling purposes.
-  - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together.
-  - UI layout allows user to complete all app functionality.
-* **1:**
-  - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
-  - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
+<section class="answer">
+### Comp Recreation
 
-### JavaScript - Style and Implementation
+- Application implements all major comp details accurately and correctly on desktop (layout, spacing, alignment, etc)
+- Careful attention was given to the little details like hover states.
 
-* **4:**
-  * All functions strictly adhere to the Single Responsibility Principle (SRP)
-  * There are no nested if/else statements
-  * Functions and code are well-refactored and show developer empathy
-* **3:**
-  * Application uses the Data Model exclusively to track changes to the palettes,
-    and display of palettes happens after the Data Model has been updated
-  * There are no nested for loops
-  * Functions are DRY and observe SRP - and most are around 10 lines of code or less
-  * There are no global variables aside from query selectors, an array for your palettes and a `currentPalette` variable (if needed).
-  * Uses event delegation correctly on dynamic elements where applicable
-  * Uses parameters and arguments to craft short and reusable functions. There are no parameters or arguments in functions that are unused.
-* **2:**
-  * Data model is built to the specifications detailed in the spec sheet and is fully separated from the DOM.
-    - example: There should not be any DOM manipulation in class files.
-  * All console logs, debuggers and comments are removed from code before submitting.
-* **1:**
-  * Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
+✨WOW✨ can look like:
+- Additional elements and animations have been added that match the visuals established in the comps.
+- The design is responsive across multiple screen sizes including tablets and mobile devices.
+</section>
 
+<section class="answer">
+### HTML & CSS
+
+- Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
+- Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
+- Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions.
+- Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). If `<div>` elements are used, they are only for styling purposes.
+- Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together.
+- Application utilizes data attributes to store information in the HTML
+
+✨WOW✨ can look like:
+- Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, document it in your README and let your project manager know which naming convention will be used._
+- Application fully implements HTML that is accessible for individuals with visual disabilities. _Note: This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected._
+</section>
+
+<section class="note">
+### Note about using the WAVE tool
+
+To get this extension to work with local files, follow these steps:
+- Install
+- Right click the WAVE extension
+- Click "Manage Extensions"
+- Flip the "Allow access to file URLs" switch
+- Success!
+</section>
+
+<section class="answer">
+### Javascript
+
+- Changes to the DOM only happen after the Data Model has been updated.  The Data Model is then used to update the DOM.
+- No nested if/else statements or for loops.
+- Functions are DRY and adhere to the Single Responsibility Prinicple (SRP).
+- Event delegation is used correctly on dynamic elements like saved palettes.
+- Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local.
+- Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
+
+✨WOW✨ can look like:
+- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
+- Bracket notation is utilized effectively to make accessing properties of class instances more dynamic.
+- Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
+</section>
 
 ### Functional Expectations
-
-Functionality is the **least important** piece of the rubric. It's included because it is another benchmark to gauge proficiency (for example, we can’t grade your JS if there isn’t enough of it written!). However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
+Functionality is the least important piece of the rubric. It’s included because it is another benchmark to gauge proficiency (for example, we can’t grade your JS if there isn’t enough of it written!). However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
 
 This means, we DO NOT want to see:
+
 * Code that completes iterations but is sloppy
 * One or both team members do not understand every single line of code
 * One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
-* A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
 
-An app with many features, sloppily executed, is worse than a project with fewer features that is clean and well-refactored.
+Well-refactored, thoughtful code is better than sloppy extra features.
 
-* **4:** Application completes an extension without bugs.
-* **3:** Application meets all of the expectations of Iteration 5 without bugs.
-* **2:** Application meets all of the expectations of Iteration 4 without bugs.
-* **1:** Application meets all of the expectations of Iteration 3 without bugs.
+<section class="answer">
+### Functionality competency examples
+
+- The application completes all of the expectations of Iteration 5 without bugs.
+
+✨WOW✨ can look like:
+
+- Iteration 5 and at least one extension are successfully implemented without bugs.
+</section>
+
+---
+
+## Feedback
+
+A few days after the due date, your team will receive feedback about the project's average outcome (yes/not yet/wow), as well as each section's outcome. You will also receive a few pieces of team-specific feedback for each section (things done well, things to improve on for the current/next project).
