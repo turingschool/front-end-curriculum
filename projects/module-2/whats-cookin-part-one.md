@@ -246,7 +246,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 * Yes: Application fulfills all requirements of iterations 1-3 without bugs.
 * Not Yet: Application crashes or has missing functionality or bugs.
 
-### Fundamental JavaScript & Style / OOP / Fetch
+### JavaScript & Style / Functional Programming / Fetch
 - Code is divided into logical components each with a clean, single responsibility
 - Array prototype methods are used to iterate instead of for loops
 - All DOM manipulation is held in the `index.js` file.  No DOM manipulation occurs outside of this file.
