@@ -7,7 +7,7 @@ tags: slack
 
 ## Slack basics
 
-We're sure that some of you are new to Slack, and others of you might be a bit more familiar. Slack is essential to how we organize, collaborate and stay up to date at Turing and (most likely) on the job. It’s a professional tool you’ll be using for the foreseeable future. Slack can be overwhelming or even truly unruly so here are some of our favorite tips for managing and leveraging slack. 
+Some of you are brand new to Slack, and others of you might be a bit more familiar. Slack is essential to how we organize, collaborate and stay up to date at Turing and (most likely) on the job. It’s a professional tool you’ll be using for the foreseeable future. Slack can be overwhelming or even truly unruly so here are some of our favorite tips for managing and leveraging slack. 
 
 ### Notifications
 
