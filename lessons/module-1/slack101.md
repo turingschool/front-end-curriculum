@@ -63,10 +63,10 @@ In any channel, press the command key and “F” (cmd + f) to bring up the sear
 
 ### Organization
 
-You’ll quickly acquire TOO MANY channels to keep track of. Organizing these channels or DMs by creating sidebar sections. Just right click any DM, group message, or channel and select move message. You’ll be given the option to create new sections here. I have sections for my current cohort, my team messages, and all of my distraction channels.
+You’ll quickly acquire TOO MANY channels to keep track of. Organizing these channels or DMs by creating sidebar sections. Just right click any DM, group message, or channel and select Move Conversation. You’ll be given the option to create new sections here. You can organize your side bar however you'd like!
 
-Notifications
-In your preferences you can change a lot of options about notifications. You can do this on the mobile app too so that you can control them independently. These decisions are too personal for me to give advice about them, but in general - be selective about the notifications you receive. Set a do not disturb schedule to block out focused time for yourself.
+![sidebar](./assets/images/slack/sidebar.png)
+
 
 Preventing accidental messages
 This is one of my favorite settings to make sure you don’t send messages unless you really mean to. In preferences, navigate to advanced and under the when writing a message, press Enter to… section, choose “start a new line”. This means that pressing enter will start a new line. The only way to actually send the message is to press cmd + enter. Additionally if you have an important message and you want to draft a version of it first, practice by DMing yourself. My messages to myself are where I pin important things for later, draft messages, or try things out.
