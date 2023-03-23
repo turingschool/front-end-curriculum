@@ -136,6 +136,7 @@ Every work day, your group should do a check-in as a whole group, preferably liv
 
 Your daily check-in (sometimes called “stand-ups”) schedule should be outline in your DTR so the whole group is aware of the meeting.
 
+<section class="answer">
 ### Iteration 1 - Get Familiar with the Data and Users
 
 #### Data
@@ -159,9 +160,9 @@ To develop this dashboard, you should randomly generate a user. On the dashboard
 - Create an info card on the dashboard with all of user’s info on the page
 - Display their first name somewhere prominently on the page to welcome them
 - For a specific user, display how their step goal compares to the average step goal amongst all users (this display should *not* be hard-coded)
+</section>
 
----
-
+<section class="answer">
 ### Iteration 2 - Hydration
 
 #### Data
@@ -178,9 +179,9 @@ For your user (or any user you choose):
 
 - Display to show how much water they have consumed today (these displays are often called “widgets” in the FE tech world)
 - Display to show much water they have consumed each day over the course of the latest week
+</section>
 
----
-
+<section class="answer">
 ### Iteration 3 - Fetch Calls
 
 You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from provided Endpoints in the table below.
@@ -199,9 +200,9 @@ Once you've got fetch working, you should be able to delete your hardcoded data 
 
 The expectation for Mod 2 is that you will avoid using `async/await`.  We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`.  Consider doing some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all).
 </section>  
+</section>
 
----
-
+<section class="answer">
 ### Iteration 4 - Sleep
 
 #### Data
@@ -223,9 +224,9 @@ Items to add to the dashboard:
 - For a user, their sleep data for the latest day (hours slept and quality of sleep)
 - For a user, their sleep data over the course of the latest week (hours slept and quality of sleep)
 - For a user, their all-time average sleep quality and all-time average number of hours slept
+</section>
 
----
-
+<section class="answer">
 ### Iteration 5 - Activity
 
 #### Data
@@ -244,8 +245,7 @@ Items to add to the dashboard:
 - For a user, the number minutes active for the latest day
 - For a user, the distance they have walked (in miles) for the latest day based on their step count
 - For a user, a weekly view of their step count, and if they reached their step count goal for each day
-
----
+</section>
 
 ## Rubric
 
@@ -255,7 +255,7 @@ Items to add to the dashboard:
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage.
 
-### Fundamental JavaScript & Style / OOP / Fetch
+### JavaScript / SRP / Fetch
 * 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring. Application is expertly divided into logical components each with a clean, single responsibility.
 * 3: Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. Application is effectively broken into logical components, but violate the principle of SRP.
 * 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. Divisions of logic into classes are inconsistent or unclear.
@@ -273,7 +273,7 @@ Items to add to the dashboard:
 * 2: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the users' needs.
 * 1: The application is confusing or difficult to use.
 
-------------------------------------------------------------------
+---
 
 ### Minimum Professionalism Expectations
 * Team collaborates effectively.  Team holds daily check-ins throughout project.
