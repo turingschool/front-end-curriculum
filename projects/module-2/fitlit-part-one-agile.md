@@ -215,7 +215,6 @@ Create a class structure and methods that can calculate:
 - For a user, their sleep quality for a specific day (identified by a date)
 - For a user, how many hours slept each day over the course of a given week (7 days) - you should be able to calculate this for any week, not just the latest week
 - For a user, their sleep quality each day over the course of a given week (7 days) - you should be able to calculate this for any week, not just the latest week
-- For all users, the average sleep quality
 
 #### Dashboard
 
@@ -250,8 +249,8 @@ Items to add to the dashboard:
 ## Rubric
 
 ### Functional Expectations
-* 4: Application fulfills expectations of iterations 1 - 4 *as well as* an extension that you create and let your project manager know about before submission.
-* 3: Application fulfills expectations of iterations 1 - 4 with no bugs or missing functionality.
+* 4: Application fulfills expectations of iterations 1 - 5 *as well as* an extension that you create and let your project manager know about before submission.
+* 3: Application fulfills expectations of iterations 1 - 5 with no bugs or missing functionality.
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage.
 
