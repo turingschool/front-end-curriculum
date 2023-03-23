@@ -20,7 +20,7 @@ In this project, you will be given data from an activity tracker for many users 
 
 The image above is *not* a comp. We expect you to design your own dashboard layout that is relevant to the data that was logged or calculated for a user or group of users. Use inspiration from Fitbit and other fitness/activity apps, but do not copy an app directly.
 
-**You must pull 3 inspirations from 3 different apps that you want to use to guide the user interface of your application.** (Google image search is great for finding inspiration).
+**Find 3 inspirations from 3 different apps that you want to use to guide the user interface of your application.** (Google image search is great for finding inspiration as well as a site called [Dribbble](https://dribbble.com/)).
 
 Be specific about what piece you are trying to re-create. What specifically do you want to replicate from this site? (i.e. layout, color palette, flat design, font, etc)
 </section>
