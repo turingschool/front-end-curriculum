@@ -253,6 +253,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 - Variables and functions are consistently and appropriately named
 - Code leverages JavaScript's truthy/falsey principles
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
+- WOW option: Effectively implements one or more closure throughout project.  *Note: See Closures lesson on M2 lesson page as a resource.*
 
 ### Test-Driven Development
 - Application has a robust and thorough test suite that covers all functions that do not update the dom.
