@@ -12,8 +12,8 @@ tags: javascript, js, this, keyword
 ## Vocab
 
 - `Invoke` / `Execute` To run a function. e.g., "I've invoked the function here"
-- `Declare` To write a function definition. Usually distinct from function execution
-- `Constructor Function` The function called to create a new instance of an object. Usually contains the code to set up the object
+- `Declare / Define` To write a function definition. Usually distinct from function execution
+- `this` A reserved JavaScript keyword, used to identify which object is being referenced. Sometimes this is the `global object`, other times it has a smaller scope. The value of `this` will change depending on how it is used.
 
 ## Defining rules about "this"
 
@@ -22,35 +22,35 @@ As we have discussed earlier, the keyword *this* in JavaScript can be confusing.
 <section class="call-to-action">
 ### In Pairs
 
-Consider the following `Unicorn` class:
+Consider the following `createUnicorn` function:
 
 ```javascript
-class Unicorn {
-  constructor(name, color) {
-    // What is logged here?
-    console.log(this);  
-
-    this.name = name;
-    this.color = color;
-
-    // What changes about "this"?
-    console.log(this);  
+function createUnicorn(name, color) {
+  // What is logged here?
+  console.log('value of this:', this)
+  
+  
+  return {
+    name: name,
+    color: color,
+    says: function says() {
+    console.log(`${this.name} is my favorite ${this.color} pony, `, 'value of this:', this)
   }
-
-  says() {
-    console.log(`${this.name} is my favorite ${this.color} pony`, this);
-  }
+  // what changes about `this` inside of the object?
+  }  
 }
+
+var newUnicorn = createUnicorn('Baby', 'Black and White')
 ```
 
-* Create a `new` instance of the `Unicorn`.  What rule can we infer about *this* when creating a `new` instance?
+* Create a new `unicorn` object.  What rule can we infer about *this* when creating an object?
 * Now try running it's method, `says`.  What does *this* refer to now?  Has it changed?
 </section>
 
 <section class="answer">
 ### Rule #1  
 
-*this* within function code invoked using the `new` operator refers to the new instance of that object.
+The value of *this* within a standalone function will refer to the global object - in JavaScript, this is the [global `Window` object.](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 </section>
 
 
@@ -62,7 +62,7 @@ When executing a function as a method on an object, *this* refers to that object
 
 ### Let's confirm our theory
 
-To confirm our theory, let's try a different example that uses regular objects instead of classes.   
+To confirm our theory, let's try a different example.
 
 <section class="call-to-action">
 ### In your notebook
@@ -97,7 +97,7 @@ voyager2.logThis();
 ### Takeaway notes  
 
 * We can confirm that our previous two rules still apply.
-* The value of `this` is set when the above ES5 function is executed.
+* The value of `this` is set when the above ES5 function is invoked, rather than where it's declared.
 </section>
 
 <section class="note">
@@ -151,32 +151,6 @@ Taking turns for each prompt in driver/navigator fashion, use the code snippet b
 ```
 </section>
 
-### Are there other rules?
-
-Here's one more scenario to look at
-
-<section class="call-to-action">
-### In Your Console
-
-Run the following command!
-
-```js
-function logThis() {
-  console.log(this);
-}
-
-logThis();
-```
-
-* What is the value of this?  What is one final rule we can add that applys to *this*?
-</section>
-
-<section class="answer">
-### Rule #3  
-
-By default, *this* refers to the global object (or in the browser, the window).
-</section>
-
 <section class="note">
 ### Fun Fact
 
@@ -200,7 +174,7 @@ Simply put:
 
 ### Reviewing our rules
 
-For our purposes here, these are the three main rules that *this* follows.  You might find exceptions out there especially when looking at ways that you can explicity change the value of *this* using methods like `call`, `apply`, or `bind`, but we'll cover this another time!
+For our purposes here, these are the two main rules that *this* follows.  You might find exceptions out there especially when looking at ways that you can explicity change the value of *this* using methods like `call`, `apply`, or `bind`, but we'll cover this another time!
 
 <section class="call-to-action">
 ### On Your Own
@@ -221,7 +195,7 @@ obj.printThis(); // What will print here? Why?
 print(); // What will print here? Why?
 ```
 
-* Take note of what happens before checking it in your console!
+* Make predictions before checking it in your console!
 </section>
 
 ## The difference between `function () {}` and `() => {}`
@@ -262,13 +236,12 @@ vampire.whatDoYouDislike()
 
 On a high level, here's what to remember:
 
-1. There are three main rules that apply to the keyword *this*.
-* *this* within function code invoked using the `new` operator refers to the new instance of that object.
+1. There are two main rules that apply to the keyword *this*.
 * When executing a function as a method on an object, *this* refers to that object.
 * By default, *this* refers to the global object (or in the browser, the window).
 2. When considering using a traditional function vs an arrow function note that:
 *  `function () {}`: The value of _this_ is set when the function is *executed*.
-* `() => {}`: The value of _this_ is set when the function is *created*.
+* `() => {}`: The value of _this_ is set when the function is *declared*.
 </section>
 
 <section class="checks-for-understanding">
