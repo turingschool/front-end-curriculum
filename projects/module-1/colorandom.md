@@ -5,7 +5,7 @@ title: ColoRandom - Group
 ## Learning Goals
 
 * Write semantic HTML and efficient CSS to form a usable UI
-* Write clean, DRY JavaScript and leverage classes, creating and using an effective data model
+* Write clean, DRY JavaScript and leverage functions, creating and using an effective data model
 * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 * Refine your collaboration skills
 
@@ -22,7 +22,7 @@ Additionally, as your first group project, this will give you a chance to contin
 To begin, choose ONE TEAM MEMBER to do the following:
 
 1. Create a Slack DM with you, all project teammates, and your assigned project manager.
-2. Locally, create a new folder containing an empty `index.html` file, a blank `scripts.js` file, and an empty `styles.css` file.
+2. Locally, create a new folder containing an empty `index.html` file, a blank `main.js` file, and an empty `styles.css` file.
 3. Run `git init` in your terminal (make sure your working directory is your project folder).
 4. Create an initial commit.
 5. On GitHub, create a new repository. Follow the written instructions on GitHub to add the repo's remote to your local project, and push your initial commit up to GitHub.
@@ -52,13 +52,11 @@ Then, as a team:
 
 - When the page loads, we should see:
   -  a title
-  -  5 colors labeled with their hex codes, hardcoded for now
+  -  5 colors labeled with their hex codes, hardcoded to match the colors in the screenshot above for now
 
-You should be matching the comp closely. Act like you're a frontend dev on a team and this is the design you've been given to match. Details and spacing matter! 
-
-Comp Details:
-  - background color: #E7F1F1
-  - font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
+You should be matching the comp closely. Act like you're a frontend dev on a team and this is the design you've been given to match. Details and spacing matter! Comp notes:
+  - Background color: `#E7F1F1`
+  - Font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
 
 ### Iteration 1 - Generating Random Palettes
 
@@ -104,13 +102,13 @@ Note: Saved palettes do NOT need to persist on page load
 - Add a delete button next to each saved palette to match the design above
 - When a saved palette's delete button is clicked:
   - the palette is removed from your Data Model
-  - that palette is removed from the page
+  - the palette is removed from the page
 
 Note: [The delete icon can be found here!](https://drive.google.com/drive/folders/1ZX31xVFdRAsLPzsL8G2_ujNQNXgFmKxD?usp=sharing)
 
 ### Iteration 5 - Editing Saved Palettes
 
-![iteration 5](./assets/colorandom/iteration5.png)
+![iteration 5](./assets/colorandom/iteration%205.png)
 
 - When a user clicks on a saved palette, it should appear on the main part of the page
 - From there, a user can change the palette by locking/unlocking colors and clicking `New Palette`
