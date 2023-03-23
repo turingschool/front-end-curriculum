@@ -46,76 +46,67 @@ Then, as a team:
 
 ## Progression
 
-### Iteration 0 - HTML & CSS 
+### Iteration 0 - Basic Layout
 
-<img src="./assets/colorandom/initial-view.png" alt="Initial view">
+![iteration 0](./assets/colorandom/iteration0.png)
 
 - When the page loads, we should see:
   -  a title
-  -  5 colors labeled with their hex codes, with an unlocked lock emoji next to each hex code
-      -  Hardcode these for now
-  -  2 buttons (one to get a new random palette, one to save the displayed palette)
-  -  a section for displaying saved palettes (later iteration)
+  -  5 colors labeled with their hex codes, hardcoded for now
 
-The CSS in this iteration should mostly focus on LAYOUT (positioning), rather than STYLE (fonts and colors).
+You should be matching the comp closely. Act like you're a frontend dev on a team and this is the design you've been given to match. Details and spacing matter!
 
-**Note: The image above is only a wireframe. You are not expected to match it perfectly!** It simply provides you an idea of the basic layout and elements we expect to see.
+### Iteration 1 - Generating Random Palettes
 
-### Iteration 1 - OOP
+![iteration 1](./assets/colorandom/iteration1.png)
 
-- Write two classes: Color and Palette
-- Color:
-    - A color should have a random hex code
-      - hint: hex codes are 6 characters long, and each character is some value of 0-9 or A-F (ABCDEF0123456789)
-      - Though there are many examples of this logic coded out, this type of crunchy problem solving is well within your skill set! 
-      - Don't look up how to accomplish this; challenge yourselves to use pseudocode to problem-solve through it!
-    - It should have a property of `locked`, whose value is a boolean. Colors begin unlocked.
-- Palette:
-    - Note: on page load, a new instance of Palette will be declared. This Palette will be used until a user decides to save that Palette. Then, a new instance will be created and used until _that_ palette is saved. Continue ad infinitum.
-    - It should have 5 Colors
-    - It should have a unique ID
-    - It should be able to replace the Colors with new Colors
-    - It should be able to lock Colors
-    - It should only replace unlocked Colors
+- Add a button that matches the design above  
+- When the page initially loads, is refreshed, or the button is clicked:  
+  - 5 random and new colors should appear
+  - the color's hex codes should appear below each color box
+  - the current palette should be tracked somewhere in your Data Model and updated when a new palette is generated
 
-### Iteration 2 - Show Random Color Palette
+Hint: Hex codes are 6 characters long, and each character is some value of 0-9 or A-F (ABCDEF0123456789). Don't look up how to generate a random hex code - challenge yourselves to use pseudocode to problem-solve through it. This is where the learning happens!
 
-- Refactor: when the user first visits the page, they see a randomly generated color palette.
-- Every time the user clicks the New Palette button, a new set of colors is created
-    - Note: do not create a new instance of Palette here
-- Every time the user clicks the New Palette button, the new set of colors is displayed
+### Iteration 2 - Locking + Unlocking Colors
 
-Hint: when storing information in HTML to be gathered later, instead of reaching for a `class` or `id`, consider using a [`data attribute`](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)!
+![iteration 2](./assets/colorandom/iteration2.png)
+
+- When the page is initially loaded, all colors should have an unlocked icon in the bottom right corner
+- When a user clicks on the unlocked icon, a locked icon should appear. The locked/unlocked icons should toggle back and forth as the user clicks them.
+- When the `New Palette` button is clicked, only the unlocked colors should change. Locked colors should remain.
+- When the palette is updated, your Data Model should be updated too
 
 ### Iteration 3 - Saving Palettes
 
-<img src="./assets/colorandom/saving-palette.png" alt="Saving palette">
+![iteration 3](./assets/colorandom/iteration3.png)
 
-- When the user clicks Save Palette, the saved palette should show up in the saved palette side of the UI
-    - The palette here does not display hex codes, just blocks of the palette's color
-    - Each saved palette should be rendered with a button to delete the palette (you won't build out this functionality until a later iteration)
+- Add a `Save Palette` button to match the design above
+- Add a `Saved Palettes` section to match the design above
+- When the page loads, there should be no saved palettes
+- When the user clicks `Save Palette`:
+  - the palette should be saved somewhere in your Data Model
+  - the palette should show up in the saved palette section to match the design above
 - A new Palette should automatically be created and displayed in the main part of the app
 
-- _Note: Saved palettes do NOT need to persist on page load_
+Note: Saved palettes do NOT need to persist on page load
 
+### Iteration 4 - Deleting Saved Palettes
 
-### Iteration 4 - Locking colors
+![iteration 4](./assets/colorandom/iteration4.png)
 
-<img src="./assets/colorandom/locking-color.png" alt="Locking a color">
+- Add a delete button next to each saved palette to match the design above
+- When a saved palette's delete button is clicked:
+  - the palette is removed from your Data Model
+  - that palette is removed from the page
 
-- A user should be able to click a color in the Palette and lock it
-    - The open lock icon/emoji should change to be a locked icon/emoji to indicate that the color is locked
+### Iteration 5 - Editing Saved Palettes
 
-<img src="./assets/colorandom/new-palette-locked.png" alt="Updating a palette with locked colors">
+![iteration 5](./assets/colorandom/iteration5.png)
 
-- When the New Palette button is clicked, all the colors update as expected, except for any colors that are locked
-- A user should be able to unlock colors and continue updating the colors with the New Palette button as expected
-
-### Iteration 5 - Deleting saved Palettes
-
-<img src="./assets/colorandom/deleting-saved.png" alt="Deleting a saved palette">
-
-- When a saved palette's delete button is clicked, that palette is removed from the page.
+- When a user clicks on a saved palette, it should appear on the main part of the page
+- From there, a user can change the palette by locking/unlocking colors and clicking `New Palette`
+- If a user saves the updated palette, it should appear as a NEW saved palette. The previous saved palette (the one you were initially editing) should remain untouched in the saved palettes section.
 
 ### Optional Extensions - Getting fancy
 
@@ -124,14 +115,10 @@ Here's a list of possible extensions to implement - but **ONLY IF** your team ha
 You are welcome to add your own extensions. Be sure they are thoughtful in terms of UX/UI, and that they do not break any prior functionality.
 
 Options:
-- A user should be able to click a saved palette and view it and its hex codes in the main viewing area
-  - <img src="./assets/colorandom/viewing-saved.png" alt="Viewing saved palette">
-- Polish your app's styling - get creative.
 - Ensure that all saved palettes are unique.
 - When a user tries to delete a saved palette, have them confirm that they really do want to delete it.
-- Make the UX informative and delightful with one or more microinteractions.
 - Allow users to name their palettes when saving.
-- Allow users to name their palettes wen saving, and allow them to search their saved palettes by name.
+- Allow users to name their palettes when saving, and allow them to search their saved palettes by name.
 - Create a way for users to adjust a color (look to [Coolors](https://coolors.co/app) for inspiration).
 - Research hex codes to figure out how to programmatically generate random palettes that are cohesive and pleasant.
 
