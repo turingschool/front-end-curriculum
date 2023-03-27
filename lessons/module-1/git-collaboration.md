@@ -136,7 +136,7 @@ Examples of good commit messages:
 - **Fetch all remote branches**
   - `git fetch`
 - **Checkout a branch**
-  - `git checkout feature/name-of-partner branch`
+  - `git checkout name-of-branch`
 </section>
 
 ## Continuing Work
