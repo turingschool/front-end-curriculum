@@ -81,7 +81,7 @@ While pseudocoding is a very important part of the problem solving process, it i
 Let's go through an example together. ([Link to repl](https://replit.com/@kaylaewood/problemSolvingexample1#index.js))
 
 ```js
-// Write a function that removes all names that are longer than 5 letters from the array
+// Write a function that takes in an array of names and returns all names that are shorter than 5 letters
 
 var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola", "Mayhew"];
 ```
@@ -90,11 +90,11 @@ var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola
 ### Here's an example for what that problem solving approach could look like:
 
 ```js
-// Write a function that removes all names that are longer than 5 letters from the array
+// Write a function that takes in an array of names and returns all names that are shorter than 5 letters
 
 var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola", "Mayhew"];
 
-// goal: Delete all names that have more than 5 letters
+// goal: Find all names that have less than 5 letters and return that array
 
 // data: Taking an array of strings (names) and returning an array of strings (without 5+ letter names)
 
@@ -102,13 +102,13 @@ var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola
 
 // pseudocode:
   // Create a function
-  // Create a temporary array to hold short names
+  // Create an array to hold short names
   // Look at each name one at a time from names array
   // Determine how many letters are in each name*
   // If more than 5, do nothing; skip it
   // If 5 or less, push into the short names array
   // Continue until we've gone through every name
-  // Reassign the names array to the short names array
+  // Return the short names array
 
 // research:
   // *How do you find the number of letters in a string? --> .length
@@ -125,7 +125,7 @@ var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola
       }
     }
 
-    names = shortNamesOnly;
+    return shortNamesOnly;
   }
 
 ```
