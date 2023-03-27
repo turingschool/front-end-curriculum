@@ -1,7 +1,7 @@
 ---
 title: Travel Tracker  
 length: 1 week
-tags: javascript, oop, testing
+tags: javascript, testing
 ---
 
 ## Background and Description
@@ -10,10 +10,12 @@ For this project, you will be creating an application to manage and track differ
 
 ## Goals and Objectives
 
-- Use OOP to drive the design of the application and the code
-- Work with an API to send and receive data
-- Solidify the code review process
-- Create a robust test suite that thoroughly tests all functionality of a client-side application
+- Use object and array prototype methods to perform data manipulation
+- Create a clear and accessible user interface
+- Make network requests to retrieve data
+- Implement a robust testing suite using TDD
+- Write DRY, reusable code that follows SRP (Single Responsibility Principle)
+- Collaborate productively and professionally as a team. Ensure all team members are able to be heard and contribute throughout the project
 
 ## Timeline
 
@@ -26,14 +28,28 @@ Tuesday, Week 6 - Project due at 12PM Mountain Time.
 
 # Requirements
 
+## Workflow
+You will want to submit PRs to your accountabilibuddy to:
+
+* You must give your accountabilibuddy collaboration access to your repo.
+* You must submit *at least* 2 PRs to your accountabilibuddy for review.
+* You must wait for your accountabilibuddy to review your PRs, and allow THEM to merge any PRs you submit.
+
+It is up to you to decide what changes warrant a PR – remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you’re struggling with or have questions about or need help with. As an accountabilibuddy, you are responsible for reviewing at least 2 PRs from your partner.
+
+**Please also tag your project manager in any PR you make to your buddy.**
+
 ## Technologies
 
-* **the fetch API** to retrieve and add data
+* **Fetch API** to retrieve and add data
 * **Mocha** and **Chai** for testing your code
+* [**Webpack**](https://frontend.turing.edu/lessons/module-2/build-processes-with-npm-webpack.html)
 
 ## Initial Setup
 
-For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit){:target='blank'} repo. Setup instructions are in the README.  You will also need to clone down this [local server](https://github.com/turingschool-examples/travel-tracker-api){:target='blank'} and have it running in a separate tab in your terminal each time you run your client.
+For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit){:target='blank'} repo. Setup instructions are in the README.  
+
+You will also need to clone down this [local server](https://github.com/turingschool-examples/travel-tracker-api){:target='blank'} and have it running in a separate tab in your terminal each time you run your client.
 
 ### Endpoints
 
@@ -65,23 +81,19 @@ Below are all the endpoints set up for this project. You may not use all of them
 
 ## Iterations
 
+<section class="note">
+### Note
+Consider how past projects specified a 'Data' section and a 'User Stories' section throughout the iterations description. You'll notice that you're only supplied with User Stories below. Analyze each user story to determine what data you'll need to work with and plan what functions you'll create to manipulate that data. 
+
+Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on the data and calculation functions, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there
+</section>
+
 ### 1. Dashboard
 
 **As a traveler:**
 - I should see a dashboard page that shows me:
     - All of my trips (past, upcoming and pending)
     - Total amount I have spent on trips this year. This should be calculated from the trips data and include a travel agent's 10% fee
-
-<section class="note">
-### 3rd Party Libraries
-
-You may choose any of the following 3rd party libraries to incorporate into your app if interested. Please get instructor approval first before choosing to use additional 3rd-party libraries.  
-
-* [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'}
-* [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
-* [InteractJS](https://interactjs.io/){:target='blank'}
-* [DayJS](https://www.npmjs.com/package/dayjs)
-</section>
 
 ### 2. Traveler Interaction
 
@@ -118,7 +130,7 @@ password: travel
 
 **Refer to the "Get single traveler" section from the endpoints table above!**
 
-### 5. Agent Interaction
+### 5. Agent Interaction (extension)
 
 Your app should now support two different types of users.  In addition to having a traveler, you will now add a travel agency.
 
@@ -149,76 +161,127 @@ password: travel
 **Refer to the endpoints table above for *modifying* and *deleting* a single trip**
 
 ## Testing
-You should be testing the correctness of your code throughout your project. Each JavaScript class file in your project should have its own test file.
 
-Your testing suite should test:
+You should NOT use the original data files in the data directory for testing. These are big files, to begin with, and a real-world dataset would have millions of records. That's far too big to use every time you want to run a test.
 
-* Class properties
-* Class methods
+Instead, you should create small, sample datasets that match the structure of the application data and use these for your test data. By creating this sample dataset, you will also know if your functions are working correctly because you can do the calculations by hand with a much smaller dataset.
 
-Remember to test all possible outcomes (happy/sad/etc).  Ask yourself:  
-  - What is the value of each property?  
-  - Does the method return anything?  
-  - Does the method update any properties?
-  - Are there different possible outcomes to test for based on different arguments being passed in?
+You are expected to test:
 
-You are *not expected* to test:
+All functions that do not update the DOM. This means everything in your scripts.js file should be tested.
+Remember to test all possible outcomes (happy/sad/etc). Ask yourself:
 
-* DOM manipulation / DOM manipulating methods (like `document.querySelector(...)`)
-* Fetch calls
+Does the function return anything?
+Are there different possible outcomes to test for based on different arguments being passed in?
+You are not expected to test:
 
-## Workflow
-You will want to submit PRs to your accountabilibuddy to:
+DOM manipulation / DOM manipulating function (like document.querySelector(...))
+Fetch calls
 
-* You must give your accountabilibuddy collaboration access to your repo.
-* You must submit _at least_ 2 PRs to your accountabilibuddy for review.
-* You must wait for your accountabilibuddy to review your PRs, and allow THEM to merge any PRs you submit.
+## Accessibility
 
-It is up to you to decide what changes warrant a PR – remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you’re struggling with or have questions about or need help with. As an accountabilibuddy, you are responsible for reviewing at least 2 PRs from your partner.
+Strive for an accessibility audit score of 100% for the dashboard.
 
-**Please also tag your project manager in any PR you make to your buddy.**
+A user should be able to interact with all functionality of your application by tabbing through it, no use of the trackpad.
 
-## Extensions
+ARIA attributes should be utilized for any UI elements that are not understood by the screen reader
+
+## Additional Extensions
 - The user dashboard should display a countdown to my next trip (if I have any)
 - Allow the travel agent to POST suggestedActivities for user trips (see Endpoints table above). This could be based off of a user's "travelerType" value.
 - Allow the travel agent to create new destinations (see Endpoints table above)
 - Utilize an npm package - requires permission from instructors
+  - Some options include: 
+    * [Micromodal](https://www.npmjs.com/package/micromodal){:target='blank'}
+    * [GlideJS](https://www.npmjs.com/package/@glidejs/glide){:target='blank'}
+    * [InteractJS](https://interactjs.io/){:target='blank'}
+    * [DayJS](https://www.npmjs.com/package/dayjs)
 - Choose your own extension!
 
-## Due Date
+## Minimum Collaboration and Professionalism Expectations
 
-Make sure you submit your project [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link){:target='blank'} by **Tuesday, of Week Six at 12pm Mountain Time**
+- Team holds daily standups throughout project.
+- Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
+- A project board is utilized (and updated throughout the project) with Github issues and labels.
+- Team uses branches, PRs and thorough code reviews to add new code to the main branch.
+- The README is formatted well and at a minimum contains:
+- Overview of project and goals
+- Overview of technologies used, challenges, wins, and any other reflections
+- Screenshots/gifs of your app
+- List of contributors
+- Team collaborates effectively to accomplish the shared goal. Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.
+- Instructors are available to offer support and guidance but conversations around what is and what is not working are expected to be led by the team members themselves.
+
+---
 
 # Rubric
 
-## Specification Adherence
+<section class="answer">
+### Functional Expectations
 
-* 4: The application completes all iterations above and implements one or more of the extensions.
-* 3: The application completes the first 4 iterations above without error. **Note: Must be completed in order to pass.**
-* 2: The application completes the first 2 iterations and is in a usable state, but has some miscellaneous bugs.
-* 1: The application completes only the first iteration, displaying the user's data, but has no additional functionality.
+- Wow: Application fulfills all requirements as well as an extension.
+- Yes: Application fulfills all requirements of iterations 1-3 without bugs. **Note: Must be completed in order to pass**
+- Not Yet: Application crashes or has missing functionality or bugs.
+</section>
 
-## UI/UX & Accessibility
+<section class="answer">
+### UI/UX & Accessibility
 
-* 4: Application has clearly had special consideration around accessibility and usability on devices. Lighthouse accessibility audit is at a 100% and application is fully tabbable.
-* 3: Application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance. UI does not detract from the UX. Lighthouse accessibility audit is at least 90% and application is fully tabbable.
-* 2: The application may be confusing or difficult to use at times.  The UI is incomplete, Accessibility has been considered, but does not have strong accessible features.
-* 1: Application is confusing or difficult to use. The UI is incomplete. Accessibility has not been considered.
+* The application can stand on its own to be used by an instructor without guidance from a developer on the team.
+UI/UX is intuitive and easy to read/use
+* Helpful messaging is displayed to prevent user confusion. For example: For example: If a user searches for a room, but none are available then a message is displayed to indicate that the search worked, nothing is broken, there just aren't any matching rooms available.
+* The Lighthouse accessibility audit score is at least 90%
+* The application is fully tabbable 
 
-## JavaScript Style & OOP
+✨WOW✨ can look like: 
 
-* 4: Application has exceptionally well-factored code with little or no duplication.  The business-logic code driving functionality is cleanly separated from rendering, view-related code.   Excellent usage of `fetch` and updates DOM based on results of network requests.  Handles all scenarios for error handling.
-* 3: Application is thoughtfully put together with some duplication.  Application is organized into classes with some misplaced logic. Business-logic code is mostly separated from view-related code.  Great usage of `fetch` and updates DOM based on results in most scenarios, but may update DOM before a network request is complete.  Handles most scenarios for error handling.
-* 2: Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.  Uses `fetch` effectively for `GET` but does not implement `POST`.  Has little error handling and only `console logs` errors if a network request fails.
-* 1:  Application generates syntax error or crashes during execution.  Application is not separated into classes and there is no separation of business-side logic and view-related code. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity.
+* Design is responsive across small, medium and large breakpoints
+* Special consideration was made around accessibility
+</section>
 
+<section class="answer">
+### Fundamental JavaScript and Style / Fetch Competency Examples
 
-## Testing
+* Code is divided into logical components each with a clean, single responsibility
+* Array prototype methods are used to iterate instead of for loops
+* All DOM manipulation is held in the scripts.js file. No DOM manipulation occurs outside of this file.
+* Variables and functions are consistently and appropriately named
+* Code leverages JavaScript's truthy/falsey principles
+* Demonstrates efforts towards making functions pure when possible. **Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.**
+* Implements GET and POST Fetch requests
+* When utilizing Fetch, the DOM is updated based on the results of that Fetch
+* Most errors are handled and messages are displayed to a user when an error occurs
 
-* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths.  Tests must be passing to be considered.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths.  Tests must be passing to be considered.
-* 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.  Tests must be passing to be considered.
-* 1: There is little or no evidence of testing in the application.
+✨WOW✨ can look like: 
+
+* All data manipulation is cleanly separated from rendering code. 
+* Code has clearly been refactored; functions are DRY and adhere to the Single Responsibility Principle. 
+* All errors are handled and messages are displayed to a user when an error occurs
+* Effectively implements one or more closure throughout project.
+</section>
+
+<section class="answer">
+### Testing
+
+* Tests cover most features and test for happy paths
+* Test suite is organized.
+* Each function is tested in its own it block.
+* Each path is tested in its own it block.
+* Rather than using the production data, small sample data is stored in its own file and used for testing.
+* Sample data has been crafted to create the scenarios needed for thorough testing.
+* beforeEach hook is used to DRY up test files
+* There are no failing/pending tests upon submission 
+
+✨WOW✨ can look like: 
+
+* All scenarios/outcomes/paths are tested for functions, including happy and sad paths.
+* Application has a robust and thorough test suite that covers all functions that do not update the dom.
+</section>
+
+## Collaboration and Professionalism
+
+See "Minimum Collaboration and Professionalism Expectations" above.
+While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing.
 
 # Evaluation
 
