@@ -167,6 +167,13 @@ Yes! As long as a branch is pushed up to GitHub, _anyone_ can pull it down and w
 - When you have successfully solved a bug or fixed something broken
 
 <section class="answer">
+### Merge Conflict? Read here!
+
+- [This video](https://www.youtube.com/watch?v=j0MW7jSc25I)walks you through a merge conflict
+- You can also reference [this lesson](https://frontend.turing.edu/lessons/module-1/git-merge-conflicts.html)
+</section>
+
+<section class="answer">
 ### Other Git Tips & Infos 
  
 - `git branch`  
