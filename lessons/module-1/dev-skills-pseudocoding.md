@@ -46,25 +46,17 @@ Pseudocode functions as a way for you to work logically through a problem, even 
 
 We will write pseudocode in the space where we will eventually write code. We won't just think about it in our heads. This is important! Draw a line on your map! If you try to memorize your route through unfamiliar cities and roads, when you're actually driving, you're sure to forget something or to get lost or distracted. If you wrote it down, you can be reminded of where you're trying to go.
 
+<section class="call-to-action">
 ### Reflect
 
 Take some time to reflect on the following questions and then we will share out as a class.
 
-- Why do you think we write our pseudocode down? Can you think of a time where not writing something down ended up backfiring?
-
-<section class="call-to-action">
-### Your First Pseudocode
-
-In your notebook, write down step by step instructions on how to get in your car and back out of the driveway. Below is the first step to show you the level of detail we are looking for.
-```
-Step 1: Point your car keys in the direction of your car and click the button that has an unlock symbol. You should hear a beep to indicate the car is unlocked.
-...
-```
+Why do you think we write our pseudocode down? Can you think of a time where not writing something down ended up backfiring?
 </section>
 
-While pseudocoding is a very important part of the problem solving process, it is not enough on its own. Let's look at the full process.
-
 ## Problem Solving Process
+
+While pseudocoding is a very important part of the problem solving process, it is not enough on its own. Let's look at the full process.
 
 1. **Restate the goal** in your own words. Take note of EXACTLY what the final output(s) should be.
 2. **Consider the data** that you’re working with. What data types are you working with? Are there any parameters/arguments? What data in particular do you need access to?
