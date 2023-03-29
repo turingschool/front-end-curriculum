@@ -207,7 +207,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 ✨WOW✨ can look like:  
 
-- Functions are pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.* 
+- Functions are [pure](https://frontend.turing.edu/lessons/module-1/js-pure-functions.html){:target="_blank"} when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.* 
 </section>
 
 <section class="answer">

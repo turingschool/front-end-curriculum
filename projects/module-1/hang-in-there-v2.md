@@ -5,7 +5,7 @@ title: Hang In There - Pair
 ## Learning Goals
 
 * Write clean, DRY JavaScript
-  * Build out functionality using functions that show trends toward SRP and purity
+  * Build out functionality using functions that show trends toward SRP
   * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 * Begin to understand the connection between HTML, CSS and JavaScript
   * Practice reading, understanding, and using provided code
@@ -178,7 +178,7 @@ And evaluation of these concepts is assisted through the final graded section:
 ### JavaScript
 
 This project gives the team room to practice the following JavaScript concepts:  
-- Functional Programming concepts such as pure functions
+- Functional Programming concepts including creating dynamic functions
 - DOM (Document Object Model) manipulation
 - Style
   - SRP (Single Responsibility Principle) and DRY (don't repeat yourself) conventions
@@ -195,7 +195,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 ✨WOW✨ can look like:  
 
-- Functions are pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.* 
+- Functions are [pure](https://frontend.turing.edu/lessons/module-1/js-pure-functions.html){:target="_blank"} when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.* 
 </section>
 
 <section class="answer">
