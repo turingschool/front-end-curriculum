@@ -5,7 +5,7 @@ title: RomCom - Pair
 ## Learning Goals
 
 * Write clean, DRY JavaScript
-  * Build out functionality using functions that show trends toward SRP and purity
+  * Build out functionality using functions that show trends toward SRP
   * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 * Explore the connection between HTML, CSS, and JavaScript
   * Practice reading, understanding, and using provided code
@@ -190,7 +190,7 @@ And evaluation of these concepts is assisted through the final graded section:
 ### JavaScript
 
 This project gives the team room to practice the following JavaScript concepts:  
-- Functional Programming concepts such as pure functions
+- Functional Programming concepts including creating dynamic functions
 - DOM (Document Object Model) manipulation
 - Style
   - SRP (Single Responsibility Principle) and DRY (don't repeat yourself) conventions
