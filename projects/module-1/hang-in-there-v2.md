@@ -251,10 +251,13 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ✨WOW✨ can look like:
 
 - The team's norming document is regularly revisted and revised as better perspective is gained
-- When conflicts arise, the team works together to find ways to re-focus on individual and group learning objectives
-</section>
+- When conflicts arise, the team works together to find ways to re-focus on individual and group learning objectives  
 
 Note: ⬆️this⬆️ kind of collaboration can be difficult to assess, but know that this is a crucial and vital part of your learning and marketability as a developer! 
+</section>
+
+#### Important Note on Collaboration and Professionalism:
+Every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing.
 
 <section class="answer">
 ### Git competency examples
