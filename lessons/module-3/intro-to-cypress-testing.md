@@ -99,8 +99,39 @@ Although often compared to Selenium, another common automated testing framework 
 You'll note that Selenium seems to have more support and honestly, it has been around for longer.  However, Cypress is gaining a significant amount of support in recent years and has some distinct advantages including it runs in the same run loop as the app, it's built on a Node server process, and it allows you to read / alter web traffic giving you the ability to modify everything that comes in and out of the browser.  You can read more about the differences and why Cypress is becoming a major game changer in the industry [here](https://docs.cypress.io/guides/overview/key-differences.html#Debuggability){:target='blank'}.
 </section> -->
 
+### The Big Picture
+We'll be using Cypress in two main ways:
+1. Simulating the user's interactions with the various features of our application, making assertions about when and where the user will encounter the various elements on the DOM
+2. Intercepting the real network requests our application makes, and simulating a mock _response_ from our API when a real network request is made. 
+
+Consider the following code and write down your responses to the questions:
+ - Which parts of this code align with the 1st way we'll be using Cypress? How do you know?
+ - Which parts of this code align with the 2nd way we'll be using Cypress? How do you know?
+- What are some reasons we might want to avoid hitting our API with our test suite?
+- How do these tests give us confidence that our app is working as intended?
+
+```js
+  beforeEach(() => {
+    cy.intercept("GET", "https://api.openbrewerydb.org/breweries?by_city=savannah", {
+      statusCode: 200,
+      fixture: "savannah_breweries"
+    })
+    .visit("http://localhost:3000/")
+  });
+
+  it("should have a form to enter a city and display that city's breweries", () => {
+    cy.get("input[name='city']").type("savannah")
+    .get(".search-button").click()
+    .get(".breweries-container").find(".brewery-card-wrapper").should("have.length", 2)
+    .get(".brewery-name").first().contains("h2", "Moon River Brewing Co")
+    .get(".brewery-name").last().contains("h2", "Two Tides Brewing Company")
+    .get(".brewery-location").first().contains("p", "Savannah, Georgia")
+  });
+```
+
 <section class="call-to-action">
 ### Enough Talk Already!
+Now that we understand the big picture, let's get into the details!
 
 Let's experiment ourselves and see how great Cypress is firsthand.  Using the app provided earlier, **Feedback Loop**, let's experiment testing it with Cypress!
 

@@ -46,25 +46,17 @@ Pseudocode functions as a way for you to work logically through a problem, even 
 
 We will write pseudocode in the space where we will eventually write code. We won't just think about it in our heads. This is important! Draw a line on your map! If you try to memorize your route through unfamiliar cities and roads, when you're actually driving, you're sure to forget something or to get lost or distracted. If you wrote it down, you can be reminded of where you're trying to go.
 
+<section class="call-to-action">
 ### Reflect
 
 Take some time to reflect on the following questions and then we will share out as a class.
 
-- Why do you think we write our pseudocode down? Can you think of a time where not writing something down ended up backfiring?
-
-<section class="call-to-action">
-### Your First Pseudocode
-
-In your notebook, write down step by step instructions on how to get in your car and back out of the driveway. Below is the first step to show you the level of detail we are looking for.
-```
-Step 1: Point your car keys in the direction of your car and click the button that has an unlock symbol. You should hear a beep to indicate the car is unlocked.
-...
-```
+Why do you think we write our pseudocode down? Can you think of a time where not writing something down ended up backfiring?
 </section>
 
-While pseudocoding is a very important part of the problem solving process, it is not enough on its own. Let's look at the full process.
-
 ## Problem Solving Process
+
+While pseudocoding is a very important part of the problem solving process, it is not enough on its own. Let's look at the full process.
 
 1. **Restate the goal** in your own words. Take note of EXACTLY what the final output(s) should be.
 2. **Consider the data** that you’re working with. What data types are you working with? Are there any parameters/arguments? What data in particular do you need access to?
@@ -81,7 +73,7 @@ While pseudocoding is a very important part of the problem solving process, it i
 Let's go through an example together. ([Link to repl](https://replit.com/@kaylaewood/problemSolvingexample1#index.js))
 
 ```js
-// Write a function that removes all names that are longer than 5 letters from the array
+// Write a function that takes in an array of names and returns all names that are shorter than 5 letters
 
 var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola", "Mayhew"];
 ```
@@ -90,11 +82,11 @@ var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola
 ### Here's an example for what that problem solving approach could look like:
 
 ```js
-// Write a function that removes all names that are longer than 5 letters from the array
+// Write a function that takes in an array of names and returns all names that are shorter than 5 letters
 
 var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola", "Mayhew"];
 
-// goal: Delete all names that have more than 5 letters
+// goal: Find all names that have less than 5 letters and return that array
 
 // data: Taking an array of strings (names) and returning an array of strings (without 5+ letter names)
 
@@ -102,13 +94,13 @@ var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola
 
 // pseudocode:
   // Create a function
-  // Create a temporary array to hold short names
+  // Create an array to hold short names
   // Look at each name one at a time from names array
   // Determine how many letters are in each name*
   // If more than 5, do nothing; skip it
   // If 5 or less, push into the short names array
   // Continue until we've gone through every name
-  // Reassign the names array to the short names array
+  // Return the short names array
 
 // research:
   // *How do you find the number of letters in a string? --> .length
@@ -125,7 +117,7 @@ var names = ["Sophia", "Brandt", "Arcturus", "Evelyn", "Hilde", "Lorenzo", "Xola
       }
     }
 
-    names = shortNamesOnly;
+    return shortNamesOnly;
   }
 
 ```

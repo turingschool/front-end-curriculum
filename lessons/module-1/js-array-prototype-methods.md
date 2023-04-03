@@ -39,7 +39,7 @@ For the array above,
 <div class="answer">
 ### Discuss
 
-- Consider the processes you just thought through. Both of the challenges above are based on array prototype methods. One is based on a mutator method and one is based on an accessor method. Which do you think was which? Why? (Refer to the vocabular words for a reminder on what `Mutator` and `Accessor` mean.)
+- Consider the processes you just thought through. Both of the challenges above are based on array prototype methods. One is based on a mutator method and one is based on an accessor method. Which do you think was which? Why? (Refer to the vocabulary terms above for a reminder on what `Mutator` and `Accessor` mean.)
 
 </div>
 </section>

@@ -5,13 +5,14 @@ title: Hang In There - Pair
 ## Learning Goals
 
 * Write clean, DRY JavaScript
-  * Use a provided createPoster function to create your `poster`s
+  * Build out functionality using functions that show trends toward SRP
   * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 * Begin to understand the connection between HTML, CSS and JavaScript
   * Practice reading, understanding, and using provided code
 * Build an understanding of writing code collaboratively
   * Document changes with atomic commits & thorough code reviews
-  * Communicate, troubleshoot, and plan effectively as a team
+  * Communicate, troubleshoot, and plan effectively as a team  
+  * Ensure all team members are able to be heard and contribute throughout the project
 
 ## Overview
 
@@ -19,19 +20,20 @@ Sometimes you need a pick me up. Remember those motivational posters that were a
 
 ## Set Up
 
-To begin, choose one partner to do the following:
+To begin, choose **ONE** partner to do the following:
 
 1. Fork the repository found here: [https://github.com/turingschool-examples/hang-in-there-boilerplate/](https://github.com/turingschool-examples/hang-in-there-boilerplate/).
 2. Clone down your new, forked repo.  While cloning, name it what you want your project to be named, should not include "boilerplate". `git clone <url> <newNameYouWantItToHave>`
 3. `cd` into the repository
 4. Open it in your text editor
-5. Add all project partners and your assigned instructor as collaborators on the repository
+5. View the project in the browser by running `open index.html` in your terminal
+6. Add all project partners and your assigned instructor as collaborators on the repository
 
 Then, as a team:
 
-* Explore the repository to see what's going on in the code
-* What pieces of code might you use to complete iterations, and what pieces will you have to create?
-* All of your JavaScript will be written in `domUpdates.js` - you will not need to change any other files.
+* Explore the repository to see what's going on in the code. Look at each file.
+  * What pieces of code might you use to complete iterations, and what pieces will you have to create?
+* All of your JavaScript will be written in `main.js` - you will not need to change any other files.
 
 ## Day 1 Deliverables
 
@@ -176,7 +178,7 @@ And evaluation of these concepts is assisted through the final graded section:
 ### JavaScript
 
 This project gives the team room to practice the following JavaScript concepts:  
-- Functional Programming concepts such as pure functions
+- Functional Programming concepts including creating dynamic functions
 - DOM (Document Object Model) manipulation
 - Style
   - SRP (Single Responsibility Principle) and DRY (don't repeat yourself) conventions
@@ -185,16 +187,15 @@ This project gives the team room to practice the following JavaScript concepts:
 Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 
 <section class="answer">
-### Functional Programing competency examples
+### Functional Programming competency examples
 
 - Project makes use of the provided `createPoster` function, creating objects to encapsulate & store unique data
 - Team considers when and how to create poster objects or update existing poster objects, coming to a clear and consistent decision
-- Team effectively creates/accesses object properties when applicable
-- Team effectively invokes object methods when applicable
+- Functions are DRY and demonstrate SRP
 
 ✨WOW✨ can look like:  
 
-- Creating effective, clean methods in the provided createPoster function to manipulate object properties
+- Functions are [pure](https://frontend.turing.edu/lessons/module-1/js-pure-functions.html){:target="_blank"} when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.* 
 </section>
 
 <section class="answer">
@@ -214,15 +215,13 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 - The main JS file is organized thoughtfully (DOM variables together, event listeners together, functions together)
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
-- Functions are pure, DRY, and demonstrate SRP
-- Variable and function naming is meaningful & readable
+- Variable and function naming is meaningful, readable and consistent
 - JS is formatted according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
 - Only semantic/organizational comments remain in file (if any); no "dead" commented out code remain in the file
 
 ✨WOW✨ can look like:
 
 - Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
-- Functions are pure
 - Code has clearly been refactored; no functions show evidence of vestigial functionality (aka when functionality changes, all relevant code is updated)
 - No extraneous or unused lines of code
 </section>
@@ -304,7 +303,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ### Reading Code competency examples
 
 - The team takes time to thoroughly understand the provided code
-- Provided code is used effectively (the provided Class, the provided assets, the provided HTML & CSS)
+- Provided code is used effectively (the provided createPoster function, the provided assets, the provided HTML & CSS)
   - The team does not have to directly edit the HTML or CSS file
   - The team does not ignore provided styling
   - No code is added that makes the provided code redundant
