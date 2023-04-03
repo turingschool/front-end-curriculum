@@ -238,7 +238,7 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 ### UI/UX & Accessibility
 
 * The application can stand on its own to be used by an instructor without guidance from a developer on the team.
-UI/UX is intuitive and easy to read/use
+* UI/UX is intuitive and easy to read/use
 * Helpful messaging is displayed to prevent user confusion. For example: For example: If a user searches for a room, but none are available then a message is displayed to indicate that the search worked, nothing is broken, there just aren't any matching rooms available.
 * The Lighthouse accessibility audit score is at least 90%
 * The application is fully tabbable 
