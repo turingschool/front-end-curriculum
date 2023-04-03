@@ -15,7 +15,6 @@ For this project, you will be creating an application to manage and track differ
 - Make network requests to retrieve data
 - Implement a robust testing suite using TDD
 - Write DRY, reusable code that follows SRP (Single Responsibility Principle)
-- Collaborate productively and professionally as a team. Ensure all team members are able to be heard and contribute throughout the project
 
 ## Timeline
 
@@ -233,7 +232,7 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 <section class="answer">
 ### UI/UX & Accessibility
 
-* The application can stand on its own to be used by an instructor without guidance from a developer on the team.
+* The application can stand on its own to be used by an instructor without guidance from the developer
 * UI/UX is intuitive and easy to read/use
 * Helpful messaging is displayed to prevent user confusion. For example: For example: If a user searches for a room, but none are available then a message is displayed to indicate that the search worked, nothing is broken, there just aren't any matching rooms available.
 * The Lighthouse accessibility audit score is at least 90%
