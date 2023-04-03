@@ -229,8 +229,8 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 <section class="answer">
 ### Functional Expectations
 
-- Wow: Application fulfills all requirements as well as an extension.
-- Yes: Application fulfills all requirements of iterations 1-3 without bugs. **Note: Must be completed in order to pass**
+- Wow: Application fulfills all requirements as well as Iteration 5 or an extension.
+- Yes: Application fulfills all requirements of iterations 1-4 without bugs. **Note: Must be completed in order to pass**
 - Not Yet: Application crashes or has missing functionality or bugs.
 </section>
 
