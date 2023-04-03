@@ -225,8 +225,8 @@ For the rubric sections below, you will be scored as Wow, Yes or Not Yet dependi
 <section class="answer">
 ### Functional Expectations
 
-- Wow: Application fulfills all requirements as well as an extension.
-- Yes: Application fulfills all requirements of iterations 1-3 without bugs. **Note: Must be completed in order to pass**
+- Wow: Application fulfills all requirements as well as Iteration 5.
+- Yes: Application fulfills all requirements of iterations 1-4 without bugs. **Note: Must be completed in order to pass**
 - Not Yet: Application crashes or has missing functionality or bugs.
 </section>
 
