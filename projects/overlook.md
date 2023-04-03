@@ -192,19 +192,15 @@ A user should be able to interact with all functionality of your application by 
 ARIA attributes should be utilized for any UI elements that are not understood by the screen reader
 
 
-## Minimum Collaboration and Professionalism Expectations
+## Minimum Professionalism Expectations
 
-- Team holds daily standups throughout project.
-- Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
+- Commits are atomic and frequent, effectively documenting the evolution/progression of the application.
 - A project board is utilized (and updated throughout the project) with Github issues and labels.
-- Team uses branches, PRs and thorough code reviews to add new code to the main branch.
+- Student uses branches, PRs and thorough code reviews to add new code to the main branch.
 - The README is formatted well and at a minimum contains:
 - Overview of project and goals
 - Overview of technologies used, challenges, wins, and any other reflections
 - Screenshots/gifs of your app
-- List of contributors
-- Team collaborates effectively to accomplish the shared goal. Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.
-- Instructors are available to offer support and guidance but conversations around what is and what is not working are expected to be led by the team members themselves.
 
 ---
 
@@ -234,7 +230,7 @@ For the rubric sections below, you will be scored as Wow, Yes or Not Yet dependi
 ### UI/UX & Accessibility
 
 * The application can stand on its own to be used by an instructor without guidance from a developer on the team.
-UI/UX is intuitive and easy to read/use
+* UI/UX is intuitive and easy to read/use
 * Helpful messaging is displayed to prevent user confusion. For example: For example: If a user searches for a room, but none are available then a message is displayed to indicate that the search worked, nothing is broken, there just aren't any matching rooms available.
 * The Lighthouse accessibility audit score is at least 90%
 * The application is fully tabbable 
@@ -283,11 +279,6 @@ UI/UX is intuitive and easy to read/use
 * All scenarios/outcomes/paths are tested for functions, including happy and sad paths.
 * Application has a robust and thorough test suite that covers all functions that do not update the dom.
 </section>
-
-## Collaboration and Professionalism
-
-See "Minimum Collaboration and Professionalism Expectations" above.
-While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing.
 
 # Evaluation
 
