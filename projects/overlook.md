@@ -263,7 +263,7 @@ For the rubric sections below, you will be scored as Wow, Yes or Not Yet dependi
 </section>
 
 <section class="answer">
-  <h3> things </h3>
+### Testing
 
 * Tests cover most features and test for happy paths
 * Test suite is organized.
