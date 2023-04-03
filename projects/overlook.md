@@ -263,7 +263,6 @@ For the rubric sections below, you will be scored as Wow, Yes or Not Yet dependi
 * Each path is tested in its own it block.
 * Rather than using the production data, small sample data is stored in its own file and used for testing.
 * Sample data has been crafted to create the scenarios needed for thorough testing.
-* beforeEach hook is used to DRY up test files
 * Tests are DRY (Ask yourself - what tools can I use to limit repetitive code?)
 * There are no failing/pending tests upon submission 
 
