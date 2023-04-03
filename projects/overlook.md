@@ -260,7 +260,6 @@ For the rubric sections below, you will be scored as Wow, Yes or Not Yet dependi
 * Application has a robust and thorough test suite that covers functions that do not update the dom.
 * Testing includes happy and sad paths
 * Test suite is organized - a new developer could easily identify what function is causing a test to fail
-* Each path is tested in its own it block.
 * Rather than using the production data, small sample data is stored in its own file and used for testing.
 * Sample data has been crafted to create the scenarios needed for thorough testing.
 * Tests are DRY (Ask yourself - what tools can I use to limit repetitive code?)
