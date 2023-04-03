@@ -217,6 +217,16 @@ ARIA attributes should be utilized for any UI elements that are not understood b
 # Rubric
 
 <section class="answer">
+### Does the project demonstrate student understanding of the learning goals & concepts?
+
+Projects will answer that question, being marked as yes, not yet, and wow. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
+
+The overall project outcome (yes, not yet, wow) is determined by “averaging” each section’s outcome. You can think of a “yes” being worth a 1, a “not yet” being worth a 0, and a “wow” being worth a 2.
+
+For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below). Please note that for this project, iterations 1-3 must be completed without bugs. 
+</section>
+
+<section class="answer">
 ### Functional Expectations
 
 - Wow: Application fulfills all requirements as well as an extension.
