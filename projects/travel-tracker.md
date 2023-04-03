@@ -198,19 +198,15 @@ ARIA attributes should be utilized for any UI elements that are not understood b
     * [DayJS](https://www.npmjs.com/package/dayjs)
 - Choose your own extension!
 
-## Minimum Collaboration and Professionalism Expectations
+## Minimum Professionalism Expectations
 
-- Team holds daily standups throughout project.
-- Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
+- Commits are atomic and frequent, effectively documenting the evolution/progression of the application.
 - A project board is utilized (and updated throughout the project) with Github issues and labels.
-- Team uses branches, PRs and thorough code reviews to add new code to the main branch.
+- Student uses branches, PRs and thorough code reviews to add new code to the main branch.
 - The README is formatted well and at a minimum contains:
 - Overview of project and goals
 - Overview of technologies used, challenges, wins, and any other reflections
 - Screenshots/gifs of your app
-- List of contributors
-- Team collaborates effectively to accomplish the shared goal. Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.
-- Instructors are available to offer support and guidance but conversations around what is and what is not working are expected to be led by the team members themselves.
 
 ---
 
@@ -287,11 +283,6 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 * All scenarios/outcomes/paths are tested for functions, including happy and sad paths.
 * Application has a robust and thorough test suite that covers all functions that do not update the dom.
 </section>
-
-## Collaboration and Professionalism
-
-See "Minimum Collaboration and Professionalism Expectations" above.
-While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing.
 
 # Evaluation
 
