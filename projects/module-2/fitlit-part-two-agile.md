@@ -60,7 +60,7 @@ When you’ve finished your retro, DM your project manager two things from your 
 
 ### Catching Up on Functionality
 
-You must complete all of the remaining user stories from the [FitLit Part 1 Spec](https://frontend.turing.edu/projects/fitlit-part-one-agile.html). If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part 1 requirements you must also ***implement your instructor’s feedback*** and add ***“Iteration 7” and “Iteration 8”***.
+You must complete all of the remaining user stories from the [FitLit Part 1 Spec](https://frontend.turing.edu/projects/module-2/fitlit-part-one-agile.html). If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part 1 requirements you must also ***implement your instructor’s feedback*** and add ***“Iteration 7” and “Iteration 8”***.
 </section>
 
 
