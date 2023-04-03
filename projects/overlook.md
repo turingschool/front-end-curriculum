@@ -218,6 +218,8 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 
 For the rubric sections below, you will be scored as Wow, Yes or Not Yet depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency. The following examples are not checklists to complete! There are just some examples.
 
+While M2 rubrics do not have a separate section for WOWs like in M1, there are a few WOW examples noted throughout.  In addition to these WOW bullets, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections. 
+
 <section class="answer">
 ### Functional Expectations
 
