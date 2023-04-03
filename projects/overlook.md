@@ -233,7 +233,8 @@ For the rubric sections below, you will be scored as Wow, Yes or Not Yet dependi
 * UI/UX is intuitive and easy to read/use
 * Helpful messaging is displayed to prevent user confusion. For example: For example: If a user searches for a room, but none are available then a message is displayed to indicate that the search worked, nothing is broken, there just aren't any matching rooms available.
 * The Lighthouse audit tool was used to improve accessibility.
-* The application is fully tabbable 
+* Users who only use keyboards can still navigate this application
+* Users who use a screen reader can still navigate this application
 * Utilizes ARIA attributes on interactive elements when **no other tool** allows for accessible content
 * Wow option: design is responsive across small, medium and large breakpoints
 </section>
