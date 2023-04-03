@@ -232,13 +232,9 @@ For the rubric sections below, you will be scored as Wow, Yes or Not Yet dependi
 * The application can stand on its own to be used by an instructor without guidance from the developer
 * UI/UX is intuitive and easy to read/use
 * Helpful messaging is displayed to prevent user confusion. For example: For example: If a user searches for a room, but none are available then a message is displayed to indicate that the search worked, nothing is broken, there just aren't any matching rooms available.
-* The Lighthouse accessibility audit score is at least 90%
+* The Lighthouse audit tool was used to improve accessibility.
 * The application is fully tabbable 
-
-✨WOW✨ can look like: 
-
-* Design is responsive across small, medium and large breakpoints
-* Special consideration was made around accessibility
+* Wow option: design is responsive across small, medium and large breakpoints
 </section>
 
 <section class="answer">
@@ -246,38 +242,30 @@ For the rubric sections below, you will be scored as Wow, Yes or Not Yet dependi
 
 * Code is divided into logical components each with a clean, single responsibility
 * Array prototype methods are used to iterate instead of for loops
-* All DOM manipulation is held in the scripts.js file. No DOM manipulation occurs outside of this file.
+* Project is organized to separate concerns (Ask yourself - where should my DOM manipulation live?)
 * Variables and functions are consistently and appropriately named
 * Code leverages JavaScript's truthy/falsey principles
 * Demonstrates efforts towards making functions pure when possible. **Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.**
 * Implements GET and POST Fetch requests
 * When utilizing Fetch, the DOM is updated based on the results of that Fetch
-* Most errors are handled and messages are displayed to a user when an error occurs
+* Errors are handled and messages are displayed to a user when an error occurs
+* Wow option: Effectively implements one or more closure throughout project.
 
-✨WOW✨ can look like: 
-
-* All data manipulation is cleanly separated from rendering code. 
-* Code has clearly been refactored; functions are DRY and adhere to the Single Responsibility Principle. 
-* All errors are handled and messages are displayed to a user when an error occurs
-* Effectively implements one or more closure throughout project.
 </section>
 
 <section class="answer">
 ### Testing
 
-* Tests cover most features and test for happy paths
-* Test suite is organized.
-* Each function is tested in its own it block.
+* Application has a robust and thorough test suite that covers functions that do not update the dom.
+* Testing includes happy and sad paths
+* Test suite is organized - a new developer could easily identify what function is causing a test to fail
 * Each path is tested in its own it block.
 * Rather than using the production data, small sample data is stored in its own file and used for testing.
 * Sample data has been crafted to create the scenarios needed for thorough testing.
 * beforeEach hook is used to DRY up test files
+* Tests are DRY (Ask yourself - what tools can I use to limit repetitive code?)
 * There are no failing/pending tests upon submission 
 
-✨WOW✨ can look like: 
-
-* All scenarios/outcomes/paths are tested for functions, including happy and sad paths.
-* Application has a robust and thorough test suite that covers all functions that do not update the dom.
 </section>
 
 # Evaluation
