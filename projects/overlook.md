@@ -210,6 +210,16 @@ ARIA attributes should be utilized for any UI elements that are not understood b
 
 # Rubric
 
+<section class="answer">
+### Does the project demonstrate student understanding of the learning goals & concepts?
+
+Projects will answer that question, being marked as yes, not yet, and wow. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
+
+The overall project outcome (yes, not yet, wow) is determined by “averaging” each section’s outcome. You can think of a “yes” being worth a 1, a “not yet” being worth a 0, and a “wow” being worth a 2.
+
+For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below). Please note that for this project, iterations 1-3 must be completed without bugs. 
+</section>
+
 For the rubric sections below, you will be scored as Wow, Yes or Not Yet depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency. The following examples are not checklists to complete! There are just some examples.
 
 <section class="answer">
@@ -257,7 +267,7 @@ UI/UX is intuitive and easy to read/use
 </section>
 
 <section class="answer">
-### Testing
+  <h3> things </h3>
 
 * Tests cover most features and test for happy paths
 * Test suite is organized.
