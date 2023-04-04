@@ -66,21 +66,21 @@ When talking about what should be tested, we say that we want to test the **outc
 For example, let's say we have a quiz application that checks a user's answers and adds/removes points from their score:
 
 ```js
-class Question {
-  constructor(questionText, correctAnswer) {
-    this.questionText = questionText;
-    this.correctAnswer = correctAnswer;
-    this.score = 0;
+function createQuestion(questionText, correctAnswer) {
+  let question = {
+    questionText: questionText,
+    correctAnswer: correctAnswer
   }
+  return question
+}
 
-  checkAnswer(playerAnswer) {
-    if (playerAnswer === this.correctAnswer) {
-      this.score++
-    } else {
-      this.score--
-    }
-    return this.score
+checkAnswer(question, playerAnswer, score) {
+  if (playerAnswer === question.correctAnswer) {
+    this.score++
+  } else {
+    this.score--
   }
+  return this.score
 }
 ```
 
@@ -88,34 +88,17 @@ class Question {
 ### What would we want to test about the `checkAnswer` method? What should this method do?  
 
 ```js
-describe('Question Class', () => {
-  it('should increment a player score when their answer is correct', () => {
+describe('checkAnswer', () => {
+  it('should return incremented score when answer is correct', () => {
 
   });
 
-  it('should decrement a player score when their answer is incorrect', () => {
+  it('should return decremented score when answer is incorrect', () => {
 
   });
-
-  it('should return the updated score', () => {
-
-  });  
 });
 ```
 </section>  
-
-<section class="note">
-Testing Tip:  
-When writing tests for classes, you should test:  
-  * each class property  
-  * each class method  
-
-Remember to test all possible outcomes (happy path/sad path/etc).  Ask yourself:  
-  - What is the value of each property?  
-  - Does the method return anything?  
-  - Does the method update any properties?
-  - Are there different possible outcomes to test for based on different arguments being passed in?
-</section>
 
 <section class="call-to-action">
 ### Practice
@@ -153,8 +136,8 @@ reverseWord('turing'); // gnirut
 * Mocha itself is the framework that runs the tests and dictates the syntax of the test block as a whole. This is separate from the assertion library Chai.
 
 ```js
-describe('unicorn', function() {
-  it('should accumulate calories when calling eat', function() {
+describe('checkAnswer', function() {
+  it('should return incremented score when answer is correct', function() {
 
   });
 });
@@ -166,7 +149,7 @@ describe('unicorn', function() {
 
 ```js
 
-  expect(unicorn.calories).to.equal(300);
+  expect(result).to.equal(3);
 
 ```
 </section>
