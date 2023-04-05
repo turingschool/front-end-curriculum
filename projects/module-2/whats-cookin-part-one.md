@@ -239,7 +239,19 @@ You may choose **ONE** of the following 3rd party libraries to incorporate into 
 
 ## Rubric
 
-For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  There are just some examples. 
+For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  These are just *some* examples. 
+
+<section class="answer">
+### Does the project demonstrate student understanding of the learning goals & concepts?
+
+Projects will answer that question, being marked as yes, not yet, and wow. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
+
+The overall project outcome (yes, not yet, wow) is determined by “averaging” each section’s outcome. You can think of a “yes” being worth a 1, a “not yet” being worth a 0, and a “wow” being worth a 2.
+
+For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below). 
+</section>
+
+While M2 rubrics do not have a separate section for WOWs like in M1, there are a few WOW examples noted throughout.  In addition to these WOW bullets, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections. 
 
 ### Functional Expectations
 * Wow: Application fulfills all requirements *as well as* an extension.
@@ -263,7 +275,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
   - Each path is tested in its own it block.
 - Rather than using the production data, small sample data is stored in its own file and used for testing.
   - Sample data has been crafted to create the scenarios needed for thorough testing.
-  - For example: If you need to test a sad path of searching for recipes with a tag that no recipes match, you need test data that creates that scenario so you can test it.
+  - For example: If you need to test a sad path of searching for recipes with a tag that no recipes match, you need to create test data that simulates that scenario so you can test it.
 - `beforeEach` hook is used to DRY up test files
 - There are no failing/pending tests upon submission
 
