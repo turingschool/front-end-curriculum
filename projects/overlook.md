@@ -16,7 +16,6 @@ For this project, you will be building a hotel management tool for hotel custome
 - Make network requests to retrieve data
 - Implement a robust testing suite using TDD
 - Write DRY, reusable code that follows SRP (Single Responsibility Principle)
-- Collaborate productively and professionally as a team. Ensure all team members are able to be heard and contribute throughout the project
 
 
 ## Timeline
