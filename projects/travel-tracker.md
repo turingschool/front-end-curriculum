@@ -219,6 +219,10 @@ Projects will answer that question, being marked as yes, not yet, and wow. Simil
 The overall project outcome (yes, not yet, wow) is determined by “averaging” each section’s outcome. You can think of a “yes” being worth a 1, a “not yet” being worth a 0, and a “wow” being worth a 2.
 
 For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below). Please note that for this project, iterations 1-3 must be completed without bugs. 
+
+For the rubric sections below, you will be scored as Wow, Yes or Not Yet depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency. The following examples are not checklists to complete! There are just some examples.
+
+While M2 rubrics do not have a separate section for WOWs like in M1, there are a few WOW examples noted throughout. In addition to these WOW bullets, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections.
 </section>
 
 <section class="answer">
@@ -234,14 +238,12 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 
 * The application can stand on its own to be used by an instructor without guidance from the developer
 * UI/UX is intuitive and easy to read/use
-* Helpful messaging is displayed to prevent user confusion. For example: For example: If a user searches for a room, but none are available then a message is displayed to indicate that the search worked, nothing is broken, there just aren't any matching rooms available.
-* The Lighthouse accessibility audit score is at least 90%
-* The application is fully tabbable 
-
-✨WOW✨ can look like: 
-
-* Design is responsive across small, medium and large breakpoints
-* Special consideration was made around accessibility
+* Helpful messaging is displayed to prevent user confusion. For example: If a user searches for a room, but none are available then a message is displayed to indicate that the search worked, nothing is broken, there just aren't any matching rooms available.
+* The Lighthouse audit tool was used to improve accessibility.
+* Users who only use keyboards can still navigate this application
+* Users who use a screen reader can still navigate this application
+* Utilizes ARIA attributes on interactive elements when no other tool allows for accessible content
+* Wow option: design is responsive across small, medium and large breakpoints
 </section>
 
 <section class="answer">
@@ -249,38 +251,26 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 
 * Code is divided into logical components each with a clean, single responsibility
 * Array prototype methods are used to iterate instead of for loops
-* All DOM manipulation is held in the scripts.js file. No DOM manipulation occurs outside of this file.
+* Project is organized to separate concerns (Ask yourself - where should my DOM manipulation live?)
 * Variables and functions are consistently and appropriately named
 * Code leverages JavaScript's truthy/falsey principles
-* Demonstrates efforts towards making functions pure when possible. **Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.**
+* Demonstrates efforts towards making functions pure when possible. Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.
 * Implements GET and POST Fetch requests
 * When utilizing Fetch, the DOM is updated based on the results of that Fetch
-* Most errors are handled and messages are displayed to a user when an error occurs
-
-✨WOW✨ can look like: 
-
-* All data manipulation is cleanly separated from rendering code. 
-* Code has clearly been refactored; functions are DRY and adhere to the Single Responsibility Principle. 
-* All errors are handled and messages are displayed to a user when an error occurs
-* Effectively implements one or more closure throughout project.
+* Errors are handled and messages are displayed to a user when an error occurs
+* Wow option: Effectively implements one or more closure throughout project.
 </section>
 
 <section class="answer">
 ### Testing
 
-* Tests cover most features and test for happy paths
-* Test suite is organized.
-* Each function is tested in its own it block.
-* Each path is tested in its own it block.
+* Application has a robust and thorough test suite that covers functions that do not update the dom.
+* Testing includes happy and sad paths
+* Test suite is organized - a new developer could easily identify what function is causing a test to fail
 * Rather than using the production data, small sample data is stored in its own file and used for testing.
 * Sample data has been crafted to create the scenarios needed for thorough testing.
-* beforeEach hook is used to DRY up test files
-* There are no failing/pending tests upon submission 
-
-✨WOW✨ can look like: 
-
-* All scenarios/outcomes/paths are tested for functions, including happy and sad paths.
-* Application has a robust and thorough test suite that covers all functions that do not update the dom.
+* Tests are DRY (Ask yourself - what tools can I use to limit repetitive code?)
+* There are no failing/pending tests upon submission
 </section>
 
 # Evaluation
