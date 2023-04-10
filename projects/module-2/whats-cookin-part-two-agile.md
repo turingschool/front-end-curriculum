@@ -19,7 +19,7 @@ These are all aspects of your future job. Code is important, but process allows 
 
 Dates and deliverables to be aware of:
 
-- **Tuesday of Week 4** - Project kickoff
+- **Monday of Week 4** - Project kickoff
     - Perform your retrospective and DM your instructor project manager two things from your retrospective (see below for details) that you want to keep doing and two things that you want to improve on as a group heading into Part 2.
     - DM your instructors your “definition of done” for your track.
 - **Monday of Week 5** - Project due
@@ -145,7 +145,7 @@ Once your usability test is complete, incorporate any useful and interesting fee
 
 ---
 
-# Project Requirements Rubric
+## Project Requirements Rubric
 
 ### Functional Expectations
 
