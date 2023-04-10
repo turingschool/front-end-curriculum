@@ -70,12 +70,12 @@ Your entire application will consist of one HTML file, one CSS file and one JS f
      - `retrieveWinsFromStorage` - only necessary if you choose the localStorage extension
      - `takeTurn`
    * A `createGame` function that should return a game object containing:
-     - Two `Player` objects (`player1` and `player2`)
+     - Two `Player` objects (`player1` and `player2`) 
      - A way to keep track of the data for the game board
      - A way to keep track of the selected game type
-     - A way to check the game's board data for win conditions
-     - A way to detect when a game is a draw (no one has won)
-     - A way to reset the game's board to begin a new game
+   * A separate function to check the game's board data for win conditions
+   * A separate function to detect when a game is a draw (no one has won)
+   * A separate function to reset the game's board to begin a new game
 
 
 ### Data Model
