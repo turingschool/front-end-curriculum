@@ -129,7 +129,7 @@ Hex codes are 6 characters long, and each character is some value of 0-9 or A-F 
 - When the user clicks `Save Palette`:
   - the palette should be saved somewhere in your Data Model
   - the palette should show up in the saved palette section to match the design above
-- A new Palette should automatically be created and displayed in the main part of the app
+  - A new Palette should automatically be created and displayed in the main part of the app
 - Saved palettes do NOT need to persist on page load
 </section>
 
