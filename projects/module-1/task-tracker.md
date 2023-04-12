@@ -70,5 +70,7 @@ Find one example of a DOM update that relies on the data model. Why is it import
 - When a user clicks the ❌ button on a card, that task should be removed from the data model.  
 - When a user clicks the ❌ button on a card, that task should no longer appear on the screen (no matter what VIEW filter is applied).  
 
-**🌶 Optional Extension:** When a user selects the "RECENTLY DELETED" filter in the top right VIEW form, all tasks that the user has deleted should appear on the screen. Deleted tasks should not appear under any other view.
+**🌶 Optional Extension:** Using the user stories below, add a feature to the app that allows users to view recently deleted tasks.
+- When a user selects the "RECENTLY DELETED" filter in the top right VIEW form, all tasks that the user has deleted should appear on the screen. (You'll need to uncomment this `option` in `index.html`.)
+- Deleted tasks should not appear under any other view.
 </section>
