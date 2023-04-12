@@ -26,7 +26,7 @@ title: Task Tracker - 1 Day Challenge
 <section class="answer">
 ### Part 1 - Scavenger Hunt
 
-First, run `git checkout scavenger-hunt` to get to the correct branch
+First, run `git checkout scavenger-hunt` to get to the correct branch. You should see `// SCAVENGER HUNT` at the top of the `main.js` file to know you're in the right place.
 
 Take notes in your notebook as you find the following.
 - What represents the data model? 
@@ -42,7 +42,7 @@ Take notes in your notebook as you find the following.
 <section class="answer">
 ### Part 2 - Bug Fix
 
-First, run `git checkout bug-fix` to get to the correct branch. If you made changes to the code on the `scavenger-hunt` branch, you may need to commit your work before switching branches (`git add .`, `git commit...`) - don't push!
+First, run `git checkout bug-fix` to get to the correct branch. If you made changes to the code on the `scavenger-hunt` branch, you may need to commit your work before switching branches (`git add .`, `git commit...`) - don't push! You should see `// BUG FIX` at the top of the `main.js` file to know you're in the right place.
 
 Oh no! There are a few bugs you need to fix:
 - Every new event is posting to Monday 😱 
@@ -51,9 +51,9 @@ Oh no! There are a few bugs you need to fix:
 </section>
 
 <section class="answer">
-### Part 3 - Additional Feature
+### Part 3 - New Feature
 
-First, run `git checkout new-feature` to get to the correct branch. If you made changes to the code on the `bug-fix` branch, you may need to commit your work before switching branches (`git add .`, `git commit...`) - don't push!
+First, run `git checkout new-feature` to get to the correct branch. If you made changes to the code on the `bug-fix` branch, you may need to commit your work before switching branches (`git add .`, `git commit...`) - don't push! You should see `// NEW FEATURE` at the top of the `main.js` file to know you're in the right place.
 
 // add deleting feature
 </section>
