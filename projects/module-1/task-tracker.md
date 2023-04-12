@@ -26,15 +26,14 @@ title: Task Tracker - 1 Day Challenge
 <section class="answer">
 ### Iteration 1 - Scavenger Hunt
 
-<section class="note">
+<section class="answer">
 ### Set Up
 
-Move to the scavenger hunt branch.
 - Run `git checkout scavenger-hunt` to get to the correct branch
 - You should see `// SCAVENGER HUNT BRANCH` at the top of the `main.js` file to know you're in the right place
 </section>
 
-<section class="call-to-action">
+<section class="answer">
 ### Challenge
 
 Work with your group to find the following in the codebase. Be sure to take notes - we'll discuss as a class when we come back together!
@@ -54,32 +53,28 @@ Work with your group to find the following in the codebase. Be sure to take note
 <section class="answer">
 ### Iteration 2 - Bug Fix
 
-<section class="note">
+<section class="answer">
 ### Set Up
 
-Move to the bug fix branch.
 - If you made changes to the code on the `scavenger-hunt` branch, you need to commit your work before switching branches (`git add...`, `git commit...`) - don't push! 
 - Run `git checkout bug-fix` to get to the correct branch
 - You should see `// BUG FIX BRANCH` at the top of the `main.js` file to know you're in the right place
 </section>
 
-<section class="call-to-action">
+<section class="answer">
 ### Challenge
 
-Oh no! The *No tasks today!* message isn't disappearing when a new event is added AND the new event isn't appearing. Find the source of the bug and fix it! Look below to see how the bug-free app is expected to behave.
+Here's how your app SHOULD behave:
+![screen recording](./assets/task-tracker/bug-fix-recording.gif)
+
+But, oh no! The *No tasks today!* message isn't disappearing when a new event is added AND the new event isn't appearing. Find the source of the bug and fix it!
 - Narrow your focus to the section of code labeled `// No Tasks Message`. 
 - Follow the logic line by line and add console logs to check the code at every point. For example, what's in our data model (`tasks`) at each point in the code? Are we getting into each conditional block as expected? What is the outcome of each function?  
 
+</section>
+
 <section class="answer">
-### Expected Behavior 
-
-Here's how your app SHOULD behave once the bug is fixed:
-![screen recording](./assets/task-tracker/bug-fix-recording.gif)
-</section>
-</section>
-
-<section class="checks-for-understanding">
-### 🌶 Optional Extension:
+### 🌶 Optional Extension
 
 The `clearTasks` function is really repetitive. Can you make that code DRYer? 
 - First, can you make a reusable function with a parameter that clears out each day's tasks? You might need to invoke that function 5 times...
@@ -90,16 +85,15 @@ The `clearTasks` function is really repetitive. Can you make that code DRYer?
 <section class="answer">
 ### Iteration 3 - New Feature
 
-<section class="note">
+<section class="answer">
 ### Set Up
 
-Move to the new feature branch.
 - If you made changes to the code on the `bug-fix` branch, you need to commit your work before switching branches (`git add...`, `git commit...`) - don't push! 
 - Run `git checkout new-feature` to get to the correct branch
 - You should see `// NEW FEATURE BRANCH` at the top of the `main.js` file to know you're in the right place
 </section>
 
-<section class="call-to-action">
+<section class="answer">
 ### Challenge
 
 Using the user stories below, add a feature to the app that allows you to delete a task.  
@@ -107,8 +101,8 @@ Using the user stories below, add a feature to the app that allows you to delete
 - When a user clicks the ❌ button on a card, that task should no longer appear on the screen (no matter what VIEW filter is applied).
 </section>
 
-<section class="checks-for-understanding">
-### 🌶 Optional Extension:
+<section class="answer">
+### 🌶 Optional Extension
 
 Using the user stories below, add a feature to the app that allows users to view recently deleted tasks.
 - In the `index.html` file, uncomment the new `option` in the `filter-selection` dropdown.
