@@ -26,11 +26,18 @@ title: Task Tracker - 1 Day Challenge
 <section class="answer">
 ### Iteration 1 - Scavenger Hunt
 
-**Set Up:** Move to the scavenger hunt branch.
+<section class="note">
+### Set Up
+
+Move to the scavenger hunt branch.
 - Run `git checkout scavenger-hunt` to get to the correct branch
 - You should see `// SCAVENGER HUNT BRANCH` at the top of the `main.js` file to know you're in the right place
+</section>
 
-**Challenge:** Work with your group to find the following in the codebase. Be sure to take notes - we'll discuss as a class when we come back together!
+<section class="call-to-action">
+### Challenge
+
+Work with your group to find the following in the codebase. Be sure to take notes - we'll discuss as a class when we come back together!
 1. What represents the data model? How do you know?
 2. Find two examples of the data model being updated. Why is it important to update the data model?
 3. Find one example of a DOM update that relies on the data model. Why is it important that the DOM update uses the information in the data model?
@@ -41,38 +48,71 @@ title: Task Tracker - 1 Day Challenge
 8. Find an example of a function's returned value being used somewhere else. Are the functions in this example pure?
 9. Find an example of event delegation. Why is event delegation necessary there?
 </section>
+</section>
+
 
 <section class="answer">
 ### Iteration 2 - Bug Fix
 
-**Set Up:** Move to the bug fix branch.
+<section class="note">
+### Set Up
+
+Move to the bug fix branch.
 - If you made changes to the code on the `scavenger-hunt` branch, you need to commit your work before switching branches (`git add...`, `git commit...`) - don't push! 
 - Run `git checkout bug-fix` to get to the correct branch
 - You should see `// BUG FIX BRANCH` at the top of the `main.js` file to know you're in the right place
+</section>
 
-**Challenge:** Oh no! The *No tasks today!* message isn't disappearing when a new event is added AND the new event isn't appearing. Find the source of the bug and fix it!
+<section class="call-to-action">
+### Challenge
+
+Oh no! The *No tasks today!* message isn't disappearing when a new event is added AND the new event isn't appearing. Find the source of the bug and fix it! Look below to see how the bug-free app is expected to behave.
 - Narrow your focus to the section of code labeled `// No Tasks Message`. 
 - Follow the logic line by line and add console logs to check the code at every point. For example, what's in our data model (`tasks`) at each point in the code? Are we getting into each conditional block as expected? What is the outcome of each function?  
 
-**🌶 Optional Extension:** The `clearTasks` function is really repetitive. Can you make that code DRYer? 
+<section class="answer">
+### Expected Behavior 
+
+Here's how your app SHOULD behave once the bug is fixed:
+![screen recording](./assets/task-tracker/bug-fix-recording.gif)
+</section>
+</section>
+
+<section class="checks-for-understanding">
+### 🌶 Optional Extension:
+
+The `clearTasks` function is really repetitive. Can you make that code DRYer? 
 - First, can you make a reusable function with a parameter that clears out each day's tasks? You might need to invoke that function 5 times...
 - Now, consider using [Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) to make it less repetitive.
+</section>
 </section>
 
 <section class="answer">
 ### Iteration 3 - New Feature
 
-**Set Up:** Move to the new feature branch.
+<section class="note">
+### Set Up
+
+Move to the new feature branch.
 - If you made changes to the code on the `bug-fix` branch, you need to commit your work before switching branches (`git add...`, `git commit...`) - don't push! 
 - Run `git checkout new-feature` to get to the correct branch
 - You should see `// NEW FEATURE BRANCH` at the top of the `main.js` file to know you're in the right place
+</section>
 
-**Challenge:** Using the user stories below, add a feature to the app that allows you to delete a task.  
+<section class="call-to-action">
+### Challenge
+
+Using the user stories below, add a feature to the app that allows you to delete a task.  
 - When a user clicks the ❌ button on a card, that task should be removed from the data model.  
-- When a user clicks the ❌ button on a card, that task should no longer appear on the screen (no matter what VIEW filter is applied).  
+- When a user clicks the ❌ button on a card, that task should no longer appear on the screen (no matter what VIEW filter is applied).
+</section>
 
-**🌶 Optional Extension:** Using the user stories below, add a feature to the app that allows users to view recently deleted tasks.
+<section class="checks-for-understanding">
+### 🌶 Optional Extension:
+
+Using the user stories below, add a feature to the app that allows users to view recently deleted tasks.
 - In the `index.html` file, uncomment the new `option` in the `filter-selection` dropdown.
 - When a user selects the "RECENTLY DELETED" filter in the top right VIEW form, all tasks that the user has deleted should appear on the screen. 
 - Deleted tasks should not appear under any other view.
+</section>
 </section>
