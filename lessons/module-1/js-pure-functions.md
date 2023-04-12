@@ -29,7 +29,7 @@ A **pure function** is a function that is predictable and always returns the sam
 var userEmail = "jeremiah@turing.io";
 
 function confirmEmail() {
-  console.log(`Your email address is currently ${userEmail}`);
+  return `Your email address is currently ${userEmail}`;
 }
 
 confirmEmail();  // "Your email address is currently jeremiah@turing.io"
@@ -41,7 +41,7 @@ confirmEmail(); // "Your email address is currently jeremiah@turing.edu"
 **Pure Function:**
 ```js
 function confirmEmail(userEmail) {
-  console.log(`Your email address is currently ${userEmail}`);
+  return `Your email address is currently ${userEmail}`;
 }
 
 confirmEmail("jeremiah@turing.io") // "Your email address is currently jeremiah@turing.io"
@@ -134,7 +134,7 @@ var order = { restaurant: "Dominos", status: "delayed", remainingTime: 30 };
 function updateOrder(status, newWaitTime) {
     order.delivered = status;
     order.remainingTime = newWaitTime;
-    console.log("Delivery has been updated!");
+    return "Delivery has been updated!";
 }
 
 updateOrder('on time', 15); // Delivery has been updated!
