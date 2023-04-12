@@ -32,7 +32,6 @@ You will want to submit PRs to your accountabilibuddy to:
 
 * You must give your accountabilibuddy collaboration access to your repo.
 * You must submit *at least* 2 PRs to your accountabilibuddy for review.
-* You must wait for your accountabilibuddy to review your PRs, and allow THEM to merge any PRs you submit.
 
 It is up to you to decide what changes warrant a PR – remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you’re struggling with or have questions about or need help with. As an accountabilibuddy, you are responsible for reviewing at least 2 PRs from your partner.
 
