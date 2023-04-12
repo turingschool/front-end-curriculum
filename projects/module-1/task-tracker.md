@@ -55,7 +55,7 @@ title: Task Tracker - 1 Day Challenge
 - Follow the logic line by line and add console logs to check the code at every point. For example, what's in our data model (`tasks`) at each point in the code? Are we getting into each conditional block as expected? What is the outcome of each function?  
 
 **🌶 Optional Extension:** The `clearTasks` function is really repetitive. Can you make that code DRYer? 
-- Look into [Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)!)
+- Look into [Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)!
 </section>
 
 <section class="answer">
