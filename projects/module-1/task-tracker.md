@@ -33,13 +33,13 @@ title: Task Tracker - 1 Day Challenge
 **Challenge:** Work with your group to find the following in the codebase. Be sure to take notes - we'll discuss as a class when we come back together!
 1. What represents the data model? How do you know?
 2. Find two examples of the data model being updated. Why is it important to update the data model?
-Find one example of a DOM update that relies on the data model. Why is it important that the DOM update uses the information in the data model?
-3. Find two functions that have at least one parameter. Add a console log to each function to see what the value of that parameter is when the function is invoked. Click around the app and notice the console logs. Are the functions always logging the same value (i.e. is the value of the arguments always the same)?
-4. Find an example of bracket notation being used to access an object. Change it so it's using dot notation. Does it still work? Why or why not?
-5. Find an example of a pure function. How do you know it's a pure function?
-6. Find an example of an impure function that has a side effect. Discuss if it possible for that function to be pure. Why or why not?
-7. Find an example of a function's returned value being used somewhere else. Are the functions in this example pure?
-8. Find an example of event delegation. Why is event delegation necessary there?
+3. Find one example of a DOM update that relies on the data model. Why is it important that the DOM update uses the information in the data model?
+4. Find two functions that have at least one parameter. Add a console log to each function to see what the value of that parameter is when the function is invoked. Click around the app and notice the console logs. Are the functions always logging the same value (i.e. is the value of the arguments always the same)?
+5. Find an example of bracket notation being used to access an object. Change it so it's using dot notation. Does it still work? Why or why not?
+6. Find an example of a pure function. How do you know it's a pure function?
+7. Find an example of an impure function that has a side effect. Discuss if it possible for that function to be pure. Why or why not?
+8. Find an example of a function's returned value being used somewhere else. Are the functions in this example pure?
+9. Find an example of event delegation. Why is event delegation necessary there?
 </section>
 
 <section class="answer">
