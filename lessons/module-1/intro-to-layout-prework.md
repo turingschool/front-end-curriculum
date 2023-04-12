@@ -68,6 +68,16 @@ display: none;
 ```
 
 <section class="call-to-action">
+### Practice
+
+Visit [this Codepen](https://codepen.io/cassandragoose/pen/KKGpvrZ?editors=1100), which contains an HTML file and a CSS file. 
+
+Read through the HTML and CSS. Observe what classes and CSS is being applied to the elements in the HTML. 
+
+Work through the questions/challenges commented in the CSS file. 
+</section>
+
+<section class="call-to-action">
 
 ### BONUS - More on Hiding Elements with CSS
 There are a number of different ways to hide an element with CSS, and they all behave slightly differently. Try creating some invisible elements and inspecting them to see if they take up space! 
