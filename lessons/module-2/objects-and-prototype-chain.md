@@ -73,7 +73,7 @@ Let's consider the `Array` data type in JavaScript. In your console, access the 
 
 <!-- By accessing the `prototype` of our instructor's `constructor` - we can see that it points to an object that has three methods: `constructor`, `teachLesson`, and `gradeProject`.  Our `prototype` is a property on the function that points back to our instructor's `constructor`. -->
 
-Our `createInstructor` function which creates new instructor objects is also known as **constructor function**.  In object-oriented programming, which is based on **classes**, developers use constructor functions to create multiple objects from a template.  Here is the some code written using ES5 class syntax:
+Our `createInstructor` function which creates new instructor objects is also known as a **constructor function**. In object-oriented programming, which is based on **classes**, developers use constructor functions to create multiple objects from a template. In legacy React code, it is not uncommon to encounter classes.  Here is the some code written using ES5 class syntax:
 
 ```js
 function Instructor(name, primaryLesson) {
