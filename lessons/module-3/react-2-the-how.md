@@ -59,7 +59,7 @@ $ npx create-react-app ideabox
 You will see something like this start to run in your terminal:
 
 ```bash
-Creating a new React app in /Users/leta/mod3/ideabox.
+Creating a new React app in /Users/yourname/mod3/ideabox.
 
 Installing packages. This might take a couple of minutes.
 Installing react, react-dom, and react-scripts...
@@ -108,7 +108,7 @@ What happens if you:
 
 You'll also notice an `index.js` file. What is going on in there?
 
-```js
+```jsx
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -122,7 +122,7 @@ root.render(
 
 We've talked about React being modular many times, but what does it look like to have our code and project files be modular?
 
-One small example is to keep a modular file structure. This means that any and all files related to a particular component live in the same directory! This is pretty common in React projects, so we recommend setting up your file strucure like this each time you build a new project. Here's an example :)
+One small example is to keep a modular file structure. This means that any and all files related to a particular component live in the same directory! This is pretty common in React projects, so we recommend setting up your file structure like this each time you build a new project. Here's an example :)
 
 src 📁
 - components 📁
@@ -159,7 +159,7 @@ Let's start building out our App component.
 
 Let's figure out what should be a component in our app.
 
-![IdeaBox wireframe](https://i.imgur.com/2bSfaXK.jpg)
+![IdeaBox wireframe](./assets/images/ideaBox/IdeaBox-Browser.png)
 
 - We have an App component. That should probably hold onto our list of ideas.  
 
@@ -169,21 +169,22 @@ Let's figure out what should be a component in our app.
 
 - We can create an Ideas component to hold all of our Cards.  
 
-![IdeaBox wireframe with component boxes](https://i.imgur.com/xWggABx.jpg)
+![IdeaBox wireframe with component boxes](./assets/images/ideaBox/IdeaBox-wireframe.png)
 
 ### App.js
 
 Because we want App to hold onto our list of ideas, let's think about how we're going to store that information.
 
-In our first React lesson, we learned about _state_. In order to use component state, we need to import useState from React.
+In our first React lesson, we learned about _state_. In order to use component state, we need to import useState hook from React.
 
-So: let's import useState from react, and create our child App component!
+So: let's import useState hook from React, and create our App component!
 
-```js
+```jsx
 import { useState } from 'react';
+
 function App() {
  
- // Any JSX code or additional logic will go here
+ // Logic and other needed functions will go here
 
  return (
   //Your JSX code goes here
@@ -196,13 +197,14 @@ export default App;
 The above code is defining the App functional component in React. 
 
 Any additional JSX code or logic can be added to the component as needed, and the final JSX code is returned by the component's return statement just like a pure function.
-
-It's important to note that this code is using functional components, rather than class components and OOP. This allows us to manage our component in a more concise and streamlined way, without relying on class inheritance and traditional OOP principles.
-
+<section class="note">
+  It's important to note that this code is using functional components, rather than class components and OOP. This allows us to manage our component in a more concise and streamlined way, without relying on class inheritance and traditional OOP principles.
+</section>
 Let's keep writing our App component!
 
-```js
-import  {useState} from 'react';
+```jsx
+import  { useState } from 'react';
+
 function App() {
     return (
       <h1>IdeaBox</h1>
@@ -257,8 +259,8 @@ Since this is our App component, let's wrap everything in a `<main>` tag!
 If you're just looking for an unflavored container for your elements (aka they are not semantically related to one another, and the best element to use would be a `<div>`), then instead, use a `<React.Fragment>`! You can read more about Fragments [here](https://react.dev/reference/react/Fragment).
 </section>
 
-```js
-import  {useState} from 'react';
+```jsx
+import  { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -281,7 +283,7 @@ You'll notice that instead of "`class`", we're using a "`className`" attribute o
 
 Okay. Let's come back to our App component and create state.
 
-```js
+```jsx
 import { useState } from 'react'
 import './App.css';
 
@@ -309,9 +311,9 @@ For our application, we want to create a list (aka an array) of ideas.
 
 Let's start out with a couple of default ideas, just so we can have something to look at when we begin building out the rest of our components.
 
-```js
+```jsx
 
-import  {useState} from 'react';
+import  { useState } from 'react';
 import './App.css';
 
 function App(){
@@ -337,7 +339,7 @@ export default App;
 
 Open up your React Dev Tools (open your dev tools, then go to the Components tab). You can see that App now has state:
 
-![App component state](./assets//images/ideaBox/React-dev-tool.png)
+![App component state](./assets/images/ideaBox/React-dev-tool.png)
 
 Neat!
 
@@ -363,7 +365,7 @@ We already said that we want to have a container for all of our idea Cards. So l
 
 You may have noticed that our App component was capitalized. And now our Ideas component is capitalized, too.In React, component names should be written in PascalCase, which is a naming convention where the first letter of each word in the name is capitalized, and there are no underscores or hyphens between words.By following this naming convention, it becomes clear to other developers that a particular element in the codebase is a React component.   
 
-When an element starts with a lowercase letter, it refers to (and will be treated as) a built-in component like `<div>` or `<span>`, which can lead to silent errors or unexpected side-effects. It's also important to note that capitalizing component names makes for good developer empathy. 
+When an element starts with a lowercase letter, it refers to (and will be treated as) a built-in component like `<div>` or `<span>`, which can lead to silent errors or unexpected side-effects. It's also important to note that capitalizing component names makes for good developer empathy, because they can look at the file tree and see at a glance which files are are components and which are not. 
 </section>
 
 Will this Ideas component need to have state? What do you think?
@@ -372,7 +374,7 @@ Since the Ideas component will just be rendering Card components, it will not ne
 
 let's create a function called Ideas that returns an h2 that reads "Ideas go here!"
 
-```js
+```jsx
 // Ideas.js
 
 import './Ideas.css';
@@ -388,12 +390,12 @@ export default Ideas;
 
 Then, back in our `App.js`, we can import our shiny new Ideas component and add it to our render!
 
-```js
+```jsx
 // App.js
 
 import './App.css';
 import Ideas from './Ideas';
-import {useState} from 'react'
+import { useState } from 'react'
 
 function App(){
   const dummyIdeas = [
@@ -424,7 +426,7 @@ We have to pass our ideas array from the App component to our Ideas component. W
 
 Props (along with state) are the heart and soul, the meat and potatoes, of React. They are what allow us to pass information between components. Let's take a look at how that might work.
 
-We've mentioned that components are reusable pieces of code, that allow us to create unique instances of certain UI elements. We can do this by passing props to each of our components. Think about how you create new function and passing arguments into it.
+We've mentioned that components are reusable pieces of code, that allow us to create unique instances of certain UI elements. We can do this by passing props to each of our components. Think about how you create a new function and pass arguments into it.
 
 Props allow us to pass information from parent components to child components. We can pass strings, numbers, booleans, arrays, objects, functions, pretty much any piece of data we want access to in our child component. We can name them whatever we'd like, as long as we're consistent and semantic with the names that we choose.
 
@@ -434,14 +436,14 @@ Let's start with an example, just to keep things simple. For now, since our Idea
 
 In our App component, let's add something to our `render` method.
 
-```js
+```jsx
 // App.js
 // ...
   return(
     <main className='App'>
         <h1>IdeaBox</h1>
         <p>Hi!</p>
-        <Ideas name ='Travis'/>
+        <Ideas name='Travis'/>
     </main>
   )
 
@@ -449,7 +451,7 @@ In our App component, let's add something to our `render` method.
 
 Now, let's adjust our Ideas component.
 
-```js
+```jsx
 // Ideas.js
 
 function Ideas(props){
@@ -472,7 +474,7 @@ If, in the `return` of our App component, we called the property "potato" instea
 
 We can even destructure the props object, because it's just a regular object!
 
-```js
+```jsx
 // Ideas.js
 
 function Ideas(props){
@@ -488,11 +490,10 @@ In _this_ example, destructuring is a bit over-engineered, yes. However, we'll s
 
 And here's YET ANOTHER super-fancy way to destructure:
 
-```js
+```jsx
 // Ideas.js
 
-function Ideas({name}){
-
+function Ideas({ name }){
   return (
     <h2>Hello, {name}!</h2>
   )
@@ -516,7 +517,7 @@ Let's create a Card component to use.
 
 Create your files: `$ touch src/Card.js src/Card.css`
 
-```js
+```jsx
 // Card.js
 
 
@@ -535,7 +536,7 @@ export default Card;
 
 Then, in your Ideas component, let's just try to get these hooked up properly.
 
-```js
+```jsx
 // Ideas.js
 
 
@@ -584,11 +585,11 @@ And in your Card css file:
 
 Okay! Hopefully your app looks like this:
 
-![screenshot of IdeaBox so far](https://i.imgur.com/TiPPUMq.png)
+![screenshot of IdeaBox so far](./assets/images/ideaBox/IdeaBox-Screenshot.png)
 
 All right, friends. Let's get to passing some PROPS! Let's go all the way back to our App component and pass our list of ideas to the Ideas container component, so that it can then create Card components out of each individual idea.
 
-```js
+```jsx
 // App.js
 
 
@@ -600,7 +601,7 @@ All right, friends. Let's get to passing some PROPS! Let's go all the way back t
   )
 ```
 
-Let's unpack what we're doing here. We created a new prop called "ideas", and the value we're passing in is our array of ideas(data) which lives in the App component's state. Remember, `ideas` is JavaScript, not HTML, so we need to wrap it in curly brackets!
+Let's unpack what we're doing here. We created a new prop called "ideas", and the value we're passing in is our array of ideas (data) which lives in the App component's state. Remember, `ideas` is JavaScript, not HTML, so we need to wrap it in curly brackets!
 
 Go look at the Ideas component in your React dev tools in the browser. You should see that the props contain a key of "ideas" with a value of the array of ideas from App state!
 
@@ -609,7 +610,7 @@ We now want to iterate through our array and create a Card component, passing it
 ```js
 // Ideas.js
 
-function Ideas({ideas}){
+function Ideas({ ideas }){
 
   const ideaCards = ideas.map(idea => {
     return (
@@ -668,7 +669,7 @@ Conditional rendering is exactly what it sounds like: telling a component to ren
 
 Currently our App looks like this:
 
-```javascript
+```jsx
 // App.js
 
 function App () {
@@ -695,7 +696,7 @@ if (!data.length) {
 
 We can use curly braces to inject JS into our JSX. However, we need whatever is inside of our curlies to _evaluate_ to the HTML we want rendered, so we'll use some syntax like this:
 
-```js
+```jsx
 // App.js
 
  return ( 
@@ -741,7 +742,7 @@ input, button {
 
 Our Form will start like this:
 
-```js
+```jsx
 // Form.js
 
 import { useState } from 'react';
@@ -777,7 +778,7 @@ export default Form;
 
 But we need to write some functions. Let's start by making sure that when we type into our inputs, they update the Form's state.
 
-```js
+```jsx
 // Form.js
 
     return (
@@ -804,8 +805,8 @@ But we need to write some functions. Let's start by making sure that when we typ
 
 ```
 
-What is this `setTitle` business? It's a function created using useState hook to manage the state of the title. The useState hook returns an array with two elements. The current state value in this case an empty string and a function to update the state in this case setTitle. 
-OK let's go back to setTitle and what is happening in the onChange. So when the onChange event is triggered by the user typing something into the input field, the setTitle function is called with the new value of the input as an argument. This updates the state of the title variable with the new value, causing a re-render of the component with the updated state.
+What is this `setTitle` business? It's a function created using useState hook to manage the state of the title. The useState hook returns an array with two elements. The current state value in this case an empty string and a function to update the state in this case `setTitle`. 
+OK let's go back to `setTitle` and what is happening in the `onChange`. So when the `onChange` event listener is triggered by the user typing something into the input field, the `setTitle` function is called with the new value of the input as an argument. This updates the state of the title variable with the new value, causing a re-render of the component with the updated state.
 
 
 Take a look at your React dev tools - is the state updating as you type into the inputs?
@@ -816,14 +817,13 @@ When we click the submit button, what do we want to happen? We want to create an
 
 In App, we're going to have to create a method that updates App's state:
 
-```js
+```jsx
 // App.js
 
   function addIdea (newIdea) {
     setIdeas([...ideas, newIdea])
   }
 
-  
     return(
       <main className='App'>
         <h1>IdeaBox</h1>
@@ -835,13 +835,13 @@ In App, we're going to have to create a method that updates App's state:
 ```
 
 You'll notice that we're using a function keyword to create this function. Why do you think that is? This is a callback function that takes a new idea object as an argument, and adds it to the existing ideas array by creating a new array using the spread operator ... to copy the existing ideas array and adding the new idea to the end of it.
-This updated array is then set as the new state of `ideas` using `setIdeas`function which is the state updater function created by useState hook. 
+This updated array is then set as the new state of `ideas` using `setIdeas` function which is the state updater function created by useState hook. 
 
 This is good, because we're passing it down as a prop to the Form component!
 
 Now, in the Form component, let's make use of the `addIdea` method we passed as a prop. In functional components, we reference props with `props`. 
 
-```js
+```jsx
 // Form.js
 
   function submitIdeas(event) {
@@ -888,13 +888,13 @@ Now that you know how to use a method and props to allow a different component t
 
 First, write the App method to delete an idea from state and pass it to the Ideas component:
 
-```js
+```jsx
 // App.js
 
 import './App.css';
 import Form from './Form';
 import Ideas from './Ideas';
-import {useState} from 'react'
+import { useState } from 'react'
 
 function App(){
   const dummyIdeas = [
@@ -912,6 +912,7 @@ function App(){
     const filteredIdea = ideas.filter(idea => idea.id !== id)
     setIdeas(filteredIdea)
   }
+
   return(
     <main className='App'>
         <h1>IdeaBox</h1>
@@ -928,10 +929,10 @@ export default App;
 
 Second, pass the `deleteIdea` function to each Card that the Ideas component creates:
 
-```js
+```jsx
 import './Ideas.css';
 import Card from "./Card"
-function Ideas({ideas, deleteIdea}){
+function Ideas({ ideas, deleteIdea }){
 
   const ideaCards = ideas.map(idea => {
     return (
@@ -939,8 +940,8 @@ function Ideas({ideas, deleteIdea}){
         title={idea.title}
         description={idea.description}
         id={idea.id}
-        key = {idea.id}
-        deleteIdea = {deleteIdea}
+        key={idea.id}
+        deleteIdea={deleteIdea}
       />
     )
   })
@@ -956,7 +957,7 @@ export default Ideas;
 
 Third, create an event listener on the Card button:
 
-```js
+```jsx
 
 import './Card.css';
 
@@ -975,6 +976,7 @@ const Card = ({ title, description, id, deleteIdea }) => {
 Voila! You've created a React application!
 
 ## Review
+<section class="checks-for-understanding">
 
 Take a few minutes to journal:
 
@@ -986,3 +988,5 @@ Take a few minutes to journal:
 * What do you know about state?
 * What do you know about passing props?
 * What questions do you have? (bring these to class on Wednesday!)
+
+</section>
