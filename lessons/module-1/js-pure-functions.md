@@ -80,6 +80,12 @@ Take note of the global variable that is keeping track of how much a user has sp
 1. Our `addCost` function is dependant on `totalSpent` in order to succesfully perform it's task.  `addCost` will return an error if for some reason `totalSpent` was no longer available.  It is not completely dependant on it's input.
 2. The second side effect is that `addCost` is programmed to mutate the `totalSpent` variable.  It is making an "update to the outside world."
 
+<section class="call-to-action">
+### On Your Own
+
+* What would need to be changed in order to make our `addCost` function pure (*i.e. no side effects*)?
+</section>
+
 <section class="note">
 ### Notes To Remember
 By keeping much of the logic of an application built on **pure functions**, it can make your code more predictable and safer.  Ultimately this will also allow your application to be easier to test and debug.  Following this structure can allow us to follow a more functional paradigm with your JS which can be significantly easier to use than other paradigms such as OOP (Object Oriented Programming).
@@ -132,7 +138,7 @@ addFriend("Travis Rollins");
 var order = { restaurant: "Dominos", status: "delayed", remainingTime: 30 };
 
 function updateOrder(status, newWaitTime) {
-    order.delivered = status;
+    order.status = status;
     order.remainingTime = newWaitTime;
     return "Delivery has been updated!";
 }
