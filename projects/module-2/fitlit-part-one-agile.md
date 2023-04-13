@@ -86,7 +86,7 @@ For this project, you need to use this [FitLit Starter Kit](https://github.com/t
 
 ### Testing Setup
 
-There is no boilerplate for testing in the starter-kit repo. You will need to set up all of the tests yourself. Although, if you have run `npm install` in the setup instructions, then the tooling you need to start testing is already installed (`mocha` and `chai`). Refer to the testing lesson from week 1 as a guide to get started as well as the [mocha](https://mochajs.org/) and [chai](https://www.chaijs.com/) documentation pages.
+There is some boilerplate for testing in the starter-kit repo. You will need to set up the rest of the tests yourself. If you have run `npm install` in the setup instructions, then the tooling you need to start testing is already installed (`mocha` and `chai`). Refer to the testing lesson from week 1 as a guide to get started as well as the [mocha](https://mochajs.org/) and [chai](https://www.chaijs.com/) documentation pages.
 
 ## Project Iterations
 
@@ -105,44 +105,10 @@ You should not be hardcoding the date.  You should be using code to find the las
 <section class="note">
 ### Third-Party Libraries
 
-***Please get instructor approval first before using additional third-party libraries.*** You may use [Day.js](https://www.npmjs.com/package/dayjs) to help with manipulating / formatting dates if you find it necessary. You may also use [Chart.js](https://www.npmjs.com/package/chart.js) in order to help with displaying some data. (Note: Learning a new technology does take extra time.  Plan ahead and maybe do a research spike over the first weekend, before deciding to use it.)
+***Please get instructor approval first before using additional third-party libraries.*** You may use [Day.js](https://www.npmjs.com/package/dayjs) to help with manipulating / formatting dates if you find it necessary. You may also use [Chart.js](https://www.npmjs.com/package/chart.js) in order to help with displaying some data. (*Note: Learning a new technology does take extra time.  Plan ahead and maybe do a research spike over the first weekend, before deciding to use it.*)
 
 - ***You are not required to use any 3rd party libraries***
 </section>
-
-
----
-
-## Testing
-
-You should *NOT* use the original data files in the `data` directory for testing. These are big files to begin with, and a real-world dataset would have millions of records. That’s far too big to use every time you want to run a test.
-
-Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your functions are working correctly because you can do the calculations by hand with a much smaller dataset.
-
-**You are *expected* to test:**
-- All functions that do not update the DOM.  This means everything in your `scripts.js` file that should be tested.
-
-**Remember to test all possible outcomes (happy/sad/etc). Ask yourself:**
-
-- Does the function return anything?
-- Are there different possible outcomes to test based on different arguments being passed in?
-
-**You are *not expected* to test:**
-
-- DOM manipulation / DOM manipulating functions (like `document.querySelector(...)`)
-- Fetch calls
-
----
-
-## Daily Check-Ins
-
-Every work day, your group should do a check-in as a whole group, preferably live over Zoom, and discuss at least these things:
-
-- What is the state of the project so far? (update your GitHub project board if necessary)
-- What is each person working on today?
-- Are there any blockers, and what is your plan to get through the blocker?
-
-Your daily check-in (sometimes called “stand-ups”) schedule should be outline in your DTR so the whole group is aware of the meeting.
 
 <section class="answer">
 ### Iteration 1 - Get Familiar with the Data and Users
@@ -158,7 +124,7 @@ You should create functions that:
 - Return a user's data based on their ID.
 - Return the average step goal amongst all users.
 
-#### User Stores (Dashboard)
+#### User Stories (Dashboard)
 
 Use the `domUpdates.js` file to update the DOM. There should not be any DOM manipulation within your `scripts.js` file.
 
@@ -255,6 +221,63 @@ You should create functions that:
 - As a user, I should be able to view a weekly view of my step count and if I have reached my step count goal for each day
 </section>
 
+<section class="answer">
+### Extension Options
+
+* Implement one of the listed third-party libraries or one of your choosing with instructor approval.
+* Design a step challenge between friends. Assign your user a few friends from the user data file. Add the functions you need and a display on the dashboard to see their friends step count for a whole week. The display should also show who had the most steps for that week.
+* Calculate and display what days a user had increasing steps for 3 or more days.
+* Build drag-and-drop widgets (*if you did not go with a widget theme, then add some widgets for this extension*). You can use a 3rd-party library to help you accomplish this.
+* Priority stats - give the user the ability to select the widgets they always want to see at the top of the page. This is a customization the user would want to make, and you would want to save this customization to `localStorage`.
+* You may also collaborate with instructors to personalize an extension for this project.
+</section>
+
+---
+
+## Testing
+
+You should *NOT* use the original data files in the `data` directory for testing. These are big files to begin with, and a real-world dataset would have millions of records. That’s far too big to use every time you want to run a test.
+
+Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your functions are working correctly because you can do the calculations by hand with a much smaller dataset.
+
+**You are *expected* to test:**
+- All functions that do not update the DOM.  This means everything in your `scripts.js` file that should be tested.
+
+**Remember to test all possible outcomes (happy/sad/etc). Ask yourself:**
+
+- Does the function return anything?
+- Are there different possible outcomes to test based on different arguments being passed in?
+
+**You are *not expected* to test:**
+
+- DOM manipulation / DOM manipulating functions (like `document.querySelector(...)`)
+- Fetch calls
+
+---
+## Minimum Collaboration and Professionalism Expectations
+
+* Team holds daily standups throughout project.
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
+* A project board is utilized (and updated throughout the project) with Github issues and labels.
+* Team uses branches, PRs and thorough code reviews to add new code to the main branch.
+* The README is formatted well and at a minimum contains:
+  * Overview of project and goals
+  * Overview of technologies used, challenges, wins, and any other reflections
+  * Screenshots/gifs of your app
+  * List of contributors
+* **Team collaborates effectively to accomplish the shared goal.  Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
+  * Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.
+
+### Daily Check-Ins
+
+Every work day, your group should do a check-in as a whole group, preferably live over Zoom, and discuss at least these things:
+
+- What is the state of the project so far? (update your GitHub project board if necessary)
+- What is each person working on today?
+- Are there any blockers, and what is your plan to get through the blocker?
+
+Your daily check-in (sometimes called “stand-ups”) schedule should be outline in your DTR so the whole group is aware of the meeting.
+
 ---
 
 ## Rubric
@@ -265,7 +288,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 ### Functional Expectations
 
 💫ON TRACK💫 can look like:
-- Application fulfills all requirements of iterations 1-3 without bugs.
+- Application fulfills all requirements of iterations 1-5 without bugs.
 
 ✨WOW✨ can look like:
 - Application fulfills all requirements *as well as* an extension.
@@ -276,11 +299,11 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 ### JavaScript & Style / Functional Programming / Fetch
 
 💫ON TRACK💫 can look like:
-- Code is divided into logical components each with a clean, single responsibility
-- Array prototype methods are used to iterate instead of for loops
+- Code is divided into logical components each with a clean, single responsibility.
+- Array prototype methods are used to iterate instead of for loops.
 - All DOM manipulation is held in the `domUpdates.js` file.  No DOM manipulation occurs outside of this file.
-- Variables and functions are consistently and appropriately named
-- Code leverages JavaScript's truthy/falsey principles
+- Variables and functions are consistently and appropriately named.
+- Code leverages JavaScript's truthy/falsey principles.
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 
 ✨WOW✨ can look like:
@@ -296,13 +319,13 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
   - Each function is tested in its own it block.
 - Rather than using the production data, small sample data is stored in its own file and used for testing.
   - Sample data has been crafted to create the scenarios needed for thorough testing.
-  - For example: If you need to test a sad path of searching for recipes with a tag that no recipes match, you need test data that creates that scenario so you can test it.
-- `beforeEach` hook is used to DRY up test files
-- There are no failing/pending tests upon submission
+  - ***For example:** If you need to test a scenario where a user hasn't been active for 7 days, you need test data that creates that scenario.*
+- `beforeEach` hook is used to DRY up test files.
+- There are no failing/pending tests upon submission.
 
 ✨WOW✨ can look like:
 - All scenarios/outcomes/paths are tested for your functions, including happy and sad paths.
-  - Each path is tested in its own it block
+  - Each path is tested in its own `it` block.
 </section>
 
 <section class="answer">
@@ -310,9 +333,9 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 
 💫ON TRACK💫 can look like:
 - The application can stand on its own to be used by an instructor without guidance from a developer on the team.
-- UI/UX is intuitive and easy to read/use
-- Helpful messaging is displayed to prevent user confusion
-  - For example: If a user searches for a recipe and finds no matching results, a message is displayed to indicated that the search worked, nothing is broken, there just aren't any matching recipes found.
+- UI/UX is intuitive and easy to read/use.
+- Helpful messaging is displayed to prevent user confusion.
+  - ***For example:** If a user hasn't been active for 7 days, a message is displayed saying there isn't enough data to show their weekly report for each data point.*
 
 ✨WOW✨ can look like:
 - Design is responsive across small, medium and large breakpoints.
