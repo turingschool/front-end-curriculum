@@ -179,18 +179,20 @@ Look at the following code example and make note of what we need to test:
 
 
 ```js
-class Player {
-  constructor(name) {
-    this.name = name;
-    this.winningWords = [];
-  }
+let player = {
+  name: 'Trisha',
+  winningWords: []
+}
 
-  checkForWin(playerWord, correctWord) {
-    if(playerWord === correctWord) {
-      this.winningWords.push(playerWord)
-    }
+function checkForWin(playerWord, correctWord, player) {
+  if(playerWord === correctWord) {
+    player.winningWords.push(playerWord)
+    return 'Correct!'
+  } else {
+    return 'Incorrect, try again!'
   }
 }
+
 ```
 
 <section class="answer">
@@ -198,11 +200,19 @@ class Player {
 
 ```js
 describe('Player Class', () => {
-  it('should add word to winningWords when answer is correct', () => {
+  it('should add word to player\'s winningWords when answer is correct', () => {
 
   });
 
-  it('should not update winningWords when answer is incorrect', () => {
+  it('should not update player\'s winningWords when answer is incorrect', () => {
+
+  });
+
+  it('should return Correct! when answer is correct', () => {
+
+  });
+
+  it('should return Incorrect, try again! when answer is incorrect', () => {
 
   });
 });
@@ -221,28 +231,58 @@ describe('Player', function() {
 
     // 1. "Setup"
     // Create the mock data we need to use in this test
-        // Instantiate an instance of our player
+        // Create a mock player
         // Create variable to hold the correctWord we'll use for this test
-    var player = new Player('Susan');
+    var player = {
+        name: 'Nick',
+        winningWords: []
+    };
     var correctWord = 'adore';
 
     // 2. "Execution"
     // Run appropriate functions that execute the behavior indicated by our test title
-    player.checkForWin('adore', correctWord);
+    // Pass it the required arguments needed to test the specific path/scenario we're trying to test
+    checkForWin('adore', correctWord, player);
 
     // 3. "Assertion"
     // Make an assertion to verify that after executing certain functions, we end up with what we expect
     expect(player.winningWords).to.deep.equal(['adore']);
+  });
+
+  //Lets breakdown a sad path!
+    // 'it block' contains the context of each specific test
+  it('should not update player\'s winningWords when answer is incorrect', () => {
+
+    // 1. "Setup"
+    // Create the mock data we need to use in this test
+        // Create a mock player
+        // Create variable to hold the correctWord we'll use for this test
+    var player = {
+        name: 'Ben',
+        winningWords: []
+    };
+    var correctWord = 'adore';
+
+    // 2. "Execution"
+    // Run appropriate functions that execute the behavior indicated by our test title
+    // Pass it the required arguments needed to test the specific path/scenario we're trying to test
+        //This time we will pass an incorrect guess for the first argument to test the sad path
+    checkForWin('spend', correctWord, player);
+
+    // 3. "Assertion"
+    // Make an assertion to verify that after executing certain functions, we end up with what we expect
+    expect(player.winningWords).to.deep.equal([]);
   });
 });
 ```
 
 <section class="call-to-action">
 ### In Your Notebook  
-  1. Could we use one of the following assertion statements instead? Why/why not?  
+  1. Could we use one of the following assertion statements in our first it block instead? Why/why not?  
     `expect(player.winningWords)to.be.an('array');`  
     `expect(player.winningWords.length).to.equal(1);`  
-  1. How would we write our test for the sad path (if playerWord is not the correctWord)?  
+  1. How would we write our tests for testing what the function returns (happy and sad path)?  
+  1. Is this function pure?  Why or why not?
 </section>  
 
 <section class="note">
