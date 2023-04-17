@@ -199,7 +199,7 @@ function checkForWin(playerWord, correctWord, player) {
 ### What would we want to test about the `checkForWin` method? What should this method do?  
 
 ```js
-describe('Player Class', () => {
+describe('checkForWin function', () => {
   it('should add word to player\'s winningWords when answer is correct', () => {
 
   });
@@ -223,8 +223,8 @@ Now that we've determined what we need to test, read the comments that talk abou
 
 ```js
 // Before anything can happen, we need a describe block to group related tests together
-// In this case, the tests within our describe block are all related to the 'Player' class
-describe('Player', function() {
+// In this case, the tests within our describe block are all related to the 'checkForWin' function 
+describe('checkForWin function', function() {
 
   // Next, an 'it block' contains the context of each specific test
   it('should add word to winningWords when answer is correct', () => {
@@ -283,6 +283,7 @@ describe('Player', function() {
     `expect(player.winningWords.length).to.equal(1);`  
   1. How would we write our tests for testing what the function returns (happy and sad path)?  
   1. Is this function pure?  Why or why not?
+  1. Why might side effects be difficult to test?
 </section>  
 
 <section class="note">
@@ -293,6 +294,12 @@ describe('Player', function() {
 - Can be used as documentation for the code they test
 - Are clear and easy to read
 - Assertions are specific, testing for exactly what value is expected, not just length or data type.
+
+### What makes a good test?What makes a function easy to test?
+
+- Pure functions are easier to test.  Why?
+- Functions that update or rely on a global variable are harder, sometimes impossible, to test.  Why?
+
 </section>
 
 
@@ -312,8 +319,8 @@ npm install
 ```
 
 * Note what files exist in the tests.  Take a look at the `package.json` file as well, noting *devDependencies* and the *scripts*.
-* Move to the `/test/Box-test.js` file. Make sure your assertion library, the `expect` keyword have been imported. Wait on importing Box until Iteration 1.
-* Setup your `describe` block, and write a basic dummy test (such as `expect(true).to.equal(true);`). This test *should* pass right away to show you that everything is linked correctly.
+* Move to the `/test/box-test.js` file. Make sure your assertion library, the `expect` keyword have been imported. Wait on importing functions from box until Iteration 1.
+* Setup your `describe` block, and write a basic dummy test (such as `expect(true).to.equal(true);`). This test *should* pass right away. This is just to show you that everything is linked correctly.
 * Run `npm test` to see if your test passes.  If not, take note of the error message and try to fix it.
 </section>
 
@@ -322,19 +329,19 @@ npm install
 Pay close attention to all these imports - they may not always already be there for you.  
 `const chai = require('chai');` -> gives you access to the Chai assertion library.    
 `const expect = chai.expect;` -> gives you access to the Expect syntax from the Chai assertion library.  
-`const Box = require('../src/Box');` -> imports your Box class into your test file.  Remember this only works if you are also exporting from your Box Class.
+`const {createBox, calculateArea} = require('../box');` -> imports your functions from your box file into your test file.  Remember this only works if you are also exporting each function from your box file.
 </section>
 
 <section class="answer">
 ### The Answer (Only click if you get stuck or have finished)
 
 ```js
-// test/Box-test.js  
+// test/box-test.js  
 
 const chai = require('chai');
 const expect = chai.expect;
 
-describe('Box', function() {
+describe('box functions', function() {
   it('should return true', function() {
     expect(true).to.equal(true);
   });
@@ -344,9 +351,7 @@ describe('Box', function() {
 Running `npm test` should result in:
 
 ```bash
-Box
   ✓ should return true
-
 
 1 passing (10ms)  
 ```
@@ -363,48 +368,50 @@ Let's pretend we just received a spec, and the first iteration looks something l
 <section class="call-to-action">
 ### Iteration 1
 
-- You should have a Box constructor which has a default height and width of 100.
+- You should have a `createBox` function which assumes a default height and width of 100.
 - User should be able to pass in specific height and widths if they so choose.
-- You should be able to calculate the area of your box using the method `.calculateArea()`.
+- User should be able to calculate the area of the box by passing the box into a `calculateArea` function.
 
-1. Start with writing the tests.  Note that you'll need to import (and export) a `Box` class and create a new instance of it for each test.  Your tests will **fail** when you run `npm test`.
-2. Now work on the implementation in the `Box.js` file.  Feel free to add `.skip` to your tests so that you can focus on one at a time.
+1. Start with writing the tests.  Note that you'll need to import (and export) each function. You might need to set up some mock data to use for each test.  Your tests will **fail** when you run `npm test` because you haven't yet written the implementation code to make them pass.
+2. Now work on the implementation in the `box.js` file.  Feel free to add `.skip` to your tests so that you can focus on one at a time.
 </section>
 
 <section class="answer">
 ### Test Solution
 
 ```js
-// test/Box-test.js
+// test/box-test.js
 
 const chai = require('chai');
 const expect = chai.expect;
 
-const Box = require('../src/Box');
+const {createBox, calculateArea} = require('../box');
 
-describe('Box', function() {
+describe('box', function() {
   it('should return true', function() {
     expect(true).to.equal(true);
   });
 
   it('should have a default height and a width', function() {
-    var box = new Box();
+    var box = createBox()
 
     expect(box.height).to.equal(100);
     expect(box.width).to.equal(100);
   });
 
   it('should be able to take a height and a width as arguments', function() {
-    var box = new Box(50, 40);
+    var box = createBox(50, 40);
 
     expect(box.height).to.equal(50);
     expect(box.width).to.equal(40);
   });
 
   it('should calculate its area', function() {
-    var box = new Box(30, 30);
+    var box = createBox(30, 30);
 
-    expect(box.calculateArea()).to.equal(900);
+    var area = calculateArea(box)
+
+    expect(area).to.equal(900);
   })
 });
 ```
@@ -414,19 +421,20 @@ describe('Box', function() {
 ### Implementation Solution
 
 ```js
-// Box.js  
-class Box {
-  constructor(height = 100, width = 100) {
-    this.height = height;
-    this.width = width;
+// box.js  
+function createBox(height, width) {
+  var box = {
+    height: height || 100,
+    width: width || 100
   }
-
-  calculateArea() {
-    return this.height * this.width;;  
-  }
+  return box
 }
 
-module.exports = Box;
+function calculateArea(box) {
+  return box.height * box.width;;  
+}
+
+module.exports = { createBox, calculateArea };
 ```
 </section>
 
@@ -438,9 +446,9 @@ Let's continue to practice adding more iterations following the TDD process from
 ### Iteration 2
 
 - You should be able to increase the width by a provided value.
-ie: `box.increaseWidth(10)`
+ie: `increaseWidth(10)`
 - You should be able to increase the height of your box by a provided value
-ie: `box.increaseHeight(10)`
+ie: `increaseHeight(10)`
 </section>
 
 ## Testing Practice: Iteration 3
@@ -451,7 +459,7 @@ Implement iteration 3 for our box per the spec outlined below;
 ### Iteration 3
 
 - Refactor your code so that instead of having increaseWidth and increaseHeight methods, you can have a single method to do both jobs
-ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`
+ie: `increment(10, 'height')` or `increment(10, 'width')`
 </section>
 
 <section class="checks-for-understanding">
@@ -460,6 +468,7 @@ ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`
 * What is the difference between Mocha and Chai?
 * What is the structure of a test?
 * What makes a test good?
+* What makes a function easy or difficult to test?
 </section>
 
 ### Further Reading
