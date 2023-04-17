@@ -152,9 +152,9 @@ Take a moment to read through this code:
 ```js
 function checkForFood(restaurant, food) {
   if (restaurant.menus[food.type].includes(food)) {
-    return `Yes, we're serving ${food.name} today!`;
+    return `Yes, we're serving ${food} today!`;
   }
-  return `Sorry, we aren't serving ${food.name} today.`
+  return `Sorry, we aren't serving ${food} today.`
 }
 
 var foodItem = {
@@ -166,9 +166,9 @@ var foodItem = {
 var restaurant = {
   name: 'Butcher Block Cafe',
   menus: {
-    breakfast: [{name: 'Quiche', price: '6.49', type: 'breakfast'}],
-    lunch: [{name: 'Ham and Swiss', price: '10.00', type: 'lunch'}],
-    dinner: [{name: 'Country Fried Steak', price: '14.00', type: 'dinner'}]
+    breakfast: ['Quiche', 'Egg and Sausage Sandwhich', 'Corn Beef Hash'],
+    lunch: ['Ham and Swiss', 'Chicken Fried Steak', 'Cheeseburger'],
+    dinner: ['T Bone Steak', 'Spagetti and Meatballs']
   }
 }
 

@@ -47,8 +47,8 @@ In this project, we will not be providing detailed iterations. We want you to ex
 * Winner (or Draw) should be announced each round.
 * A timeout is used after a completed round to reset the board.
 * The overall layout should be the same but you can choose different colors and icons if you want to get creative with your with your Rock Paper Scissors design!
-* This game is played by one user against a computer. The computer player should be an instantiation of Player and have the ability to make a random choice.
-* You'll need to make two versions of Rock, Paper, Scissors - "classic" and some variation. The variation should include more than 3 options (the one in the video has 5). You can invent your own variation, or do some research on variations [here](https://www.wrpsa.com/different-variations-of-rock-paper-scissors/). Make sure you communicate the rules to your user!
+* This game is played by one user against a computer. The computer player should be another `player` object with the `name` of 'computer' and have the ability to make a random choice.
+* You'll need to make two versions of Rock, Paper, Scissors - "classic" and some variation. The variation should include more than 3 options (the one in the video has 5). You can invent your own variation, or do some research on variations [here](https://www.wrpsa.com/different-variations-of-rock-paper-scissors/). *Make sure you communicate the rules to your user!*
 
 **Classic Rock Paper Scissors Rules**
 - Rock smashes scissors
@@ -59,23 +59,24 @@ In this project, we will not be providing detailed iterations. We want you to ex
 
 ### Architecture
 
-Your entire application will consist of one HTML page. You will have three JavaScript files:
+Your entire application will consist of one HTML file, one CSS file and one JS file.
 
-1. A `player.js` file that contains a `Player` class.
-   * `Player` methods must include, _but are not limited to_:
-     - `constructor` - properties should include: `name` (ex: `'Human'`), `token` (ex: `'👩🏻'`), `wins` (ex: `0`)
+1. A `main.js` file that contains all of your JavaScript logic.
+   * You'll need a `createPlayer` function, that should return an object with the following properties:
+     - `name` (ex: `'Human'`), `token` (ex: `'👩🏻'`), `wins` (ex: `0`)
+
+   * Your player should have access to functions that must include, _but are not limited to_:
      - `saveWinsToStorage` - only necessary if you choose the localStorage extension
      - `retrieveWinsFromStorage` - only necessary if you choose the localStorage extension
      - `takeTurn`
-2. A `game.js` file that contains a Game class.
-   * A `Game` should include:
-     - Two `Player` instances
+   * A `createGame` function that should return a game object containing:
+     - Two `Player` objects (`player1` and `player2`) 
      - A way to keep track of the data for the game board
      - A way to keep track of the selected game type
-     - A way to check the Game's board data for win conditions
-     - A way to detect when a game is a draw (no one has won)
-     - A way to reset the Game's board to begin a new game
-3. A `main.js` file that contains all DOM related JavaScript
+   * A separate function to check the game's board data for win conditions
+   * A separate function to detect when a game is a draw (no one has won)
+   * A separate function to reset the game's board to begin a new game
+
 
 ### Data Model
 
@@ -86,14 +87,15 @@ In a game like Rock Paper Scissors, it is tempting to manipulate the DOM first. 
 This workflow is not required, but will help you meet the overall requirements of the project.
 
 1. Plan out the HTML layout (colors and icons do not need to match, but overall layout should closely match the demo video)
-2. Create the Player class
-3. Create the Game class
-4. Make game fully playable without the DOM (manually updating the Game data, etc, from your console) to force yourself to think data-model-first
+2. Create the `createPlayer` function
+3. Create the `createGame` function
+4. Make game fully playable without the DOM (manually updating the game data, etc, from your console) to force yourself to think data-model-first
 5. Create central game board on the DOM
-6. Connect Game data model to the DOM
-7. Display the Player data in the sidebars
+6. Connect game data model to the DOM
+7. Display the player data in the sidebars
 8. Automatically reset the game board to allow for a new game to be played after the previous game is won
-9. Extension - Persist Player data using local storage (number of wins should persist across page refreshes)
+9. *Optional Extension* - Persist player data using local storage (number of wins should persist across page refreshes)
+10. As an *optional extension* you *could* choose to keep your DOM related JavaScript in a separate JS file altogether. This is **NOT** a requirement or expectation of this project. If you finish with extra time and want to try refactoring your code to pull the DOM related JavaScript into a `domUpdates.js` file, be sure to do so on a branch so you aren't breaking your finished, working code while you play with it.
 
 
 # Notes on Project Feedback
@@ -185,13 +187,14 @@ As mentioned above, functionality does have more weight in this final project in
 - No nested if/else statements or for loops.
 - Functions are DRY and adhere to the Single Responsibility Prinicple (SRP)
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
-- The application correctly implements a data model for the `Player` and `Game` classes, including all required methods. The data model is kept up to date.
-- Data model is fully separated from the DOM. All DOM manipulation is handled exclusively in `main.js`.
+- The application correctly implements a data model for the `player` and `game` objects, including all required methods. The data model is kept up to date.
+- Data model is fully separated from the DOM. Functions that update the DOM are separated from methods that update the data model. 
 
 ✨WOW✨ can look like:
 - Changes to the DOM only happen after the Data Model has been updated.  The Data Model is then used to update the DOM.
 - Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
-- Bracket notation is utilized effectively to make accessing properties of class instances more dynamic.
+- Bracket notation is utilized effectively to make accessing properties of objects more dynamic.
+- Demonstrates efforts towards making functions pure when possible. Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.
 </section>
 
 <section class="answer">

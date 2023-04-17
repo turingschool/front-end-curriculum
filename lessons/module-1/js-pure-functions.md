@@ -29,7 +29,7 @@ A **pure function** is a function that is predictable and always returns the sam
 var userEmail = "jeremiah@turing.io";
 
 function confirmEmail() {
-  console.log(`Your email address is currently ${userEmail}`);
+  return `Your email address is currently ${userEmail}`;
 }
 
 confirmEmail();  // "Your email address is currently jeremiah@turing.io"
@@ -41,7 +41,7 @@ confirmEmail(); // "Your email address is currently jeremiah@turing.edu"
 **Pure Function:**
 ```js
 function confirmEmail(userEmail) {
-  console.log(`Your email address is currently ${userEmail}`);
+  return `Your email address is currently ${userEmail}`;
 }
 
 confirmEmail("jeremiah@turing.io") // "Your email address is currently jeremiah@turing.io"
@@ -80,6 +80,12 @@ Take note of the global variable that is keeping track of how much a user has sp
 1. Our `addCost` function is dependant on `totalSpent` in order to succesfully perform it's task.  `addCost` will return an error if for some reason `totalSpent` was no longer available.  It is not completely dependant on it's input.
 2. The second side effect is that `addCost` is programmed to mutate the `totalSpent` variable.  It is making an "update to the outside world."
 
+<section class="call-to-action">
+### On Your Own
+
+* What would need to be changed in order to make our `addCost` function pure (*i.e. no side effects*)?
+</section>
+
 <section class="note">
 ### Notes To Remember
 By keeping much of the logic of an application built on **pure functions**, it can make your code more predictable and safer.  Ultimately this will also allow your application to be easier to test and debug.  Following this structure can allow us to follow a more functional paradigm with your JS which can be significantly easier to use than other paradigms such as OOP (Object Oriented Programming).
@@ -91,10 +97,10 @@ Not all functions are going to be pure.  Functions that must mutate data outside
 
 ## Getting More Practice
 
-Let's look at a few more examples.  In breakout groups, you will look at the next 3 exercises and determine if the function is pure or impure.  If the function is impure, refactor it so that the function is pure!
+Let's look at a few more examples.  In breakout groups, you will look at the next 3 exercises and determine if the function is pure or impure.  If the function is impure, pseudocode it out so that the function is pure!
 
 <section class="call-to-action">
-### In Your Notebook
+### In Breakout Rooms
 
 Answer the following questions for the next 3 exercises:
 1. Is the function pure?  Why or why not?
@@ -132,9 +138,9 @@ addFriend("Travis Rollins");
 var order = { restaurant: "Dominos", status: "delayed", remainingTime: 30 };
 
 function updateOrder(status, newWaitTime) {
-    order.delivered = status;
+    order.status = status;
     order.remainingTime = newWaitTime;
-    console.log("Delivery has been updated!");
+    return "Delivery has been updated!";
 }
 
 updateOrder('on time', 15); // Delivery has been updated!
