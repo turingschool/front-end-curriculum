@@ -18,7 +18,7 @@ with our applications, however before we do that, we need to understand how to
 use JavaScript to handle the logic of our applications.
 
 In this project, you'll be gaining experience working with variables, primitive
-data types, looping, arrays, and objects. As you work through the
+data types, looping, arrays, objects and functions. As you work through the
 iterations, be sure to take time to stop and refactor you solutions. There is
 rarely one right way to solve a problem in programming, and part of your job
 will be evaluating the trade offs between different approaches to solving a
@@ -26,9 +26,11 @@ problem.
 
 ## Learning goals
 
-  - Understand what JavaScript primitives are, and how/when to use them
+  - Understand JavaScript data types and how/when to use them
   - Understand how to declare variables and assign data to them
-  - Practice using objects and arrays
+  - Practice using objects and arrays, including `for loops`
+  - Write functions that require conditional logic, parameters/arguments, and `return`
+  - Read and understand unit tests, and pass them
 
 ## Setup
 

@@ -22,7 +22,7 @@ You're going to learn about some important lifecycle methods today: `componentDi
 
 First, follow the following instructions:
 ```bash
-git clone git@github.com:turingschool-examples/react-iii-ideabox.git
+git clone https://github.com/turingschool-examples/react-iii-ideabox.git
 cd react-iii-ideabox
 npm i
 git checkout lifecycle-warmup

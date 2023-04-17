@@ -280,9 +280,12 @@ WOW can look like:
 
 - The team's norming document is regularly revisted and revised as better perspective is gained
 - When conflicts arise, the team works together to find ways to re-focus on individual and group learning objectives
-</section>
 
 Note: ⬆️this⬆️ kind of collaboration can be difficult to assess, but know that this is a crucial and vital part of your learning and marketability as a developer! 
+</section>
+
+#### Important Note on Collaboration and Professionalism:
+Every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing.
 
 <section class="answer">
 ### Git competency examples
@@ -383,7 +386,6 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 - Application uses the Data Model exclusively to track changes to the ideas.
 - No nested if/else statements or for loops.
 - Functions are DRY and adhere to the Single Responsibility Prinicple (SRP).
-- At least some functions are pure.
 - Event delegation is used correctly on dynamic elements for deleting and starring an idea.
 - Data model is fully separated from the DOM.  There is no DOM manipulation in the `app.js` file.
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local.
@@ -392,7 +394,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ✨WOW✨ can look like:
 - Changes to the DOM only happen after the Data Model has been updated.  The Data Model is then used to update the DOM.
 - Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering.
-- Functions are pure and do not rely on or cause side effects.
+- Demonstrates efforts toward writing functions that are pure and do not rely on or cause side effects. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 - Bracket notation is utilized effectively to make accessing properties of class instances more dynamic.
 </section>
 
@@ -420,3 +422,4 @@ Well-refactored, thoughtful code is better than sloppy extra features.
 
 - An extension is successfully implemented along with thoughtful UI
 </section>
+

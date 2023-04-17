@@ -387,16 +387,19 @@ For example, the URL `/puppies/1` should render a view just for the puppy with a
 
 It could look something like this:
 ```jsx
-// **CreatureDetails.js**
+// **Creature.js**
 // ...
-return (
-  <NavLink to={`/${name}/${id}`}>
-    <img src={image} key={id} id={id} className="app-img"/>
-  </NavLink>
-)
+const Creatures = ({ data, name }) => {
+  const creatureImages = data.map(creature => {
+    const { id, image } = creature;
+    return (
+      <NavLink key={id} to={`/${name}/${id}`}>
+        <img src={image} alt={name} className="app-img" />
+      </NavLink>
+    );
+  });
 // ...
-
-
+  
 // **App.js**
 // ...
 <Route

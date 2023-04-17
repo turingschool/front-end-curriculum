@@ -1,6 +1,6 @@
 ---
-title: What's Cookin - Part 2!
-tags: javascript, mocha, testing, fetch, agile
+title: FitLit - Part Two!
+tags: JavaScript, mocha, chai, testing, fetch
 ---
 
 ## Goals and Objectives
@@ -11,12 +11,11 @@ tags: javascript, mocha, testing, fetch, agile
 - Implement feedback from a usability test to improve product
 - Improve group workflow.
 
-In this project, you will use your project from What’s Cookin’ (Part 1) and build on top of that. This is an opportunity to refactor your code, utilize agile processes, complete unfinished work, build new features, and take advantage of instructor feedback.
+In this project, you will use your project from FitLit (Part One) and build on top of that.  This is an opportunity to refactor your code, utilize agile processes, complete unfinished work, build new features, and take advantage of instructor feedback.
 
 These are all aspects of your future job. Code is important, but process allows for great applications to be built. This part of the project focuses heavily on process so that you have an opportunity to talk about process in your future interviews.
 
 ## Timeline
-
 Dates and deliverables to be aware of:
 
 - **Monday of Week 4** - Project kickoff
@@ -48,9 +47,11 @@ A retrospective (retro) is a look back at the recent development period, in this
 
 When you’ve finished your retro, DM your project manager two things from your retrospective that you want to keep doing and two things that you want to improve on as a group heading into Part 2.
 
----
+## Project Iterations
 
-## Iteration 4 - Applying Instructor Feedback from Part 1
+
+<section class="answer">
+### Iteration 6 - Applying Instructor Feedback from Part 1
 
 - Implement instructor feedback from Part 1. Be sure to ask your instructor about any clarifying questions you have about feedback.
 - Consider any additional refactoring opportunities:
@@ -59,60 +60,130 @@ When you’ve finished your retro, DM your project manager two things from your 
 
 ### Catching Up on Functionality
 
-You must complete all of the remaining user stories from the [What’s Cookin Part 1 Spec](https://frontend.turing.edu/projects/whats-cookin-part-one.html). If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part 1 requirements you must also ***implement your instructor’s feedback*** and add ***“Iteration Five” and “Iteration Six”***.
-
----
-
-## Iteration 5 - POST
-
-**Goal**: Use a POST request to save the recipes that a user wants to cook (favorite) to the local API. That way when the page is refreshed, the user can still see their favorited recipe(s). The documentation for the API is outlined below.
-
-Note: Being able to do a DELETE request is not a requirement for this project. So to delete a user’s favorite recipes, you can reset the data on the local server by restarting the local server on your machine. Do not worry about “un-favoriting” a recipe via a DELETE request; restart the API server instead.
-
-### Fetch
-
-You will no longer receive your data from the deployed API. Instead, you'll use the fetch API to access the application data from a [local server](https://github.com/turingschool-examples/whats-cookin-api).
-
-Your GET requests should not change very much, but you will need to clone down the repo for the local server, perform the setup, and run it in a separate tab in your terminal each time you run your client (app). The endpoint documentation is available below.
-
-### Why this change?
-
-Everyone was using the same exact endpoints for Part 1. This is typically how things work, but can cause some headaches during projects when implementing types of requests other than GET. In this part of the project, you will start making POST requests. Creating a local server instead of using the hosted (deployed) one, gives everyone their own version of the APIs and decreases an overload of new data getting sent.
-
-<section class="note">
-### Hold Off on `async/await`
-
-The expectation for Mod 2 is that you will avoid using `async/await`. We know `async/await` is tempting, but it is important that you are able to work with `.then()` and `.catch()` that pre-dates the introduction of `async/await`.
-
-Also, for POST requests, your request will need a header of `Content-Type: application/json`.
+You must complete all of the remaining user stories from the [FitLit Part 1 Spec](https://frontend.turing.edu/projects/module-2/fitlit-part-one-agile.html). If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part 1 requirements you must also ***implement your instructor’s feedback*** and add ***“Iteration 7” and “Iteration 8”***.
 </section>
 
-### API Endpoints
+
+<section class="answer">
+### Iteration 7 - POST
+
+**Choose one:** A user should be able to add new sleep, new hydration, **OR** new activity data from the dashboard.
+
+You will no longer receive your data from the deployed API, but rather implementing the fetch API for accessing the data from a [local server](https://github.com/turingschool-examples/fitlit-api){:target='blank'}.
+
+Your GET requests should not change very much, but you will need to clone down the local server repo, set it up, and run it in a separate tab in your terminal each time you run your client (app). Below are the endpoints set up for this project.
+
+<section class="note">
+### Why this change?
+
+Everyone was using the same exact endpoints for Part One. This is typically how things work, but can cause some headache when implementing types of requests other than GET. In this part of the project, you will start making POST requests. Creating a local server instead of using the hosted (deployed) one, gives everyone their own version of the APIs and decreases an overload of new data getting sent.
+
+</section>
+
+#### Endpoint Documentation (GET and POST)
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
-| --- | --- | --- | --- | --- |
-| Get all users | http://localhost:3001/api/v1/users | GET | none | An array containing all users |
-| Get all ingredients | http://localhost:3001/api/v1/ingredients | GET | none | An array containing all ingredients |
-| Get all recipes | http://localhost:3001/api/v1/recipes | GET | none | An array containing all recipes |
-| Add recipe to cook for a user | http://localhost:3001/api/v1/usersRecipes | POST | { userID: `<number>`, recipeID: `<number>` } | { message: "Recipe #`<recipeID>` was added for User #`<userID>`" } |
+|----------|-----|--------|---------------------|-----------------|
+| Get all users | `http://localhost:3001/api/v1/users` | GET  | none | An array containing all users |
+| Get all sleep data | `http://localhost:3001/api/v1/sleep` | GET | none | An array containing all sleep datas |
+| Get all activity data | `http://localhost:3001/api/v1/activity` | GET | none | An array containing all activities |
+| Get all hydration data | `http://localhost:3001/api/v1/hydration` |GET | none | An array containing all hydration data |
+| Add A User sleep data |`http://localhost:3001/api/v1/sleep`| POST | `{ userID: <number>, date: <string> , hoursSlept: <number> , sleepQuality:<number> }` | `{ userID: #, date: "some dates ex("12/12/2020")" , hoursSlept: # , sleepQuality: # }`|
+| Add A User hydration data |`http://localhost:3001/api/v1/hydration`| POST | `{ userID: <number>, date: <string> , numOunces: <number> }` | `{ userID: #, date: "some dates ex("12/12/2020")" , numOunces: # }`|
+| Add A User activity data |`http://localhost:3001/api/v1/activity`| POST | `{ userID: <number>, date: <string>, flightsOfStairs: <number>, minutesActive: <number>, numSteps: <number>` | `{ userID: #, date: "some dates ex("12/12/2020")" , flightsOfStairs: #, minutesActive: # }`|
 
-### Error Handling
+<section class="note">
 
-Make proper error handling for your users to ensure they know if the GET or POST requests have been submitted successfully. An example is handling the case where they submit a request and an error message returns from the request. How would you show helpful feedback to a user?
+### Note about Adding Sleep, Hydration and Activity Data
 
----
+* You must be able to add a new sleep, hydration and activity data entry for that user.
+* Your user should see the dashboard update to include the newly added data *without having to refresh the page.*
 
-## Iteration 6 - Differentiation Tracks
+
+For example, if the currently displayed user has an ID of 50, and you want to add new sleep data you would want to send a JSON object through with your POST request that looks like:
+
+
+```json
+{
+    userID: 50,
+    date: "10/29/2021" ,
+    hoursSlept: 2,
+    sleepQuality:2.2
+}
+```
+</section>
+
+#### Error Handling
+
+Make proper error handling for your users to ensure they GET data and submit their POST requests successfully. An example is handling the case where they submit their data and an error message returns from the request. How would you show feedback to a user? Also, validate the input fields on the client-side.
+
+</section>
+
+## Iteration 8 - Differentiation Tracks
 
 Instructors will assign each team **one** of these tracks to work through.
+  
+<section class="answer">
+### Step Challenge
 
-- The user wants to be able to decide what to make based on the cost of the recipe.
-- Users often print out recipes, but they don’t want to waste ink and paper. How can we give them a print layout with only the information they need for a single recipe?
-- We’re getting a lot of international users these days, and they don’t know how much a dollar is exactly. We need to give them a way to convert the cost of a recipe into their own currency.
-- Sometimes a user doesn’t want to have to search through all the recipes when they come to the site. They want to see some featured recipes on the main page to help them make a quick decision.
-- Users want to plan a party using recipes from the app. After the party is planned, they need a grocery list to be able to make sure they have everything they need.
-- Give the users a way to remember if a recipe was good or not (this does not have to be saved on refresh, but it’s a nice bonus).
-- The admin of the site wants a way to see which recipes are getting the most hits (clicks). Give them some kind of tracking information that the admin can find.
+Design a step challenge between a user and some friends (other users). A user in a step challenge wants to see their friends’ results and see who won the step challenge.
+</section>
+
+<section class="answer">
+### User Trends
+
+A user wants to know how they’re doing overall. What are some interesting trends for a single user? How can you display those trends for a user in a meaningful way? For instance, for a user, were there days with increasing steps for 3 or more days for a given week?
+</section>
+
+<section class="answer">
+### UI Rearrangement
+
+The user would like to be able to rearrange their dashboard so that certain parts of the UI are at the top or bottom depending on their preferences. You can use a 3rd-party library to help you accomplish this.
+</section>
+
+<section class="answer">
+### Priority Views
+
+The user would like the ability to select the information they always want to see at the top of the page. This is a customization the user would want to make, and when they leave the app and come back, their customization should stay the same.
+</section>
+
+<section class="answer">
+### Admin View
+
+An administrator (admin) wants to view data from any user. They also want to see views of interesting data from all users - what are some interesting trends of all users? How can you display data from all users in a meaningful way? For instance, which users have the top ten step counts for a given week?
+</section>
+
+<section class="answer">
+### Run Map View
+
+Some users have their latest run data associated with their accounts. They would love to be able to see where they ran on a map view. Their latest run data is available at the endpoint: 
+
+**http://localhost:3001/api/v1/users/:userID/latestrun**
+
+Where `:userID` is replaced with a user ID integer. Only users 1-5 have latest run data.
+
+Helpful notes: A recommended mapping library is [Leaflet](https://leafletjs.com/index.html). The run data, which includes the latitude and longitude, for each run is formatted using XML, which is different from the JSON you’re used to! You’ll have to find a new way to parse through the XML to get the latitude and longitude values to plot on a map.
+</section>
+
+<section class="answer">
+### Stretch Timer
+
+A user wants to be able to time their stretches. This timer should be able to handle a time to hold the stretch, a number of reps, and a number of sets.
+</section>
+
+<section class="answer">
+### Motivation
+
+The user wants to feel motivated each time they open the app, and they want to be able to input into the app how motivated they feel for any given day.
+</section>
+
+<section class="answer">
+### Activity Notes
+
+Our users would like to be able to take notes about their day’s activities. For a given day, they would like to be able to keep track of what activity they did and how it went. The data should stay in the application even when refreshed.
+</section>
+
+---
 
 ### Usability Testing
 
@@ -141,7 +212,7 @@ Once your usability test is complete, incorporate any useful and interesting fee
 - You must be able to tab through your app and use it without a mouse
 - Your app must still be usable when tested with a colorblind extension
 - You must score as close to 100% as possible with the “Lighthouse Accessibility Audit”. Be prepared to explain any accessibility audits your application is failing.
-- Your HTML must be written semantically and should use ARIA tags (*ONLY if needed / appropriate*)
+- Your HTML must be written semantically and should use ARIA tags (_ONLY if needed / appropriate_)
 
 ---
 

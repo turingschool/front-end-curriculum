@@ -18,7 +18,7 @@ with our applications, however before we do that, we need to understand how to
 use JavaScript to handle the logic of our applications.
 
 In this project, you'll be gaining experience working with variables, primitive
-data types, looping, arrays, objects and classes. As you work through the
+data types, looping, arrays, objects and functions. As you work through the
 iterations, be sure to take time to stop and refactor you solutions. There is
 rarely one right way to solve a problem in programming, and part of your job
 will be evaluating the trade offs between different approaches to solving a
@@ -26,10 +26,11 @@ problem.
 
 ## Learning goals
 
-  - Understand what JavaScript primitives are, and how/when to use them
+  - Understand JavaScript data types and how/when to use them
   - Understand how to declare variables and assign data to them
-  - Practice using objects
-  - Practice using arrays
+  - Practice using objects and arrays, including `for loops`
+  - Write functions that require conditional logic, parameters/arguments, and `return`
+  - Read and understand unit tests, and pass them
 
 ## Setup
 
@@ -82,11 +83,11 @@ problem.
     different way you could make the tests pass?
 
 
-### Extension (not part of the project, just stuff to do if you get to it): Complete the Librarian tests
-  - Unskip the first test in `test/librarian-test.js`, and get to work passing the tests
-  - Run `npm test test/librarian-test.js`  
-  - This test involves using a class. It will require self-teaching in order to complete.
-  - Ensure that all of the skips are removed from the test file when you push up to GitHub.
+### Extension: Refactoring
+  - Preteach yourself the [Dot & Bracket Notation](https://frontend.turing.edu/lessons/module-1/js-dot-bracket-notation.html){:target="_blank"} lesson.
+  - Revisit your `addBook` and `checkoutBook` functions.  Consider any similar lines of code and how you might refactor both functions to make use of bracket notation. 
+  - Refactor `takeStock` so that it dynamically checks to see if the book exists in the correct shelf.  Note you will need to make use of bracket notation in this solution as well.  
+  - Ensure that all tests still pass after refactors have been made.
 
 ## Self-Assessment
 

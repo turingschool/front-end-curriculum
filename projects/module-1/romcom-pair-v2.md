@@ -5,13 +5,14 @@ title: RomCom - Pair
 ## Learning Goals
 
 * Write clean, DRY JavaScript
-  * Use a provided class by creating object instances using the `new` keyword
+  * Build out functionality using functions that show trends toward SRP
   * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 * Explore the connection between HTML, CSS, and JavaScript
   * Practice reading, understanding, and using provided code
 * Write code collaboratively
   * Document changes with atomic commits & thorough code reviews
   * Communicate, troubleshoot, and plan effectively as a team
+  * Ensure all team members are able to be heard and contribute throughout the project
 
 ## Overview
 
@@ -19,7 +20,7 @@ People say that romance novels are formulaic. Well ... maybe that's true. We're 
 
 ## Set Up
 
-To begin, choose ONE PARTNER to do the following:
+To begin, choose **ONE** partner to do the following:
 
 1. Fork the boilerplate repository found [here](https://github.com/turingschool-examples/romcom/)
 2. Clone down your new, forked repo. While cloning, name it what you want your project to be named, should not include “boilerplate”. `git clone <url> <newNameYouWantItToHave>`
@@ -30,12 +31,9 @@ To begin, choose ONE PARTNER to do the following:
 
 Then, as a team:
 
-* Explore the repository to see what's going on in the code
-  - Look at each file: `index.html`, `styles.css`, `data.js`, `Cover.js`, `main.js`
-  - _Note: no imports or exports are needed because each JS file is linked in the HTML_
-  - Even if you don't know what each piece of the code is doing, talk through what you think is going on
-* What pieces of code might you use to complete iterations, and what pieces will you have to create?
-* All of your work will take place in `main.js` - you will not need to change any other files!
+* Explore the repository to see what's going on in the code. Look at each file.
+  * What pieces of code might you use to complete iterations, and what pieces will you have to create?
+* All of your JavaScript will be written in `main.js` - you will not need to change any other files.
 
 ## Day 1 Deliverables
 
@@ -56,10 +54,8 @@ Then, as a team:
 <img src="./assets/romcom/romcom-random.png" alt="Randomize">
 
 - When the page loads, we should see a cover with a randomly selected image, title, and tagline which includes two random descriptors
-- Every time the user clicks the Show New Random Cover button, a new random cover is created
-    - hint: you may need to update the value of the provided `currentCover` variable
-    - hint: use that Cover class!
 - Every time the user clicks the Show New Random Cover button, the random cover is displayed
+    - hint: you may need to update the value of the provided `currentCover` variable
     - hint: you may need to create a function that displays information on the DOM
 
 ## Iteration 1 - Switching Views
@@ -93,10 +89,10 @@ _Hint: go check out the HTML and CSS files to see how the form and saved covers 
 
 - In the new cover form view, users should be able to fill out the four input fields and then hit the Make My Book button
 - When the Make My Book button is clicked, several things will happen:
+  - Use the values from the inputs to create a new, unique cover object (part of your data model)
   - Save the submitted data into the respective arrays (cover URL into the covers array, title string into the titles array, etc) so that future random covers can use the user-created data
-  - Use the values from the inputs to create a new instance of the Cover class
   - Change back to the main home view (hiding the form view again)
-  - Display the newly created cover image, title, and descriptors in the main cover
+  - Use the newly created cover object to display the newly created cover image, title, and descriptors in the main view on the DOM
 
 <section class="note">
 ### Hint!
@@ -116,10 +112,9 @@ _Note: None of this needs to persist on page load_
 ## Iteration 4 - Deleting Saved Covers
 
 - From the saved covers view, if a user double clicks a saved poster, it will be deleted
+  -  HTML `onclick` attributes should not be used in any HTML code - all functionality should be through JavaScript.  
 
 _Hint: How will you update the data model to achieve this?_
-_Note: None of this needs to persist on page load_
-
 
 ## Optional Extensions - Gettin' fancy
 
@@ -128,6 +123,7 @@ Here's a list of possible extensions to implement - but **ONLY IF** your team ha
 You are welcome to add your own extensions. Be sure they are thoughtful in terms of UX/UI, and that they do not break any prior functionality.
 
 - Implement data validation and error handling into the form (disable the button until all fields are filled, provide error messages if data entered is not correct, etc)
+- In the main cover view, allow users to click each piece of the cover (image, title, descriptors) to update just that piece with another random item from the appropriate array
 - When a user single clicks a saved cover, create a modal to view it larger
 - Allow users to drag and drop saved posters into whatever order they want them to appear
 
@@ -194,7 +190,7 @@ And evaluation of these concepts is assisted through the final graded section:
 ### JavaScript
 
 This project gives the team room to practice the following JavaScript concepts:  
-- OOP (Object Oriented Programming)
+- Functional Programming concepts including creating dynamic functions
 - DOM (Document Object Model) manipulation
 - Style
   - SRP (Single Responsibility Principle) and DRY (don't repeat yourself) conventions
@@ -203,16 +199,15 @@ This project gives the team room to practice the following JavaScript concepts:
 Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 
 <section class="answer">
-### OOP competency examples
+### Functional Programming competency examples
 
-- Project makes use of the provided class, creating instances to encapsulate & store unique data
-- Team considers when and how to create new instances or update existing instances, coming to a clear and consistent decision
-- Team effectively creates/accesses instance properties when applicable
-- Team effectively invokes instance methods when applicable
+- Project makes use of the provided `createCover` function, creating objects to encapsulate & store unique data
+- Team considers when and how to create new cover objects or update existing cover objects, coming to a clear and consistent decision
+- Functions are DRY and demonstrate SRP
 
 ✨WOW✨ can look like:  
 
-- Creating effective, clean methods in the provided class to manipulate class properties
+- Functions are [pure](https://frontend.turing.edu/lessons/module-1/js-pure-functions.html){:target="_blank"} when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.* 
 </section>
 
 <section class="answer">
@@ -232,8 +227,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 - The main JS file is organized thoughtfully (DOM variables together, event listeners together, functions together)
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
-- Functions are DRY and demonstrate SRP
-- Variable and function naming is meaningful & readable
+- Variable and function naming is meaningful, readable and consistent
 - JS is formatted according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
 - Only semantic/organizational comments remain in file (if any); no "dead" commented out code remain in the file
 
@@ -270,9 +264,12 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 
 - The team's norming document is regularly revisted and revised as better perspective is gained
 - When conflicts arise, the team works together to find ways to re-focus on individual and group learning objectives
-</section>
 
 Note: ⬆️this⬆️ kind of collaboration can be difficult to assess, but know that this is a crucial and vital part of your learning and marketability as a developer! 
+</section>
+
+#### Important Note on Collaboration and Professionalism:
+Every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing.
 
 <section class="answer">
 ### Git competency examples
@@ -300,7 +297,7 @@ Note: ⬆️this⬆️ kind of collaboration can be difficult to assess, but kno
 - A PR template is effectively used (not a checkbox to complete, but an opportunity to document the changes being proposed)
 - Meaningful decisions are documented through code reviews; suggested/requested edits are made before merging
 - No bugs or poor code are merged into the main branch
-- The README effectivelly communicates the team's learning and growth as students
+- The README effectively communicates the team's learning and growth as students
 </section>
 
 Each of these "subsections" are not distinct; they are all taken into consideration when the outcome for Workflow and Professional Habits is determined.
@@ -319,7 +316,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ### Reading Code competency examples
 
 - The team takes time to thoroughly understand the provided code
-- Provided code is used effectively (the provided Class, the provided assets, the provided HTML & CSS)
+- Provided code is used effectively (the provided createCover function, the provided assets, the provided HTML & CSS)
   - The team does not have to directly edit the HTML or CSS file
   - The team does not ignore provided styling
   - No code is added that makes the provided code redundant

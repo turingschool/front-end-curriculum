@@ -70,22 +70,25 @@ Notes:
 
 ### Architecture
 
-Your entire application will consist of one HTML file and one CSS file. You will have two JavaScript files:
+Your entire application will consist of one HTML file, one CSS file and one JavaScript file.
 
-1. An 'app.js' file that contains your game's logic.
+Your `main.js` file should hold your game's logic and DOM related JavaScript.  
+It's best to keep this file organized with the logic organized separately from the DOM related JavaScript.
+
   * Your game logic methods must include, _but are not limited to_:
-      1. A function that creates the objects that store each players' informations - properties should include: `id` (ex: `'one'`), `token` (ex: `'⭐️'`), `wins` (ex: `0`)
-      2. A function called `increaseWins` - increases the count of a player's wins (should work for either player)
-      3. A function that keeps track of the data for the game board
-      4. A function that keeps track of which player's turn it currently is
-      5. A function that checks the game board data for win conditions
-      6. A function that detects when a game is a draw (no one has won)
-      7. A function that resets the game board's data to begin a new game
-2. An 'index.js' file that contains all the DOM related JavaScript
-  * This includes:
+    1. A function that creates the objects that store each players' informations - properties should include: `id` (ex: `'one'`), `token` (ex: `'⭐️'`), `wins` (ex: `0`)
+    2. A function called `increaseWins` - increases the count of a player's wins (should work for either player)
+    3. A function that keeps track of the data for the game board
+    4. A function that keeps track of which player's turn it currently is
+    5. A function that checks the game board data for win conditions
+    6. A function that detects when a game is a draw (no one has won)
+    7. A function that resets the game board's data to begin a new game
+  * Your DOM related JavaScript will include:
     1. Query selectors
     2. Function(s) to display the game board and user data
     3. Event listeners
+
+As an *optional extension* you *could* choose to keep your DOM related JavaScript in a separate JS file altogether.  This is **NOT** a requirement or expectation of this project.  If you finish with extra time and want to try refactoring your code to pull the DOM related JavaScript into a `domUpdates.js` file, be sure to do so on a branch so you aren't breaking your finished, working code while you play with it. 
 
 ### Data Model
 
@@ -104,6 +107,7 @@ This workflow is not required, but will help you meet the overall requirements o
 7. Connect the data model to the DOM - ensure that the data model updates based on user interaction
 8. Automatically reset the game board to allow for a new game to be played after the previous game is won
 9. Extension: Persist player data using local storage (number of wins should persist across page refreshes)
+10. Extension: Refactor your code to organized your game logic and DOM related JS separately in 2 different JS files - `main.js` and `domUpdates.js`
 
 ---
 
@@ -199,7 +203,8 @@ As mentioned above, functionality does have more weight in this final project in
 
 ✨WOW✨ can look like:
 - Changes to the DOM only happen after the Data Model has been updated.  The Data Model is then used to update the DOM.
-- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
+- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering.
+- Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 - Bracket notation is utilized effectively to make accessing properties of class instances more dynamic.
 </section>
 
