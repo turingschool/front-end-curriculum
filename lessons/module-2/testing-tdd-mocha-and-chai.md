@@ -157,7 +157,7 @@ describe('checkAnswer', function() {
 <section class="note">
 ### A note about the multiple syntax options provided by Chai
 
-![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png)
+![Chai Syntax Libraries](https://i.imgur.com/T7Q4YkE.png)
 
 Although there are small differences, all three interfaces can accomplish the same task.  As a developer you can choose which version feels best to you.  For example, **expect** provides a function as a starting point for chaining assertions, whereas **should** extends the Object.prototype to provide a single getter as the starting point.  **Expect** works on node.js and all browsers, while **should** does not work in Internet Explorer.  For today we are going to go with the [Expect API](https://www.chaijs.com/api/bdd/).
 </section>

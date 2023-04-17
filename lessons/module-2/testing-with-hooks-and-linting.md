@@ -32,7 +32,7 @@ A term used commonly when developers look at code is a "code smell". [A code sme
 
 Code repetition or duplication is one of those code smells.
 
-### Hooks Can Help - Testing Practice:
+### Hooks Can Help
 
 You may have noticed that every time we wrote a test, we had to invoke our createRocket function in order to create a new rocket. This is super repetitive, and kind of irritating to have to do every time. Luckily, Mocha provides some lifecycle `hooks` that help automate stuff like this. Take a second to look at [the documentation](https://mochajs.org/#hooks).   
 
