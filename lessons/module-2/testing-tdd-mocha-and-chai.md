@@ -227,7 +227,7 @@ Now that we've determined what we need to test, read the comments that talk abou
 describe('checkForWin function', function() {
 
   // Next, an 'it block' contains the context of each specific test
-  it('should add word to winningWords when answer is correct', () => {
+  it('should add word to player\'s winningWords when answer is correct', () => {
 
     // 1. "Setup"
     // Create the mock data we need to use in this test
@@ -241,16 +241,16 @@ describe('checkForWin function', function() {
 
     // 2. "Execution"
     // Run appropriate functions that execute the behavior indicated by our test title
-    // Pass it the required arguments needed to test the specific path/scenario we're trying to test
+    // Pass in the arguments needed to test the specific path/scenario we're trying to test
     checkForWin('adore', correctWord, player);
 
     // 3. "Assertion"
-    // Make an assertion to verify that after executing certain functions, we end up with what we expect
+    // Make assertion to verify that we end up with what we expect after executing the function
     expect(player.winningWords).to.deep.equal(['adore']);
   });
 
-  //Lets breakdown a sad path!
-    // 'it block' contains the context of each specific test
+//Lets breakdown a sad path!
+  // 'it block' contains the context of each specific test
   it('should not update player\'s winningWords when answer is incorrect', () => {
 
     // 1. "Setup"
@@ -265,8 +265,8 @@ describe('checkForWin function', function() {
 
     // 2. "Execution"
     // Run appropriate functions that execute the behavior indicated by our test title
-    // Pass it the required arguments needed to test the specific path/scenario we're trying to test
-        //This time we will pass an incorrect guess for the first argument to test the sad path
+    // Pass in the arguments needed to test the specific path/scenario we're trying to test
+        //This time we will pass an incorrect guess for the first arg in order to simulate and test the sad path
     checkForWin('spend', correctWord, player);
 
     // 3. "Assertion"
@@ -295,7 +295,7 @@ describe('checkForWin function', function() {
 - Are clear and easy to read
 - Assertions are specific, testing for exactly what value is expected, not just length or data type.
 
-### What makes a good test?What makes a function easy to test?
+### What makes a function easy to test?
 
 - Pure functions are easier to test.  Why?
 - Functions that update or rely on a global variable are harder, sometimes impossible, to test.  Why?
@@ -372,7 +372,10 @@ Let's pretend we just received a spec, and the first iteration looks something l
 - User should be able to pass in specific height and widths if they so choose.
 - User should be able to calculate the area of the box by passing the box into a `calculateArea` function.
 
-1. Start with writing the tests.  Note that you'll need to import (and export) each function. You might need to set up some mock data to use for each test.  Your tests will **fail** when you run `npm test` because you haven't yet written the implementation code to make them pass.
+1. Start with writing the tests.  
+  - Note that you'll need to import (and export) each function. 
+  - You often need to set up some mock data to use for each test.  
+  - Your tests will **fail** when you run `npm test` because you haven't yet written the implementation code to make them pass.
 2. Now work on the implementation in the `box.js` file.  Feel free to add `.skip` to your tests so that you can focus on one at a time.
 </section>
 
