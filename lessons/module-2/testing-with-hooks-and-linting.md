@@ -17,19 +17,14 @@ Let's look into [the docs for more infromation](https://mochajs.org/#hooks).
 
 Hooks live within `describe` blocks in Mocha. Once defined, the hook runs as it's name defines it. When do you think `beforeEach()` runs? And so what? How and why should we take advantage of hooks?
 
-<!-- ## Testing Practice: Hooks
-
-You may have noticed that every time we wrote a test, we had to instantiate a new instance of our box. This is super repetitive, and kind of irritating to have to do every time. Luckily, Mocha provides some lifecycle `hooks` that help automate stuff like this. Take a second to look at [the documentation](https://mochajs.org/#hooks).   
-
-Using the docs linked above, add a `beforeEach()` hook that instantiates a new box before every test, this should allow you to remove the line `var box = new Box()` from all of your tests. If you're getting an error about box not being defined, check out [this stackoverflow conversation](https://stackoverflow.com/questions/38044111/basic-but-proper-use-of-beforeeach-or-aftereach-with-mocha-js-and-chai-js).   -->
-
 Hooks are not something special only to Mocha. Almost every testing library you use in the future will have hooks available.
 
 ### Setup a Small Test Suite
 
-[Here is an example](https://github.com/turingschool-examples/testing-hooks-refactor) to get us thinking about hooks more. Clone down this repo, get it setup, and open the test file.
+[Here is an example](https://github.com/turingschool-examples/testing-hooks-refactor) to get us thinking about hooks more. Clone down this repo, get it setup, and open the test file. Then:
 
-Write the last test, and then write the code to get all of the tests passing.
+- Write the last test. 
+- Write the implementation code to get all of the tests passing.
 
 ### Repetiion - A Code Smell...
 
@@ -37,13 +32,20 @@ A term used commonly when developers look at code is a "code smell". [A code sme
 
 Code repetition or duplication is one of those code smells.
 
+### Hooks Can Help - Testing Practice:
+
+You may have noticed that every time we wrote a test, we had to invoke our createRocket function in order to create a new rocket. This is super repetitive, and kind of irritating to have to do every time. Luckily, Mocha provides some lifecycle `hooks` that help automate stuff like this. Take a second to look at [the documentation](https://mochajs.org/#hooks).   
+
+- **Using the docs linked above, add a `beforeEach()` hook that uses the createRocket function to create a new rocket before every test.** 
+This should allow you to remove the line `let rocket = createRocket();` from each of your tests. If you're getting an error about rocket not being defined, check out [this stackoverflow conversation](https://stackoverflow.com/questions/38044111/basic-but-proper-use-of-beforeeach-or-aftereach-with-mocha-js-and-chai-js).  
+
 ### When Hooks "Help Less"
 
 Consider the scenario where we want to add this functionality:
 
 ```js
 it('Can be given a name when the rocket is created', function() {
-  const rocket = new Rocket('Mercury-Redstone 3');
+  let rocket = creatRocket('Mercury-Redstone 3');
 
   expect(rocket.name).to.equal('Mercury-Redstone 3');
 });
