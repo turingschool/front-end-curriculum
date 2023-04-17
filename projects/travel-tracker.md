@@ -35,8 +35,6 @@ You will want to submit PRs to your accountabilibuddy to:
 
 It is up to you to decide what changes warrant a PR – remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you’re struggling with or have questions about or need help with. As an accountabilibuddy, you are responsible for reviewing at least 2 PRs from your partner.
 
-**Please also tag your project manager in any PR you make to your buddy.**
-
 ## Technologies
 
 * **Fetch API** to retrieve and add data
