@@ -74,13 +74,13 @@ function createQuestion(questionText, correctAnswer) {
   return question
 }
 
-checkAnswer(question, playerAnswer, score) {
+function checkAnswer(question, playerAnswer, score) {
   if (playerAnswer === question.correctAnswer) {
-    this.score++
+    score++
   } else {
-    this.score--
+    score--
   }
-  return this.score
+  return score
 }
 ```
 
