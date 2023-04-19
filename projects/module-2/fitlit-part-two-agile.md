@@ -96,9 +96,7 @@ Everyone was using the same exact endpoints for Part One. This is typically how 
 
 ### Note about Adding Sleep, Hydration and Activity Data
 
-* You must be able to add a new sleep, hydration and activity data entry for that user.
-* Your user should see the dashboard update to include the newly added data *without having to refresh the page.*
-
+Your user should see the dashboard update to include the newly added data *without having to refresh the page.*
 
 For example, if the currently displayed user has an ID of 50, and you want to add new sleep data you would want to send a JSON object through with your POST request that looks like:
 
@@ -111,6 +109,8 @@ For example, if the currently displayed user has an ID of 50, and you want to ad
     sleepQuality:2.2
 }
 ```
+
+Also, for POST requests, your request will need a header of `Content-Type: application/json`.
 </section>
 
 #### Error Handling

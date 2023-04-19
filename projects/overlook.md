@@ -179,8 +179,8 @@ Does the function return anything?
 Are there different possible outcomes to test for based on different arguments being passed in?
 You are not expected to test:
 
-DOM manipulation / DOM manipulating function (like document.querySelector(...))
-Fetch calls
+* DOM manipulation / DOM manipulating function (like document.querySelector(...))
+* Fetch calls
 
 ## Accessibility
 

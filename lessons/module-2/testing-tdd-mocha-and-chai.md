@@ -66,21 +66,21 @@ When talking about what should be tested, we say that we want to test the **outc
 For example, let's say we have a quiz application that checks a user's answers and adds/removes points from their score:
 
 ```js
-class Question {
-  constructor(questionText, correctAnswer) {
-    this.questionText = questionText;
-    this.correctAnswer = correctAnswer;
-    this.score = 0;
+function createQuestion(questionText, correctAnswer) {
+  let question = {
+    questionText: questionText,
+    correctAnswer: correctAnswer
   }
+  return question
+}
 
-  checkAnswer(playerAnswer) {
-    if (playerAnswer === this.correctAnswer) {
-      this.score++
-    } else {
-      this.score--
-    }
-    return this.score
+function checkAnswer(question, playerAnswer, score) {
+  if (playerAnswer === question.correctAnswer) {
+    score++
+  } else {
+    score--
   }
+  return score
 }
 ```
 
@@ -88,34 +88,17 @@ class Question {
 ### What would we want to test about the `checkAnswer` method? What should this method do?  
 
 ```js
-describe('Question Class', () => {
-  it('should increment a player score when their answer is correct', () => {
+describe('checkAnswer', () => {
+  it('should return incremented score when answer is correct', () => {
 
   });
 
-  it('should decrement a player score when their answer is incorrect', () => {
+  it('should return decremented score when answer is incorrect', () => {
 
   });
-
-  it('should return the updated score', () => {
-
-  });  
 });
 ```
 </section>  
-
-<section class="note">
-Testing Tip:  
-When writing tests for classes, you should test:  
-  * each class property  
-  * each class method  
-
-Remember to test all possible outcomes (happy path/sad path/etc).  Ask yourself:  
-  - What is the value of each property?  
-  - Does the method return anything?  
-  - Does the method update any properties?
-  - Are there different possible outcomes to test for based on different arguments being passed in?
-</section>
 
 <section class="call-to-action">
 ### Practice
@@ -153,8 +136,8 @@ reverseWord('turing'); // gnirut
 * Mocha itself is the framework that runs the tests and dictates the syntax of the test block as a whole. This is separate from the assertion library Chai.
 
 ```js
-describe('unicorn', function() {
-  it('should accumulate calories when calling eat', function() {
+describe('checkAnswer', function() {
+  it('should return incremented score when answer is correct', function() {
 
   });
 });
@@ -166,7 +149,7 @@ describe('unicorn', function() {
 
 ```js
 
-  expect(unicorn.calories).to.equal(300);
+  expect(result).to.equal(3);
 
 ```
 </section>
@@ -174,7 +157,7 @@ describe('unicorn', function() {
 <section class="note">
 ### A note about the multiple syntax options provided by Chai
 
-![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png)
+![Chai Syntax Libraries](https://i.imgur.com/T7Q4YkE.png)
 
 Although there are small differences, all three interfaces can accomplish the same task.  As a developer you can choose which version feels best to you.  For example, **expect** provides a function as a starting point for chaining assertions, whereas **should** extends the Object.prototype to provide a single getter as the starting point.  **Expect** works on node.js and all browsers, while **should** does not work in Internet Explorer.  For today we are going to go with the [Expect API](https://www.chaijs.com/api/bdd/).
 </section>
@@ -196,30 +179,40 @@ Look at the following code example and make note of what we need to test:
 
 
 ```js
-class Player {
-  constructor(name) {
-    this.name = name;
-    this.winningWords = [];
-  }
+let player = {
+  name: 'Trisha',
+  winningWords: []
+}
 
-  checkForWin(playerWord, correctWord) {
-    if(playerWord === correctWord) {
-      this.winningWords.push(playerWord)
-    }
+function checkForWin(playerWord, correctWord, player) {
+  if(playerWord === correctWord) {
+    player.winningWords.push(playerWord)
+    return 'Correct!'
+  } else {
+    return 'Incorrect, try again!'
   }
 }
+
 ```
 
 <section class="answer">
 ### What would we want to test about the `checkForWin` method? What should this method do?  
 
 ```js
-describe('Player Class', () => {
-  it('should add word to winningWords when answer is correct', () => {
+describe('checkForWin function', () => {
+  it('should add word to player\'s winningWords when answer is correct', () => {
 
   });
 
-  it('should not update winningWords when answer is incorrect', () => {
+  it('should not update player\'s winningWords when answer is incorrect', () => {
+
+  });
+
+  it('should return Correct! when answer is correct', () => {
+
+  });
+
+  it('should return Incorrect, try again! when answer is incorrect', () => {
 
   });
 });
@@ -230,36 +223,67 @@ Now that we've determined what we need to test, read the comments that talk abou
 
 ```js
 // Before anything can happen, we need a describe block to group related tests together
-// In this case, the tests within our describe block are all related to the 'Player' class
-describe('Player', function() {
+// In this case, the tests within our describe block are all related to the 'checkForWin' function 
+describe('checkForWin function', function() {
 
   // Next, an 'it block' contains the context of each specific test
-  it('should add word to winningWords when answer is correct', () => {
+  it('should add word to player\'s winningWords when answer is correct', () => {
 
     // 1. "Setup"
     // Create the mock data we need to use in this test
-        // Instantiate an instance of our player
+        // Create a mock player
         // Create variable to hold the correctWord we'll use for this test
-    var player = new Player('Susan');
+    var player = {
+        name: 'Nick',
+        winningWords: []
+    };
     var correctWord = 'adore';
 
     // 2. "Execution"
     // Run appropriate functions that execute the behavior indicated by our test title
-    player.checkForWin('adore', correctWord);
+    // Pass in the arguments needed to test the specific path/scenario we're trying to test
+    checkForWin('adore', correctWord, player);
+
+    // 3. "Assertion"
+    // Make assertion to verify that we end up with what we expect after executing the function
+    expect(player.winningWords).to.deep.equal(['adore']);
+  });
+
+//Lets breakdown a sad path!
+  // 'it block' contains the context of each specific test
+  it('should not update player\'s winningWords when answer is incorrect', () => {
+
+    // 1. "Setup"
+    // Create the mock data we need to use in this test
+        // Create a mock player
+        // Create variable to hold the correctWord we'll use for this test
+    var player = {
+        name: 'Ben',
+        winningWords: []
+    };
+    var correctWord = 'adore';
+
+    // 2. "Execution"
+    // Run appropriate functions that execute the behavior indicated by our test title
+    // Pass in the arguments needed to test the specific path/scenario we're trying to test
+        //This time we will pass an incorrect guess for the first arg in order to simulate and test the sad path
+    checkForWin('spend', correctWord, player);
 
     // 3. "Assertion"
     // Make an assertion to verify that after executing certain functions, we end up with what we expect
-    expect(player.winningWords).to.deep.equal(['adore']);
+    expect(player.winningWords).to.deep.equal([]);
   });
 });
 ```
 
 <section class="call-to-action">
 ### In Your Notebook  
-  1. Could we use one of the following assertion statements instead? Why/why not?  
+  1. Could we use one of the following assertion statements in our first it block instead? Why/why not?  
     `expect(player.winningWords)to.be.an('array');`  
     `expect(player.winningWords.length).to.equal(1);`  
-  1. How would we write our test for the sad path (if playerWord is not the correctWord)?  
+  1. How would we write our tests for testing what the function returns (happy and sad path)?  
+  1. Is this function pure?  Why or why not?
+  1. Why might side effects be difficult to test?
 </section>  
 
 <section class="note">
@@ -270,6 +294,12 @@ describe('Player', function() {
 - Can be used as documentation for the code they test
 - Are clear and easy to read
 - Assertions are specific, testing for exactly what value is expected, not just length or data type.
+
+### What makes a function easy to test?
+
+- Pure functions are easier to test.  Why?
+- Functions that update or rely on a global variable are harder, sometimes impossible, to test.  Why?
+
 </section>
 
 
@@ -289,8 +319,8 @@ npm install
 ```
 
 * Note what files exist in the tests.  Take a look at the `package.json` file as well, noting *devDependencies* and the *scripts*.
-* Move to the `/test/Box-test.js` file. Make sure your assertion library, the `expect` keyword have been imported. Wait on importing Box until Iteration 1.
-* Setup your `describe` block, and write a basic dummy test (such as `expect(true).to.equal(true);`). This test *should* pass right away to show you that everything is linked correctly.
+* Move to the `/test/box-test.js` file. Make sure your assertion library, the `expect` keyword have been imported. Wait on importing functions from box until Iteration 1.
+* Setup your `describe` block, and write a basic dummy test (such as `expect(true).to.equal(true);`). This test *should* pass right away. This is just to show you that everything is linked correctly.
 * Run `npm test` to see if your test passes.  If not, take note of the error message and try to fix it.
 </section>
 
@@ -299,19 +329,19 @@ npm install
 Pay close attention to all these imports - they may not always already be there for you.  
 `const chai = require('chai');` -> gives you access to the Chai assertion library.    
 `const expect = chai.expect;` -> gives you access to the Expect syntax from the Chai assertion library.  
-`const Box = require('../src/Box');` -> imports your Box class into your test file.  Remember this only works if you are also exporting from your Box Class.
+`const {createBox, calculateArea} = require('../box');` -> imports your functions from your box file into your test file.  Remember this only works if you are also exporting each function from your box file.
 </section>
 
 <section class="answer">
 ### The Answer (Only click if you get stuck or have finished)
 
 ```js
-// test/Box-test.js  
+// test/box-test.js  
 
 const chai = require('chai');
 const expect = chai.expect;
 
-describe('Box', function() {
+describe('box functions', function() {
   it('should return true', function() {
     expect(true).to.equal(true);
   });
@@ -321,9 +351,7 @@ describe('Box', function() {
 Running `npm test` should result in:
 
 ```bash
-Box
   ✓ should return true
-
 
 1 passing (10ms)  
 ```
@@ -340,48 +368,53 @@ Let's pretend we just received a spec, and the first iteration looks something l
 <section class="call-to-action">
 ### Iteration 1
 
-- You should have a Box constructor which has a default height and width of 100.
+- You should have a `createBox` function which assumes a default height and width of 100.
 - User should be able to pass in specific height and widths if they so choose.
-- You should be able to calculate the area of your box using the method `.calculateArea()`.
+- User should be able to calculate the area of the box by passing the box into a `calculateArea` function.
 
-1. Start with writing the tests.  Note that you'll need to import (and export) a `Box` class and create a new instance of it for each test.  Your tests will **fail** when you run `npm test`.
-2. Now work on the implementation in the `Box.js` file.  Feel free to add `.skip` to your tests so that you can focus on one at a time.
+1. Start with writing the tests.  
+  - Note that you'll need to import (and export) each function. 
+  - You often need to set up some mock data to use for each test.  
+  - Your tests will **fail** when you run `npm test` because you haven't yet written the implementation code to make them pass.
+2. Now work on the implementation in the `box.js` file.  Feel free to add `.skip` to your tests so that you can focus on one at a time.
 </section>
 
 <section class="answer">
 ### Test Solution
 
 ```js
-// test/Box-test.js
+// test/box-test.js
 
 const chai = require('chai');
 const expect = chai.expect;
 
-const Box = require('../src/Box');
+const {createBox, calculateArea} = require('../box');
 
-describe('Box', function() {
+describe('box', function() {
   it('should return true', function() {
     expect(true).to.equal(true);
   });
 
   it('should have a default height and a width', function() {
-    var box = new Box();
+    var box = createBox()
 
     expect(box.height).to.equal(100);
     expect(box.width).to.equal(100);
   });
 
   it('should be able to take a height and a width as arguments', function() {
-    var box = new Box(50, 40);
+    var box = createBox(50, 40);
 
     expect(box.height).to.equal(50);
     expect(box.width).to.equal(40);
   });
 
   it('should calculate its area', function() {
-    var box = new Box(30, 30);
+    var box = createBox(30, 30);
 
-    expect(box.calculateArea()).to.equal(900);
+    var area = calculateArea(box)
+
+    expect(area).to.equal(900);
   })
 });
 ```
@@ -391,19 +424,20 @@ describe('Box', function() {
 ### Implementation Solution
 
 ```js
-// Box.js  
-class Box {
-  constructor(height = 100, width = 100) {
-    this.height = height;
-    this.width = width;
+// box.js  
+function createBox(height, width) {
+  var box = {
+    height: height || 100,
+    width: width || 100
   }
-
-  calculateArea() {
-    return this.height * this.width;;  
-  }
+  return box
 }
 
-module.exports = Box;
+function calculateArea(box) {
+  return box.height * box.width;;  
+}
+
+module.exports = { createBox, calculateArea };
 ```
 </section>
 
@@ -415,9 +449,9 @@ Let's continue to practice adding more iterations following the TDD process from
 ### Iteration 2
 
 - You should be able to increase the width by a provided value.
-ie: `box.increaseWidth(10)`
+ie: `increaseWidth(10)`
 - You should be able to increase the height of your box by a provided value
-ie: `box.increaseHeight(10)`
+ie: `increaseHeight(10)`
 </section>
 
 ## Testing Practice: Iteration 3
@@ -428,7 +462,7 @@ Implement iteration 3 for our box per the spec outlined below;
 ### Iteration 3
 
 - Refactor your code so that instead of having increaseWidth and increaseHeight methods, you can have a single method to do both jobs
-ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`
+ie: `increment(10, 'height')` or `increment(10, 'width')`
 </section>
 
 <section class="checks-for-understanding">
@@ -437,6 +471,7 @@ ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`
 * What is the difference between Mocha and Chai?
 * What is the structure of a test?
 * What makes a test good?
+* What makes a function easy or difficult to test?
 </section>
 
 ### Further Reading
