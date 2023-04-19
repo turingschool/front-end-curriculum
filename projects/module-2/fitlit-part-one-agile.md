@@ -227,7 +227,7 @@ You should create functions that:
 * Implement one of the listed third-party libraries or one of your choosing with instructor approval.
 * Design a step challenge between friends. Assign your user a few friends from the user data file. Add the functions you need and a display on the dashboard to see their friends step count for a whole week. The display should also show who had the most steps for that week.
 * Calculate and display what days a user had increasing steps for 3 or more days.
-* Build drag-and-drop widgets (*if you did not go with a widget theme, then add some widgets for this extension*). You can use a 3rd-party library to help you accomplish this.
+* Build drag-and-drop widgets (*if you did not go with a widget theme, then add some widgets for this extension*). You can use a 3rd-party library to help you accomplish this or utilize the [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API){:target='blank'}.
 * Priority stats - give the user the ability to select the widgets they always want to see at the top of the page. This is a customization the user would want to make, and you would want to save this customization to `localStorage`.
 * You may also collaborate with instructors to personalize an extension for this project.
 </section>
@@ -240,8 +240,8 @@ You should *NOT* use the original data files in the `data` directory for tes
 
 Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your functions are working correctly because you can do the calculations by hand with a much smaller dataset.
 
-**You are *expected* to test:**
-- All functions that do not update the DOM.  This means everything in your `scripts.js` file that should be tested.
+**You are *expected* to:**
+- Build a robust testing suite.  This might include testing pure functions in your `scripts.js`.
 
 **Remember to test all possible outcomes (happy/sad/etc). Ask yourself:**
 
@@ -282,7 +282,7 @@ Your daily check-in (sometimes called “stand-ups”) schedule should be outlin
 
 ## Rubric
 
-For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  Thesee are just some examples.
+For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  These are just some examples.
 
 <section class="answer">
 ### Functional Expectations
@@ -317,15 +317,13 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 - Application has a robust and thorough test suite that covers all functions that do not update the dom.
 - Test suite is organized.
   - Each function is tested in its own it block.
+- All scenarios/outcomes/paths are tested for your functions, including happy and sad paths.
+  - Each path is tested in its own `it` block.
 - Rather than using the production data, small sample data is stored in its own file and used for testing.
   - Sample data has been crafted to create the scenarios needed for thorough testing.
   - ***For example:** If you need to test a scenario where a user hasn't been active for 7 days, you need test data that creates that scenario.*
 - `beforeEach` hook is used to DRY up test files.
 - There are no failing/pending tests upon submission.
-
-✨WOW✨ can look like:
-- All scenarios/outcomes/paths are tested for your functions, including happy and sad paths.
-  - Each path is tested in its own `it` block.
 </section>
 
 <section class="answer">
