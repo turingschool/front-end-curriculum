@@ -1,19 +1,18 @@
 ---
 title: Flash Cards
-tags: javascript, oop, mocha, testing
+tags: javascript, mocha, chai, testing
 ---
 
 ## Goals and Objectives
 
-- Contribute code to an partially constructed object-oriented application
+- Contribute code to an partially constructed application
 - Follow spec/prompts to make a working application
-- Implement ES6 classes
 - Write modular, reusable code that follows SRP (Single Responsibility Principle)
 - Implement a robust testing suite using TDD
 
 In this project, you will write a program to simulate a set of flash cards through the command line! 😱 A user will be able to see the questions, take guesses, and see a final score at the end of the round.
 
-In order to build good habits, we've broken the project up into small classes to demonstrate objects that have a single responsibility.
+In order to build good habits, we've broken the project up into small pieces to demonstrate functions that have a single responsibility.
 
 Through each iteration, you should use TDD to drive implementation of your code.
 
@@ -21,47 +20,28 @@ Through each iteration, you should use TDD to drive implementation of your code.
 
 ## Initial Setup
 
-For this project, you need to use this [Flashcards Starter](https://github.com/turingschool-examples/flashcards-starter) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.  
+For this project, you need to use this [Flash Cards Starter](https://github.com/turingschool-examples/flashcards-starter) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.  
 
 **Tip:** You should rename your repo from "flashcards-starter" to "flashcards" (or whatever you'd like) when you clone it.  
-`git clone git@github.com:turingschool-examples/flashcards-starter.git flashcards`
 
-Please note that there is logic provided to you (util.js) to make this game playable via the command line. You will not need to edit the util.js file. Completion of Iterations I and II are required before you are able to utilize the command line interface to verify that your code is functioning properly. Prior to this, you should be using your tests to confirm functionality is working as you expect.
+```bash
+git clone git@github.com:turingschool-examples/flashcards-starter.git flashcards
+```
 
-## Day One Deliverable
+Please note that there is logic provided to you (`util.js`) to make this game playable via the command line. You will not need to edit the `util.js` file. Completion of Iterations 1 and 2 are required before you are able to utilize the command-line interface to verify that your code is functioning properly. Prior to this, you should be using your tests to confirm functionality is working as you expect.
+
+## Day-One Deliverable
 - By end of day on kick off day: Submit your GH Repo [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link)
-
-## README
-
-Your README should include the following, in this order:
-
-- Abstract at the top (A sentence or two describing the project)
-- A GIF of the working application
-- Technologies used
-- Install/Setup instructions
 
 ## Testing
 
-You should be using the prompts below to develop tests that will drive your implementation of code. Each JavaScript file in your project should have its own test file. (e.g. Your `Turn.js` class file should have a corresponding testing file called `Turn-test.js`)
+You should be using the prompts below to develop tests that will drive your implementation of code.
 
-You are expected to research and implement `beforeEach` in your test files.  
-
-Your testing suite should test all of the functionality of the game, including the following:
-
-* Class properties
-* Class methods
-
-Remember to test all possible outcomes (happy/sad/etc).  Ask yourself:  
-  - What is the value of each property?  
-  - Does the method return anything?  
-  - Does the method update any properties?
+Your testing suite should test all of the functionality of the game that you have implemented. Remember to test all possible outcomes (happy/sad/etc). Ask yourself:  
+  - What does the function return?  
   - Are there different possible outcomes to test for based on different arguments being passed in?
 
-<!-- <section class="note">
-### Note
-
-While not a major learning goal in this project, we do encourage that you start experimenting with destructuring especially with objects either in your implementation or testing code!  No need to force it if it doesn't work well, but you might find a couple of scenarios where it makes your code more readable.  This will be more of a focus in the next project where you'll have more opportunities!
-</section> -->
+To DRY up your tests, consider researching and implementing Mocha's `beforeEach` hook in your test files.  
 
 # Iterations
 
@@ -69,48 +49,27 @@ While not a major learning goal in this project, we do encourage that you start 
 
 ***Cards***
 
-- A `Card` represents a single flashcard
+- A `card` represents a single flashcard
 - Each card has an id, a question, possible answers, and a correct answer
 
 <section class="answer">
 ### For Example  
 
 ```js
-const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+const card = createCard(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
 ```
 </section>
 
 ***Turns***
 
-- Your `Turn` class should meet the following requirements:
-  - Instantiated with two arguments - a string (that represents a user's guess to the question), and a `Card` object for the current card in play.
-  - `returnGuess`: method that returns the guess
-  - `returnCard`: method that returns the `Card`
-  - `evaluateGuess`: method that returns a boolean indicating if the user's guess matches the correct answer on the card
-  - `giveFeedback` - method that returns either 'incorrect!' or 'correct!' based on whether the guess is correct or not.
+A `turn` help evaluate if a guess to a flashcard question is correct or incorrect. This function helps evaluate a turn:
+- `evaluateGuess(guess, correctAnswer)`: returns either `'incorrect!'` or `'correct!'` based on whether the guess is correct or not
 
 <section class="answer">
 ### For Example  
 
-
 ```js
-const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-const turn = new Turn('pug', card);
-
-turn.returnGuess();    // => 'pug'
-
-
-turn.returnCard();     // => { id: 1,
-                       //      question: 'What is Robbie\'s favorite animal',
-                       //      answers: ['sea otter', 'pug', 'capybara'],
-                       //      correctAnswer: 'sea otter'
-                       //    }
-
-
-turn.evaluateGuess();  // => false
-
-
-turn.giveFeedback();   // => incorrect!
+turn.evaluateGuess(guess, correctAnswer);  // => incorrect! OR correct!
 ```
 </section>
 
@@ -118,79 +77,80 @@ turn.giveFeedback();   // => incorrect!
 
 ***Deck***
 
-Your `Deck` class should be initialized with an array of `Card` objects and should have an accompanying test file. It should know how many `Cards` are in the `Deck`.
+Your `deck` should be created with an array of `card` objects. It should know how many `cards` are in the `deck`.
 
 <section class="answer">
 ### For Example  
 
-
 ```js
-const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
-const card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
+const card1 = createCard(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+const card2 = createCard(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
+const card3 = createCard(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
 
-const deck = new Deck([card1, card2, card3]);
+const deck = createDeck([card1, card2, card3]);
 
-deck.countCards(); // => 3
+countCards(deck); // => 3
 ```
 </section>
 
 ***Round***
 
-Your `Round` class will be the object that takes in responses and records these guesses (as well as if they are correct or incorrect). The `currentCard` should be the first `Card` in the `Deck` (the array of `Cards`) at the start of the `Round`
+Your `round` will be the object that organizes guesses and records if they are correct or incorrect.
 
-- Your `Round` class should meet the following requirements:
-  - `returnCurrentCard`: method that returns the current card being played
-  - `takeTurn`: method that updates `turns` count, evaluates guesses, gives feedback, and stores ids of incorrect guesses
-
-    * When a guess is made, a new `Turn` instance is created.
+- Your `round` object should meet the following requirements:
+  - `deck` property that holds onto the `deck` object
+  - `currentCard` property should start as the first `card` in the `deck`
+  - `turns` property that starts as `0`
+  - `incorrectGuesses` property that starts as an empty array and stores the incorrectly guessed cards during a round
+  - `takeTurn(guess, round)`: updates the `turns` count, evaluates guesses, gives feedback, and stores ids of incorrect guesses
+    * When a guess is made:
     * The `turns` count is updated, regardless of whether the guess is correct or incorrect
     * The next card becomes current card
-    * Guess is evaluated/recorded. Incorrect guesses will be stored (via the id) in an array of `incorrectGuesses`
+    * Guess is evaluated. Incorrect guesses will be stored (via card's the id) in an array of `incorrectGuesses`
     * Feedback is returned regarding whether the guess is incorrect or correct
 
-  - `calculatePercentCorrect`: method that calculates and returns the percentage of correct guesses
-  - `endRound`: method that prints the following to the console: '****** Round over! ****** You answered <>% of the questions correctly!'
+  - `calculatePercentCorrect(round)`: calculates and returns the percentage of correct guesses
+  - `endRound(round)`: prints the following to the console: '****** Round over! ****** You answered <>% of the questions correctly!'
 
 <section class="answer">
 ### For Example  
 
 ```js
-const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
-const card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
+const card1 = createCard(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+const card2 = createCard(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
+const card3 = createCard(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
 
-const deck = new Deck([card1, card2, card3]);
+const deck = createDeck([card1, card2, card3]);
 
-const round = new Round(deck);
+const round = createRound(deck);
 
 round.deck;   // => [card1, card2, card3];
 
-round.returnCurrentCard(); // => { id: 1,
-                           //      question: 'What is Robbie\'s favorite animal',
-                           //      answers: ['sea otter', 'pug', 'capybara'],
-                           //      correctAnswer: 'sea otter'
-                           //    }
+round.currentCard; // => { id: 1,
+                   //      question: 'What is Robbie\'s favorite animal',
+                   //      answers: ['sea otter', 'pug', 'capybara'],
+                   //      correctAnswer: 'sea otter'
+                   //    }
 
 round.turns; // => 0
 
 round.incorrectGuesses;     // => []
 
-round.takeTurn('sea otter'); // => 'correct!'
+takeTurn('sea otter', round); // => 'correct!'
 
-round.takeTurn('spleen');   // => 'incorrect!'
+takeTurn('spleen', round);   // => 'incorrect!'
 
 round.turns; // => 2
 
 round.incorrectGuesses;     // => [14]
 
-round.returnCurrentCard();    // => { id: 12,
-            	              //      question: 'What is Travis\'s favorite stress reliever?',
-            	              //      answers: ['listening to music', 'watching Netflix', 'playing with bubble wrap'],
-            	              //      correctAnswer: 'playing with bubble wrap'
-            	              //    }
+round.currentCard;    // => { id: 12,
+            	        //      question: 'What is Travis\'s favorite stress reliever?',
+            	        //      answers: ['listening to music', 'watching Netflix', 'playing with bubble wrap'],
+            	        //      correctAnswer: 'playing with bubble wrap'
+            	        //    }
 
-round.calculatePercentCorrect(); // => 50
+calculatePercentCorrect(round); // => 50
 ```
 </section>
 
@@ -198,37 +158,26 @@ round.calculatePercentCorrect(); // => 50
 
 ***Playing the Game***
 
-Now that we have all of our classes and methods set up, we can connect this to the pre-existing code to make the game playable through the CLI (Command-Line-Interface).
+Now that we have all of our functions and objects set up, we can connect this to the pre-existing code to make the game playable through the CLI (Command-Line Interface).
 
 ***Game***
 
-As you may have noticed, your `Game` class has two methods fleshed out already: `printMessage` and `printQuestion`.  We are going to abandon testing for these methods - as the techniques for this type of testing are beyond the scope of this project.
+As you may have noticed, your `game` file has two functions fleshed out already: `printMessage` and `printQuestion`.  We are going to abandon testing for these functions - as the techniques for this type of testing are beyond the scope of this project.
 
-- Your `Game` class should meet these other requirements:
-  - Should keep track of the `currentRound`
-  - `start`: method that starts everything
-    * Creates `Cards`
-    * Puts `Cards` in a `Deck`
-    * Creates a new `Round` using the `Deck`
-    * invokes `printMessage` to display the message in the CLI
-    * invokes `printQuestion` to kick off our helper functions that allow interaction via the CLI
+- Your `game` should meet these other requirements:
+  - `start()`: the function that starts everything
+    * Creates `cards`
+    * Puts `cards` in a `deck`
+    * Creates a new `round` using the `deck`
+    * Invokes `printMessage(deck)` to display the message in the CLI
+    * Invokes `printQuestion(round)` to kick off our helper functions that allow interaction via the CLI
 
-    _Implementation Note: The helper functions are all fleshed out and fit to work with classes/methods that meet the requirements in the past iterations._  
+    _Implementation Note: The helper functions are all fleshed out and fit to work with functions that meet the requirements in the previous iterations._  
 
-    _Testing Tip: You'll notice it difficult to test game.start. If you invoke it in your test file, it hangs the test suite by starting the game while running the tests. Sometimes as front end developers, we run into pieces of code that aren't possible, or worth it, to test.  In this case, instead of testing game.start, consider trying to extract what you can out of game.start and into a separate function, and test those functions on their own._  
+    _Testing Tip: You'll notice it difficult to test the game's `start` function. If you invoke it in your test file, it hangs the test suite by starting the game while running the tests. Sometimes as front end developers, we run into pieces of code that aren't possible, or worth it, to test.  In this case, instead of testing `start`, consider trying to extract what you can out of `start` and into a separate function, and test those functions on their own._  
 
-- Your `game.start()` method should be invoked to make the game playable in the console.
-  - Look at the file being run when we want to start the game. Think about where you need to invoke your `Game.start` method.
-
-<section class="answer">
-### For Example  
-
-```js
-game.currentRound; // => Round {...} (The new Round object that has been instantiated)
-```
-</section>
-
-
+- Your game's `start()` function should be invoked to make the game playable in the console.
+  - Look at the file being run when we want to start the game. Think about where you need to invoke your `start` function.
 
 ## Iteration 4:
 
@@ -240,13 +189,13 @@ _Note: Solving some of these problems may require modifying pre-existing code th
 Use a tool like GitHub projects or Trello to split up iteration items into small tasks.
 
 ***Build out another study/flashcards dataset***
-Create a new dataset that is structured similarily to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file.. Update your application so that once the first `Round` is over (and thus, the `Game` is over), a new `Round` starts with the new dataset that you've created.
+Create a new dataset that is structured similarly to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file. Update your application so that once the first `round` is over (and thus, the `game` is over), a new `round` starts with the new dataset that you've created.
 
 ***More practice***   
 Add functionality so that a score of less than 90% will require the user to go through the entire dataset again.
 
 ***Review incorrect answers***  
-Add functionality so that the `Round` (and thus, the `Game`) does not end after you've gone through all of the cards. The player should then be prompted to try to guess again, reviewing only those cards that are stored as incorrect.
+Add functionality so that the `round` (and thus, the `game`) does not end after you've gone through all of the cards. The player should then be prompted to try to guess again, reviewing only those cards that are stored as incorrect.
 
 ***Timer***  
 At the end of the game, report how much time it took to complete the game (in minutes and seconds).
@@ -260,6 +209,15 @@ At the beginning of the game, give options for choosing to study different subje
 ***CYOE (Choose Your Own Extension)***  
 Collaborate with instructors to personalize an extension for this project
 
+## README
+
+Your README should include the following, in this order:
+
+- Abstract at the top (A sentence or two describing the project)
+- A GIF of the working application
+- Technologies used
+- Install/Setup instructions
+
 ## Evaluation Rubric
 
 ### Functional Expectations
@@ -271,7 +229,7 @@ Collaborate with instructors to personalize an extension for this project
 ### Fundamental JavaScript & Style
 * 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring.
 * 3: Application shows strong effort towards organization, content, and refactoring. Leverages JavaScript's [truthy/falsey principles](https://frontend.turing.edu/lessons/module-1/js-truthy-falsy-expressions.html) to write concise conditional logic. Does not use for loops.
-* 2: Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.
+* 2: Application runs but the code has long functions, unnecessary or poorly named variables, and needs significant refactoring.
 * 1: Application generates syntax error or crashes during execution.
 
 ### Test-Driven Development
