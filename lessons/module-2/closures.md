@@ -1,5 +1,5 @@
 ---
-title: Scope III: Closures
+title: Closures
 tags: javascript, scope, closure, iife, lexical scope
 module: 2
 ---
@@ -8,12 +8,19 @@ module: 2
 
 * Describe and speak to lexical scoping in JavaScript
 * Understand and implement closures
+* Identify scenarios where closures can be useful in code, and use closures to solve specific programming challenges
 
 ## Vocab
 
 - `lexical scope` also known as static scope
 - `closure` a function that has a reference to its outer/lexical environment
+- `higher-order function` a function that takes one or more functions as arguments and/or returns a function as its result.
 
+## Some Context
+
+Closures is an important concept in programming that can help developers to create more modular and reusable code. Lexical scoping is a technique that allows a variable to be declared within a specific scope, such as a function, and then used only within that scope and any nested scopes. Closures, on the other hand, allow a function to access and manipulate variables that are declared outside of its own scope.
+
+The use of lexical scoping and closures can lead to more efficient and maintainable code, as well as improved security by preventing unintended access to sensitive data. They are particularly useful in functional programming, where functions are treated as first-class citizens and can be passed as arguments or returned as values. Understanding how lexical scoping and closures work can help design more effective and flexible software solutions.
 
 ## Lexical Scope
 
@@ -73,6 +80,8 @@ With a partner, walk through the code execution above.
 2. It doesn't find it, so it traverses up the scope chain to the parent scope (`greet`) and again looks for a `firstName` variable to reference.
 3. It finds it here, with a value of `Alan`, so the log will say `Alan`.
 </section>
+
+In other words, functions can define functions; when returning the inner function and it will "remember" scope.
 
 Now let's modify this example a bit. Instead of invoking `displayName` right away within our `greet` function, we'll return it:
 
@@ -148,15 +157,116 @@ Our most thorough definition of a closure is now **when an inner function has ac
 
 In the previous example, you'll notice we could still technically change those grades and snoop on them if we wanted to. This is why we say JavaScript doesn't have a true fashion for creating private variables. We can kind of imply that you shouldn't be fussing with something by hiding it in a function and not exposing that variable declaration outside of it - but we can still gain access to that value. So closures aren't really going to help if you have truly sensitive data that nobody should be able to see.
 
+<section class="answer">
+### Practice in small groups
+Consider the following situation. I want to create function that helps manage rent prices, but keeps the actual rent amount private through closure. 
+
+```js
+const rentPrice = (initialRent) => {
+  // your code goes here
+}
+
+var rent = rentPrice(8000);
+  
+// Update data using private methods 
+rent.getRent() // returns 8000
+rent.incRent(2000);
+rent.decRent(1500);
+rent.decRent(1000); 
+rent.incRent(2000); 
+rent.getRent();
+```
+***Hint:*** `rentPrice` should return a series of functions for updating our confidental rent (the initial parameter).
+
+</section>
+
+## Closures for drying up code
+Consider this next example when looking at the next example: closures can 'partially apply' functions to 'lock in' arguments to make more reusable functions.
+
+```js
+const calculateTaxes = (taxRate) => {
+  return (income) => {
+    return income * taxRate
+  }
+}
+
+const taxRateFor2020 = calculateTaxes(0.24)
+const taxRateFor2021 = calculateTaxes(0.27)
+taxRateFor2020(60000)
+taxRateFor2020(85000)
+taxRateFor2021(95000)
+taxRateFor2022(110000)
+```
+In this code, `calculateTaxes()` is a **higher-order function** that takes a taxRate parameter and returns a new function that takes an income parameter and calculates the tax owed for that income at the given taxRate.
+
+The returned function is a closure, meaning it has access to the taxRate parameter from the outer function even after the outer function has returned. This allows us to "dry up" our code by avoiding duplication of tax calculation logic.
+
+In the subsequent lines of code, we call `calculateTaxes()` twice, once with a taxRate of `0.24` to create a function `taxRateFor2020`, and once with a taxRate of `0.27` to create a function `taxRateFor2021`. We then call each of these functions with different income values to calculate the tax owed.
+
+Using closures in this way allows us to create reusable functions for calculating taxes at different rates, without having to repeat the same logic for each rate. It also allows us to easily calculate taxes for different incomes without having to pass the `taxRate` parameter every time we call the function.
+
 <section class="call-to-action">
 ### Practice
 
-Use the closure pattern to create a "private" counter. The counter variable should be protected by an outter function. The outter function should return an object of methods that allow a user to `incrementCounter`, `decrementCounter` and `getCounterValue`. 
+Consider the following code:
+```js
+function counter() {
+  let count = 0;
+
+  function increment() {
+    count++;
+    console.log(count);
+  }
+
+  increment();
+  increment();
+  increment();
+}
+
+counter(); // Output: 1 2 3
+```
+
+We're using a closure here, which is great! However, when we run our counter function, it only counts to three everytime. Update this function to return a function that allows us to create many counters that keep track of their count separately. 
+
+<section class="answer">
+### Potential Solution
+
+```js
+function createCounter() {
+  let count = 0;
+
+  function increment() {
+    count++;
+    console.log(count);
+  }
+
+  return increment;
+}
+
+const counter = createCounter();
+
+counter(); // Output: 1
+counter(); // Output: 2
+counter(); // Output: 3
+
+const counter2 = createCounter();
+
+counter2(); // Output: 1
+```
 </section>
+***Extra Spicy:*** Include the private methods `incrementCounter`, `decrementCounter` and `getCounterValue` within the closure.
+
+</section>
+
+## Conclusion
+
+ Closures are functions that capture and remember the environment in which they were created, and can be used to create private variables and **memoize** functions. Implementation of closures can result in efficient, modular, and maintainable code, and avoid common pitfalls such as global namespace pollution, code duplication, and side effects. 
 
 <section class="checks-for-understanding">
 ### Checks for Understanding 
 
 - What is lexical scope?
 - What is a closure and how can it be helpful?
+- What is an example of a scenario where closures could be useful in code?
+- What is the difference between a closure and a higher-order function?
 </section>
