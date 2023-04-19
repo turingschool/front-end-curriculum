@@ -270,3 +270,7 @@ counter2(); // Output: 1
 - What is an example of a scenario where closures could be useful in code?
 - What is the difference between a closure and a higher-order function?
 </section>
+
+### Additional Resources
+* [practical uses for closures](https://medium.com/@dis_is_patrick/practical-uses-for-closures-c65640ae7304){:target="\__blank"}
+* [closures in depth](https://javascript.plainenglish.io/heres-that-resource-on-javascript-closures-you-were-looking-for-95e82b8108f2){:target="\__blank"}
