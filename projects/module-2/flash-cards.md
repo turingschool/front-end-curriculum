@@ -31,7 +31,7 @@ git clone git@github.com:turingschool-examples/flashcards-starter.git flashcards
 Please note that there is logic provided to you (`util.js`) to make this game playable via the command line. You will not need to edit the `util.js` file. Completion of Iterations 1 and 2 are required before you are able to utilize the command-line interface to verify that your code is functioning properly. Prior to this, you should be using your tests to confirm functionality is working as you expect.
 
 ## Day-One Deliverable
-- By end of day on kick off day: Submit your GH Repo [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link)
+By end of day on kick off day: Submit your GH Repo [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link)
 
 ## Testing
 
@@ -56,7 +56,7 @@ To DRY up your tests, consider researching and implementing Mocha's `beforeEach`
 ### For Example  
 
 ```js
-const card = createCard(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+const card = createCard(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');  // => {id: 1, question: 'What is Robbie\'s favorite animal', possibleAnswers: ['sea otter', 'pug', 'capybara'], correctAnswer: 'sea otter'}
 ```
 </section>
 
@@ -124,7 +124,7 @@ const deck = createDeck([card1, card2, card3]);
 
 const round = createRound(deck);
 
-round.deck;   // => [card1, card2, card3];
+round.deck;  // => [card1, card2, card3];
 
 round.currentCard; // => { id: 1,
                    //      question: 'What is Robbie\'s favorite animal',
@@ -134,23 +134,23 @@ round.currentCard; // => { id: 1,
 
 round.turns; // => 0
 
-round.incorrectGuesses;     // => []
+round.incorrectGuesses;  // => []
 
 takeTurn('sea otter', round); // => 'correct!'
 
-takeTurn('spleen', round);   // => 'incorrect!'
+takeTurn('spleen', round);  // => 'incorrect!'
 
-round.turns; // => 2
+round.turns;  // => 2
 
-round.incorrectGuesses;     // => [14]
+round.incorrectGuesses;  // => [14]
 
-round.currentCard;    // => { id: 12,
-            	        //      question: 'What is Travis\'s favorite stress reliever?',
-            	        //      answers: ['listening to music', 'watching Netflix', 'playing with bubble wrap'],
-            	        //      correctAnswer: 'playing with bubble wrap'
-            	        //    }
+round.currentCard;  // => { id: 12,
+            	      //      question: 'What is Travis\'s favorite stress reliever?',
+            	      //      answers: ['listening to music', 'watching Netflix', 'playing with bubble wrap'],
+            	      //      correctAnswer: 'playing with bubble wrap'
+            	      //    }
 
-calculatePercentCorrect(round); // => 50
+calculatePercentCorrect(round);  // => 50
 ```
 </section>
 
@@ -220,7 +220,7 @@ Your README should include the following, in this order:
 
 ## Rubric
 
-For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  There are just some examples. 
+For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstrate competency. These are just some examples. 
 
 ### Functional Expectations
 * Wow: Application fulfills all requirements *as well as* an extension from iteration 4.
@@ -228,20 +228,26 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 * Not Yet: Application crashes (game is not playable) or has missing functionality or bugs.
 
 ### JavaScript & Style / Functional Programming
+
+On track looks like:
 - Code is divided into logical components each with a clean, single responsibility
 - Array prototype methods are used to iterate instead of `for` loops
 - Variables and functions are consistently and appropriately named
 - Code leverages JavaScript's truthy/falsey principles
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
-- WOW option: Effectively implements one or more closures throughout project.  *Note: See Closures lesson on the Module 2 lessons page as a resource.*
+
+WOW Option: Effectively implements one or more closures throughout project.  *Note: See Closures lesson on the Module 2 lessons page as a resource.*
 
 ### Testing
+
+On track looks like:
 - Application has a robust and thorough test suite that covers all functions.
 - Test suite is organized (each function is tested in its own `it` block).
 - All scenarios/outcomes/paths are tested for your functions, including happy and sad paths.
 - Rather than using the production dataset, a small sample dataset is stored in its own file and used for testing.
   - Sample data has been crafted to create the scenarios needed for thorough testing.
 - There are no failing/pending tests upon submission
-- WOW option: `beforeEach` hook is used to DRY up test files
+
+WOW Option: mocha's `beforeEach` hook is used to DRY up test files
 
 Project is due at **9PM on Thursday of Week 1**.
