@@ -155,54 +155,20 @@ Now you will get in a breakout room with a partner and share what you worked on.
 
 ## When Should We Use This?
 
-This process is appropriate to use anytime you're tackling a complex task with code. It could be used for technical challenges like the ones we've seen so far in class. It is also useful for when you're building out a feature of an application or trying to pass a particularly difficult test in Medusa 😉.
+This process is appropriate to use anytime you're tackling a complex task with code. It could be used for technical challenges like the ones we've seen so far in class. It is also useful for when you're building out a feature of an application or trying to pass a particularly difficult test in javascript-foundations 😉.
 
 Let's look at one more example so we can see how this process works in a different context.
 
+Check out the JS file of [this codepen](https://codepen.io/kaylaewood/pen/oNdxMvq). We haven't talked much about how to manipulate HTML and CSS with JS, but that's okay! You can still follow along the problem solving process shown here. Take a few minutes to look through the comments and code and then reflect on the questions below.
+
 <section class="call-to-action">
-### Paired Practice
-
-Work through steps 1-5 of the `Problem Solving Process` with the prompt found in the JS file of [this codepen](https://codepen.io/kaylaewood/pen/oNdxMvq). We do not want you to write any code.
-</section>
-
-<section class="answer">
-### Here's an example for what that problem solving approach could look like:
-
-```js
-// goal: When the button is clicked, the div's background color should change to whatever color is selected in the drop down menu
-
-// data/what do I need access to?:
-  // HTML elements: div, select, button
-  // CSS properties: background-color
-  // JS variables: none that exist, but I will make some to store HTML elements
-
-// steps:
-  // grab 3 HTML elements and store as variables
-  // add event listener to button and fire function on click
-  // function:
-    // grab value from select element (can I use .value?)
-    // reassign background color of div (using style.backgroundColor)
-
-// code:
-var box = document.querySelector('div');
-var colorSelector = document.querySelector('select');
-var button = document.querySelector('button');
-
-button.addEventListener('click', changeBoxColor);
-
-function changeBoxColor() {
-  var newColor = colorSelector.value;
-  box.style.backgroundColor = newColor;
-}
-```
-</section>
-
 ### Reflect
 
 Take some time to reflect on the following questions and then we will share out as a class.
 
-- What felt different when applying this process to a frontend application versus a technical code challenge?
-- What did you take notes on for the `Consider the data` step?
+- What looks different when applying this process to a frontend application versus a technical code challenge?
+- What looks similar?
+</section>
 
 ## Continuing to Strengthen this Skill
 
