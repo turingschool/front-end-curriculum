@@ -218,32 +218,30 @@ Your README should include the following, in this order:
 - Technologies used
 - Install/Setup instructions
 
-## Evaluation Rubric
+## Rubric
+
+For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  There are just some examples. 
 
 ### Functional Expectations
-* 4: Application fulfills all expectations of iterations 1 - 4 (at least one extension) with no bugs, crashes, or missing functionality. Game must be playable in the console.
-* 3: Application fulfills expectations of iterations 1 - 3 with no bugs, crashes, or missing functionality.  Game must be playable in the console.
-* 2: Application is usable but has some missing functionality.
-* 1: Application crashes during normal usage.
+* Wow: Application fulfills all requirements *as well as* an extension from iteration 4.
+* Yes: Application fulfills all requirements of iterations 1-3 without bugs.
+* Not Yet: Application crashes (game is not playable) or has missing functionality or bugs.
 
-### Fundamental JavaScript & Style
-* 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring.
-* 3: Application shows strong effort towards organization, content, and refactoring. Leverages JavaScript's [truthy/falsey principles](https://frontend.turing.edu/lessons/module-1/js-truthy-falsy-expressions.html) to write concise conditional logic. Does not use for loops.
-* 2: Application runs but the code has long functions, unnecessary or poorly named variables, and needs significant refactoring.
-* 1: Application generates syntax error or crashes during execution.
+### JavaScript & Style / Functional Programming
+- Code is divided into logical components each with a clean, single responsibility
+- Array prototype methods are used to iterate instead of `for` loops
+- Variables and functions are consistently and appropriately named
+- Code leverages JavaScript's truthy/falsey principles
+- Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
+- WOW option: Effectively implements one or more closures throughout project.  *Note: See Closures lesson on the Module 2 lessons page as a resource.*
 
-### Test-Driven Development
-* 4: Application is broken into components, good use of own data, good happy and sad path testing. Has consistent use of beforeEach to DRY up tests.  Tests must be passing to be considered.  
-* 3: Application is well tested, but some coverage might be lacking. Smaller data files are used for testing instead of the entire data file. Some use of beforeEach to DRY up tests. Tests must be passing to be considered.  
-* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. No use of beforeEach to DRY up tests. Tests must be passing to be considered.  
-* 1: Application does not demonstrate strong use of TDD. Tests must be passing to be considered.  
-
-## Repeaters
-- Must create a brand new repo and start the project fresh
-- Should aim to complete at least one extension in addition to using a project board
-
-# Evaluations / Submission
-
-You'll have the opportunity to review code with your accountabilibuddy after submitting. Instructors will share group feedback.
+### Testing
+- Application has a robust and thorough test suite that covers all functions.
+- Test suite is organized (each function is tested in its own `it` block).
+- All scenarios/outcomes/paths are tested for your functions, including happy and sad paths.
+- Rather than using the production dataset, a small sample dataset is stored in its own file and used for testing.
+  - Sample data has been crafted to create the scenarios needed for thorough testing.
+- There are no failing/pending tests upon submission
+- WOW option: `beforeEach` hook is used to DRY up test files
 
 Project is due at **9PM on Thursday of Week 1**.
