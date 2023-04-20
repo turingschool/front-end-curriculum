@@ -69,7 +69,7 @@ A `turn` help evaluate if a guess to a flashcard question is correct or incorrec
 ### For Example  
 
 ```js
-turn.evaluateGuess(guess, correctAnswer);  // => incorrect! OR correct!
+evaluateGuess(guess, correctAnswer);  // => incorrect! OR correct!
 ```
 </section>
 
