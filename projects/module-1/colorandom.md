@@ -124,6 +124,7 @@ Hex codes are 6 characters long, and each character is some value of 0-9 or A-F 
 
 - Add a `Save Palette` button to match the design above
 - Add a `Saved Palettes` section to match the design above
+- The saved palettes section should be viewable on the page at all times
 - When the page loads, there should be no saved palettes
 - Whenever there are no saved palettes, the user should see a message in the saved palettes section saying "No saved palettes yet!"
 - When the user clicks `Save Palette`:
