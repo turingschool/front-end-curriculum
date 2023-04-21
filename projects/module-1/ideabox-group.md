@@ -28,6 +28,10 @@ For each iteration, you should be matching the provided design comps closely. ([
   - Font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
   - Icons: [Found here](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing) (Note: You will not use all of the icons in this folder.)
   - Colors:
+    - Dark Purple: `#1F1F3C`
+    - Medium Purple: `#A8AAD2`
+    - Light Purple: `#EAEAF4`
+    - White: `#FFFFFF`
 </section>
 
 <section class="answer">
