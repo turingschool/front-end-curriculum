@@ -65,7 +65,7 @@ Your entire application will consist of one HTML file, one CSS file and one JS f
    * You'll need a `createPlayer` function, that should return an object with the following properties:
      - `name` (ex: `'Human'`), `token` (ex: `'👩🏻'`), `wins` (ex: `0`)
 
-   * Your player should have access to functions that must include, _but are not limited to_:
+   * You'll need some of the following functions, but this is not an exhaustive list:
      - `saveWinsToStorage` - only necessary if you choose the localStorage extension
      - `retrieveWinsFromStorage` - only necessary if you choose the localStorage extension
      - `takeTurn`
