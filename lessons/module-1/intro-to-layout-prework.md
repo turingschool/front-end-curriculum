@@ -70,7 +70,7 @@ display: none;
 <section class="call-to-action">
 ### Practice
 
-Visit [this Codepen](https://codepen.io/cassandragoose/pen/KKGpvrZ?editors=1100), which contains an HTML file and a CSS file. 
+Visit [this Codepen](https://codepen.io/turingschool/pen/mdzRVZq), which contains an HTML file and a CSS file. 
 
 Read through the HTML and CSS. Observe what classes and CSS is being applied to the elements in the HTML. 
 
