@@ -44,7 +44,7 @@ eatSnack();
 
 In our example above, the lexical scope for our `getHangry` function is the scope (and any variables) that are contained within `eatSnack`.
 
-All inner functions (since functions create new scope) are statically (lexically) bound during the Creation Phase to the parent context in which the inner function was physically defined in the source/program code.
+All inner functions (since functions create new scope) are statically (lexically) bound during the Creation Phase to the parent context in which the inner function was physically defined in the source/program code. Said another way, the getHangry() function is defined inside the definition of the eatSnack() function - because of this, we can't call getHangry() outside of the eatSnack() function. It won't work, because its scope is limited to within the eatSnack() function where it was defined.
 
 ## Closures 
 
@@ -155,7 +155,7 @@ Add a new function `addGrade` to this closure, such that we can update our
 
 Our most thorough definition of a closure is now **when an inner function has access to the outer function's variables and can remember the environment in which it was created. The outer function's variables are protected by the closure and can only be manipulated by code defined within that function.**
 
-In the previous example, you'll notice we could still technically change those grades and snoop on them if we wanted to. This is why we say JavaScript doesn't have a true fashion for creating private variables. We can kind of imply that you shouldn't be fussing with something by hiding it in a function and not exposing that variable declaration outside of it - but we can still gain access to that value. So closures aren't really going to help if you have truly sensitive data that nobody should be able to see.
+In the previous example, you'll notice we could still technically change those grades and snoop on them if we wanted to. This is why we say JavaScript doesn't have a true fashion for creating private variables. As developers, we can hide a variable declaration inside a function in order to imply that no one should be fussing with that variable - but we can still gain access to that value. So closures aren't really going to help if you have truly sensitive data that nobody should be able to see.
 
 <section class="answer">
 ### Practice in small groups
@@ -176,12 +176,12 @@ rent.decRent(1000);
 rent.incRent(2000); 
 rent.getRent();
 ```
-***Hint:*** `rentPrice` should return a series of functions for updating our confidental rent (the initial parameter).
+***Hint:*** `rentPrice` should return a series of functions for updating our confidental rent (the initial parameter). Take note of the dot notation used to invoked these private methods. 
 
 </section>
 
 ## Closures for drying up code
-Consider this next example when looking at the next example: closures can 'partially apply' functions to 'lock in' arguments to make more reusable functions.
+Consider this when looking at the next example: closures can 'partially apply' functions in order to 'lock in' arguments to make more reusable functions:
 
 ```js
 const calculateTaxes = (taxRate) => {
@@ -197,7 +197,8 @@ taxRateFor2020(85000)
 taxRateFor2021(95000)
 taxRateFor2022(110000)
 ```
-In this code, `calculateTaxes()` is a **higher-order function** that takes a taxRate parameter and returns a new function that takes an income parameter and calculates the tax owed for that income at the given taxRate.
+
+In this code, `calculateTaxes()` is a **higher-order function** that takes a taxRate parameter and returns a ***new*** function that takes an income parameter and calculates the tax owed for that income at the given taxRate.
 
 The returned function is a closure, meaning it has access to the taxRate parameter from the outer function even after the outer function has returned. This allows us to "dry up" our code by avoiding duplication of tax calculation logic.
 
@@ -281,3 +282,4 @@ Make a function that creates a random number generator, and stores the values of
 ### Additional Resources
 * [practical uses for closures](https://medium.com/@dis_is_patrick/practical-uses-for-closures-c65640ae7304){:target="\__blank"}
 * [closures in depth](https://javascript.plainenglish.io/heres-that-resource-on-javascript-closures-you-were-looking-for-95e82b8108f2){:target="\__blank"}
+* [memoization](https://www.geeksforgeeks.org/javascript-memoization/){:target="\__blank"}
