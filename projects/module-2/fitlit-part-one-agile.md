@@ -314,7 +314,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 ### Test-Driven Development
 
 💫ON TRACK💫 can look like:
-- Application has a robust and thorough test suite that covers all functions that do not update the dom.
+- Application has a robust and thorough test suite
 - Test suite is organized.
   - Each function is tested in its own it block.
 - All scenarios/outcomes/paths are tested for your functions, including happy and sad paths.
