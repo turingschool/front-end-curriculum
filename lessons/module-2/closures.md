@@ -12,7 +12,7 @@ module: 2
 
 ## Vocab
 
-- `lexical scope` also known as static scope
+- `lexical scope` also known as static scope. Lexical scope in JavaScript means that the accessibility of a variable is determined by its location in the source code and the structure of nested functions.
 - `closure` a function that has a reference to its outer/lexical environment
 - `higher-order function` a function that takes one or more functions as arguments and/or returns a function as its result.
 
@@ -258,9 +258,15 @@ counter2(); // Output: 1
 
 </section>
 
+<section class="call-to-action">
+### On your own
+
+Make a function that creates a random number generator, and stores the values of the minimum random numbers and maximum random numbers generated between invokations. 
+</section>
+
 ## Conclusion
 
- Closures are functions that capture and remember the environment in which they were created, and can be used to create private variables and **memoize** functions. Implementation of closures can result in efficient, modular, and maintainable code, and avoid common pitfalls such as global namespace pollution, code duplication, and side effects. 
+ Closures are functions that capture and remember the environment in which they were created, and can be used to create private variables and **memoize** functions. Implementation of closures can result in efficient, modular, and maintainable code, and avoid common pitfalls such as global namespace pollution, code duplication, and side effects. Implementation of closures will be expected in your projects moving forward, and will become even more relevant when working with React functional components. 
 
 <section class="checks-for-understanding">
 ### Checks for Understanding 
@@ -268,6 +274,7 @@ counter2(); // Output: 1
 - What is lexical scope?
 - What is a closure and how can it be helpful?
 - What is an example of a scenario where closures could be useful in code?
+- Can you think of an example in your current or recent project where a closure would have been useful?
 - What is the difference between a closure and a higher-order function?
 </section>
 
