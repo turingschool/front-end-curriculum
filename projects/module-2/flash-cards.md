@@ -222,11 +222,14 @@ Your README should include the following, in this order:
 
 For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstrate competency. These are just some examples. 
 
+<section class="answer">
 ### Functional Expectations
 * Wow: Application fulfills all requirements *as well as* an extension from iteration 4.
 * Yes: Application fulfills all requirements of iterations 1-3 without bugs.
 * Not Yet: Application crashes (game is not playable) or has missing functionality or bugs.
+</section>
 
+<section class="answer">
 ### JavaScript & Style / Functional Programming
 
 On track looks like:
@@ -237,7 +240,9 @@ On track looks like:
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 
 WOW Option: Effectively implements one or more closures throughout project.  *Note: See Closures lesson on the Module 2 lessons page as a resource.*
+</section>
 
+<section class="answer">
 ### Testing
 
 On track looks like:
@@ -249,5 +254,6 @@ On track looks like:
 - There are no failing/pending tests upon submission
 
 WOW Option: mocha's `beforeEach` hook is used to DRY up test files
+</section>
 
 Project is due at **9PM on Thursday of Week 1**.

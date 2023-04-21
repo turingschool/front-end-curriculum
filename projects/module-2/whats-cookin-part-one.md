@@ -184,22 +184,22 @@ The expectation for Mod 2 is that you will avoid using `async/await`.  We know `
 
 ### Testing
 
-You should *NOT* use the original data files in the `data` directory for testing. These are big files, to begin with, and a real-world dataset would have millions of records. That's far too big to use every time you want to run a test.
+You should *NOT* use the original data files in the `data` directory for testing. These are big files to begin with, and a real-world dataset would have millions of records. That’s far too big to use every time you want to run a test.
 
-Instead, you should create small, sample datasets that match the structure of the application data and use these for your test data. By creating this sample dataset, you will also know if your functions are working correctly because you can do the calculations by hand with a much smaller dataset.  
+Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your functions are working correctly because you can do the calculations by hand with a much smaller dataset.
 
-You are expected to research and implement `beforeEach` in your test files.
+**You are *expected* to:**
+- Build a robust testing suite.  This might include testing pure functions in your `scripts.js`.
 
-**You are *expected* to test:**
-* All functions that do not update the DOM.  This means everything in your `scripts.js` file should be tested.
+**Remember to test all possible outcomes (happy/sad/etc). Ask yourself:**
 
-Remember to test all possible outcomes (happy/sad/etc).  Ask yourself:  
-  - Does the function return anything?  
-  - Are there different possible outcomes to test for based on different arguments being passed in?
+- Does the function return anything?
+- Are there different possible outcomes to test based on different arguments being passed in?
 
-**You are *not expected* to test:**
-* DOM manipulation / DOM manipulating function (like `document.querySelector(...)`)
-* Fetch calls
+**You are *not expected* to test:**
+
+- DOM manipulation / DOM manipulating functions (like `document.querySelector(...)`)
+- Fetch calls
 
 ---
 
@@ -253,11 +253,14 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 
 While M2 rubrics do not have a separate section for WOWs like in M1, there are a few WOW examples noted throughout.  In addition to these WOW bullets, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections. 
 
+<section class="answer">
 ### Functional Expectations
 * Wow: Application fulfills all requirements *as well as* an extension.
 * Yes: Application fulfills all requirements of iterations 1-3 without bugs.
 * Not Yet: Application crashes or has missing functionality or bugs.
+</section>
 
+<section class="answer">
 ### JavaScript & Style / Functional Programming / Fetch
 - Code is divided into logical components each with a clean, single responsibility
 - Array prototype methods are used to iterate instead of for loops
@@ -266,9 +269,11 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 - Code leverages JavaScript's truthy/falsey principles
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 - WOW option: Effectively implements one or more closure throughout project.  *Note: See Closures lesson on M2 lesson page as a resource.*
+</section>
 
+<section class="answer">
 ### Test-Driven Development
-- Application has a robust and thorough test suite that covers all functions that do not update the dom.
+- Application has a robust and thorough test suite
 - Test suite is organized.
   - Each function is tested in its own it block.
 - All scenarios/outcomes/paths are tested for your functions, including happy and sad paths.
@@ -278,13 +283,18 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
   - For example: If you need to test a sad path of searching for recipes with a tag that no recipes match, you need to create test data that simulates that scenario so you can test it.
 - `beforeEach` hook is used to DRY up test files
 - There are no failing/pending tests upon submission
+</section>
 
+<section class="answer">
 ### User Interface
 - The application can stand on its own to be used by an instructor without guidance from a developer on the team.
 - UI/UX is intuitive and easy to read/use
 - Helpful messaging is displayed to prevent user confusion
   - For example: If a user searches for a recipe and finds no matching results, a message is displayed to indicated that the search worked, nothing is broken, there just aren't any matching recipes found.
 - WOW option: Design is responsive across small, medium and large breakpoints.
+</section>
+
+---
 
 ### Collaboration and Professionalism 
 - See "Minimum Collaboration and Professionalism Expectations" above.  

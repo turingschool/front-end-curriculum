@@ -158,21 +158,22 @@ password: travel
 
 ## Testing
 
-You should NOT use the original data files in the data directory for testing. These are big files, to begin with, and a real-world dataset would have millions of records. That's far too big to use every time you want to run a test.
+You should *NOT* use the original data files in the `data` directory for testing. These are big files to begin with, and a real-world dataset would have millions of records. That’s far too big to use every time you want to run a test.
 
-Instead, you should create small, sample datasets that match the structure of the application data and use these for your test data. By creating this sample dataset, you will also know if your functions are working correctly because you can do the calculations by hand with a much smaller dataset.
+Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your functions are working correctly because you can do the calculations by hand with a much smaller dataset.
 
-You are expected to test:
+**You are *expected* to:**
+- Build a robust testing suite.  This might include testing pure functions in your `scripts.js`.
 
-All functions that do not update the DOM. This means everything in your scripts.js file should be tested.
-Remember to test all possible outcomes (happy/sad/etc). Ask yourself:
+**Remember to test all possible outcomes (happy/sad/etc). Ask yourself:**
 
-Does the function return anything?
-Are there different possible outcomes to test for based on different arguments being passed in?
-You are not expected to test:
+- Does the function return anything?
+- Are there different possible outcomes to test based on different arguments being passed in?
 
-DOM manipulation / DOM manipulating function (like document.querySelector(...))
-Fetch calls
+**You are *not expected* to test:**
+
+- DOM manipulation / DOM manipulating functions (like `document.querySelector(...)`)
+- Fetch calls
 
 ## Accessibility
 
@@ -261,7 +262,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 <section class="answer">
 ### Testing
 
-* Application has a robust and thorough test suite that covers functions that do not update the dom.
+* Application has a robust and thorough test suite
 * Testing includes happy and sad paths
 * Test suite is organized - a new developer could easily identify what function is causing a test to fail
 * Rather than using the production data, small sample data is stored in its own file and used for testing.
