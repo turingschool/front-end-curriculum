@@ -165,6 +165,7 @@ You are welcome to add your own extensions. Be sure they are thoughtful in terms
 Options:
 - Ensure that all saved palettes are unique.
 - When a user tries to delete a saved palette, have them confirm that they really do want to delete it.
+- Implement [localStorage](https://frontend.turing.edu/lessons/module-1/json-and-localstorage.html) so the saved palettes persist on page load.
 - Allow users to name their palettes when saving.
 - Allow users to name their palettes when saving, and allow them to search their saved palettes by name.
 - Create a way for users to adjust a color (look to [Coolors](https://coolors.co/app) for inspiration).
