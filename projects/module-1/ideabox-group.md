@@ -104,7 +104,7 @@ You're ready to start iteration 0!
   - a card should appear on the screen to match the comp above. The card should show the title and body the user entered into the form.
   - the form inputs should clear out to be ready for the next idea.
 
-- When a user clicks "Save" with an empty Title or Body input field:
+- When a user tries to click "Save" with an empty Title or Body input field:
   - the "Save" button is disabled and unable to be clicked. It's clear to the user when the button is disabled because it is a lighter color and the cursor is not a pointer when they hover over it.
   - a new idea card should not appear.
 
@@ -131,7 +131,7 @@ You're ready to start iteration 0!
 
 - A star button should be visible on all idea cards now that match the comp above.
 - When a user clicks the star button:
-  - the data model should be updated. (You may want to add a new property to your idea objects)
+  - the data model should be updated such that you can tell which ideas have been starred.
   - the star should toggle between orange and white to show the user whether that idea is favorited or not.
     - orange: favorited
     - white: not favorited
