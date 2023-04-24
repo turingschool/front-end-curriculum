@@ -40,7 +40,7 @@ Here are some ideas of what to look for:
 - Is our indentation and spacing consistent across all files?
 - Are our variable names descriptive of the values they hold? Do they follow common convention (i.e. arrays are plural, etc)?
 - Are our function names descriptive of what the function does? Are they named with present tense verbs?
-- Are any of our function too big or doing too many things? Should we break any of them up?
+- Are any of our functions too big or doing too many things? Should we break any of them up?
 - Is any of our JS code too repetitive? Could we make any reusable functions with parameters and arguments?
 
 Remember - shorter code isn't always better! 
@@ -56,7 +56,7 @@ Remember - shorter code isn't always better!
 * As a team, complete [the DTR Form](https://docs.google.com/forms/d/e/1FAIpQLSche5cvtlYQ_SaBDqqoF3H9gFiy2p60AOPoUMbhgIHlg-vRlQ/viewform?usp=sf_link)
 
 Choose ONE TEAM MEMBER to do the following:
-1. Locally, create a new folder called 'coloRandom` and add the following files to that folder: `index.html`, `main.js`, and `styles.css`.
+1. Locally, create a new folder called `coloRandom` and add the following files to that folder: `index.html`, `main.js`, and `styles.css`.
 2. `cd` into the `coloRandom` directory and run `git init` to initialize git.
 3. Create an initial commit.
 4. On GitHub, create a new repository. Follow the written instructions on GitHub to add the repo's remote to your local project, and push your initial commit up to GitHub.
