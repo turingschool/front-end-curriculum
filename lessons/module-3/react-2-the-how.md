@@ -58,7 +58,7 @@ $ npx create-react-app ideabox
 You will see something like this start to run in your terminal:
 
 ```bash
-Creating a new React app in /Users/yourname/mod3/ideabox.
+Creating a new React app in /Users/leta/mod3/ideabox.
 
 Installing packages. This might take a couple of minutes.
 Installing react, react-dom, and react-scripts...
@@ -118,7 +118,7 @@ What happens if you:
 
 You'll also notice an `index.js` file. What is going on in there?
 
-```jsx
+```js
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -132,7 +132,7 @@ root.render(
 
 We've talked about React being modular many times, but what does it look like to have our code and project files be modular?
 
-One small example is to keep a modular file structure. This means that any and all files related to a particular component live in the same directory! This is pretty common in React projects, so we recommend setting up your file structure like this each time you build a new project. Here's an example :)
+One small example is to keep a modular file structure. This means that any and all files related to a particular component live in the same directory! This is pretty common in React projects, so we recommend setting up your file strucure like this each time you build a new project. Here's an example :)
 
 src 📁
 - components 📁
@@ -169,7 +169,7 @@ Let's start building out our App component.
 
 Let's figure out what should be a component in our app.
 
-![IdeaBox wireframe](./assets/images/ideaBox/IdeaBox-Browser.png)
+![IdeaBox wireframe](https://i.imgur.com/2bSfaXK.jpg)
 
 - We have an App component. That should probably hold onto our list of ideas.  
 
@@ -179,7 +179,7 @@ Let's figure out what should be a component in our app.
 
 - We can create an Ideas component to hold all of our Cards.  
 
-![IdeaBox wireframe with component boxes](./assets/images/ideaBox/IdeaBox-wireframe.png)
+![IdeaBox wireframe with component boxes](https://i.imgur.com/xWggABx.jpg)
 
 ### App.js
 
@@ -383,7 +383,7 @@ Since the Ideas component will just be rendering Card components, it will not ne
 
 As always, we will need to import React, but this time, we will not need to import a Component. For now, let's create a function called Ideas that returns an h2 that reads "Ideas go here!"
 
-```jsx
+```js
 // Ideas.js
 
 import React from 'react';
@@ -400,7 +400,7 @@ export default Ideas;
 
 Then, back in our `App.js`, we can import our shiny new Ideas component and add it to our render!
 
-```jsx
+```js
 // App.js
 
 import React, { Component } from 'react';
@@ -440,7 +440,7 @@ We have to pass our ideas array from the App component to our Ideas component. W
 
 Props (along with state) are the heart and soul, the meat and potatoes, of React. They are what allow us to pass information between components. Let's take a look at how that might work.
 
-We've mentioned that components are reusable pieces of code, that allow us to create unique instances of certain UI elements. We can do this by passing props to each of our components. Think about how you create new instances of ES6 Classes - they share the same base, but you pass in different arguments every time you create a new instance, which allows each instance to vary slightly.
+We've mentioned that components are reusable pieces of code, that allow us to create unique instances of certain UI elements. We can do this by passing props to each of our components. Think about how you create new function and passing arguments into it.
 
 Props allow us to pass information from parent components to child components. We can pass strings, numbers, booleans, arrays, objects, functions, pretty much any piece of data we want access to in our child component. We can name them whatever we'd like, as long as we're consistent and semantic with the names that we choose.
 
@@ -450,7 +450,7 @@ Let's start with an example, just to keep things simple. For now, since our Idea
 
 In our App component, let's add something to our `render` method.
 
-```jsx
+```js
 // App.js
   render() {
     return(
@@ -464,7 +464,7 @@ In our App component, let's add something to our `render` method.
 
 Now, let's adjust our Ideas component.
 
-```jsx
+```js
 // Ideas.js
 
 const Ideas = (props) => {
@@ -487,7 +487,7 @@ If, in the `render` method of our App component, we called the property "potato"
 
 We can even destructure the props object, because it's just a regular object!
 
-```jsx
+```js
 // Ideas.js
 
 const Ideas = (props) => {
@@ -503,10 +503,10 @@ In _this_ example, destructuring is a bit over-engineered, yes. However, we'll s
 
 And here's YET ANOTHER super-fancy way to destructure:
 
-```jsx
+```js
 // Ideas.js
 
-const Ideas = ({name}) => {
+function Ideas({name}){
   return (
     <h2>Hello, {name}!</h2>
   )
@@ -530,7 +530,7 @@ Let's create a Card component to use. Will it be function or class based?
 
 Create your files: `$ touch src/Card.js src/Card.css`
 
-```jsx
+```js
 // Card.js
 
 import React from 'react';
@@ -549,7 +549,7 @@ export default Card;
 
 Then, in your Ideas component, let's just try to get these hooked up properly.
 
-```jsx
+```js
 // Ideas.js
 
 import React from 'react';
@@ -598,11 +598,11 @@ And in your Card css file:
 
 Okay! Hopefully your app looks like this:
 
-![screenshot of IdeaBox so far](./assets/images/ideaBox/IdeaBox-Screenshot.png)
+![screenshot of IdeaBox so far](https://i.imgur.com/TiPPUMq.png)
 
 All right, friends. Let's get to passing some PROPS! Let's go all the way back to our App component and pass our list of ideas to the Ideas container component, so that it can then create Card components out of each individual idea.
 
-```jsx
+```js
 // App.js
 
 render() {
@@ -624,7 +624,7 @@ We now want to iterate through our array and create a Card component, passing it
 ```js
 // Ideas.js
 
-const Ideas = ({ideas}) => {
+function Ideas({ideas}){
 
   const ideaCards = ideas.map(idea => {
     return (
@@ -683,7 +683,7 @@ Conditional rendering is exactly what it sounds like: telling a component to ren
 
 Currently our App looks like this:
 
-```jsx
+```javascript
 // App.js
 
 class App extends Component {
@@ -718,7 +718,7 @@ if (! this.state.ideas.length) {
 
 We want this logic to live inside of our `render()` method, so we can use curly braces to inject JS into our JSX. However, we need whatever is inside of our curlies to _evaluate_ to the HTML we want rendered, so we'll use some syntax like this:
 
-```jsx
+```js
 // App.js
 
 render() {
@@ -765,7 +765,7 @@ input, button {
 
 Our Form will start like this:
 
-```jsx
+```js
 // Form.js
 
 import React, { Component } from 'react';
@@ -808,7 +808,7 @@ export default Form;
 
 But we need to write some functions. Let's start by making sure that when we type into our inputs, they update the Form's state.
 
-```jsx
+```js
 // Form.js
 
   handleChange = event => {
@@ -850,7 +850,7 @@ When we click the submit button, what do we want to happen? We want to create an
 
 In App, we're going to have to create a method that updates App's state:
 
-```jsx
+```js
 // App.js
 
   addIdea = (newIdea) => {
@@ -913,7 +913,7 @@ You can see that using the arrow function is much shorter syntactically. However
 
 Now, in the Form component, let's make use of the `addIdea` method we passed as a prop. In class-based components, we reference props with `this.props`. If you remember from earlier, function-based components merely use the keyword `props`.
 
-```jsx
+```js
 // Form.js
 
   submitIdea = event => {
@@ -962,7 +962,7 @@ Now that you know how to use a method and props to allow a different component t
 
 First, write the App method to delete an idea from state and pass it to the Ideas component:
 
-```jsx
+```js
 // App.js
 
 import React, { Component } from 'react';
@@ -993,9 +993,8 @@ class App extends Component {
     this.setState({ ideas: filteredIdeas });
   }
 
-  render() {
-    return(
-      <main className='App'>
+  return(
+    <main className='App'>
         <h1>IdeaBox</h1>
         <Form addIdea={this.addIdea} />
         <Ideas ideas={this.state.ideas} deleteIdea={this.deleteIdea} />
@@ -1010,11 +1009,9 @@ export default App;
 Second, pass the `deleteIdea` function to each Card that the Ideas component creates:
 
 ```js
-import React, { Fragment } from 'react';
-import Card from './Card';
 import './Ideas.css';
-
-const Ideas = ({ideas, deleteIdea}) => {
+import Card from "./Card"
+function Ideas({ideas, deleteIdea}){
 
   const ideaCards = ideas.map(idea => {
     return (
@@ -1022,8 +1019,8 @@ const Ideas = ({ideas, deleteIdea}) => {
         title={idea.title}
         description={idea.description}
         id={idea.id}
-        key={idea.id}
-        deleteIdea={deleteIdea}
+        key = {idea.id}
+        deleteIdea = {deleteIdea}
       />
     )
   })
@@ -1060,7 +1057,6 @@ export default Card;
 Voila! You've created a React application!
 
 ## Review
-<section class="checks-for-understanding">
 
 Take a few minutes to journal:
 
@@ -1072,5 +1068,3 @@ Take a few minutes to journal:
 * What do you know about state?
 * What do you know about passing props?
 * What questions do you have? (bring these to class on Wednesday!)
-
-</section>
