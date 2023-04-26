@@ -268,7 +268,7 @@ This helps to ensure that we start anew before each test.  A [best practice](htt
 
 **User flow to test:** I can select different inputs and fill them out.
 
-* Experiment with [type](https://docs.cypress.io/api/commands/type.html){:target='blank'} and [should](https://docs.cypress.io/api/commands/should.html#Syntax){:target='blank'} as you write a test that selects the `Email` and `Password` inputs and fills them with the corresponding values, `leta@turing.edu` and `keane20`.  Assert that they have the correct values.
+* Experiment with [type](https://docs.cypress.io/api/commands/type.html){:target='blank'} and [should](https://docs.cypress.io/api/commands/should.html#Syntax){:target='blank'} as you write a test that selects the `Email` and `Password` inputs and fills them with the corresponding values, `leta@turing.io` and `keane20`.  Assert that they have the correct values.
 
 Here is a link to [commonly used assertions](https://docs.cypress.io/guides/references/assertions.html#Common-Assertions) in Cypress!
 
@@ -290,8 +290,8 @@ To add the React Dev Tools to your cypress browser window, take a look at [this 
 ```js
   it('should be able to select the email and password inputs and fill them with the corresponding values', () => {
     cy.get('input[type="email"]')
-      .type('leta@turing.edu')
-      .should('have.value', 'leta@turing.edu')
+      .type('leta@turing.io')
+      .should('have.value', 'leta@turing.io')
       .get('input[type="password"]')
       .type('keane20')
       .should('have.value', 'keane20')
@@ -336,7 +336,7 @@ For now (and throughout Mod 3), we will instead use [stubbing](https://docs.cypr
           name: "Leta Keane"
         }
       })
-      .get('input[type="email"]').type('leta@turing.edu')
+      .get('input[type="email"]').type('leta@turing.io')
       .get('input[type="password"]').type('keane20')
       .get('button').click()
       .url().should('include', '/dashboard')
@@ -370,7 +370,7 @@ All we need to worry about is that our URL has updated to the page we expect to 
       }
     })
     .get('input[type="email"]')
-    .type('leta@turing.edu')
+    .type('leta@turing.io')
     .get('input[type="password"]')
     .type('YOLO')
     .get('button').click()
@@ -464,14 +464,14 @@ Cypress.Commands.add('login', () => {
   cy.intercept(`${baseURL}/users/2/teammates`, {
       "teammates": [
         {
-          email: "hannah@turing.edu",
+          email: "hannah@turing.io",
           id: 1,
           image: "https://ca.slack-edge.com/T029P2S9M-UPE0QSWEQ-d4bebe6f4d88-512",
           name: "Hannah Hudson",
           delivered: false
         },
         {
-          email: "khalid@turing.edu",
+          email: "khalid@turing.io",
           id: 3,
           image: "https://ca.slack-edge.com/T029P2S9M-UDR1EJKFS-9351230a5443-512",
           name: "Khalid Williams",
@@ -501,7 +501,7 @@ Cypress.Commands.add('login', () => {
     id: 4,
     name: "Scott Ertmer",
     image: "https://ca.slack-edge.com/T029P2S9M-UJ910QEJF-7244f37f7e12-512",
-    email: "scott@turing.edu",
+    email: "scott@turing.io",
     password: "ertmer20",
   });
 
@@ -510,13 +510,13 @@ Cypress.Commands.add('login', () => {
     id: 11,
     name: "Travis Rollins",
     image: "https://ca.slack-edge.com/T029P2S9M-U4R41TZD2-7661f06e8c71-512",
-    email: "travis@turing.edu",
+    email: "travis@turing.io",
     password: "rollins20",
   });
 
   // Fill in our UI to trigger the network requests and send us to /dashboard
   cy.visit('http://localhost:3000/')
-    .get('input[name=email]').type('leta@turing.edu')
+    .get('input[name=email]').type('leta@turing.io')
     .get('input[name=password]').type('keane20')
     .get('button').click()
 })
