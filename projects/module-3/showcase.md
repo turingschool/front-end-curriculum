@@ -25,7 +25,7 @@ This project will challenge you to use the technology you've become familiar wit
   - **Display** the data from the API in a way that applies directly to your audience
   - Ability for users to **store/manipulate** the data displayed in the application, such as favoriting or adding to a list, searching, commenting, etc
   - Multiple views handled by Router
-  - Be deployed using Heroku, Surge, or any other similar service
+  - Be deployed using Vercel, Heroku, Surge, or any other similar service
 
 ## Abstract
 
@@ -131,10 +131,9 @@ The purpose of this is to give you an opportunity to begin experiencing what it 
 
 ### Eval process
 
-In order to ensure that we have time to give relevant feedback to everyone, we are going to do asynchronous project evals.
+Project evals will be asynchronous.  The feedback for this project will be limited - but feel free to ask questions about your code.   We highly encourage you to seek a code review and feedback from a peer, house mentor or from the #questions channel in slack - a great opportunity to connect with an alumni and create a warm contact for networking!
 
 1. We will DM you your scores
-  * _Note: in the interest of time, the feedback for this project will be limited - but feel free to ask questions about your code!
 2. In a DM, we will send you a link to part of your project code.
   * Please describe that code in your own words:
     - what does that code do,
@@ -142,10 +141,10 @@ In order to ensure that we have time to give relevant feedback to everyone, we a
     - what choices did you make when you wrote it?
 3. Answer the following question in a short paragraph, using specific examples from a Mod 3 project:
   * “What is a benefit of using a framework like React over vanilla JS? What is a drawback?” (this is a common interview question!)
-4. **OPTIONAL:** Identify one function or test that you would like specific feedback on
+<!-- 4. **OPTIONAL:** Identify one function or test that you would like specific feedback on
   * Send us the link
     - Instructions on grabbing the link can be found [here](https://stackoverflow.com/questions/23821235/how-to-link-to-specific-line-number-on-github)
-  * If you do not want specific feedback, you can skip this step
+  * If you do not want specific feedback, you can skip this step -->
 
 ## Rubric
 
@@ -251,9 +250,10 @@ Score key:
 
   ### Project Professionalism
   You will not receive a score for professionalism, but you should be meeting these expectations:
+  * Project is deployed
+  * README includes the deployed link and it is easy to locate
   * README concisely communicates your learning goals, the evolution of the project, and reflections while using good formatting to enhance readability
   * README links to any applicable repos/deployed sites and includes clear instructions for running the application locally
-  * README includes the deployed link and it is easy to locate
   * README includes a gif of the application
   * Git commits are atomic, with concise and precise descriptions of the change made
   * PRs have full, consistent descriptions
