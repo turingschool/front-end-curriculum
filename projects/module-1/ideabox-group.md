@@ -2,12 +2,6 @@
 title: IdeaBox Group
 ---
 
-## Overview
-
-Every developer has more ideas than time. As David Allen likes to say "the human brain is for creating ideas, not remembering them." In this project, we'll be building an application that records and archives our ideas (good and bad alike).
-
-Throughout the project, one of our focuses will be on providing the user with a usable, intuitive client-side interface. To this end, we'll rely on JavaScript to implement snappy filtering in the browser.
-
 ## Learning Goals
 
 * Gain an understanding of how to write clean HTML and CSS to match a provided comp
@@ -15,316 +9,229 @@ Throughout the project, one of our focuses will be on providing the user with a 
 * Incorporate & iterate over arrays in order to filter what is being displayed
 * Craft code with clean style, using small functions that show trends toward DRYness, SRP, and purity
 
-## Day One Deliverables
+## Overview
 
-- One person should create a new directory called `ideabox`.You'll need to initialize git in your local repo. You can brush up on that process with [this article](https://guides.github.com/introduction/git-handbook/).
-  It should contain:
-  - `index.html` 
-  - `styles.css`
-  - `app.js` (this is where you will write the logic for the data model)
-  - `index.js` (this is where your DOM manipulation will occur)
-  - `assets` (this is a directory that will hold your icon files)
--  As a team, complete [the DTR Form](https://docs.google.com/forms/d/e/1FAIpQLSche5cvtlYQ_SaBDqqoF3H9gFiy2p60AOPoUMbhgIHlg-vRlQ/viewform?usp=sf_link)
--  Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the following links:
-    - the GitHub repo link
-    - the GitHub Pages deployed site
-      - Instructions for deploying: Repo Settings >> Pages >> Select the `main` branch as your Source branch >> Save >> Send us the URL they give you in the pop up that says "Your site is ready to be published at [URL]"
--  Add all teammates and your assigned instructor as collaborators to your forked repository
-- In your group project README, include links to all of your LinkedIn profiles. The rough draft of your LinkedIn is due during this project, so use this as an opportunity to leverage it! We'll check in on this during our group project check-in. 
+Every developer has more ideas than time. As David Allen likes to say "the human brain is for creating ideas, not remembering them." In this project, we'll be building an application that records and archives our ideas (good and bad alike).
+
+This project will give you and your team an opportunity to write HTML and CSS, and leverage JavaScript to both create your data model and interact with the DOM.
+
+Additionally, as your first group project, this will give you a chance to continue to hone your team skills: communication, planning, proper git and GitHub workflow.
+
+You will work through the iterations listed under **Progression** below.
+
+## Notes Before You Begin
+
+<section class="answer">
+### Design Resources
+
+For each iteration, you should be matching the provided design comps closely. ([What is a design comp?](https://clients.geminoscreative.com/marketing-blog/what-is-a-design-comp)) Act like you're on the job and these are the designs you've been given to match. Details and spacing matter! Here is some info to help you:
+  - Font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
+  - Icons: [Found here](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing) (Note: You will not use all of the icons in this folder.)
+  - Colors:
+    - Dark Purple: `#1F1F3C`
+    - Medium Purple: `#A8AAD2`
+    - Light Purple: `#EAEAF4`
+    - White: `#FFFFFF`
+</section>
+
+<section class="answer">
+### Refactoring as You Go
+
+Between each iteration, take some time to look at the code you've written and make any changes that might improve the readability of your code. Refactoring as you go can help ensure that everyone understands the code you've written so far AND make it easier to build on top of that code.
+
+Here are some ideas of what to look for:
+- Did we use [semantic HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) rather than `divs` and `sections` everywhere?
+- Is our indentation and spacing consistent across all files?
+- Are our variable names descriptive of the values they hold? Do they follow common convention (i.e. arrays are plural, etc)?
+- Are our function names descriptive of what the function does? Are they named with present tense verbs?
+- Are any of our functions too big or doing too many things? Should we break any of them up?
+- Is any of our JS code too repetitive? Could we make any reusable functions with parameters and arguments?
+
+Remember - shorter code isn't always better! 
+</section>
+
 
 ## Progression
 
-### Iteration 0 - App Layout
+<section class="answer">
+### Set Up + Day 1 Deliverables
 
-Plan to write the HTML and CSS so that your application matches this comp. Based on what you are building, you can anticipate that the Idea "cards" will not always be there on page load, but for now, they should.
+**By EOD on Kick Off Day:** complete the following tasks:
 
-Use the same text on your cards that is used in the spec so you can ensure your spacing/sizing is accurate.
+* As a team, complete [the DTR Form](https://docs.google.com/forms/d/e/1FAIpQLSche5cvtlYQ_SaBDqqoF3H9gFiy2p60AOPoUMbhgIHlg-vRlQ/viewform?usp=sf_link)
 
-![Desktop Layout](./assets/ideabox-group/desktop.jpg)
+Choose ONE TEAM MEMBER to do the following:
+1. Locally, create a new folder called `ideaBox` and add the following files to that folder: `index.html`, `main.js`, and `styles.css`.
+2. `cd` into the `ideaBox` directory and run `git init` to initialize git.
+3. Create an initial commit.
+4. On GitHub, create a new repository. Follow the written instructions on GitHub to add the repo's remote to your local project, and push your initial commit up to GitHub.
+5. Add all project partners to the repository as contributors. If your repository is set to private, add your project manager as a collaborator as well.  
+6. Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the following links:
+  - your team's GitHub repo
+  - the GitHub Pages deployed site
+    - Instructions for deploying: Repo Settings >> Pages >> Select the `main` branch as your Source branch >> Save >> Send us the URL they give you in the pop up that says "Your site is ready to be published at [URL]"  
 
-You will need the `svg` image files for the star and delete icons. [Here's the link to download the `svg` icons.](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing). _Note: You won't end up using all of the icons in this folder._
+Then, as a team:
+* Have all team members clone down the repo.  
 
-![Colors](./assets/ideabox-group/ideabox-colors.png)
-![Icons](./assets/ideabox-group/icons.jpg)
-
-
-### Iteration 1 and beyond
-
-We **strongly recommend** that you complete Iteration 0 **before** moving on to the next iterations!
-
-### Architecture
-
-For this project, we'll be increasingly thinking about the "data model" and "DOM model" as separate entities. We'll be using:
-
-- JavaScript to manage the data model and the client-side interactions.
-- HTML, CSS and the DOM to display our data
-
-Your entire application will consist of one HTML page or template. You will have two JavaScript files, for now:
-
-1. An `app.js` file that contains the logic for the data model.
-  * You'll need:
-    1. A function that can create an idea (see details below in "Data Model")
-    2. A way to store ideas (hint: store idea objects in an array)
-    3. Functions to update the stored ideas array (one to remove ideas, one to add new ideas, etc)
-    4. A function to update a single idea's information (ex: you will need to be able to change an idea's "star" property's value)
-2. An `index.js` file that contains all DOM related JavaScript.
-
-**Note** The `app.js` file  must be the first script in your HTML so that your `index.js` file has access to the functions in your `app.js` file!
-
-### Data Model
-
-* An idea is represented by an object that has an _id_, _title_, _body_, and _star_.
-  * The _id_ should be a unique identifier. (Note: generating a random number does _not_ guarantee it will be unique)
-  * _title_ and _body_ are strings.
-  * _star_ is a boolean.
-
-Each idea should be an object that is created by a function. Once an idea object is created, that data can be used to update the DOM. That idea object should also be added to a "list" of all the ideas your application currently has. This should probably be a global variable in your `app.js` file.
-
-Remember: as users interact with the DOM, you should use that information to first update the data model, and then use that data model to display the information onto the DOM.
-
-### Iteration 2 - Adding Ideas
-
-As a user,
-- When I click "Save",
-- If I entered information in both the "Title" and "Body" input fields,
-- A new idea object with the provided title and body should be added to the ideas array
-- I should see a new idea card with the provided title and body appear on the DOM
-
-As a user,
-- When I click "Save",
-- If I entered information in both the "Title" and "Body" input fields,
-- I should see the "Title" and "Body" input fields clear out (so that they are ready for the user to add a different idea)
-
-As a user,
-- When I look at the "Save" button,
-- When both or either of the "Title" or "Body" input fields is empty,
-- I should notice that the "Save" button is disabled because it is a lighter color and the cursor is not a pointer when I hover over it
-
-As a user,
-- When I click "Save",
-- And a new card is successfully created,
-- I should _not_ see the page reload
-
-### Iteration 3 - Favoriting & Deleting Ideas
-
-As a user,
-- When I click the "Delete" button on an idea card,
-- That idea object should be permanently removed from the ideas array
-- The idea card should be permanently removed from the DOM
-
-As a user,
-- When I click the "Star" button on an idea card,
-- The star property of that idea's object should be updated (in the ideas array)
-- When the button was an outline of a star (not favorited), the button should now be a filled in star (favorited)
-- **and vice versa (for unfavoriting)**
-
-As a user,
-- When I delete or favorite any card,
-- I should _not_ see the page reload
-
-### Iteration 4 - Filtering
-
-As a user,
-- When I click "Show Starred Ideas"
-- I see only cards that are favorited
-
-As a user,
-- When I click "Show Starred Ideas"
-- I see the text on that button has changed to "Show All Ideas"
-
-As a user,
-- When I click "Show Starred Ideas"
-- Then I click what is now "Show All Ideas"
-- I see all ideas, favorited or not
-
-As a user,
-- When I type a letter or phrase into the search bar, the cards should start filtering (no click needed)
-- I now only see the idea cards that include the letter/phrase in either the title or body
-
-As a user,
-- When I backspace and delete something from the search bar, so that it's empty
-- I see all cards since no search criteria is being provided
-
-## Extensions
-
-### localStorage 
-
-Typically, frontend developers work with APIs to serve up data that is stored on an external server/database. However, sometimes you might want to store some information `Client Side` - meaning we store it on the user's local browser. Interested in this extension? Check out the lesson on [localStorage](https://frontend.turing.edu/lessons/module-1/json-and-localstorage.html). We don't officially teach this lesson, but it's a good one to know.
-
-As a user,
-- When I create one idea successfully, then manually refresh the page,
-- The idea object is still saved in the ideas array
-- The idea card is still visible on the DOM
-
-As a user,
-- When I create two cards successfully, delete one, then refresh the page,
-- One idea object is still in the ideas array (the one I did not delete)
-- One idea card is still visible on the DOM (the one I did not delete)
-
-As a user,
-- When I favorite an idea card, then refresh the page,
-- That idea card is still in the "favorite" state with the filled in star icon (in both the ideas array and on the DOM)
-
-### Commenting on Ideas
-
-This extension adds the ability for your user to add comments to an idea.
-
-#### Data Model
-
-* The idea objects should now include a new property: `comments`. This will begin as an empty array.  
-* You will need to write functions that allow you to add new comments to an idea's `comments` array.  
-* A comment will be an object with the following properties: `id` (should be unique), `content` (a string of the comment itself).
-
-
-As a user,
-- When I click the "Add" icon on an idea card,
-- A form to add a comment appears on that idea card
-
-As a user,
-- When I open the comment form on a card, type something in, and click "Add Comment",
-- The text typed in is now a comment attached to this card
-
-As a user,
-- When I open the comment form on a card, type something in, and click "Add Comment",
-- The "Comment" input field clears out and is ready to accept another comment
-
-As a user,
-- When I open the comment form on am idea card,
-- When the "Comment" input field is empty,
-- I should notice that the "Add Comment" button is disabled because it is a lighter color and the cursor is not a pointer when I hover over it
-
-As a user,
-- If I have implemented localStorage,
-- When I comment on an idea card, then refresh the page,
-- That comment is still on the idea card
-
----
-
-## Notes on Project Feedback
-
-The rubric below serves as a guide for both **students** and **instructors**. 
-
-**Students:**
-- It should be used as a reference throughout the project to keep on track and guide learning.
-- It should also be used by students to self-assess their work.
-
-**Instructors:**
-- It should be used to evaluate the project at its final due date/time.
-- It should be a guide to provide relevant feedback to students so they can grow and improve in the areas that need deeper understanding.
-
-
-### Projects as Learning Tools
-
-When projects are graded, we want you to view the evaluation + feedback as a means to inform your learning, rather than as static "grades". Feedback from instructors will focus on areas where you have an opportunity to deepen your understanding. 
-
-The evaluation will provide feedback by answering the only important question:
-
-**Does the project demonstrate student understanding of the learning goals & concepts?**
-
-Projects will answer that question, being marked as **yes**, **not yet**, and **wow**. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
-
-The overall project outcome (yes, not yet, wow) is determined by "averaging" each section's outcome. You can think of a "yes" being worth a  1, a "not yet" being worth a 0, and a "wow" being worth a 2. 
-
-For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below).
+You're ready to start iteration 0!
+</section>
 
 <section class="answer">
-### An important note about the possible outcomes
+### Iteration 0 - Basic Layout
 
-**Yes** indicates that the student/team is ON TRACK in this area! YES, you showed us you understand the concept! 
-- The student/team demonstrates a good understanding of the concept
+![iteration 0](./assets/ideaBox/iteration0.png)
 
-**Not Yet** indicates that the student/team is BEHIND in this area - you showed us that you don't yet understand the concept
-- The student/team demonstrates misconceptions or confusion around the topic
-- **Student/team should prioritize this concept in their studying and practice**
--  An overall "not yet" on one project does **not** mean the module is doomed! We want to see GROWTH. A student/team can struggle with a project and still (taking into account the rest of their work and assessments) demonstrate readiness for the next module! 
+- When the page loads, we should see:
+  -  a title, two inputs, and a button
+  -  a page layout and colors that match the comp above
 
-**Wow** indicates that the student/team did extra work to teach themselves a new concept, or to achieve a deep & nuanced understanding of a concept
-- Please note: this is not an outcome to prioritize achieving! A "Yes" is an excellent outcome.
-- "Wow" is here as something to reach for if you have a solid understanding of the concepts and want to push yourselves.
-- "Wow" should not come at the expense of another concept
-- "Wow" often does not look like extra features, but instead looks like thoughtful refactoring and polish 💅
+- When a user clicks "Save," a new idea object should be created and logged to the console. The idea object should have:
+  - title
+  - body
+  - id
+
+- Every time a new idea is created, it should be added to a list that represents your data model.
 </section>
+
+<section class="answer">
+### Iteration 1 - Adding Ideas
+
+![iteration 1](./assets/ideaBox/iteration1.png)
+
+- When a user fills out both inputs and clicks "Save": 
+  - a new idea should be added to the data model.
+  - a card should appear on the screen to match the comp above. The card should show the title and body the user entered into the form.
+  - the form inputs should clear out to be ready for the next idea.
+
+- When a user tries to click "Save" with an empty Title or Body input field:
+  - the "Save" button is disabled and unable to be clicked. It's clear to the user when the button is disabled because it is a lighter color and the cursor is not a pointer when they hover over it.
+  - a new idea card should not appear.
+
+- Notes:
+  - You can choose what the layout looks like if more then 3 cards are added.
+  - You can choose how to handle titles and bodies that are longer than what fits on the card. There are lots of ways to handle this.
+</section>
+
+<section class="answer">
+### Iteration 2 - Deleting Ideas
+
+![iteration 2](./assets/ideaBox/iteration2.png)
+
+- A delete button should be visible on all idea cards now that match the comp above.
+- When a user clicks the delete button:
+  - that idea should be removed from the data model.
+  - that idea card should be removed from the page.
+</section>
+
+<section class="answer">
+### Iteration 3 - Favoriting Ideas
+
+![iteration 3](./assets/ideaBox/iteration3.png)
+
+- A star button should be visible on all idea cards now that match the comp above.
+- When a user clicks the star button:
+  - the data model should be updated such that you can tell which ideas have been starred.
+  - the star should toggle between orange and white to show the user whether that idea is favorited or not.
+    - orange: favorited
+    - white: not favorited
+- When an idea is created, it should start not favorited.
+</section>
+
+<section class="answer">
+### Iteration 4 - Filtering Ideas
+
+![iteration 4A](./assets/ideaBox/iteration4-a.png)
+
+- A filter button should be visible on the side bar to match the comp above.
+- When a user clicks the "Show Starred Ideas" button:
+  - only the favorited ideas should be visible
+  - the text on the button should change to "Show All Ideas"
+
+![iteration 4B](./assets/ideaBox/iteration4-b.png)  
+
+- When the user clicks the "Show All Ideas" button:
+  - all ideas should be visible again
+  - the text on the button should change to "Show Starred Ideas"
+</section>
+
+<section class="answer">
+### Iteration 5 - Searching Ideas (Extension)
+
+![iteration 5](./assets/ideaBox/iteration5.png)
+
+- A search bar should be visible on the page to match the comp above.
+  - Note: The search icon is not a button - this is a live search that occurs as the user types.
+- As a user types into the search input, the cards should start filtering to show only matches (no click needed). The user should see only cards that include the letter(s) in either the body or title.
+- As a user deletes letters in the search bar, cards should keep filtering correctly.
+- If a user deletes all the way back to a blank input, all cards should be visible.
+</section>
+
+<section class="answer">
+### Other Optional Extensions
+
+Here's a list of possible extensions to implement - but **ONLY IF** your team has completed all the previous iterations **AND** have cleaned up your code to make it DRYer and more readable.
+
+You are welcome to add your own extensions. Be sure they are thoughtful in terms of UX/UI, and that they do not break any prior functionality.
+
+Options:
+- Only allow unique ideas to be added.
+- When a user tries to delete an idea, have them confirm that they really do want to delete it.
+- Implement [localStorage](https://frontend.turing.edu/lessons/module-1/json-and-localstorage.html) so the ideas persist on page load.
+- Create a "Recently Deleted" filter that allows users to see their previously deleted ideas.
+</section>
+
+---
 
 ## Rubric
 
 This project has 4 evaluated concepts:
 
-- Workflow & Professional Habits
-- HTML & CSS
+- Professionalism
 - Comp Recreation
+- HTML & CSS
 - JavaScript
+- Functionality
 
-And evaluation of these concepts is assisted through the final graded section:
-- Functionality (we can't properly assess the 4 main concepts if there is not enough work to grade)
-
----
-
-### Workflow & Professional Habits
-
-This project gives the team room to practice the following skills:  
-- Collaboration
-- Git
-- GitHub
+<section class="note">
+### Note about the below criteria
 
 Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 
-<section class="answer">
-### Collaboration competency examples
+</section>
 
+<section class="answer">
+### Professionalism
+
+💫ON TRACK💫 can look like:
 - The team's norming document is taken seriously, with thoughtful reflections from all team members regarding their skills, learning goals, work styles, etc. 
-- The team plans and executes an agreed upon process for working, troubleshooting, and handling conflicts.
-- Each member of the team reflects meaningfully on the collaboration and can point to specific behaviors they want to continue, and those they want to modify for future collaboration
-- The work is distributed equitably; hopefully commit/code contributions are roughly even for each team member
+- The work is distributed equitably; commit/code contributions are roughly even for each team member in the final product and throughout the process
+- Branches are consistently used for individual features and commit messages are descriptive and concise
+- Commits are atomic, documenting a single changeset (such as a new function being created, or a function being updated) and clearly demonstrates how the project evolved over time.
+- PRs have clear, thorough descriptions and are consistently reviewed by other team members before work has been merged.
+- README is formatted and gives new contributors and employers sufficient context about the project including setup instructions, deploy link (gh-pages), images or video of the functioning app, technologies used, reflections, future features, and other pertinent information.
 
-WOW can look like:
-
-- The team's norming document is regularly revisted and revised as better perspective is gained
-- When conflicts arise, the team works together to find ways to re-focus on individual and group learning objectives
-
-Note: ⬆️this⬆️ kind of collaboration can be difficult to assess, but know that this is a crucial and vital part of your learning and marketability as a developer! 
-</section>
-
-#### Important Note on Collaboration and Professionalism:
-Every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing.
-
-<section class="answer">
-### Git competency examples
-
-- Team understands the importance & utility of documenting a single change with every commit; changesets are small
-- Commit messages are descriptive and concise
-- The team keeps the main branch clean by using branches for new, unreviewed code
-
-WOW can look like:
-
-- The team's commit messages clearly tell the story of how the project evolved over time
-- Commits are atomic, documenting a single changeset (such as a new function being created, or a function being updated).
+✨WOW✨ can look like:
+- The team holds regular standups and retros while also revisiting the norming document as better perspective is gained
+- A [PR template](https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository) is effectively used
 </section>
 
 <section class="answer">
-### GitHub competency examples
+### Comp Recreation
 
-- Team understands the point of the PR process, making strong use of code reviews & pushing up requested changes before merging
-- PRs have clear, thorough descriptions, such that a new person joining the codebase can clearly understand the proposed changes and evolution of the codebase
-- The team uses the README as an opportunity to document their work and growth
-- The team uses the README as documentation, understanding that it is a new contributor or potential employer's first glimpse into the project, and includes thorough setup instructions, context, reflections, and other pertinent information
+💫ON TRACK💫 can look like:
+- Application implements all major comp details accurately and correctly on desktop (layout, spacing, alignment, etc)
+- Careful attention was given to the little details like hover states.
 
-WOW can look like:
-
-- A PR template is effectively used (not a checkbox to complete, but an opportunity to document the changes being proposed)
-- Meaningful decisions are documented through code reviews; suggested/requested edits are made before merging
-- No bugs or poor code are merged into the main branch
-- The README effectively communicates the team's learning and growth as students
+✨WOW✨ can look like:
+- Additional elements and animations have been added that match the visuals established in the comps.
+- The design is responsive across multiple screen sizes including tablets and mobile devices.
 </section>
-
----
-
-### HTML & CSS
-
-This project gives the team room to practice using semantic HTML & CSS.
 
 <section class="answer">
 ### HTML & CSS
 
+💫ON TRACK💫 can look like:
 - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
 - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
 - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions.
@@ -335,9 +242,7 @@ This project gives the team room to practice using semantic HTML & CSS.
 ✨WOW✨ can look like:
 - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, document it in your README and let your project manager know which naming convention will be used._
 - Application fully implements HTML that is accessible for individuals with visual disabilities. _Note: This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected._
-</section>
-
-<section class="note">
+<section class="answer">
 ### Note about using the WAVE tool
 
 To get this extension to work with local files, follow these steps:
@@ -347,43 +252,14 @@ To get this extension to work with local files, follow these steps:
 - Flip the "Allow access to file URLs" switch
 - Success!
 </section>
-
----
-
-### Comp Recreation 
-
-Being able to recreate a provided design comp accurately is a critical skill for front-end developers.
-
-<section class="answer">
-### Comp Recreation competency examples
-
-- The application interface recreates the provided spec, matching fonts, colors, icons, and layout
-- If any additional elements are created (for example if the team implements an extension), all new elements match the style/spirit of the comp
-
-WOW can look like:
-
-- The application interface is responsive and can be viewed/used at various screen widths, maintaining legibility and usability at each size.
-- The team makes thoughtful decisions about the UI that makes the user experience easier and more pleasant
 </section>
 
----
-
-### JavaScript - Style and Implementation
-
-This project gives the team room to practice the following JavaScript concepts:  
-- Separation of the data model and the DOM
-- DOM (Document Object Model) manipulation
-- Style
-  - SRP (Single Responsibility Principle) and DRY (don't repeat yourself) conventions
-  - Function purity
-  - Readability - semantic naming, consistency, conciseness
-
-Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 
 <section class="answer">
 ### Javascript
 
-- Application uses the Data Model exclusively to track changes to the ideas.
+💫ON TRACK💫 can look like:
+- Changes to the DOM only happen after the Data Model has been updated.  The Data Model is then used to update the DOM.
 - No nested if/else statements or for loops.
 - Functions are DRY and adhere to the Single Responsibility Prinicple (SRP).
 - Event delegation is used correctly on dynamic elements for deleting and starring an idea.
@@ -396,30 +272,30 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 - Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering.
 - Demonstrates efforts toward writing functions that are pure and do not rely on or cause side effects. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 - Bracket notation is utilized effectively to make accessing properties of class instances more dynamic.
+- Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 </section>
 
----
-
-### Functional Expectations  
+<section class="answer">
+### Functionality
 
 Functionality is the least important piece of the rubric. It’s included because it is another benchmark to gauge proficiency (for example, we can’t grade your JS if there isn’t enough of it written!). However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
 
 This means, we DO NOT want to see:
 
-* Code that completes extensions but is sloppy
-* One or more team members do not understand every single line of code
-* One or more team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
-* A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
+* Code that completes iterations but is sloppy
+* One or both team members do not understand every single line of code
+* One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
 
 Well-refactored, thoughtful code is better than sloppy extra features.
 
-<section class="answer">
-### Functionality competency examples
-
-- The application completes all iterations without bugs
+💫ON TRACK💫 can look like:
+- All of the expectations of Iteration 4 are complete without bugs
 
 ✨WOW✨ can look like:
-
-- An extension is successfully implemented along with thoughtful UI
+- Iteration 5 or another extension is successfully implemented without bugs
 </section>
 
+---
+
+## Feedback
+A few days after the due date, your team will receive feedback about the project's average outcome (yes/not yet/wow), as well as each section's outcome. You will also receive a few pieces of team-specific feedback for each section (things done well, things to improve on for the current/next project).
