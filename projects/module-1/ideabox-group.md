@@ -197,6 +197,7 @@ This project has 4 evaluated concepts:
 ### Note about the below criteria
 
 Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
+
 </section>
 
 <section class="answer">
@@ -261,12 +262,15 @@ To get this extension to work with local files, follow these steps:
 - Changes to the DOM only happen after the Data Model has been updated.  The Data Model is then used to update the DOM.
 - No nested if/else statements or for loops.
 - Functions are DRY and adhere to the Single Responsibility Prinicple (SRP).
-- Event delegation is used correctly on dynamic elements like saved palettes.
+- Event delegation is used correctly on dynamic elements for deleting and starring an idea.
+- Data model is fully separated from the DOM.  There is no DOM manipulation in the `app.js` file.
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local.
 - Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 
 ✨WOW✨ can look like:
-- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
+- Changes to the DOM only happen after the Data Model has been updated.  The Data Model is then used to update the DOM.
+- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering.
+- Demonstrates efforts toward writing functions that are pure and do not rely on or cause side effects. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 - Bracket notation is utilized effectively to make accessing properties of class instances more dynamic.
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 </section>
@@ -294,5 +298,4 @@ Well-refactored, thoughtful code is better than sloppy extra features.
 ---
 
 ## Feedback
-
 A few days after the due date, your team will receive feedback about the project's average outcome (yes/not yet/wow), as well as each section's outcome. You will also receive a few pieces of team-specific feedback for each section (things done well, things to improve on for the current/next project).

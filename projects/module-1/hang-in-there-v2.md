@@ -250,7 +250,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 ✨WOW✨ can look like:
 
 - The team's norming document is regularly revisted and revised as better perspective is gained
-- When conflicts arise, the team works together to find ways to re-focus on individual and group learning objectives
+- When conflicts arise, the team works together to find ways to re-focus on individual and group learning objectives  
 
 Note: ⬆️this⬆️ kind of collaboration can be difficult to assess, but know that this is a crucial and vital part of your learning and marketability as a developer! 
 </section>

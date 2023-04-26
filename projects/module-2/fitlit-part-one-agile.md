@@ -1,15 +1,16 @@
 ---
 title: FitLit - Part One!
-tags: Javascript, OOP, mocha, chai, testing, fetch
+tags: Javascript, mocha, chai, testing, fetch
 ---
 
 ## Goals and Objectives
 
-- **Use object and array prototype methods to perform data manipulation**.
-- Create a dashboard that is easy to use and displays information in a clear way.
-- Write modular, reusable code that follows SRP (Single Responsibility Principle).
-- Implement a robust testing suite ideally using TDD.
+- Use object and array prototype methods to perform data manipulation.
+- Create a user interface that is easy to use and displays information in a clear way.
+- Write DRY, reusable code that follows SRP and trends toward function purity
+- Implement a robust testing suite using TDD.
 - Make network requests to retrieve data.
+- Collaborate productively and professionally as a team. Ensure all team members are able to be heard and contribute throughout the project.
 
 In this project, you will be given data from an activity tracker for many users over many days. Think of something like Fitbit or Strava. Activity devices log data and present it on a dashboard for their users. Your goal is to present a useful dashboard for a user to view and see their latest activity data, goals, and milestones.
 
@@ -75,6 +76,9 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 - Do not run `npm audit fix --force`.  This will update to the latest version of packages.  We are not using the latest version of webpack (see starter-kit README for version) so updating to the latest version will cause problems.
 </section>
 
+---
+
+## Requirements
 
 ### Initial Setup
 
@@ -82,13 +86,13 @@ For this project, you need to use this [FitLit Starter Kit](https://github.com/t
 
 ### Testing Setup
 
-There is no boilerplate for testing in the starter-kit repo. You will need to set up all of the tests yourself. Although, if you have run `npm install` in the setup instructions, then the tooling you need to start testing is already installed (`mocha` and `chai`). Refer to the testing lesson from week 1 as a guide to get started as well as the [mocha](https://mochajs.org/) and [chai](https://www.chaijs.com/) documentation pages.
+There is some boilerplate for testing in the starter-kit repo. You will need to set up the rest of the tests yourself. If you have run `npm install` in the setup instructions, then the tooling you need to start testing is already installed (`mocha` and `chai`). Refer to the testing lesson from week 1 as a guide to get started as well as the [mocha](https://mochajs.org/) and [chai](https://www.chaijs.com/) documentation pages.
 
 ## Project Iterations
 
 Each iteration has a “Data” section and “Dashboard” section. Data deals with using the data to calculate something meaningful for the user. The Dashboard section deals with what to display on the page.
 
-Don’t get too caught up with polishing your dashboard too early. You’ll want to focus your energies first on the calculation methods, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there.
+Don’t get too caught up with polishing your dashboard too early. You’ll want to focus your energies first on calculation functions, and then move on to the dashboard display. Establish some kind of minimum viable product (MVP) for your dashboard look, and then polish from there.
 
 <section class="note">
 ### Note About Dates
@@ -101,32 +105,170 @@ You should not be hardcoding the date.  You should be using code to find the las
 <section class="note">
 ### Third-Party Libraries
 
-***Please get instructor approval first before using additional third-party libraries.*** You may use [Day.js](https://www.npmjs.com/package/dayjs) to help with manipulating / formatting dates if you find it necessary. You may also use [Chart.js](https://www.npmjs.com/package/chart.js) in order to help with displaying some data. (Note: Learning a new technology does take extra time.  Plan ahead and maybe do a research spike over the first weekend, before deciding to use it.)
+***Please get instructor approval first before using additional third-party libraries.*** You may use [Day.js](https://www.npmjs.com/package/dayjs) to help with manipulating / formatting dates if you find it necessary. You may also use [Chart.js](https://www.npmjs.com/package/chart.js) in order to help with displaying some data. (*Note: Learning a new technology does take extra time.  Plan ahead and maybe do a research spike over the first weekend, before deciding to use it.*)
 
 - ***You are not required to use any 3rd party libraries***
 </section>
+
+<section class="answer">
+### Iteration 1 - Get Familiar with the Data and Users
+
+#### User Data 
+
+Go look into the `data` directory and explore the data (there is also an outline of the structure of the data in the README of the starter kit repo). Get a sense of what each property is and what the data nesting is like.
+
+Once you have looked over each data file, start with the `users.js` data file. To work with this data, here is the functionality that you need to implement. 
+
+You should create functions that:
+
+- Return a user's data based on their ID.
+- Return the average step goal amongst all users.
+
+#### User Stories (Dashboard)
+
+Use the `domUpdates.js` file to update the DOM. There should not be any DOM manipulation within your `scripts.js` file.
+
+*On load, a user should be chosen at random.*
+
+- As a user, I should be able to view an info card with all of my info on the page
+- As a user, I should be able to see my first name somewhere prominently on the page to welcome me
+- As a user, I should be able to see how my step goal compares to the average step goal amongst all users (this display should *not* be hard-coded)
+</section>
+
+<section class="answer">
+### Iteration 2 - Hydration
+
+#### Hydration Data
+
+You should create functions that:
+
+- Return the user's average fluid ounces consumed per day for all time
+- Return the user's fluid ounces they consumed for a specific day
+- Return how many fluid ounces of water a user consumed each day over the course of a week (7 days)
+
+<section class="note">
+### Note
+
+All functions requiring a specific user's data should be identified by their `userID`.  Also note that all functions returning data for a specific day should be identified by a date.
+</section>
+
+#### User Stories (Dashboard)
+
+- As a user, I should be able to see how much water I have consumed today (*these displays are often called “widgets” in the FE tech world*)
+- As a user, I should be able to see much water I have consumed each day over the course of the latest week
+</section>
+
+<section class="answer">
+### Iteration 3 - Fetch Calls
+
+You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from provided Endpoints in the table below.
+
+<section class="note">
+### Hint
+
+The expectation for Mod 2 is that you will avoid using `async/await`.  We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`.  Consider doing some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all).
+</section> 
+
+| Data Type | Verb | URL |  
+|---|---|---|  
+| User Data |GET | https://fitlit-api.herokuapp.com/api/v1/users |  
+| Sleep Data | GET | https://fitlit-api.herokuapp.com/api/v1/sleep |  
+| Hydration Data | GET | https://fitlit-api.herokuapp.com/api/v1/hydration |  
+| Activity Data | GET | https://fitlit-api.herokuapp.com/api/v1/activity |  
+
+Once you've got fetch working, **delete your hardcoded data file**!  Make sure you are not using this data file for your testing.  Instead, create smaller sample datasets in their own file to use for testing.
+</section>
+
+<section class="answer">
+### Iteration 4 - Sleep
+
+#### Sleep Data
+
+You should create functions that:
+
+- Return the user's average number of hours slept per day
+- Return the user's average sleep quality per day over all time
+- Return how many hours a user slept for a specific day
+- Return a user's sleep quality for a specific day
+- Return how many hours a user slept each day over the course of a given week (7 days)
+   - *This function should be able to calculate this for any week, not just the latest week*
+- Return a user's sleep quality for each day over the course of a given week (7 days) 
+  - *this function should be able to calculate this for any week, not just the latest week*
+
+#### User Stories (Dashboard)
+
+- As a user, I should be able to see my sleep data for the latest day (*hours slept and quality of sleep*)
+- As a user, I should be able to see my sleep data over the course of the latest week (*hours slept and quality of sleep*)
+- As a user, I should be able to see my all-time average sleep quality and all-time average number of hours slept
+</section>
+
+<section class="answer">
+### Iteration 5 - Activity
+
+#### Activity Data
+
+You should create functions that:
+
+- Calculate the miles a user has walked based on their number of steps (*use their `strideLength` to help calculate this*), based on a specific day
+- Return how many minutes a user was active for a given day
+- Return if a user reached their step goal for a given day
+
+#### Dashboard
+
+- As a user, I should be able to see my number of steps I've made for the latest day
+- As a user, I should be able to view the number minutes I've been active for the latest day
+- As a user, I should also see the distance I have walked (*in miles*) for the latest day based on my step count
+- As a user, I should be able to view a weekly view of my step count and if I have reached my step count goal for each day
+</section>
+
+<section class="answer">
+### Extension Options
+
+* Implement one of the listed third-party libraries or one of your choosing with instructor approval.
+* Design a step challenge between friends. Assign your user a few friends from the user data file. Add the functions you need and a display on the dashboard to see their friends step count for a whole week. The display should also show who had the most steps for that week.
+* Calculate and display what days a user had increasing steps for 3 or more days.
+* Build drag-and-drop widgets (*if you did not go with a widget theme, then add some widgets for this extension*). You can use a 3rd-party library to help you accomplish this or utilize the [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API){:target='blank'}.
+* Priority stats - give the user the ability to select the widgets they always want to see at the top of the page. This is a customization the user would want to make, and you would want to save this customization to `localStorage`.
+* You may also collaborate with instructors to personalize an extension for this project.
+</section>
+
+---
 
 ## Testing
 
 You should *NOT* use the original data files in the `data` directory for testing. These are big files to begin with, and a real-world dataset would have millions of records. That’s far too big to use every time you want to run a test.
 
-Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your methods are working correctly because you can do the calculations by hand with a much smaller dataset.
+Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your functions are working correctly because you can do the calculations by hand with a much smaller dataset.
 
-You are *expected* to test all class properties and methods, and you are expected to research and implement `beforeEach` in your test files.
+**You are *expected* to:**
+- Build a robust testing suite.  This might include testing pure functions in your `scripts.js`.
 
-Remember to test all possible outcomes (happy/sad/etc). Ask yourself:
+**Remember to test all possible outcomes (happy/sad/etc). Ask yourself:**
 
-- What is the value of each property?
-- Does the method return anything?
-- Does the method update any properties?
+- Does the function return anything?
 - Are there different possible outcomes to test based on different arguments being passed in?
 
-You are *not expected* to test:
+**You are *not expected* to test:**
 
-- DOM manipulation / DOM manipulating methods (like `document.querySelector(...)`)
+- DOM manipulation / DOM manipulating functions (like `document.querySelector(...)`)
 - Fetch calls
 
-## Daily Check-Ins
+---
+## Minimum Collaboration and Professionalism Expectations
+
+* Team holds daily standups throughout project.
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
+* A project board is utilized (and updated throughout the project) with Github issues and labels.
+* Team uses branches, PRs and thorough code reviews to add new code to the main branch.
+* The README is formatted well and at a minimum contains:
+  * Overview of project and goals
+  * Overview of technologies used, challenges, wins, and any other reflections
+  * Screenshots/gifs of your app
+  * List of contributors
+* **Team collaborates effectively to accomplish the shared goal.  Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
+  * Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.
+
+### Daily Check-Ins
 
 Every work day, your group should do a check-in as a whole group, preferably live over Zoom, and discuss at least these things:
 
@@ -136,150 +278,69 @@ Every work day, your group should do a check-in as a whole group, preferably liv
 
 Your daily check-in (sometimes called “stand-ups”) schedule should be outline in your DTR so the whole group is aware of the meeting.
 
-<section class="answer">
-### Iteration 1 - Get Familiar with the Data and Users
-
-#### Data
-
-Go look into the `data` directory and explore the data (there is also an outline of the structure of the data in the README of the starter kit repo). Get a sense of what each property is and what the data nesting is like.
-
-Once you have looked over each data file, start with the `users.js` data file. To work with this data, here is the functionality that you ned to implement. Create a class structure and methods that can calculate:
-
-- A place holds onto all of the user data objects (which takes in the user data)
-- Methods to determine:
-    - Given a user’s ID, what is their user data?
-    - The average step goal amongst all users
-    - A user’s first name only
-
-#### Dashboard
-
-Use the `scripts.js` file to add information to the DOM. This JS file should call methods from your classes to retrieve information. There should not be any DOM manipulation within the class files.
-
-To develop this dashboard, you should randomly generate a user. On the dashboard for the user:
-
-- Create an info card on the dashboard with all of user’s info on the page
-- Display their first name somewhere prominently on the page to welcome them
-- For a specific user, display how their step goal compares to the average step goal amongst all users (this display should *not* be hard-coded)
-</section>
-
-<section class="answer">
-### Iteration 2 - Hydration
-
-#### Data
-
-Create a class structure and methods that can calculate:
-
-- For a user (identified by their `userID` - this is the same for all methods requiring a specific user’s data), the average fluid ounces consumed per day for all time
-- For a user, how many fluid ounces they consumed for a specific day (identified by a date)
-- For a user, how many fluid ounces of water consumed each day over the course of a week (7 days) - return the amount for each day
-
-#### Dashboard
-
-For your user (or any user you choose):
-
-- Display to show how much water they have consumed today (these displays are often called “widgets” in the FE tech world)
-- Display to show much water they have consumed each day over the course of the latest week
-</section>
-
-<section class="answer">
-### Iteration 3 - Fetch Calls
-
-You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from provided Endpoints in the table below.
-
-| Data Type | Verb | URL |  
-|---|---|---|  
-| User Data |GET | https://fitlit-api.herokuapp.com/api/v1/users |  
-| Sleep Data | GET | https://fitlit-api.herokuapp.com/api/v1/sleep |  
-| Hydration Data | GET | https://fitlit-api.herokuapp.com/api/v1/hydration |  
-| Activity Data | GET | https://fitlit-api.herokuapp.com/api/v1/activity |  
-
-Once you've got fetch working, you should be able to delete your hardcoded data file and everything will work the same!
-
-<section class="note">
-### Hint
-
-The expectation for Mod 2 is that you will avoid using `async/await`.  We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`.  Consider doing some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all).
-</section>  
-</section>
-
-<section class="answer">
-### Iteration 4 - Sleep
-
-#### Data
-
-Create a class structure and methods that can calculate:
-
-- For a user (identified by their `userID`), the average number of hours slept per day
-- For a user, their average sleep quality per day over all time
-- For a user, how many hours they slept for a specific day (identified by a date)
-- For a user, their sleep quality for a specific day (identified by a date)
-- For a user, how many hours slept each day over the course of a given week (7 days) - you should be able to calculate this for any week, not just the latest week
-- For a user, their sleep quality each day over the course of a given week (7 days) - you should be able to calculate this for any week, not just the latest week
-
-#### Dashboard
-
-Items to add to the dashboard:
-
-- For a user, their sleep data for the latest day (hours slept and quality of sleep)
-- For a user, their sleep data over the course of the latest week (hours slept and quality of sleep)
-- For a user, their all-time average sleep quality and all-time average number of hours slept
-</section>
-
-<section class="answer">
-### Iteration 5 - Activity
-
-#### Data
-
-Create a class structure and methods that can calculate:
-
-- For a specific day (specified by a date), calculate the miles a user has walked based on their number of steps (use their `strideLength` to help calculate this)
-- For a user, (identified by their `userID`) how many minutes were they active for a given day (specified by a date)?
-- For a user, did they reach their step goal for a given day (specified by a date)?
-
-#### Dashboard
-
-Items to add to the dashboard:
-
-- For a user, the number of steps for the latest day
-- For a user, the number minutes active for the latest day
-- For a user, the distance they have walked (in miles) for the latest day based on their step count
-- For a user, a weekly view of their step count, and if they reached their step count goal for each day
-</section>
+---
 
 ## Rubric
 
+For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  These are just some examples.
+
+<section class="answer">
 ### Functional Expectations
-* 4: Application fulfills expectations of iterations 1 - 5 *as well as* an extension that you create and let your project manager know about before submission.
-* 3: Application fulfills expectations of iterations 1 - 5 with no bugs or missing functionality.
-* 2: Application is usable but has some missing functionality.
-* 1: Application crashes during normal usage.
 
-### JavaScript / SRP / Fetch
-* 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring. Application is expertly divided into logical components each with a clean, single responsibility.
-* 3: Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. Application is effectively broken into logical components, but violate the principle of SRP.
-* 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. Divisions of logic into classes are inconsistent or unclear.
-* 1: Application generates syntax error or crashes during execution. Application logic shows poor decomposition with too much logic mashed together.
+💫ON TRACK💫 can look like:
+- Application fulfills all requirements of iterations 1-5 without bugs.
 
-### Testing
-* 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. Tests must be passing to be considered.
-* 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files. Some use of beforeEach to DRY up tests. Tests must be passing to be considered.
-* 2: Application makes some use of tests, but the coverage is insufficient given project requirements. No use of beforeEach to DRY up tests. Tests must be passing to be considered.
-* 1: Application does not demonstrate strong use of TDD, and some tests might be failing.
+✨WOW✨ can look like:
+- Application fulfills all requirements *as well as* an extension.
 
+</section>
+
+<section class="answer">
+### JavaScript & Style / Functional Programming / Fetch
+
+💫ON TRACK💫 can look like:
+- Code is divided into logical components each with a clean, single responsibility.
+- Array prototype methods are used to iterate instead of for loops.
+- All DOM manipulation is held in the `domUpdates.js` file.  No DOM manipulation occurs outside of this file.
+- Variables and functions are consistently and appropriately named.
+- Code leverages JavaScript's truthy/falsey principles.
+- Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
+
+✨WOW✨ can look like:
+- Effectively implements one or more closure throughout project.  *Note: See Closures lesson on M2 lesson page as a resource.*
+</section>
+
+<section class="answer">
+### Test-Driven Development
+
+💫ON TRACK💫 can look like:
+- Application has a robust and thorough test suite
+- Test suite is organized.
+  - Each function is tested in its own it block.
+- All scenarios/outcomes/paths are tested for your functions, including happy and sad paths.
+  - Each path is tested in its own `it` block.
+- Rather than using the production data, small sample data is stored in its own file and used for testing.
+  - Sample data has been crafted to create the scenarios needed for thorough testing.
+  - ***For example:** If you need to test a scenario where a user hasn't been active for 7 days, you need test data that creates that scenario.*
+- `beforeEach` hook is used to DRY up test files.
+- There are no failing/pending tests upon submission.
+</section>
+
+<section class="answer">
 ### User Interface
-* 4: The application can stand on its own to be used by an instructor without guidance from a developer on the team. The UI does not detract from the UX. Design is responsive across small, medium and large breakpoints.  
-* 3: The application has many strong displays/interactions.The UI does not detract from the UX.
-* 2: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the users' needs.
-* 1: The application is confusing or difficult to use.
+
+💫ON TRACK💫 can look like:
+- The application can stand on its own to be used by an instructor without guidance from a developer on the team.
+- UI/UX is intuitive and easy to read/use.
+- Helpful messaging is displayed to prevent user confusion.
+  - ***For example:** If a user hasn't been active for 7 days, a message is displayed saying there isn't enough data to show their weekly report for each data point.*
+
+✨WOW✨ can look like:
+- Design is responsive across small, medium and large breakpoints.
+</section>
 
 ---
 
-### Minimum Professionalism Expectations
-* Team collaborates effectively.  Team holds daily check-ins throughout project.
-* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
-* The Project Board is utilized with Github issues and labels.
-* Developer uses PRs from feature branches before adding new code to the main branch.
-* The README is formatted well and at a minimum contains:
-  * Overview of project and goals
-  * Overview of technologies used, challenges, wins, and any other reflections
-  * Screenshots/gifs of your app
+### Collaboration and Professionalism 
+- See "Minimum Collaboration and Professionalism Expectations" above.  
+- While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. **Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing**.
