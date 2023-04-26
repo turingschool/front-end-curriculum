@@ -97,7 +97,7 @@ Companies with large apps are likely to be using a state management tool like th
 Writing bug-free code can be made easier by adding some very common workflow tooling. Here are just a few you will see on the job, and learning these will make you productive in your job sooner. If you're interested in this category, then you must complete all listed here:
 
 * Continuous Integration (using Travis CI or Github Actions)
-* Deployment to production using any depolyment service
+* Deployment to production using any deployment service
 * Automatic deployment when a PR is merged to `main` on GitHub
 </section>
 
@@ -183,13 +183,13 @@ Note: All of these dates are reflected in the calendar
 Your instructors will do a stand-up meeting in the mornings to see where the group is at, and give a chance for each group member to talk through what they're working on or where they have blockers.
 
 <section class="answer">
-### Day 1 (3 PM MT)
+### Day 1 (12 PM MT)
 
 * The link to your MVP proposal in [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing)
 </section>
 
 <section class="answer">
-### Day 2 (12 PM MT)
+### Day 2 (4 PM MT)
 
 * The link to your repo
 * The link to your DTR
@@ -202,6 +202,7 @@ Your instructors will do a stand-up meeting in the mornings to see where the gro
 <section class="answer">
 ### Day 3
 
+Anytime before Day 4:
 * In a DM with both instructors, send us the link to a recent PR
 * Choose a PR that is related to your Stretch Tech, and use the PR description to fill us in on your learning.
 * Sometime in the next few days, we'll perform a code review
@@ -211,7 +212,7 @@ Your instructors will do a stand-up meeting in the mornings to see where the gro
 <section class="answer">
 ### Day 5 (during stand ups)
 
-Your instructors will do a formal check-in with your group. At this check-in, instructors expect to see:
+Your PM will join one of your standups between days 5-7. PMs may ask to see:
 * A very quick demo of your application so far detailing the progress made toward your MVP
 * **Your testing suite running**
 * Progress you've made on your Stretch Technology category
@@ -220,7 +221,7 @@ Your instructors will do a formal check-in with your group. At this check-in, in
 </section>
 
 <section class="answer">
-### Day 6 (9:30 AM MT)
+### Day 7 (9:30 AM MT)
 
 Share your app progress with the class for Show and Tell! Be prepared to tell the story of what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes (shoot for 5 minutes).
 
@@ -251,8 +252,9 @@ Evals are
 
 There will be no written feedback for this project, but each and every one of you is capable of self-assessing whether or not your project is proficient. Mentors and Rocks are also a valuable resource here. **A Proficient project would include the following:**  
 ### Professionalism/Workflow:
+- [ ] Project is deployed
 - [ ] README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
-- [ ] README links to all user GitHub profiles and any applicable repos/deployed sites
+- [ ] README links to all user GitHub profiles and any applicable repos & deployed sites
 - [ ] Setup instructions for any and all repos are thorough and verbose enough that even non-technical people (like recruiters) could follow them
 - [ ] Git commits are atomic, with concise and precise descriptions of the change made
 - [ ] PRs have full, consistent descriptions

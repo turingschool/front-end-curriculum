@@ -63,7 +63,7 @@ What if your component needs more than 1 piece of state? No worries... you can u
 
 The [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring) syntax lets us give different names to each piece of state and the functions that update them.
 
-```js
+```jsx
 import React, { useState } from 'react'
 
 function App() {
@@ -121,7 +121,7 @@ before!
 <section class="answer">
 ### Here's one way you could do it, don't look until you're done!
 
-```javascript
+```jsx
 import React, { useState } from 'react';
 import './Form.css';
 
@@ -176,7 +176,7 @@ export default Form;
 
 The Effect Hook, `useEffect`, allows us to perform side effects (data fetching, subscriptions, etc) from a functional component. It serves the same purpose as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`, but unified into a single API.
 
-```js
+```jsx
 import React, { useState, useEffect } from 'react'
 
 function App() {
@@ -238,7 +238,7 @@ before!
 <section class="answer">
 ### Here's one way you could do it, don't look until you're done!
 
-```javascript
+```jsx
 import React, { useState, useEffect } from 'react';
 import Ideas from './Ideas';
 import Form from './Form';
