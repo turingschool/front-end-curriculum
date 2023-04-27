@@ -109,10 +109,10 @@ We also want you to choose two design inspiration pieces, which can be as broad 
 
 **Turn in all Day 1 + 2 deliverables via [this google sheet](https://docs.google.com/spreadsheets/d/1O5tv2wxmzeJp8-vlk5bZNTtRBEYQ4Zk-0SgOuyzzVJg/edit?usp=sharing).**
 
-### Day 1 before 2 PM MT
+### Day 2 before 12 PM MT
 * The link to your MVP proposal
 
-### Day 2 before 3 PM MT
+### Day 3 before 3 PM MT
 * The link to your repo
 * The link to your Project Board
 * A link to 2-3 pieces of design inspiration that you will aim to mimic
