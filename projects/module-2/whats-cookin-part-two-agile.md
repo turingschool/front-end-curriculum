@@ -54,8 +54,8 @@ When you’ve finished your retro, DM your project manager two things from your 
 
 - Implement instructor feedback from Part 1. Be sure to ask your instructor about any clarifying questions you have about feedback.
 - Consider any additional refactoring opportunities:
-    - Identify redundant code in your classes and opportunities for DRYing it up
-    - Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior.
+    - Identify redundant code and opportunities for DRYing it up
+    - Refactor to create dynamic methods that use arguments/parameters for changing their behavior.
 
 ### Catching Up on Functionality
 
