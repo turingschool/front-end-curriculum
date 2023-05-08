@@ -216,6 +216,10 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 - WOW option: Effectively implements one or more closure throughout project.  *Note: See Closures lesson on M2 lesson page as a resource.*
 </section>
 
+### Collaboration and Professionalism 
+- See "Minimum Collaboration and Professionalism Expectations" above.  
+- While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. **Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing**.
+
 ---
 
 ## Evaluation
