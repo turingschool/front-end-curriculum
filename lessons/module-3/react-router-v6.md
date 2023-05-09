@@ -8,7 +8,7 @@ module: 3
 <section class="note">
 ### Note
 
-React Router just released the newest version - `version 6`. This lesson has been updated to reflect the changes for v6. If you're looking for the v5 lesson, go [here](https://frontend.turing.edu/lessons/module-3/react-router-v6.html). Interested in upgrading your v5 app to v6? Start [here](https://reactrouter.com/docs/en/v6/upgrading/v5).
+React Router just released the newest version - `version 6`. This lesson has been updated to reflect the changes for v6. If you're looking for the v5 lesson, go [here](https://frontend.turing.edu/lessons/module-3/react-router-v5.html). Interested in upgrading your v5 app to v6? Start [here](https://reactrouter.com/en/6.11.1/upgrading/v5).
 </section>
 
 ## Learning Goals:
@@ -18,7 +18,7 @@ React Router just released the newest version - `version 6`. This lesson has bee
 
 ## Vocab
 * `BrowserRouter` A \<Router\> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL
-* `Router` The class that \<BrowserRouter\> is extended from
+* `Router` is a component provided by React Router.This component is responsible for keeping track of the current location (the URL) and re-rendering your app whenever that location changes.And is shared by all router components (like `<BrowserRouter>`).
 * `Link` Links provide declarative, accessible navigation around your application
 * `NavLink` A special version of the \<Link\> that will add styling attributes to the rendered element when it matches the current URL.
 * `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
@@ -29,7 +29,7 @@ React Router just released the newest version - `version 6`. This lesson has bee
 <section class="checks-for-understanding">
 ## Prework  
 
-Before the lesson, complete the [prework](https://gist.github.com/kaylagordon/7a6c7fcdf1ab0cd937d009845d8643dc){:target='blank'}.
+Before the lesson, complete the [prework](https://gist.github.com/niksseif/284877066bc6a7ce6290031980cb4a6a){:target='blank'}.
 </section>
 
 <section class="call-to-action">
@@ -50,13 +50,14 @@ In small groups, discuss the following questions via [this Jamboard](https://jam
 **Routing** refers to keeping a webpage up to date with the current url, and vice-versa.
 
 Most of the apps you've written so far have been single-page applications. One HTML page whose content is updated through user interactions and JS. These DO NOT use routing. They work fine, but put some limits on the user experience of our applications.
+<section class="answer">
+### Here  are some advantages routing can provide:
+- Users can use urls to bookmark pages.
+- Users can use the back or forward button.
+- Users can easily share content from a page in the app.
+</section>
 
-Here  are some advantages routing can provide:
-- Users can use urls to bookmark pages
-- Users can use the back or forward button
-- Users can easily share content from a page in the app
-
-If you have written a multi-page application, you may have wrestled with Webpack configs in order to get all your pages built successfully. Fortunately, routing with React is easy! We just need to use a library called <a href="https://reactrouter.com/docs/en/v6" target="_blank">React Router</a>.
+If you have written a multi-page application, you may have wrestled with Webpack configs in order to get all your pages built successfully. Fortunately, routing with React is easy! We just need to use a library called <a href="https://reactrouter.com/en/main/start/overview" target="_blank">React Router</a>.
 
 **React Router allows us to conditionally render components based on the current url.**
 
@@ -89,9 +90,8 @@ npm install react-router-dom
 <section class="answer">
 ### 2. Once you have React Router installed, import your chosen Router
 
-To use React Router, we need to wrap any components that will use a React Router-provided-component in some kind of [Router component](https://reacttraining.com/react-router/web/guides/primary-components/routers).
-
-We'll use a [Browser Router](https://reacttraining.com/react-router/web/api/BrowserRouter), since our app will be used in the browser. This Router provides access to the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). But we won't worry about those details just yet.
+To use React Router, we need to wrap any components that will use a React Router-provided-component in some kind of [Router component](https://reactrouter.com/en/main/router-components/router).
+We'll use a [Browser Router](https://reactrouter.com/en/main/router-components/browser-router), since our app will be used in the browser. This Router provides access to the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). But we won't worry about those details just yet.
 
 ```jsx
 // index.js
@@ -140,11 +140,20 @@ export default App;
 1. What happens if you remove the line that starts with `import { Routes...`? What does the error message say?
 2. What happens if you remove the `Routes` component? What does the error message say?
 </section>
-
+We picked `/` for the path in the route because it designates that there won't be anything after the URL's domain name. This represents the base URL.  
 </section>
 
 
-## Rendering the Puppies
+## Exercise # 1: Render Puppies
+Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. The page should look something like the picture on the lesson plan. ***While you may change components*** as needed, you shouldn't outright delete content from the page to achieve this.
+
+<section class="call-to-action">
+### Take 10 minutes in pairs to get the puppies rendering
+
+#### Hints:
+- Use the Creatures component. Formatting and styling is handled for you.
+- What additional react-router components should you use? Do any current components need to change?
+- How do you pass props into a component rendered by a `<Route />` ?
 
 <section class="answer">
 ### 4. First, let's update the links to NavLink components
@@ -606,7 +615,6 @@ export default CreatureDetails;
 </section>
 
 ## Extra Resources:
-- [React Router v6 Docs](https://reactrouter.com/docs/en/v6/getting-started/overview)
-- [React Router v6 Tutorial](https://reactrouter.com/docs/en/v6/getting-started/tutorial)
-- [A Guide to Upgrading from v5](https://reactrouter.com/docs/en/v6/upgrading/v5)
+- [React Router v6 Docs](https://reactrouter.com/en/main/start/overview)
+- [React Router v6 Tutorial](https://reactrouter.com/en/main/start/tutorial)
 - It is likely that you'll run into use cases for `Navigate`/`useNavigate`, which helps you force a URL change. [This](https://gist.github.com/mjackson/b5748add2795ce7448a366ae8f8ae3bb) is a helpful resource!
