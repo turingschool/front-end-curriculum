@@ -135,9 +135,15 @@ Now that we understand the big picture, let's get into the details!
 
 Let's experiment ourselves and see how great Cypress is firsthand.  Using the app provided earlier, **Feedback Loop**, let's experiment testing it with Cypress!
 
-* First setup the FE with Cypress following the instructions [here](https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing){:target='blank'}
-* Although there are multiple ways of opening up Cypress, setup a `script` in your `package.json` to open up Cypress.
-* Open Cypress with the script you added and take note of the new window opened. A window will appear with two testing options.  For now, select **E2E Testing**.  There are some config options on the next window...but for now just select **Continue** at the bottom.  Then selector your browser (*Chrome*) and you'll be set to go.  Having completed these steps, you should notice some new directories and files added to your application.
+* First use [the Cypress docs](https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing){:target='blank'} to figure out how to use npm to install Cypress within the Feedback Loop UI repo.
+* There are multiple ways of opening up Cypress.  Use the docs to figure out how to setup a `script` in the `package.json` that you'll be able to use to open up Cypress.  
+* Open Cypress with the script you added. A new window will appear with two testing options.  
+  * Select **E2E Testing**.  
+  * There are some config options on the next window...but for now just select **Continue** at the bottom.  
+    * *Hint: If you see an error that references webpack, you likely chose Component Testing by mistake in the previous step.*
+  * Then select your browser (*Chrome*) and the Start E2E Testing in Chrome button. Pause here for now.  
+
+Having completed these steps, you should notice some new directories and files added to your application.
 </section>
 
 <section class="answer">
