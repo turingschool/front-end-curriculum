@@ -166,6 +166,8 @@ Having completed these steps, you should notice some new directories and files a
 ```
 
 * Then run `npm run cypress`
+
+Note: This syntax might be slightly different than what you found in the docs. Thats ok! There are many syntax options.
 </section>
 
 ## Writing our first test!
