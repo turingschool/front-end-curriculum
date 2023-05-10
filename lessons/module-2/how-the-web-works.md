@@ -92,7 +92,7 @@ Now the response codes that you'll typically run into are
  * 302 (Found)
  * 500 (Internal Server Error)
 
-If you want to see all the type of server responses check out [http status dogs](https://httpstatusdogs.com/)
+If you want to see all the type of server responses check out [http status dogs](https://http.dog/) and [http.dev](https://http.dev/status). If you want to live test HTTP responses, check out [http.app](https://http.app/) 
 
 
 <section class="call-to-action ">
