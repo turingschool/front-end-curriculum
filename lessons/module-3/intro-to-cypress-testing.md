@@ -7,7 +7,11 @@ module: 3
 
 <section class="call-to-action">
 ### Prework:
-In this lesson, we're going to be working with a new codebase and testing multiple scenarios to explore the power of end-to-end tests and the tools **Cypress** provides.  To get the most out of this lesson, please clone down the following the repos:
+Before this lesson, be sure you have worked through [this prework](https://frontend.turing.edu/lessons/module-3/intro-to-cypress-prework.html) to complete the necessary set-up steps.
+
+When we start the lesson you should have the Feedback Loop api ready and running and the Feedback Loop UI ready and running - with Cypress installed and the 3 specific spec files set up in your e2e directory.  
+
+<!-- In this lesson, we're going to be working with a new codebase and testing multiple scenarios to explore the power of end-to-end tests and the tools **Cypress** provides.  To get the most out of this lesson, please clone down the following the repos:
 
 **[UI](https://github.com/turingschool-examples/feedback-loop-ui){:target='blank'}**
 ```bash
@@ -23,11 +27,13 @@ git clone https://github.com/turingschool-examples/feedback-loop-api.git
 cd feedback-loop-api
 npm i
 npm start
-```
+``` 
+
+
 
 Once you have application running, use the application and then examine the FE code to see how the application runs. (The fake log-in information is located in [this file](https://github.com/turingschool-examples/feedback-loop-api/blob/main/mockData/users.js){:target='blank'}.) It's not important to understand every line of code, but take note of the various user flows and how the various API calls work.
 
-For example, you don't need to know how Router works; instead, use the application and see how the URL changes as you navigate through the website.
+For example, you don't need to know how Router works; instead, use the application and see how the URL changes as you navigate through the website. -->
 </section>
 
 ## Learning Goals:
@@ -129,7 +135,9 @@ Consider the following code and write down your responses to the questions:
   });
 ```
 
-<section class="call-to-action">
+With the two main ways we'll be using Cypress in mind, take some time to play around with the Feedback Loop UI application as a user.  Try to identify and list some user flows within this application - what can a user see and what can they do.  
+
+<!-- <section class="call-to-action">
 ### Enough Talk Already!
 Now that we understand the big picture, let's get into the details!
 
@@ -144,9 +152,9 @@ Let's experiment ourselves and see how great Cypress is firsthand.  Using the ap
   * Then select your browser (*Chrome*) and the Start E2E Testing in Chrome button. Pause here for now.  
 
 Having completed these steps, you should notice some new directories and files added to your application.
-</section>
+</section> -->
 
-<section class="answer">
+<!-- <section class="answer">
 ### If you get stuck!  
 
 * Install `cypress` as a dev dependency.
@@ -168,9 +176,9 @@ Having completed these steps, you should notice some new directories and files a
 * Then run `npm run cypress`
 
 Note: This syntax might be slightly different than what you found in the docs. Thats ok! There are many syntax options.
-</section>
+</section> -->
 
-## Writing our first test!
+<!-- ## Writing our first test!
 
 <section class="call-to-action">
 ### Creating some test files
@@ -185,7 +193,12 @@ Create a few files using the UI in the `e2e` directory (located inside the `cypr
 - `cypress/e2e/login_spec.cy.js`
 - `cypress/e2e/dashboard_spec.cy.js`
 - `cypress/e2e/form_spec.cy.js`
-</section>
+</section> -->
+
+### Enough talk already
+Let's experiment ourselves and see how great Cypress is firsthand.  Your Feedback Loop UI and Feedback Loop Api should already be up and running.  Open cypress from within the FE repo using the command you set up as a script in `package.json`.  *Likely `npm run cypress` or `npm run cypress:open`.*  Select **E2E Testing**, then **Chrome** for your browser, then the **Start E2E Testing in Chrome** button.
+
+We should have 3 spec files set up from the prework: `login_spec.cy.js`, `dashboard_spec.cy.js` and `form_spec.cy.js`.  We could have chosen to use one giant file and test absolutely everything in there.  But its probably more maintainable and intuitive to group up our related user flows into their own files.
 
 <section class="note">
 ### Note
