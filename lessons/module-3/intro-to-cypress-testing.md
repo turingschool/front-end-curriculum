@@ -7,7 +7,7 @@ module: 3
 
 <section class="call-to-action">
 ### Prework:
-Before this lesson, be sure you have worked through [this prework]() to complete the necessary set-up steps.
+Before this lesson, be sure you have worked through [this prework](https://frontend.turing.edu/lessons/module-3/intro-to-cypress-prework.html) to complete the necessary set-up steps.
 
 When we start the lesson you should have the Feedback Loop api ready and running and the Feedback Loop UI ready and running - with Cypress installed and the 3 specific spec files set up in your e2e directory.  
 
@@ -134,6 +134,8 @@ Consider the following code and write down your responses to the questions:
     .get(".brewery-location").first().contains("p", "Savannah, Georgia")
   });
 ```
+
+With the two main ways we'll be using Cypress in mind, take some time to play around with the Feedback Loop UI application as a user.  Try to identify and list some user flows within this application - what can a user see and what can they do.  
 
 <!-- <section class="call-to-action">
 ### Enough Talk Already!
