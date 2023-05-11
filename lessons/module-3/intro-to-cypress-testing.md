@@ -7,12 +7,13 @@ module: 3
 
 <section class="call-to-action">
 ### Prework:
-Before the Intro to Cypress Testing lesson, be sure you have worked through [this prework]() to complete the necessary set-up steps.
+Before this lesson, be sure you have worked through [this prework]() to complete the necessary set-up steps.
 
-When we start the lesson you should have the Feedback Loop api ready and running and the Feedback Loop UI ready and running - with Cypress installed and the 3 specific spec files set up in your e22 directory.  
+When we start the lesson you should have the Feedback Loop api ready and running and the Feedback Loop UI ready and running - with Cypress installed and the 3 specific spec files set up in your e2e directory.  
+
 <!-- In this lesson, we're going to be working with a new codebase and testing multiple scenarios to explore the power of end-to-end tests and the tools **Cypress** provides.  To get the most out of this lesson, please clone down the following the repos:
 
-<!-- **[UI](https://github.com/turingschool-examples/feedback-loop-ui){:target='blank'}**
+**[UI](https://github.com/turingschool-examples/feedback-loop-ui){:target='blank'}**
 ```bash
 git clone https://github.com/turingschool-examples/feedback-loop-ui.git
 cd feedback-loop-ui
@@ -25,12 +26,12 @@ npm start
 git clone https://github.com/turingschool-examples/feedback-loop-api.git
 cd feedback-loop-api
 npm i
-npm start -->
-<!-- ```  -->
+npm start
+``` 
 
 
 
-<!-- Once you have application running, use the application and then examine the FE code to see how the application runs. (The fake log-in information is located in [this file](https://github.com/turingschool-examples/feedback-loop-api/blob/main/mockData/users.js){:target='blank'}.) It's not important to understand every line of code, but take note of the various user flows and how the various API calls work.
+Once you have application running, use the application and then examine the FE code to see how the application runs. (The fake log-in information is located in [this file](https://github.com/turingschool-examples/feedback-loop-api/blob/main/mockData/users.js){:target='blank'}.) It's not important to understand every line of code, but take note of the various user flows and how the various API calls work.
 
 For example, you don't need to know how Router works; instead, use the application and see how the URL changes as you navigate through the website. -->
 </section>
@@ -193,7 +194,7 @@ Create a few files using the UI in the `e2e` directory (located inside the `cypr
 </section> -->
 
 ### Enough talk already
-Let's experiment ourselves and see how great Cypress is firsthand.  Your Feedback Loop UI and Feedback Loop Api should already be up and running.  Open cypress from within the FE repo using the command you set up as a script in `package.json`.  Likely `npm run cypress` or `npm run cypress:open`.  Select **E2E Testing**, then **Chrome** for your browser, then the **Start E2E Testing in Chrome** button.
+Let's experiment ourselves and see how great Cypress is firsthand.  Your Feedback Loop UI and Feedback Loop Api should already be up and running.  Open cypress from within the FE repo using the command you set up as a script in `package.json`.  *Likely `npm run cypress` or `npm run cypress:open`.*  Select **E2E Testing**, then **Chrome** for your browser, then the **Start E2E Testing in Chrome** button.
 
 We should have 3 spec files set up from the prework: `login_spec.cy.js`, `dashboard_spec.cy.js` and `form_spec.cy.js`.  We could have chosen to use one giant file and test absolutely everything in there.  But its probably more maintainable and intuitive to group up our related user flows into their own files.
 
