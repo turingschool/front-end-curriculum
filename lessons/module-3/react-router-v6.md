@@ -98,18 +98,19 @@ We'll use a [Browser Router](https://reactrouter.com/en/main/router-components/b
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './Components/App/App';
 import { BrowserRouter } from 'react-router-dom';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
 <BrowserRouter>
   <React.StrictMode>
     <App />
   </React.StrictMode>
   </BrowserRouter>
- 
 );
+
 ```
 </section>
 
