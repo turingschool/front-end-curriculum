@@ -63,20 +63,19 @@ If you have written a multi-page application, you may have wrestled with Webpack
 
 Rather than tell you about how Router works, we'll work through a series of exercises and examples. We'll be using <a href="https://github.com/turingschool-examples/react-router-v6" target="_blank">this repo</a> to solve a series of challenges listed below.
 
-## Set Up
-
-<section class="answer">
+## Installation Instructions
 ### 0. Clone repo & review codebase
+
 ```bash
 git clone https://github.com/turingschool-examples/react-router-v6
 cd react-router-v6
 npm i
 npm start
 
-# open your text editor
 ```
 The App is not fully put together. It has a series of components that will serve as building blocks of the final component. You won't be building out new components, but you will be editing existing ones. Get oriented with the application. Check out all the components, try and write a short summary of what each is doing.
-</section>
+
+
 
 ## Installing Router
 
@@ -96,12 +95,21 @@ We'll use a [Browser Router](https://reactrouter.com/en/main/router-components/b
 ```jsx
 // index.js
 
-import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './Components/App/App';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-
-ReactDOM.render(<BrowserRouter> <App /> </BrowserRouter>, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+<BrowserRouter>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+  </BrowserRouter>
+ 
+);
 ```
 </section>
 
