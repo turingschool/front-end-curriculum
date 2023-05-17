@@ -13,19 +13,18 @@ module: 3
 * Understand React concepts:
   - the virtual DOM
   - JSX
-  - functional & class components
+  - components
   - props
   - state
 
 ## Vocab
 
+- `library` A library is a collection of code that programmers can use to optimize tasks. This collection of reusable code is usually targeted for specific common problems. A library usually includes a few different pre-coded components
 - `framework` A software framework provides a standard way to build and deploy applications. It is a universal, reusable software environment that provides particular functionality as part of a larger software platform to facilitate development of software applications, products and solutions
 - `Virtual DOM` An in-memory object that represents a DOM structure and can be manipulated with JavaScript before updating the real DOM
 - `JSX` A mix of JavaScript and XML that facilitates rendering the appropriate HTML
 - `Components` Components are standalone, independent parts of an application that are responsible for handling only a single UI element
-- `Functional components` Functional Components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing
-- `Class Components` Class components are ES6 classes that extend an abstract ‘Component’ class, given to us by default by React. They typically keep track of some sort of application data
-- `Props` This is shorthand for properties. Props is an object that is given from its parent component down to the child functional/class component. Props should remain immutable
+- `Props` This is shorthand for properties. Props is an object that is given from its parent component down to the child component. Props should remain immutable
 - `State` State holds data that represents the actual state of an application. State can be changed and mutated through user interactions
 
 <section class="call-to-action">
@@ -49,19 +48,21 @@ Use the following prompts to help guide your discussion.
 People will define React in many different ways, but at its core, React is:
 
 ```
-A client-side JavaScript framework that allows you to easily and efficiently manipulate the DOM based on application data and how it changes in response to user interaction.
+A client-side JavaScript libray that allows you to easily and efficiently manipulate the DOM based on application data and how it changes in response to user interaction.
 ```
 
 Let's break this definition down a little bit.
 
-### What is a framework?
+### Library vs Framework?
 
-The term framework is often used interchangeably with the term 'library', but they're actually a bit different. Libraries are usually a little bit smaller, and generally serve the purpose of providing us with abstractions over complex code that we would otherwise have to write ourselves. (Think jQuery.) Libraries are usually 'syntactic sugar' over something difficult.
+The term 'library' is often used interchangeably with the term 'framework', but they're actually a bit different. Libraries are _usually_ a little bit smaller, and generally serve the purpose of providing us with abstractions over complex code that we would otherwise have to write ourselves. (Think jQuery.) Libraries are sometimes 'syntactic sugar' over something difficult and usually target specific functionality.
 
-Frameworks, on the other hand, offer us a bit more than just abstractions - they give us a lot more powerful ways to write our code, but at the same time, they prescribe a very strict and specific way for us to organize our code.
+Frameworks, on the other hand, offer us a bit more than just abstractions - they give us a lot more powerful ways to write our code, but at the same time, they prescribe a very strict and specific way for us to organize our code. Frameworks often try to provide everything required to develop a complete application.
 
-We'll see this demonstrated a bit better when we get into the code along, but React gives us a lot of cool features:
+According to the docs, **React is a library.**  Wait, what???  
+You'll be writing entire applications in React in Mod 3 which can make it _feel_ more like a framework. You may even see it described in various places as a framework. It's important to note that you can add React components to an application, even if that entire application isn't using React.  In this way, React is more of a library - even if it's a **really** robust one.  
 
+React gives us a lot of cool features:  
 * **The Virtual DOM:** an in-memory object that represents a DOM structure and can be manipulated with JavaScript before updating the real DOM
 * **JSX:** a mix of JavaScript and [XML](https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction) (Extensible Markup Language) that facilitates rendering the appropriate HTML
 * **Components:** standalone, independent parts of an application that are responsible for handling only a single UI element
@@ -93,7 +94,7 @@ React is heavily focused on the interactive UI aspect of an application. While i
 
 ### Enforces modular code organization
 
-We mentioned a framework enforces a certain structure for your code. The way React requires us to set up our applications and break apart certain logic forces us to write modular applications by default. Modular applications are much more scalable and maintainable, and make future development and iterations easier.
+The way React requires us to set up our applications and break apart certain logic forces us to write modular applications by default. Modular applications are much more scalable and maintainable, and make future development and iterations easier.
 
 ## The Virtual DOM
 
@@ -101,7 +102,7 @@ We mentioned previously that a big benefit of React is how well it can handle DO
 
 React lets us alter this virtual DOM first, then renders the change for us - making the smallest amount of true DOM manipulations possible. React will only render the deltas of what actually needs to be changed, rather than making a massive DOM manipulation to elements on the page that aren't actually changing.
 
-This idea of a Virtual DOM isn't unique to React. It's found in many other client-side frameworks, and can even be implemented with vanilla JavaScript, using DocumentFragments. Take a look at the following codepen:
+This idea of a Virtual DOM isn't unique to React. It's found in many client-side frameworks too, and can even be implemented with vanilla JavaScript, using DocumentFragments. Take a look at the following codepen:
 
 <iframe src="https://codesandbox.io/embed/tender-napier-eq5e6?fontsize=14" title="DocumentFragments Example" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
@@ -121,7 +122,7 @@ What looks familiar? What looks different? You might notice the curly braces aro
 
 ## Components
 
-Components are reusable pieces of code that represent templates for a particular instance of a UI element. Components can take in parameters that might vary from instance to instance, allowing us to create unique elements with a shared structure and style. The main benefit of components is how modular they are - they can snap or nest together to create complete pages and applications.
+Components are reusable pieces of code that represent templates for a particular instance of a UI element. Components can take in parameters that might vary from instance to instance, allowing us to create unique elements with a shared structure and style. React components receive data (via props) and return what should appear on the screen.  The main benefit of components is how modular they are - they can snap or nest together to create complete pages and applications.
 
 If we take a look at a website like Twitter, we can start to flesh out what components might be making up the entire page, and how they're being reused:
 
@@ -136,16 +137,14 @@ Pick a web app that you frequently use and try to break it down into components 
 <section class="note">
 ### More on the term 'component'
 
-You'll hear the term 'component' used in many different areas of programming, and it might mean slightly different things depending on the context. In React, components have the following characteristics:
+You'll hear the term 'component' used in many different areas of programming, and it might mean slightly different things depending on the context. Note that React components will return one, single JSX element. Remember, functions can only return one thing!   
 
-* Components can be either functions or an extended ES6 class
-* They return one, single JSX element (remember, functions can only return one thing!)
-
-We'll start investigating these characteristics by practicing with functional components.
+We will be working with functional React components in Mod 3.  On the job, you might run into legacy code that includes React class-based components, which are an extended ES6 class.  We'll touch breifly on those later this inning.
 </section>
 
 ### Functional Components
-
+<!-- //DO WE STILL DESCRIBE FUNCTIONAL COMPONENTS IN THIS WAY????   -->
+<!-- mention that functional components are light and lean?? -->
 Functional components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing. They are sometimes called "dumb" components. Functional components are just functions that return the JSX you want rendered to the DOM. Examine the following example:
 
 ```jsx
@@ -158,38 +157,20 @@ const App = () => (
 export default App;
 ```
 
-### Class Components
-
-Class components are ES6 classes that extend an abstract 'Component' class, given to us by default by React. They each have a render method that allows us to specify what should be rendered to the DOM, and they keep track of some sort of application data.
-
-```jsx
-import React, { Component } from 'react';
-
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        Hello World
-      </div>
-    )
-  }
-}
-```
-
 ## Props & State
 
 While React is focused heavily on the UI/visual layer of applications, it does allow for some data management through props and state.
 
 ### Props
 
-We mentioned that components are reusable pieces of code, that allow us to create unique instances of certain UI elements. We can do this by passing props to each of our components. Think about how you create new instances of ES6 Classes - they share the same base, but you pass in different arguments every time you create a new instance, which allows each instance to vary slightly.
+We mentioned that components are reusable pieces of code, that allow us to create unique instances of certain UI elements. We can do this by passing props to each of our components. Think about how you might pass in different arguments every time you invoke a function, which allows each invocation's result to vary slightly.  In React, you will pass data to components as props so that the component can render what you want based on that data.
 
 Props allow us to pass information from parent components to child components. We can pass strings, numbers, booleans, arrays, objects, functions, pretty much any piece of data we want access to in our child component. We can name them whatever we'd like, as long as we're consistent and semantic with the names that we choose.
 
 When we pass props down to a child component, it comes through as a simple JavaScript object with key value pairs.
 
 #### Grocery List App
-
+<!-- do i need to update anything here?? -->
 <iframe src="https://codesandbox.io/embed/eloquent-bartik-b2182?fontsize=14" title="eloquent-bartik-b2182" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 <section class="call-to-action">
@@ -201,8 +182,9 @@ Imagine if we have 50 different grocery items. That is going to make our code lo
 ### State
 
 **State** is slightly different than **props**: state holds data that represents the actual state of our application. State can be changed and mutated through user interactions, whereas props should remain immutable.
+<!-- what else do we want to say about state?? what do we want to say about hooks?  Shoudl that be here in teh state section?-->
 
-One of the more confusing things about React is when to make a component a class instead of a function. A general rule of thumb to keep in mind is that, if you're not sure if a component should be functional or a class, start with a functional component. Add state if you find that you need it. Class components are a lot heavier than functional components. Keep your app as lean as possible!
+<!-- One of the more confusing things about React is when to make a component a class instead of a function. A general rule of thumb to keep in mind is that, if you're not sure if a component should be functional or a class, start with a functional component. Add state if you find that you need it. Class components are a lot heavier than functional components. Keep your app as lean as possible! -->
 
 #### Read Further
 
@@ -212,7 +194,7 @@ Understanding the difference between props and state can be tricky. Read through
 ### Checks for Understanding
 
 * How does React improve the process of manipulating the DOM?
-* What are some differences between functional and class components?
+<!-- * What are some differences between functional and class components? -->
 * What is the difference between props and state?
 </section>
 
@@ -220,4 +202,3 @@ Understanding the difference between props and state can be tricky. Read through
 * [ReactJS Docs](https://reactjs.org/)
 * [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 * [Props vs. State](https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react)
-* [Job Board Example](https://github.com/khalidwilliams/job-board-example)
