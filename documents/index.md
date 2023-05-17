@@ -14,3 +14,4 @@ title: Documents
   Request](./reasonable_accommodation_request_form.pdf){:target="_blank"}
 * [Repeating a Module](./repeat_guidelines_student_2020.pdf){:target="_blank"}
 * [Laptop Policy](./laptop_policy.pdf){:target="_blank"}
+* [Accet Compliant Procedure](./accet_compliant_procedure.pdf)
