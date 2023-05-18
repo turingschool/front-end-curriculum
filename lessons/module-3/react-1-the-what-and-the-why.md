@@ -55,7 +55,7 @@ Let's break this definition down a little bit.
 
 ### Library vs Framework?
 
-The term 'library' is often used interchangeably with the term 'framework', but they're actually a bit different. Libraries are _usually_ a little bit smaller, and generally serve the purpose of providing us with abstractions over complex code that we would otherwise have to write ourselves. (Think jQuery.) Libraries are sometimes 'syntactic sugar' over something difficult and may target specific functionality.
+The term 'library' is often used interchangeably with the term 'framework', but they're actually a bit different. Libraries are _usually_ a little bit smaller, and generally serve the purpose of providing us with abstractions over complex code that we would otherwise have to write ourselves. (Think [jQuery](https://api.jquery.com/).) Libraries are sometimes 'syntactic sugar' over something difficult and may target specific functionality.
 
 Frameworks, on the other hand, offer us a bit more than just abstractions - they give us a lot more powerful ways to write our code, but at the same time, they prescribe a very strict and specific way for us to organize our code. Frameworks often try to provide **everything** required to develop a complete application.
 
