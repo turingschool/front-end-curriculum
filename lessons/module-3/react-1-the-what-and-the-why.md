@@ -19,13 +19,13 @@ module: 3
 
 ## Vocab
 
-- `library` A library is a collection of code that programmers can use to optimize tasks. This collection of reusable code is usually targeted for specific common problems. A library usually includes a few different pre-coded components
-- `framework` A software framework provides a standard way to build and deploy applications. It is a universal, reusable software environment that provides particular functionality as part of a larger software platform to facilitate development of software applications, products and solutions
+- `library` A library is a collection of code that we can use in our applications to optimize certain tasks. Libraries are often providing targeted solutions for specific common challenges and often include some pre-coded components that you can use "out-of-the-box".
+- `framework` A software framework provides a standard way to build and deploy applications. It is a universal, reusable software environment that provides particular functionality as part of a larger software platform to facilitate development of software applications, products and solutions.
 - `Virtual DOM` An in-memory object that represents a DOM structure and can be manipulated with JavaScript before updating the real DOM
 - `JSX` A mix of JavaScript and XML that facilitates rendering the appropriate HTML
-- `Components` Components are standalone, independent parts of an application that are responsible for handling only a single UI element
-- `Props` This is shorthand for properties. Props is an object that is given from its parent component down to the child component. Props should remain immutable
-- `State` State holds data that represents the actual state of an application. State can be changed and mutated through user interactions
+- `Components` Components are standalone, independent parts of an application that are responsible for handling only a single UI element.
+- `Props` This is shorthand for properties. Props is an object that is given from its parent component down to the child component. Props should remain immutable.
+- `State` State holds data that represents the actual state of an application. State can be changed and mutated through user interactions.
 
 <section class="call-to-action">
 ## What do we already know?
@@ -48,18 +48,19 @@ Use the following prompts to help guide your discussion.
 People will define React in many different ways, but at its core, React is:
 
 ```
-A client-side JavaScript libray that allows you to easily and efficiently manipulate the DOM based on application data and how it changes in response to user interaction.
+A client-side JavaScript library that allows you to easily and efficiently manipulate the DOM based on application data and how it changes in response to user interaction.
 ```
 
 Let's break this definition down a little bit.
 
 ### Library vs Framework?
 
-The term 'library' is often used interchangeably with the term 'framework', but they're actually a bit different. Libraries are _usually_ a little bit smaller, and generally serve the purpose of providing us with abstractions over complex code that we would otherwise have to write ourselves. (Think jQuery.) Libraries are sometimes 'syntactic sugar' over something difficult and usually target specific functionality.
+The term 'library' is often used interchangeably with the term 'framework', but they're actually a bit different. Libraries are _usually_ a little bit smaller, and generally serve the purpose of providing us with abstractions over complex code that we would otherwise have to write ourselves. (Think jQuery.) Libraries are sometimes 'syntactic sugar' over something difficult and may target specific functionality.
 
-Frameworks, on the other hand, offer us a bit more than just abstractions - they give us a lot more powerful ways to write our code, but at the same time, they prescribe a very strict and specific way for us to organize our code. Frameworks often try to provide everything required to develop a complete application.
+Frameworks, on the other hand, offer us a bit more than just abstractions - they give us a lot more powerful ways to write our code, but at the same time, they prescribe a very strict and specific way for us to organize our code. Frameworks often try to provide **everything** required to develop a complete application.
 
-According to the docs, **React is a library and an architecture.**  Wait, what???  
+According to the docs, **React is a library and an architecture.**   
+...wait, what???  
 You'll be writing entire applications in React in Mod 3 which can make it _feel_ more like a framework. You may even see it described in various places as a framework. It's important to note that you can add React components to an application, even if that entire application isn't using React.  In this way, React is more of a library - even if it's a **really** robust one.  
 
 React gives us a lot of cool features:  
@@ -102,7 +103,7 @@ We mentioned previously that a big benefit of React is how well it can handle DO
 
 React lets us alter this virtual DOM first, then renders the change for us - making the smallest amount of true DOM manipulations possible. React will only render the deltas of what actually needs to be changed, rather than making a massive DOM manipulation to elements on the page that aren't actually changing.
 
-This idea of a Virtual DOM isn't unique to React. It's found in many client-side frameworks too, and can even be implemented with vanilla JavaScript, using DocumentFragments. Take a look at the following codepen:
+This idea of a Virtual DOM isn't unique to React. It's found in other client-side frameworks too, and can even be implemented with vanilla JavaScript, using DocumentFragments. Take a look at the following codepen:
 
 <iframe src="https://codesandbox.io/embed/tender-napier-eq5e6?fontsize=14" title="DocumentFragments Example" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
@@ -122,7 +123,7 @@ What looks familiar? What looks different? You might notice the curly braces aro
 
 ## Components
 
-Components are reusable pieces of code that represent templates for a particular instance of a UI element. Components are functions that can take in parameters which might vary from instance to instance, allowing us to create unique elements with a shared structure and style. To say it another way, React components are functions that receive data via parameters (props) and return what should appear on the screen.  The main benefit of components is how modular they are - they can snap or nest together to create complete pages and applications.
+Components are reusable pieces of code that represent templates for a particular instance of a UI element. React components are **functions** that can take in parameters which might vary from instance to instance, allowing us to create unique elements with a shared structure and style. To say it another way, React components are functions that receive data via parameters (props) and return what should appear on the screen (based on that data).  The main benefit of components is how modular they are - they can snap or nest together to create complete pages and applications.
 
 If we take a look at a website like Twitter, we can start to flesh out what components might be making up the entire page, and how they're being reused:
 
@@ -137,9 +138,9 @@ Pick a web app that you frequently use and try to break it down into components 
 <section class="note">
 ### More on the term 'component'
 
-You'll hear the term 'component' used in many different areas of programming, and it might mean slightly different things depending on the context. Note that React components will return one, single JSX element of what will be rendered in the UI. Remember, functions can only return one thing!   
+You'll hear the term 'component' used in many different areas of programming, and it might mean slightly different things depending on the context. Note that React components will return one, single JSX element of what will be rendered in the UI. Remember, functions can only return **one** thing!   
 
-We will be working with functional React components in Mod 3.  On the job, you might run into legacy code that includes React class-based components, which are an extended ES6 class.  We'll touch breifly on those later this inning.
+We will be working with functional React components in Mod 3.  On the job, you might run into legacy code that includes React class-based components, which are an extended ES6 class.  We'll touch briefly on those later this inning.
 </section>
 
 ```jsx
@@ -179,7 +180,7 @@ Imagine if we have 50 different grocery items. That is going to make our code lo
 
 The [React docs](https://react.dev/learn/state-a-components-memory) describe state as a component's memory.  State is how components store, or "remember", the data and current "state" of the application at any given point.
 
-Remember that React components are constantly re-rendering when things change and are updated as users utiize our application.   Changes to the data held in state are what triggers React to re-render.  Holding the data within state means that the data will be retained and stay up-to-date between those re-renders.  
+Remember that React components are constantly re-rendering when things are updated as users interact with our application.   Changes to the data held in state are what triggers React to re-render.  Holding the data within state means that the data will be retained and stay up-to-date between those re-renders.  
 
 #### Read Further
 
