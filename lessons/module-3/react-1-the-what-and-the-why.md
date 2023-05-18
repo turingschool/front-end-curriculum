@@ -59,7 +59,7 @@ The term 'library' is often used interchangeably with the term 'framework', but 
 
 Frameworks, on the other hand, offer us a bit more than just abstractions - they give us a lot more powerful ways to write our code, but at the same time, they prescribe a very strict and specific way for us to organize our code. Frameworks often try to provide everything required to develop a complete application.
 
-According to the docs, **React is a library.**  Wait, what???  
+According to the docs, **React is a library and an architecture.**  Wait, what???  
 You'll be writing entire applications in React in Mod 3 which can make it _feel_ more like a framework. You may even see it described in various places as a framework. It's important to note that you can add React components to an application, even if that entire application isn't using React.  In this way, React is more of a library - even if it's a **really** robust one.  
 
 React gives us a lot of cool features:  
@@ -122,7 +122,7 @@ What looks familiar? What looks different? You might notice the curly braces aro
 
 ## Components
 
-Components are reusable pieces of code that represent templates for a particular instance of a UI element. Components can take in parameters that might vary from instance to instance, allowing us to create unique elements with a shared structure and style. React components receive data (via props) and return what should appear on the screen.  The main benefit of components is how modular they are - they can snap or nest together to create complete pages and applications.
+Components are reusable pieces of code that represent templates for a particular instance of a UI element. Components are functions that can take in parameters which might vary from instance to instance, allowing us to create unique elements with a shared structure and style. To say it another way, React components are functions that receive data via parameters (props) and return what should appear on the screen.  The main benefit of components is how modular they are - they can snap or nest together to create complete pages and applications.
 
 If we take a look at a website like Twitter, we can start to flesh out what components might be making up the entire page, and how they're being reused:
 
@@ -137,15 +137,10 @@ Pick a web app that you frequently use and try to break it down into components 
 <section class="note">
 ### More on the term 'component'
 
-You'll hear the term 'component' used in many different areas of programming, and it might mean slightly different things depending on the context. Note that React components will return one, single JSX element. Remember, functions can only return one thing!   
+You'll hear the term 'component' used in many different areas of programming, and it might mean slightly different things depending on the context. Note that React components will return one, single JSX element of what will be rendered in the UI. Remember, functions can only return one thing!   
 
 We will be working with functional React components in Mod 3.  On the job, you might run into legacy code that includes React class-based components, which are an extended ES6 class.  We'll touch breifly on those later this inning.
 </section>
-
-### Functional Components
-<!-- //DO WE STILL DESCRIBE FUNCTIONAL COMPONENTS IN THIS WAY????   -->
-<!-- mention that functional components are light and lean?? -->
-Functional components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing. They are sometimes called "dumb" components. Functional components are just functions that return the JSX you want rendered to the DOM. Examine the following example:
 
 ```jsx
 const App = () => (
@@ -170,7 +165,6 @@ Props allow us to pass information from parent components to child components. W
 When we pass props down to a child component, it comes through as a simple JavaScript object with key value pairs.
 
 #### Grocery List App
-<!-- do i need to update anything here?? -->
 <iframe src="https://codesandbox.io/embed/eloquent-bartik-b2182?fontsize=14" title="eloquent-bartik-b2182" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 <section class="call-to-action">
@@ -182,9 +176,10 @@ Imagine if we have 50 different grocery items. That is going to make our code lo
 ### State
 
 **State** is slightly different than **props**: state holds data that represents the actual state of our application. State can be changed and mutated through user interactions, whereas props should remain immutable.
-<!-- what else do we want to say about state?? what do we want to say about hooks?  Shoudl that be here in teh state section?-->
 
-<!-- One of the more confusing things about React is when to make a component a class instead of a function. A general rule of thumb to keep in mind is that, if you're not sure if a component should be functional or a class, start with a functional component. Add state if you find that you need it. Class components are a lot heavier than functional components. Keep your app as lean as possible! -->
+The [React docs](https://react.dev/learn/state-a-components-memory) describe state as a component's memory.  State is how components store, or "remember", the data and current "state" of the application at any given point.
+
+Remember that React components are constantly re-rendering when things change and are updated as users utiize our application.   Changes to the data held in state are what triggers React to re-render.  Holding the data within state means that the data will be retained and stay up-to-date between those re-renders.  
 
 #### Read Further
 
@@ -194,7 +189,6 @@ Understanding the difference between props and state can be tricky. Read through
 ### Checks for Understanding
 
 * How does React improve the process of manipulating the DOM?
-<!-- * What are some differences between functional and class components? -->
 * What is the difference between props and state?
 </section>
 
