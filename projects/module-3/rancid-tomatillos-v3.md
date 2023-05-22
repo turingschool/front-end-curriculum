@@ -277,7 +277,8 @@ For the rubric sections below, you will be scored as **Wow, Yes or Not Yet** dep
 
 On track can look like:
   - A consistent, modular file structure is used
-  - Create reusable and modular functional components by incorporating props, utilizing component composition, and hooks
+  - Create reusable and modular functional components by incorporating props and considering component composition
+  - hooks are implemented to manage and update state
   - Pass functions as props to effectively organize the application
   - `return` statements are as readable as possible, only communicating what will be displayed
   - Frontend state matches the backend data
@@ -313,6 +314,7 @@ Wow option: Code was refactored to remove unnecessary or old code artifacts
 
 ### Project Professionalism
 You will not receive a score for professionalism, but you should be meeting these expectations:
+* Each group member contributes equitably to the project. Failure to participate can result in an individual failing the project, even if the project is otherwise passing
 * README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
 * README links to all user GitHub profiles and any applicable repos/deployed sites
 * README includes a gif of the application
