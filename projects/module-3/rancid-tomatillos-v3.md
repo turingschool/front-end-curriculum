@@ -210,6 +210,8 @@ Here is a list of concepts (including some push-yourself learning goals):
 - React
 - Router
 - Asynchronous JS
+- Responsive Design
+  - use media queries and other tools to allow your application to resize to varying screen sizes
 - Testing
   - Ensure that every view is tested (including all possible renders when dealing with conditional rendering)
   - Ensure that all possible user flows are tested (happy and sad paths)
