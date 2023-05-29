@@ -16,7 +16,7 @@ You will continue to add your weekly goals to that document every Monday through
 
 ## Professional Development  
 **PD expectations for repeating Mod 1:**  
-Repeating the module is a great opportunity to solidify your technical AND professional development skills. As a repeater, you are not expected to re-do any of the async lessons or exit tickets. You ARE expected to attend all live (on zoom) PD lessons. Paige Hellman Millar is always available for support and coaching at the link in her Slack bio. You can reach out to her with any questions you have.  
+Repeating the module is a great opportunity to solidify your technical AND professional development skills. As a repeater, you are not expected to re-do any of the async lessons or exit tickets. You ARE expected to attend all live (on zoom) PD lessons. Reach out to your instructors with questions.
 
 <!-- **Gear Up expectations for repeating mod 1:**  
 You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters.    -->
