@@ -7,7 +7,7 @@ tags: css, responsive, media queries, design, layout
 ## Learning Goals
 
 - Define the four page layout types and explain benefits and drawbacks of each
-- Understand media qureies and explain how they provide the behavior they do
+- Understand media queries and explain how they provide the behavior they do
 
 ## Vocabulary
 

@@ -151,10 +151,10 @@ We must use bracket notation whenever we are accessing an object's property usin
 Take a moment to read through this code:
 ```js
 function checkForFood(restaurant, food) {
-  if (restaurant.menus[food.type].includes(food)) {
-    return `Yes, we're serving ${food} today!`;
+  if (restaurant.menus[food.type].includes(food.name)) {
+    return `Yes, we're serving ${food.name} today!`;
   }
-  return `Sorry, we aren't serving ${food} today.`
+  return `Sorry, we aren't serving ${food.name} today.`
 }
 
 var foodItem = {
@@ -172,7 +172,7 @@ var restaurant = {
   }
 }
 
-checkForFood(restaurant, foodItem)
+console.log(checkForFood(restaurant, foodItem))
 ```
 
 What will be returned from the `checkForFood` function? 
