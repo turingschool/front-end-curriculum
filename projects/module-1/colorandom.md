@@ -61,9 +61,7 @@ Choose ONE TEAM MEMBER to do the following:
 3. Create an initial commit.
 4. On GitHub, create a new repository. Follow the written instructions on GitHub to add the repo's remote to your local project, and push your initial commit up to GitHub.
 5. Add all project partners to the repository as contributors. If your repository is set to private, add your project manager as a collaborator as well.  
-6. Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the following links:
-  - your team's GitHub repo
-  - the GitHub Pages deployed site
+6. Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the necessary links. Below are instuctions for deploying to GH Pages:
     - Repo Settings » Pages » Select the main branch as your Source branch » Save. Then, wait up to an hour, hit refresh, and your deployed link should appear at the top of the screen.
     - If you don't want to wait, your GH pages URL will follow this format: `https://username.github.io/coloRandom/` and replace `username` with the repo owner's GH username and `coloRandom` with your repo's name (if different). The URL will not work right away - that's ok! 
 
