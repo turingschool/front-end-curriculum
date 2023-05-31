@@ -37,11 +37,11 @@ For example, you don't need to know how Router works; instead, use the applicati
 </section>
 
 ## Learning Goals:
-* Understand how acceptance testing & end-to-end testing differ from unit & integration testing
 * Become familiar with what Cypress is
 * Practice testing a React application with Cypress including:
   * Filling out forms and switching routes
   * Happy and sad path user flows that require network requests
+* Understand how acceptance testing & end-to-end testing differ from unit & integration testing
 
 ## A little background
 
@@ -87,23 +87,6 @@ Here are a list of major features pulled from the [documentation](https://docs.c
 * **Screenshots and Videos:** View screenshots taken automatically on failure, or videos of your entire test suite when run from the CLI.
 * **Cross browser Testing:** Run tests within Firefox and Chrome-family browsers (including Edge and Electron) locally and optimally in a Continuous Integration pipeline.
 </section>
-
-<!-- <section class="note">
-### Is this similar to Selenium?
-
-Although often compared to Selenium, another common automated testing framework that allows you to test your application across multiple browsers, Cypress has some distinct differences that makes it stand out. Below is a list of some key differences:
-
-**Key Differences:**
-
-| | **Cypress** | **Selenium** |
-|-----|-----|-----|
-| Languages Supported | JavaScript | Many popular languages like Java, Python, Ruby, and JavaScript. |
-| Browsers Supported | Chrome, Edge, Firefox(beta) | Chrome, IE, Safari, Edge, Firefox, Opera |
-| Frameworks Supported | Supports only Mocha JS | Supports multiple frameworks based on what language is being used (i.e. JUnit for Java, Cucumber for JavaScript, etc.) |
-| Setup Complexity | Setup is simple with no additional downloads required | More complex due to the necessity of download browser-specific drivers |
-
-You'll note that Selenium seems to have more support and honestly, it has been around for longer.  However, Cypress is gaining a significant amount of support in recent years and has some distinct advantages including it runs in the same run loop as the app, it's built on a Node server process, and it allows you to read / alter web traffic giving you the ability to modify everything that comes in and out of the browser.  You can read more about the differences and why Cypress is becoming a major game changer in the industry [here](https://docs.cypress.io/guides/overview/key-differences.html#Debuggability){:target='blank'}.
-</section> -->
 
 ### The Big Picture
 We'll be using Cypress in two main ways:
