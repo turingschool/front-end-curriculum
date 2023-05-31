@@ -1,5 +1,5 @@
 ---
-title: Ideas-4-Ideaboxes
+title: Ideas for Varied Ideabox Practice
 module: 3
 tags: react,  testing, javascript, api, cypress
 ---
@@ -23,6 +23,7 @@ In order to get the practice with all of the fundamentals, a thorough ideabox mi
 - Cypress tests for general user flows and network requests
 
 ## Ideas for Varied Ideabox-like Applications
+Building the same application over and over isn't very valuable.  Using varied content and different data will help you run into different things along the way and build your actual skill and fluency, rather than just memorizing how to build and rebuild one app.  Below are some ideas and apis you can use to make your Ideabox practice more varied and valuable
 - To-do List
 - Bucket List
 - Reading List
