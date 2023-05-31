@@ -128,7 +128,7 @@ The site uses [Algolia](https://www.algolia.com/dashboard) for search indexing. 
 command in your terminal at the root of the curriculum directory:
 
 ```shell
-ALGOLIA_API_KEY=admin_api_key jekyll algolia push
+ALGOLIA_API_KEY=admin_api_key bundle exec jekyll algolia push
 ```
 
 Where `admin_api_key` is replaced with the actual admin API key found in the Algolia account dashboard.
