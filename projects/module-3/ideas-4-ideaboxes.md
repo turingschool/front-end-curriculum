@@ -9,20 +9,20 @@ Throughout Mod 3 you'll be building an `Ideabox` over and over again. An `IdeaBo
 ## Learning Goals
 
 * Gain competency with React fundamentals
-* Learn how to test React components & asynchronous JS
-* Practice refactoring
-* Create a multi-page UX using Router
+* Practice network requests
+* Practice testing with Cypress
+  * Intercepting network requests
+  * Using fixtures and stubs
 
 ## Features
 In order to get the practice with all of the fundamentals, a thorough ideabox might contain the following features:
 
 - Functional and Class components
 - A controlled form or two that allows user to render elements to the page
-- Routing
-- Some network requests if possible
+- Get and Post network requests (if possible)
 - Cypress tests for general user flows and network requests
 
-## Ideas 4 Ideaboxes
+## Ideas for Varied Ideabox-like Applications
 - To-do List
 - Bucket List
 - Reading List
@@ -38,7 +38,9 @@ In order to get the practice with all of the fundamentals, a thorough ideabox mi
 - A thesarus app
 - Anything else you might think of!
 
-## APIs you might use
-- [Some Turing Specific API's](https://github.com/turingschool-examples/react-practice-servers)
+## APIs that allow you to POST
+- [Turing Specific API's that allow POST ](https://github.com/turingschool-examples/react-practice-servers)
+
+## Other APIs you might use (that probably don't allow POST)
 - [Big List of Free and Open APIs](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
 - [Another Big List](https://github.com/public-apis/public-apis)
