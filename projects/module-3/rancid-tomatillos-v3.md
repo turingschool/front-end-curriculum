@@ -245,7 +245,7 @@ Here are some ideas:
   - Add a search/filtering functionality for movies
 * **More testing practice:**
   - Supplement your Cypress tests with a non-trivial amount of unit tests and integration tests by using the React Testing Library 
-  - Implement 2-3 new concepts from the Cypress library that have not been covered in lessons (ie Command)
+  - Implement 2-3 new concepts from the Cypress library that have not been covered in lessons (check out the following resources for ideas: [commands](https://docs.cypress.io/api/cypress-api/custom-commands), [component testing](https://docs.cypress.io/guides/component-testing/overview), [parallelization](https://docs.cypress.io/guides/guides/parallelization), [etc](https://docs.cypress.io/guides/overview/why-cypress))
 * **Push yourself** (extra learning if every member of the team feels SUPER CONFIDENT in everything React, Router, and testing)**:**
   - Create your own Express microservice to store user ratings for movies; build FE functionality to use and display that service
   - Create your own Express microservice to store user favorites; build FE functionality to use and display that service
