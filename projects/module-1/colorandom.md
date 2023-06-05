@@ -26,7 +26,7 @@ You will work through the iterations listed under **Progression** below.
 
 For each iteration, you should be matching the provided design comps closely. ([What is a design comp?](https://clients.geminoscreative.com/marketing-blog/what-is-a-design-comp)) Act like you're on the job and these are the designs you've been given to match. Details and spacing matter! Here is some info to help you:
   - Background color: `#E7F1F1`
-  - Font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
+  - Font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins) (Note: Add these icons to an `assets` folder in your repository.)
   - Icons: [Found here](https://drive.google.com/drive/folders/1ZX31xVFdRAsLPzsL8G2_ujNQNXgFmKxD?usp=sharing)
 </section>
 
@@ -56,15 +56,14 @@ Remember - shorter code isn't always better!
 * As a team, complete [the DTR Form](https://docs.google.com/forms/d/e/1FAIpQLSche5cvtlYQ_SaBDqqoF3H9gFiy2p60AOPoUMbhgIHlg-vRlQ/viewform?usp=sf_link)
 
 Choose ONE TEAM MEMBER to do the following:
-1. Locally, create a new folder called `coloRandom` and add the following files to that folder: `index.html`, `main.js`, and `styles.css`.
+1. Locally, create a new folder called `coloRandom` and add the following files to that folder: `index.html`, `main.js`, and `styles.css`. Create an `assets` folder where your icons will live (You can add them to this folder as you need them.)
 2. `cd` into the `coloRandom` directory and run `git init` to initialize git.
 3. Create an initial commit.
 4. On GitHub, create a new repository. Follow the written instructions on GitHub to add the repo's remote to your local project, and push your initial commit up to GitHub.
 5. Add all project partners to the repository as contributors. If your repository is set to private, add your project manager as a collaborator as well.  
-6. Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the following links:
-  - your team's GitHub repo
-  - the GitHub Pages deployed site
-    - Instructions for deploying: Repo Settings >> Pages >> Select the `main` branch as your Source branch >> Save >> Send us the URL they give you in the pop up that says "Your site is ready to be published at [URL]"  
+6. Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the necessary links. Below are instuctions for deploying to GH Pages:
+    - Repo Settings » Pages » Select the main branch as your Source branch » Save. Then, wait up to an hour, hit refresh, and your deployed link should appear at the top of the screen.
+    - If you don't want to wait, your GH pages URL will follow this format: `https://username.github.io/coloRandom/` and replace `username` with the repo owner's GH username and `coloRandom` with your repo's name (if different). The URL will not work right away - that's ok! 
 
 Then, as a team:
 * Have all team members clone down the repo.  

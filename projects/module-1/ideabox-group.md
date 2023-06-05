@@ -26,7 +26,7 @@ You will work through the iterations listed under **Progression** below.
 
 For each iteration, you should be matching the provided design comps closely. ([What is a design comp?](https://clients.geminoscreative.com/marketing-blog/what-is-a-design-comp)) Act like you're on the job and these are the designs you've been given to match. Details and spacing matter! Here is some info to help you:
   - Font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
-  - Icons: [Found here](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing) (Note: You will not use all of the icons in this folder.)
+  - Icons: [Found here](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing) (Note: You will not use all of the icons in this folder. Add these icons to an `assets` folder in your repository.)
   - Colors:
     - Dark Purple: `#1F1F3C`
     - Medium Purple: `#A8AAD2`
@@ -61,15 +61,14 @@ Remember - shorter code isn't always better!
 * As a team, complete [the DTR Form](https://docs.google.com/forms/d/e/1FAIpQLSche5cvtlYQ_SaBDqqoF3H9gFiy2p60AOPoUMbhgIHlg-vRlQ/viewform?usp=sf_link)
 
 Choose ONE TEAM MEMBER to do the following:
-1. Locally, create a new folder called `ideaBox` and add the following files to that folder: `index.html`, `main.js`, and `styles.css`.
+1. Locally, create a new folder called `ideaBox` and add the following files to that folder: `index.html`, `main.js`, and `styles.css`. Create an `assets` folder where your icons will live (You can add them to this folder as you need them.)
 2. `cd` into the `ideaBox` directory and run `git init` to initialize git.
 3. Create an initial commit.
 4. On GitHub, create a new repository. Follow the written instructions on GitHub to add the repo's remote to your local project, and push your initial commit up to GitHub.
 5. Add all project partners to the repository as contributors. If your repository is set to private, add your project manager as a collaborator as well.  
-6. Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the following links:
-  - your team's GitHub repo
-  - the GitHub Pages deployed site
-    - Instructions for deploying: Repo Settings >> Pages >> Select the `main` branch as your Source branch >> Save >> Send us the URL they give you in the pop up that says "Your site is ready to be published at [URL]"  
+6. Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the necessary links. Below are instuctions for deploying to GH Pages: 
+    - Repo Settings » Pages » Select the main branch as your Source branch » Save. Then, wait up to an hour, hit refresh, and your deployed link should appear at the top of the screen.
+    - If you don't want to wait, your GH pages URL will follow this format: `https://username.github.io/ideaBox/` and replace `username` with the repo owner's GH username and `ideaBox` with your repo's name (if different). The URL will not work right away - that's ok! 
 
 Then, as a team:
 * Have all team members clone down the repo.  
@@ -263,7 +262,6 @@ To get this extension to work with local files, follow these steps:
 - No nested if/else statements or for loops.
 - Functions are DRY and adhere to the Single Responsibility Prinicple (SRP).
 - Event delegation is used correctly on dynamic elements for deleting and starring an idea.
-- Data model is fully separated from the DOM.  There is no DOM manipulation in the `app.js` file.
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local.
 - Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 

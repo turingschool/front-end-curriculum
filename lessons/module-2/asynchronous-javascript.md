@@ -23,10 +23,10 @@ Let's talk more about JavaScript and it's ability to be asynchronous. What does 
 <section class="call-to-action">
 ### Review
 
-Using sticky notes in [this Jamboard](https://jamboard.google.com/d/1xtmrE1B76eE5HRNdyBmtJ1ThvyiDx3HePa6Mrhn0VFY/edit?usp=sharing), answer the following with your breakout group:
-- Everything you know about & questions you still have on **asynchronous code**
-- Everything you know about & questions you still have on **fetch**
-- Everything you know about & questions you still have on **execution contexts & the call stack**
+- What is an **API**?
+- What is **asynchronous code**?
+- What do you know about **fetch**?
+- How would you describe **execution contexts & the call stack**?
 </section>
 
 ## Introduction
@@ -77,7 +77,7 @@ console.log('burrito');
 How can JavaScript keep track of what code or function is running at any given time? How can we keep track or visualize how to expect the code to behave? JavaScript handles this using a few tools: the call stack, event loop, and a queue.
 
 <section class="call-to-action">
-### On Your Own
+### Video Time
 
 Let's take a look at [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ){:target='blank'} that has some great visualizations for the call stack, event loop, and queue. Pay close attention during the following points:
 
@@ -90,15 +90,23 @@ Let's take a look at [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ){:
 Please take notes and pay special attention to the vocab words at the top of this lesson as you watch
 </section>
 
+## Interview Prep
+
+It is important that you're able to speak on these concepts in a technical interview. Let's spend some time practicing common interview questions:
+* What does it mean that JavaScript is "single threaded"? With that - how is it possible that we can run asynchronous code in JavaScript?
+* Tell me about a time you needed to use asynchronous code to solve a problem in a project you built.
+* Describe the relationship between the event loop, callback queue, and call stack. 
+
 <section class="checks-for-understanding">
 ### Check for Understanding
 
-* Review how the *call stack* works with synchronous events?
-* What is involved with asynchronous events such as `setTimeout` or `fetch`?
-* Describe the relationship the `event loop` has with the `callback queue` and `call stack`.
+* Review how the call stack works with synchronous events?
+* What is involved with asynchronous events such as setTimeout or fetch?
+* Describe the relationship the event loop has with the callback queue and call stack.
 </section>
 
 ### Additional Resources
 * [event loop article](https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript){:target="\__blank"}
 * [Loupe](http://latentflip.com/loupe){:target="\__blank"}
 * [mdn async deep dive](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous){:target="\__blank"}
+* [single threaded/async JS article](https://dev.to/bbarbour/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd)
