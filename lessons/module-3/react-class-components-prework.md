@@ -111,14 +111,14 @@ class User {
 }
 ```
 
-Please note the use of the `class` keyword and the function `constructor`. The `constructor` function is a special function that gets called when an object instance is created. It's job is to create the same properties on the new object instances we create with our class.
+Please note the use of the `class` keyword and the function `constructor`. The `constructor` function is a special function that gets called when an object instance is created. Its job is to create the same properties on the new object instances we create with our class.
 
 Next, let's take a look at how to create an object using a class - or 'create an instance' of a class. 
 
 ```js
 const newObjectInstance = new NameOfClass();
 
-const bill = new user();
+const bill = new User();
 ```
 
 ## Making objects dynamic
