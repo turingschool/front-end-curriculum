@@ -106,7 +106,6 @@ class User {
   }
 
   updateAge() {
-    // we'll talk about what's going on here later.
     this.age = this.age++;
   }
 }
