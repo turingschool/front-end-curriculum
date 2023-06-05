@@ -282,7 +282,7 @@ Class components inherit several lifecycle methods that we can use. Two importan
 
 `componentDidMount` - this method is invoked immediately after a component is mounted. React invokes this for us - we simply define the method in our class component. Note: the action of defining `componentDidMount` is actually something fancy called `method overwriting`, which allows a child class to make a specific implementation of the parent class' method. 
 
-`componentDidUpdate()` - this method is invoked _after_ updating occurs. It is not called on the initial render. This is a good place for network requests and updating state, but you'll need to compare the current props to the previous props. Find more information [here](https://dev.to/cesareferrari/how-to-use-componentdidupdate-in-react-30en) to learn about using a conditional to update state in `componentDidUpdate` so that you don't end up with an infinite loop.
+`componentDidUpdate()` - this method is invoked _after_ updating occurs. It is not called on the initial render. React invokes this for us, as well. This is a good place for network requests and updating state, but you'll need to compare the current props to the previous props. Find more information [here](https://dev.to/cesareferrari/how-to-use-componentdidupdate-in-react-30en) to learn about using a conditional to update state in `componentDidUpdate` so that you don't end up with an infinite loop.
 
 <section class="call-to-action">
 
