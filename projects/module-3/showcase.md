@@ -180,7 +180,7 @@ Project evals will be asynchronous.  The feedback for this project will be limit
 * All components which receive props implement prop typechecking (proptypes or otherwise)  
 
 ✨WOW✨ can look like:
-* Refactoring your stateful components into class-based components. Be sure to do this on a separate branch and submit the link to that PR to your Project Manager. You do not need to merge it in.
+* Refactoring your stateful components into class-based components. Be sure to do this on a separate branch and submit the link to that PR to your Project Manager. You do not need to merge it in. Highlight your ability to work with both styles by describing the refactor and linking to the branch in your README.
 
 ### Routing
 
@@ -191,7 +191,7 @@ Project evals will be asynchronous.  The feedback for this project will be limit
   - UX is clear and set up so the user has access to previous routes
 
 ✨WOW✨ can look like:
--  Code was refactored to remove unnecessary or old code artifacts
+- Code was refactored to remove unnecessary or old code artifacts
 - When the user enters a bad URL, they are given an easy way to navigate to a working page
 
 ### Testing:
