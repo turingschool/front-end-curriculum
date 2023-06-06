@@ -146,6 +146,21 @@ Project evals will be asynchronous.  The feedback for this project will be limit
     - Instructions on grabbing the link can be found [here](https://stackoverflow.com/questions/23821235/how-to-link-to-specific-line-number-on-github)
   * If you do not want specific feedback, you can skip this step -->
 
+## Minimum Collaboration and Professionalism Expectations
+
+* Team holds daily standups throughout project.
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
+* A project board is utilized (and updated throughout the project) with Github issues and labels.
+* Team uses branches, PRs and thorough code reviews to add new code to the main branch.
+* The README is formatted well and at a minimum contains:
+  * Overview of project and goals
+  * Overview of technologies used, challenges, wins, and any other reflections
+  * Screenshots/gifs of your app
+  * List of contributors
+* **Team collaborates effectively to accomplish the shared goal.  Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
+  * Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.
+
+
 ## Rubric
 
 Remember: scores are an indicator of your progress in specific areas.
