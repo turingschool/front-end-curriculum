@@ -199,7 +199,6 @@ As mentioned above, functionality does have more weight in this final project in
 - Functions are DRY and adhere to the Single Responsibility Prinicple (SRP)
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
 - The application correctly implements a data model to describe the player and game data, including all required methods. The data model is kept up to date when players interact with the DOM
-- Data model is fully separated from the DOM. All DOM manipulation is handled exclusively in `index.js`.
 
 ✨WOW✨ can look like:
 - Changes to the DOM only happen after the Data Model has been updated.  The Data Model is then used to update the DOM.
