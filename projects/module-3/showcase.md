@@ -163,7 +163,62 @@ Project evals will be asynchronous.  The feedback for this project will be limit
 
 ## Rubric
 
-Remember: scores are an indicator of your progress in specific areas.
+### Minimum Collaboration and Professionalism Expectations
+
+💫ON TRACK💫 can look like:
+* Project is deployed
+* README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
+* README links to all user GitHub profiles and any applicable repos & deployed sites
+* Setup instructions for any and all repos are thorough and verbose enough that even non-technical people (like recruiters) could follow them
+* Git commits are atomic, with concise and precise descriptions of the change made
+* PRs have full, consistent descriptions
+* Team members conduct consistent code reviews of PRs
+* Evolution of the project (decisions made, etc) is documented in the git history and PRs
+* When the project is run locally, the terminal shows no errors and no warnings.
+
+
+✨WOW✨ can look like:
+* Mapping out extensions in your project board beyond your MVP
+* Using github issues to track bugs or other issues as they crop up. 
+* Getting several PR reviews from your rocks and/or mentors and implementing their feedback _before_ you merge the PR.
+
+### React Architecture:
+
+💫ON TRACK💫 can look like:
+* A consistent, modular file structure is used
+* A clear understanding of stateful components vs stateless components is demonstrated
+* Only the data that a child component _needs_ is passed down as props
+* Logic is kept out of return statements; return statements are as readable as possible, only communicating what will be displayed
+* The data displayed on the frontend is consistent with the data stored on the backend
+* Functions follow the single responsibility principle and are written to be reusable when appropriate
+* Data fetched from API is cleaned before being set to state
+* All components which receive props implement prop typechecking (proptypes or otherwise)  
+
+✨WOW✨ can look like:
+* Refactoring your stateful components into class-based components. Be sure to do this on a separate branch and submit the link to that PR to your Project Manager. You do not need to merge it in.
+
+### Stretch Technology:
+
+💫ON TRACK💫 can look like:
+* Project implements the chosen stretch tech throughout the entire application
+* Group members can all individually speak about the stretch tech's best practices and attempts were made to follow those best practices in your application
+* Group members have reflected on the process of learning these technologies and can speak clearly about their learning processes  
+
+✨WOW✨ can look like:
+* The team collaborates on an article, blog post, recorded presentation or some other shareable media that shares the learning, decision-making and the pros and cons of using their stretch tech. This piece of media should use real, specific examples from the project to illustrate the story of how it all came together.
+
+### Testing:
+
+💫ON TRACK💫 can look like:
+* All user flows are tested
+* Async functionality is stubbed at least once
+* Tests make specific assertions about the content DOM elements contain
+
+✨WOW✨ can look like:
+* All sad path user flows have been tested
+
+
+<!-- Remember: scores are an indicator of your progress in specific areas.
 
 Score key:  
 - **4:** above and beyond expectations; did extensive self-teaching to achieve
@@ -273,7 +328,7 @@ Score key:
   * Git commits are atomic, with concise and precise descriptions of the change made
   * PRs have full, consistent descriptions
   * Evolution of the project (decisions made, etc) are fully and clearly documented in the git history and PRs
-  * When the project is run locally, the terminal shows no errors or warnings
+  * When the project is run locally, the terminal shows no errors or warnings -->
 
 <!-- ### Project Professionalism
 
