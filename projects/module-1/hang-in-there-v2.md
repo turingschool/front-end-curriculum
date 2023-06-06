@@ -189,6 +189,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 <section class="answer">
 ### Functional Programming competency examples
 
+💫ON TRACK💫 can look like:
 - Project makes use of the provided `createPoster` function, creating objects to encapsulate & store unique data
 - Team considers when and how to create poster objects or update existing poster objects, coming to a clear and consistent decision
 - Functions are DRY and demonstrate SRP
@@ -201,6 +202,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 <section class="answer">
 ### DOM Manipulation competency examples
 
+💫ON TRACK💫 can look like:
 - Project makes use of the DOM to access and update the displayed information
 - Team is thoughtful about elements being targeted, limiting global variables to only the ones needed for current functionality
 - Team succesfully renders the appropriate data to the page without bugs
@@ -213,6 +215,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 <section class="answer">
 ### JavaScript Style competency examples
 
+💫ON TRACK💫 can look like:
 - The main JS file is organized thoughtfully (DOM variables together, event listeners together, functions together)
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
 - Variable and function naming is meaningful, readable and consistent
@@ -242,6 +245,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 <section class="answer">
 ### Collaboration competency examples
 
+💫ON TRACK💫 can look like:
 - The team's norming document is taken seriously, with thoughtful reflections from all team members regarding their skills, learning goals, work styles, etc. 
 - The team plans and executes an agreed upon process for working, troubleshooting, and handling conflicts.
 - Each member of the team reflects meaningfully on the collaboration and can point to specific behaviors they want to continue, and those they want to modify for future collaboration
@@ -261,6 +265,7 @@ Every team member is expected to fully participate, contribute, communicate and 
 <section class="answer">
 ### Git competency examples
 
+💫ON TRACK💫 can look like:
 - Team understands the importance & utility of documenting a single change with every commit; changesets are small
 - Commit messages are descriptive and concise
 - The team keeps the main branch clean by using branches for new, unreviewed code
@@ -274,6 +279,7 @@ Every team member is expected to fully participate, contribute, communicate and 
 <section class="answer">
 ### GitHub competency examples
 
+💫ON TRACK💫 can look like:
 - Team understands the point of the PR process, making strong use of code reviews & pushing up requested changes before merging
 - PRs have clear, thorough descriptions, such that a new person joining the codebase can clearly understand the proposed changes and evolution of the codebase
 - The team understands that the README is an opportunity to document their work and growth
@@ -329,10 +335,10 @@ Well-refactored, thoughtful code is better than sloppy extra features.
 <section class="answer">
 ### Functionality competency examples
 
+💫ON TRACK💫 can look like:
 - The application completes all iterations without bugs
 
 ✨WOW✨ can look like:
-
 - An extension is successfully implemented along with thoughtful UI
 </section>
 

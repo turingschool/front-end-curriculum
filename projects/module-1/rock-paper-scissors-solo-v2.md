@@ -173,6 +173,7 @@ As mentioned above, functionality does have more weight in this final project in
 <section class="answer">
 ### Functionality competency examples
 
+💫ON TRACK💫 can look like:
 - Application is fully complete (matches all required features listed above without bugs).
 
 ✨WOW✨ can look like:
@@ -183,6 +184,7 @@ As mentioned above, functionality does have more weight in this final project in
 <section class="answer">
 ### Javascript
 
+💫ON TRACK💫 can look like:
 - Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 - No nested if/else statements or for loops.
 - Functions are DRY and adhere to the Single Responsibility Prinicple (SRP)
@@ -199,6 +201,7 @@ As mentioned above, functionality does have more weight in this final project in
 <section class="answer">
 ### HTML
 
+💫ON TRACK💫 can look like:
 - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
 - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. _Example: classes should be named using kabab-case, ids should be used sparingly_
 - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). If `<div>` or `<span>` elements are used, they are only for styling purposes.
@@ -211,6 +214,7 @@ As mentioned above, functionality does have more weight in this final project in
 <section class="answer">
 ### CSS
 
+💫ON TRACK💫 can look like:
 - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
 - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together.
 - CSS includes several examples of using a class to apply a styling rule block to multiple elements.
