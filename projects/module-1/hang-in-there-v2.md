@@ -308,6 +308,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 <section class="answer">
 ### Reading Code competency examples
 
+💫ON TRACK💫 can look like:
 - The team takes time to thoroughly understand the provided code
 - Provided code is used effectively (the provided createPoster function, the provided assets, the provided HTML & CSS)
   - The team does not have to directly edit the HTML or CSS file
