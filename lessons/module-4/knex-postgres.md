@@ -6,7 +6,7 @@ tags: node, express, knex, database, SQL, http
 
 ### Pre-reqs
 
-* Download Postgresql with `brew install postgres`
+* Download Postgresql with `brew install postgresql`
 * Download Postico [here](https://eggerapps.at/postico/) and get it installed.
 * Given what you know about the structure of relational databases, what is happening in
 [these lines](https://github.com/mahaplatform/backframe/blob/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations/20161030203400_teams.js#L3-L7) of code? What about [these lines](https://github.com/mahaplatform/backframe/blob/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations/20161030203405_strategies.js#L3-L10)? *_Diagram it out in your journal_*
@@ -19,30 +19,43 @@ By the end of this lesson, you will:
 * Understand how to create and retrieve data within a database using knex
 
 ## What is Knex?
-Straight from the docs, Knex.js is a "batteries included" SQL query builder for Postgres, MSSQL, MySQL, MariaDB, SQLite3, and Oracle designed to be flexible, portable, and fun to use. It features both traditional node style callbacks as well as a promise interface for cleaner async flow control, a stream interface, full featured query and schema builders, transaction support (with savepoints), connection pooling and standardized responses between different query clients and dialects.
+Straight from the docs, [Knex.js](https://knexjs.org/) is a "batteries included" SQL query builder for Postgres, MSSQL, MySQL, MariaDB, SQLite3, and Oracle designed to be flexible, portable, and fun to use. It features both traditional node style callbacks as well as a promise interface for cleaner async flow control, a stream interface, full featured query and schema builders, transaction support (with savepoints), connection pooling and standardized responses between different query clients and dialects.
 
 What Knex really is is Javascript instead of raw SQL.
 
 ## Getting Started
 
-Make sure Postgres is installed and running. We will prep our app by creating a single database in Postgres. Don't forget the semicolons in the the CREATE DATABASE command!
+Make sure Postgres is installed and running. We will prepare our app by creating a single database in Postgres. Don't forget to include the semicolons in the CREATE DATABASE command! The name of our database will be "publications".
 
-```js
+```bash
 $ psql
 CREATE DATABASE publications;
 ```
 
-Create a new directory and cd into it, then run `npm init --yes`. Install knex globally and in your project, and pg (postgres) in your project from npm:
+To create a new directory and navigate into it, run the following command:
 
+```bash
+mkdir my-project && cd my-project
 ```
+Next, initialize a new npm project with the default settings using the command:
+
+```bash
+npm init --yes
+```
+
+To install knex globally and as a project dependency, as well as the pg (PostgreSQL) package as a project dependency, use the following commands:
+
+```bash
 npm i -g knex
 npm i knex --save
 npm i pg --save
 ```
 
+These commands will install knex globally, allowing you to use it across different projects, and locally within your project. Additionally, the pg package will be installed as a dependency for your project to enable PostgreSQL functionality.
+
 We will use a knexfile to configure our database for all of our environments. Create that file using the below command with some default values:
 
-```
+```bash
 → knex init
 Created ./knexfile.js
 ```
@@ -94,7 +107,7 @@ We're not quite done here, but let's switch gears for a bit and talk about **mig
 
 ## Migrations
 
-Migrations are kind of like version control for databases. They are single, timestamped files that each represent a change to your database schema. Think back to the [randomly selected open-source code](https://github.com/mahaplatform/backframe/tree/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations) we looked at yesterday. Notice every file in this 'migrations' directory is simply a timestamped file. We'll talk more about the structure of these files in a bit.
+Migrations are kind of like version control for databases. They are single, timestamped files that each represent a change to your database schema. Think back to the [randomly selected open-source code](https://github.com/mahaplatform/backframe/tree/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations). Notice every file in this 'migrations' directory is simply a timestamped file. We'll talk more about the structure of these files in a bit.
 
 Migrations attempt to have as little effect on pre-existing data as possible, but sometimes it's hard to avoid. For example if you have a migration that deletes a column from a table, any data in that column might be destroyed along with it.
 
@@ -121,7 +134,7 @@ module.exports = {
 
 We can create a migration by running the following command:
 
-```
+```bash
 knex migrate:make initial
 ```
 
@@ -392,6 +405,7 @@ There are a few things going on in the code above:
 
 1. We want to know if we're in a development, testing, or production environment. If we don't know, we'll assume we're in development.
 2. Based on that environment, we'll fetch the database configuration from `knexfile.js` for whatever environment we're in and now our express app will be able to connect to it.
+3. The code NODE_ENV typically refers to an environment variable in Node.js applications that determines the runtime environment. It is commonly used to differentiate between development, testing, and production environments. 
 
 ### Retrieving Data from the Database
 
@@ -409,7 +423,7 @@ app.get('/api/v1/papers', async (request, response) => {
 });
 ```
 
-If we check this in POSTMAN, we should get back an array of all our papers that looks something like this:
+If we check this in [POSTMAN](https://www.postman.com/), we should get back an array of all our papers that looks something like this:
 
 ```js
 [{
