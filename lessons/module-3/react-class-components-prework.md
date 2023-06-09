@@ -16,7 +16,6 @@ By the end of this lesson, you will be able to:
 - `this` - a keyword with a value that changes depending on the context in which it's used
 - `class` - a special function which functionas as a template for creating objects
 - `object instance` - objects that were created from a class and contain the data and functionality defined in that class
-- `inheritance` - a mechanism which derives a class from another class; one class can inherit properties and functionality from a parent class
 
 ## Warm Up
 
@@ -190,83 +189,6 @@ henrietta.updateEmail('newemail@gmail.com');
 Define a class of your own choice. Make sure it has some properties and at least one method. 
 
 To test it out, instantiate the class (make an object instance). 
-
-## Inheritance
-
-Sometimes, you'll have several classes that are very similar. They may have the same properties or the same functionality. We should work to DRY up our classes, just like we do with any other code. Consider the following class definitions: 
-
-```js
-class Animal {
-  constructor(type, species, weight) {
-    type = type,
-    species = species,
-    weight = weight,
-  }
-
-  makeSound(sound) {
-    console.log(sound);
-  }
-}
-```
-
-```js
-class Dog {
-  constructor(weight, breed) {
-    type = 'Mammal',
-    species = 'Canine',
-    weight = weight,
-    breed = breed,
-  }
-
-  bark() {
-    console.log('woof!');
-  }
-}
-```
-
-- What are all the similarities you see between these two classes? 
-- How does a 'dog' relate to the category of 'animal' in real life? 
-
-<section class="answer">
-
-### Possible answers to the above questions: 
-
-Some similarities between the two classes are: 
-
-- similar properties: type, species, weight
-- similar method: both the method makeSound and bark are doing the same thing.
-
-A dog is a type of animal in real life. A dog could be considered a subcategory of the animal category.
-</section>
-
-This is a perfect time to implement inheritance. Instead of repeating ourselves so much, we can make the Dog class _inherit_ the properties it needs from the Animal class. Then, we could even make more classes that inherit from Animal, such as Cat or Llama. 
-
-We can make a class inherit from a parent class by using the `extends` keyword. We can then call the constructor of the parent class, which will give the Dog class access to the Animal's properties and methods by calling the `super` function. 
-
-```js
-class Animal {
-  constructor(type, species, weight) {
-    this.type = type;
-    this.species = species;
-    this.weight = weight;
-  }
-
-  makeSound(sound) {
-    console.log(sound);
-  }
-}
-
-class Dog extends Animal {
-  constructor(type, species, weight, breed) {
-    super(type, species, weight);
-    this.breed = breed;
-  }
-}
-
-const fido = new Dog('Mammal', 'Canine', 10, 'Yorkshire Terrier');
-fido.makeSound('Woof!');
-
-```
 
 <section class="note">
 ### Fun Fact

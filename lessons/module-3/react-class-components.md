@@ -26,7 +26,6 @@ By the end of this lesson, you will be able to:
 ## Vocabulary
 - `this` - a keyword with a value that changes depending on the context in which it's used
 - `class` - a special function which acts as as a template for creating objects
-- `inheritance` - a mechanism which derives a class from another class; one class can inherit properties and functionality from a parent class
 - `class component` - a React component that inherits properties and methods from a `Component` class. 
 
 <section class="call-to-action">
@@ -35,7 +34,6 @@ By the end of this lesson, you will be able to:
 
 In small groups, answer the following questions. Make sure everyone has an oportunity to share and feel free to share screens.
 - What do you know about JS classes?
-- In your own words, desribe what inheritance is.
 - How do you create a class in JS?
 - How do you create an object instance using a class? 
 
