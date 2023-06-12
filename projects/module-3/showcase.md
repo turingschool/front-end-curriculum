@@ -143,77 +143,87 @@ Project evals will be asynchronous.  The feedback for this project will be limit
 3. Answer the following question in a short paragraph, using specific examples from a Mod 3 project:
   * “What is a benefit of using a framework like React over vanilla JS? What is a drawback?” (this is a common interview question!)
 
-## Minimum Collaboration and Professionalism Expectations
+## Minimum Professionalism Expectations
 
-* Team holds daily standups throughout project.
-* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. 
 * A project board is utilized (and updated throughout the project) with Github issues and labels.
-* Team uses branches, PRs and thorough code reviews to add new code to the main branch.
+* Developer uses branches, PRs and thorough code reviews to add new code to the main branch.
 * The README is formatted well and at a minimum contains:
   * Overview of project and goals
   * Overview of technologies used, challenges, wins, and any other reflections
   * Screenshots/gifs of your app
   * List of contributors
-* **Team collaborates effectively to accomplish the shared goal.  Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
-  * Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.
+
 
 ## Rubric
 
-### Specification Adherence
+### Project Requirements Rubric
+For the rubric sections below, you will be scored as Wow, Yes or Not Yet depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency. These are just some examples.
+
+<section class="answer">
+**Does the project demonstrate student understanding of the learning goals & concepts?**
+
+Projects will answer that question, being marked as yes, not yet, and wow. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
+
+The overall project outcome (yes, not yet, wow) is determined by “averaging” each section’s outcome. You can think of a “yes” being worth a 1, a “not yet” being worth a 0, and a “wow” being worth a 2.
+
+For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below).
+</section>
+
+While M3 rubrics do not have a separate section for WOWs like in M1, there are a few WOW examples noted throughout. In addition to these WOW bullets, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections.
+
+<section class="answer">
+### Specification Adherence / Functional Expectations
 💫ON TRACK💫 can look like:
 - Project meets all MVP requirements 
 - App is fully resposive across mobile, tablet and desktop devices
 
 ✨WOW✨ can look like:
 - Project completes 1 or more additional features beyond MVP
+- * After your project is completely finished, you could deepen your understanding of React and strive for a WOW by creating a new branch and refactoring your stateful components into class-based components. You will not merge this branch in. Instead, DM a link for that branch/PR to your project manager. Highlight your ability to work with both styles by describing the refactor and linking to the branch in your README.
+</section>
 
+<section class="answer">
 ### React Architecture:
 
 💫ON TRACK💫 can look like:
 * A consistent, modular file structure is used
 * A clear understanding of stateful components vs stateless components is demonstrated
 * Only the data that a child component _needs_ is passed down as props
-* Logic is kept out of return statements; return statements are as readable as possible, only communicating what will be displayed
+* Logic is kept out of return statements when possible; return statements are as readable as possible, only communicating what will be displayed.
 * The data displayed on the frontend is consistent with the data stored on the backend
 * Functions follow the single responsibility principle and are written to be reusable when appropriate
 * Data fetched from API is cleaned before being set to state
 * All components which receive props implement prop typechecking (proptypes or otherwise)  
+</section>
 
-✨WOW✨ can look like:
-* Refactoring your stateful components into class-based components. Be sure to do this on a separate branch and submit the link to that PR to your Project Manager. Please do not merge it in. Highlight your ability to work with both styles by describing the refactor and linking to the branch in your README.
-
+<section class="answer">
 ### Routing
-
-💫ON TRACK💫 can look like:
   - Application uses Router to display appropriate components based on URL
   - The user has access to previous routes via the back button
   - A 404 page handles undefined routes
   - UX is clear and set up so the user has access to previous routes
+  - When the user enters a bad URL, they are given an easy way to navigate to a working page
+</section>
 
-✨WOW✨ can look like:
-- Code was refactored to remove unnecessary or old code artifacts
-- When the user enters a bad URL, they are given an easy way to navigate to a working page
-
+<section class="answer">
 ### Testing:
-
-💫ON TRACK💫 can look like:
 * All user flows are tested
 * All network request functionality is intercepted and stubbed
 * Tests make specific assertions about the content DOM elements contain
-
-✨WOW✨ can look like:
 * All sad path user flows have been tested
+</section>
 
+<section class="answer">
 ### Professionalism 
 You will not receive a score for professionalism, but you should be meeting these expectations:
 💫ON TRACK💫 can look like:
 * Project is deployed
-* README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
+* README concisely communicates the developer's individual and joint learning goals, the evolution of the project, and developer reflections while using good formatting to enhance readability
 * README links to all user GitHub profiles and any applicable repos & deployed sites
 * Setup instructions for any and all repos are thorough and verbose enough that even non-technical people (like recruiters) could follow them
-* Git commits are atomic, with concise and precise descriptions of the change made
+* Git commits are atomic, with concise and precise descriptions of the change made.
 * PRs have full, consistent descriptions
-* Team members conduct consistent code reviews of PRs
 * Evolution of the project (decisions made, etc) is documented in the git history and PRs
 * When the project is run locally, the terminal shows no errors and no warnings.
 
@@ -221,3 +231,4 @@ You will not receive a score for professionalism, but you should be meeting thes
 * Mapping out extensions in your project board beyond your MVP
 * Using github issues to track bugs or other issues as they crop up. 
 * Getting several PR reviews from your rocks and/or mentors and implementing their feedback _before_ you merge the PR.
+</section>
