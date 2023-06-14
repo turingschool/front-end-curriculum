@@ -15,7 +15,6 @@ Add your name to [this Goals Document](https://docs.google.com/spreadsheets/d/1b
 You will continue to add your weekly goals to that document every Monday throughout the inning. We'll set up a slackbot in #mod1_repeater_fam to remind you!
 
 ## Professional Development  
-**PD expectations for repeating Mod 1:**  
 Repeating the module is a great opportunity to solidify your technical AND professional development skills. As a repeater, you are not expected to re-do any of the lessons or exit tickets. Live PD lessons are optional for repeaters. 
 
 <!-- **Gear Up expectations for repeating mod 1:**  
