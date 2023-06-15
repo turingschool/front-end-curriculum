@@ -35,8 +35,7 @@ There are a number of different motivations behind adding hooks to React, which 
 
 
 ### Getting started
-<!-- This repo needs an update -->
-We're going to be using [this repo]() today. Before going any further please do the following:
+We're going to be using [this repo](https://github.com/turingschool-examples/advanced-data-management-hooks-fe/tree/main) today. Before going any further please do the following:
 
 * Clone the repo to your machine
 * Run `npm install` in the repo
