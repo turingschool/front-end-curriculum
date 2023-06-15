@@ -3,7 +3,7 @@ name: Run Algolia Indexing Monthly
 on:
   schedule:
     # - cron: '0 0 1 * 1' eventual value for production
-    - cron: '45 13 * * *'
+    - cron: '50 19 * * *'
 
 jobs:
   algolia-index:
