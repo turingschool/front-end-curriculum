@@ -2,8 +2,7 @@ name: Run Algolia Indexing Monthly
 
 on:
   schedule:
-    # - cron: '0 0 2 * *' eventual value for production
-    - cron: '22 * * * *'
+    - cron: '10 1 2 * *'
 
 jobs:
   algolia-index:
