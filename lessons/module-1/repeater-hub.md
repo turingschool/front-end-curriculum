@@ -21,7 +21,7 @@ Repeating the module is a great opportunity to solidify your technical AND profe
 You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters.    -->
 
 ## Alternative Learning Opportunities
-We want you to feel empowered to skip some classes if you feel like there is a better way to spend your time. **Communication is key!** DM all instructors prior to the start of class to let us know you'll be skipping the lesson. 
+We want you to feel empowered to skip some classes if you feel you'd be better served by focusing on another technial concept or part of the curriculum. We trust you to know your needs, but **communication is key!** DM all instructors prior to the start of class to let us know you'll be skipping the lesson and how you'll be spending that time.
 
 The following lessons are not optional. Repeaters must attend:
 * Meet Your Cohort
@@ -31,6 +31,12 @@ The following lessons are not optional. Repeaters must attend:
 If you decide to skip a lesson...
 * You should always read through the lesson on your own. If you can complete all of the activities in the lesson without help, you should feel confident skipping that lesson. We recommend doing this no later than the day before the lesson is scheduled. That way, if you realize that you need to attend the class, it's not too late!  
 * You should be spending this time productively. It's not to your benefit to use this time as "off" time. You can use this time to pre-teach an upcoming lesson, review or update your notes, or work on anything in the [Extra Practice page](https://frontend.turing.edu/lessons/module-1/extra-practice.html).
+
+## Extra Mock Assessments
+We want to support you in overcoming the final assessment, so we've added a few more mock assessments to give you some 1:1 technical feedback from an instructor. You can expect the following sessions to help you prepare:
+- 1 Repeater Only Mock Assessment in Week 3
+- The regular Mid-Module Mock Assessment
+- 1 Repeater Only Mock Assessment in Week 4
 
 ## FAQs
 
