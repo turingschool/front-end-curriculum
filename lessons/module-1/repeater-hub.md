@@ -22,7 +22,7 @@ Repeating the module is a great opportunity to solidify your technical AND profe
 You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters.    -->
 
 ## Alternative Learning Opportunities
-We want you to feel empowered to skip some classes if you feel like there is a better way to spend your time. **Communication is key!** DM all instructors prior to the start of class to let us know you'll be skipping the lesson. 
+We want you to feel empowered to skip some classes if you feel like you'd rather focus on another part of the curriculum or technical concept. We trust you to know your needs best, but **communication is key!** DM all instructors prior to the start of class to let us know you'll be skipping the lesson and what you'll be working on instead.
 
 The following lessons are not optional. Repeaters must attend:
 * Meet Your Cohort
@@ -32,6 +32,12 @@ The following lessons are not optional. Repeaters must attend:
 If you decide to skip a lesson...
 * You should always read through the lesson on your own. If you can complete all of the activities in the lesson without help, you should feel confident skipping that lesson. We recommend doing this no later than the day before the lesson is scheduled. That way, if you realize that you need to attend the class, it's not too late!  
 * You should be spending this time productively. It's not to your benefit to use this time as "off" time. You can use this time to pre-teach an upcoming lesson, review or update your notes, or work on anything in the [Extra Practice page](https://frontend.turing.edu/lessons/module-1/extra-practice.html).
+
+## Extra Mock Assessments
+We want to make sure you're prepared for the final assessment, so we've added a couple more touchpoints. You'll get the following 1:1 time with an instructor to help you prepare for the final assessment and get some targeted feedback
+- 1 Repeaters Only Mock Assesment in Week 3
+- The regular mid-module Mock Assessment
+- 1 Repeaters Only Mock Assessment in Week 4
 
 ## FAQs
 
