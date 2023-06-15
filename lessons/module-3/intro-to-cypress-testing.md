@@ -37,15 +37,16 @@ For example, you don't need to know how Router works; instead, use the applicati
 </section>
 
 ## Learning Goals:
-* Understand how acceptance testing & end-to-end testing differ from unit & integration testing
 * Become familiar with what Cypress is
 * Practice testing a React application with Cypress including:
   * Filling out forms and switching routes
-  * Happy and sad path user flows that require network requests
+  * Intercepting and stubbing network requests
+  * Happy and sad path user flows 
+* Understand how acceptance testing & end-to-end testing differ from unit & integration testing
 
 ## A little background
 
-So far in your time at Turing, you've learned a lot about unit/integration testing. The paradigm you've learned so far is testing individual functions or classes (unit tests) to verify that they produce the same output every time, and the interactions between those functions/classes (integration tests).
+So far in your time at Turing, you've learned a lot about unit/integration testing. The paradigm you've learned so far is testing individual functions with unit tests to verify that they produce the same output every time, and testing the interactions between those functions (integration tests).
 
 We haven't tested anything that's on the DOM - our whole testing perspective has been from the point of view of the developer. This makes sense - after all, tests are there to tell us if something in our codebase breaks!
 
@@ -87,23 +88,6 @@ Here are a list of major features pulled from the [documentation](https://docs.c
 * **Screenshots and Videos:** View screenshots taken automatically on failure, or videos of your entire test suite when run from the CLI.
 * **Cross browser Testing:** Run tests within Firefox and Chrome-family browsers (including Edge and Electron) locally and optimally in a Continuous Integration pipeline.
 </section>
-
-<!-- <section class="note">
-### Is this similar to Selenium?
-
-Although often compared to Selenium, another common automated testing framework that allows you to test your application across multiple browsers, Cypress has some distinct differences that makes it stand out. Below is a list of some key differences:
-
-**Key Differences:**
-
-| | **Cypress** | **Selenium** |
-|-----|-----|-----|
-| Languages Supported | JavaScript | Many popular languages like Java, Python, Ruby, and JavaScript. |
-| Browsers Supported | Chrome, Edge, Firefox(beta) | Chrome, IE, Safari, Edge, Firefox, Opera |
-| Frameworks Supported | Supports only Mocha JS | Supports multiple frameworks based on what language is being used (i.e. JUnit for Java, Cucumber for JavaScript, etc.) |
-| Setup Complexity | Setup is simple with no additional downloads required | More complex due to the necessity of download browser-specific drivers |
-
-You'll note that Selenium seems to have more support and honestly, it has been around for longer.  However, Cypress is gaining a significant amount of support in recent years and has some distinct advantages including it runs in the same run loop as the app, it's built on a Node server process, and it allows you to read / alter web traffic giving you the ability to modify everything that comes in and out of the browser.  You can read more about the differences and why Cypress is becoming a major game changer in the industry [here](https://docs.cypress.io/guides/overview/key-differences.html#Debuggability){:target='blank'}.
-</section> -->
 
 ### The Big Picture
 We'll be using Cypress in two main ways:
@@ -435,7 +419,7 @@ In today's example, we're going to create a command to login to the dashboard by
 
 In complex applications with dozens or hundreds of user flows to test, all of which depend on first being logged in, having Cypress go through the UI to login (aka finding and typing into form fields, clicking buttons, waiting for new pages to render, etc) would make our tests take FOREVER to run.
 
-We are forced to use the app's UI to login today because of the way we've written our app - this is a GREAT example of how when our tests are difficult, it indicates that perhaps we should refactor our implementation code. Perhaps instead of having our login form directly set the state of App with a user, and all the results of the subsequent network requests listed in `updateUser`, we could set the user info in localStorage and rely on componentDidMount to conduct the rest of the fetches. That would allow us to use a custom command to just put the user data in localStorage, rather than having to go through the rigamarole of filling in fields and stubbing the POST request.
+We are forced to use the app's UI to login today because of the way we've written our app - this is a GREAT example of how when our tests are difficult, it indicates that perhaps we should refactor our implementation code. Perhaps instead of having our login form directly set the state of App with a user, and all the results of the subsequent network requests listed in `updateUser`, we could set the user info in localStorage and rely on a hook to conduct the rest of the fetches. That would allow us to use a custom command to just put the user data in localStorage, rather than having to go through the rigamarole of filling in fields and stubbing the POST request.
 
 To learn about creating a custom login command that does not have to go through the UI of an app, you can watch [this conference talk](https://youtu.be/5XQOK0v_YRE?t=925) from the creator of Cypress. The video starts partway through, and shows you the creation of a custom command.
 </section>
@@ -449,7 +433,7 @@ Before we replace the commented out code in `commands.js`, let's take a look at 
 1. We fetch our teammate information (populates the right-hand sidebar of the app)
 1. We fetch our feedback (populates the left-hand main page and shows us the feedback our teammates have left for us)
 1. We get additional ifo (if necessary)
-1. We set state with the new information
+1. We set state with the new information using our hook.
 
 This means our new command will need to:
 
