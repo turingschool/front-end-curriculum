@@ -1,179 +1,46 @@
 ---
-title: "React: Advanced Data Management"
-length: 180
-tags: react, ideabox, lifecycle methods, conditional rendering
+title: React 3 - Advanced Data Management.
+length: 3 hours
 module: 3
+tags: react, hooks, useEffect, Network request 
 ---
 
 ## Learning Goals
+* Understand how to perform network request and use it within `useEffect`.
+* Understand how to perform side effect behavior in a functional component with `useEffect`.
+* Understand how to perform conditional rendering in functional component.
 
-* Understand the component lifecycle
-* Understand class component lifecycle methods
-* Implement conditional rendering
 
-## Vocabulary
+## Vocab
 
-- `lifecycle method` a set of methods found in the parent class Component that fire at different points during the component lifecycle
+* `useEffect` - A React Hook which enables us to add side effect behavior to a functional component.
 
-<section class="call-to-action">
-### Warm Up
+## React Introduces Hooks (v16.8 - February 2019)
 
-You're going to learn about some important lifecycle methods today: `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`. Before we jump too far into the concepts for today, let's do some exploring.  
+Hooks are functions that let you "hook into" React state and lifecycle features from functional components. React gives us some built-in hooks that we'll take a look at shortly, but we can also create our own custom hooks that will allow us to reuse/share stateful logic.
 
-First, follow the following instructions:
-```bash
-git clone https://github.com/turingschool-examples/react-iii-ideabox.git
-cd react-iii-ideabox
-npm i
-git checkout lifecycle-warmup
-npm start
-```
+There are a number of different motivations behind adding hooks to React, which you can read more about [here](https://reactjs.org/docs/hooks-intro.html#motivation). The most important take-away for you is that hooks allows us to streamline our applications and leverage the power of functional components.
 
-Then, follow these steps:
-1. Uncomment lines 15-21 in the `App.js` file.
-2. Open up the `Console` in your Dev Tools.
-3. Refresh the page. What logged to the console?
-4. Add an idea. What logged to the console?
-5. Add another idea. What logged to the console?
-6. Delete an idea. What logged to the console?
-7. Now, comment lines 15-21 in the `App.js` file so they are no longer active.
-8. Uncomment lines 6-16 in the `Card.js` file.
-9. Refresh the page. What logged to the console?
-10. Add an idea. What logged to the console?
-11. Add another idea. What logged to the console?
-12. Delete an idea. What logged to the console?
+### Some Important Rules
 
-Now, answer these questions:  
-*(It's okay if you're wrong! Just make your best guess!)*
-- When does `componentDidMount` run? How many times does it run?
-- When does `componentDidUpdate` run? How many times does it run?
-- When does `componentWillUnmount` run? How many times does it run?
-</section>
+* **Only call hooks from within react functions** 
+* **Don't call hooks inside of loops, conditions, or nested functions** 
 
-## The Component Lifecycle
+### Benefits of Hooks
 
-Did you ever learn about the butterfly lifecycle when you were a kid? It starts out as an egg, hatches into a caterpillar, eats a bunch, wraps itself into a cocoon, emerges as a butterfly? Well, React components have lifecycles, too.
+* Let you organize the logic inside a component into reasonable isolated units.
+* Allow you to reuse stateful logic without changing your component hierarchy.
+* Will likely reduce your bundle size because code using Hooks tends to minify better than equivalent code using classes
+* No breaking changes
 
-A React component goes through 3 distinct phases during its lifecycle:   
 
-* Mounting (aka Birth)
-* Updating (aka Growth and Change)
-* Unmounting (aka Death)
+### Getting started
+<!-- This repo needs an update -->
+We're going to be using [this repo]() today. Before going any further please do the following:
 
-Dan Abramov [tweeted](https://twitter.com/dan_abramov/status/981712092611989509) a diagram that helps explain some of the React 16 lifecycle methods.
-
-![React 16 component lifecycle methods chart](https://pbs.twimg.com/media/DZ-97vzW4AAbcZj?format=jpg)
-
-We'll take a deeper look into some of these methods in this lesson. There are a few that you will probably use throughout your time at Turing. This simplified diagram of the same lifecycle is what we will talk about in depth ([created here](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)):
-
-![React 16 component lifecycle methods chart simplified](/assets/images/react-lifecycle-simplified.png)
-
-## Mounting Phase
-
-### constructor() && super()
-
-Let's talk about the first methods we see in a class-based React component.  
-
-```js
-constructor() {
-  super();
-  this.state = {
-    name: ''
-  };
-}
-```
-
-Per [the docs](https://facebook.github.io/react/docs/react-component.html#constructor), the `constructor()` method is called once, and before the component is mounted onto the DOM. It is the first and only function called automatically whenever a `class`-based component is created.  
-
-Any class in JavaScript has this rule: Within the constructor, it's important to immediately call `super()` in cases where our class extends any other class that also has a defined constructor.
-
-Invoking `super()` will run the constructor method of the parent class and allows it to initialize itself. This invocation allows `this` to have a defined value **within the constructor**. Constructors are great for setting up our component and initializing state. However, this is **NOT** a place you should consider making a network request.
-
-This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it. There is even an [eslint rule](http://eslint.org/docs/rules/no-useless-constructor) for detecting the use of a default constructor. Basically, if you don't need to initialize state or bind any methods, you don't need to implement a constructor for your component! It will get called automatically behind the scenes. Magic!
-
-### Where are my props?  
-
-If, in your constructor, you need access to that component's `props`, you _must_ pass these as an argument down through `super()`.
-
-```js
-constructor(props) {
-  super(props);
-  this.state = {
-    name: props.initialName
-  };
-}
-```
-
-Without passing the props down into this method, `this.props` will return as `undefined` **within the `constructor` method**.  
-This is bad because the constructor method is the first function called when your component is instantiated as a class - knowing the context of `this` from the get go can be a big deal.   
-
-<section class="note">
-### Note  
-
-Whether or not you have a constructor method has no effect on `this` or `this.props` within the `render()` method (or any other method you create for that matter) - the `render()` method defines its own context.  
-</section>
-
-Per [the docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class), class components should always pass props to the base constructor (this is why we pass them into the `super()` method). However there is some debate as to why this is suggested, since React will automatically set the props for you once the constructor has fired.
-
-### render()
-
-Now that our component has been initialized and configured, we can begin rendering some content/elements on the page. This is the lifecycle method that React developers are most familiar with. It is the one lifecycle method that exists across all phases of a React component.
-
-<section class="call-to-action">
-### Turn and Talk
-
-It's important to remember to always keep `render()` a **pure method**. This means we should never call `this.setState()` within `render()`. Why do you think this is?  
-</section>
-
-#### Managing Children Components and Mounting
-
-The React Element that has been rendered by the initial `render()` may possibly have a number of children that need to be rendered as well. This is where each of those children kickoff their own lifecycle methods... `constructor()`, `render()`, and `componentDidMount()`. Once all the children have been successfully created, initialized and mounted, the parent's `componentDidMount()` method will finally be called.
-
-### componentDidMount()
-
-Per [the docs](https://reactjs.org/docs/react-component.html#componentdidmount), `componentDidMount()` is invoked "immediately after a component is mounted." When `componentDidMount()` is called, this signalizes that the component - and all its sub-components - have rendered properly.  This is also the go-to location to fire off an API call or network request (**BEST PRACTICE**). This is a great [blog post](https://www.robinwieruch.de/react-fetching-data/) that discusses how and where to fetch data in React.
-
-<section class="note">
-### Note
-
-Setting state in this method **WILL** trigger a re-render - but will not cause an infinite re-rendering loop, because `componentDidMount` only fires after the initial mount of the component.
-</section>
-
-## Updating Phase
-
-### componentDidUpdate()
-
-This method is invoked *after* updating occurs.  It is **NOT** called for the initial render.  Per the [docs](https://reactjs.org/docs/react-component.html#componentdidupdate): "Use this as an opportunity to operate on the DOM when the component has been updated. This is also a good place to do network requests as long as you compare the current props to the previous props (e.g. a network request may not be necessary if the props have not changed)."  For example, if the `userId` in your new props is not the same as the one that is being currently displayed, you could fetch the new user.  
-
-If you're interested in learning more, [here is a short blog post](https://dev.to/cesareferrari/how-to-use-componentdidupdate-in-react-30en) that offers an example of how `componentDidUpdate` works.
-
-<section class="note">
-### Note
-
-You are able to call `setState()` but only if it's wrapped in a conditional.  Otherwise, an infinite loop will happen just like it does in the `render()` method.
-</section>
-
-## Unmounting Phase
-
-### componentWillUnmount()
-
-This is invoked just once, before the component is unmounted and destroyed. According to the [docs](https://reactjs.org/docs/react-component.html#componentwillunmount), it's a good place to cancel any open network requests, kill any timers, and do any other necessary cleanup tasks.  You should **NOT** called `setState` here because the component will not re-render.
-
-## Workshop On Our IdeaBox
-
-Okay. Why do we care about any of this?
-
-To be honest, you probably won't be using much more than `constructor()`, `super()`, `render()`, and `componentDidMount()` in Mod 3. However, it's good to be aware that other lifecycle methods exist.
-
-We're going to implement `componentDidMount()` in our IdeaBox.
-
-### Setup Your Front End
-
-We are going to use the same repo we used for the warm up, but you'll need to switch branches:
-
-```bash
-git checkout main
-```
+* Clone the repo to your machine
+* Run `npm install` in the repo
+* Put a thumbs up in the participants panel of zoom once you're done!
 
 ### Setting Up Your Back End
 
@@ -192,8 +59,8 @@ Note that the frontend should be running on `localhost:3000` and the backend sho
 
 Once you are set up, you can visit `http://localhost:3001/api/v1/ideas` and you should see a brief list of ideas!
 
-### Implement Getting Data from the Backend
 
+### Implement Getting Data from the Backend
 <section class="call-to-action">
 ### Your Turn -- Review `.fetch()`
  Take some time to look into the <a href="https://developer.mozilla.org/en-us/docs/web/api/fetch_api/using_fetch" target="_blank">fetch API documentation</a>.
@@ -208,7 +75,7 @@ Once you are set up, you can visit `http://localhost:3001/api/v1/ideas` and you 
   </section>
   <section class="answer">
 ### What does `.then()` do? What is the method called on? What does it return?
-`.then()` is a promise prototype method that runs when the promise object it is chained to successfully resolves. It returns a new promise object.
+`.then()` is a method of the Promise prototype that is called on a promise object. It is used to handle the successful resolution of a promise. When the promise resolves, the code inside the `.then()` block is executed. The `.then(`) method itself returns a new promise object, allowing for chaining multiple asynchronous operations together.
   </section>
   <section class="answer">
 ### What does `.catch()` do? What is the method called on? What does it return?
@@ -217,7 +84,6 @@ Once you are set up, you can visit `http://localhost:3001/api/v1/ideas` and you 
 </section>
 
 Okay. Let's refactor our IdeaBox so that we are consuming data from our API!
-
 <section class="call-to-action">
 ### Your Turn
 
@@ -226,121 +92,188 @@ Pair up and work together on implementing the functionality to `fetch` our ideas
 
 As we've noted before, we should use our catch somehow in order to display an error if something goes wrong.  Try stopping your backend server and see what happens.  Your catch should before firing (because the Promise rejected).  Let's do something with that error.
 
-Let's edit our intial state in our `App.js`:
+### Effect Hook
 
-```js
-// App.js
+The Effect Hook, `useEffect`, allows us to perform side effects (data fetching, subscriptions, etc) from a functional component.
+So far in React, we've leveraged the `useState` hook to manage our application data. Another common hook that you'll want to get comfortable with is `useEffect`. This hook allows you to perform some logic during certain phases of the **component lifecycle**. We'll first demonstrate how and when `useEffect` runs, and then we'll dig into the syntax before demonstrating some real world use-cases.
 
-this.state = {
-  ideas: [],
-  error: ''
-};
+### The Component Lifecycle
+
+Every component you create goes through several phases of existing:
+
+* **Mounting:** the component is being assessed, created and rendered on the DOM
+* **Updating:** any time we update state values that are used in our JSX, the component updates itself and re-renders reflecting those changes on the DOM
+* **Unmounting:** the component is completely removed from the DOM, usually in response to some sort of user interaction or change in state.
+
+ In the example bellow we are going to use `useEffect` and [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to handle the promise object that was return from the fetch API. 
+
+```jsx
+import React, { useState, useEffect } from 'react'
+
+function App() {
+  const [pets, setPets] = useState([])
+  const [error, setError] = useState('')
+
+  const getPets = async () => {
+    const url = 'http://localhost:3001/api/v1/pets'
+    setError('')
+
+    try {
+      const response = await fetch(url)
+      const pets = await response.json()
+      setPets(pets)
+    } catch(error) {
+      setError(error.message)
+    }
+  }
+
+  useEffect(() => {
+    getPets()
+  }, [])
+  
+  return (
+    <div className='App'>
+      <h1>PetBox</h1>
+      { error && error }
+      <PetList pets={pets} />
+    </div>
+  )
+}
+export default App
 ```
+<section class="call-to-action">
+### In Your Notebook
 
-Then inside of your catch, set the error message in state. Now, let's _do_ something with that information! Such as displaying it to the user.
+* Where does `useEffect` come from? We did not define it ourselves. What is our first step in making sure we can use it?
+* What data type is `useEffect`?
+* What argument does `useEffect` take in? What data type is it?
+</section>
+<section class="answer">
+### The Answer  
+
+`useEffect` is a function that we get for free when we import it from React. It takes in a function as an argument - this will fire any time React kicks off a call to `useEffect` (During the mounting, updating, unmounting phases)
+</section>
+
+Here, we've imported the `useEffect` hook from React and added a `getPets` method that will fetch all of our pets. 
+
+There are a few important things to be aware of in the code above. First, the `useEffect` hook **MUST** return a clean-up function or nothing at all. We can't return a Promise. This means that we can't write an async function inside of `useEffect` (because an async function always returns a Promise). That's why we have written `getPets` outside of `useEffect` and just called it inside of `useEffect`. 
+
+Also, notice that we have passed an empty array as a second argument to `useEffect`. Without doing this, we would get caught in a infinite loop because the `useEffect` hook runs when the component mounts **and** after **EVERY** update/render. Because we are setting the state after every data fetch, the component updates and the effect runs again. By adding an empty array as the second argument, we avoid activating the effect hook when the component updates and it will only run once when the component mounts and unmounts. If we want the effect to run when one of the variables is updated, then we would add that variable to the array. This could be a prop or a piece of state. Because we only want to update the pets once, on mount, and there are no other props or pieces of state that depend on this effect, we can pass an empty array. Check out [the docs](https://reactjs.org/docs/hooks-reference.html#conditionally-firing-an-effect) for more info on conditionally firing an effect.
+
+<section class="call-to-action">
+### Your turn!
+
+With a partner, work on the App component and implement  `useEffect`.
+
+* import `useEffect` from the react library
+* use the `useEffect` hook to set the title of this application.
+
+
+If you've done everything right, the IdeaBox should still work exactly as it did
+before!
+</section>
+
+<section class="answer">
+### Here's one way you could do it, don't look until you're done!
+
+```jsx
+import React, { useState, useEffect } from 'react';
+import Ideas from './Ideas';
+import Form from './Form';
+import './App.css';
+
+function App() {
+  const [ideas, setIdeas] = useState([])
+
+  useEffect(() => {
+    document.title = `IdeaBox (${ideas.length})`
+  })
+
+  const addIdea = (newIdea) => {
+    setIdeas([...ideas, newIdea]);
+  }
+
+  const deleteIdea = (id) => {
+    const filteredIdeas = ideas.filter(idea => idea.id !== id);
+
+    setIdeas(filteredIdeas);
+  }
+
+  return(
+    <main className='App'>
+      <h1>IdeaBox</h1>
+      <Form addIdea={addIdea} />
+      <Ideas ideas={ideas} deleteIdea={deleteIdea} />
+    </main>
+  )
+}
+export default App;
+```
+</section>
 
 ### Conditional Rendering
-
-We don't want an error message showing all the time. So ... let's make use of conditional rendering! Let's take a look at our current `render()` method:
-
+Conditional rendering is a powerful technique that allows us to show different UI components based on certain conditions. With React Hooks, we can easily implement conditional rendering in our functional components. Let's take a look at an example:
 ```jsx
-// App.js
+import React, { useState } from 'react';
+import Form from './Form';
+import Ideas from './Ideas';
 
-render() {
+function App() {
+  const [ideas, setIdeas] = useState([]);
+  const [error, setError] = useState('');
+
+  const addIdea = (newIdea) => {
+    setIdeas([...ideas, newIdea]);
+  };
+
+  const removeIdea = (id) => {
+    const filteredIdeas = ideas.filter((idea) => idea.id !== id);
+    setIdeas(filteredIdeas);
+  };
+
   return (
     <main className="App">
       <h1>IdeaBox</h1>
-      <Form addIdea={this.addIdea} />
-      <Ideas
-        ideas={this.state.ideas}
-        removeIdea={this.removeIdea}
-      />
+      <Form addIdea={addIdea} />
+      {error && <h2>{error}</h2>}
+      <Ideas ideas={ideas} removeIdea={removeIdea} />
     </main>
   );
 }
 ```
-
-If we wanted to add an `h2` that would show up if we had an error, what would we write?
-
-```jsx
-// App.js
-
-render() {
-  return (
-    <main className="App">
-      <h1>IdeaBox</h1>
-      <Form addIdea={this.addIdea} />
-      {this.state.error && <h2>{this.state.error}</h2>}
-      <Ideas
-        ideas={this.state.ideas}
-        removeIdea={this.removeIdea}
-      />
-    </main>
-  );
-}
-```
-
 Wowwwww okay. What does that syntax even mean?
 
-First of all, this is JavaScript (we can tell because of the curly brackets). The first statement of `this.state.error` will evaluate to a truthy or a falsy value (an empty string is falsy). The code after the double ampersand is what will render if we get past the first statement.
+First of all, this is JavaScript (we can tell because of the curly brackets). The first statement of error will evaluate to a truthy or a falsy value (an empty string is falsy). The code after the double ampersand is what will render if we get past the first statement.
 
-It's a shorthand way of saying, "If there is an error in state, render the error inside h2 tags!"
+It’s a shorthand way of saying, “If there is an error in state, render the error inside h2 tags!”
 
 Neato!
 
 Notice that we are only conditionally rendering the one part of the render that is contingent upon whether or not an error is in state.
 
-We're not rendering two different versions of the App. We just have the one, and one line will show up only if there is an error stored in state.
+We’re not rendering two different versions of the App. We just have the one, and one line will show up only if there is an error stored in state
 
 <section class="call-to-action">
-### Your Turn
 
-Imagine we have a slow connection or need to load A LOT of data.  We might want to implement some kind of loading icon.  Using conditional rendering, display a loading icon while the fetch is retrieving the data.
+## Your Turn 
+
+ Imagine we have a slow connection or need to load A LOT of data. We might want to implement some kind of loading icon. Using conditional rendering, display a loading icon while the fetch is retrieving the data.
 </section>
 
-<section class="call-to-action">
-### Diagramming
-Diagram out the react component lifecycle. Feel free to follow the diagram at the top of the lesson.
-Your diagram should include a description of the following methods, an example of what you might use them for, and an indication of when in the lifecycle they run:
-- `constructor`
-- `render`
-- `componentDidMount`
-- `componentDidUpdate`
-- `componentWillUnmount`
-Once you've completed your diagram, snap a pic of it and add it to the slack thread!
-</section>
+## Checks for Understanding
 
-<section class="call-to-action">
-### Reflect
+In your notebooks, respond to the following:
 
-Take a few minutes to journal to write notes to each of these questions:
+* What does `useState` do? What two things does it give back to us?
+* What does `useEffect` do? What two arguments do we need to pass to it?
 
-* What "aha" moments did you have?
-* Which concepts are the fuzziest for you right now?
-* Which concepts are the clearest for you right now?
-* What do you know about `componentDidMount`?
-</section>
 
-## Suggested homework
+## Resources
 
-<section class="call-to-action">
-### Additional Async Practice
-
-Right now, our IdeaBox will work as expected. However, you'll notice that our `addIdea` and `deleteIdea` methods are only manipulating our application state, rather than interacting at all with our back-end.
-
-Go take a look at the BE repo's README. There is documentation for adding and deleting ideas.
-
-Refactor IdeaBox to use these endpoints. Hint: you might need to write more fetches...
-
-When you have completed this functionality, compare it to the solution on the `react-iii-complete` branch.
-</section>
-
-## References
-
-- [React Lifecycle Docs](https://reactjs.org/docs/react-component.html)
-- [The React Life Cycle](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/introduction.html)
-- [Understanding Component Lifecycle](https://medium.com/@baphemot/understanding-reactjs-component-life-cycle-823a640b3e8d)
-- [Dan Abramov's Twitter chart/convo on modern React lifecycle methods](https://twitter.com/dan_abramov/status/981712092611989509)
-- [Error handling in React 16](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html)
-- [Update on Async Rendering](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
-- [React v16.3.0: New Lifecycles](https://reactjs.org/blog/2018/03/29/react-v-16-3.html)
+* [React Docs on Hooks](https://react.dev/reference/react)
+* [Making Sense of React Hooks](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889) by Dan Abramov
+* [React hooks: not magic, just arrays](https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e) by Rudi Yardley
+* [Why React's new Hooks API is a game changer](https://itnext.io/why-reacts-hooks-api-is-a-game-changer-8731c2b0a8c) by Rudi Yardley
+* [How to fetch data with React Hooks](https://www.robinwieruch.de/react-hooks-fetch-data/) by Robin Wieruch
+* [How the useEffect Hook Works](https://daveceddia.com/useeffect-hook-examples/) by Dave Ceddia
+* [LifeCycle methods - Data management using class component](https://frontend.turing.edu/lessons/module-3/react-3-advanced-data-management.html) 
