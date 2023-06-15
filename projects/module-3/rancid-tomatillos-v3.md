@@ -9,7 +9,7 @@ This project is definitely not Rotten Tomatoes. Nor is it Netflix. Nor is it IMD
 ## Learning Goals
 
 * Gain competency with React fundamentals
-* Learn how to test React components & asynchronous JS
+* Test React components & asynchronous JS
 * Practice refactoring
 * Create a multi-page UX using Router
 
@@ -17,7 +17,7 @@ This project is definitely not Rotten Tomatoes. Nor is it Netflix. Nor is it IMD
 
 We've broken this project down into iterations. Please be sure to read them closely with your project partner!
 
-### Iteration 0 - Deliverables
+### Iteration 0 - Initial Deliverables
 
 **Turn in all deliverables via [this google sheet](https://docs.google.com/spreadsheets/d/1YDI4TAFdkOhpcFatdGONR7QtlDZVOpsvJVimtX77M6I/edit?usp=sharing).**
 
@@ -57,7 +57,7 @@ import movieData from 'put your filepath here'
 
 ### Iteration 2 - Displaying an individual movie
 
-For the second iteration, we'll use [`conditional rendering`](https://frontend.turing.edu/lessons/module-3/react-3-advanced-data-management.html) to show a single movie's details.
+For the second iteration, we'll use [`conditional rendering`](https://react.dev/learn/conditional-rendering) to show a single movie's details.
 
 In the future, when we use the actual API to get individual movie details, the information will change. For now, you can use some default "dummy" data, and know that it will eventually change and be dynamic:
 
@@ -79,11 +79,13 @@ In the future, when we use the actual API to get individual movie details, the i
 
 ### Iteration 3 - Network Requests & Async JS
 
-For the third iteration, we'll refactor our application to use actual data from the database (information is below) instead of our mocked `movieData` file. We'll also add some type checking with [PropTypes](https://frontend.turing.edu/lessons/module-3/proptypes.html)
+For the third iteration, we'll refactor our application to use actual data from the database (information is below) instead of our mocked `movieData` file. 
 
-The information about the API we are using is located
+We'll also add some type checking with [PropTypes](https://frontend.turing.edu/lessons/module-3/proptypes.html)
 
-<section class="answer">
+Also, please complete the First Weekend Deliverables (found below)
+
+<section class="note">
 ### API setup and documentation
 
 There is no setup! You are not going to run an API locally to start this project. The API was created by your instructors and it lives on Heroku. The API you'll be working with lets you make GET, POST, and DELETE requests.
@@ -154,7 +156,7 @@ The point of these code reviews is to get you familiar with common code review p
 
 ### Iteration 4 - Refactoring with Router, Testing with Cypress
 
-In the fourth iteration, we will be testing with Cypress, and refactoring our application to use [Router](https://frontend.turing.edu/lessons/module-3/react-router-v5.html) instead of conditional rendering to change the view!
+In the fourth iteration, we will be testing with Cypress, and refactoring our application to use [Router](https://reactrouter.com/en/main) instead of conditional rendering to change the view!
 
 For Cypress, add the following tests to start:
 
@@ -165,7 +167,7 @@ For Cypress, add the following tests to start:
 
 So far the application has worked like a single page application. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes.
 
-To crete a better UX, we're going to be using [React Router](https://v5.reactrouter.com/) to conditionally render our views based on the URL.
+To crete a better UX, we're going to be using [React Router](https://reactrouter.com/en/main) to conditionally render our views based on the URL.
 
 This iteration is all about refactoring. Use the table below to add in appropriate routes.
 
@@ -208,6 +210,8 @@ Here is a list of concepts (including some push-yourself learning goals):
 - React
 - Router
 - Asynchronous JS
+- Responsive Design
+  - use media queries and other tools to allow your application to resize to varying screen sizes
 - Testing
   - Ensure that every view is tested (including all possible renders when dealing with conditional rendering)
   - Ensure that all possible user flows are tested (happy and sad paths)
@@ -215,7 +219,8 @@ Here is a list of concepts (including some push-yourself learning goals):
 - Express (server-side JavaScript)
 - Deployment
 
-Decide as a team what to focus on.
+Decide as a team what to focus on. Also, please complete the Week 2 Deliverables (found below)
+
 
 <section class="note">
 ### A word of warning!
@@ -232,21 +237,19 @@ It is _far_ more important to be very, very solid on the project stated learning
 Once you have decided on the area to continue learning, decide on a new feature or refactor.
 
 <section class="call-to-action">
-### DELIVERABLE  
+### WEEK 2 DELIVERABLES
 On Friday of Week 2, send a specific outline of features/work/goals to your instructors in the group DM. Please include user stories, too. Do not begin work until you get the go-ahead from an instructor. (We may help you make your goal more specific or achievable.)
 
 Here are some ideas:
 * **More React and/or Router practice:**
   - Add a search/filtering functionality for movies
 * **More testing practice:**
-  - Take time to carefully ensure that you have tested all possible views and user flows
-  - Check to see if you have a test for each user story (using the story's acceptance criteria as a guide)
-  - Supplement your Cypress tests with unit tests and integration tests by using the React Testing Library
+  - Supplement your Cypress tests with a non-trivial amount of unit tests and integration tests by using the React Testing Library 
+  - Implement 2-3 new concepts from the Cypress library that have not been covered in lessons (check out the following resources for ideas: [commands](https://docs.cypress.io/api/cypress-api/custom-commands), [component testing](https://docs.cypress.io/guides/component-testing/overview), [parallelization](https://docs.cypress.io/guides/guides/parallelization), [etc](https://docs.cypress.io/guides/overview/why-cypress))
 * **Push yourself** (extra learning if every member of the team feels SUPER CONFIDENT in everything React, Router, and testing)**:**
   - Create your own Express microservice to store user ratings for movies; build FE functionality to use and display that service
   - Create your own Express microservice to store user favorites; build FE functionality to use and display that service
   - Create your own Express microservice to store which movies the user has watched; build FE functionality to use and display that service
-  - Deploy your React app (to GitHub Pages or similar service)
 
 You are welcome to come up with your own ideas, too.
 </section>
@@ -270,100 +273,50 @@ In Mod 3, instructors grade your projects asynchronously, providing thorough not
 
 ## Rubric
 
-Remember: scores are an indicator of your progress in specific areas. Use them to inform/update your future study patterns!
-
-Score key:  
-- **4:** above and beyond expectations; team did self-teaching
-- **3:** right on track; team is exactly where instructors expect them to be
-- **2:** a little behind; be sure to devote study & practice time to this area in order to accelerate growth/understanding
-- **1:** very behind; strongly recommend team reaches out to instructors to create a plan to catch up in this area
+For the rubric sections below, you will be scored as **Wow, Yes or Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstrate competency. These are just some examples.
 
 ### React Architecture
 
-* **4:**
+On track can look like:
   - A consistent, modular file structure is used
-  - A clear understanding of class components vs function components is demonstrated
-  - Only the data that a child component _needs_ is passed down as props
-  - Logic is kept out of `return` statements; `return` statements are as readable as possible, only communicating what will be displayed
-  - Fetch calls have been refactored to be reusable for multiple queries
-  - Frontend data (state) always matches the backend data
-  - Data fetched from API is run through a cleaning function (which is defined in a separate `utilities` file)
-  - Implements excellent error handling if movie database server is down or fetch fails (this includes loading images as well as error messages on the frontend)
-  - PropTypes or type-checking of props is complete and specific (all data passed into a component is correctly and specifically identified)
-* **3:**
-  - A consistent, modular file structure is used
-  - A clear understanding of class components vs function components is demonstrated
-  - Only the data that a child component _needs_ is passed down as props
-  - Logic is kept out of return statements; return statements are as readable as possible, only communicating what will be displayed
-  - There are some issues with the asynchronous JS where the frontend is not matching with the backend
-  - There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
-  - Data fetched from API is not cleaned before being set to state
-  - PropTypes or type-checking of props is mostly complete
-* **2:**
-  - The file structure is inconsistent and/or not modular
-  - There is some confusion about when to use a class or function component, but it does not strongly hinder functionality
-  - Unnecessary data is passed down to child components as props
-  - `return` statements contain logic that should be refactored out for the sake of readability and performance
-  - There are methods that are being created inside of functional components that should be passed down through props from a parent class component
-  - API calls have not been broken out into their own file
-  - PropTypes or type-checking of props is incomplete
-* **1:**
-  - Project shows little understanding of React and significant refactoring is required, including but not limited to:
-    - component structure is inconsistent or buggy
-    - a class component is used when a function component is preferable, and/or vice versa
-    - props are being passed or accessed incorrectly
-    - props are being mutated
-    - state is directly mutated
-  - File structure is not modular.
-  - PropTypes or type-checking of props is not implemented
+  - Create reusable and modular functional components by incorporating props and considering component composition
+  - hooks are implemented to manage and update state
+  - Pass functions as props to effectively organize the application
+  - `return` statements are as readable as possible, only communicating what will be displayed
+  - Frontend state matches the backend data
+  - Props are protected via Proptypes or type-checking
+  - Only necessary data is passed as props
+  - state is pure and immutable
+  - Code is DRY, reusable, and empathetic 
+
+WOW can look like:
+  - Deploy your React app (to GitHub Pages or similar service)
+  - Application handles errors if the server is down or if a fetch call fails and displays information to the user
+  - Application shows loading state
+  - Only necessary data is used in the application when retrieving data from a server
 
 ### Testing
 
-* **4:**
-  - Team has successfully achieved 90%+ test coverage of all components
-  - All async functionality is stubbed and tested
-  - Async tests cover happy & sad paths
-  - All application views are tested
-  - All user flows are tested
-* **3:**
+On track can look like:
   - All application views are tested
   - All user flows are tested
   - Happy path async functionality is stubbed and tested
-* **2:**
-  - Most application views are testeed
-  - A valid attempt is made at testing user flows; some flows may be missing or incomplete
-  - Little or no attempt at async testing was made
-* **1:**
-  - Many application views tests are missing/failing
-  - Little or no attempt is made at testing user flows
-  - Little or no attempt is made at async testing
-  - There are obvious, large gaps in testing app functionality
+
+Wow Option: Sad path async functionality is tested
 
 ### Routing
 
-* **4:**
-  - Application has been refactored to use Router without leaving artifacts of the prior code (no odd workarounds remaining)
-  - Use of Router shows developer empathy (readability, maintainability)
-  - UX is excellent; routes are consistent and navigation is clear
-  - When the user enters a bad URL, they are given an easy way to navigate to a working page
-* **3:**
+On track can look like:
   - Application uses Router to display appropriate components based on URL
-  - Refactoring was clean; there may be a few code smells showing the existence of the prior code, but there are no major bugs indicating a lack of understanding of Router
-  - Application uses React Router components and does not manipulate the `history` object
-  - UX is clear and set up so the user has access to previous routes
-  - A 404 page handles undefined routes
-* **2:**
-  - Application uses Router but does not display the appropriate components when navigating throughout the app
-  - Refactoring is messy; there are remnants of the previous code or other code smells that indicate that Router is not clearly understood
-  - There are 1+ issues with the UX; access to routes is unclear or not fully implemented
-  - Bad URLs are not handled
-* **1:**
-  - Application uses Router but fails to properly display all necessary routes
-  - Application does not use built-in React Router components and instead directly manipulates the `history` object
-  - UX is challenging; multiple pages are missing links to routes, or browser Back/Forward arrow navigation does not work
+  - The user has access to previous routes via the back button
+  - A 404 page handles unknown routes
+
+Wow option: Code was refactored to remove unnecessary or old code artifacts
+
 
 ### Project Professionalism
 You will not receive a score for professionalism, but you should be meeting these expectations:
+* Each group member contributes equitably to the project. Failure to participate can result in an individual failing the project, even if the project is otherwise passing
 * README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
 * README links to all user GitHub profiles and any applicable repos/deployed sites
 * README includes a gif of the application

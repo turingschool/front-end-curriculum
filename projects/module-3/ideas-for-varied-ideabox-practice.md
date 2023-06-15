@@ -17,7 +17,8 @@ Throughout Mod 3 you'll be building an `Ideabox` over and over again. An `IdeaBo
 ## Features
 In order to get the practice with all of the fundamentals, a thorough ideabox might contain the following features:
 
-- Functional and Class components
+- Functional components
+- React hooks to manage and update state
 - A controlled form or two that allows user to render elements to the page
 - Get and Post network requests (if possible)
 - Cypress tests for general user flows and network requests
