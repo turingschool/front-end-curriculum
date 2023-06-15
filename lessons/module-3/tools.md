@@ -9,7 +9,6 @@ module: 3
 Download the following:
 
 * [Postman](https://www.getpostman.com/)
-* [Redux dev tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 * [Postico](https://eggerapps.at/postico/)
 
 And bookmark this page (you will set up your linters for each project with these instructions):
