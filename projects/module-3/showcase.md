@@ -26,7 +26,8 @@ This project will challenge you to use the technology you've become familiar wit
   - Ability for users to **store/manipulate** the data displayed in the application, such as favoriting or adding to a list, searching, commenting, etc
   - Multiple views handled by Router
   - Be deployed using Vercel, Heroku, Surge, or any other similar service
-
+  - PropTypes has been implemented in all components with props
+  - App is responsive across mobile, tablet and desktop sizes
 ## Abstract
 
 This project, having a short time frame, will need to pack a lot into a small space. We're going to accomplish this by building an app that serves the needs of a very small, very niche audience.
@@ -141,155 +142,93 @@ Project evals will be asynchronous.  The feedback for this project will be limit
     - what choices did you make when you wrote it?
 3. Answer the following question in a short paragraph, using specific examples from a Mod 3 project:
   * “What is a benefit of using a framework like React over vanilla JS? What is a drawback?” (this is a common interview question!)
-<!-- 4. **OPTIONAL:** Identify one function or test that you would like specific feedback on
-  * Send us the link
-    - Instructions on grabbing the link can be found [here](https://stackoverflow.com/questions/23821235/how-to-link-to-specific-line-number-on-github)
-  * If you do not want specific feedback, you can skip this step -->
+
+## Minimum Professionalism Expectations
+
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. 
+* A project board is utilized (and updated throughout the project) with Github issues and labels.
+* Developer uses branches, PRs and thorough code reviews to add new code to the main branch.
+* The README is formatted well and at a minimum contains:
+  * Overview of project and goals
+  * Overview of technologies used, challenges, wins, and any other reflections
+  * Screenshots/gifs of your app
+  * List of contributors
+
 
 ## Rubric
 
-Remember: scores are an indicator of your progress in specific areas.
+### Project Requirements Rubric
+For the rubric sections below, you will be scored as Wow, Yes or Not Yet depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency. These are just some examples.
 
-Score key:  
-- **4:** above and beyond expectations; did extensive self-teaching to achieve
-- **3:** right on track; exactly where instructors expect you to be
-- **2:** a little behind; be sure to devote study & practice time to this area in order to accelerate growth/understanding
-- **1:** very behind; strongly recommend you reach out to instructors to create a plan to catch up in this area
+<section class="answer">
+**Does the project demonstrate student understanding of the learning goals & concepts?**
 
-### Specification Adherence
+Projects will answer that question, being marked as yes, not yet, and wow. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
 
-* **4:**
-  - Project meets MVP & adds nice-to-haves; meets all project requirements
-* **3:**
-  - Project meets MVP; meets all project requirements, and is responsive for desktop and mobile screens
-* **2:**
-  - Project either does not meet MVP, does not meet all project requirements, or is not responsive
-* **1:**
-  - Project does not meet MVP or project requirements
+The overall project outcome (yes, not yet, wow) is determined by “averaging” each section’s outcome. You can think of a “yes” being worth a 1, a “not yet” being worth a 0, and a “wow” being worth a 2.
 
-### React Architecture
+For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below).
+</section>
 
-* **4:**
-  - A consistent, modular file structure is used
-  - A clear understanding of class components vs function components is demonstrated (if using hooks, a clear understanding of when hooks need to be used is sufficient)
-  - Only the data that a child component _needs_ are passed down as props
-  - Logic is kept out of `return` statements; `return` statements are as readable as possible, only communicating what will be displayed
-  - Fetch calls have been refactored to be reusable for multiple queries
-  - Frontend data (state) always matches the backend data
-  - Data fetched from API is run through a cleaning function (which is defined in a separate `utilities` file)
-  - Implements excellent error handling if movie database server is down or fetch fails (this includes loading images as well as error messages on the frontend)
-  - PropTypes or type-checking of props is complete and specific (all data passed into a component is correctly and specifically identified)
-* **3:**
-  - A consistent, modular file structure is used
-  - A clear understanding of class components vs function components is demonstrated (if using hooks, a clear understanding of when hooks need to be used is sufficient)
-  - Only the data that a child component _needs_ is passed down as props
-  - Logic is kept out of return statements; return statements are as readable as possible, only communicating what will be displayed
-  - There are some issues with the asynchronous JS where the frontend is not matching with the backend
-  - There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored
-  - Data fetched from API is not cleaned before being set to state
-  - PropTypes or type-checking of props is mostly complete
-* **2:**
-  - The file structure is inconsistent and/or not modular
-  - There is some confusion about when to use a class or function component, but it does not hinder functionality
-  - Unnecessary data is passed down to child components as props
-  - `return` statements contain logic that should be refactored out for the sake of readability and performance
-  - There are methods that are being created inside of functional components that should be passed down through props from a parent class component
-  - API calls have not been broken out into their own file
-  - PropTypes or type-checking of props is incomplete
-* **1:**
-  - Project shows little understanding of React and significant refactoring is required, including but not limited to:
-    - component structure is inconsistent or buggy
-    - a class component is used when a function component is preferable, and/or vice versa
-    - props are being passed or accessed incorrectly
-    - props are being mutated
-    - state is directly mutated
-  - File structure is not modular.
-  - PropTypes or type-checking of props is not implemented
+While M3 rubrics do not have a separate section for WOWs like in M1, there are a few WOW examples noted throughout. In addition to these WOW bullets, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections.
 
-### Testing
+<section class="answer">
+### Specification Adherence / Functional Expectations
+💫ON TRACK💫 can look like:
+- Project meets all MVP requirements 
+- App is fully resposive across mobile, tablet and desktop devices
 
-* **4:**
-  - Team has successfully achieved 90%+ test coverage of all components
-  - All async functionality is stubbed
-  - Tests cover happy & sad path user flows
-  - All user flows are covered
-* **3:**
-  - All user flows are covered
-  - Async functionality is stubbed at least once
-* **2:**
-  - Most user flows are covered, sad paths are not
-  - A valid attempt is made at stubbing async functionality
-* **1:**
-  - Many tests are missing/failing
-  - Tests do not successfully illustrate user flows
-  - No async functionality is stubbed
-  - There are obvious, large gaps in testing app functionality
+✨WOW✨ can look like:
+- Project completes 1 or more additional features beyond MVP
+- * After your project is completely finished, you could deepen your understanding of React and strive for a WOW by creating a new branch and refactoring your stateful components into class-based components. You will not merge this branch in. Instead, DM a link for that branch/PR to your project manager. Highlight your ability to work with both styles by describing the refactor and linking to the branch in your README.
+</section>
 
+<section class="answer">
+### React Architecture:
+
+💫ON TRACK💫 can look like:
+* A consistent, modular file structure is used
+* A clear understanding of stateful components vs stateless components is demonstrated
+* Only the data that a child component _needs_ is passed down as props
+* Logic is kept out of return statements when possible; return statements are as readable as possible, only communicating what will be displayed.
+* The data displayed on the frontend is consistent with the data stored on the backend
+* Functions follow the single responsibility principle and are written to be reusable when appropriate
+* Data fetched from API is cleaned before being set to state
+* All components which receive props implement prop typechecking (proptypes or otherwise)  
+</section>
+
+<section class="answer">
 ### Routing
-
-* **4:**
-  - Application has been refactored to use Router without leaving artifacts of the prior code (no odd workarounds remaining)
-  - Use of Router shows developer empathy (readability, maintainability)
-  - UX is excellent; routes are consistent and navigation is clear
-  - When the user enters a bad URL, they are given an easy way to navigate to a working page
-* **3:**
   - Application uses Router to display appropriate components based on URL
-  - Refactoring was clean; there may be a few code smells showing the existence of the prior code, but there are no major bugs indicating a lack of understanding of Router
-  - Application uses React Router components and does not manipulate the `history` object
-  - UX is clear and set up so the user has access to previous routes
+  - The user has access to previous routes via the back button
   - A 404 page handles undefined routes
-* **2:**
-  - Application uses Router but does not display the appropriate components when navigating throughout the app
-  - Refactoring is messy; there are remnants of the previous code or other code smells that indicate that Router is not clearly understood
-  - There are 1+ issues with the UX; access to routes is unclear or not fully implemented
-  - Bad URLs are not handled
-* **1:**
-  - Application uses Router but fails to properly display all necessary routes
-  - Application does not use built-in React Router components and instead directly manipulates the `history` object
-  - UX is challenging; multiple pages are missing links to routes, or browser Back/Forward arrow navigation does not work
+  - UX is clear and set up so the user has access to previous routes
+  - When the user enters a bad URL, they are given an easy way to navigate to a working page
+</section>
 
-  ### Project Professionalism
-  You will not receive a score for professionalism, but you should be meeting these expectations:
-  * Project is deployed
-  * README includes the deployed link and it is easy to locate
-  * README concisely communicates your learning goals, the evolution of the project, and reflections while using good formatting to enhance readability
-  * README links to any applicable repos/deployed sites and includes clear instructions for running the application locally
-  * README includes a gif of the application
-  * Git commits are atomic, with concise and precise descriptions of the change made
-  * PRs have full, consistent descriptions
-  * Evolution of the project (decisions made, etc) are fully and clearly documented in the git history and PRs
-  * When the project is run locally, the terminal shows no errors or warnings
+<section class="answer">
+### Testing:
+* All user flows are tested
+* All network request functionality is intercepted and stubbed
+* Tests make specific assertions about the content DOM elements contain
+* All sad path user flows have been tested
+</section>
 
-<!-- ### Project Professionalism
+<section class="answer">
+### Professionalism 
+You will not receive a score for professionalism, but you should be meeting these expectations:
+💫ON TRACK💫 can look like:
+* Project is deployed
+* README concisely communicates the developer's individual and joint learning goals, the evolution of the project, and developer reflections while using good formatting to enhance readability
+* README links to all user GitHub profiles and any applicable repos & deployed sites
+* Setup instructions for any and all repos are thorough and verbose enough that even non-technical people (like recruiters) could follow them
+* Git commits are atomic, with concise and precise descriptions of the change made.
+* PRs have full, consistent descriptions
+* Evolution of the project (decisions made, etc) is documented in the git history and PRs
+* When the project is run locally, the terminal shows no errors and no warnings.
 
-The goal of this rubric section is to continue to gauge your readiness and prepare you for workplace standards. As you ramp up your job hunt, it becomes increasingly important to demonstrate to future employers that you are not sloppy and take care with the details of your work and processes!
-
-* **4:**  
-  - README concisely communicates your learning goals, the evolution of the project, and reflections - while using good formatting to enhance readability
-  - README links to any applicable repos/deployed sites
-  - You use a rebase workflow
-  - Git commits are atomic, with concise and precise descriptions of the change made
-  - PRs have full, consistent descriptions
-  - You lean on cohortmates or a mentor to do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging
-  - Evolution of the project (decisions made, etc) is fully and clearly documented in the git history and PRs
-  - When the project is run locally, the terminal shows no errors or warnings
-* **3:**
-  - README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
-  - README links to all applicable repos/deployed sites
-  - Git commits are atomic, with concise and precise descriptions of the change made
-  - PRs have full, consistent descriptions
-  - Evolution of the project (decisions made, etc) is documented in the git history and PRs but is sometimes unclear
-  - When the project is run locally, the terminal shows no errors and fewer than 5 warnings
-* **2:**
-  - README concisely communicates your learning goals and the evolution of the project, but does not use Markdown formatting to aid readability
-  - README links to any applicable repos/deployed sites
-  - Git commits are mostly atomic but sometimes document changesets that are too large
-  - PRs do not have thorough descriptions
-  - Evolution of the project (decisions made, etc) is not clearly documented through git commits and PRs
-  - When the project is run locally, the terminal shows no errors and more than 5 warnings
-* **1:**
-  - README does not document your learning goals, the evolution of the project, and is poorly formatted (hindering readability)
-  - README does not include links to team member's GitHub profiles
-  - Git commits are not atomic and document changesets that are too large
-  - PRs do not have thorough descriptions, and no code reviews are conducted, merging bugs into the main branch
-  - When the project is run locally, the terminal shows errors and more than 5 warnings -->
+✨WOW✨ can look like:
+* Mapping out extensions in your project board beyond your MVP
+* Using github issues to track bugs or other issues as they crop up. 
+* Getting several PR reviews from your rocks and/or mentors and implementing their feedback _before_ you merge the PR.
+</section>
