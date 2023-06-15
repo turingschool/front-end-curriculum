@@ -1,0 +1,19 @@
+name: Run Algolia Indexing Monthly
+
+on:
+  schedule:
+    # - cron: '0 0 1 * 1' eventual value for production
+    - cron: '45 13 * * *'
+
+jobs:
+  algolia-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7.4'
+      - name: Install dependencies
+        run: bundle install
+      
