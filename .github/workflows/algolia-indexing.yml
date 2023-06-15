@@ -2,8 +2,8 @@ name: Run Algolia Indexing Monthly
 
 on:
   schedule:
-    # - cron: '0 0 1 * 1' eventual value for production
-    - cron: '50 19 * * *'
+    # - cron: '0 0 2 * *' eventual value for production
+    - cron: '10 * * * *'
 
 jobs:
   algolia-index:
@@ -16,4 +16,8 @@ jobs:
           ruby-version: '2.7.4'
       - name: Install dependencies
         run: bundle install
+      - name: Run Algolia indexing
+        env: 
+          algolia_api_key: ${{ secrets.ALGOLIA_API_KEY }}
+        run: ALGOLIA_API_KEY=$algolia_api_key bundle exec jekyll algolia push
       
