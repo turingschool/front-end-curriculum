@@ -157,7 +157,7 @@ Let's start building out our App component.
 
 Let's figure out what should be a component in our app.
 
-![IdeaBox wireframe](../assets/images/ideaBox/IdeaBox-Browser.png)
+![IdeaBox wireframe](../../../assets/images/lessons/IdeaBox/IdeaBox-Browser.png)
 
 - We have an App component. That should probably hold onto our list of ideas.  
 
@@ -167,7 +167,7 @@ Let's figure out what should be a component in our app.
 
 - We can create an Ideas component to hold all of our Cards.  
 
-![IdeaBox wireframe with component boxes](../assets/images/ideaBox/IdeaBox-wireframe.png)
+![IdeaBox wireframe with component boxes](../../../assets/images/lessons/IdeaBox/IdeaBox-wireframe.png)
 
 ### App.js
 
