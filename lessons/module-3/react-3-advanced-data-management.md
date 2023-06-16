@@ -17,7 +17,7 @@ tags: react, hooks, useEffect, Network request
 
 ## React Introduces Hooks (v16.8 - February 2019)
 
-Hooks are functions that let you "hook into" React state and lifecycle features from functional components. React gives us some built-in hooks that we'll take a look at shortly, but we can also create our own custom hooks that will allow us to reuse/share stateful logic.
+Hooks are functions that let you "hook into" React state and lifecycle features from functional components. React gives us some built-in hooks, that we'll take a look at shortly, but we can also create our own custom hooks that will allow us to reuse/share stateful logic.
 
 There are a number of different motivations behind adding hooks to React, which you can read more about [here](https://reactjs.org/docs/hooks-intro.html#motivation). The most important take-away for you is that hooks allows us to streamline our applications and leverage the power of functional components.
 
