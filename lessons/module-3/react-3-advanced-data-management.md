@@ -6,7 +6,7 @@ tags: react, hooks, useEffect, Network request
 ---
 
 ## Learning Goals
-* Understand how to perform network request and use it within `useEffect`.
+* Be able to perform network requests and make use of the response data with the useEffect hook.
 * Understand how to perform side effect behavior in a functional component with `useEffect`.
 * Understand how to perform conditional rendering in functional component.
 
