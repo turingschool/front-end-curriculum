@@ -337,7 +337,7 @@ export default App;
 
 Open up your React Dev Tools (open your dev tools, then go to the Components tab). You can see that App now has state:
 
-![App component state](../assets/images/ideaBox/React-dev-tool.png)
+![App component state](../../../assets/images/lessons/IdeaBox/React-dev-tool.png)
 
 Neat!
 
