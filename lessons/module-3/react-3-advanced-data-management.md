@@ -6,14 +6,15 @@ tags: react, hooks, useEffect, Network request
 ---
 
 ## Learning Goals
-* Be able to perform network requests and make use of the response data with the useEffect hook.
+* Be able to perform network requests and make use of the response data with the `useEffect` hook.
 * Understand how to perform side effect behavior in a functional component with `useEffect`.
-* Understand how to perform conditional rendering in functional component.
+* Be able to conditionally render different views in a function component.
 
 
 ## Vocab
 
 * `useEffect` - A React Hook which enables us to add side effect behavior to a functional component.
+* Side effect - Any action performed by a component that causes a change in the application state or interacts with the outside world. 
 
 ## React Introduces Hooks (v16.8 - February 2019)
 
@@ -74,7 +75,7 @@ Once you are set up, you can visit `http://localhost:3001/api/v1/ideas` and you 
   </section>
   <section class="answer">
 ### What does `.then()` do? What is the method called on? What does it return?
-`.then()` is a method of the Promise prototype that is called on a promise object. It is used to handle the successful resolution of a promise. When the promise resolves, the code inside the `.then()` block is executed. The `.then(`) method itself returns a new promise object, allowing for chaining multiple asynchronous operations together.
+`.then()` is a method of the Promise prototype that is called on a promise object. It is used to handle the successful resolution of a promise. When the promise resolves, the code inside the `.then()` block is executed. The `.then()` method itself returns a new promise object, allowing for chaining multiple asynchronous operations together.
   </section>
   <section class="answer">
 ### What does `.catch()` do? What is the method called on? What does it return?
@@ -100,7 +101,7 @@ So far in React, we've leveraged the `useState` hook to manage our application d
 
 Every component you create goes through several phases of existing:
 
-* **Mounting:** the component is being assessed, created and rendered on the DOM
+* **Mounting:** the component is being assessed, created and rendered on the DOM.The mounting phase occurs only once when the component is first rendered and added to the DOM, and subsequent updates to the component do not trigger the mounting phase again. 
 * **Updating:** any time we update state values that are used in our JSX, the component updates itself and re-renders reflecting those changes on the DOM
 * **Unmounting:** the component is completely removed from the DOM, usually in response to some sort of user interaction or change in state.
 
