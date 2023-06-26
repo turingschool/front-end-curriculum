@@ -9,18 +9,28 @@ module: 3
 By the end of this lesson, you will:
 
 * Know how to talk about the various parts of a url
-* Know what CRUD is
-* Know what an API is
-* Know what REST is and what some alternatives are
-
+* Understand the fundamentals of REST API design
+* Talk to some high level differences between REST, SOAP and GraphQL
+* Gain familiarity with the concept of API versioning
 
 ## Vocab
 
-* Static Asset
-* Endpoint
-* API
-* CRUD
-* REST
+* API - Application programming interface
+* CRUD - Create, Read, Update, Destroy
+* REST - representational state transfer
+* API versioning - the practice of managing changes to an API and ensuring that these changes are made without disrupting clients
+
+<section class="call-to-action">
+### Warmup
+
+Take some time to explore these [free REST APIs](https://github.com/public-apis/public-apis), and practice making requests from your dev tools console. **NOTE:** The APIs you should be exploring should have a value of **No** for **Auth** as well as **CORS**, otherwise you won't be able to make requests from your dev tools. 
+
+In your journal, answer the following questions:
+* What are the available endpoints and their functionalities?
+* What kind of data does the API provide?
+* What are the potential use cases for the API?
+
+</section>
 
 ## The anatomy of a URL
 Our applications will request HTML documents, CSS files, images, and data. The way each of these requests are made is quite different:
@@ -54,7 +64,7 @@ It is simply the protocol for transmitting documents across the internet. There 
 </section>
 
 ### Some Introspection
-Take 5 minutes to think about API endpoints that you've used before. How were they structured? Did you have to use different HTTP methods? Write down some URLs that you had to use to make API requests.
+Think back to the API endpoints you explored in the warmup. How were they structured? Did you have to use different HTTP methods? Write down some URLs that you had to use to make API requests.
 
 ## RESTful API design
 
@@ -78,14 +88,68 @@ That's a lot of words, at a high level, REST is really just a pattern that match
 
 What RESTful api endpoint have you used in the past? How do you know they're RESTful?
 
-### Some alternatives
-
-* [SOAP](https://en.wikipedia.org/wiki/SOAP) or Simple Object Access Protocol was the standard for a long time before rest.
-* [GraphQL](https://graphql.org/) is becoming more and more popular because you only get what you ask for in a request.
-
 ### Activity time!
 With a partner, design an api that implements CRUD for sharks or puppies (based on the app we worked on yesterday). For each type of request - GET, POST, and DELETE - answer these questions:
   * What endpoints will you need? Write down the URLs.
   * What information do you need in the request?
   * What will you send back in the response? (i.e. What data? What response status?)  
 HINT: Consider organizing your work in a table, like [this one](https://github.com/turingschool-examples/overlook-api). If you'd like, you can use [this template](https://docs.google.com/spreadsheets/d/1-aqqA510nihdYDIsOTbJX5tBq0e_mm0vE8yIVGCXrBk/edit?usp=sharing) to get started.
+
+
+## Some alternatives
+REST API is the only design paradigm when it comes to making APIs, so let's explore some alternatives:
+* SOAP: simple object access protocol
+  * https://www.dataaccess.com/webservicesserver/NumberConversion.wso 
+* GraphQL: a query language for your API
+  * https://studio.apollographql.com/public/countries/variant/current/explorer
+
+<section class="call-to-action">
+### Breakout Activity
+
+You and two others will be comparing and contrasting the different types of API designs. 
+* The **oldest** member of your group will be presenting on **SOAP** APIs.
+* The **youngest** member of your group will be presenting on **GraphQL**.
+* The **middle** member of your group will be presenting on **REST** APIs.
+
+These presentations should be short and concise, there's no need to go beyond surface level here. The purpose of this activity is to highlight a few key differences between API designs so you have some ground to start on if presented with an API outside of REST protocol. 
+
+Each short presentation should include: 
+* Data represenation (how is data is formatted and utilized in the API)
+* Pros & cons of each design
+* Unique use cases or considerations
+</section>
+
+## API Versioning
+**API versioning** is a crucial aspect of developing and maintaining APIs. It allows developers to introduce changes and enhancements to their APIs while ensuring backward compatibility. It is commonly implemented by including version numbers in the URL.
+
+<section class="call-to-action">
+### Consider this scenario
+Your team is responsible for maintaining an API endpoint that provides product information: **https://api.example.com/v1/products**. Thousands of businesses use your endpoint for looking up your product information. 
+
+One day, your product manager sends your team a ticket that updates your endpoint to change the shape of your response (i.e. the JSON schema changes: more properies are added, and the keys of some properties are changed).
+
+As you finish work on this ticket, a senior developer updates the endpoint that serves this data to **https://api.example.com/v2/products**.
+
+As the work is submitted and the API endpoint goes live, your product manager asks you this final question:
+* Why might it be important to maintain both **v1** and **v2** endpoints?
+</section>
+
+<section class="answer">
+### Why is API versioning important?
+
+API versioning is a crucial aspect of developing and maintaining APIs. It allows developers to introduce changes and enhancements to their APIs while ensuring backward compatibility. 
+* Backward Compatibility: API versioning ensures that existing client applications and integrations continue to function correctly even when changes are made to the API. It allows developers to introduce updates and improvements without breaking the functionality of older client versions.
+* Smooth Transition: Versioning enables a smooth transition for clients and users when significant changes or new features are introduced. It provides a clear separation between different API versions, allowing clients to migrate to newer versions at their own pace.
+* Flexibility: API versioning allows developers to iterate and evolve their APIs over time. It provides the flexibility to make enhancements, fix bugs, and address scalability or security concerns without disrupting existing API consumers.
+* Clear Documentation: By incorporating version numbers in the URL, API versioning simplifies the documentation process. It allows for clear and concise documentation of each version's features, changes, and migration instructions, aiding developers and users in understanding and utilizing the API effectively.
+</section>
+
+<section class="call-to-action">
+### Interview prep
+
+In an interview, you might be asked these kinds of questions concerning APIs:
+* What are the different parts of an API URL, and why are they important?
+* What does CRUD stand for and how does it relate to representational state transfer?
+* What are some advantanges/disadvantages of REST/SOAP/GraphQL?
+* Why is versioning your API important?
+</section>
