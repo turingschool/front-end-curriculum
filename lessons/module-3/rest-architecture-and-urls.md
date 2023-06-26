@@ -23,7 +23,8 @@ By the end of this lesson, you will:
 <section class="call-to-action">
 ### Warmup
 
-Take some time to explore these [free REST APIs](https://github.com/public-apis/public-apis), and practice making requests from your dev tools console. **NOTE:** The APIs you should be exploring should have a value of **No** for **Auth** as well as **CORS**, otherwise you won't be able to make requests from your dev tools. 
+Take some time to explore these [free REST APIs](https://github.com/public-apis/public-apis), and practice making requests from your dev tools console. 
+**NOTE:** The APIs you should be exploring should have a value of **No** for **Auth** as well as **CORS**, otherwise you won't be able to make requests from your dev tools. 
 
 In your journal, answer the following questions:
 * What are the available endpoints and their functionalities?
@@ -88,20 +89,20 @@ That's a lot of words, at a high level, REST is really just a pattern that match
 
 What RESTful api endpoint have you used in the past? How do you know they're RESTful?
 
+<section class="call-to-action">
 ### Activity time!
 With a partner, design an api that implements CRUD for sharks or puppies (based on the app we worked on yesterday). For each type of request - GET, POST, and DELETE - answer these questions:
   * What endpoints will you need? Write down the URLs.
   * What information do you need in the request?
   * What will you send back in the response? (i.e. What data? What response status?)  
 HINT: Consider organizing your work in a table, like [this one](https://github.com/turingschool-examples/overlook-api). If you'd like, you can use [this template](https://docs.google.com/spreadsheets/d/1-aqqA510nihdYDIsOTbJX5tBq0e_mm0vE8yIVGCXrBk/edit?usp=sharing) to get started.
+</section>
 
 
 ## Some alternatives
 REST API is the only design paradigm when it comes to making APIs, so let's explore some alternatives:
-* SOAP: simple object access protocol
-  * https://www.dataaccess.com/webservicesserver/NumberConversion.wso 
-* GraphQL: a query language for your API
-  * https://studio.apollographql.com/public/countries/variant/current/explorer
+* [SOAP](https://www.dataaccess.com/webservicesserver/NumberConversion.wso ): simple object access protocol
+* [GraphQL](https://studio.apollographql.com/public/countries/variant/current/explorer): a query language for your API
 
 <section class="call-to-action">
 ### Breakout Activity
