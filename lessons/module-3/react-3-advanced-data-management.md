@@ -46,7 +46,7 @@ We're going to be using [this repo](https://github.com/turingschool-examples/adv
 
 We're also going to be running a back end server, which will function as our API! Lucky you, we've written up the backend for you, complete with documentation and friendly error messages.
 
-Clone down [the repo](https://github.com/turingschool-examples/ideabox-api) - but NOT inside your existing IdeaBox repository!
+Clone down [the repo](https://github.com/turingschool-examples/ideabox-api) seperately- but NOT inside your FE repository!
 
 ```bash
 git clone https://github.com/turingschool-examples/ideabox-api.git ideabox-api
@@ -87,7 +87,7 @@ Okay. Let's refactor our IdeaBox so that we are consuming data from our API!
 <section class="call-to-action">
 ### Your Turn
 
-Pair up and work together on implementing the functionality to `fetch` our ideas from the API!  Use the docs for the API to figure out what endpoint you need to hit.  Also think about what lifecycle method this should live in.  Once you have the ideas being rendered, give your partner a high five!
+Pair up and work together on implementing the functionality to fetch our ideas from the API using the useEffect hook! Use the docs for the API to figure out what endpoint you need to hit. Also, think about where this hook should be placed in the component's code. Once you have the ideas being rendered, give your partner a high five!
 </section>
 
 As we've noted before, we should use our catch somehow in order to display an error if something goes wrong.  Try stopping your backend server and see what happens.  Your catch should before firing (because the Promise rejected).  Let's do something with that error.
