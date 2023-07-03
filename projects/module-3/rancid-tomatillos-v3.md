@@ -311,16 +311,16 @@ On track can look like:
   - A consistent, modular file structure is used
   - Create reusable and modular functional components by incorporating props and considering component composition
   - Hooks are implemented to manage and update state. State remains pure and immutable.
-  - Data and functions are passed as props to effectively organize the application
-  - `return` statements are as readable as possible, only communicating what will be displayed
+  - Data and functions are passed as props (only as needed) to effectively organize the application
+  - Logic is pulled out of return statements when it makes sense.  `return` statements are as readable as possible, only communicating what will be displayed
   - Frontend state matches the backend data
   - Props are protected via Proptypes or type-checking
   - Code is DRY, reusable, and empathetic 
   - Application properly uses a catch block for network request error handling (if the server is down or if a fetch call fails) and displays helpful information to the user.
 
 WOW can look like:
-  - Deploy your React app (to GitHub Pages or similar service)
-  - Data retrieved from a server is run through a cleaning function to handle any missing/inconsistent data and remove any extraneous data that isn't using in the application.
+  - Application is deployed (to Vercel or similar service)
+  - Data retrieved from a server is run through a cleaning function to handle any missing/inconsistent data and remove any extraneous data that isn't using in the application - before setting that data to state.
   - Application shows loading state
   - Application design is [responsive](https://frontend.turing.edu/lessons/module-3/css-responsive-layouts.html) across small, medium and large breakpoints
   
@@ -332,6 +332,7 @@ WOW can look like:
 On track can look like:
   - Application views are thoroughly tested
   - Application user flows are thoroughly tested
+  - Tests make specific assertions about the content DOM elements contain
   - Network requests are properly stubbed (intercepted)
   - Happy path async functionality is stubbed and tested
 
