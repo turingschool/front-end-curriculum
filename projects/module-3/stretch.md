@@ -180,7 +180,7 @@ Note: All of these dates are reflected in the calendar
 
 ### Most Days
 
-Your instructors will do a stand-up meeting in the mornings to see where the group is at, and give a chance for each group member to talk through what they're working on or where they have blockers.
+Stand-up meetings will be held most mornings to see where the group is at, and give a chance for each group member to talk through what they're working on or where they have blockers.
 
 <section class="answer">
 ### Day 1 (12 PM MT)
@@ -250,10 +250,12 @@ Evals are
 
 ## Rubric
 
-There will be no written feedback for this project, but each and every one of you is capable of self-assessing whether or not your project is proficient. Mentors and Rocks are also a valuable resource here. **A Proficient project would include the following:**  
+There will be no written feedback for this project, but each and every one of you is capable of self-assessing whether or not your project is proficient. Mentors and Rocks are also a valuable resource here. **A proficient project would include the following:**  
+
+<section class="answer">
 ### Minimum Collaboration and Professionalism Expectations
 
-💫ON TRACK💫 can look like:
+On track can look like:
 * Project is deployed
 * README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
 * README links to all user GitHub profiles and any applicable repos & deployed sites
@@ -265,45 +267,61 @@ There will be no written feedback for this project, but each and every one of yo
 * When the project is run locally, the terminal shows no errors and no warnings.
 * The Team collaborates effectively to accomplish the shared goal. The Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.
   * Instructors are available to offer support and guidance but conversations around what is and what is not working are expected to be led by the team members themselves.
-* **Note:** Every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. **Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing**.
 
-✨WOW✨ can look like:
+WOW can look like:
 * Mapping out extensions in your project board beyond your MVP
 * Using github issues to track bugs or other issues as they crop up. 
 * Getting several PR reviews from your rocks and/or mentors and implementing their feedback _before_ you merge the PR.
+</section>
 
+<section class="answer">
 ### React Architecture:
 
-💫ON TRACK💫 can look like:
+On track can look like:
 * A consistent, modular file structure is used
-* A clear understanding of stateful components vs stateless components is demonstrated
-* Only the data that a child component _needs_ is passed down as props
-* Logic is kept out of return statements; return statements are as readable as possible, only communicating what will be displayed
-* The data displayed on the frontend is consistent with the data stored on the backend
+* Data and functions are passed as props (only as needed) to effectively organize the application
+* Logic is pulled out of return statements when it makes sense.  `return` statements are as readable as possible, only communicating what will be displayed
+* Frontend state matches the backend data
 * Functions follow the single responsibility principle and are written to be reusable when appropriate
-* Data fetched from API is cleaned before being set to state
-* All components which receive props implement prop typechecking (proptypes or otherwise)  
+* Props are protected via Proptypes or type-checking 
+* Application properly uses a catch block for network request error handling (if the server is down or if a fetch call fails) and displays helpful information to the user.
+* Application is deployed (to Vercel or similar service)
 
-✨WOW✨ can look like:
-* Refactoring a few of your stateful components into class-based components. 
+WOW can look like:
+* Data retrieved from a server is run through a cleaning function to handle any missing/inconsistent data and remove any extraneous data that isn't using in the application - before setting that data to state.
+* Application design is [responsive](https://frontend.turing.edu/lessons/module-3/css-responsive-layouts.html) across small, medium and large breakpoints
 
+</section>
+
+<section class="answer">
 ### Stretch Technology:
 
-💫ON TRACK💫 can look like:
+On track can look like:
 * Project implements the chosen stretch tech throughout the entire application
 * Group members can all individually speak about the stretch tech's best practices and attempts were made to follow those best practices in your application
 * Group members have reflected on the process of learning these technologies and can speak clearly about their learning processes  
 
-✨WOW✨ can look like:
-* The team collaborates on an article, blog post, recorded presentation or some other shareable media that shares the learning, decision-making and the pros and cons of using their stretch tech. This piece of media should use real, specific examples from the project to illustrate the story of how it all came together.
 
+WOW can look like:
+* The team collaborates on an article, blog post, recorded presentation or some other shareable media that shares the learning, decision-making and the pros and cons of using their stretch tech. This piece of media should use real, specific examples from the project to illustrate the story of how it all came together.
+</section>
+
+<section class="answer">
 ### Testing:
 
-💫ON TRACK💫 can look like:
-* All user flows are tested
-* Async functionality is stubbed at least once
+On track can look like:
+* Application views are thoroughly tested
+* Application user flows are thoroughly tested
 * Tests make specific assertions about the content DOM elements contain
+* Network requests are properly stubbed (intercepted)
+* Happy path async functionality is stubbed and tested
 
-✨WOW✨ can look like:
-* All sad path user flows have been tested
+WOW can look like:
+* Sad path async functionality is stubbed and tested
+* Implements Cypress `fixture` 
+* Implements Cypress `command`
+</section>
 
+### Collaboration and Professionalism 
+- See "Minimum Collaboration and Professionalism Expectations" above.  
+- While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. **Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing**.
