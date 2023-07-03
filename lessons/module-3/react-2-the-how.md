@@ -794,7 +794,7 @@ But we need to write some functions. Let's start by making sure that when we typ
           placeholder='Description'
           name='description'
           value={description}
-          onChange={event => event => setDescription(event.target.value)}
+          onChange={event => setDescription(event.target.value)}
         />
 
         <button>SUBMIT</button>
