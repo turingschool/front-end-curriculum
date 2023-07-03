@@ -8,14 +8,14 @@ module: 3
 ## Learning Goals
 
 
-* Create function components
+* Create functional components
 * Use state and props to manage application data
-* Use Hooks with function components
+* Use Hooks with functional components
 * Create a controlled form
 * Use JSX
 
 ## Before you get started...
-You will complete this lesson on your own. Read each section carefully and completely. Moving quickly through this lesson is **not** the goal. You should move through the lesson at a pace that allows you to take solid notes and fully understand the code you are writing. We will provide lots of code blocks for you, which means you *could* simply copy and paste the code and call it a day. Doing this will only hurt you in the end, as you'll be missing out on a lot, a lot, a lot of learning.    
+You will complete this lesson on your own. Read each section carefully and completely. Moving quickly through this lesson is **not** the goal. You should move through the lesson at a pace that allows you to take solid notes and fully understand the code you are writing. We will provide lots of code blocks for you.  Resist the temptation to copy and paste the code from those examples. Doing this will only hurt you in the end, as you'll be missing out on a lot, a lot, a lot of learning.    
 
 On Wednesday, your instructors will lead a review session where we will cover the major themes and key points from this lesson. As you are working through it, please write down any questions that pop up for you. We will give lots of time for y'all to ask these questions on Wednesday.  If a blocker pops up outside of office hours, post your question in the cohort's questions slack channel.  Work with your classmates to try to figure it out.
 
@@ -349,7 +349,7 @@ Okay. Let's pause for a second. `App.js` is a functional component, and we used 
 
 **State** holds data that represents the actual state of our application. State can be changed and mutated through user interactions.
 
-React Hooks is a feature that was introduced at the end of 2018. It allows function-based components to access and manipulate state. In future lessons, we'll learn about other types of components as well. However, for now, it's essential to understand function-based components and how React Hooks enable them to manage state in a more concise and streamlined way.
+React Hooks is a feature that was introduced at the end of 2018. It allows functional components to access and manipulate state. In future lessons, we'll learn about other types of components as well. However, for now, it's essential to understand functional components and how React Hooks enable them to manage state in a more concise and streamlined way.
 <!-- This is where I have stopped March 30th -->
 <!-- -------------------------- -->
 ## Ideas.js
@@ -981,7 +981,7 @@ Take a few minutes to journal:
 * What "aha" moments did you have?
 * Which concepts are the fuzziest for you right now?
 * Which concepts are the clearest for you right now?
-* What do you know about function-based components?
+* What do you know about functional components?
 * What do you know about hooks?
 * What do you know about state?
 * What do you know about passing props?
