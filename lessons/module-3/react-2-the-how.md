@@ -432,7 +432,7 @@ When we pass props down to a child component, it comes through as a simple JavaS
 
 Let's start with an example, just to keep things simple. For now, since our Ideas component just contains an h2, let's make that h2 say something different than "Ideas go here!"
 
-In our App component, let's add something to our `render` method.
+In our App component, let's render the Ideas component by adding it to our return.
 
 ```jsx
 // App.js
@@ -811,9 +811,9 @@ Take a look at your React dev tools - is the state updating as you type into the
 
 When we click the submit button, what do we want to happen? We want to create an object out of the new idea and add it to the list of ideas that App is holding onto in state. How do we access App's state from inside our Form component?
 
-### Passing methods
+### Passing functions
 
-In App, we're going to have to create a method that updates App's state:
+In App, we're going to have to create a function that updates App's state:
 
 ```jsx
 // App.js
@@ -837,7 +837,7 @@ This updated array is then set as the new state of `ideas` using `setIdeas` func
 
 This is good, because we're passing it down as a prop to the Form component!
 
-Now, in the Form component, let's make use of the `addIdea` method we passed as a prop. In functional components, we reference props with `props`. 
+Now, in the Form component, let's make use of the `addIdea` function we passed as a prop. To access `addIdea` we'll need to declare 'props' as a parameter in our functional Form component then use dot notation to access `props.addIdea`. Or, we could use destructuring to allow us to directly reference `addIdea` without having to use dot notation.
 
 ```jsx
 // Form.js
@@ -882,9 +882,9 @@ Now, in the Form component, let's make use of the `addIdea` method we passed as 
 
 ### Deleting a Card
 
-Now that you know how to use a method and props to allow a different component to update App's state, see if you can get each Card's delete button to work.
+Now that you know how to use a function and props to allow a different component to update App's state, see if you can get each Card's delete button to work.
 
-First, write the App method to delete an idea from state and pass it to the Ideas component:
+First, write the App function to delete an idea from state and pass it to the Ideas component:
 
 ```jsx
 // App.js
