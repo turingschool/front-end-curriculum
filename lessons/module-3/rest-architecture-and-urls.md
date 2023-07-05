@@ -29,7 +29,7 @@ Take some time to explore these one of the following APIs:
 - [Open Trivia Database](https://opentdb.com/api_config.php)
 - [Weather Forecase API](https://open-meteo.com/en/docs)
 
-In your journal, answer the following questions:
+Explore the documentation and utilize the dev tools to answer the following questions in your journal:
 * What are the available endpoints and their functionalities?
 * What kind of data does the API provide?
 * What are the potential use cases for the API?
