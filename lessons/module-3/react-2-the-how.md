@@ -811,7 +811,7 @@ Take a look at your React dev tools - is the state updating as you type into the
 
 When we click the submit button, what do we want to happen? We want to create an object out of the new idea and add it to the list of ideas that App is holding onto in state. How do we access App's state from inside our Form component?
 
-### Passing bound methods
+### Passing methods
 
 In App, we're going to have to create a method that updates App's state:
 
@@ -832,7 +832,7 @@ In App, we're going to have to create a method that updates App's state:
 
 ```
 
-You'll notice that we're using a function keyword to create this function. Why do you think that is? This is a callback function that takes a new idea object as an argument, and adds it to the existing ideas array by creating a new array using the spread operator ... to copy the existing ideas array and adding the new idea to the end of it.
+This is a callback function that takes a new idea object as an argument, and adds it to the existing ideas array by creating a new array using the spread operator ... to copy the existing ideas array and adding the new idea to the end of it.
 This updated array is then set as the new state of `ideas` using `setIdeas` function which is the state updater function created by useState hook. 
 
 This is good, because we're passing it down as a prop to the Form component!
