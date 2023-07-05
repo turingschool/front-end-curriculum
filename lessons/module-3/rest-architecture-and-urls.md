@@ -23,8 +23,11 @@ By the end of this lesson, you will:
 <section class="call-to-action">
 ### Warmup
 
-Take some time to explore these [free REST APIs](https://github.com/public-apis/public-apis), and practice making requests from your dev tools console. 
-**NOTE:** The APIs you should be exploring should have a value of **No** for **Auth** as well as **CORS**, otherwise you won't be able to make requests from your dev tools. 
+Take some time to explore these one of the following APIs:
+- [Star Wars API](https://swapi.dev/documentation)
+- [Pokemon API](https://pokeapi.co/docs/v2#pokemon)
+- [Open Trivia Database](https://opentdb.com/api_config.php)
+- [Weather Forecase API](https://open-meteo.com/en/docs)
 
 In your journal, answer the following questions:
 * What are the available endpoints and their functionalities?
