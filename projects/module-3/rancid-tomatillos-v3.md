@@ -206,22 +206,7 @@ The final days (last weekend and beginning of Week 3) of this project are design
 * What areas/concepts are still unclear?
 * What areas/concepts fit in with your professional goals?
 
-Here is a list of concepts (including some push-yourself learning goals):  
-- React
-- Router
-- Asynchronous JS
-- Responsive Design
-  - use media queries and other tools to allow your application to resize to varying screen sizes
-- Testing
-  - Ensure that every view is tested (including all possible renders when dealing with conditional rendering)
-  - Ensure that all possible user flows are tested (happy and sad paths)
-  - Ensure all asynchronous JS is properly stubbed
-- Express (server-side JavaScript)
-- Deployment
-
-Decide as a team what to focus on. Also, please complete the Week 2 Deliverables (found below)
-
-Once you have decided on the area to continue learning, decide on a new feature or refactor.
+Decide as a team what to focus on and complete the Week 2 Deliverables (found below), choosing a new feature to implement or a thorough rubric-based refactor.  
 
 <section class="call-to-action">
 ### WEEK 2 DELIVERABLES
@@ -229,7 +214,7 @@ On Friday of Week 2, send a specific outline of features/work/goals to your inst
 
 Here are some ideas:
 * **Extremely thoroughly Refactoring:**
-  - Carefully compare your work to the rubric and refactor to ensure the work you're submitting is an excellent, thorough demonstration of your skill and compentency in React, Router and Cypress
+  - Carefully compare your work to the rubric and refactor to ensure the work you're submitting is an excellent, thorough demonstration of your skill and compentency in React, Router and Cypress.  If you choose this option, be prepared to specific refactoring you did. 
 * **Responsive Design:**
   - Ensure your application is fully responsive across small, medium and large breakpoints
 * **More React and/or Router practice:**
