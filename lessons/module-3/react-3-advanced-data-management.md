@@ -24,7 +24,7 @@ There are a number of different motivations behind adding hooks to React, which 
 
 ### Some Important Rules
 
-* **Only call hooks from within react functions** 
+* **Only call hooks from within React functions** 
 * **Don't call hooks inside of loops, conditions, or nested functions** 
 
 ### Benefits of Hooks
