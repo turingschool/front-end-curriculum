@@ -907,8 +907,8 @@ function App(){
   }
   function deleteIdea(id){
     console.log(id);
-    const filteredIdea = ideas.filter(idea => idea.id !== id)
-    setIdeas(filteredIdea)
+    const filteredIdeas = ideas.filter(idea => idea.id !== id)
+    setIdeas(filteredIdeas)
   }
 
   return(
