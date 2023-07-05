@@ -221,19 +221,6 @@ Here is a list of concepts (including some push-yourself learning goals):
 
 Decide as a team what to focus on. Also, please complete the Week 2 Deliverables (found below)
 
-
-<section class="note">
-### A word of warning!
-
-Be realistic. Exercise compassion. Create the safety to be vulnerable with each other!
-
-If one partner wants to push ahead to new shiny fancy concepts, but another partner is still feeling shaky with React fundamentals, it is more important and better for everyone involved to use the remaining project time to solidify those React fundamentals!
-
-**BEWARE THE LURE OF SHINY NEW THINGS!**
-
-It is _far_ more important to be very, very solid on the project stated learning goals (React, testing).
-</section>
-
 Once you have decided on the area to continue learning, decide on a new feature or refactor.
 
 <section class="call-to-action">
@@ -241,6 +228,10 @@ Once you have decided on the area to continue learning, decide on a new feature 
 On Friday of Week 2, send a specific outline of features/work/goals to your instructors in the group DM. Please include user stories, too. Do not begin work until you get the go-ahead from an instructor. (We may help you make your goal more specific or achievable.)
 
 Here are some ideas:
+* **Extremely thoroughly Refactoring:**
+  - Carefully compare your work to the rubric and refactor to ensure the work you're submitting is an excellent, thorough demonstration of your skill and compentency in React, Router and Cypress
+* **Responsive Design:**
+  - Ensure your application is fully responsive across small, medium and large breakpoints
 * **More React and/or Router practice:**
   - Add a search/filtering functionality for movies
 * **More testing practice:**
@@ -252,6 +243,18 @@ Here are some ideas:
   - Create your own Express microservice to store which movies the user has watched; build FE functionality to use and display that service
 
 You are welcome to come up with your own ideas too. Just run them by your PM.
+</section>
+
+<section class="note">
+### A word of warning!
+
+Be realistic. Exercise compassion. Create the safety to be vulnerable with each other!
+
+If one partner wants to push ahead to new shiny fancy concepts, but another partner is still feeling shaky with React fundamentals, it is more important and better for everyone involved to use the remaining project time to solidify those React fundamentals!
+
+**BEWARE THE LURE OF SHINY NEW THINGS!**
+
+It is _far_ more important to be very, very solid on the project stated learning goals (React, testing).
 </section>
 
 ---
