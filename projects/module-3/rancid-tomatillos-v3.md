@@ -254,9 +254,6 @@ Here are some ideas:
 You are welcome to come up with your own ideas too. Just run them by your PM.
 </section>
 
-**Suggested completion date**  
-- All code for the project should be completed by end of Sunday of Week 3 (so you can leave Monday for polishing the project and finishing the README, not building out features!)
-
 ---
 
 ### PROJECT DUE DATE: 6pm Sunday of Week 3
