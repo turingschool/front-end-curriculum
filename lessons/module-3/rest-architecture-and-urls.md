@@ -27,7 +27,7 @@ Take some time to explore these one of the following APIs:
 - [Star Wars API](https://swapi.dev/documentation)
 - [Pokemon API](https://pokeapi.co/docs/v2#pokemon)
 - [Open Trivia Database](https://opentdb.com/api_config.php)
-- [Weather Forecase API](https://open-meteo.com/en/docs)
+- [Weather Forecast API](https://open-meteo.com/en/docs)
 
 Explore the documentation and utilize the dev tools to answer the following questions in your journal:
 * What are the available endpoints and their functionalities?
