@@ -79,9 +79,9 @@ In the future, when we use the actual API to get individual movie details, the i
 
 ### Iteration 3 - Network Requests & Async JS
 
-For the third iteration, we'll refactor our application to use actual data from the database (information is below) instead of our mocked `movieData` file. 
-
-We'll also add some type checking with [PropTypes](https://frontend.turing.edu/lessons/module-3/proptypes.html)
+For the third iteration, we'll refactor our application to:
+- use actual data from the database (information is below) instead of our mocked `movieData` file. 
+- add type checking with [PropTypes](https://frontend.turing.edu/lessons/module-3/proptypes.html)
 
 Also, please complete the First Weekend Deliverables (found below)
 
@@ -116,7 +116,7 @@ Also note: there are some endpoints here that you will not be using! Read the do
 
 **User Story**  
 - When the server returns a 500 error, the user will see proper error handling
-- No other new features required
+- No other user-facing features required
 - We're mostly refactoring in this iteration!
 
 **Suggested completion date**  
@@ -125,7 +125,7 @@ Also note: there are some endpoints here that you will not be using! Read the do
 **Suggested testing progress by end of iteration**  
 - Project board has been updated so functionality is described as user stories
 - Each user story includes thorough acceptance criteria
-- All components with that receive props utilize type checking with PropTypes
+- All components that receive props utilize type checking with PropTypes
 
 ---
 
@@ -245,7 +245,7 @@ It is _far_ more important to be very, very solid on the project stated learning
 ---
 
 ### PROJECT DUE DATE: 6pm Sunday of Week 3
-The project is due Sunday to give you space to breath before diving into the code for your stretch project.  
+The project is due Sunday to give you space to breathe before diving into the code for your stretch project.  
 
 If you have created a back-end repo and/or deployed your front-end, then add links to the deployed app or additional repos in your front-end README.
 
