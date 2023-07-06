@@ -39,7 +39,7 @@ You'll need to use the Cypress docs to figure out how to get it set up in your r
   * Select **E2E Testing**.  
   * There are some config options on the next window...but for now just select **Continue** at the bottom.  
     * *Hint: If you see an error that references webpack, you likely chose Component Testing by mistake in the previous step.*
-  * Then select your browser (*Chrome*) and the **Start E2E Testing in Chrome** button. Pause here for now.  
+  * Then select your browser (*Chrome*) and the **Start E2E Testing in Chrome** button. *Pause here for now and keep working thru this prework lesson.*  
 
 Having completed these steps, you should notice some new directories and files added to your application.
 
