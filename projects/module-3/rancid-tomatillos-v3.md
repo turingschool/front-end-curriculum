@@ -69,8 +69,8 @@ In the future, when we use the actual API to get individual movie details, the i
 
 **User Story**  
 - As a user, I can click a movie, and see that movie's details
-- When a movie's details are displayed, none of the other movies will be visible; it should just be that movie's details (header/footer/etc can still be visible, of course!)
-- When a movie's details are displayed, the user should have a way to return to the main view of all movies
+  - When a movie's details are displayed, none of the other movies will be visible; it should just be that movie's details (header/footer/etc can still be visible, of course!)
+  - When a movie's details are displayed, the user should have a way to return to the main view of all movies
 
 **Suggested completion date**  
 - End of Week 1
