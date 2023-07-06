@@ -43,7 +43,7 @@ In small groups, answer the following questions. Make sure everyone has an oport
 
 We’re going to be using this [ideabox](https://github.com/turingschool-examples/react-iii-ideabox) repo today. Before going any further please do the following:
 * Clone the repo to your machine
-* Switch to the `refactor-hooks-to-classes` branch
+* Switch to the `refactor-classes-to-hooks` branch
 * Run `npm install` in the repo
 * Put a thumbs up in the participants panel of zoom once you’re done!
 
