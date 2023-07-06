@@ -7,7 +7,7 @@ module: 3
 
 ## Learning Goals
 
-* Implement `PropTypes` and understand why they are useful
+* Implement `PropTypes` and explain why they are useful
 
 ## Vocabulary
 
@@ -16,7 +16,7 @@ module: 3
 <section class="note">
 ### Set Up
 
-For this lesson, you're going to use [the same repo](https://github.com/turingschool-examples/react-iii-ideabox) we used for the [React: Advanced Data Management lesson](https://frontend.turing.edu/lessons/module-3/react-3-advanced-data-management.html). If you already have it cloned down, you just need to make sure you are on the main branch (`git checkout main`). If you don't have it cloned, follow these steps:
+For this lesson, you're going to use [this repo](https://github.com/turingschool-examples/react-iii-ideabox) for practice. If you already have it cloned down, you just need to make sure you are on the main branch (`git checkout main`). If you don't have it cloned, follow these steps:
 
 ```bash
 git clone git@github.com:turingschool-examples/react-iii-ideabox.git
@@ -40,7 +40,7 @@ PropTypes allow you to specify what type of props you are expecting in a certain
 
 Many people have moved to implementing languages like [TypeScript](https://www.typescriptlang.org/) or [Flow](https://flowtype.org/) for this exact purpose, but even without any additional technologies, the `prop-type` module lets you establish a safety net with very little effort.
 
-Let's say you declare a component `<Card title={this.state.title}/>`. Here, your component is expecting a prop called `title` and you (probably) expect it to be a string. If you define that value within your `propTypes` object and it comes in as something else - say for example the API you are consuming has changed and now you have an array of strings - you will get a helpful warning message in your console.  
+Let's say you declare a component `<Card title={title}/>`. Here, your component is expecting a prop called `title` and you (probably) expect it to be a string. If you define that value within your `propTypes` object and it comes in as something else - say for example the API you are consuming has changed and now you have an array of strings - you will get a helpful warning message in your console.  
 
 Previously, PropTypes was built into the React library itself, however it has since been extracted into its own module. You can install it like any other module.
 
@@ -86,7 +86,7 @@ Without using PropTypes, you would have seen a vague error when the Component fa
 
 ### Class propTypes
 
-Check out a complete list of `propTypes` and examples of usage [here](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#react.proptypes).  
+Check out a complete list of `propTypes` [here](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#react.proptypes). Note: The usage in this example is deprecated, but the list of propTypes is still valid. Checkout a modern usage example [here](https://react.dev/reference/react/Component#static-proptypes).
 
 By default, all props specified within the `Class.propTypes` object will be considered optional. There are many instances where your component will not function correctly without that particular prop. To add a validation that will fire an error message if a prop does not show up at all, simply add `.isRequired` to the end of the propType declaration.  
 
@@ -126,7 +126,7 @@ these particular methods when you are done.
 
 ## DefaultProps
 
-Just like when writing functions, React also allows us to provide a default value for props. [defaultProps](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#default-prop-values) let you ensure that a value will be passed through. This helps eliminate some of the incessant ternaries that either render the prop or an empty string, for instance.  
+Just like when writing functions, React also allows us to provide a default value for props. [defaultProps](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#default-prop-values) let you ensure that a value will be passed through. This helps eliminate some of the incessant ternaries that either render the prop or an empty string, for instance.  Note: the above example uses a class component instead of a functional component, but the actual propTypes implementation can be the same. 
 
 ```jsx
 const Card = ({ id, title, description, removeIdea, isFavorite }) => {
@@ -173,6 +173,6 @@ Take a few minutes to journal to write notes to each of these questions:
 
 ### Extra Reading on PropTypes
 
-Now that we've talked about the most obvious use cases of propTypes to preemptively debug your code, read the following two articles - you are highly encouraged to take notes:  
+Now that we've talked about the most obvious use cases of propTypes to preemptively debug your code, read the following article - you are highly encouraged to take notes:  
 - [Better Prop Validation](https://medium.com/@MoeSattler/better-prop-validation-in-react-cc83590d311f#.8z6wszfzn).  
-- [Writing A Good React Component](https://thoughts.travelperk.com/writing-a-good-react-component-59624ed40b8e#.64wzjk4qc)
+
