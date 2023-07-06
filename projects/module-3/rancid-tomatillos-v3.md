@@ -81,7 +81,7 @@ In the future, when we use the actual API to get individual movie details, the i
 
 For the third iteration, we'll refactor our application to:
 - use actual data from the database (information is below) instead of our mocked `movieData` file. 
-- add type checking with [PropTypes](https://frontend.turing.edu/lessons/module-3/proptypes.html)
+- include type checking with [PropTypes](https://frontend.turing.edu/lessons/module-3/proptypes.html)
 
 Also, please complete the First Weekend Deliverables (found below)
 
