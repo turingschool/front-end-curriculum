@@ -139,6 +139,12 @@ Examples of good commit messages:
   - `git checkout name-of-branch`
 </section>
 
+<section class="note">
+### Note about checking remote branches
+
+After fetching branches, note that `git branch` will still not display remote branches. In order to see remote branches, you have to run` git remote -r`. To see both local and remote branches, you must run `git branch -a`.
+</section>
+
 ## Continuing Work
 <section class="checks-for-understanding">
 ### Partner Two
