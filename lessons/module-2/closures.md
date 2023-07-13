@@ -115,7 +115,7 @@ This still might not seem like an incredibly useful feature of JavaScript, but t
 * `firstName` is not available anywhere outside of the `greet` function. We would say that the `greet` function "closes over" this variable
 * the inner function, `displayName` can reference (or even modify) the `firstName` variable because it is inside the scope of the outer function `greet`
 
-So one use-case for closures is to **protect variables from any sort of outside manipulation**. Other languages often have some really nice way of implementing private or protected variables, but JavaScript doesn't. So if this is something we want to achieve, we would use a closure.
+So one use-case for closures is to **protect variables from any sort of outside manipulation (we're not talking about security here)**. Other languages often have some really nice way of implementing private or protected variables, but JavaScript doesn't. So if this is something we want to achieve, we would use a closure.
 
 Take the following example:
 
@@ -283,3 +283,4 @@ Make a function that creates a random number generator, and stores the values of
 * [practical uses for closures](https://medium.com/@dis_is_patrick/practical-uses-for-closures-c65640ae7304){:target="\__blank"}
 * [closures in depth](https://javascript.plainenglish.io/heres-that-resource-on-javascript-closures-you-were-looking-for-95e82b8108f2){:target="\__blank"}
 * [memoization](https://www.geeksforgeeks.org/javascript-memoization/){:target="\__blank"}
+* [simple closures analogy](https://blog.codeanalogies.com/2018/10/19/javascript-closures-explained-by-mailing-a-package/){:target="\__blank"}
