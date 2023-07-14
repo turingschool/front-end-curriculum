@@ -186,7 +186,6 @@ While M3 rubrics do not have a separate section for WOWs like in M1, there are a
 <section class="answer">
 ### React Architecture:
 
-💫ON TRACK💫 can look like:
 * A consistent, modular file structure is used
 * A clear understanding of stateful components vs stateless components is demonstrated
 * Only the data that a child component _needs_ is passed down as props
