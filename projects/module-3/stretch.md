@@ -248,25 +248,28 @@ Evals are
 * Two interview questions - one technical (about your stretch tech) and one behavioral (you get to choose the "theme", but not the specific question)
 * You will be expected to send your interviewer your resume (updated with the stretch project) prior to the interview via slack
 
+## Minimum Collaboration and Professionalism Expectations
+
+* Team holds daily standups throughout project.
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
+* A project board is utilized (and updated throughout the project) with Github issues and labels.
+* Team uses branches, PRs and thorough code reviews to add new code to the main branch.
+* The README is formatted well and at a minimum contains:
+  * Overview of project and goals
+  * Overview of technologies used, challenges, wins, and any other reflections
+  * Screenshots/gifs of your app
+  * List of contributors
+* **Team collaborates effectively to accomplish the shared goal.  Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
+  * Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.
+
 ## Rubric
 
 There will be no written feedback for this project, but each and every one of you is capable of self-assessing whether or not your project is proficient. Mentors and Rocks are also a valuable resource here. **A proficient project would include the following:**  
 
 <section class="answer">
-### Minimum Collaboration and Professionalism Expectations
+### Professionalism 
 
-On track can look like:
-* Project is deployed
-* README concisely communicates the team's individual and joint learning goals, the evolution of the project, and team member reflections while using good formatting to enhance readability
-* README links to all user GitHub profiles and any applicable repos & deployed sites
-* Setup instructions for any and all repos are thorough and verbose enough that even non-technical people (like recruiters) could follow them
-* Git commits are atomic, with concise and precise descriptions of the change made
-* PRs have full, consistent descriptions
-* Team members conduct consistent code reviews of PRs
-* Evolution of the project (decisions made, etc) is documented in the git history and PRs
-* When the project is run locally, the terminal shows no errors and no warnings.
-* The Team collaborates effectively to accomplish the shared goal. The Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.
-  * Instructors are available to offer support and guidance but conversations around what is and what is not working are expected to be led by the team members themselves.
+Professionalism is a baseline expectation - you can those expectations above in the Minimum Collaboration and Professionalism Expectations Section. If you want to go further, check below for some ideas.
 
 WOW can look like:
 * Mapping out extensions in your project board beyond your MVP
