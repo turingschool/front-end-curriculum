@@ -41,7 +41,7 @@ categories; the model, the view, and the controller. In this pattern, each
 component has its own specific responsibility. While implemented slightly
 differently in various frameworks, the general pattern is one of the most
 frequently used industry standards for creating scalable and extensible
-software.
+software. 
 
 The **Model** is focused solely on the data, and data related logic of the
 application. This could be business data for the application, or data that is
@@ -63,6 +63,8 @@ for this pattern, you will find it all over the place.
 ![MVC interactions](https://www.tutorialspoint.com/sencha_touch/images/mvc.jpg
 "Data flow in MVC")
 
+Take a look at [the docs on MDN](https://developer.mozilla.org/en-US/docs/Glossary/MVC) if you'd like to see it explained in another way.
+
 ### Ok, by why would I ever use it?
 
 You've already been using it! Let's consider a super simple example:
@@ -70,28 +72,22 @@ You've already been using it! Let's consider a super simple example:
 ```js
 import React, { Component } from 'react';
 
-class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      count: 0,
-    }
+function App() {
+  const [count, setCount] = useSate(0);
+
+
+   handleCounter = (event) => {
+    const increment = event.target.name === '+' ? 1 : -1;
+    setCount(count + increment)
   }
 
-  handleCounter = (event) => {
-    const increment = event.target.name === '+' ? 1 : -1
-    this.setState({count: this.state.count + increment})
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <h1>{this.state.count}</h1>
-        <button onClick={this.handleCounter} name="-">-</button>
-        <button onClick={this.handleCounter} name="+">+</button>
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <h1>{count}</h1>
+      <button onClick={(e) => handleCounter(e)} name="-">-</ button>
+      <button onClick={(e) => handleCounter(e)} name="+">+</button>
+    </div>
+  )
 }
 
 export default App;
