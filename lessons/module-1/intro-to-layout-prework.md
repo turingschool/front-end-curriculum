@@ -87,9 +87,9 @@ There are a number of different ways to hide an element with CSS, and they all b
 display: none;
 
 // Element exists on the page and takes up space but cannot be seen
-visability: hidden
+visibility: hidden
 
-// Similar to visability, but is read by screen readers. Also useful for animation!
+// Similar to visibility, but is read by screen readers. Also useful for animation!
 opacity: 0
 ```
 </section>
