@@ -70,10 +70,10 @@ Take a look at [the docs on MDN](https://developer.mozilla.org/en-US/docs/Glossa
 You've already been using it! Let's consider a super simple example:
 
 ```js
-import React, { Component } from 'react';
+import React from 'react';
 
 function App() {
-  const [count, setCount] = useSate(0);
+  const [count, setCount] = useState(0);
 
 
    handleCounter = (event) => {
@@ -141,12 +141,12 @@ few MVP (Model View Presenter) frameworks that you may come across are:
 
 ### Wrapping it up
 
-In small groups draw out the MVC of your most recent application. How does Redux
-play into this? Work on this for 10 minutes, then we'll reconvene.
+In small groups draw out the MVC of your most recent application. Work on this for 10 minutes, then we'll reconvene.
 
 ## References
 
-[MVC
+- [MVC
 Architecture](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
-[Understanding
+
+- [Understanding
 MVC](https://blog.codinghorror.com/understanding-model-view-controller/)  
