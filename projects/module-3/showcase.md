@@ -23,7 +23,7 @@ This project will challenge you to use the technology you've become familiar wit
 
 4. Your applications must have the following core functionality:
   - **Display** the data from the API in a way that applies directly to your audience
-  - Ability for users to **store/manipulate** the data displayed in the application, such as favoriting or adding to a list, searching, commenting, etc
+  - Ability for users to **store/manipulate** the data displayed in the application, such as (choose *one*) favoriting/unfavoriting, adding to/removing from a list, searching, commenting, etc
   - Multiple views handled by Router
   - Be deployed using Vercel, Heroku, Surge, or any other similar service
   - PropTypes has been implemented in all components with props
