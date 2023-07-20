@@ -183,7 +183,7 @@ Note: All of these dates are reflected in the calendar
 Stand-up meetings will be held most mornings to see where the group is at, and give a chance for each group member to talk through what they're working on or where they have blockers.
 
 <section class="answer">
-### Day 1 (12 PM MT)
+### Day 0 Kick Off & Proposals Due (5 PM MT)
 
 * The link to your MVP proposal in [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing)
 </section>
@@ -210,9 +210,9 @@ Anytime before Day 4:
 </section>
 
 <section class="answer">
-### Day 5 (during stand ups)
+### Day 5 or so (during stand ups)
 
-Your PM will join one of your standups between days 5-7. PMs may ask to see:
+Your PM will join one of your standups between days 4-7. PMs may ask to see:
 * A very quick demo of your application so far detailing the progress made toward your MVP
 * **Your testing suite running**
 * Progress you've made on your Stretch Technology category
