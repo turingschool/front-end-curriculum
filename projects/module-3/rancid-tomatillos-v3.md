@@ -287,7 +287,7 @@ The overall project outcome (yes, not yet, wow) is determined by “averaging”
 For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below). 
 </section>
 
- In addition to the WOW examples listed below, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections.
+ In addition to any WOW examples listed below, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections.
 
 <section class="answer">
 ### React Fundamentals/UI
