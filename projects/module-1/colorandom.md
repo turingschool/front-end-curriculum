@@ -26,8 +26,8 @@ You will work through the iterations listed under **Progression** below.
 
 For each iteration, you should be matching the provided design comps closely. ([What is a design comp?](https://clients.geminoscreative.com/marketing-blog/what-is-a-design-comp)) Act like you're on the job and these are the designs you've been given to match. Details and spacing matter! Here is some info to help you:
   - Background color: `#E7F1F1`
-  - Font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins) (Note: Add these icons to an `assets` folder in your repository.)
-  - Icons: [Found here](https://drive.google.com/drive/folders/1ZX31xVFdRAsLPzsL8G2_ujNQNXgFmKxD?usp=sharing)
+  - Font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
+  - Icons: [Found here](https://drive.google.com/drive/folders/1ZX31xVFdRAsLPzsL8G2_ujNQNXgFmKxD?usp=sharing) (Note: Add these icons to an `assets` folder in your repository.)
 </section>
 
 <section class="answer">
