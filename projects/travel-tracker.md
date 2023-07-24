@@ -103,10 +103,10 @@ Don't get too caught up with polishing your dashboard too early. You'll want to 
 
 ### 3. Accessibility
 
-* Create a branch for accessibility.  
-* Use this branch to make your dashboard as accessible as possible.  
-* Push this branch up to GH.  You can merge the changes into main but do not delete this branch.  
-  * This branch should not have a login page so that during the live eval, we can run the Lighthouse audit and check tabbability of your dashboard (without the login page).  
+* You must be able to tab through your app and use it without a mouse 
+* Your app must still be usable when tested with a colorblind extension
+* You must score as close to 100% as possible with the “Lighthouse Accessibility Audit”. Be prepared to explain any accessibility audits your application is failing.
+* Your HTML must be written semantically and should use ARIA tags (ONLY if needed / appropriate)
 
 ### 4. Login
 
