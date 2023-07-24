@@ -224,7 +224,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 
 <section class="answer">
 ### Functional Expectations
-* Wow: Application fulfills all requirements *as well as* an extension from iteration 4.
+* **Wow**: Application fulfills all requirements *as well as* an extension from iteration 4.
 * Yes: Application fulfills all requirements of iterations 1-3 without bugs.
 * Not Yet: Application crashes (game is not playable) or has missing functionality or bugs.
 </section>
@@ -239,7 +239,7 @@ On track looks like:
 - Code leverages JavaScript's truthy/falsey principles
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 
-WOW Option: Effectively implements one or more closures throughout project.  *Note: See Closures lesson on the Module 2 lessons page as a resource.*
+**WOW Option**: Effectively implements one or more closures throughout project.  *Note: See Closures lesson on the Module 2 lessons page as a resource.*
 </section>
 
 <section class="answer">
@@ -253,7 +253,7 @@ On track looks like:
   - Sample data has been crafted to create the scenarios needed for thorough testing.
 - There are no failing/pending tests upon submission
 
-WOW Option: mocha's `beforeEach` hook is used to DRY up test files
+**WOW Option**: mocha's `beforeEach` hook is used to DRY up test files
 </section>
 
 Project is due at **9PM on Thursday of Week 1**.

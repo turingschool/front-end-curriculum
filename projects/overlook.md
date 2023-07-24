@@ -111,10 +111,10 @@ Don't get too caught up with polishing your dashboard too early. You'll want to 
 
 ### 3. Accessibility
 
-* Create a branch for accessibility.  
-* Use this branch to make your dashboard as accessible as possible.  
-* Push this branch up to GH.  You can merge the changes into main but do not delete this branch.  
-  * This branch should not have a login page so that during the live eval, we can run the Lighthouse audit and check tabbability of your dashboard (without the login page).  
+* You must be able to tab through your app and use it without a mouse 
+* Your app must still be usable when tested with a colorblind extension
+* You must score as close to 100% as possible with the “Lighthouse Accessibility Audit”. Be prepared to explain any accessibility audits your application is failing.
+* Your HTML must be written semantically and should use ARIA tags (ONLY if needed / appropriate)
 
 ### 4. Login
 
@@ -223,7 +223,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 <section class="answer">
 ### Functional Expectations
 
-- Wow: Application fulfills all requirements as well as Iteration 5.
+- **Wow**: Application fulfills all requirements as well as Iteration 5.
 - Yes: Application fulfills all requirements of iterations 1-4 without bugs. **Note: Must be completed in order to pass**
 - Not Yet: Application crashes or has missing functionality or bugs.
 </section>
@@ -238,7 +238,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 * Users who only use keyboards can still navigate this application
 * Users who use a screen reader can still navigate this application
 * Utilizes ARIA attributes on interactive elements when **no other tool** allows for accessible content
-* Wow option: design is responsive across small, medium and large breakpoints
+* **Wow option**: design is responsive across small, medium and large breakpoints
 </section>
 
 <section class="answer">
@@ -253,7 +253,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 * Implements GET and POST Fetch requests
 * When utilizing Fetch, the DOM is updated based on the results of that Fetch
 * Errors are handled and messages are displayed to a user when an error occurs
-* Wow option: Effectively implements one or more closure throughout project.
+* **Wow option**: Effectively implements one or more closure throughout project.
 
 </section>
 

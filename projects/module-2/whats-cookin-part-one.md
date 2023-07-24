@@ -255,7 +255,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 
 <section class="answer">
 ### Functional Expectations
-* Wow: Application fulfills all requirements *as well as* an extension.
+* **Wow**: Application fulfills all requirements *as well as* an extension.
 * Yes: Application fulfills all requirements of iterations 1-3 without bugs.
 * Not Yet: Application crashes or has missing functionality or bugs.
 </section>
@@ -268,7 +268,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 - Variables and functions are consistently and appropriately named
 - Code leverages JavaScript's truthy/falsey principles
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
-- WOW option: Effectively implements one or more closure throughout project.  *Note: See Closures lesson on M2 lesson page as a resource.*
+- **WOW option**: Effectively implements one or more closure throughout project.  *Note: See Closures lesson on M2 lesson page as a resource.*
 </section>
 
 <section class="answer">
@@ -291,7 +291,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 - UI/UX is intuitive and easy to read/use
 - Helpful messaging is displayed to prevent user confusion
   - For example: If a user searches for a recipe and finds no matching results, a message is displayed to indicated that the search worked, nothing is broken, there just aren't any matching recipes found.
-- WOW option: Design is responsive across small, medium and large breakpoints.
+- **WOW option**: Design is responsive across small, medium and large breakpoints.
 </section>
 
 ---
