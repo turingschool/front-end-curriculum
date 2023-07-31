@@ -185,7 +185,7 @@ Stand-up meetings will be held most mornings to see where the group is at, and g
 <section class="answer">
 ### Day 0 Kick Off & Proposals Due (5 PM MT)
 
-* The link to your MVP proposal in [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing)
+* Add the link to your MVP proposal in [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing)
 </section>
 
 <section class="answer">

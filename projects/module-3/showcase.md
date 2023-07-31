@@ -108,21 +108,21 @@ We also want you to choose two design inspiration pieces, which can be as broad 
 
 ## Deliverables
 
-**Turn in all Day 1 + 2 deliverables via [this google sheet](https://docs.google.com/spreadsheets/d/1O5tv2wxmzeJp8-vlk5bZNTtRBEYQ4Zk-0SgOuyzzVJg/edit?usp=sharing).**
+### Day 0 Kick Off & Proposals Due (5 PM MT)
 
-### Day 2 before 12 PM MT
-* The link to your MVP proposal
+* Add the link to your MVP proposal in [this google sheet](https://docs.google.com/spreadsheets/d/1O5tv2wxmzeJp8-vlk5bZNTtRBEYQ4Zk-0SgOuyzzVJg/edit?usp=sharing).**
 
-### Day 3 before 3 PM MT
+### Day 2 before 3 PM MT
 * The link to your repo
 * The link to your Project Board
 * A link to 2-3 pieces of design inspiration that you will aim to mimic
 * A wireframe of your app - this can include sketches of your user interface, or a link to your Canva, InVision, etc.
 
-### Weekend PR review
+### PR Buddies - PR review
 
-Before the weekend, you'll be assigned a PR buddy. Over the weekend, tag each other in a review that you'd like some eyes on (hopefully a PR for something that involves the learning goals of this project).
-Plan to spend about 20 minutes deep-diving into your buddy's code, asking questions, proposing refactors, and just generally discussing the code with one another.
+You'll be assigned a PR buddy. Sometime this week, tag each other in a review that you'd like some eyes on (hopefully a PR for something that involves the learning goals of this project).
+Plan to spend about 20 minutes deep-diving into your buddy's code, asking questions, proposing refactors, and just generally discussing the code with one another.  
+There is a time block Thursday morning to connect with your PR buddy. PR buddy assignments will be posted in this calendar event. Your PR reviews can occur before or after this time block.  
 
 ## Evals
 
@@ -174,13 +174,13 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 <section class="answer">
 ### Specification Adherence / Functional Expectations
 💫ON TRACK💫 requirements:
-- Project meets all MVP requirements 
+  - Project meets all MVP requirements 
   - Application is deployed (to Vercel or similar service)
   - Application design is [responsive](https://frontend.turing.edu/lessons/module-3/css-responsive-layouts.html)** across small, medium and large breakpoints
 
-✨WOW✨ option:
-- Project completes 1 or more additional features beyond MVP
-- * After your project is completely finished, you could deepen your understanding of React and strive for a WOW by creating a new branch and refactoring your stateful components into class-based components. You will not merge this branch in. Instead, DM a link for that branch/PR to your project manager. Highlight your ability to work with both styles by describing the refactor and linking to the branch in your README.
+WOW option:
+  - Project completes 1 or more additional features beyond MVP
+  - After your project is completely finished, you could deepen your understanding of React and strive for a WOW by creating a new branch and refactoring your stateful components into class-based components. ***DO NOT merge this branch in.*** Instead, DM a link for that branch/PR to your project manager. Highlight your ability to work with both styles by describing the refactor and linking to the branch in your README.
 </section>
 
 <section class="answer">
@@ -204,14 +204,14 @@ WOW can look like:
 ### Routing
   - Application uses Router to display appropriate components based on URL
   - The user has access to previous routes via the back button
-  - A 404 page with home button handles undefined routes.  *You can check this by going to localhost:3000/nonsense and localhost:3000/:specificroute/nonsense*
+  - A 404 page with home button handles undefined routes.  *You can check this by going to `localhost:3000/nonsense` and `localhost:3000/:specificroute/nonsense`*
   - UX is clear and set up so the user has access to previous routes
   - When the user enters a bad URL, they are given an easy way to navigate to a working page
 </section>
 
 <section class="answer">
-### Testing:
-
+### Testing
+On track can look like:
   - Application views are thoroughly tested
   - Application user flows are thoroughly tested
   - Tests make specific assertions about the content DOM elements contain
@@ -219,7 +219,7 @@ WOW can look like:
   - Happy path async functionality is stubbed and tested
   - Sad path async functionality is stubbed and tested
 
-  WOW can look like:
+WOW can look like:
   - Implements Cypress `alias` and `wait()` 
   - Implements Cypress `command` or other features not covered in class
 
@@ -227,8 +227,9 @@ WOW can look like:
 
 <section class="answer">
 ### Professionalism 
-You will not receive a score for professionalism, but you should be meeting these expectations:
-💫ON TRACK💫 can look like:
+You will not receive a score for professionalism, but you should be meeting these expectations:  
+
+On track can look like:
 * Project is deployed
 * README concisely communicates the developer's individual and joint learning goals, the evolution of the project, and developer reflections while using good formatting to enhance readability
 * README links to all user GitHub profiles and any applicable repos & deployed sites
@@ -238,7 +239,7 @@ You will not receive a score for professionalism, but you should be meeting thes
 * Evolution of the project (decisions made, etc) is documented in the git history and PRs
 * When the project is run locally, the terminal shows no errors and no warnings.
 
-✨WOW✨ can look like:
+WOW can look like:
 * Mapping out extensions in your project board beyond your MVP
 * Using github issues to track bugs or other issues as they crop up. 
 * Getting several PR reviews from your rocks and/or mentors and implementing their feedback _before_ you merge the PR.
