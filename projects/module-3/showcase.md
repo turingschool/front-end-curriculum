@@ -199,7 +199,7 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 ### Routing
   - Application uses Router to display appropriate components based on URL
   - The user has access to previous routes via the back button
-  - A 404 page handles undefined routes
+  - A 404 page with home button handles undefined routes.  *You can check this by going to localhost:3000/nonsense and localhost:3000/:specificroute/nonsense*
   - UX is clear and set up so the user has access to previous routes
   - When the user enters a bad URL, they are given an easy way to navigate to a working page
 </section>
