@@ -173,26 +173,31 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 
 <section class="answer">
 ### Specification Adherence / Functional Expectations
-💫ON TRACK💫 can look like:
+💫ON TRACK💫 requirements:
 - Project meets all MVP requirements 
-- App is fully resposive across mobile, tablet and desktop devices
+  - Application is deployed (to Vercel or similar service)
+  - Application design is [responsive](https://frontend.turing.edu/lessons/module-3/css-responsive-layouts.html)** across small, medium and large breakpoints
 
-✨WOW✨ can look like:
+✨WOW✨ option:
 - Project completes 1 or more additional features beyond MVP
 - * After your project is completely finished, you could deepen your understanding of React and strive for a WOW by creating a new branch and refactoring your stateful components into class-based components. You will not merge this branch in. Instead, DM a link for that branch/PR to your project manager. Highlight your ability to work with both styles by describing the refactor and linking to the branch in your README.
 </section>
 
 <section class="answer">
-### React Architecture:
+### React Fundamentals/UI
 
-* A consistent, modular file structure is used
-* A clear understanding of stateful components vs stateless components is demonstrated
-* Only the data that a child component _needs_ is passed down as props
-* Logic is kept out of return statements when possible; return statements are as readable as possible, only communicating what will be displayed.
-* The data displayed on the frontend is consistent with the data stored on the backend
-* Functions follow the single responsibility principle and are written to be reusable when appropriate
-* Data fetched from API is cleaned before being set to state
-* All components which receive props implement prop typechecking (proptypes or otherwise)  
+On track can look like:
+  - A consistent, modular file structure is used
+  - Hooks are implemented to manage and update state. State remains pure and immutable.
+  - Data and functions are passed as props (only as needed) to effectively organize the application
+  - Logic is pulled out of return statements when it makes sense.  `return` statements are as readable as possible, only communicating what will be displayed
+  - Props are protected via Proptypes or type-checking
+  - Application properly uses a catch block for network request error handling (if the server is down or if a fetch call fails) and displays helpful information to the user.
+  - Code is DRY, reusable, and empathetic and functions follow SRP 
+
+WOW can look like:
+  - Data retrieved from a server is run through a cleaning function to handle any missing/inconsistent data and remove any extraneous data that isn't using in the application - before setting that data to state.
+  - Application shows loading state
 </section>
 
 <section class="answer">
@@ -206,10 +211,18 @@ For this project, an average of 0.5 is considered a yes - a passing project that
 
 <section class="answer">
 ### Testing:
-* All user flows are tested
-* All network request functionality is intercepted and stubbed
-* Tests make specific assertions about the content DOM elements contain
-* All sad path user flows have been tested
+
+  - Application views are thoroughly tested
+  - Application user flows are thoroughly tested
+  - Tests make specific assertions about the content DOM elements contain
+  - Network requests are properly stubbed (intercepted)
+  - Happy path async functionality is stubbed and tested
+  - Sad path async functionality is stubbed and tested
+
+  WOW can look like:
+  - Implements Cypress `alias` and `wait()` 
+  - Implements Cypress `command` or other features not covered in class
+
 </section>
 
 <section class="answer">

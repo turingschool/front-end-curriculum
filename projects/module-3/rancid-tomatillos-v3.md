@@ -323,6 +323,7 @@ On track can look like:
 
 WOW can look like:
   - Sad path async functionality is stubbed and tested
+  - Implements Cypress `alias` and `wait()` 
   - Implements Cypress `fixture` 
   - Implements Cypress `command` 
   
