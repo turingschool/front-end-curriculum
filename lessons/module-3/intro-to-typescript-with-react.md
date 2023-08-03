@@ -3,8 +3,6 @@ title: Introduction to TypeScript with React
 tags: JavaScript, JS, TypeScript, TS, React
 ---
 
-## Goal
-
 The intent for this session is to give someone who has never seen TypeScript a brief introduction and give enough information that they can run with.
 
 ## What is TypeScript
@@ -56,7 +54,7 @@ At first, writing TS will be much slower than writing the same thing in JS. You'
 
 First let's see some more TS without React involved. Just like we learned JS without React, it's nice to learn TS without React so we can separate what is TS syntax and what is React syntax.
 
-<section>
+<section class="call-to-action">
 ### Explore
 
 Open up this [repl.it](https://replit.com/@robbiejaeger/TypeScriptIntro#index.ts), and let's explore TS more.
@@ -66,7 +64,7 @@ Open up this [repl.it](https://replit.com/@robbiejaeger/TypeScriptIntro#index.ts
 
 In this section, we'll work on a very small TS React app that has some functionality already built and add to it. It's a trivia app that uses the [Open Trivia Database](https://opentdb.com/api_config.php) for the dataset.
 
-<section>
+<section class="call-to-action">
 ### More Exploration!
 
 Open up this [Trivia Repo](https://github.com/turingschool-examples/trivia-typescript), set it up, and explore some TS within React.
