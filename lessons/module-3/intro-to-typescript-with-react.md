@@ -21,7 +21,7 @@ user = 10; // This is ok to do with JS, but not TS
 // TS will say "Type 'number' is not assignable to type 'string'."
 ```
 
-TS will not allow this to happen. If a variable begins its life as one type, then it must remain that type.
+TS will not allow this to happen. If a variable begins its life as one type, then it must remain that type. This is called **static** typing.
 
 Similarly, we can and should declare function parameters and return values to be of a certain type in TS. Why is this useful?
 
