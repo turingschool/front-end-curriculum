@@ -95,8 +95,8 @@ second problem for another 15 minutes, and we'll do the same thing.
 
 ## Ok, but when will I use this?
 
-You're going to see Higher Order Functions at work very soon when we start
-Redux. We'll do less currying in this class, but as previously mentioned, it's a
+You've already been using Higher Order Functions anytime you use map, filter or reduce. Think about how these array prototype methods take in a callback function and their first argument - that makes them higher order functions!
+It's unlikely you've done much, if any, currying. However, as previously mentioned, it's a
 favorite pattern in functional programming. If you're interested in learning
 more about functional programming,
 [this](https://opensource.com/article/17/6/functional-javascript) article is a

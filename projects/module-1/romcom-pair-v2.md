@@ -162,7 +162,10 @@ Is something weird happening when you click the button? Try googling `event.prev
 - When a user clicks the "View Saved Covers" button, we should see the saved covers section
 - All the covers in the `savedCovers` array should be displayed in the saved covers section
 
-_Note: None of this needs to persist on page load_
+_Notes:_
+- None of this needs to persist after reloading the page.
+- There's already one saved cover in that array from the boiler plate, but from a user experience perspective, we'll want to remove this so that only the covers the user _chooses_ to save will be in there
+
 </section>
 
 <section class="answer">

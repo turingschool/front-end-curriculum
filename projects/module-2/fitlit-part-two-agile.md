@@ -218,44 +218,63 @@ Once your usability test is complete, incorporate any useful and interesting fee
 
 ## Project Requirements Rubric
 
+For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  These are just *some* examples. 
+
+<section class="answer">
+### Does the project demonstrate student understanding of the learning goals & concepts?
+
+Projects will answer that question, being marked as yes, not yet, and wow. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
+
+The overall project outcome (yes, not yet, wow) is determined by “averaging” each section’s outcome. You can think of a “yes” being worth a 1, a “not yet” being worth a 0, and a “wow” being worth a 2.
+
+For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below). 
+</section>
+
+While M2 rubrics do not have a separate section for WOWs like in M1, there are a few WOW examples noted throughout.  In addition to these WOW bullets, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections. 
+
+<section class="answer">
 ### Functional Expectations
+* **Wow**: Application fulfills all iteration requirements, without bugs, and the user experience is intuitive and consistent.
+* Yes: Application fulfills all iteration requirements, including implementing feedback from Part 1 and feedback from the usability test.
+* Not Yet: Application crashes or has missing functionality or bugs.
+</section>
 
-- 4: Application fulfills all iteration requirements, without bugs, and the user experience is intuitive and consistent.
-- 3: Application fulfills all iteration requirements, including implementing feedback from Part 1 and feedback from the usability test.
-- 2: Application is usable but has some missing functionality.
-- 1: Application crashes during normal usage or does not run.
-
+<section class="answer">
 ### Testing
+- Application has a robust and thorough test suite.
+- Test suite covers all scenarios/outcomes, including happy and sad paths.
+- Test suite is organized.
+- Tests use smaller, sample data files as input rather than the large, original data files.
+- `beforeEach` hook is used to DRY up test files
+- There are no failing/pending tests upon submission
+</section>
 
-- 4: Application covers all aspects of the application including various flows and covers both happy/sad paths. Tests must be passing to be considered.
-- 3: Application is well tested but fails to cover some features and only tests for happy paths. Tests use smaller, sample data files as input rather than the large, original data files. Some use of `beforeEach` to DRY up tests. Tests must be passing to be considered.
-- 2: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and some tests do not reflect changes made to implementation. No use of `beforeEach` to DRY up tests. Tests must be passing to be considered.
-- 1: Tests have not been updated to reflect changes made in refactor. There is not enough test coverage, and some tests might be failing.
-
+<section class="answer">
 ### Accessibility
 
-- 4: Has an audit score of 100% and has gone above and beyond accessibility requirements (see extensions).
-- 3: All accessibility areas have been considered and tested. An accessibility audit with a score of at least 95%.
-- 2: One accessibility area has not been tested or considered. This may be: an accessibility audit with a score of 94% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML.
-- 1: Two or more accessibility areas have not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tab-able, large use of non-semantic HTML.
+- The Lighthouse audit tool was used to test and improve accessibility.
+- Application uses semantic HTML.
+- Users can have a seamless experience using only a keyboard to navigate the application (no mouse).
+- Users who have color-blindness can utilize this application without issue.
+- ARIA attributes are used on interactive elements if needed - and *only* if needed.
+- **Wow option**: design is responsive across small, medium and large breakpoints
+</section>
 
+<section class="answer">
 ### JavaScript Refactoring
+- Code has been refactored into logical components each with a clean, single responsibility
+- Array prototype methods are used to iterate instead of for loops
+- All DOM manipulation is held in the `domUpdates.js` file.  No DOM manipulation occurs outside of this file.
+- Application handles all scenarios for error handling
+- `fetch` is effectively implemented for GET and POST
+- DOM is updated based on the results of network requests
+- Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
+- **WOW option**: Effectively implements one or more closure throughout project.  *Note: See Closures lesson on M2 lesson page as a resource.*
+</section>
 
-- 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring. Excellent usage of `fetch` and updates DOM based on results of network requests. Handles all scenarios for error handling.
-- 3: Class methods use array and object prototypes - for loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. Great usage of `fetch` and updates DOM based on results in most scenarios, but may update DOM before a network request is complete. Handles some scenarios for error handling.
-- 2: Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring. Uses `fetch` effectively for GET but does not implement POST. Has zero error handling and only logs errors if a network request fails.
-- 1: Application generates syntax errors or crashes during execution.
-
-### Minimum Professionalism Expectations
-
-- Team collaborates effectively. Team holds daily check-ins throughout project.
-- Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
-- The Project Board is utilized (and updated) with Github issues and labels.
-- Developer uses PRs from feature branches before adding new code to the main branch.
-- The README is formatted well and at a minimum contains:
-    - Overview of project and goals
-    - Overview of technologies used, challenges, wins, and any other reflections
-    - Screenshots/GIFs of your app
+### Collaboration and Professionalism 
+- See "Minimum Collaboration and Professionalism Expectations" above.  
+- While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate and collaborate with the team throughout the entirety of this project. **Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing**.
 
 ---
 

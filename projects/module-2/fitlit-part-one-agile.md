@@ -290,7 +290,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 💫ON TRACK💫 can look like:
 - Application fulfills all requirements of iterations 1-5 without bugs.
 
-✨WOW✨ can look like:
+✨**WOW**✨ can look like:
 - Application fulfills all requirements *as well as* an extension.
 
 </section>
@@ -306,7 +306,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 - Code leverages JavaScript's truthy/falsey principles.
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
 
-✨WOW✨ can look like:
+✨**WOW**✨ can look like:
 - Effectively implements one or more closure throughout project.  *Note: See Closures lesson on M2 lesson page as a resource.*
 </section>
 
@@ -335,7 +335,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 - Helpful messaging is displayed to prevent user confusion.
   - ***For example:** If a user hasn't been active for 7 days, a message is displayed saying there isn't enough data to show their weekly report for each data point.*
 
-✨WOW✨ can look like:
+✨**WOW**✨ can look like:
 - Design is responsive across small, medium and large breakpoints.
 </section>
 

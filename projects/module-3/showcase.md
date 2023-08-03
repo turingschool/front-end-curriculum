@@ -23,7 +23,7 @@ This project will challenge you to use the technology you've become familiar wit
 
 4. Your applications must have the following core functionality:
   - **Display** the data from the API in a way that applies directly to your audience
-  - Ability for users to **store/manipulate** the data displayed in the application, such as favoriting or adding to a list, searching, commenting, etc
+  - Ability for users to **store/manipulate** the data displayed in the application, such as (choose *one*) favoriting/unfavoriting, adding to/removing from a list, searching, commenting, etc
   - Multiple views handled by Router
   - Be deployed using Vercel, Heroku, Surge, or any other similar service
   - PropTypes has been implemented in all components with props
@@ -108,21 +108,21 @@ We also want you to choose two design inspiration pieces, which can be as broad 
 
 ## Deliverables
 
-**Turn in all Day 1 + 2 deliverables via [this google sheet](https://docs.google.com/spreadsheets/d/1O5tv2wxmzeJp8-vlk5bZNTtRBEYQ4Zk-0SgOuyzzVJg/edit?usp=sharing).**
+### Day 0 Kick Off & Proposals Due (5 PM MT)
 
-### Day 2 before 12 PM MT
-* The link to your MVP proposal
+* Add the link to your MVP proposal in [this google sheet](https://docs.google.com/spreadsheets/d/1O5tv2wxmzeJp8-vlk5bZNTtRBEYQ4Zk-0SgOuyzzVJg/edit?usp=sharing).**
 
-### Day 3 before 3 PM MT
+### Day 2 before 3 PM MT
 * The link to your repo
 * The link to your Project Board
 * A link to 2-3 pieces of design inspiration that you will aim to mimic
 * A wireframe of your app - this can include sketches of your user interface, or a link to your Canva, InVision, etc.
 
-### Weekend PR review
+### PR Buddies - PR review
 
-Before the weekend, you'll be assigned a PR buddy. Over the weekend, tag each other in a review that you'd like some eyes on (hopefully a PR for something that involves the learning goals of this project).
-Plan to spend about 20 minutes deep-diving into your buddy's code, asking questions, proposing refactors, and just generally discussing the code with one another.
+You'll be assigned a PR buddy. Sometime this week, tag each other in a review that you'd like some eyes on (hopefully a PR for something that involves the learning goals of this project).
+Plan to spend about 20 minutes deep-diving into your buddy's code, asking questions, proposing refactors, and just generally discussing the code with one another.  
+There is a time block Thursday morning to connect with your PR buddy. PR buddy assignments will be posted in this calendar event. Your PR reviews can occur before or after this time block.  
 
 ## Evals
 
@@ -157,66 +157,79 @@ Project evals will be asynchronous.  The feedback for this project will be limit
 
 ## Rubric
 
-### Project Requirements Rubric
-For the rubric sections below, you will be scored as Wow, Yes or Not Yet depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency. These are just some examples.
+For the rubric sections below, you will be scored as **Wow, Yes or Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstrate competency. These are just *some* examples.
 
 <section class="answer">
-**Does the project demonstrate student understanding of the learning goals & concepts?**
+### Does the project demonstrate student understanding of the learning goals & concepts?
 
 Projects will answer that question, being marked as yes, not yet, and wow. Similarly, each section of the rubric (see below) will have yes/not yet/wow markings, helping you understand your progress and growth in specific areas.
 
 The overall project outcome (yes, not yet, wow) is determined by “averaging” each section’s outcome. You can think of a “yes” being worth a 1, a “not yet” being worth a 0, and a “wow” being worth a 2.
 
-For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below).
+For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below). 
 </section>
 
-While M3 rubrics do not have a separate section for WOWs like in M1, there are a few WOW examples noted throughout. In addition to these WOW bullets, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections.
+ In addition to any WOW examples listed below, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections.
 
 <section class="answer">
 ### Specification Adherence / Functional Expectations
-💫ON TRACK💫 can look like:
-- Project meets all MVP requirements 
-- App is fully resposive across mobile, tablet and desktop devices
+💫ON TRACK💫 requirements:
+  - Project meets all MVP requirements 
+  - Application is deployed (to Vercel or similar service)
+  - Application design is [responsive](https://frontend.turing.edu/lessons/module-3/css-responsive-layouts.html)** across small, medium and large breakpoints
 
-✨WOW✨ can look like:
-- Project completes 1 or more additional features beyond MVP
-- * After your project is completely finished, you could deepen your understanding of React and strive for a WOW by creating a new branch and refactoring your stateful components into class-based components. You will not merge this branch in. Instead, DM a link for that branch/PR to your project manager. Highlight your ability to work with both styles by describing the refactor and linking to the branch in your README.
+WOW option:
+  - Project completes 1 or more additional features beyond MVP
+  - After your project is completely finished, you could deepen your understanding of React and strive for a WOW by creating a new branch and refactoring your stateful components into class-based components. ***DO NOT merge this branch in.*** Instead, DM a link for that branch/PR to your project manager. Highlight your ability to work with both styles by describing the refactor and linking to the branch in your README.
 </section>
 
 <section class="answer">
-### React Architecture:
+### React Fundamentals/UI
 
-* A consistent, modular file structure is used
-* A clear understanding of stateful components vs stateless components is demonstrated
-* Only the data that a child component _needs_ is passed down as props
-* Logic is kept out of return statements when possible; return statements are as readable as possible, only communicating what will be displayed.
-* The data displayed on the frontend is consistent with the data stored on the backend
-* Functions follow the single responsibility principle and are written to be reusable when appropriate
-* Data fetched from API is cleaned before being set to state
-* All components which receive props implement prop typechecking (proptypes or otherwise)  
+On track can look like:
+  - A consistent, modular file structure is used
+  - Hooks are implemented to manage and update state. State remains pure and immutable.
+  - Data and functions are passed as props (only as needed) to effectively organize the application
+  - Logic is pulled out of return statements when it makes sense.  `return` statements are as readable as possible, only communicating what will be displayed
+  - Props are protected via Proptypes or type-checking
+  - Application properly uses a catch block for network request error handling (if the server is down or if a fetch call fails) and displays helpful information to the user.
+  - Code is DRY, reusable, and empathetic and functions follow SRP 
+
+WOW can look like:
+  - Data retrieved from a server is run through a cleaning function to handle any missing/inconsistent data and remove any extraneous data that isn't using in the application - before setting that data to state.
+  - Application shows loading state
 </section>
 
 <section class="answer">
 ### Routing
   - Application uses Router to display appropriate components based on URL
   - The user has access to previous routes via the back button
-  - A 404 page handles undefined routes
+  - A 404 page with home button handles undefined routes.  *You can check this by going to `localhost:3000/nonsense` and `localhost:3000/:specificroute/nonsense`*
   - UX is clear and set up so the user has access to previous routes
   - When the user enters a bad URL, they are given an easy way to navigate to a working page
 </section>
 
 <section class="answer">
-### Testing:
-* All user flows are tested
-* All network request functionality is intercepted and stubbed
-* Tests make specific assertions about the content DOM elements contain
-* All sad path user flows have been tested
+### Testing
+On track can look like:
+  - Application views are thoroughly tested
+  - Application user flows are thoroughly tested
+  - Tests make specific assertions about the content DOM elements contain
+  - Network requests are properly stubbed (intercepted)
+  - Happy path async functionality is stubbed and tested
+  - Sad path async functionality is stubbed and tested
+
+WOW can look like:
+  - Implements Cypress `alias` and `wait()` 
+  - Implements Cypress `command` or other features not covered in class
+
 </section>
 
 <section class="answer">
 ### Professionalism 
-You will not receive a score for professionalism, but you should be meeting these expectations:
-💫ON TRACK💫 can look like:
+You will not receive a score for professionalism, but you should be meeting these expectations:  
+
+On track can look like:
 * Project is deployed
 * README concisely communicates the developer's individual and joint learning goals, the evolution of the project, and developer reflections while using good formatting to enhance readability
 * README links to all user GitHub profiles and any applicable repos & deployed sites
@@ -226,7 +239,7 @@ You will not receive a score for professionalism, but you should be meeting thes
 * Evolution of the project (decisions made, etc) is documented in the git history and PRs
 * When the project is run locally, the terminal shows no errors and no warnings.
 
-✨WOW✨ can look like:
+WOW can look like:
 * Mapping out extensions in your project board beyond your MVP
 * Using github issues to track bugs or other issues as they crop up. 
 * Getting several PR reviews from your rocks and/or mentors and implementing their feedback _before_ you merge the PR.

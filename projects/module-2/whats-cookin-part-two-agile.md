@@ -178,7 +178,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 
 <section class="answer">
 ### Functional Expectations
-* Wow: Application fulfills all iteration requirements, without bugs, and the user experience is intuitive and consistent.
+* **Wow**: Application fulfills all iteration requirements, without bugs, and the user experience is intuitive and consistent.
 * Yes: Application fulfills all iteration requirements, including implementing feedback from Part 1 and feedback from the usability test.
 * Not Yet: Application crashes or has missing functionality or bugs.
 </section>
@@ -201,7 +201,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 - Users can have a seamless experience using only a keyboard to navigate the application (no mouse).
 - Users who have color-blindness can utilize this application without issue.
 - ARIA attributes are used on interactive elements if needed - and *only* if needed.
-* Wow option: design is responsive across small, medium and large breakpoints
+- **Wow option**: design is responsive across small, medium and large breakpoints
 </section>
 
 <section class="answer">
@@ -213,7 +213,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 - `fetch` is effectively implemented for GET and POST
 - DOM is updated based on the results of network requests
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
-- WOW option: Effectively implements one or more closure throughout project.  *Note: See Closures lesson on M2 lesson page as a resource.*
+- **WOW option**: Effectively implements one or more closure throughout project.  *Note: See Closures lesson on M2 lesson page as a resource.*
 </section>
 
 ### Collaboration and Professionalism 

@@ -15,7 +15,7 @@ Add your name to [this Goals Document](https://docs.google.com/spreadsheets/d/1b
 You will continue to add your weekly goals to that document every Monday throughout the inning. We'll set up a slackbot in #mod1_repeater_fam to remind you!
 
 ## Professional Development  
-Repeating the module is a great opportunity to solidify your technical AND professional development skills. As a repeater, you are not expected to re-do any of the lessons or exit tickets. Live PD lessons are optional for repeaters. 
+Repeating the module is a great opportunity to solidify your technical AND professional development skills. As a repeater, you are not expected to re-do any of the async lessons or exit tickets. However, you are still expected to attend live (on Zoom) PD lessons!
 
 <!-- **Gear Up expectations for repeating mod 1:**  
 You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters.    -->
@@ -26,7 +26,7 @@ We want you to feel empowered to skip some classes if you feel you'd be better s
 The following lessons are not optional. Repeaters must attend:
 * Meet Your Cohort
 * Cohort & Project Norm Setting
-* Any live (on zoom) PD lessons
+* Any live (on Zoom) PD lessons
 
 If you decide to skip a lesson...
 * You should always read through the lesson on your own. If you can complete all of the activities in the lesson without help, you should feel confident skipping that lesson. We recommend doing this no later than the day before the lesson is scheduled. That way, if you realize that you need to attend the class, it's not too late!  
