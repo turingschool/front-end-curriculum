@@ -21,7 +21,7 @@ There are 3 billion (and counting) people using the internet.
 
 In America alone there are 57 million Americans with a disability (2012)
 
-consider the following statistics from the [Census Bureau's survey taken on July 25, 2012](http://www.interactiveaccessibility.com/accessibility-statistics)
+consider the following statistics from the [Census Bureau's survey taken on July 25, 2012](https://web.archive.org/web/20221005131811/http://www.interactiveaccessibility.com/accessibility-statistics)
 
 19.9 Million (8.2%) have difficulty lifting or grasping. This could, for example impact their use of a mouse or keyboard.
 
