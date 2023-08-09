@@ -271,7 +271,7 @@ Nodes and Edges have properties. There is no requirement that properties are con
 
 ### Getting started
 
-You need to install the JDK before you can install Neo4j. Type `javac -version` to see if you have it. If you don't you'll probably be prompted to install it. You can try that. I haven't. If you're already a user of [`brew cask`](https://caskroom.github.io/), just `brew cask install java`. Otherwise, [download from here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+You need to install the JDK before you can install Neo4j. Type `javac -version` to see if you have it. If you don't you'll probably be prompted to install it. You can try that. I haven't. If you're already a user of [`brew cask`](https://github.com/Homebrew/homebrew-cask), just `brew install java`. Otherwise, [download from here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 Then you can `brew install neo4j` and follow the instructions to start the server.
 
