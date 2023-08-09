@@ -150,7 +150,7 @@ describe('Card', () => {
 });
 ```
 
-As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.io/jest/) instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its own expectation library which is similar to Chai's `expect` syntax (as opposed to the `assert` syntax).
+As previously mentioned, `create-react-app` uses [Jest](https://jestjs.io/) instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its own expectation library which is similar to Chai's `expect` syntax (as opposed to the `assert` syntax).
 
 [Jest Assertions](https://facebook.github.io/jest/docs/api.html)  
 

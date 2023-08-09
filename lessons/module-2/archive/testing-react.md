@@ -709,7 +709,7 @@ First let's test that our state is updating whenever our input values change:
 ```
 
 Now for the tricky part. Our goal is to test that when the submit button is clicked, it calls the correct function it's supposed to. To do this, we'll need to do a couple things:
-* Stub in a [jest.fn()](http://facebook.github.io/jest/docs/jest-object.html#jestfnimplementation) in place of our actual function
+* Stub in a [jest.fn()](https://jestjs.io/docs/jest-object#jestfnimplementation) in place of our actual function
 * Find the specific button
 * Simulate a click event
 

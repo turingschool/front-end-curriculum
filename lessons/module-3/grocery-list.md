@@ -235,12 +235,12 @@ describe('Grocery', () => {
 });
 ```
 
-As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.io/jest/) 
+As previously mentioned, `create-react-app` uses [Jest](https://jestjs.io/) 
 instead of Mocha. That said, you'll notice that the syntax is surprising similar. One 
 difference is that Jest includes its own expectation library which is similar to Chai's 
 `expect` syntax (as opposed to the `assert` syntax).  
 
-[Jest Assertions](https://facebook.github.io/jest/docs/api.html)  
+[Jest Assertions](https://jestjs.io/docs/api)  
 
 If you run `npm test` you should see your one test pass (two if you still have the 
 generic App test). You can keep this process running. The test suite will automatically 
