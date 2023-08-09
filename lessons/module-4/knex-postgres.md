@@ -539,4 +539,4 @@ Write a GET request to retrieve all footnotes for a pre-existing paper. Verify i
 
 ### Instructor Resources
 
-* [Step-by-Step Code Along Screenshots](https://github.com/turingschool/front-end-keys/tree/master/module-4/lesson-plans/knex)
+* [Step-by-Step Code Along Screenshots](https://github.com/turingschool/front-end-keys/tree/main/module-4/lesson-plans/knex)
