@@ -108,7 +108,7 @@ export default App;
 
 As we mentioned before, `create-react-app` has a built in testing framework that cannot 
 be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test 
-runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
+runner called `Jest`. [Read more about the Jest and React combo here](https://jestjs.io/docs/tutorial-react).
 
 In order to run the tests, type `npm test`. Normally, our suite runs and then we return 
 to the command line. With Create React App, `npm test` starts up a server that is 
