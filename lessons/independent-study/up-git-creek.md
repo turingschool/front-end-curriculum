@@ -272,7 +272,6 @@ git help <command>
 ### From novice to Git Greatness, these things will git you there:
 
 - [Try Git](https://try.github.io/levels/1/challenges/1)
-- [Github On Demand](https://github.github.io/on-demand/)
 - [Pro Git](https://progit.org/)
 - [Atlassian Advanced Git](https://www.atlassian.com/git/tutorials/advanced-overview/)
 - [Git Docs](https://git-scm.com/docs)
