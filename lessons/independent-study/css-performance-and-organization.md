@@ -267,6 +267,6 @@ By grouping our styles together by content (or layout) type, we reenforce that w
 
 [CSS Tricks: Efficiently Rendering CSS](https://css-tricks.com/efficiently-rendering-css/)
 
-[Writing efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
+[Writing efficient CSS](https://developer.mozilla.org/en-US/docs/Learn/Performance/CSS)
 
 [Jonathan Snook's guide, Scaleable and Modular Architecture for CSS](https://smacss.com/)
