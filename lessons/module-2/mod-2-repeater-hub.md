@@ -5,7 +5,7 @@ title: Mod 2 Repeater Hub
 Welcome! Please read this entire page completely. Reach out to your instructors if you have any questions!
 
 ## Repeating Guidelines
-General information about repeating can be found [here](https://frontend.turing.edu/documents/repeat_guidelines_student_2020.pdf)
+General information about repeating can be found [here](https://docs.google.com/document/d/1B84KoDHytY1yVLxRK9CTc1eipCx2XOS7PVkxYU0p2zA/edit#heading=h.lzq0jebf1oau)
 
 ## Slack Channels
 Make sure you are part of the following channels:
