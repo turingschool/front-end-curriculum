@@ -201,12 +201,12 @@ To earn a given score, an application must meet the requirements listed in that 
 * **4:**
   * Functions and code are well-refactored and show developer empathy
   * There are no global variables aside from query selectors, `pastActivities` and `currentActivity`.
-  * Functions strictly observe [SRP](http://knnthvu.weebly.com/srp-and-dry.html) and do not exceed 10 lines
+  * Functions strictly observe [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle) and do not exceed 10 lines
   * Uses logical operators instead of if/else statements wherever applicable
   * There are no nested if/else statements
 * **3:**
   * Application uses event delegation correctly on dynamic elements
-  * Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with a focus on [SRP](http://knnthvu.weebly.com/srp-and-dry.html)
+  * Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with a focus on [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle)
   * Application demonstrates full separation of data-model and presentational logic (there is no DOM logic in the `Activity` class)
   * Application makes use of arguments and parameters to make functions more dynamic/reusable
 * **2:**
