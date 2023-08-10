@@ -441,7 +441,7 @@ it('should call the onPurchase prop when clicked', () => {
 - We likely want to pass in a grocery ID or grocery name to the `onPurchase` method so 
   we can keep track of what has been purchased. Can you add an assertion to the previous 
   test to check that `onPurchaseMock` was called with the correct arguments? 
-  ([Hint](https://facebook.github.io/jest/docs/expect.html#content))
+  ([Hint](https://jestjs.io/docs/expect))
 - Can you write the tests and implementation for the "Star" and "Remove" buttons?
 
 ### Testing a class method

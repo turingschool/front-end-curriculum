@@ -50,7 +50,7 @@ Some things to consider...
     * When you delete an item, is the count updated correctly? 
     
  
-The best way to check that we are writing tests correctly is to reference the docs. Let's check out the [expect documentation](https://facebook.github.io/jest/docs/expect.html#content) to take a look at some commons methods you may use for your testing React applications:
+The best way to check that we are writing tests correctly is to reference the docs. Let's check out the [expect documentation](https://jestjs.io/docs/expect) to take a look at some commons methods you may use for your testing React applications:
 
 ## Time to Test Our App component!
 
