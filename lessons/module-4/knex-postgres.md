@@ -537,6 +537,6 @@ Write a GET request to retrieve all footnotes for a pre-existing paper. Verify i
 * What is seed data and what do we use it for?
 </section>
 
-### Instructor Resources
+<!-- ### Instructor Resources -->
 
-* [Step-by-Step Code Along Screenshots](https://github.com/turingschool/front-end-keys/tree/main/module-4/lesson-plans/knex)
+<!-- * [Step-by-Step Code Along Screenshots](https://github.com/turingschool/front-end-keys/tree/main/module-4/lesson-plans/knex) -->
