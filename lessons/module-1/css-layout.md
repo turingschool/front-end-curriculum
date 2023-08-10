@@ -19,9 +19,7 @@ Come prepared to class by reading [CSS Specificity + Combinators](https://fronte
 
 ## Warm Up
 
-Checks for understanding and questions from the Pre-work.
-
-<!-- [Instructor Resource](https://docs.google.com/presentation/d/1ZM4pRSnB-pgvXvpCoRjYPt-RmRncYPahvOCibIuS1WU/edit#slide=id.g78e7823268_0_0) -->
+[Instructor Resource](https://docs.google.com/presentation/d/1lKOoG9BPFM1xjUGZNPJXzX6ifnWOm2fCvpCzLbkat5Y/edit?usp=sharing)
 
 ## Display
 
