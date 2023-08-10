@@ -197,7 +197,7 @@ Map and Reduce are commonly used together when querying a document store DB. You
 
 ### No(t)SQL
 
-[A decent cheat sheet for common things](https://blog.codecentric.de/files/2012/12/MongoDB-CheatSheet-v1_0.pdf)
+[A decent cheat sheet for common things](https://github.com/fossfreaks/web-dev-cheat-sheets/blob/master/MongoDB-CheatSheet-v1_0.pdf)
 
 #### Insert
 
