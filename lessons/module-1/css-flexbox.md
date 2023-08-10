@@ -179,6 +179,12 @@ If flex isn't working the way you think it should, check the following things:
 - *Am I sure I'm adding the flex properties to the correct element?* Check the parent-child relationship in the HTML file to be sure that you are adding those properties to the direct parent.
 - *Is the parent element big enough?* Add a border to the parent element. If it is the same width and/or height as the children, you won't be able to move those children as expected.
 
+CSS tends to require a lot of trial and error when you're first learning it. Often, the CSS flow for newbies is something like:
+ - Developer edits their css file and reload their webpage to see if it's what they want.
+ - Developer realizes it's not quite right, so they edit their CSS file again, reload again, on and on and on.
+
+We encourage you to make your CSS changes in your dev tools which will instantly show you the result. You can keep editing the CSS right in your dev tools until it's right, then copy those rules over to your text editor and save yourself all the time on the back and forth.
+
 ## Using Flexbox on Nested Elements
 
 <div class="call-to-action">

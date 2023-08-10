@@ -12,7 +12,7 @@ Make sure you are part of the following channels:
 ## Goal Tracking
 Add your name to [this Goals Document](https://docs.google.com/spreadsheets/d/1bQ9zZbW0mxLfMXDLQZT4W2M5Z-nv_6FZ1T5WC8Io8Zo/edit#gid=1626636507) and fill out your goal for Intermission. We will check in on these goals on the Monday of Week 1.  
 
-You will continue to add your weekly goals to that document every Monday throughout the inning. We'll set up a slackbot in #mod1_repeater_fam to remind you!
+You will continue to add your weekly goals to that document every Monday throughout the inning.
 
 ## Professional Development  
 Repeating the module is a great opportunity to solidify your technical AND professional development skills. As a repeater, you are not expected to re-do any of the async lessons or exit tickets. However, you are still expected to attend live (on Zoom) PD lessons!
