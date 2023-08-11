@@ -227,4 +227,4 @@ parent.addEventListener('click', function(event) {
 
 <!-- For now, we no longer teach jQuery so commenting this out for the time being. -->
 <!-- - Now that you have some jQuery under your belt - you should know that jQuery has an easy way to do event delegation with the 'on' function. [Check out the docs here](http://api.jquery.com/on/) -->
-- A very detailed piece that describes [event order](https://www.quirksmode.org/js/events_order.html) can be found here
+- A very detailed piece that describes [event order](https://web.archive.org/web/20230527190018/https://www.quirksmode.org/js/events_order.html) can be found here

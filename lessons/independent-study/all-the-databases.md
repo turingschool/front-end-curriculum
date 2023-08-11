@@ -120,24 +120,24 @@ This will return us the `title`, `description` and `author` of each post for the
 
 ### Exercises
 
-- Here's a sandbox: <http://www.dofactory.com/sql/sandbox>
-  - List the first and last name of all the customers
+- Here's a sandbox: <https://www.w3schools.com/sql/trysql.asp?filename=trysql_asc>
+  - List the CustomerName of all the customers
   - List all fields for customers from Germany
   - Insert a new customer record for yourself. What's your id?
-  - List all the orders from Maria Anders (hint: you don't need a join yet)
-  - Return the sum total amount from all of Maria Anders' orders
+  - List all the orders from Hanari Carnes (hint: you don't need a join yet)
+  - Return the sum total amount from all of Hanari Carnes' orders
   - Return the number of customers from each country
 
 - Some Backend Mod 2 lessons:
   - http://backend.turing.edu/module2/lessons/visualising_and_implementing_database_relationships
   - https://github.com/turingschool/lesson_plans/blob/master/ruby_02-web_applications_with_ruby/outlines/introduction_to_sql.markdown
 - A Backend Mod 3 lesson: <https://github.com/turingschool/lesson_plans/blob/master/ruby_03-professional_rails_applications/intermediate_sql.md>
-- [A nifty sandbox](http://www.dofactory.com/sql/sandbox). Try these things:
+- [A nifty sandbox](https://www.w3schools.com/sql/trysql.asp?filename=trysql_asc). Try these things:
   - List the first and last name of all the customers
   - List all fields for customers from Germany
   - Insert a new customer record for yourself. What's your id?
-  - List all the orders from Maria Anders (hint: you don't need a join yet)
-  - Return the sum total amount from all of Maria Anders' orders
+  - List all the orders from Hanari Carnes (hint: you don't need a join yet)
+  - Return the sum total amount from all of Hanari Carnes' orders
   - Return the number of customers from each country
   - Return the concatenated first and last name of all customers
 - Creating a hybrid document/relational database: <http://rob.conery.io/2015/03/01/document-storage-gymnastics-in-postgres/>
@@ -197,7 +197,7 @@ Map and Reduce are commonly used together when querying a document store DB. You
 
 ### No(t)SQL
 
-[A decent cheat sheet for common things](https://blog.codecentric.de/files/2012/12/MongoDB-CheatSheet-v1_0.pdf)
+[A decent cheat sheet for common things](https://github.com/fossfreaks/web-dev-cheat-sheets/blob/master/MongoDB-CheatSheet-v1_0.pdf)
 
 #### Insert
 
@@ -271,7 +271,7 @@ Nodes and Edges have properties. There is no requirement that properties are con
 
 ### Getting started
 
-You need to install the JDK before you can install Neo4j. Type `javac -version` to see if you have it. If you don't you'll probably be prompted to install it. You can try that. I haven't. If you're already a user of [`brew cask`](https://caskroom.github.io/), just `brew cask install java`. Otherwise, [download from here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+You need to install the JDK before you can install Neo4j. Type `javac -version` to see if you have it. If you don't you'll probably be prompted to install it. You can try that. I haven't. If you're already a user of [`brew cask`](https://github.com/Homebrew/homebrew-cask), just `brew install java`. Otherwise, [download from here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 Then you can `brew install neo4j` and follow the instructions to start the server.
 

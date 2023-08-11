@@ -393,7 +393,7 @@ exports.seed = async (knex) => {
 
 ## Fetching From the Database
 
-Let's write some express code to interact with our newly seeded database. [Set up a simple express server](https://frontend.turing.edu/lessons/module-4/intro-to-express.html) and we'll add some configuration to work with the knex database:
+Let's write some express code to interact with our newly seeded database. [Set up a simple express server](https://frontend.turing.edu/lessons/module-3/express) and we'll add some configuration to work with the knex database:
 
 ```js
 const environment = process.env.NODE_ENV || 'development';
@@ -537,6 +537,6 @@ Write a GET request to retrieve all footnotes for a pre-existing paper. Verify i
 * What is seed data and what do we use it for?
 </section>
 
-### Instructor Resources
+<!-- ### Instructor Resources -->
 
-* [Step-by-Step Code Along Screenshots](https://github.com/turingschool/front-end-keys/tree/master/module-4/lesson-plans/knex)
+<!-- * [Step-by-Step Code Along Screenshots](https://github.com/turingschool/front-end-keys/tree/main/module-4/lesson-plans/knex) -->
