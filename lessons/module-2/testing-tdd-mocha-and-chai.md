@@ -282,14 +282,14 @@ describe('checkForWin function', function() {
     `expect(player.winningWords)to.be.an('array');`  
     `expect(player.winningWords.length).to.equal(1);`  
   1. How would we write our tests for testing what the function returns (happy and sad path)?  
-  1. Is this function pure?  Why or why not?
+  1. Is this `checkForWin` function pure?  Why or why not?
   1. Why might side effects be difficult to test?
 </section>  
 
 <section class="note">
 ### What makes a good test?
 
-- Test one thing
+- Test one outcome or result
 - Do not have control flow (`if`, `when`, `for`) statements
 - Can be used as documentation for the code they test
 - Are clear and easy to read
