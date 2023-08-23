@@ -104,4 +104,4 @@ The skills you will develop over the course of this project are:
 - Time management
 - Git workflow
 
-At the end of the project, we will go over work together in small groups, and we will have you fill out a reflection survey where you can assess your growth over the course of the project.
+At the end of the project, we will have you fill out a reflection survey where you can assess your growth over the course of the project.  While individual feedback will be minimal from instructors, we will share feedback on common themes we saw in your projects later next week.
