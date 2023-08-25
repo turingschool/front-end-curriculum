@@ -345,6 +345,12 @@ When rendering error messages for your users, consider ways to present the infor
 
 This way, the devs have access to the error via the console, but the users have a nice, friendly message!
 
+<section class="note">
+### Solution - Complete Branch
+
+That was a lot of coding! If you want to see the full completed file, check out [the complete branch](https://github.com/turingschool-examples/advanced-data-management-hooks-fe/blob/complete/src/App.js) in that repo!
+</section>
+
 ## Closing - Checks for Understanding
 
 In your notebooks, respond to the following:
