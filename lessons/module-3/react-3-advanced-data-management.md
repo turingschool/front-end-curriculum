@@ -328,7 +328,7 @@ Fun fact: You can conditionally render whole components:
 ```
 Have fun exploring that!
 
-### Error Messages
+### Error Messages for Your Users
 
 As a frontend dev, you want to think about your users all the time. With that in mind, you will want to think about what errors are appropriate for your users. For example, would an error message like "WDGeneralNetworkError error 500;" be something you'd want to render to your app's screen? Maybe in some cases, maybe not.
 
