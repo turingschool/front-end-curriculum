@@ -30,6 +30,8 @@ React Router just released the newest version - `version 6`. This lesson has bee
 ## Prework  
 
 Before the lesson, complete the [prework](https://gist.github.com/niksseif/284877066bc6a7ce6290031980cb4a6a){:target='blank'}.
+
+You might also find it helpful to watch [this video walkthrough](https://www.youtube.com/watch?v=Ul3y1LXxzdU) before the lesson, but it's not required.
 </section>
 
 <section class="call-to-action">
