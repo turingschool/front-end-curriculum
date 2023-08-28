@@ -6,231 +6,300 @@ tags: react, hooks, useEffect, Network request
 ---
 
 ## Learning Goals
-* Be able to perform network requests and make use of the response data with the `useEffect` hook.
-* Understand how to perform side effect behavior in a functional component with `useEffect`.
-* Be able to conditionally render different views in a function component.
 
+* Be able to perform network requests and make use of the response data with the `useEffect` hook
+* Understand how to perform side effect behavior in a functional component with `useEffect`
+* Be able to conditionally render different views in a function component
 
 ## Vocab
 
 * `useEffect` - A React Hook which enables us to add side effect behavior to a functional component.
 * Side effect - Any action performed by a component that causes a change in the application state or interacts with the outside world. 
 
-## React Introduces Hooks (v16.8 - February 2019)
+## React Hooks
+
+React introduced hooks with v16.8 in February 2019.
 
 Hooks are functions that let you "hook into" React state and lifecycle features from functional components. React gives us some built-in hooks, that we'll take a look at shortly, but we can also create our own custom hooks that will allow us to reuse/share stateful logic.
+
+**What are some hooks you've seen already when working with React?**
 
 There are a number of different motivations behind adding hooks to React, which you can read more about [here](https://reactjs.org/docs/hooks-intro.html#motivation). The most important take-away for you is that hooks allows us to streamline our applications and leverage the power of functional components.
 
 ### Some Important Rules
 
-* **Only call hooks from within React functions** 
-* **Don't call hooks inside of loops, conditions, or nested functions** 
+* Only call hooks from within React functions 
+* Don't call hooks inside of loops, conditions, or nested functions 
 
 ### Benefits of Hooks
 
-* Let you organize the logic inside a component into reasonable isolated units.
-* Allow you to reuse stateful logic without changing your component hierarchy.
+* Let you organize the logic inside a component into reasonable isolated units
+* Allow you to reuse stateful logic without changing your component hierarchy
 * Will likely reduce your bundle size because code using Hooks tends to minify better than equivalent code using classes
 * No breaking changes
 
+## Network Requests & React
 
-### Getting started
-We're going to be using [this repo](https://github.com/turingschool-examples/advanced-data-management-hooks-fe/tree/main) today. Before going any further please do the following:
+### Review - Fetch
 
-* Clone the repo to your machine
-* Run `npm install` in the repo
-* Put a thumbs up in the participants panel of zoom once you're done!
-
-### Setting Up Your Back End
-
-We're also going to be running a back end server, which will function as our API! Lucky you, we've written up the backend for you, complete with documentation and friendly error messages.
-
-Clone down [the repo](https://github.com/turingschool-examples/ideabox-api) seperately- but NOT inside your FE repository!
-
-```bash
-git clone https://github.com/turingschool-examples/ideabox-api.git ideabox-api
-cd ideabox-api
-npm i
-node server.js
-```
-
-Note that the frontend should be running on `localhost:3000` and the backend should be running on `localhost:3001`.
-
-Once you are set up, you can visit `http://localhost:3001/api/v1/ideas` and you should see a brief list of ideas!
-
-
-### Implement Getting Data from the Backend
-<section class="call-to-action">
-### Your Turn -- Review `.fetch()`
- Take some time to look into the <a href="https://developer.mozilla.org/en-us/docs/web/api/fetch_api/using_fetch" target="_blank">fetch API documentation</a>.
- Answer the following questions:
-  <section class="answer">
-### What does `.fetch()` do?
-  `.fetch()` is a method provided by the fetch api. It allows us to make a network request.     
-  </section>
-  <section class="answer">
-### What does `.fetch()` return?
-`.fetch()` returns a promise.
-  </section>
-  <section class="answer">
+We will be using `fetch` today. Let's review what you already know about `fetch`. Take some time to look into the <a href="https://developer.mozilla.org/en-us/docs/web/api/fetch_api/using_fetch" target="_blank">fetch API documentation</a> and answer the following questions:
+<section class="answer">
+### What does `fetch` do?
+`fetch` is a method provided by the Fetch API. It allows us to make a network request.     
+</section>
+<section class="answer">
+### What does `fetch` return?
+`fetch` returns a promise.
+</section>
+<section class="answer">
 ### What does `.then()` do? What is the method called on? What does it return?
 `.then()` is a method of the Promise prototype that is called on a promise object. It is used to handle the successful resolution of a promise. When the promise resolves, the code inside the `.then()` block is executed. The `.then()` method itself returns a new promise object, allowing for chaining multiple asynchronous operations together.
-  </section>
-  <section class="answer">
+</section>
+<section class="answer">
 ### What does `.catch()` do? What is the method called on? What does it return?
 `.catch()` is a method called on a Promise object (aka a Promise prototype method). It runs when the first promise it is chained to fails / rejects. It returns a promise object.
-  </section>
 </section>
 
-Okay. Let's refactor our IdeaBox so that we are consuming data from our API!
+### Set Up
+
+You'll need to clone down two repos for today:
+- [FE Repo](https://github.com/turingschool-examples/advanced-data-management-hooks-fe/tree/main)
+- [BE Repo](https://github.com/turingschool-examples/ideabox-api) - Do NOT clone inside your FE repository!
+
+Follow the steps in each README to get both the FE and BE running on your local machine. Make a tab in Chrome for:
+- `localhost:3000`: You should see the React app up and running here
+- `http://localhost:3001/api/v1/ideas`: You should see your list of ideas here
+
+Our goal is to refactor this codebase so that we are accessing and updating the data from our API!
+
+### `GET` Request
+
+We are going to start with the `GET` request. Let's start by thinking about a couple of things:
+- What data do we want to GET?
+- When do we need to GET that data?
+- What are we going to do with the data we GET?
+
+<section class="answer">
+### Answers  
+  
+- What data do we need to GET? **All ideas**
+- When do we need to run that GET? **On page load**
+- What are we going to do with the data we GET? **Add the ideas to our App component's state**
+</section>
+
+Given that we are going to use the data to update the `App` component's state, we should probably put the `GET` there. 
+
 <section class="call-to-action">
-### Your Turn
+### Make the GET Request
 
-Pair up and work together on implementing the functionality to fetch our ideas from the API using the useEffect hook! Use the docs for the API to figure out what endpoint you need to hit. Also, think about where this hook should be placed in the component's code. Once you have the ideas being rendered, give your partner a high five!
+Write a function in `App` that runs a fetch request to GET all ideas. 
+
+Notes:
+- Refer to the BE repo's README for endpoints and documentation. 
+- For now, let's `console.log` the data that comes back.
+- You're not immediately going to know where/when to invoke this function - that's okay! For now, only definte the function, don't invoke it.
+
+<section class="answer">
+### Possible Solution  
+
+```jsx
+// App.js 
+
+function getIdeas() {
+  fetch('http://localhost:3001/api/v1/ideas')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.log(error.message))
+}
+```
+</section>
 </section>
 
-As we've noted before, we should use our catch somehow in order to display an error if something goes wrong.  Try stopping your backend server and see what happens.  Your catch should before firing (because the Promise rejected).  Let's do something with that error.
-
-### Effect Hook
-
-The Effect Hook, `useEffect`, allows us to perform side effects (data fetching, subscriptions, etc) from a functional component.
-So far in React, we've leveraged the `useState` hook to manage our application data. Another common hook that you'll want to get comfortable with is `useEffect`. This hook allows you to perform some logic during certain phases of the **component lifecycle**. We'll first demonstrate how and when `useEffect` runs, and then we'll dig into the syntax before demonstrating some real world use-cases.
+Okay, now's the fun part - where and when do we invoke this function?! We said earlier that we want to invoke the function on page load. Let's pause here for a second and talk about the **lifecycle of a React component**.
 
 ### The Component Lifecycle
 
 Every component you create goes through several phases of existing:
 
-* **Mounting:** the component is being assessed, created and rendered on the DOM.The mounting phase occurs only once when the component is first rendered and added to the DOM, and subsequent updates to the component do not trigger the mounting phase again. 
-* **Updating:** any time we update state values that are used in our JSX, the component updates itself and re-renders reflecting those changes on the DOM
-* **Unmounting:** the component is completely removed from the DOM, usually in response to some sort of user interaction or change in state.
-
- In the example bellow we are going to use `useEffect` and [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to handle the promise object that was return from the fetch API. 
-
-```jsx
-import React, { useState, useEffect } from 'react'
-
-function App() {
-  const [pets, setPets] = useState([])
-  const [error, setError] = useState('')
-
-  const getPets = async () => {
-    const url = 'http://localhost:3001/api/v1/pets'
-    setError('')
-
-    try {
-      const response = await fetch(url)
-      const pets = await response.json()
-      setPets(pets)
-    } catch(error) {
-      setError(error.message)
-    }
-  }
-
-  useEffect(() => {
-    getPets()
-  }, [])
-  
-  return (
-    <div className='App'>
-      <h1>PetBox</h1>
-      { error && error }
-      <PetList pets={pets} />
-    </div>
-  )
-}
-export default App
-```
-<section class="call-to-action">
-### In Your Notebook
-
-* Where does `useEffect` come from? We did not define it ourselves. What is our first step in making sure we can use it?
-* What data type is `useEffect`?
-* What argument does `useEffect` take in? What data type is it?
-</section>
-<section class="answer">
-### The Answer  
-
-`useEffect` is a function that we get for free when we import it from React. It takes in a function as an argument - this will fire any time React kicks off a call to `useEffect` (During the mounting, updating, unmounting phases)
-</section>
-
-Here, we've imported the `useEffect` hook from React and added a `getPets` method that will fetch all of our pets. 
-
-There are a few important things to be aware of in the code above. First, the `useEffect` hook **MUST** return a clean-up function or nothing at all. We can't return a Promise. This means that we can't write an async function inside of `useEffect` (because an async function always returns a Promise). That's why we have written `getPets` outside of `useEffect` and just called it inside of `useEffect`. 
-
-Also, notice that we have passed an empty array as a second argument to `useEffect`. Without doing this, we would get caught in a infinite loop because the `useEffect` hook runs when the component mounts **and** after **EVERY** update/render. Because we are setting the state after every data fetch, the component updates and the effect runs again. By adding an empty array as the second argument, we avoid activating the effect hook when the component updates and it will only run once when the component mounts and unmounts. If we want the effect to run when one of the variables is updated, then we would add that variable to the array. This could be a prop or a piece of state. Because we only want to update the pets once, on mount, and there are no other props or pieces of state that depend on this effect, we can pass an empty array. Check out [the docs](https://reactjs.org/docs/hooks-reference.html#conditionally-firing-an-effect) for more info on conditionally firing an effect.
+* **Mounting:** The component is created! The mounting phase **occurs only once** when the component is first rendered and added to the DOM, and subsequent updates to the component do not trigger the mounting phase again. 
+* **Updating:** Any time we update state values that are used in our JSX, the component updates itself and re-renders reflecting those changes on the DOM. This phase happens lots of times!
+* **Unmounting:** The component is completely removed from the DOM, usually in response to some sort of user interaction or change in state.
 
 <section class="call-to-action">
-### Your turn!
+### Reflect
 
-With a partner, work on the App component and implement  `useEffect`.
-
-* import `useEffect` from the react library
-* use the `useEffect` hook to set the title of this application.
-
-
-If you've done everything right, the IdeaBox should still work exactly as it did
-before!
-</section>
+During which phase of the App component's lifecyle do we want our GET to run?
 
 <section class="answer">
-### Here's one way you could do it, don't look until you're done!
+### Answer  
 
-```jsx
-import React, { useState, useEffect } from 'react';
-import Ideas from './Ideas';
-import Form from './Form';
-import './App.css';
-
-function App() {
-  const [ideas, setIdeas] = useState([])
-
-  useEffect(() => {
-    document.title = `IdeaBox (${ideas.length})`
-  })
-
-  const addIdea = (newIdea) => {
-    setIdeas([...ideas, newIdea]);
-  }
-
-  const deleteIdea = (id) => {
-    const filteredIdeas = ideas.filter(idea => idea.id !== id);
-
-    setIdeas(filteredIdeas);
-  }
-
-  return(
-    <main className='App'>
-      <h1>IdeaBox</h1>
-      <Form addIdea={addIdea} />
-      <Ideas ideas={ideas} deleteIdea={deleteIdea} />
-    </main>
-  )
-}
-export default App;
-```
+During the Mounting Phase!
+</section>
 </section>
 
-### Conditional Rendering
-Conditional rendering is a powerful technique that allows us to show different UI components based on certain conditions. With React Hooks, we can easily implement conditional rendering in our functional components. Let's take a look at an example:
+### The Effect Hook
+
+The Effect Hook, `useEffect`, allows us to perform side effects (data fetching, subscriptions, etc) from a functional component. So far in React, we've leveraged the `useState` hook to manage our application data. Another common hook that you'll want to get comfortable with is `useEffect`. This hook allows you to perform some logic during certain phases of the **component lifecycle**. 
+
+Let's add `useEffect` to our code to invoke our `getIdeas` function:
 ```jsx
-import React, { useState } from 'react';
-import Form from './Form';
-import Ideas from './Ideas';
+// App.js
+import  { useState, useEffect } from 'react'; //make sure you import it!
 
-function App() {
-  const [ideas, setIdeas] = useState([]);
-  const [error, setError] = useState('');
+// ...
 
-  const addIdea = (newIdea) => {
-    setIdeas([...ideas, newIdea]);
-  };
+function getIdeas() {
+  fetch('http://localhost:3001/api/v1/ideas')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.log(error.message))
+}
 
-  const removeIdea = (id) => {
-    const filteredIdeas = ideas.filter((idea) => idea.id !== id);
-    setIdeas(filteredIdeas);
-  };
+useEffect(() => {
+  getIdeas();
+})
+```
 
+### `useEffect` Timing
+
+The Effect Hook will fire during certain phases of the component life cycle, depending on the second argument:
+
+```jsx
+useEffect(/* callback function */, /* second argument */)
+```
+
+Let's update our code so that we aren't just console logging the data, but we're actually updating state:
+
+```jsx
+// App.js
+
+function getIdeas() {
+  fetch('http://localhost:3001/api/v1/ideas')
+  .then(response => response.json())
+  .then(data => setIdeas([...ideas, ...data]))
+  .catch(error => console.log(error.message))
+}
+
+useEffect(() => {
+  getIdeas();
+})
+```
+
+Run your app. **What's happening?** :scream:
+
+Oh no! Let's revisit the timing conversation. What we invlude in that second argument affects the timing like this:
+- `no argument`: The Effect Hook will run for the mounting and updating phases
+- `[]`: The Effect Hook will run for the mounting phase only
+- `[<piece of state>]`: The Effect Hook will run when that specific piece of state is updated (i.e. `[ideas]`)
+
+<section class="call-to-action">
+### Reflect
+
+- When is our `useEffect` hook currently firing? What issues is that causing?
+- What should we change to our `useEffect` to get the timing right?
+
+<section class="answer">
+### Answer  
+
+It's currently running when the component is mounted (good) AND when state is changed (not good). Since we are updating state in our `useEffect`, it's causing an infinite loop! We need to add an empty array as a second argument to make it only run during the mounting phase:
+```jsx
+useEffect(() => {
+  getIdeas();
+}, [])
+```
+</section>
+</section>
+
+We did it! We've got our first network request working in a React app! High five!
+
+## `POST` Request
+
+Now, let's talk about the `POST` request. Let's start by thinking about these questions:
+- What data do we need to POST?
+- When do we need to run that POST?
+- Will our POST need to happen in a `useEffect`?
+
+<section class="answer">
+### Answers  
+
+- What data do we need to POST? **New idea from form**
+- When do we need to run that POST? **When "submit" is clicked**
+- Will our POST need to happen in a `useEffect`? **No, because it's not tied to a specific lifecycle phase**
+</section>
+
+A common misconception is that all network requests need to happen in a `useEffect`. In the case of this `POST`, we want it to happen when a user event occurs - specifically, when the "Submit" button is clicked. We can do that directly in the event handler function. 
+
+<section class="call-to-action">
+### Make the POST Request
+
+Update `addIdea` in `App` so that a new idea is POSTed to the API.
+
+Notes:
+- Refer to the BE repo's README for endpoints, necessary options, and documentation. 
+- Think about what you want to happen after the POST resolves successfully.
+- You can check that it's successfully being POSTed by going to 'http://localhost:3001/api/v1/ideas' in your browser.
+
+<section class="answer">
+### Possible Solution  
+
+```jsx
+// App.js 
+
+  function addIdea(newIdea) {
+    fetch('http://localhost:3001/api/v1/ideas', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newIdea), 
+    })
+    .then(response => response.json())
+    .then(data => setIdeas([...ideas, data]))
+    .catch(error => console.log(error.message)) 
+  }
+```
+</section>
+</section>
+
+We will not cover it in this class, but if you'd like an added challenge later - update `deleteIdea` so that it also updates the backend data, too!
+
+## Error Handling & Conditional Rendering
+
+**Note**: Turn off your server for this section so that we can force some errors!
+
+So far in this lesson (and perhaps in your whole time at Turing), we've been console logging the error messages in our `.catch`es. That's not great because our users can't see that! Let's actually DO something with those error messages!
+
+There are two things we want to do with errors:
+- capture them somewhere
+- let the user know what's going on
+
+**Where can we capture the error message so that we can use it later?**
+
+State! Great idea! Let's do that.
+
+<section class="call-to-action">
+### Add Error Messages to State
+
+Update your `.catch`es so that rather than console logging the error, we are capturing the error in our state.
+
+<section class="answer">
+### Possible Solution
+
+```jsx
+// App.js 
+
+const [error, setError] = useState('')
+
+// ...
+
+.catch(error => setError(error.message)) 
+```
+</section>
+</section>
+
+Great! We now have access to the errors when we need them! Now, let's actually show the error to the users. We'll do this through **conditional rendering**. Meaning, we will render certain elements to the DOM based on a condition. Let's look at what this looks like:
+
+```jsx
   return (
     <main className="App">
       <h1>IdeaBox</h1>
@@ -239,34 +308,58 @@ function App() {
       <Ideas ideas={ideas} removeIdea={removeIdea} />
     </main>
   );
-}
 ```
+
 Wowwwww okay. What does that syntax even mean?
 
 First of all, this is JavaScript (we can tell because of the curly brackets). The first statement of error will evaluate to a truthy or a falsy value (an empty string is falsy). The code after the double ampersand is what will render if we get past the first statement.
 
-It’s a shorthand way of saying, “If there is an error in state, render the error inside h2 tags!”
+It’s a shorthand way of saying, “If there is an error in state, render the h2 element!” Neato!
 
-Neato!
+Notice that we are only conditionally rendering the one part of the render that is contingent upon whether or not an error is in state. We’re not rendering two different versions of the App. We just have the one, and one line will show up only if there is an error stored in state.
 
-Notice that we are only conditionally rendering the one part of the render that is contingent upon whether or not an error is in state.
+Fun fact: You can conditionally render whole components:
+```jsx
+  return (
+    <>
+      {pieceOfState && <AWholeComponent />}
+    </>
+  );
+```
+Have fun exploring that!
 
-We’re not rendering two different versions of the App. We just have the one, and one line will show up only if there is an error stored in state
+### Error Messages for Your Users
 
-<section class="call-to-action">
+As a frontend dev, you want to think about your users all the time. With that in mind, you will want to think about what errors are appropriate for your users. For example, would an error message like "WDGeneralNetworkError error 500;" be something you'd want to render to your app's screen? Maybe in some cases, maybe not.
 
-## Your Turn 
+When rendering error messages for your users, consider ways to present the information in an unintimidating way AND provide next steps for them. It's okay to display a different error than what the BE provides. For example, maybe you do something like this:
 
- Imagine we have a slow connection or need to load A LOT of data. We might want to implement some kind of loading icon. Using conditional rendering, display a loading icon while the fetch is retrieving the data.
+```jsx
+// App.js 
+
+.catch(error => {
+  console.log(error)
+  setError('Oops! Something went wrong! Please try again in a couple minutes.')
+}) 
+```
+
+This way, the devs have access to the error via the console, but the users have a nice, friendly message!
+
+<section class="note">
+### Solution - Complete Branch
+
+That was a lot of coding! If you want to see the full completed file, check out [the complete branch](https://github.com/turingschool-examples/advanced-data-management-hooks-fe/blob/complete/src/App.js) in that repo!
 </section>
 
-## Checks for Understanding
+## Closing - Checks for Understanding
 
 In your notebooks, respond to the following:
 
-* What does `useState` do? What two things does it give back to us?
-* What does `useEffect` do? What two arguments do we need to pass to it?
-
+* What at the three phases of a component's lifecycle?
+* What is the Effect Hook?
+* How can we control when `useEffect` runs?
+* Do all network requests need to occur in the Effect Hook?
+* What is conditional rendering and when might we use it?
 
 ## Resources
 
