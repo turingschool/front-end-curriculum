@@ -194,9 +194,11 @@ Stand-up meetings will be held most mornings to see where the group is at, and g
 * The link to your repo
 * The link to your DTR
 * The link to your Project Board
-* A link to 2-3 pieces of design inspiration that you will aim to mimic
+* A link to 2-3 pieces of design inspiration that you will aim to mimic - using [this template](https://docs.google.com/document/d/1DHqyJy0lVLrLaF6G5bXGbAwh72jd3FMtx_gXWV2OmpY/edit?usp=sharing)  
 * A wireframe of your app - this can include sketches of your user interface, or a link to your Canva, InVision, etc.
-...in [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing)
+* An Equity Analysis - using [this template](https://docs.google.com/document/d/1418_fjx4pLhW97L4a6ULKmnh8E7u3t7gHDIcMOvgrUA/edit?usp=sharing)  
+
+Submit these deliverables in [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing)
 </section>
 
 <section class="answer">
