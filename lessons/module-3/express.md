@@ -227,23 +227,31 @@ This will add in support for parsing JSON.
 
 ### Creating a POST Route
 
-We'll use our super secure method of generating random IDs:
+First, lets psuedocode out the steps of what we're trying to accomplish here. If we want to make it possible for new pets to be POSTed, we will need to:
+- Get the new pet's name and type from the request body sent by the front end.  
+- Create an id for our new pet. We'll use our _super_ secure method of generating random IDs - Date.now()
+- Put those 3 data points into an object
+- Add that new object to our pet's array
+- Send a response with the proper status code and the new pet object
 
-```js
-app.post('/api/v1/pets', (request, response) => {
-  const id = Date.now();
-  const { name, type } = request.body;
+<section class="answer">
+  ### Let's turn it into code
+    ```js
+    app.post('/api/v1/pets', (request, response) => {
+      const id = Date.now();
+      const { name, type } = request.body;
 
-  app.locals.pets.push({ id, name, type });
+      app.locals.pets.push({ id, name, type });
 
-  response.status(201).json({ id, name, type });
-});
-```
+      response.status(201).json({ id, name, type });
+    });
+    ```
 
-IMPORTANT NOTE: this approach has a few of flaws.
+    IMPORTANT NOTE: this approach has a few of flaws.
 
-- We're storing data in memory, which will be wiped out when the server goes down.
-- Multiple pets could have the same time stamp. Something like [nanoid](https://github.com/ai/nanoid/) would be better for id generation.
+    - We're storing data in memory, which will be wiped out when the server goes down.
+    - Multiple pets could have the same time stamp. Something like [nanoid](https://github.com/ai/nanoid/) would be better for id generation.
+<section/>
 
 #### The Sad Path
 
