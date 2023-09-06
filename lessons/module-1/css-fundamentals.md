@@ -128,27 +128,6 @@ This diagram can be found in the CSS Dev Tools and the same color coding is used
 
 # ![Box Model](/assets/images/box-model.jpg)
 
-## The Box Model Applied
-
-<section class="call-to-action">
-### Explore Box Model
-
-**Setup**
-* Fork a copy of this [static-site-playground](https://github.com/turingschool-examples/static-site-playground) directory
-* Clone it down to your machine
-* Open it up in your text editor
-* Test things are working as expected by opening in the browser by running `open index.html` in your terminal
-* Explore the code! How is the CSS file linked to the HTML file?
-
-**Write some CSS!**
-* On your own, take a few minutes to practice writing the syntax of CSS rules and seeing how margin and padding affect an element.
-* A common mantra when working on CSS is "when in doubt, border it out". Apply a border of an obvious color to both the section and button so you are 100% clear on where things are. Hint: Make sure to be researching properties on MDN!
-* Add margin and padding to your button
-* Add margin and padding to the section
-
-If you have time left, see what else you can change or add with CSS!
-</section>
-
 ## Recreating Comps
 
 We can apply all the margin and padding we want, but when it comes down to it, many times Front End Developers are tasked with re-creating something a designer has provided them with, commonly called "comps". Let's use our tools to build something professional-grade.  
