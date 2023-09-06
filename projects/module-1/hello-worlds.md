@@ -147,6 +147,7 @@ You should use the provided `shuffle` function. Also, take a look at how the fir
 ### Iteration 3 - Tracking scores
 
 ![scores](../../assets/images/projects/hello-worlds/scores.png)
+![playthrough](../../assets/images/projects/hello-worlds/helloworlds.gif)
 
 - When a user makes correct guesses, the Scores section should keep track of their correct guesses
 - When a user makes incorrect guesses, the Scores section should keep track of their incorrect guesses
