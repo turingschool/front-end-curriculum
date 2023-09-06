@@ -237,21 +237,21 @@ First, lets psuedocode out the steps of what we're trying to accomplish here. If
 <section class="answer">
   ### Let's turn it into code
     ```js
-    app.post('/api/v1/pets', (request, response) => {
-      const id = Date.now();
-      const { name, type } = request.body;
+      app.post('/api/v1/pets', (request, response) => {
+        const id = Date.now();
+        const { name, type } = request.body;
 
-      app.locals.pets.push({ id, name, type });
+        app.locals.pets.push({ id, name, type });
 
-      response.status(201).json({ id, name, type });
-    });
+        response.status(201).json({ id, name, type });
+      });
     ```
 
     IMPORTANT NOTE: this approach has a few of flaws.
 
     - We're storing data in memory, which will be wiped out when the server goes down.
     - Multiple pets could have the same time stamp. Something like [nanoid](https://github.com/ai/nanoid/) would be better for id generation.
-<section/>
+</section>
 
 #### The Sad Path
 
