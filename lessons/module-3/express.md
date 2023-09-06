@@ -236,6 +236,7 @@ First, lets psuedocode out the steps of what we're trying to accomplish here. If
 
 <section class="answer">
   ### Let's turn it into code
+
     ```js
       app.post('/api/v1/pets', (request, response) => {
         const id = Date.now();
@@ -277,6 +278,7 @@ app.post('/api/v1/pets', (request, response) => {
       response
         .status(422)
         .send({ error: `Expected format: { name: <String>, type: <String> }. You're missing a "${requiredParameter}" property.` });
+      return
     }
   }
 
@@ -285,6 +287,8 @@ app.post('/api/v1/pets', (request, response) => {
   response.status(201).json({ name, type, id });
 });
 ```
+
+Consider: What would happen if we didn't have the `return` in the if statement?
 
 If either property is missing, we will see an error in the Network tab of our developer tools where the response is highlighted in red and has a status of `422` (client error). The response details will tell us exactly which property we are missing based on the error we sent along with the 422 response.
 
