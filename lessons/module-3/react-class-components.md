@@ -19,7 +19,7 @@ Understanding class components requires some background knowledge about classes 
 
 By the end of this lesson, you will be able to:
 
-* explain the differences between classs components and functional components
+* explain the differences between class components and functional components
 * create class components
 * convert class based components to functional components
 

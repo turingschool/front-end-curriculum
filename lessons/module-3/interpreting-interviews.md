@@ -9,7 +9,7 @@ module: 3
 
 * Approach an interview by thinking like the interviewer
 * Consider the themes of questions and the top skills they are assessing
-* Begin categorizing your experiences so you’re ready to answer any question
+* Begin categorizing your experiences (still using the STAR method) so you’re ready to answer any question
 
 <section class="call-to-action">
 ### Warm Up
@@ -49,7 +49,7 @@ Let's consider an example. Take a moment to think about all of the different way
 - At our company, collaboration is important to us. If hired, how will you contribute to your team?
 </section>
 
-Notice that many of those questions are extremely similar, just worded differently. How many different stories would you need to have prepared to answer those questions? Two? Maybe three? That's the point! Instead of preparing an answer for every question above, you might prepare a story that highlights your strengths as a teammate and another that demonstrates your skills in conflict-resolution and empathy. Then, you'd be prepared to answer any question on the list!
+Notice that many of those questions are extremely similar, just worded differently. How many different STAR method stories would you need to have prepared to answer those questions? Two? Maybe three? That's the point! Instead of preparing an answer for every question above, you might prepare a story that highlights your strengths as a teammate and another that demonstrates your skills in conflict-resolution and empathy. Then, you'd be prepared to answer any question on the list!
 
 We are going to work through some activities to solidify this concept.
 
@@ -58,7 +58,7 @@ We are going to work through some activities to solidify this concept.
 
 First, take 15 minutes to complete part A of [this activity](https://docs.google.com/spreadsheets/d/1UzP9XHcbKWSSG7S49VPCcJyijd9u6FwrJGdaYgI4Z20/edit?usp=sharing) in breakout rooms. Note that you will all want to have your own copy of this document.
 
-Next, take 15 minutes to complete part B of the same activity independently.
+Next, take 15 minutes to complete part B of the same activity independently.  As you jot down tangibe examples, remember to leverage the STAR method
 </section>
 
 <section class="call-to-action">
@@ -80,12 +80,13 @@ Now, think about the themes from the questions in the previous activity.
 <section class="answer">
 ### In Breakout Rooms
 
-In pairs, you'll practice answering one question by using that group project from mod 2. Determine who is person A and person B and follow these steps:
+In pairs, you'll practice answering one question by using that group project from mod 2. Determine who is taking the hot seat first and follow these steps:
 
-- Person A will tell person B what theme/category they'd like to focus on.
-- Person B will then choose a question from that category and ask person A.
-- Person A will answer that question and use the project experience to anchor their answer.
-- Person B will give feedback on their answer. (Your feedback should focus on person A's ability to convey the skills the question is assessing and person A's ability to anchor their answer in the tangible project example.)
+- Applicant will tell Interviewer what theme/category they'd like to focus on.
+- Interviewer will then choose a question from that category and ask Applicant.
+- Applicant will answer that question and use the project experience to anchor their STAR method answer.
+- Interviewer will give feedback on their answer. 
+  - Your feedback should focus on Applicant's ability to convey the skills the question is assessing and Applicant's ability to anchor their answer in the tangible project example.
 - Switch roles and repeat!
 
 You will have 20 minutes total, so be sure to watch the clock and switch roles after 10 minutes.
