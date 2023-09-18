@@ -6,7 +6,7 @@ title: Hello Worlds - Pair
 
 * Write clean, DRY JavaScript
   * Build out functionality using functions that show trends toward SRP
-  * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
+  * Manipulate the page after it has loaded: adding, removing, and updating elements on the DOM
 * Begin to understand the connection between HTML, CSS and JavaScript
   * Practice reading, understanding, and using provided code
 * Build an understanding of writing code collaboratively
@@ -24,20 +24,6 @@ We're turning this into a game about language! Our users will guess what languag
 
 <section class="answer">
 ### Helpful Hints
-
-<section class="answer">
-### What's the deal with deploying?
-
-Deploying your repos allows you to have a live site for your application. You'll be able to share this link with friends and family to show off what you're learning! You will also include deploy links on your resume so potential employers can see what you've built! 
-
-Deploying takes time, so it's not a good idea to use your deployed site as your point of reference while building your app. While you're coding, you'll want to run `open index.html` in your terminal to see the current local version of your app. You need to refresh the browser each time you make an update to your code. Once you've pushed up your code and merged into the main branch, the deployed site should update within an hour. 
-
-Below are instuctions for deploying to GH Pages:  
-
-    - Repo Settings » Pages » Select the main branch as your Source branch » Save. Then, wait up to an hour, hit refresh, and your deployed link should appear at the top of the screen.  
-
-    - If you don't want to wait, your GH pages URL will follow this format: "https://username.github.io/hello-worlds/". Replace "username" with the repo owner's GH username and "hello-worlds" with your repo's name (if different). The URL will not work right away - that's ok! Add it to the Project Submission form anyway. 
-</section>
 
 <section class="answer">
 ### Why are our PRs pushing to the Turing repo?
@@ -80,10 +66,11 @@ To begin, choose **ONE** partner to do the following:
 
 1. Fork the repository found here: [https://github.com/turingschool-examples/hello-worlds-boilerplate/](https://github.com/turingschool-examples/hello-worlds-boilerplate/).
 2. Clone down your new, forked repo.  While cloning, name it what you want your project to be named, should not include "boilerplate". `git clone <url> <newNameYouWantItToHave>`
-3. `cd` into the repository
-4. Open it in your text editor
-5. View the project in the browser by running `open index.html` in your terminal
-6. Add all project partners and your assigned instructor as collaborators on the repository
+3. Everyone should clone down this repo and follow the rest of the steps, too.
+4. `cd` into the repository
+5. Open it in your text editor
+6. View the project in the browser by running `open index.html` in your terminal
+7. Add all project partners and your assigned instructor as collaborators on the repository
 
 Then, as a team:
 
@@ -113,14 +100,14 @@ Then, as a team:
 ![after first guess](../../assets/images/projects/hello-worlds/after-guess.png)
 
 - When a user clicks one of the guess buttons, we should see the answer
-- When a user clicks ones of the guess buttons, we should see feedback about their answer
+- When a user clicks one of the guess buttons, we should see feedback about their answer
 - When a user clicks one of the guess buttons, we should see that the guess buttons are disabled, preventing the user from making a different guess for the same question
 - When a user clicks one of the guess buttons, we should see that the Guess Again reset button is enabled.
 
 <section class="note">
 ### Hint!
 
-Go check out the HTML and CSS files to see how the reset buttonis being disabled in the first place.
+Go check out the HTML and CSS files to see how the reset button is being disabled in the first place.
 </section>
 </section>
 
@@ -164,6 +151,22 @@ You are welcome to add your own extensions. Be sure they are thoughtful in terms
 - Persist user scores across page refreshes.
 - Add a form view where users can submit new questions in other languages.
 - Build in two player competition functionality.
+</section>
+
+<section class="answer">
+### What if we want to deploy our app?
+
+Deploying your project is **NOT** required!! You can if you want, though!
+
+Deploying your repos allows you to have a live site for your application. You'll be able to share this link with friends and family to show off what you're learning! You could also include deploy links on your resume so potential employers can see what you've built! 
+
+Deploying takes time, so it's not a good idea to use your deployed site as your point of reference while building your app. While you're coding, you'll want to run `open index.html` in your terminal to see the current local version of your app. You need to refresh the browser each time you make an update to your code. Once you've pushed up your code and merged into the main branch, the deployed site should update within an hour. 
+
+Below are instuctions for deploying to GH Pages:  
+
+    - Repo Settings » Pages » Select the main branch as your Source branch » Save. Then, wait up to an hour, hit refresh, and your deployed link should appear at the top of the screen.  
+
+    - If you don't want to wait, your GH pages URL will follow this format: "https://username.github.io/hello-worlds/". Replace "username" with the repo owner's GH username and "hello-worlds" with your repo's name (if different). The URL will not work right away - that's ok! Add it to the Project Submission form anyway. 
 </section>
 
 ---
@@ -254,8 +257,8 @@ This means, we DO NOT want to see:
 **Well-refactored, thoughtful code is better than sloppy extra features.**
 
 💫ON TRACK💫 can look like:
-- All of the expectations of iterations 0-4 are complete without bugs
+- All of the expectations of iterations 0-3 are complete without bugs
 
 ✨WOW✨ can look like:
-- All of the expectations of iterations 0-4 and an extension are complete without bugs
+- All of the expectations of iterations 0-3 and an extension are complete without bugs
 </section>
