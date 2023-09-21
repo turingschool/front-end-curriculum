@@ -1,4 +1,11 @@
-# React Router Prework
+---
+title: React Router v6
+length: 1.5 hours
+tags: React, Router
+module: 3
+---
+
+# Intro to Router Self Study Prework Lesson
 This self-study lesson requires you to work through the questions below using the React Router (v6) documentation and other resources.  This self study lesson is required prework prior to our live React Router lesson. 
 
 ## Instructions
