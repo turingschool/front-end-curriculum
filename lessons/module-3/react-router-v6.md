@@ -81,14 +81,11 @@ The App is not fully put together. It has a series of components that will serve
 
 ## Installing Router
 
-<section class="answer">
 ### 1. The first step is installing react router
 ```bash
 npm install react-router-dom
 ```
-</section>
 
-<section class="answer">
 ### 2. Once you have React Router installed, import your chosen Router
 
 To use React Router, we need to wrap any components that will use a React Router-provided-component in some kind of [Router component](https://reactrouter.com/en/main/router-components/router).
@@ -114,7 +111,6 @@ root.render(
 );
 
 ```
-</section>
 
 ## Rendering the Home component
 
@@ -312,7 +308,7 @@ Hmmm...two of those `<Route />` components are looking quite similar. I wonder i
 </section>
 
 ## Dynamic Routing
-
+In this exercise, we'll explore two ways to achieve dynamic routing in order to obtain an animal and its ID from the route: first, we'll use the `Outlet`, and then we'll show you how to implement a dynamic route without using an outlet.
 <section class="answer">
 ### 8. Let's start by making a dynamic path
 
@@ -580,7 +576,11 @@ export default Creatures;
 2. Why is the `<Creatures />` component still showing?
 3. What would you have to change if you didn't want the `<Creatures />` component to render at this path?
 </section>
+***Why Use the `Outlet`*** ?  
+The Outlet component serves as a placeholder for rendering nested route content within a parent component. It's a fundamental tool that allows you to seamlessly integrate child components' content into a parent's layout while maintaining UI coherence.
 
+***Real-World Analogy: Twitter Inbox*** <br/>
+Imagine a scenario similar to the Twitter inbox. When you access your inbox, you see a list of message previews on the left side of the screen, but the right side remains blank until you select a specific conversation. This structure is where the Outlet comes into play.
 </section>
 
 <section class="answer">
@@ -612,11 +612,45 @@ export default CreatureDetails;
 ```
 </section>
 
+Now that you know how to use Outlet, let's explore other ways we can achieve dynamic routing without it.
+We are going to remove our nested route and define a new separate route for `/:animal/:id` which is not directly nested within the first route `/`. Each route has it's own component. 
+You would use this approach when you have distinct pages or components that should be displayed separately based on the URL. 
+<section class="answer">
+
+```jsx
+import './App.css';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import Home from '../Home/Home';
+import Creatures from '../Creatures/Creatures';
+import CreatureDetails from '../CreatureDetails/CreatureDetails';
+
+function App() {
+  return (
+    <main className="App">
+      <nav>
+        <NavLink to="/puppies" className="nav">Puppies</NavLink>
+        <NavLink to="/sharks" className="nav">Sharks</NavLink>
+      </nav>
+      <h1>Puppies or Sharks?</h1>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/:animal/:id" element={<Creatures />}>
+      </Routes>
+    </main>
+  );
+}
+
+export default App;
+
+```
+Now it's time to remove `Outlet` from our `Creature.js` file since we don't have nested routes and we don't need `Outlet` anymore
+</section>
+
 <section class="call-to-action">
 ### Final Reflections
 
 1. Why use Router?
-3. Describe the following:
+2. Describe the following:
 - `Route`
 - `Routes`
 - `Link`
