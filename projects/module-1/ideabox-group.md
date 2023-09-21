@@ -25,7 +25,7 @@ You will work through the iterations listed under **Progression** below.
 ### Design Resources
 
 For each iteration, you should be matching the provided design comps closely. ([What is a design comp?](https://clients.geminoscreative.com/marketing-blog/what-is-a-design-comp)) Act like you're on the job and these are the designs you've been given to match. Details and spacing matter! Here is some info to help you:
-  - Font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
+  - Font: [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins) - Note that this font may appear slightly different from the one shown in the provided comp
   - Icons: [Found here](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing) (Note: You will not use all of the icons in this folder. Add these icons to an `assets` folder in your repository.)
   - Colors:
     - Dark Purple: `#1F1F3C`
