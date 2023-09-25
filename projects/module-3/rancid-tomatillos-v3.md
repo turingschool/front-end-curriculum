@@ -12,6 +12,7 @@ This project is definitely not Rotten Tomatoes. Nor is it Netflix. Nor is it IMD
 * Test React components & asynchronous JS
 * Practice refactoring
 * Create a multi-page UX using Router
+* Incorporate agile practices such as daily stand-ups, retros, project boards
 
 ## Iterations
 
@@ -24,7 +25,11 @@ We've broken this project down into iterations. Please be sure to read them clos
 By the end of the day, Day 1:
 * The link to your repo (hint: use [Create-React-App](https://frontend.turing.edu/lessons/module-3/react-2-the-how.html) to start your project!)
 * The link to your DTR
-* The link to your Project Board with at least a few user stories entered  
+  * Be sure to discuss a meeting cadence for your group. In Agile projects, teams typically meet for short "stand-ups" where each member checks in regarding the following topics: 
+    * What is the state of your project so far? (Update your GitHub Project Board if necessary)
+    * What is each person working on today?
+    * Are there any blockers and what is your plan to get through the blockers? 
+* The link to your Project Board with at least a few user stories entered
 
 By the end of the day, Day 2:
 * A link to 2-3 pieces of design inspiration that you will aim to mimic
