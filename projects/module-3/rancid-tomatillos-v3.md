@@ -206,32 +206,40 @@ Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_q
 
 ### Iteration 5 - Differentiation Tracks
 
-The final days (last weekend and beginning of Week 3) of this project are designed to give you agency over your learning goals! As a team, consider your learning goals:  
+The final days (last weekend and beginning of Week 3) of this project are designed to give you some agency over your learning goals! As a team, consider your learning goals:  
 * What will best serve your team- and individual- learning goals?
 * What areas/concepts are still unclear?
 * What areas/concepts fit in with your professional goals?
 
-Decide as a team what to focus on and complete the Week 2 Deliverables (found below), choosing a new feature to implement or a thorough rubric-based refactor.  
+Decide as a team what to focus on and complete the Week 2 Deliverables (found below), choosing a new feature to implement or implementing a specific, thorough refactor. 
 
 <section class="call-to-action">
 ### WEEK 2 DELIVERABLES
 On Friday of Week 2, send a specific outline of features/work/goals to your instructors in the group DM. Include user stories. Do not begin work until you get the go-ahead from an instructor. (We may help you make your goal more specific or achievable.)
 
-Here are some ideas:
-* **Extremely thoroughly Refactoring:**
-  - Carefully compare your work to the rubric and refactor to ensure the work you're submitting is an excellent, thorough demonstration of your skill and compentency in React, Router and Cypress.  If you choose this option, be prepared to speak to specific refactoring you did. 
-* **Responsive Design:**
-  - Ensure your application is fully responsive across small, medium and large breakpoints
-* **More React and/or Router practice:**
-  - Add a search/filtering functionality for movies
-  - Give a user the ability to save movies to a favorites list. 
+Here are some ideas: 
+* **UI/UX Updates**
+  - Ensure your application is fully responsive across small, medium and large breakpoints, is fully tabbable and has a 95 score or higher on Lighthouse
+* **Add a Complex Feature**
+  - Create a new feature for the application that will bring value to the user and will allow you to challenge yourself, such as: 
+    - Allow users to create movie lists and save movies to those lists. Persisting this data to Local Storage
+    - Allow users to add notes to each movie. Persist this data to Local Storage.
+    - Implement a mock authentication system to allow a user to log in and see their profile. 
+    - Brainstorm your own new feature and check in with an instructor about it.
+    - Consider integrating with another API to bring additional information to your user. Some available APIs are: [OMDB](https://www.omdbapi.com/), [TMDB](https://developer.themoviedb.org/reference/intro/getting-started)
 * **More testing practice:**
   - Supplement your Cypress tests with a non-trivial amount of unit tests and integration tests by using the React Testing Library 
   - Implement 2-3 new concepts from the Cypress library that have not been covered in lessons (check out the following resources for ideas: [commands](https://docs.cypress.io/api/cypress-api/custom-commands), [component testing](https://docs.cypress.io/guides/component-testing/overview), [parallelization](https://docs.cypress.io/guides/guides/parallelization), [etc](https://docs.cypress.io/guides/overview/why-cypress))
 * **Push yourself** (extra learning if every member of the team feels SUPER CONFIDENT in everything React, Router, and testing)**:**
-  - Create your own Express microservice to store user ratings for movies; build FE functionality to use and display that service
-  - Create your own Express microservice to store user favorites; build FE functionality to use and display that service
-  - Create your own Express microservice to store which movies the user has watched; build FE functionality to use and display that service
+  - Implement a concept that will be covered later in the program or is not covered at all such as: 
+    - Redux (global state management)
+    - Context API (global state management)
+    - A Component Library such as Material-UI or React Bootstrap
+  - Create your own Express application to store user ratings for movies; build FE functionality to use and display that service
+  - Create your own Express application to store user favorites; build FE functionality to use and display that service
+  - Create your own Express application to store which movies the user has watched; build FE functionality to use and display that service
+  - Utilize Web Sockets to all users to comment on movies and see others' comments
+  - Implement Internationalization and Localization so that a user can view the app in multiple languages and see information presented in their preferred units. 
 
 You are welcome to come up with your own ideas too. Just run them by your PM.
 </section>
