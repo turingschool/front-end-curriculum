@@ -219,7 +219,7 @@ On Friday of Week 2, send a specific outline of features/work/goals to your inst
 
 Here are some ideas: 
 * **UI/UX Updates**
-  - Ensure your application is fully responsive across small, medium and large breakpoints, is fully tabbable and has a 95 score or higher on Lighthouse
+  - Ensure your application is fully responsive across small, medium and large breakpoints, is fully tabbable and has a 95 score or higher on Lighthouse. User interactions should be intuitive and the app should include appropriate hover states and focus states
 * **Add a Complex Feature**
   - Create a new feature for the application that will bring value to the user and will allow you to challenge yourself, such as: 
     - Allow users to create movie lists and save movies to those lists. Persisting this data to Local Storage
