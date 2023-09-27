@@ -211,7 +211,7 @@ The final days (last weekend and beginning of Week 3) of this project are design
 * What areas/concepts are still unclear?
 * What areas/concepts fit in with your professional goals?
 
-Decide as a team what to focus on and complete the Week 2 Deliverables (found below), choosing a new feature to implement or implementing a specific, thorough refactor. 
+Decide as a team what to focus on and complete the Week 2 Deliverables (found below), choosing a new feature to implement, incorporating new concepts into the application, or building additional systems. 
 
 <section class="call-to-action">
 ### WEEK 2 DELIVERABLES
