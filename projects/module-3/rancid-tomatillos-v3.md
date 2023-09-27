@@ -226,7 +226,7 @@ Here are some ideas:
     - Allow users to add notes to each movie. Persist this data to Local Storage.
     - Implement a mock authentication system to allow a user to log in and see their profile. 
     - Brainstorm your own new feature and check in with an instructor about it.
-    - Consider integrating with another API to bring additional information to your user. Some available APIs are: [OMDB](https://www.omdbapi.com/), [TMDB](https://developer.themoviedb.org/reference/intro/getting-started)
+    - Consider integrating with another API to bring additional information to your user in the form of an additional feature. Some available APIs are: [OMDB](https://www.omdbapi.com/), [TMDB](https://developer.themoviedb.org/reference/intro/getting-started)
 * **More testing practice:**
   - Supplement your Cypress tests with a non-trivial amount of unit tests and integration tests by using the React Testing Library 
   - Implement 2-3 new concepts from the Cypress library that have not been covered in lessons (check out the following resources for ideas: [commands](https://docs.cypress.io/api/cypress-api/custom-commands), [component testing](https://docs.cypress.io/guides/component-testing/overview), [parallelization](https://docs.cypress.io/guides/guides/parallelization), [etc](https://docs.cypress.io/guides/overview/why-cypress))
