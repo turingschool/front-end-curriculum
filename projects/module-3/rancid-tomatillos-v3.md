@@ -239,7 +239,7 @@ Here are some ideas:
   - Create your own Express application to store user favorites; build FE functionality to use and display that service
   - Create your own Express application to store which movies the user has watched; build FE functionality to use and display that service
   - Utilize Web Sockets to all users to comment on movies and see others' comments
-  - Implement Internationalization and Localization so that a user can view the app in multiple languages and see information presented in their preferred units. 
+  - Implement Internationalization and Localization so that a user can view the app in multiple languages.
 
 You are welcome to come up with your own ideas too. Just run them by your PM.
 </section>
