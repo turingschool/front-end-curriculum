@@ -618,3 +618,16 @@ The [documentation](https://docs.cypress.io/api/api/table-of-contents.html){:tar
 * What is Cypress and how is it different from other testing frameworks you've used in the past?
 * Should you include tests that utilize the API (end-to-end) or should you stub the network requests?  Is there an argument for both?
 </section>
+
+### Building From Here
+Remember, this lesson and it's activities are just an *introduction* to the world of testing with Cypress.  We've only scratched the surface.  In order to build your knowledge, fluency and skill to the level needed to succeed in Mod 3 and beyond, you will need to spend significant time in the Cypress documentation and getting your hands dirty with practice.  In project-based learning, your projects will be your primary platform for learning.  The feedback you get from that project work is what will help guide you towards further research and really help you level up your skill.
+
+## Resources
+
+- The official [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
+  - Pay particular attention to the following pages in the docs:
+    - [Best Practices](https://docs.cypress.io/guides/references/best-practices)
+    - [aliasing](https://docs.cypress.io/guides/core-concepts/variables-and-aliases)
+    - [waiting](https://docs.cypress.io/guides/guides/network-requests#Waiting)
+  
+- Heather's [Cypress Tips & Tricks](https://turingschool.notion.site/Cypress-Tips-Tricks-8565977029cf48faa6003046c148a048?pvs=4) 
