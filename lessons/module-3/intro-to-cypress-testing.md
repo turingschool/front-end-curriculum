@@ -230,7 +230,7 @@ This is great and all but let's think about what we actually need to test.  Reme
 
 Now that we've identified some user flows, let's get to testing (finally)! First, let's focus on this user flow:
 
-**As a user, I should be able to visit `http://localhost:3000` and see a title & form displayed.**
+**1. As a user, I should be able to visit `http://localhost:3000` and see a title & form displayed.**
 
 * Write a test that asserts that a user can visit `http://localhost:3000` using the [visit](https://docs.cypress.io/api/commands/visit.html#Syntax) command.
 * In the same `it` block, check to make sure that our site can [get](https://docs.cypress.io/api/commands/get.html#Syntax){:target='blank'} a form and that it [contains](https://docs.cypress.io/api/commands/contains.html){:target='blank'} the correct text on the page!
@@ -261,7 +261,7 @@ describe('Feedback Loop login', () => {
 Note that we can chain multiple methods to make multiple assertions!
 </section>
 
-Before starting our next test, let's add in the following block:
+Before we continue, let's add in the following block:
 
 ```js
   beforeEach(() => {
@@ -269,15 +269,17 @@ Before starting our next test, let's add in the following block:
   });
 ```
 
-This helps to ensure that we start anew before each test.  A [best practice](https://docs.cypress.io/guides/references/best-practices.html#Having-tests-rely-on-the-state-of-previous-tests){:target='blank'} is that tests should always be able to run independently from one another and *still pass*.
+This helps to ensure that we start anew before each test.  A [best practice](https://docs.cypress.io/guides/references/best-practices.html#Having-tests-rely-on-the-state-of-previous-tests){:target='blank'} is that tests should always be able to run independently from one another and *still pass*.  A common pitfall is adding code to the beforeEach that isn't needed by every `it` block.  If it's not used by every single `it` block, it doesn't belong in the beforeEach - put it directly into `it` blocks that needed it instead.
 
-**User flow to test:** I can select different inputs and fill them out.
+**2. User flow to test:** I can select the two different inputs and fill them out.  Once I've filled each one out, that input should have a value that matches what I typed in it.  *Add this directly to the previous it block as builds off that user flow.*
+
+This test helps us ensure that our inputs are set up as a controlled form - keeping what the user types in sync with each input's `value` attribute
 
 * Experiment with [type](https://docs.cypress.io/api/commands/type.html){:target='blank'} and [should](https://docs.cypress.io/api/commands/should.html#Syntax){:target='blank'} as you write a test that selects the `Email` and `Password` inputs and fills them with the corresponding values, `leta@turing.io` and `keane20`.  Assert that they have the correct values.
 
 Here is a link to [commonly used assertions](https://docs.cypress.io/guides/references/assertions.html#Common-Assertions) in Cypress!
 
-**User flow to test:** I will receive an error message when I click the Submit button without filling out both inputs.
+**3. User flow to test:** I will receive an error message when I click the Submit button without filling out both inputs.
 
 * Write another test that asserts an error message is displayed when the Submit button is [clicked](https://docs.cypress.io/api/commands/click.html){:target='blank'} without filling both inputs.
 
