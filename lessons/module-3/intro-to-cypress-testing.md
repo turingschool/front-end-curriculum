@@ -354,13 +354,13 @@ For now (and throughout Mod 3), we will instead use [stubbing](https://docs.cypr
       .url().should('include', '/dashboard')
   });
 ```
+</section>
 
-Note that we are just intercepting the `POST` request for logging in and mocking out what the expected response would look like. Our dashboard is blank because we haven't mocked out the other network requests; this is something we'll test later on in our dashboard spec.
+Note that in our solution we are just intercepting the `POST` request for logging in and mocking out what the expected response would look like. Our dashboard is blank because we haven't mocked out the other network requests; this is something we'll test later on in our dashboard spec.
 
 *How can we tell which network requests have and have not been properly stubbed?*
 
 For now, all we are asserting is that our URL has updated to the page we expect to view when we are logged in.  To thoroughly test this user flow, we'd also want to assert for all the elements and data we expect to see on the DOM. 
-</section>
 
 ### Testing the Sad Path to a Network Request
 
