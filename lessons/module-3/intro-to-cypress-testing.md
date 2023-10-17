@@ -230,16 +230,27 @@ This is great and all but let's think about what we actually need to test.  Reme
 
 Now that we've identified some user flows, let's get to testing (finally)! First, let's focus on this user flow:
 
-**As a user, I should be able to visit `http://localhost:3000` and see a title & form displayed.**
+**1a. As a user, I should be able to visit `http://localhost:3000` and see a title & form displayed.**
 
 * Write a test that asserts that a user can visit `http://localhost:3000` using the [visit](https://docs.cypress.io/api/commands/visit.html#Syntax) command.
-* In the same `it` block, check to make sure that our site can [get](https://docs.cypress.io/api/commands/get.html#Syntax){:target='blank'} a form and that it [contains](https://docs.cypress.io/api/commands/contains.html){:target='blank'} the correct text on the page!
+* In the same `it` block, check to make sure that our site [contains](https://docs.cypress.io/api/commands/contains.html){:target='blank'} the correct title text. 
+* Then, check to make sure our site can [get](https://docs.cypress.io/api/commands/get.html#Syntax){:target='blank'} the displayed form and that it [contains](https://docs.cypress.io/api/commands/contains.html){:target='blank'} the correct header text within the form.
+* Run your test to ensure no errors so far. Take note of any errors that you get in the `Test Body` of the **Command Log**.
+
+**1b. Adding onto the same flow, as a user, I can select the inputs, fill them out, as confirm that each input's value matches what I typed.**
+* In the same `it` block, get the *email* input field, [type](https://docs.cypress.io/api/commands/type.html){:target='blank'} "leta@turing.io" into that field.  This is the user action we're simulating in Cypress. Now we need to assert against the results of that action.
+* Assert that the email input field [should](https://docs.cypress.io/api/commands/should.html#Syntax){:target='blank'} have the same value as whatever you typed into it.
+* Get the *password* input field, type "keane20" into that field. 
+* Assert that the email input field [should](https://docs.cypress.io/api/commands/should.html#Syntax){:target='blank'} have the same value as whatever you typed into it.
 * Take note of any errors that you get in the `Test Body` of the **Command Log**.
 
-<section class="note">
-### Note
+This test might feel a bit unneccesary and overly simple - but it's valuable.  Thinking about controlled forms, what are we actually testing here?
+<!-- Here is a link to [commonly used assertions](https://docs.cypress.io/guides/references/assertions.html#Common-Assertions) in Cypress! -->
 
-You might notice that your test fails when trying to load your site. This is because Cypress is actually trying to visit your page, but your server is not running. Make sure your React server is running in a separate tab on your terminal! You do not need to have the API server running, though.
+<section class="note">
+### Note - Your React app must be running in order for Cypress to work
+
+If your test fails when trying to load your site, this might be because Cypress is actually trying to visit your page, but your server is not running. Make sure your React App server is running in a separate tab on your terminal! You do not need to have the API server running, though.
 </section>
 
 <section class="answer">
@@ -249,11 +260,12 @@ You might notice that your test fails when trying to load your site. This is bec
 // login_spec.js
 
 describe('Feedback Loop login', () => {
-  it('Should be able to visit the page and render the correct elements', () => {
+  it('Should be able to visit page, render correct elements, and hold values in inputs', () => {
     cy.visit('http://localhost:3000')
       .contains('Feedback Loop')
-      .get('form')
-      .contains('Please Sign In');
+      .get('form').contains('h2', "Please Sign In")
+      .get("input[name='email']").type("leta@turing.io").should('have.value', 'leta@turing.io')
+      .get("input[name='password']").type("keane20").should('have.value', 'keane20')
   });
 });
 ```
@@ -261,7 +273,7 @@ describe('Feedback Loop login', () => {
 Note that we can chain multiple methods to make multiple assertions!
 </section>
 
-Before starting our next test, let's add in the following block:
+Before we continue, let's add in the following block:
 
 ```js
   beforeEach(() => {
@@ -269,17 +281,7 @@ Before starting our next test, let's add in the following block:
   });
 ```
 
-This helps to ensure that we start anew before each test.  A [best practice](https://docs.cypress.io/guides/references/best-practices.html#Having-tests-rely-on-the-state-of-previous-tests){:target='blank'} is that tests should always be able to run independently from one another and *still pass*.
-
-**User flow to test:** I can select different inputs and fill them out.
-
-* Experiment with [type](https://docs.cypress.io/api/commands/type.html){:target='blank'} and [should](https://docs.cypress.io/api/commands/should.html#Syntax){:target='blank'} as you write a test that selects the `Email` and `Password` inputs and fills them with the corresponding values, `leta@turing.io` and `keane20`.  Assert that they have the correct values.
-
-Here is a link to [commonly used assertions](https://docs.cypress.io/guides/references/assertions.html#Common-Assertions) in Cypress!
-
-**User flow to test:** I will receive an error message when I click the Submit button without filling out both inputs.
-
-* Write another test that asserts an error message is displayed when the Submit button is [clicked](https://docs.cypress.io/api/commands/click.html){:target='blank'} without filling both inputs.
+This helps to ensure that we start anew before each test.  A [best practice](https://docs.cypress.io/guides/references/best-practices.html#Having-tests-rely-on-the-state-of-previous-tests){:target='blank'} is that tests should always be able to run independently from one another and *still pass*.  A **common pitfall** is adding code to the beforeEach that isn't needed by every `it` block.  If it's not used by every single `it` block, it doesn't belong in the beforeEach - put it directly into `it` blocks that needed it instead.
 
 <section class="note">
 ### Did You Know?
@@ -289,31 +291,36 @@ In the test runner, you can actually hit `command + option + i` to open up your 
 To add the React Dev Tools to your cypress browser window, take a look at [this blog post](https://www.cypress.io/blog/2020/01/07/how-to-load-the-react-devtools-extension-in-cypress/){:target='blank'}.
 </section>
 
+**2. User flow to test:** I will receive an error message when I click the Submit button without filling out both inputs.
+
+* Write another test - in a new `it` block - that asserts an error message is displayed when the Submit button is [clicked](https://docs.cypress.io/api/commands/click.html){:target='blank'} without filling both inputs.
+
+<section class="note">
+### Note - Never end a test on a "click"
+
+Why?  Because to test any user flow, we need to walk Cypress through simulating some user action. *Then*, we assert against whatever the user should see on the DOM as a *result* of that action.  The `click` is the action, so its only getting us halfway there.  We always need to add assertions after.
+
+Here is a link to [commonly used assertions](https://docs.cypress.io/guides/references/assertions.html#Common-Assertions) in Cypress!
+</section>
+
 <section class="answer">
 ### Solutions  
 
 ```js
-  it('should be able to select the email and password inputs and fill them with the corresponding values', () => {
-    cy.get('input[type="email"]')
-      .type('leta@turing.io')
-      .should('have.value', 'leta@turing.io')
-      .get('input[type="password"]')
-      .type('keane20')
-      .should('have.value', 'keane20')
-  })
-
   it('should display an error message when a user clicks the Submit button without filling both inputs', () => {
-    cy.get('button').click()
-    cy.contains('Please fill out both inputs')
+    cy.get('button').click() //This is the user action we're simulating.
+    cy.get('p').contains('Please fill out both inputs.')  //This is where we're asserting against whatever we expect as a result of that user action.
   });
 ```
 </section>
 
+
+
 ### Writing tests involving network requests
 
-**User Story:** As a user, I can fill out the `email` and `password` inputs and click the Submit button and be directed to a different URL.
+**User Story:** As a user, I can correctly fill out the `email` and `password` inputs and click the Submit button and be directed to a different URL.
 
-* This builds off of what we have done previously, however we now want to test that when we log in successfully and visit the new url `http://localhost:3000/dashboard`.  It's okay if the page doesn't display all of the data on the next page, just assert that the url has updated.
+* This builds off of what we have done previously, however we now want to test that when we log in successfully, our app takes us to a new url - `http://localhost:3000/dashboard`.  It's okay if the page doesn't display all of the data on the next page, just assert that the url has updated for now.
 
 <section class="note">
 ### Note
@@ -347,11 +354,13 @@ For now (and throughout Mod 3), we will instead use [stubbing](https://docs.cypr
       .url().should('include', '/dashboard')
   });
 ```
-
-Note that we are just intercepting the `POST` request for logging in and mocking out what the expected response would look like. Our dashboard is blank because we haven't mocked out the other network requests; this is something we'll test later on in our dashboard spec.
-
-All we need to worry about is that our URL has updated to the page we expect to view when we are logged in.
 </section>
+
+Note that in our solution we are just intercepting the `POST` request for logging in and mocking out what the expected response would look like. Our dashboard is blank because we haven't mocked out the other network requests; this is something we'll test later on in our dashboard spec.
+
+*How can we tell which network requests have and have not been properly stubbed?*
+
+For now, all we are asserting is that our URL has updated to the page we expect to view when we are logged in.  To thoroughly test this user flow, we'd also want to assert for all the elements and data we expect to see on the DOM. 
 
 ### Testing the Sad Path to a Network Request
 
