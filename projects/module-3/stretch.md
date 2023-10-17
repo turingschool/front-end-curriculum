@@ -65,7 +65,7 @@ Create a summary (MVP) of what your application will do and who your application
 * [Song Lyrics](https://lyricsovh.docs.apiary.io/#reference)
 * [TasteDive Recommendation Engine](https://tastedive.com/read/api)
 * [Harvard Art Museums](https://www.harvardartmuseums.org/collections/api)
-<!-- * [Rijks Museaum](https://www.rijksmuseum.nl/en/api/-rijksmuseum-oai-api-instructions-for-use) -->
+* [Rijks Museaum](https://data.rijksmuseum.nl/object-metadata/api/)
 
 Some of these APIs require API keys to consume the data. You'll have to go to the documentation for that API to find out how to get an API key and how to use the API key in your network requests.
 
