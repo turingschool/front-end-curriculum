@@ -58,7 +58,6 @@ Create a summary (MVP) of what your application will do and who your application
 * [Makeup](https://makeup-api.herokuapp.com/)
 * [Dandelion - Semantic Text Analytics](https://dandelion.eu/docs/)
 * [Jemendo Music](https://developer.jamendo.com/v3.0) - stay away from editing a private user's data as this will require OAuth, which is too much to take on for this project
-* [Board Game Atlas](https://www.boardgameatlas.com/api/docs/) - stay away from writing data for a user as this will require OAuth, which is too much to take on for this project
 * [Cards](http://deckofcardsapi.com/)
 * [Dungeons and Dragons](https://www.dnd5eapi.co/docs/)
 * [Paleontology](https://paleobiodb.org/data1.2/)
@@ -66,7 +65,7 @@ Create a summary (MVP) of what your application will do and who your application
 * [Song Lyrics](https://lyricsovh.docs.apiary.io/#reference)
 * [TasteDive Recommendation Engine](https://tastedive.com/read/api)
 * [Harvard Art Museums](https://www.harvardartmuseums.org/collections/api)
-* [Rijks Museaum](https://www.rijksmuseum.nl/en/api/-rijksmuseum-oai-api-instructions-for-use)
+<!-- * [Rijks Museaum](https://www.rijksmuseum.nl/en/api/-rijksmuseum-oai-api-instructions-for-use) -->
 
 Some of these APIs require API keys to consume the data. You'll have to go to the documentation for that API to find out how to get an API key and how to use the API key in your network requests.
 
