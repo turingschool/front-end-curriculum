@@ -83,12 +83,11 @@ In addition to an API, you must choose a new technology (or set of technologies)
 <section class="answer">
 ### Global State Management
 
-As apps begin to grow and grow, state management via `useState()` and passing props down through dozens of components gets kind of tangled, messy, and confusing. There are some tools invented to alleviate that issue:
+As apps begin to grow and grow, state management via `useState()` and passing props down through dozens of components gets kind of tangled, messy, and confusing. You can always reach for React's built-in Context API as a low-lift solution.  However, Redux is a more robust global state management tool that was invented to alleviate that issue in more complex situations:
 
-* React's built-in Context API
 * Redux
 
-Companies with large apps are likely to be using a state management tool like the ones listed above. If you're interested in this, you should pick _one_ tool from the list and use it within your React app.
+Companies with large apps are likely to be using a tool like Context API or Redux. If you want to choose global state management as your stretch tech,  you'll need to implement Redux in your React application since Context is already part of our curriculum. 
 </section>
 
 <section class="answer">
