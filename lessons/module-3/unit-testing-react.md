@@ -60,7 +60,7 @@ npm i
 
 ### Running Tests
 
-This application was built using `create-react-app`. The great thing about this is that it has a built in testing framework. This cannot be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
+This application was built using `create-react-app`. The great thing about this is that it has a built in testing framework. This cannot be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test runner called `Jest`. [Read more about the Jest and React combo here](https://jestjs.io/docs/tutorial-react).
 
 In order to run the tests, type `npm test`. Normally, our suite runs and then we return to the command line. With Create React App, `npm test` starts up a server that is constantly watching for changes. When you modify a file, the test suite will automatically rerun. Even better — by default, it will only watch files that have changed since the last time you made a git commit.
 
@@ -150,7 +150,7 @@ describe('Card', () => {
 });
 ```
 
-As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.io/jest/) instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its own expectation library which is similar to Chai's `expect` syntax (as opposed to the `assert` syntax).
+As previously mentioned, `create-react-app` uses [Jest](https://jestjs.io/) instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its own expectation library which is similar to Chai's `expect` syntax (as opposed to the `assert` syntax).
 
 [Jest Assertions](https://facebook.github.io/jest/docs/api.html)  
 

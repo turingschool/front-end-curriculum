@@ -68,7 +68,7 @@ The basic inheritance syntax will look something like this:
 class Childclass extends Parentclass {...}
 ```
 
-Let's go back to our previous example with an Instructor used in the [last lesson](https://frontend.turing.edu/lessons/module-2/oop-2-objects-and-prototype-chain.html):
+Let's go back to our previous example with an Instructor used in the [last lesson](https://frontend.turing.edu/lessons/module-2/objects-and-prototype-chain.html):
 
 ```js
 class Instructor {

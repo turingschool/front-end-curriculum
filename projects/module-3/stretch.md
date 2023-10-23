@@ -49,7 +49,6 @@ Create a summary (MVP) of what your application will do and who your application
 * [Cat Facts](https://alexwohlbruck.github.io/cat-facts/docs/)
 * [Marvel](https://developer.marvel.com/)
 * [Dad Jokes](https://icanhazdadjoke.com/api)
-* [Covid 19](https://covid19api.com/)
 * [IQAir - Real-Time Air Quality Forecast](https://www.iqair.com/us/air-pollution-data-api)
 * [eBird](https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest)
 * [Dog CEO - Pictures of Dogs](https://dog.ceo/dog-api/)

@@ -108,7 +108,7 @@ export default App;
 
 As we mentioned before, `create-react-app` has a built in testing framework that cannot 
 be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test 
-runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
+runner called `Jest`. [Read more about the Jest and React combo here](https://jestjs.io/docs/tutorial-react).
 
 In order to run the tests, type `npm test`. Normally, our suite runs and then we return 
 to the command line. With Create React App, `npm test` starts up a server that is 
@@ -235,12 +235,12 @@ describe('Grocery', () => {
 });
 ```
 
-As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.io/jest/) 
+As previously mentioned, `create-react-app` uses [Jest](https://jestjs.io/) 
 instead of Mocha. That said, you'll notice that the syntax is surprising similar. One 
 difference is that Jest includes its own expectation library which is similar to Chai's 
 `expect` syntax (as opposed to the `assert` syntax).  
 
-[Jest Assertions](https://facebook.github.io/jest/docs/api.html)  
+[Jest Assertions](https://jestjs.io/docs/api)  
 
 If you run `npm test` you should see your one test pass (two if you still have the 
 generic App test). You can keep this process running. The test suite will automatically 
@@ -441,7 +441,7 @@ it('should call the onPurchase prop when clicked', () => {
 - We likely want to pass in a grocery ID or grocery name to the `onPurchase` method so 
   we can keep track of what has been purchased. Can you add an assertion to the previous 
   test to check that `onPurchaseMock` was called with the correct arguments? 
-  ([Hint](https://facebook.github.io/jest/docs/expect.html#content))
+  ([Hint](https://jestjs.io/docs/expect))
 - Can you write the tests and implementation for the "Star" and "Remove" buttons?
 
 ### Testing a class method

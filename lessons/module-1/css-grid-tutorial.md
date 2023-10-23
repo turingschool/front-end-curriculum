@@ -20,7 +20,7 @@ As you work through this, please keep in mind that there are always _many_ ways 
 
 CSS has always been used to layout web pages, but was never very good at it.
 Flexbox helped out, but it's intended for simpler one-dimensional layouts, not complex two-dimensional ones
-(Flexbox and Grid actually work very well together). Can you imagine building [this](http://marvel-grid.webflow.io/) with Flexbox? Or [this](http://grid-masterclass.webflow.io)?
+(Flexbox and Grid actually work very well together). Can you imagine building [this](https://codepen.io/dannievinther/pen/EvVggR) with Flexbox? Or [this](http://grid-masterclass.webflow.io)?
 
 ## Set Up
 

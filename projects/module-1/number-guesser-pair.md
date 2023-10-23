@@ -166,7 +166,7 @@ Mobile layout:
   - All functions are less than 10 lines
 * **3:**
   * Application uses event delegation correctly on dynamic elements
-  * Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with a focus on [SRP](http://knnthvu.weebly.com/srp-and-dry.html)
+  * Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with a focus on [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle)
   * There are no nested if/else statements
 * **2:**
   * All parameters are used in their respective functions
