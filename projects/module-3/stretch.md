@@ -58,7 +58,6 @@ Create a summary (MVP) of what your application will do and who your application
 * [Makeup](https://makeup-api.herokuapp.com/)
 * [Dandelion - Semantic Text Analytics](https://dandelion.eu/docs/)
 * [Jemendo Music](https://developer.jamendo.com/v3.0) - stay away from editing a private user's data as this will require OAuth, which is too much to take on for this project
-* [Board Game Atlas](https://www.boardgameatlas.com/api/docs/) - stay away from writing data for a user as this will require OAuth, which is too much to take on for this project
 * [Cards](http://deckofcardsapi.com/)
 * [Dungeons and Dragons](https://www.dnd5eapi.co/docs/)
 * [Paleontology](https://paleobiodb.org/data1.2/)
@@ -66,7 +65,7 @@ Create a summary (MVP) of what your application will do and who your application
 * [Song Lyrics](https://lyricsovh.docs.apiary.io/#reference)
 * [TasteDive Recommendation Engine](https://tastedive.com/read/api)
 * [Harvard Art Museums](https://www.harvardartmuseums.org/collections/api)
-* [Rijks Museaum](https://www.rijksmuseum.nl/en/api/-rijksmuseum-oai-api-instructions-for-use)
+* [Rijks Museaum](https://data.rijksmuseum.nl/object-metadata/api/)
 
 Some of these APIs require API keys to consume the data. You'll have to go to the documentation for that API to find out how to get an API key and how to use the API key in your network requests.
 
@@ -83,12 +82,11 @@ In addition to an API, you must choose a new technology (or set of technologies)
 <section class="answer">
 ### Global State Management
 
-As apps begin to grow and grow, state management via `useState()` and passing props down through dozens of components gets kind of tangled, messy, and confusing. There are some tools invented to alleviate that issue:
+As apps begin to grow and grow, state management via `useState()` and passing props down through dozens of components gets kind of tangled, messy, and confusing. You can always reach for React's built-in Context API as a low-lift solution.  However, Redux is a more robust global state management tool that was invented to alleviate that issue in more complex situations:
 
-* React's built-in Context API
 * Redux
 
-Companies with large apps are likely to be using a state management tool like the ones listed above. If you're interested in this, you should pick _one_ tool from the list and use it within your React app.
+Companies with large apps are likely to be using a tool like Context API or Redux. If you want to choose global state management as your stretch tech,  you'll need to implement Redux in your React application since Context is already part of our curriculum. 
 </section>
 
 <section class="answer">

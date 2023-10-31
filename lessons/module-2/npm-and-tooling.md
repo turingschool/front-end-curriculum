@@ -23,30 +23,9 @@ As developers, we use a lot of tools to facilitate building our applications - f
 
 As our apps grow to be more complex, our toolbox is going to grow as well. So far, we've added quite a few things to your toolkit without really digging deep into what they do, why we use them, and how they work. So today we're going to shed some light on them. Specifically, we'll be talking about NPM.
 
-## Configuration Files
-
-Looking at the top-level, root directory of [the webpack starter kit for What's Cookin](https://github.com/turingschool-examples/whats-cookin-starter-kit), for instance, we already have quite a few files.
-
-<section class="call-to-action">
-### Turn and Talk
-
-Based on the files in root, what tools are used to facilitate the development of our application?
-</section>
-
-<section class="answer">
-### Configuration Files
-
-* `.gitignore` - tells git not to add certain files to our repo
-* `package-lock.json` - builds a dependency tree of any third-party code we are relying on and what versions of those packages our app is using
-* `package.json` - describes our application to NPM and what dependencies we need in order to use and develop the app
-* `webpack.config.js` - tells webpack how to gather all of the files in our application to create a file bundle
-
-With the exception of the `README.md` file, each of these is some sort of configuration file. A **configuration file** is a file that allows you to define how a particular tool you're using should interact with your codebase.
-</section>
-
 ## NPM
 
-**The NPM Files:** `package.json` and `package-lock.json`
+**The NPM Configuration Files:** `package.json` and `package-lock.json`
 
 NPM stands for **Node Package Manager**. A package manager is a registry where developers can publish reusable pieces of code that they've written (a package), and allow other developers to download it directly into their projects (as a dependency). NPM is not the only package manager - you may see others such as Yarn or Bower.
 
@@ -139,9 +118,3 @@ filterWords(3, ['this', 'that', 'hey', 'hat', 'hi'])
 // should return ['this', 'that', 'hi']
 ```
 </section>
-
-### Examining the package.json File In Depth
-
-Let's explore the [package.json](https://github.com/turingschool-examples/gametime-starter/blob/master/package.json) file a bit. This is a configuration file that provides NPM with important information about our project. It is automatically generated for us when we start a new project and run the command `npm init`. (This is very similar to when you start a new git repo!)
-
-We have some more generic information, like the title, description and author of our app, and a link to the repository and where to file issues. The more involved pieces of this file that we'll explore are the `scripts` and the `devDependencies` sections.
