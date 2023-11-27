@@ -22,13 +22,16 @@ Through each iteration, you should use TDD to drive implementation of your code.
 
 For this project, you need to use this [Flash Cards Starter](https://github.com/turingschool-examples/flashcards-starter) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.  
 
-**Tip:** You should rename your repo from "flashcards-starter" to "flashcards" (or whatever you'd like) when you clone it.  
+<section class="note">
+### Hot Tips 🔥
+Try renaming your repo from "flashcards-starter" to "flashcards" (or whatever you'd like) when you clone it.  
 
 ```bash
 git clone git@github.com:turingschool-examples/flashcards-starter.git flashcards
 ```
 
-Please note that there is logic provided to you (`util.js`) to make this game playable via the command line. You will not need to edit the `util.js` file. Completion of Iterations 1 and 2 are required before you are able to utilize the command-line interface to verify that your code is functioning properly. Prior to this, you should be using your tests to confirm functionality is working as you expect.
+Please also note that there is logic provided to you (`util.js`) to make this game playable via the command line. You will not need to edit the `util.js` file. Completion of Iterations 1 and 2 are required before you are able to utilize the command-line interface to verify that your code is functioning properly. Prior to this, you should be using your tests to confirm functionality is working as you expect.
+</section>
 
 ## Day-One Deliverable
 By end of day on kick off day: Submit your GH Repo [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link)
@@ -41,7 +44,13 @@ Your testing suite should test all of the functionality of the game that you hav
   - What does the function return?  
   - Are there different possible outcomes to test for based on different arguments being passed in?
 
-To DRY up your tests, consider researching and implementing Mocha's `beforeEach` hook in your test files.  
+To DRY up your tests, consider researching and implementing Mocha's `beforeEach` hook in your test files.
+
+<section class="note">
+### A note on file structure
+
+The way that the tests are structured currently, there is already a `card-test.js` file that matches with the `card.js` file.  While you could write all of your tests and functions in these two files, I would encourage creating other files such as a `deck-test.js` or a `round-test.js` as well to match that structure.  **Note: You may need to import functions into your implementation files to access them as needed.**
+</section>
 
 # Iterations
 
@@ -102,15 +111,15 @@ Your `round` will be the object that organizes guesses and records if they are c
   - `currentCard` property should start as the first `card` in the `deck`
   - `turns` property that starts as `0`
   - `incorrectGuesses` property that starts as an empty array and stores the incorrectly guessed cards during a round
-  - `takeTurn(guess, round)`: updates the `turns` count, evaluates guesses, gives feedback, and stores ids of incorrect guesses
-    * When a guess is made:
-    * The `turns` count is updated, regardless of whether the guess is correct or incorrect
-    * The next card becomes current card
-    * Guess is evaluated. Incorrect guesses will be stored (via card's the id) in an array of `incorrectGuesses`
-    * Feedback is returned regarding whether the guess is incorrect or correct
+- `takeTurn(guess, round)`: updates the `turns` count, evaluates guesses, gives feedback, and stores ids of incorrect guesses
+  * When a guess is made:
+  * The `turns` count is updated, regardless of whether the guess is correct or incorrect
+  * The next card becomes current card
+  * Guess is evaluated. Incorrect guesses will be stored (via card's the id) in an array of `incorrectGuesses`
+  * Feedback is returned regarding whether the guess is incorrect or correct
 
-  - `calculatePercentCorrect(round)`: calculates and returns the percentage of correct guesses
-  - `endRound(round)`: prints the following to the console: '****** Round over! ****** You answered <>% of the questions correctly!'
+- `calculatePercentCorrect(round)`: calculates and returns the percentage of correct guesses
+- `endRound(round)`: prints the following to the console: '****** Round over! ****** You answered <>% of the questions correctly!'
 
 <section class="answer">
 ### For Example  
@@ -171,19 +180,26 @@ As you may have noticed, your `game` file has two functions fleshed out already:
     * Creates a new `round` using the `deck`
     * Invokes `printMessage(deck)` to display the message in the CLI
     * Invokes `printQuestion(round)` to kick off our helper functions that allow interaction via the CLI
-
-    _Implementation Note: The helper functions are all fleshed out and fit to work with functions that meet the requirements in the previous iterations._  
-
-    _Testing Tip: You'll notice it difficult to test the game's `start` function. If you invoke it in your test file, it hangs the test suite by starting the game while running the tests. Sometimes as front end developers, we run into pieces of code that aren't possible, or worth it, to test.  In this case, instead of testing `start`, consider trying to extract what you can out of `start` and into a separate function, and test those functions on their own._  
-
 - Your game's `start()` function should be invoked to make the game playable in the console.
   - Look at the file being run when we want to start the game. Think about where you need to invoke your `start` function.
+
+
+<section class="note">
+### Implementation Note
+The helper functions are all fleshed out and fit to work with functions that meet the requirements in the previous iterations.
+
+You'll notice it difficult to test the game's `start` function. If you invoke it in your test file, it hangs the test suite by starting the game while running the tests. Sometimes as front end developers, we run into pieces of code that aren't possible, or worth it, to test.  In this case, instead of testing `start`, consider trying to extract what you can out of `start` and into a separate function, and test those functions on their own.
+</section>
 
 ## Iteration 4:
 
 Choose one or more of these extensions for this iteration.
 
-_Note: Solving some of these problems may require modifying pre-existing code that was given to you_
+<section class="note">
+### Note
+
+Solving some of these problems may require modifying pre-existing code that was given to you.
+</section>
 
 ***Use a project board to guide your workflow***
 Use a tool like GitHub projects or Trello to split up iteration items into small tasks.
