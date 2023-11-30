@@ -201,6 +201,11 @@ Instead, for your tests, you should create small, sample datasets that match the
 - DOM manipulation / DOM manipulating functions (like `document.querySelector(...)`)
 - Fetch calls
 
+<section class="note">
+### Note
+
+Make sure to keep your data logic in separate files from the `scripts.js`, such as the `recipes.js` file in the boilerplate.  References to the DOM like `querySelectors`, `eventListeners`, and more will break your tests as the DOM does not exist in the testing environment.
+</section>
 ---
 
 ### Extension Options
