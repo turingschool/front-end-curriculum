@@ -199,7 +199,7 @@ In the above example, note that you can do NESTED bracket notation!
 <section class="call-to-action">
 ### Individual Practice Time!
 
-1. Fork the following [REPL](https://repl.it/repls/TrustyCarpalCalculator)
+1. Fork the following [REPL](https://replit.com/@kaylaewood/M2-Objects-Practice#index.js)
 2. Spend no more than *40 minutes* working through the problems on your own
 
 
