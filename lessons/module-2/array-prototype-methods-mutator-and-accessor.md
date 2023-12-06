@@ -31,6 +31,7 @@ You've already been using some accessor and mutator methods since M1!  **Accesso
 * **join()** - It joins all elements of an array into a single string.
 * **every()** - It tests whether all elements in the array pass the provided function.
 * **some()** - It tests whether at least one element in the array passes the provided function.
+* **split()** - It splits a string into an array of substrings.
 
 <section class="call-to-action">
 ### Accessor Method Exercises
@@ -57,6 +58,11 @@ const books = [
   { isbn: '978-0-06-112008-4', title: 'To Kill a Mockingbird', author: 'Harper Lee' }
 ];
 
+const sentences = [
+  'This is the first sentence.',
+  'The second sentence is here.',
+  'And here is the third one.'
+];
 ```
 
 #### Exercises:
@@ -95,11 +101,19 @@ Write a function `hasExpensiveProduct(products)` that takes an array of products
 console.log(hasExpensiveProduct(products)); // Output: true
 console.log(hasExpensiveProduct(products.slice(1, 3))); // Output: false
 ```
+
+* **`split`: Split Sentences into Words**
+
+Write a function `splitSentencesIntoWords(sentences)` that takes an array of `sentences` and uses the `split` method to split each sentence into an array of words. Return an array of arrays, where each inner array contains the words of a sentence.
+
+```js
+console.log(splitSentencesIntoWords(sentences));
+// Output: [['This', 'is', 'the', 'first', 'sentence.'], ['The', 'second', 'sentence', 'is', 'here.'], ['And', 'here', 'is', 'the', 'third', 'one.']]
+```
 </section>
 
 
 ## New Mutator Methods
-* **split()** - It splits a string into an array of substrings.
 * **reverse()** - It reverses an array in place and returns the reference to the same array.
 * **sort()** - It sorts the elements of an array in place and returns the reference to the same array, now sorted.
 
@@ -108,12 +122,6 @@ console.log(hasExpensiveProduct(products.slice(1, 3))); // Output: false
 
 #### Dataset:
 ```js
-const sentences = [
-  'This is the first sentence.',
-  'The second sentence is here.',
-  'And here is the third one.'
-];
-
 const movies = [
   { title: 'The Shawshank Redemption', director: 'Frank Darabont', year: 1994 },
   { title: 'Pulp Fiction', director: 'Quentin Tarantino', year: 1994 },
@@ -127,15 +135,6 @@ const cities = [
   { name: 'London', population: 8908081, country: 'United Kingdom' },
   { name: 'Mumbai', population: 12478447, country: 'India' }
 ];
-```
-
-* **`split`: Split Sentences into Words**
-
-Write a function `splitSentencesIntoWords(sentences)` that takes an array of `sentences` and uses the `split` method to split each sentence into an array of words. Return an array of arrays, where each inner array contains the words of a sentence.
-
-```js
-console.log(splitSentencesIntoWords(sentences));
-// Output: [['This', 'is', 'the', 'first', 'sentence.'], ['The', 'second', 'sentence', 'is', 'here.'], ['And', 'here', 'is', 'the', 'third', 'one.']]
 ```
 
 * **`reverse`: Reverse Movies**
