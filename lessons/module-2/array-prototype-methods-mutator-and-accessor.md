@@ -27,7 +27,7 @@ You've already been using some accessor and mutator methods since M1!  **Accesso
 </section>
 
 ## New Accessor Methods
-* **indexOf()** - It returns the index of the first occurrence of a specified element in the array.
+* **findIndex()** - It returns the index of the first element in an array that satisfies the provided testing function.
 * **join()** - It joins all elements of an array into a single string.
 * **every()** - It tests whether all elements in the array pass the provided function.
 * **some()** - It tests whether at least one element in the array passes the provided function.
@@ -60,9 +60,9 @@ const books = [
 ```
 
 #### Exercises:
-* **`indexOf`: Find Student by ID**
+* **`findIndex`: Find Student by ID**
 
-Write a function `findStudentById(students, studentId)` that takes an array of `students` and a `studentId` as arguments. The function should use the `indexOf` method to find and return the index of the student with the specified ID. If not found, return -1.
+Write a function `findStudentById(students, studentId)` that takes an array of `students` and a `studentId` as arguments. The function should use the `findIndex` method to find and return the index of the student with the specified ID. If not found, return -1.
 
 ```js
 console.log(findStudentById(students, 2)); // Output: 1
