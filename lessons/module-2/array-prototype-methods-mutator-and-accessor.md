@@ -93,7 +93,7 @@ Write a function `hasExpensiveProduct(products)` that takes an array of products
 
 ```js
 console.log(hasExpensiveProduct(products)); // Output: true
-console.log(hasExpensiveProduct(products.slice(0, 2))); // Output: false
+console.log(hasExpensiveProduct(products.slice(1, 3))); // Output: false
 ```
 </section>
 
