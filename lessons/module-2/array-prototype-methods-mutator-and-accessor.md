@@ -160,8 +160,8 @@ console.log(sortCitiesByPopulation(cities));
 // Output: [
 //   { name: 'Tokyo', population: 37393000, country: 'Japan' },
 //   { name: 'Mumbai', population: 12478447, country: 'India' },
-//   { name: 'New York', population: 8398748, country: 'United States' },
 //   { name: 'London', population: 8908081, country: 'United Kingdom' }
+//   { name: 'New York', population: 8398748, country: 'United States' },
 // ]
 ```
 </section>
