@@ -47,6 +47,14 @@ When you run into the merge conflict on GitHub, go ahead and create the PR, then
 
 GitHub offers instructions for how to resolve a merge conflict through the command line (using your text editor).  They are essentially the same steps as outlined above.  Test out these instructions when you encounter a merge conflict.  
 
+<section class="note">
+### Note
+
+In VS Code, you may see a button that reads "Resolve in Merge Editor". This opens a GUI much like the GitHub merge conflict editor demonstrated briefly in the video at the beginning of the lesson.
+
+You can experiment with that editor if you like, but for the same reason we don't advise that you become solely dependent on using the GitHub GUI for merge conflicts, don't become dependent on the VS Code GUI for merge conflicts.
+</section>
+
 ## Best practices to avoid merge conflicts
 - Do your edits/work on branches.  Do not edit the main branch directly. Do not push to main.
   - If you accidentally start coding on main, don't worry!  You can create a new branch and it will bring those edits to the new branch.
