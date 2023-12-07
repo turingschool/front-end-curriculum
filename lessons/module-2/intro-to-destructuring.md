@@ -1,30 +1,38 @@
 ---
 title: "Intro to Destructuring"
-length: 120
 tags: Destructuring, syntax
+module: 2
 ---
+
 ## Learning Goals
-Implement destructuring on arrays and objects
+
+* Implement destructuring on arrays and objects
 
 ## Vocabulary
-`Destructuring` is a feature introduced with ES6. A feature that enables you to break down a structure, like an array or object, and store its components in variables.
+- `Destructuring` is a feature introduced with ES6. A feature that enables you to break down a structure, like an array or object, and store its components in variables.
 
-`Array destructuring` is a javascript expression that reduces arrays to smaller atoms where the contents of the array can be easily accessed and referenced by variables.
-The reduction may only be to 1 level or to the least level (depending on the depth of the array and how far you want to destructure it). 
+- `Array destructuring` is a javascript expression that reduces arrays to smaller atoms where the contents of the array can be easily accessed and referenced by variables.  The reduction may only be to 1 level or to the least level (depending on the depth of the array and how far you want to destructure it). 
+
+- `Object destructuring` is a feature in JavaScript that allows you to extract values from objects and assign them to variables in a more concise and convenient way.  Even better, object destructuring can extract multiple properties in a single statement, can access properties from nested objects, and can set a default value if the property doesn't exist.
 
 The `spread operator` is a new addition to the set of operators in JavaScript ES6. It takes in an iterable (e.g an array) and expands it into individual elements.
 
+### Starting with Array Destructuring
 
+<section class="call-to-action">
 ## Warm Up
+
 In your notebooks write what do you think these logs will return?
+
 ```js
 const colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
-let [color1, color2] = colors //Destructuring
+const [color1, color2] = colors //Destructuring
 
 console.log(color1)
 console.log(color2)
 ```
+</section>
  
 
 <section class="answer">
@@ -35,17 +43,16 @@ This is what happen in the code above.
 </section>
 
 <section class="call-to-action">
-### Check It Out
+### A few more scenarios
  
-Let’s now see a few techniques to use destructuring efficiently.
-Return to your group and discuss the difference between these two examples
+Let’s now see a few techniques to use array destructuring efficiently.
+In breakout groups, predict what the `console.logs` with give, run it, and then discuss the difference between these two examples.
 
- 
 #### Example 1:   
 ```js
 const colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
-let [,color1,, color2] = colors //Focus on the use of extra commas to skip through elements
+const [,color1,, color2] = colors //Focus on the use of extra commas to skip through elements
 
 console.log(color1)
 console.log(color2)
@@ -54,7 +61,7 @@ console.log(color2)
 ```js
 const colors = ["Red","Pink","Blue","Black"] //Array to be destructured
 
-let [color1, ...others] = colors //Focus on the use of ... to assign remaining elements to an array
+const [color1, ...others] = colors //Focus on the use of ... to assign remaining elements to an array
 
 console.log(color1)
 console.log(others)
@@ -62,158 +69,129 @@ console.log(others)
 </section>
 
 <section class="answer">
-    
 ### The Answer   
-    
-Assigning an Array to a variable
+
+**Assigning an Array to a variable**
 
 ![Destructuring-comp](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array-example1.png)
 ![Destructuring-comp](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-array-example2.png)
-     
-    
 </section>
 
-## Destructuring Arrays:
-#### Example:
-Return to your notebooks and write what do you think this logs will return?
-    
-```js
-const bigArr = ["number", 4,5,6]
-let [ important, ...secondArr ] = bigArr;
-console.log(important, secondArr)
-
-```
-
-<section class="note">
- 
 ## Why do we use destructuring?
-Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals. This syntax can be extremely terse, while still exhibiting more clarity than the traditional property access.
- Without destructuring assignment, you might access the first three items in an array like this: 
- ```js
+Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals. This syntax can offer more clarity than the traditional way of accessing values by their index.
 
+Without destructuring assignment, you might access the first three items in an array like this: 
+ ```js
 const first = bigArr[0];
 const second = bigArr[1];
 const third = bigArr[2];
  ```
-</section>
+
+<section class="call-to-action">
+### Review
+Return to your notebooks and write what do you think this logs will return?
     
-## Destructuring objects:
+```js
+const bigArr = ["number", 4,5,6]
+const [ important, ...secondArr ] = bigArr;
+console.log(important, secondArr)
+```
+</section>
+
+## Object Destructuring
 The right side of the statement contains the Javascript object that we want to split into variables; the left side contains a “pattern” for corresponding properties of the object. This “pattern” is usually a list of variable names.
 
 <section class="call-to-action ">
-    
-##### Assigning to exisitng variables 
+### Warm Up
+
+In breakout rooms, write what you think will be logged?
         
 ```js
-    const user = {    // Object we want to destructure
-        firstname: 'Jon',
-        lastname: 'Doe',
-        dateofbirth: '1990'
-    };
+const user = { // Object we want to destructure
+  firstName: 'Jon',
+  lastName: 'Doe',
+  dateOfBirth: '1990'
+};
 
 // Destructuring the object into our variables
-let { firstname, lastname, dateofbirth } = user;
-console.log( firstname, lastname, dateofbirth);
-
+const { firstName, lastName, dateOfBirth } = user;
+console.log( firstName, lastName, dateOfBirth);
 ```
 
+After running it, write what do you think the above code would look like in ES5?
 </section>
 
 
 <section class="answer">
-
-### The Answer    
+### Breaking This Down Further    
 
 ![Destructuring-comp](/assets/images/lessons/intro-to-destructuring/intro-to-destructuring-object.png)
 
- In a destructuring expression L = R, we take the right value R, and break it down so that the new variables in L can be assigned a value. In the above code, we used the object property shorthand notation.
- ```js
-  let { firstname, lastname, dateofbirth } = user;
- ```
+In a destructuring expression L = R, we take the right value R, and break it down so that the new variables in L can be assigned a value. The variable names on the left side must match the property names on the right.
 
-  Without this shorthand notation, our code will look like this:
-  ```js
-  const user = { 
-        firstname: firstname,
-        lastname: lastname,
-        dateofbirth: dateofbirth
-    };
-  ```
- 
+In ES5, this would look like:
+ ```js
+const firstName = user.firstName;
+const lastName = user.lastName;
+console.log(firstName);
+console.log(lastName);
+ ```
 </section>
 
-<section class="call to action">
-
-In your notebooks write what do you think the above code will look like in ES5?
-</section>
-
-
-<section class="answer">
-
-### The Answer    
-
- ```js
- let firstname = user.firstname;
- let lastname = user.lastname;
- console.log(firstname);
- console.log(lastname);
- ```
- 
- </section>
- 
-
-##### Assigning to a variable with default:
+## Assigning to a variable with default:
 
 We can also assign default values to variables whose keys may not exist in the object we want to destructure. This will prevent our variable from having an undefined value being assigned to it. The code below demonstrates this:
 
 ```js
-var user = {// Object we want to destructure
-      firstname: 'Jon',
-      lastname: 'Doe',
-      dateofbirth: '1990'
+const user = {// Object we want to destructure
+  firstName: 'Jon',
+  lastName: 'Doe',
+  dateOfBirth: '1990'
 };
 // Destructuring the object into variables without 
 // assigning default values 
 
-var { firstname, lastname, country } = user;
+let { firstName, lastName, country } = user;
 console.log("Without setting default values")
-console.log( firstname, lastname, country);
+console.log( firstName, lastName, country);
 
 // Destructuring the object into variables by 
 // assigning default values 
 
-var { firstname = 'default firstname', 
-      lastname = 'default lastname', 
-      country = 'default country' } = user;
-console.log("\n After setting default values")
-console.log( firstname, lastname, country);
+let { firstName = 'default firstName', 
+  lastName = 'default lastName', 
+  country = 'default country' } = user;
+console.log("After setting default values")
+console.log( firstName, lastName, country);
 ```
-#### Passing an object as an argument:
+## Passing an object as an argument:
 What if you want to destructuring an object as an argument?  
 
 ```js
 const user = { // Object we want to destructure
-      firstname: 'Jon',
-      lastname: 'Doe',
-      dateofbirth: '1990'
+  firstName: 'Jon',
+  lastName: 'Doe',
+  dateOfBirth: '1990'
 };
-function myUser({ firstname, lastname, dateofbirth }) {
-    console.log(firstname)
-    console.log(lastname)
-    console.log(dateofbirth)
-}
-myUser(user)
 
+const logUser = ({ firstName, lastName, dateOfBirth }) => {
+  console.log(firstName)
+  console.log(lastName)
+  console.log(dateOfBirth)
+}
+
+logUser(user)
 ```
+
 <section class="checks-for-understanding">
  
 ### Exit Ticket
-How do we destructuring an object?
-How do we destructuring an object?
-How do we use spread operator?
+- How do we destructuring an object?
+- How do we destructuring an object?
+- How do we use spread operator?
 </section>
 
 ## Additional Resources
 
-* [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-* [Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+* [MDN: Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+* [MDN: Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
