@@ -15,9 +15,9 @@ module: 2
 
 - `Object destructuring` is a feature in JavaScript that allows you to extract values from objects and assign them to variables in a more concise and convenient way.  Even better, object destructuring can extract multiple properties in a single statement, can access properties from nested objects, and can set a default value if the property doesn't exist.
 
-The `spread operator` is a new addition to the set of operators in JavaScript ES6. It takes in an iterable (e.g an array) and expands it into individual elements.
+- The `spread operator` is a new addition to the set of operators in JavaScript ES6. It takes in an iterable (e.g an array) and expands it into individual elements.
 
-### Starting with Array Destructuring
+## Starting with Array Destructuring
 
 <section class="call-to-action">
 ## Warm Up
@@ -164,6 +164,7 @@ let { firstName = 'default firstName',
 console.log("After setting default values")
 console.log( firstName, lastName, country);
 ```
+
 ## Passing an object as an argument:
 What if you want to destructuring an object as an argument?  
 
@@ -184,8 +185,8 @@ logUser(user)
 ```
 
 <section class="checks-for-understanding">
- 
 ### Exit Ticket
+
 - How do we destructuring an object?
 - How do we destructuring an object?
 - How do we use spread operator?
