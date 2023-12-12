@@ -6,7 +6,7 @@ title: Static Comp Challenge
 The static comp challenge is a challenge to keep you working that HTML/CSS muscle. :muscle:  Once you get into the workforce, building out comps that reflect the designer's choice in layout, spacing, font, imagery, and color to the smallest detail is a requirement. This project is meant to give you an at-bat with matching a comp as pixel perfect as you can.
 
 ## Creative License
-You may NOT take any creatuve liberties with this design. You should act as though you have been handed this comp by a professional designer and it is your job to bring that design to life in exact detail.
+You may NOT take any creative liberties with this design. You should act as though you have been handed this comp by a professional designer and it is your job to bring that design to life in exact detail. This includes details like the width and color of borders, the spacing between images, font size, etc. 
 
 ## Assets
 - The images and icons are provided for you in the repo in the `images` directory
