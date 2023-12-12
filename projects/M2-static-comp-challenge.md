@@ -2,6 +2,12 @@
 title: Static Comp Challenge
 ---
 
+<section class="note">
+### Note
+
+We want you to timebox this challenge so that you spend 4 focused hours on it and no more. 
+</section>
+
 ## Specification
 The static comp challenge is a challenge to keep you working that HTML/CSS muscle. :muscle:  Once you get into the workforce, building out comps that reflect the designer's choice in layout, spacing, font, imagery, and color to the smallest detail is a requirement. This project is meant to give you an at-bat with matching a comp as pixel perfect as you can.
 
