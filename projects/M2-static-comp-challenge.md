@@ -24,7 +24,7 @@ You may NOT take any creative liberties with this design. You should act as thou
 - Fork [this repo](https://github.com/turingschool-examples/dog-party/)
 - Push your final work to [github pages](https://pages.github.com/). Below are instuctions for deploying to GH Pages:
   - Repo Settings » Pages » Select the main branch as your Source branch » Save. Then, wait up to an hour, hit refresh, and your deployed link should appear at the top of the screen.
-  - If you don’t want to wait, your GH pages URL will follow this format: https://username.github.io/dog-party/ and replace username with the repo owner’s GH username and coloRandom with your repo’s name (if different). The URL will not work right away - that’s ok!
+  - If you don’t want to wait, your GH pages URL will follow this format: `https://username.github.io/dog-party/` and replace username with the repo owner’s GH username and dog-party with your repo’s name (if different). The URL will not work right away - that’s ok!
 - Submit your repo and GH pages links [here](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) by the due date listed in your calendar
 
 ## Other Notes
