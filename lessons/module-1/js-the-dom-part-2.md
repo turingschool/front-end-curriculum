@@ -105,8 +105,8 @@ Visit <a href="https://codepen.io/eric_turing/pen/QWLNaVE" target="blank">this p
 
 In the CodePen above that you forked:
 
-* Add a button called `Change Name`. Find all of the elements with a class of `student` and change them to **your** name when the button is clicked!
-* Add a button called `Change Grades`. Find all of the elements with the class of `grade`. Iterate through all of them and change their content to `A+`s when the button is clicked.
+* Add a button called `Change Name` in the html file. Find all of the elements with a class of `student` and use JavaScript to change them to **your** name when the button is clicked.
+* Add a button called `Change Grades` in the html file. Find all of the elements with the class of `grade`. Iterate through all of them and use JavaScript to change their content to `A+`s when the button is clicked.
 </section>
 
 ### The Data Model and the DOM
