@@ -22,3 +22,5 @@ You may NOT take any creatuve liberties with this design. You should act as thou
 ## Other Notes
 - This page does not need to be responsive to screensize
 - There does not need to be any JavaScript for this project. It will be a static page with no functionality.
+
+![dog party comp](./assets/dog-party-spec.png)
