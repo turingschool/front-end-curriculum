@@ -132,9 +132,9 @@ This diagram can be found in the CSS Dev Tools and the same color coding is used
 
 We can apply all the margin and padding we want, but when it comes down to it, many times Front End Developers are tasked with re-creating something a designer has provided them with, commonly called "comps". Let's use our tools to build something professional-grade.  
 
-Throughout both lessons today, you are going to work on recreating a piece of the [Imperfect Foods website](https://web.archive.org/web/20220118162321/https://try.imperfectfoods.com/overview).  
+Throughout both Mod 1 CSS lessons, you are going to work on recreating a piece of the [Imperfect Foods website](https://web.archive.org/web/20220118162321/https://try.imperfectfoods.com/overview).  
 
-You will have one hour to work on `iteration 1` of [this activity](https://github.com/kaylagordon/css-intro-imperfectfoods). You will work on `iteration 2` this afternoon, after you've learned about Flexbox.
+You will have one hour to work on `iteration 1` of [this activity](https://github.com/kaylagordon/css-intro-imperfectfoods). You will work on `iteration 2` after you've had the CSS Flexbox lesson.
 
 ## Wrap Up
 
