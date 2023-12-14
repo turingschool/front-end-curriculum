@@ -18,7 +18,7 @@ module: 2
 
 ## Some Context
 
-Closures is an important concept in programming that can help developers to create more modular and reusable code. Lexical scoping is a technique that allows a variable to be declared within a specific scope, such as a function, and then used only within that scope and any nested scopes. Closures, on the other hand, allow a function to access and manipulate variables that are declared outside of its own scope.
+Closures are an important concept in programming that can help developers to create more modular and reusable code. Lexical scoping is a technique that allows a variable to be declared within a specific scope, such as a function, and then used only within that scope and any nested scopes. Closures, on the other hand, allow a function to access and manipulate variables that are declared outside of its own scope.
 
 The use of lexical scoping and closures can lead to more efficient and maintainable code, as well as improved security by preventing unintended access to sensitive data. They are particularly useful in functional programming, where functions are treated as first-class citizens and can be passed as arguments or returned as values. Understanding how lexical scoping and closures work can help design more effective and flexible software solutions.
 
@@ -58,11 +58,13 @@ Let's look at an example:
  
 ```js
 function greet() { 
-  var firstName = 'Alan'; // a local variable created by greet()  
-  function displayName() { // displayName() an inner function
-    console.log(firstName); // access variable declared in parent fn
-  } 
-  displayName();     
+  var firstName = 'Alan';
+
+  function displayName() {
+    console.log(firstName);
+  }
+
+  displayName();
 } 
 
 greet(); 
@@ -87,11 +89,13 @@ Now let's modify this example a bit. Instead of invoking `displayName` right awa
 
 ```js
 function greet() { 
-  var firstName = 'Alan'; // a local variable created by greet()  
-  function displayName() { // displayName() an inner function
-    console.log(firstName); // access variable declared in parent fn
-  } 
-  return displayName;     
+  var firstName = 'Alan'; 
+
+  function displayName() {
+    console.log(firstName);
+  }
+
+  return displayName;
 } 
 
 var createGreeting = greet(); // createGreeting is now a function that can be invoked
@@ -117,8 +121,11 @@ This still might not seem like an incredibly useful feature of JavaScript, but t
 
 So one use-case for closures is to **protect variables from any sort of outside manipulation (we're not talking about security here)**. Other languages often have some really nice way of implementing private or protected variables, but JavaScript doesn't. So if this is something we want to achieve, we would use a closure.
 
-Take the following example:
 
+<section class="call-to-action">
+### Practice
+
+Take the following example:
 ```js
 function analyzeGrades() {
   // We keep these variables private inside this closure
@@ -137,20 +144,17 @@ function analyzeGrades() {
   }
 };
   
-console.log(privateGrades) // undefined
-console.log(analyzeGrades) // fn definition
-console.log(analyzeGrades()) // object with changeGrades method
+console.log(privateGrades)
+console.log(analyzeGrades)
+console.log(analyzeGrades())
 
 let instructor = analyzeGrades();
-instructor.changeGrades(); // undefined (we are not returning anything from that method, but it is running)
-instructor.viewGrades(); // [98, 100, 93...]
+instructor.changeGrades(); // What is this doing here?
+console.log(instructor.viewGrades());
 ```
 
-<section class="call-to-action">
-### Practice
-
-Add a new function `addGrade` to this closure, such that we can update our
-`privateGrades` variable, adding a new grade to the array.
+1. First predict what each `console.log` will output.
+2. Then add a new function, `addGrade`, to this closure that updates our `privateGrades` variable, adding a new grade to the array.
 </section>
 
 Our most thorough definition of a closure is now **when an inner function has access to the outer function's variables and can remember the environment in which it was created. The outer function's variables are protected by the closure and can only be manipulated by code defined within that function.**
@@ -169,14 +173,14 @@ const rentPrice = (initialRent) => {
 var rent = rentPrice(8000);
   
 // Update data using private methods 
-rent.getRent() // returns 8000
-rent.incRent(2000);
-rent.decRent(1500);
-rent.decRent(1000); 
-rent.incRent(2000); 
-rent.getRent();
+console.log(rent.getRent()); // returns 8000
+console.log(rent.incRent(2000));
+console.log(rent.decRent(1500));
+console.log(rent.decRent(1000)); 
+console.log(rent.incRent(2000)); 
+console.log(rent.getRent()); // returns 9500
 ```
-***Hint:*** `rentPrice` should return a series of functions for updating our confidental rent (the initial parameter). Take note of the dot notation used to invoked these private methods. 
+***Hint:*** `rentPrice` should return a series of functions for updating our confidental rent. Take note of the dot notation used to invoked these private methods. 
 
 </section>
 
@@ -192,10 +196,10 @@ const calculateTaxes = (taxRate) => {
 
 const taxRateFor2020 = calculateTaxes(0.24)
 const taxRateFor2021 = calculateTaxes(0.27)
-taxRateFor2020(60000)
-taxRateFor2020(85000)
-taxRateFor2021(95000)
-taxRateFor2022(110000)
+console.log(taxRateFor2020(60000));
+console.log(taxRateFor2020(85000));
+console.log(taxRateFor2021(95000));
+console.log(taxRateFor2021(100000));
 ```
 
 In this code, `calculateTaxes()` is a **higher-order function** that takes a taxRate parameter and returns a ***new*** function that takes an income parameter and calculates the tax owed for that income at the given taxRate.
@@ -267,7 +271,7 @@ Make a function that creates a random number generator, and stores the values of
 
 ## Conclusion
 
- Closures are functions that capture and remember the environment in which they were created, and can be used to create private variables and **memoize** functions. Implementation of closures can result in efficient, modular, and maintainable code, and avoid common pitfalls such as global namespace pollution, code duplication, and side effects. Implementation of closures will be expected in your projects moving forward, and will become even more relevant when working with React functional components. 
+ Closures are functions that capture and remember the environment in which they were created, and can be used to create private variables and **memoize** functions. Implementation of closures can result in efficient, modular, and maintainable code, and avoid common pitfalls such as global namespace pollution, code duplication, and side effects. While implementation of closures is **NOT** expected in your projects moving forward, they will become even more relevant when working with React functional components in the future.
 
 <section class="checks-for-understanding">
 ### Checks for Understanding 
