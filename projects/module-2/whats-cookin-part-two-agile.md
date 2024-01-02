@@ -114,6 +114,15 @@ Instructors will assign each team **one** of these tracks to work through.
 - Give the users a way to remember if a recipe was good or not (this does not have to be saved on refresh, but it’s a nice bonus).
 - The admin of the site wants a way to see which recipes are getting the most hits (clicks). Give them some kind of tracking information that the admin can find.
 
+<section class="note">
+### Important Notes/Tips
+
+The prompts are purposely vague - it is your job to interpret the task and implement it as you see fit. Be prepared to defend the choices you make in your eval with your project manager.  
+  
+  
+It is very likely that adding your features will require some refactoring. Don't just try to brute force the new feature onto your existing code - spend some time planning what changes (big and small) you'll need to make in your existing codebase to make this feature work while keeping your code organized and efficient. Again, be prepared to defend the choices you make in your eval with your project manager.
+</section>
+
 ### Usability Testing
 
 As developers, we can get so accustomed to the features we create that we forget that users don’t have any background or know how to use a feature for the first time. That’s why it’s important to observe unbiased users try out your features and see where they succeed or have trouble. These observations are called usability tests.
