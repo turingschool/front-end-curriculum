@@ -181,6 +181,15 @@ The user wants to feel motivated each time they open the app, and they want to b
 Our users would like to be able to take notes about their day’s activities. For a given day, they would like to be able to keep track of what activity they did and how it went. The data should stay in the application even when refreshed.
 </section>
 
+<section class="note">
+### Important Notes/Tips
+
+The prompts are purposely vague - it is your job to interpret the task and implement it as you see fit. Be prepared to defend the choices you make in your eval with your project manager.  
+  
+  
+It is very likely that adding your features will require some refactoring. Don't just try to brute force the new feature onto your existing code - spend some time planning what changes (big and small) you'll need to make in your existing codebase to make this feature work while keeping your code organized and efficient. Again, be prepared to defend the choices you make in your eval with your project manager.
+</section>
+
 ---
 
 ### Usability Testing
