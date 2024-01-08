@@ -117,7 +117,7 @@ We also want you to choose two design inspiration pieces, which can be as broad 
 * The link to your Project Board
 * A link to 2-3 pieces of design inspiration that you will aim to mimic - using [this template](https://docs.google.com/document/d/1DHqyJy0lVLrLaF6G5bXGbAwh72jd3FMtx_gXWV2OmpY/edit?usp=sharing)  
 * A wireframe of your app - this can include sketches of your user interface, or a link to your Canva, InVision, etc.  
-* An Equity Analysis - using [this template](https://docs.google.com/document/d/1418_fjx4pLhW97L4a6ULKmnh8E7u3t7gHDIcMOvgrUA/edit?usp=sharing)  
+* An Equity Analysis - using [this template](https://docs.google.com/document/d/1QKoyIlChckfhmtrufcJC-tPxPQpALxwvPs7806D_wbI/edit)  
 
 ### PR Buddies - PR review
 
