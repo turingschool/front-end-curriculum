@@ -448,10 +448,8 @@ Let's continue to practice adding more iterations following the TDD process from
 <section class="call-to-action">
 ### Iteration 2
 
-- You should be able to increase the width by a provided value.
-ie: `increaseWidth(10)`
-- You should be able to increase the height of your box by a provided value
-ie: `increaseHeight(10)`
+- You should be able to increase the width of a box by a provided value. ie: `increaseWidth(box, 10)`
+- You should be able to increase the height of a box by a provided value. ie: `increaseHeight(box, 10)`
 </section>
 
 ## Testing Practice: Iteration 3
@@ -461,8 +459,7 @@ Implement iteration 3 for our box per the spec outlined below;
 <section class="call-to-action">
 ### Iteration 3
 
-- Refactor your code so that instead of having increaseWidth and increaseHeight methods, you can have a single method to do both jobs
-ie: `increment(10, 'height')` or `increment(10, 'width')`
+- Refactor your code so that instead of having `increaseWidth` and `increaseHeight` functions, you can have a single function to do both jobs ie: `increment(box, 10, 'height')` or `increment(box, 10, 'width')`
 </section>
 
 <section class="checks-for-understanding">
