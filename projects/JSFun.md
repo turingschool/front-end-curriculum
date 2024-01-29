@@ -35,8 +35,6 @@ The prototypes folder holds the practice exercises you will be using.
 - jsFun problems are ***not*** in order of difficulty.  If one feels way too hard, try it but know when to stop and move onto a different problem.  Come back to it as your skills and confidence improve.
 - Do not stress about completing *all* of the problems. Focus more on being able to thoroughly understand and articulate the process and solution to the problems you do make it through.  
 - For each problem you solve, also add an annotation for how you would walk someone through arriving at that solution. It will help you more deeply understand your solution as well as help with your articulation piece during assessments.
-- Your M2 assessments will be run in Repl.it.  Many students choose to copy/paste the dataset and prompt from this jsFun repo into Repl as they practice.  
-   - We advise that you then copy/paste your solution back into the jsFun Repo so that you can confirm by running the tests that you've successfully solved the problem and haven't missed any details.  
 - A former student created [this bank of practice exercises](https://docs.google.com/spreadsheets/d/1R8imTyYD64FPWJ_mD5QlZI0ybyU1QNkm1ntJqRT7r7k/edit#gid=2076278354) called iron-FE.  Note that many students find these prompts very helpful but they are not managed by Turing instructors in any way.
 - jsFun and iron-FE problems practice the skills you need for your M2 assessment but they are not necessarily structured exactly like the assessments.  You are honing these problem solving and technical skills so that you can be a strong developer, not just so that you can pass the M2 assessment.
 
