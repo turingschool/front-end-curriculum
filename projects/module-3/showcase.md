@@ -112,7 +112,7 @@ We also want you to choose two design inspiration pieces, which can be as broad 
 
 * Add the link to your MVP proposal in [this google sheet](https://docs.google.com/spreadsheets/d/1O5tv2wxmzeJp8-vlk5bZNTtRBEYQ4Zk-0SgOuyzzVJg/edit?usp=sharing).**
 
-### Day 2 before 3 PM MT
+### Day 1 before 3 PM MT
 * The link to your repo
 * The link to your Project Board
 * A link to 2-3 pieces of design inspiration that you will aim to mimic - using [this template](https://docs.google.com/document/d/1DHqyJy0lVLrLaF6G5bXGbAwh72jd3FMtx_gXWV2OmpY/edit?usp=sharing)  
