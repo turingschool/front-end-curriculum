@@ -181,13 +181,13 @@ Note: All of these dates are reflected in the calendar
 Stand-up meetings will be held most mornings to see where the group is at, and give a chance for each group member to talk through what they're working on or where they have blockers.
 
 <section class="answer">
-### Day 0 Kick Off & Proposals Due (5 PM MT)
-
+### Day 0 Kick Off & Proposals (due following morning)
+ 
 * Add the link to your MVP proposal in [this google sheet](https://docs.google.com/spreadsheets/d/11TCQtSl_DLo5IaX7ATw3A6uPL-rWQzyxUiT1KghqSKg/edit?usp=sharing)
 </section>
 
 <section class="answer">
-### Day 2 (4 PM MT)
+### Day 1 (4 PM MT)
 
 * The link to your repo
 * The link to your DTR
@@ -221,11 +221,9 @@ Your PM will join one of your standups between days 4-7. PMs may ask to see:
 </section>
 
 <section class="answer">
-### Day 7 (9:30 AM MT)
+### Day 7
 
-Share your app progress with the class for Show and Tell! Be prepared to tell the story of what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes (shoot for 5 minutes).
-
-Your project does not need to be done or impressive by this point; this is more of a way to give you a milestone to shoot for and to help plan your timeline.
+Later this week, you can share your app progress with the class for Show and Tell! Be prepared to tell the story of what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes (shoot for 5 minutes).
 </section>
 
 ## Demo Comp
