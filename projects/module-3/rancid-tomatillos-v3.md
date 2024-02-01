@@ -244,8 +244,8 @@ It is _far_ more important to be very, very solid on the project stated learning
 
 ---
 
-### PROJECT DUE DATE: 6pm Sunday of Week 3
-The project is due Sunday to give you space to breathe before diving into the code for your stretch project.  
+### PROJECT DUE DATE: 6pm Saturday of Week 2
+The project is due Saturday to give you space to breathe before diving into the code for your stretch project.  
 
 If you have created a back-end repo and/or deployed your front-end, then add links to the deployed app or additional repos in your front-end README.
 
