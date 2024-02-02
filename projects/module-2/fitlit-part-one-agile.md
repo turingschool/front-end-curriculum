@@ -203,7 +203,7 @@ You should create functions that:
 </section>
 
 <section class="answer">
-### Iteration 5 - Activity
+### Iteration 5 - Activity (Extension)
 
 #### Activity Data
 
@@ -222,7 +222,7 @@ You should create functions that:
 </section>
 
 <section class="answer">
-### Extension Options
+### Additional Extension Options
 
 * Implement one of the listed third-party libraries or one of your choosing with instructor approval.
 * Design a step challenge between friends. Assign your user a few friends from the user data file. Add the functions you need and a display on the dashboard to see their friends step count for a whole week. The display should also show who had the most steps for that week.
@@ -288,7 +288,7 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 ### Functional Expectations
 
 💫ON TRACK💫 can look like:
-- Application fulfills all requirements of iterations 1-5 without bugs.
+- Application fulfills all requirements of iterations 1-4 without bugs.
 
 ✨**WOW**✨ can look like:
 - Application fulfills all requirements *as well as* an extension.
