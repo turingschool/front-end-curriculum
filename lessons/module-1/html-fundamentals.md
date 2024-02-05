@@ -128,7 +128,7 @@ Any HTML element can have attributes. An attribute provides additional informati
 
 The name of the __attribute__ in the example above is class, and the __value__ is `"paragraph"`. The are separated by a single `=`, and no spaces.
 
-Attribute names are determined for us by HTML; we must comply with the list of available names to use. The values are determined by us as developers. Different attributes are used for different purposes; we will explore some of those today, and continue learning the use-cases for others as we move into CSS and JavaScript.
+Attribute names are determined for us by HTML; we must comply with the [list of available names to use](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes). The values are determined by us as developers. Different attributes are used for different purposes; we will explore some of those today, and continue learning the use-cases for others as we move into CSS and JavaScript.
 
 ### Attributes in Images
 
