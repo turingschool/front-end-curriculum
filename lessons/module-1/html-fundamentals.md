@@ -231,6 +231,9 @@ Now that you know what clean, correctly indented HTML looks like, and some of th
 
 </section>
 
+## Additional Practice
+* [HTML Review Workshop - Structure, Semantics](https://frontend.turing.edu/lessons/module-1/html-semantic-element-review.html)
+
 ## Additional Resources
 
 * [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
