@@ -41,16 +41,16 @@ JavaScript is a **single-threaded** language, which means each line of code must
 ### In Your Notebook
 
 ```js
-1   var modTwoTeachers = ['Hannah', 'Nik', 'Leta'];
-2
-3   function calculateEvals (teachers, classSize) {
-4     return classSize / teachers.length;
-5   }
-6
-7   var numEvals = calculateEvals(modTwoTeachers, currentCohort);
-8
-9   var currentCohort = 33;
-10  console.log(numEvals);
+var modTwoTeachers = ['Hannah', 'Nik', 'Leta'];
+
+function calculateEvals (teachers, classSize) {
+  return classSize / teachers.length;
+}
+
+var numEvals = calculateEvals(modTwoTeachers, currentCohort);
+
+var currentCohort = 33;
+console.log(numEvals);
 ```
 
 Looking at the example above, what would you expect to be logged when we get to line 10? Why?
@@ -76,13 +76,13 @@ Based on this order of execution, we ultimately receive NaN as our result becaus
 ### Looking at another example
 
 ```js
-1  const moo = mooLikeACow();
-2  
-3  function mooLikeACow() {
-4    return 'Moooo!';
-5  }
-6
-7  console.log('Animal Sound: ', moo);
+const moo = mooLikeACow();
+
+function mooLikeACow() {
+  return 'Moooo!';
+}
+
+console.log('Animal Sound: ', moo);
 ```
 
 What would we expect to be logged when line 7 executes? Why? Is the actual behavior different than you expected?
@@ -97,17 +97,17 @@ The interpreter takes a first pass to skim over our code and get a general idea 
 Using the first code example, the interpreter recognizes that we're going to be working with a function called `calculateEvals` and some variables - `modTwoTeachers`, `numEvals`, and `currentCohort`. In trying to be helpful, the interpreter **hoists** these functions and variables to the top of our scope. Behind the scenes, the interpreter would essentially be changing our code to look something like this:
 
 ```js
-1   var modTwoTeachers, numEvals, currentCohort;
-2   function calculateEvals(teachers, classSize) {
-3     return classSize / teachers.length;
-4   }
-5
-6   modTwoTeachers = ['Hannah', 'Nik', 'Leta'];
-7
-8   numEvals = calculateEvals(modTwoTeachers, currentCohort);
-9
-10  currentCohort = 33;
-11  console.log(numEvals);
+var modTwoTeachers, numEvals, currentCohort;
+function calculateEvals(teachers, classSize) {
+  return classSize / teachers.length;
+}
+
+modTwoTeachers = ['Hannah', 'Nik', 'Leta'];
+
+numEvals = calculateEvals(modTwoTeachers, currentCohort);
+
+currentCohort = 33;
+console.log(numEvals);
 ```
 
 Our variable **declarations** are hoisted to the top of our code block, but their **initialization** or **assignment** remains on the original line it was written. Therefore, all three of our variables are `undefined` until the **execution phase** when the interpreter reaches the lines where we assign them values.
@@ -115,13 +115,13 @@ Our variable **declarations** are hoisted to the top of our code block, but thei
 Our function is also hoisted to the top of our code block, with its entire definition alongside it. This gives us insight into why our second example still worked without throwing an error:
 
 ```js
-1  function mooLikeACow() {
-2    return 'Moooo!';
-3  }
-4
-5  const moo = mooLikeACow();
-6  
-7  console.log('Animal Sound: ', moo);
+function mooLikeACow() {
+  return 'Moooo!';
+}
+
+const moo = mooLikeACow();
+
+console.log('Animal Sound: ', moo);
 ```
 
 When functions are hoisted to the top of our code block, it hoists not just the function name, but the code inside of it as well. This means we can invoke functions before we've declared them without running into errors.
@@ -136,24 +136,24 @@ With a partner, take turns explaining how the following JavaScript code would be
 
 
 ```js
-1  const hungriestDog = 'Tess';
-2
-3  function begForTreats(seconds) {
-4   const result = seconds * 2;
-5
-6   if (result > 5) {
-7    return 'This human is rude, not giving me treats. Onto the next one.';
-8   } else {
-9    return 'Yum, human food!';
-10  }
-11 }
-12
-13 let beggingTime = 1;
-14
-15 let beg = begForTreats(beggingTime);
-16
-17 beggingTime = 4;
-18 console.log(beg)
+const hungriestDog = 'Tess';
+
+function begForTreats(seconds) {
+  const result = seconds * 2;
+
+  if (result > 5) {
+    return 'This human is rude, not giving me treats. Onto the next one.';
+  } else {
+    return 'Yum, human food!';
+  }
+}
+
+let beggingTime = 1;
+
+let beg = begForTreats(beggingTime);
+
+beggingTime = 4;
+console.log(beg)
 ```
 </section>
 
