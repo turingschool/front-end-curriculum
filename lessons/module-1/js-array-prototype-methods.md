@@ -9,6 +9,7 @@ tags: javascript, arrays, prototypes, mutator, accessor
 * Summarize various array prototype methods
 * Use array prototype methods
 * Determine if a given method is a mutator or accessor
+* Practice using MDN documentation
 * Identify learning strategies that are most helpful for <em>you</em>
 
 ## Vocabulary
