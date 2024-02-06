@@ -619,6 +619,7 @@ You would use this approach when you have distinct pages or components that shou
 
 ```jsx
 import './App.css';
+import './App.css';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import Home from '../Home/Home';
 import Creatures from '../Creatures/Creatures';
@@ -633,8 +634,9 @@ function App() {
       </nav>
       <h1>Puppies or Sharks?</h1>
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/:animal/:id" element={<Creatures />}>
+        <Route path="/" element={<Home />} />
+        <Route path=":animal" element={<Creatures />} />
+        <Route path="/:animal/:id" element={<CreatureDetails />} />
       </Routes>
     </main>
   );
