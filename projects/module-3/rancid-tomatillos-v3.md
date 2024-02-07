@@ -210,7 +210,7 @@ Decide as a team what to focus on and complete the Week 2 Deliverables (found be
 
 <section class="call-to-action">
 ### WEEK 2 DELIVERABLES
-On Friday of Week 2, send a specific outline of features/work/goals to your instructors in the group DM. Please include user stories, too. Do not begin work until you get the go-ahead from an instructor. (We may help you make your goal more specific or achievable.)
+On Thursday of Week 2, send a specific outline of features/work/goals to your instructors in the group DM. Please include user stories, too. Do not begin work until you get the go-ahead from an instructor. (We may help you make your goal more specific or achievable.)
 
 Here are some ideas:
 * **Extremely thoroughly Refactoring:**
