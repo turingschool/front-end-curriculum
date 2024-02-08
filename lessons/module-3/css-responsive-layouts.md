@@ -27,7 +27,7 @@ In this session, we'll be diving into responsive page layouts and using media qu
 <section class="call-to-action">
 ## Exploration: Page Layouts
 
-*Page Layout* refers to the arrangement and sizing of visual elements on a web page. You and a partner will explore the four primary page layout types [blog post](https://magnusbenoni.com/different-layouts-css/){:target='blank'}.
+*Page Layout* refers to the arrangement and sizing of visual elements on a web page. You and a partner will explore the four primary page layout types [blog post](https://magnusbenoni.com/different-layouts-css/){:target='blank'}. Note: The link labeled "liquidapsive.com" in the blog post is no longer functional, but it can be found [here](https://web.archive.org/web/20180323103234/https://www.liquidapsive.com/){:target='blank'}.
 
 * What characteristics are shared between layouts?  What is different?
 </section>
