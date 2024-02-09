@@ -227,7 +227,7 @@ Later this week, you can share your app progress with the class for Show and Tel
 </section>
 
 ## Demo Comp
-One of the Stretch Tech projects will be entered into Demo Comp next inning! Demo Comp is an event that happens on Tuesday of week 1 where the top projects at Turing are presented by students in front of Turing students, staff, and real world devs. It's an amazing opportunity to get your name out there and build your network. It's a big honor and we're excited to choose one of your groups to go represent your cohort!  
+One of the Stretch Tech projects may be entered into Demo Comp next inning! Demo Comp is an event that happens in week 2 where the top projects at Turing are presented by students in front of Turing students, staff, and real world devs. It's an amazing opportunity to get your name out there and build your network. It's a big honor and we're excited to choose one of your groups to go represent your cohort!  
 
 Your instructors will choose our Demo Comp project by looking for the following things:
 * A polished application that is intuitive and professional
