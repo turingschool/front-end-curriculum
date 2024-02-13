@@ -34,7 +34,7 @@ Every work day, your group should do a check-in as a whole group, preferably liv
 - What is each person working on today?
 - Are there any blockers, and what is your plan to get through the blockers?
 
-Your daily check-in schedule (sometimes called “stand-ups”) should be outline in your DTR so the whole group is aware of the meeting.
+Your daily check-in schedule (sometimes called “stand-ups”) should be outlined in your DTR so the whole group is aware of the meeting.
 
 ## Retrospective
 
@@ -149,7 +149,7 @@ Once your usability test is complete, incorporate any useful and interesting fee
 
 - You must be able to tab through your app and use it without a mouse
 - Your app must still be usable when tested with a colorblind extension
-- You must score as close to 100% as possible with the “Lighthouse Accessibility Audit”. Be prepared to explain any accessibility audits your application is failing.
+- You must score as close to 100% as possible with the “Lighthouse" and "WAVE" accessibility audits. *Make sure that these audits pass on all pages and views.*  Be prepared to explain any accessibility audits your application is failing.
 - Your HTML must be written semantically and should use ARIA tags (*ONLY if needed / appropriate*)
 
 ---
@@ -163,6 +163,10 @@ Once your usability test is complete, incorporate any useful and interesting fee
   * Overview of project and goals
   * Overview of technologies used, challenges, wins, and any other reflections
   * Screenshots/gifs of your app
+  * **Part 2 Specific**
+    * *How the new feature was handled*
+    * *What was done to address accessibility*
+    * *How usability testing was implemented*
   * List of contributors
 * **Team collaborates effectively to accomplish the shared goal.  Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
   * Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.

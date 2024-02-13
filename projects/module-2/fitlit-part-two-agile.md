@@ -33,7 +33,7 @@ Every work day, your group should do a check-in as a whole group, preferably liv
 - What is each person working on today?
 - Are there any blockers, and what is your plan to get through the blockers?
 
-Your daily check-in schedule (sometimes called “stand-ups”) should be outline in your DTR so the whole group is aware of the meeting.
+Your daily check-in schedule (sometimes called “stand-ups”) should be outlined in your DTR so the whole group is aware of the meeting.
 
 ## Retrospective
 
@@ -51,19 +51,19 @@ When you’ve finished your retro, DM your project manager two things from your 
 
 
 <section class="answer">
-### Iteration 6 - Applying Instructor Feedback from Part 1
+### Iteration 5 - Applying Instructor Feedback from Part 1
 
 - Implement instructor feedback from Part 1. Be sure to ask your instructor about any clarifying questions you have about feedback.
 - Consider any additional refactoring opportunities. For example, identify redundant code in your functions and opportunities for DRYing them up.
 
 ### Catching Up on Functionality
 
-You must complete all of the remaining user stories from the [FitLit Part 1 Spec](https://frontend.turing.edu/projects/module-2/fitlit-part-one-agile.html). If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part 1 requirements you must also ***implement your instructor’s feedback*** and add ***“Iteration 7” and “Iteration 8”***.
+You must complete all of the remaining user stories from the [FitLit Part 1 Spec](https://frontend.turing.edu/projects/module-2/fitlit-part-one-agile.html). If you did not finish parts of the original requirements, this is your chance to revisit and finish all of the functionality. In addition to the Part 1 requirements you must also ***implement your instructor’s feedback*** and add ***“Iteration 6” and “Iteration 7”***.
 </section>
 
 
 <section class="answer">
-### Iteration 7 - POST
+### Iteration 6 - POST
 
 **Choose one:** A user should be able to add new sleep, new hydration, **OR** new activity data from the dashboard.
 
@@ -117,7 +117,7 @@ Make proper error handling for your users to ensure they GET data and submit the
 
 </section>
 
-## Iteration 8 - Differentiation Tracks
+## Iteration 7 - Differentiation Tracks
 
 Instructors will assign each team **one** of these tracks to work through.
   
@@ -218,8 +218,27 @@ Once your usability test is complete, incorporate any useful and interesting fee
 
 - You must be able to tab through your app and use it without a mouse
 - Your app must still be usable when tested with a colorblind extension
-- You must score as close to 100% as possible with the “Lighthouse Accessibility Audit”. Be prepared to explain any accessibility audits your application is failing.
+- You must score as close to 100% as possible with the “Lighthouse" and "WAVE" accessibility audits. *Make sure that these audits pass on all pages and views.*  Be prepared to explain any accessibility audits your application is failing.
 - Your HTML must be written semantically and should use ARIA tags (_ONLY if needed / appropriate_)
+
+---
+
+### Minimum Collaboration and Professionalism Expectations
+* Team holds daily standups throughout project.
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
+* A project board is utilized (and updated throughout the project) with Github issues and labels.
+* Team uses branches, PRs and thorough code reviews to add new code to the main branch.
+* The README is formatted well and at a minimum contains:
+  * Overview of project and goals
+  * Overview of technologies used, challenges, wins, and any other reflections
+  * Screenshots/gifs of your app
+  * **Part 2 Specific**
+    * *How the new feature was handled*
+    * *What was done to address accessibility*
+    * *How usability testing was implemented*
+  * List of contributors
+* **Team collaborates effectively to accomplish the shared goal.  Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project.**  
+  * Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.
 
 ---
 
