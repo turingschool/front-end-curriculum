@@ -210,63 +210,10 @@ In the subsequent lines of code, we call `calculateTaxes()` twice, once with a t
 
 Using closures in this way allows us to create reusable functions for calculating taxes at different rates, without having to repeat the same logic for each rate. It also allows us to easily calculate taxes for different incomes without having to pass the `taxRate` parameter every time we call the function.
 
-<section class="call-to-action">
-### Practice
+<section class="note">
+### Other Examples of Higher Order Functions
 
-Consider the following code:
-```js
-function counter() {
-  let count = 0;
-
-  function increment() {
-    count++;
-    console.log(count);
-  }
-
-  increment();
-  increment();
-  increment();
-}
-
-counter(); // Output: 1 2 3
-```
-
-We're using a closure here, which is great! However, when we run our counter function, it only counts to three everytime. Update this function to return a function that allows us to create many counters that keep track of their count separately. 
-
-<section class="answer">
-### Potential Solution
-
-```js
-function createCounter() {
-  let count = 0;
-
-  function increment() {
-    count++;
-    console.log(count);
-  }
-
-  return increment;
-}
-
-const counter = createCounter();
-
-counter(); // Output: 1
-counter(); // Output: 2
-counter(); // Output: 3
-
-const counter2 = createCounter();
-
-counter2(); // Output: 1
-```
-</section>
-***Extra Spicy:*** Include the private methods `incrementCounter`, `decrementCounter` and `getCounterValue` within the closure.
-
-</section>
-
-<section class="call-to-action">
-### On your own
-
-Make a function that creates a random number generator, and stores the values of the minimum random numbers and maximum random numbers generated between invokations. 
+Note that higher order functions often can also take one or more functions as arguments.  Examples of this include `map`, `forEach`, `filter`, and `reduce`.  It's not necessary to know how to build these methods from the ground up, but just know that these are examples of higher order functions.
 </section>
 
 ## Conclusion
