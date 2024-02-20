@@ -278,7 +278,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 <section class="answer">
 ### Accessibility
 
-- The Lighthouse audit tool was used to test and improve accessibility.
+- The Lighthouse and WAVE audit tools were used to test and improve accessibility.
 - Application uses semantic HTML.
 - Users can have a seamless experience using only a keyboard to navigate the application (no mouse).
 - Users who have color-blindness can utilize this application without issue.
