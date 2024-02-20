@@ -93,7 +93,7 @@ A form element has a role of 'form' by default. We can override that role using 
 ```
 
 <section class="call-to-action">
-## In Groups
+### In Groups
 - Use the [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance){:target='blank'} and look up the following elements and their implicit roles
   - `<div>`
   - `<form>`
@@ -152,17 +152,27 @@ States can also be implicit, imagine a checkbox element in html. If you toggle t
 
 
 <section class="call-to-action">
-## Individual Exploration
+### Individual Exploration
 <!-- Goal is just for them to experience using a screen reader and explore using the keyboard rather than mouse. Approximately 7 minutes.-->
-- Open the CodePen example found in [this site](https://www.w3.org/TR/2021/NOTE-wai-aria-practices-1.2-20211129/examples/menubar/menubar-navigation.html){:target='blank'}.  Explore that CodePen with your Mac's VoiceOver utility or Chrome's [Screen Reader Plugin](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en){:target='blank'} to see how screen readers interact with `aria-expanded`.  
+- Open this [CodePen example](https://codepen.io/kaylaewood/pen/dyrLqWZ){:target='blank'} and explore it with your Mac's VoiceOver utility or Chrome's [Screen Reader Plugin](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en){:target='blank'} to see how screen readers interact with `aria-expanded`.  
 - Play in the CodePen with your mouse.  Then just using your keyboard.  
 - Go to other sites that you commonly visit - explore them as you normally would but with the VoiceOver on.
 - If you have time, checkout where the site outlines details about the accessibility features implemented in that CodePen example.  
-## In Groups
+
+### In Groups
 <!-- Approximately 5-7 mins -->
 - Discuss the experience of using a screen reading technology
 - Take turns explaining what states are.
 - What would be another example of state that your app might need?
+</section>
+
+<section class="note">
+### Reminder - VoiceOver Commands:
+
+* **Starting/Stopping VoiceOver:** command + F5 (if you do not have an F5 key, you can navigate to  > System Preferences > Accessibility > VoiceOver > Enable VoiceOver)
+* **Moving your VoiceOver cursor:** control + option + arrow key (ie. control + option + right arrow)
+* **Moving your VoiceOver cursor into your web page’s content:** control + option + shift + down arrow
+* **Moving your VoiceOver cursor out of your web page’s content:** control + option + shift + up arrow
 </section>
 
 ## Properties
@@ -215,7 +225,7 @@ You can then use JavaScript to keep this information up to date - for example, o
 
 <section class="call-to-action">
 ## In Groups
--  Spend the first 2-3 minutes on mute, individually comparing [this Codepen](https://codepen.io/damwhit/pen/WZqyEe){:target='blank'} and with [this Codepen](https://codepen.io/damwhit/pen/XeLVbw){:target='blank'} while using your screenreader. What changes to do you notice?  
+-  Spend the first 2-3 minutes on mute, individually comparing [this Codepen](https://codepen.io/damwhit/pen/WZqyEe){:target='blank'} with [this Codepen](https://codepen.io/damwhit/pen/XeLVbw){:target='blank'} while using your screenreader. What changes to do you notice?  
 - Then discuss as a group.
   - Take turns explaining what a property is
   - Come up with a good analogy for property
