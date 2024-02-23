@@ -20,9 +20,10 @@ By the time this project is submitted for evaluation, it must:
 
 1. Meet the specs listed below under "MVP"
 1. Use at least one external API
-1. Implement one of the "Stretch Technologies" listed below.
+1. Implement one of the "Stretch Technologies" listed below
+1. Implement robust Cypress testing (If you're not using React, talk to your PM about testing requirements!)
 1. Be deployed
-1. Be a featured project on your resume (Your resume must meet all requirements listed in [this document](https://careerdev.turing.edu/resources/resume_resources).)
+1. Be a featured project on your resume (Your resume must meet all requirements listed in [this document](https://careerdev.turing.edu/resources/resume_resources))
 
 ## MVP
 
