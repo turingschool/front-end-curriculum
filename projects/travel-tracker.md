@@ -23,7 +23,7 @@ Dates and deadlines to be aware of:
 Day One Deliverable:
 Please submit your project [here](https://docs.google.com/forms/d/e/1FAIpQLScsgrJD22g9WnUj7-3gXMHFSPqkk9rTt86kbRTEDGfGCIMLVA/viewform?usp=sf_link){:target='blank'}
 
-Tuesday, Week 6 - Project due at 12PM Mountain Time.
+Tuesday, Week 6 - Project due at 9PM Mountain Time.
 
 # Requirements
 
@@ -32,6 +32,7 @@ You will want to submit PRs to your accountabilibuddy to:
 
 * You must give your accountabilibuddy collaboration access to your repo.
 * You must submit *at least* 2 PRs to your accountabilibuddy for review.
+* You must wait for your accountabilibuddy to review your PRs, and allow THEM to merge any PRs you submit.
 
 It is up to you to decide what changes warrant a PR – remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you’re struggling with or have questions about or need help with. As an accountabilibuddy, you are responsible for reviewing at least 2 PRs from your partner.
 
@@ -105,8 +106,8 @@ Don't get too caught up with polishing your dashboard too early. You'll want to 
 
 * You must be able to tab through your app and use it without a mouse 
 * Your app must still be usable when tested with a colorblind extension
-* You must score as close to 100% as possible with the “Lighthouse Accessibility Audit”. Be prepared to explain any accessibility audits your application is failing.
-* Your HTML must be written semantically and should use ARIA tags (ONLY if needed / appropriate)
+* You must score as close to 100% as possible with the Lighthouse and WAVE accessibility audits. Be prepared to explain any accessibility audits your application is failing.
+* Your HTML must be written semantically and should use ARIA attributes for any UI elements that are not understood by the screen reader (ONLY if needed / appropriate)
 
 ### 4. Login
 
@@ -175,13 +176,6 @@ Instead, for your tests, you should create small, sample datasets that match the
 - DOM manipulation / DOM manipulating functions (like `document.querySelector(...)`)
 - Fetch calls
 
-## Accessibility
-
-Strive for an accessibility audit score of 100% for the dashboard.
-
-A user should be able to interact with all functionality of your application by tabbing through it, no use of the trackpad.
-
-ARIA attributes should be utilized for any UI elements that are not understood by the screen reader
 
 ## Additional Extensions
 - The user dashboard should display a countdown to my next trip (if I have any)
@@ -237,7 +231,7 @@ While M2 rubrics do not have a separate section for WOWs like in M1, there are a
 * The application can stand on its own to be used by an instructor without guidance from the developer
 * UI/UX is intuitive and easy to read/use
 * Helpful messaging is displayed to prevent user confusion. For example: If a user searches for a room, but none are available then a message is displayed to indicate that the search worked, nothing is broken, there just aren't any matching rooms available.
-* The Lighthouse audit tool was used to improve accessibility.
+* The Lighthouse and WAVE audit tools were used to improve accessibility.
 * Users who only use keyboards can still navigate this application
 * Users who use a screen reader can still navigate this application
 * Utilizes ARIA attributes on interactive elements when no other tool allows for accessible content
