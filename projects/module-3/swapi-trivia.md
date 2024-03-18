@@ -67,7 +67,7 @@ Please DM your instructors the following by the end of the first day:
 
 ### Iteration 1: Landing Page
 
-- When the app starts up on the root route, `/`, the user should be introduced to a welcome form asking for the user's name, favorite quote from the Star Wars films, and must select a ranking on how familiar they are with the Star Wars universe.  You can list the options however you'd like, but there should be atleast three categories for  `novice`, `intermediate`, & `expert`.
+- When the app starts up on the root route, `/`, the user should be introduced to a welcome form asking for the user's name, favorite quote from the Star Wars films, and must select a ranking on how familiar they are with the Star Wars universe.  You can list the options however you'd like, but there should be at least three categories for  `novice`, `intermediate`, & `expert`.
 - An error message should appear if one of the inputs has not been filled out.
 - All inputs must be filled in order for the user to sign in.
 

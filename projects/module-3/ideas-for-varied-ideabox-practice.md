@@ -37,7 +37,7 @@ Building the same application over and over isn't very valuable.  Using varied c
 - A pokemon catalog
 - Baby Name list
 - A compliment generator
-- A thesarus app
+- A thesaurus app
 - Anything else you might think of!
 
 ## APIs that allow you to POST

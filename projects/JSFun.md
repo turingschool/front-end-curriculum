@@ -24,7 +24,7 @@ Watch this [how-to video](https://vimeo.com/691112332/2a9ef1221c) to get up and 
 
 The prototypes folder holds the practice exercises you will be using.
 - prototypes/datasets holds the datasets that correspond with each practice exercise
-- protypes/index.js is where you will find the prompts for each exercise and where you will write your implementation code
+- prototypes/index.js is where you will find the prompts for each exercise and where you will write your implementation code
 - The test folder holds the corresponding tests for each exercise.  You can unskip the corresponding tests as you go.  Note that, unlike mythicals, these tests are not particularly helpful in telling you what you are trying to do. They are simply there to allow you to confirm that you have successfully solved the prompt.
 
 

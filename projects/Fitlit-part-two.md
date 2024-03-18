@@ -177,7 +177,7 @@ You are *not expected* to test:
 ---
 
 ### Extensions
-* If you didn't get a chance to experiment with an NPM package in [Part One](https://frontend.turing.edu/projects/whats-cookin-part-one.html), try one out here! Remember to revist the list of approved NPM packages, or run a new one by your **project manager first.**
+* If you didn't get a chance to experiment with an NPM package in [Part One](https://frontend.turing.edu/projects/whats-cookin-part-one.html), try one out here! Remember to revisit the list of approved NPM packages, or run a new one by your **project manager first.**
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
 * Create a video of your team navigating through your app via a keyboard and screen reader.
 * Implement an animation using CSS and/or make your application responsive on smaller screen sizes.

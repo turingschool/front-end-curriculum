@@ -76,7 +76,7 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 
 You must complete all of the User Stories outlined in the [What's Cookin Spec](https://frontend.turing.edu/projects/whats-cookin.html){:target='blank'} that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished.
 
-**NOTE: You must complete through interation 4**
+**NOTE: You must complete through iteration 4**
 
 ### Fetch
 
@@ -169,7 +169,7 @@ Your app should be **fully responsive** from mobile devices - tablets - laptops
 ### Accessibility
 
 * You must be able to tab through your app and use it without a mouse
-* Your app must still be usuable when tested with a colorblind extension
+* Your app must still be usable when tested with a colorblind extension
 * You must score as close to 100% as possible with the "Lighthouse Accessibility Audit". Be prepared to explain any accessibility audits your application is failing.
 * Your HTML must be written semantically and ARIA tags should be used (*ONLY if needed / appropriate*)
 
@@ -204,7 +204,7 @@ In addition to your refactoring, you also want to make sure the application is f
 
 # Project Requirements Rubric
 
-## Functional Expectiations
+## Functional Expectations
 * 4: Application fulfills all requirements *as well as* an extension.
 * 3: Application fulfills all requirements.
 * 2: Application is usable but has some missing functionality.

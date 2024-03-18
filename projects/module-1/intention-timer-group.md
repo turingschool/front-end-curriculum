@@ -204,14 +204,14 @@ To earn a given score, an application must meet the requirements listed in that 
 ### HTML && CSS - Style and Implementation
 * **4:**
   - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, let assigned instructor know which naming convention will be used._
-  - Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected. To get this extension to work with local files, follow these steps:
+  - Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using the Chrome Extension [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected. To get this extension to work with local files, follow these steps:
     - Install
     - Right click the WAVE extension
     - Click "Manage Extensions"
     - Flip the "Allow access to file URLs" switch
     - Success!
 * **3:**
-  - Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly.
+  - Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kebab-case, ids should be used sparingly.
   - CSS is DRY, utilizing existing classes/rules to cut down on repetitive styles. There is evidence of reused styles in the application.
 * **2:**
   - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). Semantic elements like `<button>`, `<li>`, etc. are used instead of `<div>`. If `<div>` elements are used, they are only for styling purposes.

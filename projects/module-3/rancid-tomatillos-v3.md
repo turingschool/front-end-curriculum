@@ -214,7 +214,7 @@ On Thursday of Week 2, send a specific outline of features/work/goals to your in
 
 Here are some ideas:
 * **Extremely thoroughly Refactoring:**
-  - Carefully compare your work to the rubric and refactor to ensure the work you're submitting is an excellent, thorough demonstration of your skill and compentency in React, Router and Cypress.  If you choose this option, be prepared to specific refactoring you did. 
+  - Carefully compare your work to the rubric and refactor to ensure the work you're submitting is an excellent, thorough demonstration of your skill and competency in React, Router and Cypress.  If you choose this option, be prepared to specific refactoring you did. 
 * **Responsive Design:**
   - Ensure your application is fully responsive across small, medium and large breakpoints
 * **More React and/or Router practice:**

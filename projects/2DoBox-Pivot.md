@@ -143,7 +143,7 @@ The application should allow users to filter the TODO list based off of importan
 The application is able to count the number of characters inside of the input field in real time.
 
 * As the user types the character count should increment up.
-* If the user delets characters the character count should decrease.
+* If the user deletes characters the character count should decrease.
 
 ### Submit button disabled
 
@@ -167,7 +167,7 @@ Your webpack setup will help you install Sass - a CSS preprocessor - but to comp
 * CSS for the project should be structured matching the new Sass style.
   * Re-read [this intermission assignment](http://thesassway.com/beginner/how-to-structure-a-sass-project) for an idea of how to set up a structure for Sass
 
-* CSS code should be exceptionally DRY (Do Not Repeat Yourself) - meaning that there is _no_ repetion of CSS that could be broken reasonably into variables and mixins.
+* CSS code should be exceptionally DRY (Do Not Repeat Yourself) - meaning that there is _no_ repetition of CSS that could be broken reasonably into variables and mixins.
   * Read through this [lesson](http://frontend.turing.edu/lessons/introduction-to-sass.html) for an idea of what Sass can do
 
 * Atleast one advanced feature of Sass should be used to enhance the project.

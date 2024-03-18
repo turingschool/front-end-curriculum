@@ -11,7 +11,7 @@ There is a website out there called [Coolors](https://coolors.co/495867-577399-b
 
 Your job is to recreate some of this site's functionality with your own backend and database. A user should be able to come to your site, generate a color palette, save it for their own future projects, edit/update their saved color palettes, and delete their palettes.
 
-Palette Picker will be built in two separate respositories:
+Palette Picker will be built in two separate repositories:
 - A back-end repository for your database and server
 - A front-end repository for your user-facing application that will consume the BE API
 
@@ -198,7 +198,7 @@ In order to ensure you're on pace for finishing the project successfully and on-
 
 **Weekend:** You complete server-side testing. Your wireframings for your front-end application are completed and you have begun coding it out. Review the project spec to see complete FE functionality requirements and expectations.
 
-**EOD Monday:** You have begun tesing your FE application.
+**EOD Monday:** You have begun testing your FE application.
 
 **EOD Tuesday:** Your FE application is mostly functional and you have completed most testing.
 

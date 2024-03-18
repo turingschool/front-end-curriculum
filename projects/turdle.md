@@ -85,7 +85,7 @@ You've probably noticed quite a few for loops in this code. Ugh, that is SO last
 
 <section class="answer">
 ### Iteration 5 - POST Game Stats (🌶 spicy!)
-Now let's impletment a POST so that the game stats persist even when the application is closed or refreshed. Update the codebase so that you are POSTing the game stats and then GETting the stats from the server. You should be able to refresh the app and see the stats persist. [You'll use the same backend repo as iteration 2.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.  
+Now let's implement a POST so that the game stats persist even when the application is closed or refreshed. Update the codebase so that you are POSTing the game stats and then GETting the stats from the server. You should be able to refresh the app and see the stats persist. [You'll use the same backend repo as iteration 2.](https://github.com/turingschool-examples/turdle-api){:target='blank'} Follow the instructions closely in the README.  
 
 #### 💡 Helpful Tip
 

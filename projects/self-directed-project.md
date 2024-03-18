@@ -40,7 +40,7 @@ A good project idea should:
 ### Redux Architecture
 
 * 4: Appropriate components are wrapped in connected Redux container components. The Redux store contains all necessary application data and nothing more. All state changes are handled through Redux actions and reducers. Developer uses middleware. Actions and reducers are clean. At least one container is reused.
-* 3: All state changes are handled by Redux with exeception to Controlled Forms. Actions and Reducers are simple. Containers don't hold unnecessary data.
+* 3: All state changes are handled by Redux with exception to Controlled Forms. Actions and Reducers are simple. Containers don't hold unnecessary data.
 * 2: Application state is mostly outside the control of Redux. Application did not make use of Redux actions and reducers to mutate state. Components do not demonstrate a clear understanding of stateful vs. statelessness.
 * 1: Application does not make use of Redux to manage state. There are little or no connected components.
 

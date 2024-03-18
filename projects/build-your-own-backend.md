@@ -180,14 +180,14 @@ Project should be submitted via this [link](https://forms.gle/M8YEKa5KPKbH4Hgi6)
 * **4** - The application persists data in a SQL database with correct relationships clearly defined
 * **3** - The application persists data in a SQL database but with some incorrect relationships bet
 * **2** - The application persist data in a SQL database in most scenarios. There may be instances/bugs where data does not persist or is not updated appropriately.
-* **1** - The application does not persist data in a SQL datanse
+* **1** - The application does not persist data in a SQL database
 
 ### Documentation and Annotations
 
 * **4** - README provides in-depth documentation for what API endpoints are available, the parameters used (if any), as well as sample responses. Developer has a separate, dedicated git branch with detailed annotations (line-by-line) of what is happening in the server file.
 * **3** - README provides documentation for what API endpoints are available, the parameters used (if any), as well as sample responses. Developer has a separate, dedicated git branch with annotations for the server file
 * **2** - README provides documentation for what API endpoints are available. Formatting makes the README hard to read. Annotations in the server file are sparse.
-* **1** - There is no documenation and/or annotations on the server file
+* **1** - There is no documentation and/or annotations on the server file
 
 ### Workflow
 

@@ -46,7 +46,7 @@ Both Fitlit and What's Cookin' will give you practice with Sass, Fetch, Web Acce
 
 **Note: There are two different versions of each project. You will be assigned the A or B version.**
 
-Once you have choosen either Fitlit or Whats' Cookin' and have been assigned a verion. You can get started with your starter repo below:
+Once you have chosen either Fitlit or Whats' Cookin' and have been assigned a version. You can get started with your starter repo below:
 - [Fitlit A](https://github.com/turingschool-examples/refactor-tractor-fitlit-a)
 - [Fitlit B](https://github.com/turingschool-examples/refactor-tractor-fitlit-b)
 - [WC A](https://github.com/turingschool-examples/refactor-tractor-whats-cookin-a)

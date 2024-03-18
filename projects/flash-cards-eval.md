@@ -47,7 +47,7 @@ While reviewing the code, ask yourself the following questions:
 - Does the code work? Does it perform its intended function, the logic is correct etc.
 - Play through the app as is. Are there any bugs/crashes? When do these occur? What might this point to?
 
-*Fundamental JavaScipt & Style*
+*Fundamental JavaScript & Style*
 - Is all the code easily understood?
 - Does it conform to [Turing's Style Guide](https://github.com/turingschool-examples/javascript)? These will usually cover location of braces, variable and function names, line length, indentations, formatting, and comments. How many errors or warning show when the linter is run?  
 - Is there any redundant or duplicate code?

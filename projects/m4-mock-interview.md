@@ -47,4 +47,4 @@ Student can accurately answer technical questions through conversation, coding, 
 
 ### Technical Detail
 
-Student is specific and detailed when responding to questions. The student gives approproate examples to support their responses. When students contribute their opinion (both positive and negative), they demonstrate they can think critically and understand different perspectives on a topic.
+Student is specific and detailed when responding to questions. The student gives appropriate examples to support their responses. When students contribute their opinion (both positive and negative), they demonstrate they can think critically and understand different perspectives on a topic.

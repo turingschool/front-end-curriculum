@@ -187,7 +187,7 @@ As mentioned above, functionality does have more weight in this final project in
 💫ON TRACK💫 can look like:
 - Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 - No nested if/else statements or for loops.
-- Functions are DRY and adhere to the Single Responsibility Prinicple (SRP)
+- Functions are DRY and adhere to the Single Responsibility Principle (SRP)
 - Global variables are thoughtfully created, with a clear understanding demonstrated as to what needs to be global and what can be local
 - The application correctly implements a data model for the `player` and `game` objects, including all required methods. The data model is kept up to date.
 
@@ -203,12 +203,12 @@ As mentioned above, functionality does have more weight in this final project in
 
 💫ON TRACK💫 can look like:
 - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
-- Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions. _Example: classes should be named using kabab-case, ids should be used sparingly_
+- Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. _Example: classes should be named using kebab-case, ids should be used sparingly_
 - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). If `<div>` or `<span>` elements are used, they are only for styling purposes.
 
 ✨WOW✨ can look like:
 - Developers use [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes. _Note: If going this route, document it in your README and let your project manager know which naming convention will be used._
-- Application fully implements HTML that is accessible for individuals with visual disabilities. _Note: This will be checked using the Chrome Extenstion [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected._
+- Application fully implements HTML that is accessible for individuals with visual disabilities. _Note: This will be checked using the Chrome Extension [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) audit tool, and 0 errors & 0 contrast errors are expected._
 </section>
 
 <section class="answer">

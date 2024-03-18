@@ -61,7 +61,7 @@ Choose ONE TEAM MEMBER to do the following:
 3. Create an initial commit.
 4. On GitHub, create a new repository. Follow the written instructions on GitHub to add the repo's remote to your local project, and push your initial commit up to GitHub.
 5. Add all project partners to the repository as contributors. If your repository is set to private, add your project manager as a collaborator as well.  
-6. Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the necessary links. Below are instuctions for deploying to GH Pages:
+6. Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the necessary links. Below are instructions for deploying to GH Pages:
     - Repo Settings » Pages » Select the main branch as your Source branch » Save. Then, wait up to an hour, hit refresh, and your deployed link should appear at the top of the screen.
     - If you don't want to wait, your GH pages URL will follow this format: `https://username.github.io/coloRandom/` and replace `username` with the repo owner's GH username and `coloRandom` with your repo's name (if different). The URL will not work right away - that's ok! 
 
@@ -223,7 +223,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 💫ON TRACK💫 can look like:
 - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
 - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
-- Application utilizes consistant naming for HTML classes and IDs, and follows suggested conventions.
+- Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions.
 - Application uses an appropriate amount of [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure). If `<div>` elements are used, they are only for styling purposes.
 - Application utilizes organizational conventions for the whole CSS stylesheet. This may look like - grouping native elements, typography styles, layout styles, etc. together.
 - Application utilizes data attributes to store information in the HTML

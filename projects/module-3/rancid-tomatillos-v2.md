@@ -95,7 +95,7 @@ Don't forget to account for handling non-2xx-level responses from the server.
 
 ### Iteration 6 - Router 
 
-It's time to add in Router! So far the application has worked like a single page applicaiton. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes. We're going to be using [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) to conditionally render our views based on the URL's location. 
+It's time to add in Router! So far the application has worked like a single page application. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes. We're going to be using [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) to conditionally render our views based on the URL's location. 
 
 This iteration is all about refactoring. Use the table below to add in appropriate routes.
 
@@ -116,7 +116,7 @@ Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_q
 
 ## Part 2: New Features
 
-For the next part of the project, you'll continue working on the same codebase, but will be each tackling a separate feature! YOU ARE STILL PARTNERS, though! All the following iterations are required, but not all are expected to be completed individually. Again, you'll be contrubuting to the same codebase, so your workflow will be especially important here. 
+For the next part of the project, you'll continue working on the same codebase, but will be each tackling a separate feature! YOU ARE STILL PARTNERS, though! All the following iterations are required, but not all are expected to be completed individually. Again, you'll be contributing to the same codebase, so your workflow will be especially important here. 
 
 <section class="note">
 If you're not through iteration 6 yet, that's fine. We would like everyone to take at least the last 2 days of the project (Monday and Tuesday of Week 3) to work on the solo iterations. 
@@ -149,7 +149,7 @@ Users have been requesting the ability to comment on movies. The server is not c
 - **If they are logged in**, they should be able to fill out a form and add a comment to the movie. Comments should be sent to the server, and therefore persist across page reloads. 
 
 **Back End**:
-- Add a new POST route to your new server that creates a new comment and adds it to `app.locals`. Each comment needs to have _at least_ an `id`, `author` and `comment` property. If the request is unsucessful (ie the client sends a malformed request), send back an appropriate and helpful error (ex: if a request is made without an `author` property, send back a 422 level response with a message like "Unable to process request: missing `author` property"). 
+- Add a new POST route to your new server that creates a new comment and adds it to `app.locals`. Each comment needs to have _at least_ an `id`, `author` and `comment` property. If the request is unsuccessful (ie the client sends a malformed request), send back an appropriate and helpful error (ex: if a request is made without an `author` property, send back a 422 level response with a message like "Unable to process request: missing `author` property"). 
 
 - Add a new GET route to your new server that GETs all existing comments for a given movie.  
 
@@ -162,7 +162,7 @@ Users have been wanting to keep track of their favorite movies. The server is no
 
 - Update the movie show page view so that users can favorite or unfavorite a movie by clicking an icon.
 
-- Add a way to view only favorited movies from the homepage. When viewing favorites, the user should be taken to a new page (`/favorites`). If no movies are currently favorited, there should be some indication for the user to add favorites (dont just render an empty page!). 
+- Add a way to view only favorited movies from the homepage. When viewing favorites, the user should be taken to a new page (`/favorites`). If no movies are currently favorited, there should be some indication for the user to add favorites (don't just render an empty page!). 
 
 **Back End**
 - Add a new POST route to update a collection of favorited movies in `app.locals`. A valid POST request should _at least_ have an `id` property for the movie that's being favorited/unfavorited. If the request is unsuccessful (ie, if a malformed request is sent), send back a helpful response to the user. 
@@ -179,10 +179,10 @@ Users have been wanting to keep track of the movies they've already seen. The se
 
 - Update the movie show page view so that users can mark a movie watched or unwatched a movie by clicking an icon.
 
-- Add a way to view only already-watched movies from the homepage. When viewing watched movies, the user should be taken to a new page (`/watch-again`). If no movies have been marked as watched, there should be a message stating that the user hasn't marked any movies as watched (dont just render an empty page!). 
+- Add a way to view only already-watched movies from the homepage. When viewing watched movies, the user should be taken to a new page (`/watch-again`). If no movies have been marked as watched, there should be a message stating that the user hasn't marked any movies as watched (don't just render an empty page!). 
 
 **Back End**
-- Add a new POST route to update a collection of watched movies in `app.locals`. A valid POST request should _at least_ have an `id` property for the movie that's being marked watched/ununwatched. If the request is unsuccessful (ie, if a malformed request is sent), send back a helpful response to the user. 
+- Add a new POST route to update a collection of watched movies in `app.locals`. A valid POST request should _at least_ have an `id` property for the movie that's being marked watched/unwatched. If the request is unsuccessful (ie, if a malformed request is sent), send back a helpful response to the user. 
 
 - Add a new GET route to get all currently watched movies (these will be stored in app.locals).
 
