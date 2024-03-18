@@ -175,8 +175,7 @@ As you may have noticed, your `game` file has two functions fleshed out already:
 
 - Your `game` should meet these other requirements:
   - `start()`: the function that starts everything
-    * Creates `cards`
-    * Puts `cards` in a `deck`
+    * Passes `prototypeQuestions` into a `deck`
     * Creates a new `round` using the `deck`
     * Invokes `printMessage(deck)` to display the message in the CLI
     * Invokes `printQuestion(round)` to kick off our helper functions that allow interaction via the CLI
@@ -250,7 +249,6 @@ For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Y
 
 On track looks like:
 - Code is divided into logical components each with a clean, single responsibility
-- Array prototype methods are used to iterate instead of `for` loops
 - Variables and functions are consistently and appropriately named
 - Code leverages JavaScript's truthy/falsey principles
 - Demonstrates efforts towards making functions pure when possible. *Note: Purity is not possible for every function in a FE application. Strive for it only when it makes sense.*
