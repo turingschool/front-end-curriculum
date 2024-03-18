@@ -166,7 +166,7 @@ Let's take a look at the syntax and then we'll talk about what's happening.
 
 Here is [MDN's master list of DOM events][events-mdn]. Most of them are rare birds. Can you add additional events to the page?
 
-If that list overwhelms you, here is a artisinal, hand-crafted list:
+If that list overwhelms you, here is a artisanal, hand-crafted list:
 
 - `mouseenter`
 - `mouseleave`

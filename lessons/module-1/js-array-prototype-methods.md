@@ -145,7 +145,7 @@ In your new group of 3, make a presentation for your assigned array prototype! I
 - What does it return
 - _Optional (but helpful!): Syntax examples, use-case examples in a `repl.it`, analogies, etc._
 
-After all are complete, each group will do a short presentation on their assigned array prototype. Make sure you decide who is leading the presentaion, or split up sections between the three of you!
+After all are complete, each group will do a short presentation on their assigned array prototype. Make sure you decide who is leading the presentation, or split up sections between the three of you!
 
 If you aren't 100% of something you are about add to your presentation - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates. -->
 

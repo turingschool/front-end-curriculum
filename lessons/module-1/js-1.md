@@ -41,7 +41,7 @@ Way back in the early days of the web, Brendan Eich created JavaScript. Legend h
 
 ## What is JavaScript and Why?
 
-JavaScript was created to make the web more dynamic. It is an object-oriented scripting language made to run inside a host environment like a web browser and provide programatic control over the objects of that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
+JavaScript was created to make the web more dynamic. It is an object-oriented scripting language made to run inside a host environment like a web browser and provide programmatic control over the objects of that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
 
 JavaScript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces as well as handle the server-side extensions that connect with a database.
 
@@ -271,13 +271,13 @@ Expressions rely on operators to calculate their single value. There are 5 basic
 
 <section class="call-to-action">
   <h3>Your Turn</h3>
-  <p>Practice writing out atleast one of each using arithmetic, string, comparison, and logical operators with the person next to you.  Explain what each one is doing and how it is working.</p>
+  <p>Practice writing out at least one of each using arithmetic, string, comparison, and logical operators with the person next to you.  Explain what each one is doing and how it is working.</p>
 </section>
 
 
 ## Conditionals
 
-Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." In JavaScript, conditionals are written very similary and allow us to take a certain path in our program.
+Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." In JavaScript, conditionals are written very similarly and allow us to take a certain path in our program.
 
 To use conditionals, we first need to use expressions, operators, and statements.
 Let's head on over to [repl](https://repl.it) and practice writing them out there!

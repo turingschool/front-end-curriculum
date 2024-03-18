@@ -58,7 +58,7 @@ There is just one important difference between the two:
 </section>
 
 ## CSS Display Property
-The `display` property allows us to change the default value of block and inline level elements. Along with block and inline, we have a few other display values to choose from. Some common ones you will see are "none", "flex" and "grid." We'll learn aobut flex tomorrow!
+The `display` property allows us to change the default value of block and inline level elements. Along with block and inline, we have a few other display values to choose from. Some common ones you will see are "none", "flex" and "grid." We'll learn about flex tomorrow!
 
 ```
 display: inline-block;

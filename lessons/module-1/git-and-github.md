@@ -226,7 +226,7 @@ nothing to commit, working directory clean
 
 Now, our initial setup is complete. We have successfully hosted our site, at this point in time, on GitHub
 
-### Getting into our continous workflow
+### Getting into our continuous workflow
 
 #### The master branch
 

@@ -52,7 +52,7 @@ Read more about this important change [here](https://dev.to/afrodevgirl/replacin
 
 To make your local machine’s git default to branch main, you’ll first need to update to the latest version of git. [Follow these steps to do that](https://www.michaelcrump.net/step-by-step-how-to-update-git/).
 
-Then you have to tell git what the default branch should be. You can run this command in your teminal to do that:
+Then you have to tell git what the default branch should be. You can run this command in your terminal to do that:
 
 `git config --global init.defaultBranch main`
 </section>

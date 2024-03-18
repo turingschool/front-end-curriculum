@@ -28,7 +28,7 @@ Explore this [website](https://web.archive.org/web/20180408072040/http://bangupt
 
 ## Demo
 
-We'll be using [this Codepen](https://codepen.io/sertmer/pen/dyMzNEL) for our demo and excercise. Take a moment to open it up.
+We'll be using [this Codepen](https://codepen.io/sertmer/pen/dyMzNEL) for our demo and exercise. Take a moment to open it up.
 
 I want to change the color of the box on click, so that it turns green when I click it once, and back to blue when I click it again.
 - What would your pseudocode look like for this process?

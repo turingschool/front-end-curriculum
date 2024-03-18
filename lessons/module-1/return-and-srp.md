@@ -2,8 +2,8 @@
 
 ## Learning goals:
 * Understand what return statements do
-* Understand more about the Single Responsibilty Principal
-* Utilize return statements to keep functions singlely responsible
+* Understand more about the Single Responsibility Principal
+* Utilize return statements to keep functions singly responsible
 
 ### Return statements 
 Return statements are something we regularly see in functions. Without them, our functions are essentially a series of statements. 
@@ -37,7 +37,7 @@ function addEmUp(x, y) {
 var sum1 = addEmUp(2,3)
 console.log(sum1)
 ```
-This isn't the only functionality return statements provide for us. When the interpretter hits `return`, the execution of the current function ends.
+This isn't the only functionality return statements provide for us. When the interpreter hits `return`, the execution of the current function ends.
 
 ```js
 function letsCount() {
@@ -56,9 +56,9 @@ We can use this to our advantage when trying to stop the execution of a program 
 
 These examples may be familiar, but they become more important when considering how to make our functions adhere to the single responsibility principle. 
 
-### Single Responsibilty Principle
+### Single Responsibility Principle
 
-The single responsibility principle is the first principle of object oriented design. The term was coined by Robert C. Martin, a computer programmer and co-author of the Agile Manifesto. It states that 
+The single eesponsibility principle is the first principle of object oriented design. The term was coined by Robert C. Martin, a computer programmer and co-author of the Agile Manifesto. It states that 
 > "a class should have only one reason to change."
 
 In other words, each function should have responsibility over one part of a software's functionality, and that responsibilty should be contained by the function.

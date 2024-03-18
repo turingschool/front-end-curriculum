@@ -166,9 +166,9 @@ var foodItem = {
 var restaurant = {
   name: 'Butcher Block Cafe',
   menus: {
-    breakfast: ['Quiche', 'Egg and Sausage Sandwhich', 'Corn Beef Hash'],
+    breakfast: ['Quiche', 'Egg and Sausage Sandwich', 'Corn Beef Hash'],
     lunch: ['Ham and Swiss', 'Chicken Fried Steak', 'Cheeseburger'],
-    dinner: ['T Bone Steak', 'Spagetti and Meatballs']
+    dinner: ['T Bone Steak', 'Spaghetti and Meatballs']
   }
 }
 

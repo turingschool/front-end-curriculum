@@ -222,7 +222,7 @@ Let's break this down:
 - `span 2` tells this item to take up two columns of the row it was originally in
 - We can see that it `.box1` is now taking up it's original "space" as well as the space below it
 
-Similiarly, we see that `.box8` is taking up the left and middle "cells" of the bottom row.
+Similarly, we see that `.box8` is taking up the left and middle "cells" of the bottom row.
 
 ```css
 .box8 {
