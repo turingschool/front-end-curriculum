@@ -14,9 +14,9 @@ tags: prototype methods
 - `mutator methods` Modifies the original array.
 
 ## The Difference between Accessor vs Mutator Prototype Methods
-Last week, we spent a good amount of time focusing on "iterator" protoype methods.  Today we'll spend a bit of time gaining familiarity with a few other prototype methods you will commonly use.
+Last week, we spent a good amount of time focusing on "iterator" prototype methods.  Today we'll spend a bit of time gaining familiarity with a few other prototype methods you will commonly use.
 
-**Accessor methods** on arrays are used to retrieve information from the array without modifying its content.  They typically will return a new value or respresentation of the array without modifying the original one.
+**Accessor methods** on arrays are used to retrieve information from the array without modifying its content.  They typically will return a new value or representation of the array without modifying the original one.
 
 On the other hand, **mutator methods** are used to alter the content of the array. They change the internal elements or perform some action that alters the array's data.
 

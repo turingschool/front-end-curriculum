@@ -153,7 +153,7 @@ With a partner, think about an arcade game such as Frogger, Galaga, Centipede, o
 
 - What properties and methods might our **parent class** have?
 - Come up with a **sub class** that could inherit from it and either add new behaviors or override existing ones.
-- Create a Repl and build out atleast one **parent class** and two **sub classes**!
+- Create a Repl and build out at least one **parent class** and two **sub classes**!
 </section>
 
 <section class="checks-for-understanding">

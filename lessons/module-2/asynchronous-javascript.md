@@ -84,7 +84,7 @@ Let's take a look at [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ){:
 * ***4:15-6:00*** (call stack with synchronous functions)
 * ***6:40*** (stack overflow example)
 * ***7:20-8:50*** (imagine if `fetch` were synchronous - we would have to wait for each request to complete before moving on)
-* ***10:23-11:46*** (asynchronous callbacks - `setTimeout`, what happens to the `setTimout` on the stack?)
+* ***10:23-11:46*** (asynchronous callbacks - `setTimeout`, what happens to the `setTimeout` on the stack?)
 * ***11:47-14:50*** (intro to the event loop)
 
 Please take notes and pay special attention to the vocab words at the top of this lesson as you watch

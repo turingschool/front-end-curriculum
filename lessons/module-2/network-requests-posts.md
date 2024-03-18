@@ -87,7 +87,7 @@ Working with a partner, follow the setup instructions to get the server running.
 
 What's all that weird stuff in the URL we're fetching?
 
-Fetch and XMLHttpRequest Objects take the url as one of their arguments. The URL itself can be thought of containing sub-arguments that give these request objects and methods more information. The entire anatomy of a URL can be broken down into a series of informative peices, but the ones we're focused on today are queries.
+Fetch and XMLHttpRequest Objects take the url as one of their arguments. The URL itself can be thought of containing sub-arguments that give these request objects and methods more information. The entire anatomy of a URL can be broken down into a series of informative pieces, but the ones we're focused on today are queries.
 
 Anything coming after the `?` in a url is part of a query. Queries can be broken down into categories and arguments. Each category / argument pair is separated by an `&`.
 
@@ -161,7 +161,7 @@ console.log("Wait for it...");
 
 ##### Further Reading:
 
-* [The Evolution of Asyncronous JavaScript](https://blog.risingstack.com/asynchronous-javascript/)
+* [The Evolution of Asynchronous JavaScript](https://blog.risingstack.com/asynchronous-javascript/)
 * [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 * [Postman](https://www.postman.com/downloads/) -- good tool for testing out APIs

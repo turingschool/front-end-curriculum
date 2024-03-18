@@ -90,7 +90,7 @@ Let's create our very own package that filters out words based on the number of 
 
 1. Create a directory in `node_modules` called `filter-words`.
 1. In the `filter-words` directory, create an `index.js` file.
-1. In the `index.js` file, add this code as a boilderplate:
+1. In the `index.js` file, add this code as a boilerplate:
 
 ```js
 function filterWords() {

@@ -61,7 +61,7 @@ The request is comprised of 2 parts. We have the `header` and we also have the `
 #### The Header
 
 The first part the client is going to send is going to be the request header. The header contains important information pertaining to the user and more importantly how the client is going to process the information given it.
-It will have information like the `user-agent`. This communicates to the server what kind of os / software the user is using to interact with the server. The headers also contain information like the `referer` which typically holds the address of the previous page and `cache-control` that signify how long the information is stored in memory for.
+It will have information like the `user-agent`. This communicates to the server what kind of os / software the user is using to interact with the server. The headers also contain information like the `referrer` which typically holds the address of the previous page and `cache-control` that signify how long the information is stored in memory for.
 
 #### The Body
 

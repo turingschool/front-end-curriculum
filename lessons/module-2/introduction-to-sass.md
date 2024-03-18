@@ -215,11 +215,11 @@ header nav a {
 Be aware that having _too_ much nesting can be a problem - resulting in hard to maintain CSS that is overly specific (remember specificity?). Try to avoid excessive levels of nesting unless absolutely necessary.
 </section>
 
-#### Nesting & Psuedo-Selectors
+#### Nesting & Pseudo-Selectors
 
-A common scenario, when nesting is a good option, is when dealing with psuedo selectors. This makes it very transparent which element's behavior is being targeted on a particular action.
+A common scenario, when nesting is a good option, is when dealing with pseudo selectors. This makes it very transparent which element's behavior is being targeted on a particular action.
 
-To target a parent element and apply a psuedo selector, use `&:psuedo-selector`, as in the following syntax:
+To target a parent element and apply a pseudo selector, use `&:pseudo-selector`, as in the following syntax:
 
 ```scss
 a {

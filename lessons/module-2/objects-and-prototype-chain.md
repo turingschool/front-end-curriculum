@@ -172,7 +172,7 @@ message.valueOf();
 
 Strange...this isn't a method we created on our `createInstructor` constructor method.  [valueOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf){:target='blank'} is actually an object prototype method!  Why do we have access to this method on a string as well? What is happening?!
 
-When the interpreter is attempting to access a property on an object, it will start by looking directly on that object. If that property is not found, the objects internal `[[prototype]]` property will point to the object to examine next. The interpreter will continue to travese the prototype chain to seek a resolution for the property... until the end of the prototype chain is reached (resulting in `null`). 
+When the interpreter is attempting to access a property on an object, it will start by looking directly on that object. If that property is not found, the objects internal `[[prototype]]` property will point to the object to examine next. The interpreter will continue to traverse the prototype chain to seek a resolution for the property... until the end of the prototype chain is reached (resulting in `null`). 
 
 *It is this linking between objects that makes it so that objects are not limited to using the methods that are formally defined directly on that object - they can also ask objects further up the chain for help.* 
 
@@ -184,7 +184,7 @@ When the interpreter is attempting to access a property on an object, it will st
 
 With your partner, save all the data types that you can think of to variables. Using the console, check the `[[prototype]]` link via the dunder-proto.
 
-- What similiarties do you notice across data types? What differences?
+- What similarities do you notice across data types? What differences?
 - Can we say "everything is an object" in JavaScript?
 </section>
 

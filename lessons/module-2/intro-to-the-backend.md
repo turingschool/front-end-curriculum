@@ -73,11 +73,11 @@ Let's start by reviewing what a server does. A server is waiting for requests to
 
 The first argument it takes is a *port number*. You can think of this like a
 communication channel. Your computer (and all network enabled computers) have
-many ports, which can be utilized for sending and recieving messages. In this
+many ports, which can be utilized for sending and receiving messages. In this
 case, we've decided to use the number 3000, which is totally an arbitrary choice.
 The port number must be an unsigned 16-bit number (between 0 and 65535).
 
-Finally, our second argument is a callback function.  In this case, the callback function will execute once our `app` successfully starts listening for incomming messages on port 3000. We're logging this message just to give an indication in our terminal that it is running successfully.
+Finally, our second argument is a callback function.  In this case, the callback function will execute once our `app` successfully starts listening for incoming messages on port 3000. We're logging this message just to give an indication in our terminal that it is running successfully.
 </section>
 
 <section class="call-to-action">

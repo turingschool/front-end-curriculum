@@ -65,7 +65,7 @@ What are var, let, and const similar? How are they different?
 
 ES6 gives us another way to write functions. They're called arrow functions because they have an arrow in them. Neat!
 
-Let's look at the synctactic differences first:
+Let's look at the syntactic differences first:
 
 Say we have an array of even numbers: `var evens = [0, 2, 4, 6, 8];`
 
@@ -122,7 +122,7 @@ Here are some features arrow functions give you:
   * only make use of this when a single expression is written
   * multiple lines or expressions in an arrow function require the curly braces and the keyword `return`
 * drop the parentheses around a single parameter
-  * if using multiple parameters or no paremeters, the parentheses must be used
+  * if using multiple parameters or no parameters, the parentheses must be used
 
 To name an arrow function, you must save it as a variable.
 
@@ -266,5 +266,5 @@ You can read more about destructuring and the things it can do [here](https://de
 
 * Babel (ES6 -> ES5)		  [https://babeljs.io/repl/](https://babeljs.io/repl/)
 * ES6 Features 		    	  [http://es6-features.org](http://es6-features.org)
-* Browser Compatability		[https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
+* Browser Compatibility		[https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
 * [Slides](https://docs.google.com/presentation/d/1HulXmc44bvbBEUgkd9A_78YEQudlXUKajMc1TlhSbLk/edit#slide=id.g11271f5cac0_0_137) showing the same function with varying ES5/ES6 syntax

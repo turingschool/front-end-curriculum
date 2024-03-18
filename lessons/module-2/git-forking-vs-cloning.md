@@ -85,7 +85,7 @@ Now that we know the difference between our local and remote repos, let's talk a
 
 ### Cloning
 
-Cloning a remote repositoy copies it to your machine as a local repository. When you clone a repo, the local repo it creates is automatically mapped to the remote (`origin`). Your local copy will have access to all of the branches that exist on that remote repository.
+Cloning a remote repository copies it to your machine as a local repository. When you clone a repo, the local repo it creates is automatically mapped to the remote (`origin`). Your local copy will have access to all of the branches that exist on that remote repository.
 
 If new remote branches have been created since you initially cloned down, or any of the remote branches have been updated, you can update all of those remote branches by running `git fetch`.
 

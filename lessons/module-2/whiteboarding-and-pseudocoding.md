@@ -38,7 +38,7 @@ Think about how you currently solve problems when you are programming. Has that 
 
 ## Whiteboarding
 
-In the context of building out programs, whiteboarding is a useful tool to ulitize in solving complex problems. If we rush into coding out the solution immediately, we completely skip over the `P`lanning part of the process... and its likely that we don't fully `U`nderstand the problem at hand.
+In the context of building out programs, whiteboarding is a useful tool to utilize in solving complex problems. If we rush into coding out the solution immediately, we completely skip over the `P`lanning part of the process... and its likely that we don't fully `U`nderstand the problem at hand.
 
 In the context of interviewing for a job, being able to whiteboard is important because it shows you can think through/discuss a problem without having to actually code it first - which can be a difficult skill to learn. 
 
@@ -79,7 +79,7 @@ else
 
 <!-- * Be talking as you write! Don't feel rude for looking away, it takes too long to look at the person and talk, then write, then talk, then write. Talk loud so they can hear you while you write on the board
 
-* Pay close attention to the amount of space you have! Don't start writing huge and in the dead center of the board, you'll run out of room. If you *do* start running out of room, don't worry about putting things in different places - the whiteboarded code doesnt have to read perfectly top-to-bottom, you can make use of horizontal space.
+* Pay close attention to the amount of space you have! Don't start writing huge and in the dead center of the board, you'll run out of room. If you *do* start running out of room, don't worry about putting things in different places - the whiteboarded code doesn't have to read perfectly top-to-bottom, you can make use of horizontal space.
 
 * DON'T WIPE THE WHITEBOARD WITH YOUR HAND WHEN YOU ERASE THINGS. Youll get marker on your hand, then you'll be nervous and sweating and you'll wipe a bead of sweat off your face with your marker hands and then you'll have marker on your forehead and you'll look like a total nerd and then you'll go to shake the interviewer's hand at the end of the interview and you'll get marker on them.
 
