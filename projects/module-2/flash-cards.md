@@ -187,7 +187,7 @@ As you may have noticed, your `game` file has two functions fleshed out already:
 ### Implementation Note
 The helper functions are all fleshed out and fit to work with functions that meet the requirements in the previous iterations.
 
-You'll notice it difficult to test the game's `start` function. If you invoke it in your test file, it hangs the test suite by starting the game while running the tests. Sometimes as front end developers, we run into pieces of code that aren't possible, or worth it, to test.  In this case, instead of testing `start`, consider trying to extract what you can out of `start` and into a separate function, and test those functions on their own.
+You'll notice it difficult to test the game's `start` function. If you invoke it in your test file, it hangs the test suite by starting the game while running the tests. Sometimes as front end developers, we run into pieces of code that aren't possible, or worth it, to test.  In this case, do not worry about testing the `start` function or anything inside of the `game` file.
 </section>
 
 ## Iteration 4:
