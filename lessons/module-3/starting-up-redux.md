@@ -263,7 +263,7 @@ Okay, cool - create two empty files
   touch src/reducers/filter-reducer.js
 ```
 
-Now think about the following psuedo-code:
+Now think about the following pseudo-code:
 
 ```
 I need a function that I can give an action and the state of all todos
@@ -465,11 +465,11 @@ Finally, I want to export my component.
 
 ```
 
-### You Do: Based on PsuedoCode, try to Implement
+### You Do: Based on PseudoCode, try to Implement
 
-Without peeking at the code below, take some time to try and create the component that was psuedocoded above.
+Without peeking at the code below, take some time to try and create the component that was pseudocoded above.
 
-Don't try to finish it, just try to parse the confusing psuedocode into a regular old React component.
+Don't try to finish it, just try to parse the confusing pseudocode into a regular old React component.
 
 ### I Do: Implementing
 
@@ -485,7 +485,7 @@ As previously mentioned, our stateful components need to be wrapped in a 'contai
 
 `touch src/containers/AddTodoFormContainer.js`  
 
-In psuedo-code, what we need to do is:
+In pseudo-code, what we need to do is:
 
 ```
 Import the 'connect' method from redux
