@@ -58,7 +58,7 @@ These examples may be familiar, but they become more important when considering 
 
 ### Single Responsibility Principle
 
-The single eesponsibility principle is the first principle of object oriented design. The term was coined by Robert C. Martin, a computer programmer and co-author of the Agile Manifesto. It states that 
+The single responsibility principle is the first principle of object oriented design. The term was coined by Robert C. Martin, a computer programmer and co-author of the Agile Manifesto. It states that 
 > "a class should have only one reason to change."
 
 In other words, each function should have responsibility over one part of a software's functionality, and that responsibilty should be contained by the function.

@@ -203,7 +203,7 @@ Array.prototype.myFilter = function(callback) {
 
 In pairs, you will be working through two problems. Be sure that you are actively switching between being the driver and the navigator role. 
 
-[Problem I](https://repl.it/@thatpamiam/Problem-I-Pseudo-coding)  
+[Problem I](https://repl.it/@thatpamiam/Problem-I-Psuedo-coding)  
 <!-- Possible solution:
 ```js
 function returnIndexValues(indices, list) {
@@ -213,7 +213,7 @@ function returnIndexValues(indices, list) {
   }, []);
 }
 ``` -->
-[Problem II](https://repl.it/@thatpamiam/Problem-II-Pseudo-coding)  
+[Problem II](https://repl.it/@thatpamiam/Problem-II-Psuedo-coding)  
 
 <!-- Possible solution:
 ```js

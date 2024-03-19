@@ -183,7 +183,7 @@ Checkout this [document](http://geon.github.io/programming/2016/03/03/dsxyliea) 
 
 #### Code Tip
 
-A lot of what you are going to do as web developer to help combat this is organizing your data in a way that is degreeable and engaging for the user. Some things we can do to help draw attention to our document:
+A lot of what you are going to do as web developer to help combat this is organizing your data in a way that is agreeable and engaging for the user. Some things we can do to help draw attention to our document:
 
 - Using proper headings, and lists
 - Using more white space in your design
