@@ -170,7 +170,7 @@ In short: modern CSS and browsers have evolved to be fairly speedy, and the key 
 
 ### Planning and Organizing Content
 
-We've discussed how our selectors are read, and how browsers have evolved to make the process of narrowing selectors speedy. We know that writing lean and organized CSS will help keep these processes efficient. Well-written CSS will also make it easier for us humans to understand and maintain. As is often the case in the programming world, there are different schools of thought around how to organize and structure code to achieve this optimized 'lean and organized' state. We'll be discussing how to think about structuring your content based on the process outlined in [Jonathan Snook's guide, Scaleable and Modular Architecture for CSS](https://smacss.com/).
+We've discussed how our selectors are read, and how browsers have evolved to make the process of narrowing selectors speedy. We know that writing lean and organized CSS will help keep these processes efficient. Well-written CSS will also make it easier for us humans to understand and maintain. As is often the case in the programming world, there are different schools of thought around how to organize and structure code to achieve this optimized 'lean and organized' state. We'll be discussing how to think about structuring your content based on the process outlined in [Jonathan Snook's guide, Scalable and Modular Architecture for CSS](https://smacss.com/).
 
 Jonathan proposes grouping your HTML elements in your styles using 5 primary categories. These categories help developers focus on organization of content, structure, and naming conventions. These 5 categories are _base_, _layout_, _module_, _state_, and _theme_.
 
@@ -269,4 +269,4 @@ By grouping our styles together by content (or layout) type, we reenforce that w
 
 [Writing efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
 
-[Jonathan Snook's guide, Scaleable and Modular Architecture for CSS](https://smacss.com/)
+[Jonathan Snook's guide, Scalable and Modular Architecture for CSS](https://smacss.com/)

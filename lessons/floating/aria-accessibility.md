@@ -23,7 +23,7 @@ ARIA is a set of tools we can add to our HTML to make our code more semantically
 
 Think about the information provided by a set of `<div></div>` tags. What do we know about the content within those tags? Really, we know nothing. It's a semantically void element that controls the APPEARANCE of its content - by default it is a `block` style element, but beyond that it could theoretically be literally any kind of data - a title, a paragraph, an image, a random red decorative sidebar...etc.
 
-ARIA provides a series of tools and approaches to enhancing the meaning of your code. Toay we will look at the three main aspects of ARIA - Roles, States, and Properties.
+ARIA provides a series of tools and approaches to enhancing the meaning of your code. Today we will look at the three main aspects of ARIA - Roles, States, and Properties.
 
 ## Plan Of Attack ##
 
@@ -60,7 +60,7 @@ Example:
 <div role="banner"></div>
 <span role="separator"> --------------- </span>
 
-<!-- The above markup might have a background image set by CSS that is acting as as Hero Image, or a "banner", followed by a thin line that separates sections of content. The elements themsleves don't provide this additional information, requiring us to include an explicit role as an attribute  -->
+<!-- The above markup might have a background image set by CSS that is acting as as Hero Image, or a "banner", followed by a thin line that separates sections of content. The elements themselves don't provide this additional information, requiring us to include an explicit role as an attribute  -->
 ```
 
 #### Roles: Avoiding Redundancy ####
@@ -154,7 +154,7 @@ For example, take the button we mentioned when discussing states. That button sp
 </nav>
 ```
 
-The `aria-controls` property has a value of the ID of the element it is attached to. So in this case, we would assume that there is another element with an id of `sidebar-menu` that is contolled by this button.
+The `aria-controls` property has a value of the ID of the element it is attached to. So in this case, we would assume that there is another element with an id of `sidebar-menu` that is controlled by this button.
 
 Open [this CodePen](https://codepen.io/damwhit/pen/WZqyEe) to play around with it.
 
@@ -207,7 +207,7 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 
 Watch the following video (roughly 30 min)
 
-[ARIA, Accesibility and Coding Like you Give A Damn](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
+[ARIA, Accessibility and Coding Like you Give A Damn](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
 
 ## Reflection ##
 
@@ -227,7 +227,7 @@ Answer the following questions:
   Properties - additional information about the element
 -->
 
-- Talk about the two different types of site navigation using a screen reader: Semantic Nagivation vs Landmark Navigation. How are they different? How are they the same? Why are these tools helpful for users on a screen reader?
+- Talk about the two different types of site navigation using a screen reader: Semantic Navigation vs Landmark Navigation. How are they different? How are they the same? Why are these tools helpful for users on a screen reader?
 
 <!--
   using keyboard shortcuts you can easily navigate the page in different ways.
@@ -307,7 +307,7 @@ pull out the practical pieces:
 
 * [Aria Documentation](https://www.w3.org/TR/wai-aria)
 * [Aria Examples & Design Patterns](https://www.w3.org/TR/wai-aria-practices/#aria_ex)
-* [MDN Documnentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
+* [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 * [describedBy vs labeledBy video](https://www.youtube.com/watch?v=U8_VjI-Z1LA)
 
 Tools

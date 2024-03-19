@@ -32,7 +32,7 @@ GIF
 
 SVG
 
-- scaleable vector graphic, lossless compression, scales without losing clarity
+- scalable vector graphic, lossless compression, scales without losing clarity
 - looks great on retina displays
 - design control like interactivity and filters
 - can be used as an image ```<img src='some-image.svg' alt='some image'```

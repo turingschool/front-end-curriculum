@@ -14,7 +14,7 @@ Your guide to CSS etiquette and maintaining a degree of sanity whilst writing la
 
 #### Generally...
 
-- Establish a consistent style for the code-base and reinforce it on the team. Any code-base should look like a single-person typed it, even when there are multiple contributers.
+- Establish a consistent style for the code-base and reinforce it on the team. Any code-base should look like a single-person typed it, even when there are multiple contributors.
 - Choose existing, common style patterns first, employing deviations only when necessary and for good reason.
 
 #### Whitespace...
