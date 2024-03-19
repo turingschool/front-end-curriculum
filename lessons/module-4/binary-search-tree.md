@@ -22,7 +22,7 @@ By the end of this lesson, you will:
 
 ### Warm up
 
-- Imagine that your friend is playing your old Number Guesser from Mod 1 and that the range is currently set from 1 - 30. The progam generates a random number within that range and gives feedback on whether the guess is too low or too high. If you wanted to help your friend, what's an efficient algorithm he/she could use to get to the answer? What is the max number of guesses that are needed?
+- Imagine that your friend is playing your old Number Guesser from Mod 1 and that the range is currently set from 1 - 30. The program generates a random number within that range and gives feedback on whether the guess is too low or too high. If you wanted to help your friend, what's an efficient algorithm he/she could use to get to the answer? What is the max number of guesses that are needed?
 
 <!-- Assume random number is 30.
 Linear Search
@@ -51,7 +51,7 @@ A common theme in computer programming is deciding how to store and organize dat
 
 ## Definition: What Is a Binary Search Tree
 
-A Binary Search Tree (BST from here on out) is a method of organizing data in a series of connected, sorted nodes. This type of structure is particularly good at inserting, finding, and moving around data in an effecient, cheap way.
+A Binary Search Tree (BST from here on out) is a method of organizing data in a series of connected, sorted nodes. This type of structure is particularly good at inserting, finding, and moving around data in an efficient, cheap way.
 
 Let's take a look at what a small BST might look like:
 
@@ -124,7 +124,7 @@ The next number in our list is `5`. We call `insert(5)`, 5 is less than 10 so it
     5
 ```
 
-The next number in our list is `12`. We call `insert(12)`, 12 is more than 10 so it checks for any additonal nodes to *right* of `10`, finds none, and is inserted there as a child node.
+The next number in our list is `12`. We call `insert(12)`, 12 is more than 10 so it checks for any additional nodes to *right* of `10`, finds none, and is inserted there as a child node.
 
 ```js
         10
@@ -289,7 +289,7 @@ Our tree after we rule out all right branches of `10`:
       6
 ```
 
-Everytime we search for a number we start at the root. We've already determined it's less than `10` so we move left. The next node we encounter has a value of `5`. We are not looking for `5` and `7` is greater than 5 so we can rule out any child nodes to the left of `5`.
+Every time we search for a number we start at the root. We've already determined it's less than `10` so we move left. The next node we encounter has a value of `5`. We are not looking for `5` and `7` is greater than 5 so we can rule out any child nodes to the left of `5`.
 
 ```js
         10
@@ -344,7 +344,7 @@ const numbers = [10, 5, 12, 7, 3, 19, 6];
 ```
 
 Human #1 should implement a linked list based on this data
-Human #2 should implement a binary searct tree based on this data
+Human #2 should implement a binary search tree based on this data
 
 How many steps does it take for you to find the number 6 in your linked list? In your BST?
 

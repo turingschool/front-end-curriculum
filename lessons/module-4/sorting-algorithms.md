@@ -60,7 +60,7 @@ Implement the insert sort. An insert sort loops through an array, checks if the 
 
 ### Extra practice
 
-Implement a radix sort, one of the most efficent algorithms.
+Implement a radix sort, one of the most efficient algorithms.
 
 ![radix][radix]
 

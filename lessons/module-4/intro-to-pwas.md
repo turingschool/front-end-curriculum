@@ -54,6 +54,6 @@ module: 4
   <ul>
     <li><a href="http://blog.ionic.io/what-is-a-progressive-web-app/">What is a PWA></a></li>
     <li><a href="https://developers.google.com/web/progressive-web-apps/checklist">PWA Checklist</a></li>
-    <li><a href="https://developers.google.com/web/tools/lighthouse/">Lighouse Audits</a></li>
+    <li><a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse Audits</a></li>
   </ul>
 </section>

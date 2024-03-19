@@ -123,7 +123,7 @@ If you have some strong theories: test them out
 
 Implement a change, see what that changes, and repeat.
 
-Be careful to revert changes you make as you go, so you don’t accidently add more bugs that will obscure the original cause of the error.
+Be careful to revert changes you make as you go, so you don’t accidentally add more bugs that will obscure the original cause of the error.
 
 #### Still Stumped: Ask for Help
 

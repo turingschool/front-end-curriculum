@@ -141,7 +141,7 @@ The simplest but not foul-proof solution to this might be to add an `updatedAt` 
 
 This gets trickier when you have multiple people editing the same content on an application. Think about when you're using git and you run into a merge conflict. Who's to say that Person A's change on December 12th isn't actually supposed to take precedence over Person B's change on December 13th?
 
-One thing that will help solve these challenges in the future is the `periodicSync` API, which is still in progress and not yet available. (The [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/periodicSync) is sparse, to say the least.) This would allow us to periodically fetch data from a server at given intervals to keep up-to-date with any data changes that are occuring at the same time we are working locally.
+One thing that will help solve these challenges in the future is the `periodicSync` API, which is still in progress and not yet available. (The [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/periodicSync) is sparse, to say the least.) This would allow us to periodically fetch data from a server at given intervals to keep up-to-date with any data changes that are occurring at the same time we are working locally.
 
 While we wait for this spec to be finalized, the old-fashioned solution to this problem would be to continuously fire off a fetch request that polls your server for the latest data. It's not ideal, as this code cannot be entirely run in the background of a service worker, but it gives us a solution for the time being.
 

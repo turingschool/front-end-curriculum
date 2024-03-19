@@ -303,7 +303,7 @@ The duality of mobile development is annoying. Thankfully, we can abstract away 
 
 ### Let's Talk Debugging
 
-As we all know, we are no longer in a browser where we can throw debuggers and console.log()s to our heart's desire. But thankfully React Native gives us a couple of tools to make debugging like the good old times. First, you can throw a `console.error('whatver')` in your React Native code and redbox (not the movie rental but an error messaging feature) will throw up a red screen with whatever you put in `console.error()`.
+As we all know, we are no longer in a browser where we can throw debuggers and console.log()s to our heart's desire. But thankfully React Native gives us a couple of tools to make debugging like the good old times. First, you can throw a `console.error('whatever')` in your React Native code and redbox (not the movie rental but an error messaging feature) will throw up a red screen with whatever you put in `console.error()`.
 
 An even better feature is the ability to turn on remote debugging through Chrome. With your ioS emulator running, click `cmd+control+z` to pull up the dev tools. Select Debug JS Remotely and a web browser pointed at `http://localhost:8081/debugger-ui` will open. Open up the console and select the `Pause on Exceptions` button. Then throw a debugger in your JS and reload the emulator. The debugger should trigger like a normal debugger and you can inspect this.props ...etc.
 
@@ -329,7 +329,7 @@ Just like normal React, we have access to the component lifecycle API. Here is a
 
 ### Go Forth and Mobilize
 
-In our next few lessons we will learn how to navigate and add scenes within our mobile apps, how to use animations for an immersive user experience, what ImmutableJS is and how to implment it with Redux.
+In our next few lessons we will learn how to navigate and add scenes within our mobile apps, how to use animations for an immersive user experience, what ImmutableJS is and how to implement it with Redux.
 
 ---
 

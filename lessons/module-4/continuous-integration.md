@@ -176,7 +176,7 @@ deployment:
       appname: your-production-app-name
 ```
 
-Now whenever we push to our master branch, CircleCI will automatically run a build for us and deploy only if and when the buid succeeds.
+Now whenever we push to our master branch, CircleCI will automatically run a build for us and deploy only if and when the build succeeds.
 
 ## Adding Status Badges
 You'll often see build status icons on the README files of popular open source libraries and frameworks. This is a quick and easy way to reassure users that the code is reliable. CircleCI provides a markdown snippet that we can paste directly into our README. In CircleCI, under your project settings, you'll see a 'Status Badges' link under the 'Notifications' heading in the sidebar. Copy and paste the markdown snippet provided for you and add it to your project's README.
