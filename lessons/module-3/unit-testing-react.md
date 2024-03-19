@@ -79,7 +79,7 @@ they "recommend that you use a separate tool for browser end-to end tests if you
 
 ### Setting up Enzyme
 
-Enzyme is a fantasic tool for testing our React components in a virtual way, without actually having to use a browser. This makes running tests related to our UI much faster. First off, let's get Enzyme installed:
+Enzyme is a fantastic tool for testing our React components in a virtual way, without actually having to use a browser. This makes running tests related to our UI much faster. First off, let's get Enzyme installed:
 
 ```bash
 npm install enzyme --save-dev
@@ -184,7 +184,7 @@ We could continue to write tests this way for every single element but...there i
 
 ### Snapshot testing
 
-Once again, let's look at the docs to find out what [snapshot testing](https://jestjs.io/docs/en/snapshot-testing) is in Jest. Reading throught the docs, we find out that we can use snapshot tests to compare against a previous 'snapshot' of what our component looked like. Snapshot tests are not really TDD but it is a way to double check if a change was made to the UI unexpectedly. If something has changed, the snapshot will fail. If we really did mean to make that change, we can `update` our snapshot to use the newest version.
+Once again, let's look at the docs to find out what [snapshot testing](https://jestjs.io/docs/en/snapshot-testing) is in Jest. Reading through the docs, we find out that we can use snapshot tests to compare against a previous 'snapshot' of what our component looked like. Snapshot tests are not really TDD but it is a way to double check if a change was made to the UI unexpectedly. If something has changed, the snapshot will fail. If we really did mean to make that change, we can `update` our snapshot to use the newest version.
 
 First we'll need to install one more package in order to convert our Enzyme wrappers to a format that is compatible with Jest snapshot testing.
 

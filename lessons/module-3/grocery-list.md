@@ -133,7 +133,7 @@ friend `Enzyme`!
 
 ### Setting up Enzyme
 
-Enzyme is a fantasic tool for testing our React components in a virtual way,
+Enzyme is a fantastic tool for testing our React components in a virtual way,
 without actually having to use a browser. This makes running tests related to
 our UI much faster. First off, let's get Enzyme installed:
 

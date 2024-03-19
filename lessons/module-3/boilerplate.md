@@ -20,7 +20,7 @@ Open up this file in your editor. You'll notice it contains all of the "meta dat
 
 ## Installing Dependencies  
 
-`npm install --save-dev` (or `npm i -D`) will save dependencies to the `devDepencies` collection.
+`npm install --save-dev` (or `npm i -D`) will save dependencies to the `devDependencies` collection.
 `npm install --save` (or `npm i -S`) will save dependencies to the `dependencies` collection.  
 
 The difference is that `devDependencies` are those that you need in development. `dependencies` are those that are needed for your app to run in general.  

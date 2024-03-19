@@ -14,7 +14,7 @@ By the end of this lesson, you will be able to:
 
 ## Vocabulary
 - `this` - a keyword with a value that changes depending on the context in which it's used
-- `class` - a special function which functionas as a template for creating objects
+- `class` - a special function which functions as a template for creating objects
 - `object instance` - objects that were created from a class and contain the data and functionality defined in that class
 
 ## Warm Up

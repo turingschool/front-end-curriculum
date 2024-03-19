@@ -21,7 +21,7 @@ Hold on to your butts.
 
 - Know what an action is, and what an action creator is
 - Know what a reducer is, and how an action is sent to it
-- Have an idea of what the store is, and how it realates to state
+- Have an idea of what the store is, and how it relates to state
 - Know what Provider is
 - Know what mapStateToProps and mapDispatchToProps are
 - Know what `connect` is, and how to use it

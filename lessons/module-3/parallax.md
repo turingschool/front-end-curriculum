@@ -334,7 +334,7 @@ index.html
       Layer 1
     </div>
   </div><!--parallax all-->
-</div><!--parallax contaienr-->
+</div><!--parallax container-->
 ```
 
 ```css

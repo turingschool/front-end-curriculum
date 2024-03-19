@@ -72,7 +72,7 @@ if you're interested on how some people with mainly visual needs interact with t
 
 What we're going to do is break you off into groups of 4-5 and you are going to go to different stations. Each station is going to define the Accessibility issue.
 
-With each issue it will walk you through what the issue is at hand. In some case it will walk you through and ``experiment`` to give you context as to what it feels like to use the web with a specific accessibility tool. And then it will also go through some code and or code explination.
+With each issue it will walk you through what the issue is at hand. In some case it will walk you through and ``experiment`` to give you context as to what it feels like to use the web with a specific accessibility tool. And then it will also go through some code and or code explanation.
 
 
 ## Visual
@@ -183,7 +183,7 @@ Checkout this [document](http://geon.github.io/programming/2016/03/03/dsxyliea) 
 
 #### Code Tip
 
-A lot of what you are going to do as web developer to help combat this is organizing your data in a way that is decreeable and engaging for the user. Some things we can do to help draw attention to our document:
+A lot of what you are going to do as web developer to help combat this is organizing your data in a way that is degreeable and engaging for the user. Some things we can do to help draw attention to our document:
 
 - Using proper headings, and lists
 - Using more white space in your design
@@ -196,7 +196,7 @@ A lot of what you are going to do as web developer to help combat this is organi
 
 ### Discussion
 
- 1) What steps can we take to consider people with cognative issues?
+ 1) What steps can we take to consider people with cognitive issues?
 
  2) Can you think of any website you know that would be difficult to use for someone with cognitive issues?
 

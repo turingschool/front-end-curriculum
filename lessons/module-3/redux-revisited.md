@@ -17,7 +17,7 @@ Let's meditate on [this code sample][createstore].
 By "we," I really mean "I"—which because you all just steal my code: "we." Let's look at some of our past mistakes and see how breaking stuff out into containers and presentational components might have been a better choice.
 
 - [That time][application] I decided to handle both rendering and managing state in the Application component in [Taskblaster][].
-- [That time][task-list] I took an otherwise reusable list component and gunked it up with too much knowledge about Firebase.
+- [That time][task-list] I took an otherwise reusable list component and messed it up with too much knowledge about Firebase.
 
 [Taskblaster]: https://github.com/turingschool-examples/taskblaster/
 [application]: https://github.com/turingschool-examples/taskblaster/blob/master/lib/components/Application.js#L16-L20

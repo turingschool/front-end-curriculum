@@ -14,7 +14,7 @@ Once we fetch our data, we no longer want to store it in our component's state.
 We want to be able to put it in the Redux store when it comes back.
 
 Today, we will:
-- Discuss what middlware is, and what it is used for
+- Discuss what middleware is, and what it is used for
 - Learn about Thunks, and the problems they solve for us
 - Explore a familiar project, and discuss where we could use thunks
 - Write some thunks
@@ -34,7 +34,7 @@ Today, we will:
 
 ### What is Middleware?
 
-Middleware provides a 3rd party between dispatching an action and the moment it reaches a reducer. It basically allows us to hook into the lifecycle of Redux and run some other code between the time an action is dipatched and the time it gets to the reducer.
+Middleware provides a 3rd party between dispatching an action and the moment it reaches a reducer. It basically allows us to hook into the lifecycle of Redux and run some other code between the time an action is dispatched and the time it gets to the reducer.
 
 If we think about it, there are 3 stages of an asynchronous request:
 
@@ -59,9 +59,9 @@ Here, the inner function that is returned is a thunk. You've probably seen this 
 
 Up until this point, we've only seen Redux actions as objects that don't do anything. Pretty boring, right? Wouldn't it be cool if we could actually make them do something... like make a fetch request or trigger other actions? Enter **redux-thunk**!
 
-`Redux-Thunk` is a middleware that allows our action creators to return a function instead of an action object. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. It looks at every action that passed thrugh the system; and if it's a function, it calls that function. This is just another tool that can help us decouple our application logic from our view rendering. 
+`Redux-Thunk` is a middleware that allows our action creators to return a function instead of an action object. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. It looks at every action that passed through the system; and if it's a function, it calls that function. This is just another tool that can help us decouple our application logic from our view rendering. 
 
-Redux passes 2 arguments to thunk funcitons: `dispatch` so that we can dispatch new actions if we need to, and `getState` so that we can access the current state. 
+Redux passes 2 arguments to thunk functions: `dispatch` so that we can dispatch new actions if we need to, and `getState` so that we can access the current state. 
 
 ### Enough talk - let's see how this actually works!
 
@@ -85,17 +85,17 @@ this.state = {
    error: ''
 }
 ```
-##### Take a few minutes and review the `fetchStaff`, `fetchBios`, and `commponentDidMount` methods that are being used to fetch our data and handle our loading and error cases.
+##### Take a few minutes and review the `fetchStaff`, `fetchBios`, and `componentDidMount` methods that are being used to fetch our data and handle our loading and error cases.
 
 ### Converting to Redux
 
-To start, we will need to add Redux, React-Redux, and Redux-Thunk as dependencies of our project so that we can use them. I'm also going to go ahead and install the redux-devtools-extention. I have found that this is easier to use when passing multiple arguments to `createStore()`.
+To start, we will need to add Redux, React-Redux, and Redux-Thunk as dependencies of our project so that we can use them. I'm also going to go ahead and install the redux-devtools-extension. I have found that this is easier to use when passing multiple arguments to `createStore()`.
 
 `npm install --save redux react-redux redux-thunk redux-devtools-extension`
 
 ### Designing our state
 
-From what we already have, we know our state needs to have 3 propertes: 
+From what we already have, we know our state needs to have 3 properties: 
 
 * **staff**
 * **isLoading** 
@@ -125,7 +125,7 @@ export const setStaff = (staff) => ({
    staff
 })
 ```
-Now that we have the 3 actions that will represent the state of our network request, we need to create our other 2 action creators that will reflect our `fetchStaff` and `fetchBios` methods. By default, Redux action creators don't support async actions like fetching data, so here's is where we will utilize the `redux-thunk` middleware. We can transition `fetchStaff` and `fetchBios` into asynchronous action creators by returning a function instead of an object. The functions that we return from `fetchStaff` and `fetchBios` can safely perform a network request and dispatch a synchrounous action with the response data. 
+Now that we have the 3 actions that will represent the state of our network request, we need to create our other 2 action creators that will reflect our `fetchStaff` and `fetchBios` methods. By default, Redux action creators don't support async actions like fetching data, so here's is where we will utilize the `redux-thunk` middleware. We can transition `fetchStaff` and `fetchBios` into asynchronous action creators by returning a function instead of an object. The functions that we return from `fetchStaff` and `fetchBios` can safely perform a network request and dispatch a synchronous action with the response data. 
 
 Let's make a separate file for each of our thunk action creators (it will make them easier to test down the road!). We will also need to import any actions that we might need to dispatch.
 
@@ -231,7 +231,7 @@ export default rootReducer;
 
 ### Create our store and provide it to our app
 
-This is great! All that's left to do is head over to our `index.js` and configure our store, pass it to our application, and then connect our componenet to the store. This is where we will tell the store about `redux-thunk` and it will give us access to `dispatch` in our action creators. 
+This is great! All that's left to do is head over to our `index.js` and configure our store, pass it to our application, and then connect our component to the store. This is where we will tell the store about `redux-thunk` and it will give us access to `dispatch` in our action creators. 
 
 ```javascript
 // index.js

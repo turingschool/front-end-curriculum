@@ -231,7 +231,7 @@ export default connect(mapStateToProps)(ToDoList);
 <section class="call-to-action">
 ### Reading the docs
 
-This time we are creating a function called [mapStateToProps](https://react-redux.js.org/using-react-redux/connect-mapstate).  This "is used for selecting the part of the data from the store that the connected component needs.  It is called everytime the store has been updated."  The `state` refers to the global store.  Why do we call it state instead of `store` then?  Read about it [here in the docs](https://react-redux.js.org/using-react-redux/connect-mapstate#arguments)!  The property then defines what the prop will be in our component, while the value will be set to the data needed in the component.
+This time we are creating a function called [mapStateToProps](https://react-redux.js.org/using-react-redux/connect-mapstate).  This "is used for selecting the part of the data from the store that the connected component needs.  It is called every time the store has been updated."  The `state` refers to the global store.  Why do we call it state instead of `store` then?  Read about it [here in the docs](https://react-redux.js.org/using-react-redux/connect-mapstate#arguments)!  The property then defines what the prop will be in our component, while the value will be set to the data needed in the component.
 </section>
 
 <section class="note">

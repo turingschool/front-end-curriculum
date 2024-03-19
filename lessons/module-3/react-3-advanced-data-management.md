@@ -97,7 +97,7 @@ Write a function in `App` that runs a fetch request to GET all ideas.
 Notes:
 - Refer to the BE repo's README for endpoints and documentation. 
 - For now, let's `console.log` the data that comes back.
-- You're not immediately going to know where/when to invoke this function - that's okay! For now, only definte the function, don't invoke it.
+- You're not immediately going to know where/when to invoke this function - that's okay! For now, only define the function, don't invoke it.
 
 <section class="answer">
 ### Possible Solution  
@@ -128,7 +128,7 @@ Every component you create goes through several phases of existing:
 <section class="call-to-action">
 ### Reflect
 
-During which phase of the App component's lifecyle do we want our GET to run?
+During which phase of the App component's lifecycle do we want our GET to run?
 
 <section class="answer">
 ### Answer  
@@ -187,7 +187,7 @@ useEffect(() => {
 
 Run your app. **What's happening?** :scream:
 
-Oh no! Let's revisit the timing conversation. What we invlude in that second argument affects the timing like this:
+Oh no! Let's revisit the timing conversation. What we include in that second argument affects the timing like this:
 - `no argument`: The Effect Hook will run for the mounting and updating phases
 - `[]`: The Effect Hook will run for the mounting phase only
 - `[<piece of state>]`: The Effect Hook will run when that specific piece of state is updated (i.e. `[ideas]`)
