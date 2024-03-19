@@ -30,7 +30,7 @@ Deploying your repos allows you to have a live site for your application. You'll
 
 Deploying takes time, so it's not a good idea to use your deployed site as your point of reference while building your app. While you're coding, you'll want to run `open index.html` in your terminal to see the current local version of your app. You need to refresh the browser each time you make an update to your code. Once you've pushed up your code and merged into the main branch, the deployed site should update within an hour. 
 
-Below are instuctions for deploying to GH Pages:  
+Below are instructions for deploying to GH Pages:  
 
     - Repo Settings » Pages » Select the main branch as your Source branch » Save. Then, wait up to an hour, hit refresh, and your deployed link should appear at the top of the screen.  
 

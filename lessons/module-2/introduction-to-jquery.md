@@ -46,7 +46,7 @@ Let's say that we have a page with the following markup:
 <h1 class="important-header">Dinosaurs are awesome.</h1>
 ```
 
-Just like with plain ol' JavaScript, jQuery lets us change the text programatically. The neat thing about jQuery, though, is that it significantly reduces the amount of code we have to write.
+Just like with plain ol' JavaScript, jQuery lets us change the text programmatically. The neat thing about jQuery, though, is that it significantly reduces the amount of code we have to write.
 
 Think about how you would use `innerText` to change the content in an HTML page with JavaScript. With vanilla JavaScript, you would have to write:
 
@@ -220,7 +220,7 @@ You can also use multiple selectors in the same statement:
 
 ### Chaining Selectors
 
-There are a few different ways to chain selectors to use them together. You can seperate these selectors with a comma, a space, or nothing at all.
+There are a few different ways to chain selectors to use them together. You can separate these selectors with a comma, a space, or nothing at all.
 
 * Comma: `$('p, #heading, .important')` just combines all of the selectors together.
 * Space: `$('p #heading .important')` treats each selector as a child of the previous. This will give you items of the class `important` that are children of the id `heading` which are inside a `<p>` tag.
@@ -334,7 +334,7 @@ This one will include all of the parents—all the way up to the `<body>` of the
 
 ### `children()`
 
-This method returns all of the direct childen of the given selection. It will _not_ search their children. Like `parents()`, `children()` will also take a selector. `$('.some-selector').children('.active')` will go through the children of the current query and only return the elements with the class of `.active`.
+This method returns all of the direct children of the given selection. It will _not_ search their children. Like `parents()`, `children()` will also take a selector. `$('.some-selector').children('.active')` will go through the children of the current query and only return the elements with the class of `.active`.
 
 <p data-height="265" data-theme-id="light" data-slug-hash="vjaVep" data-default-tab="js,result" data-user="nfosterky" data-embed-version="2" data-pen-title="jQuery Children" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/vjaVep/">jQuery Children</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>

@@ -47,7 +47,7 @@ In this session your goal is to "build expertise". Gather into your "Research Gr
 
 Additional requirements to note:
 
-* _There are specific questions per content area below to guide the group's research. The expecation is that your presentations for session 3 cover the key questions provided per content area._
+* _There are specific questions per content area below to guide the group's research. The expectation is that your presentations for session 3 cover the key questions provided per content area._
 * _Each person from the "Research Group" needs to finish session 1 with their own set of notes and their own demo ready to go._
 
 ## BREAK (5 min)

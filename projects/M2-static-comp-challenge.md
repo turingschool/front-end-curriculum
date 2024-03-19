@@ -22,7 +22,7 @@ You may NOT take any creative liberties with this design. You should act as thou
 
 ## Set Up + Submission
 - Fork [this repo](https://github.com/turingschool-examples/dog-party/)
-- Push your final work to [github pages](https://pages.github.com/) using the [following instuctions](https://github.com/turingschool-examples/webpack-starter-kit/blob/main/gh-pages-procedure.md).
+- Push your final work to [github pages](https://pages.github.com/) using the [following instructions](https://github.com/turingschool-examples/webpack-starter-kit/blob/main/gh-pages-procedure.md).
 - Submit your repo and GH pages links [here](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) by the due date listed in your calendar.  ***Note:** There are no specific PMs for this project, so you can leave the **Project Manager** input of the submission form as "n/a".*
 
 ## Other Notes

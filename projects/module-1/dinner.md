@@ -31,7 +31,7 @@ _NOTE: You do not need to use Classes for this project._
 - Read this README thoroughly, then begin working!
 
 ## Workflow
-Make sure you're utilizing git best practices (branches) and commiting frequently.
+Make sure you're utilizing git best practices (branches) and committing frequently.
 
 ### Day One Deliverables
 **By EOD on Kick Off Day:**   

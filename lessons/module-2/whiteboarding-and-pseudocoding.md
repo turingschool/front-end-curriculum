@@ -38,7 +38,7 @@ Think about how you currently solve problems when you are programming. Has that 
 
 ## Whiteboarding
 
-In the context of building out programs, whiteboarding is a useful tool to ulitize in solving complex problems. If we rush into coding out the solution immediately, we completely skip over the `P`lanning part of the process... and its likely that we don't fully `U`nderstand the problem at hand.
+In the context of building out programs, whiteboarding is a useful tool to utilize in solving complex problems. If we rush into coding out the solution immediately, we completely skip over the `P`lanning part of the process... and its likely that we don't fully `U`nderstand the problem at hand.
 
 In the context of interviewing for a job, being able to whiteboard is important because it shows you can think through/discuss a problem without having to actually code it first - which can be a difficult skill to learn. 
 
@@ -79,7 +79,7 @@ else
 
 <!-- * Be talking as you write! Don't feel rude for looking away, it takes too long to look at the person and talk, then write, then talk, then write. Talk loud so they can hear you while you write on the board
 
-* Pay close attention to the amount of space you have! Don't start writing huge and in the dead center of the board, you'll run out of room. If you *do* start running out of room, don't worry about putting things in different places - the whiteboarded code doesnt have to read perfectly top-to-bottom, you can make use of horizontal space.
+* Pay close attention to the amount of space you have! Don't start writing huge and in the dead center of the board, you'll run out of room. If you *do* start running out of room, don't worry about putting things in different places - the whiteboarded code doesn't have to read perfectly top-to-bottom, you can make use of horizontal space.
 
 * DON'T WIPE THE WHITEBOARD WITH YOUR HAND WHEN YOU ERASE THINGS. Youll get marker on your hand, then you'll be nervous and sweating and you'll wipe a bead of sweat off your face with your marker hands and then you'll have marker on your forehead and you'll look like a total nerd and then you'll go to shake the interviewer's hand at the end of the interview and you'll get marker on them.
 
@@ -87,7 +87,7 @@ else
 
 ## Pseudocoding
 
-Pseudocode is an artificial and informal language that helps programmers develop algorithms to solve problems. A key thing to remember is that psuedocode is _not_ code. It is a way to force yourself to slow down and think about how to solve problems at a high-level, using natural language.
+Pseudocode is an artificial and informal language that helps programmers develop algorithms to solve problems. A key thing to remember is that pseudocode is _not_ code. It is a way to force yourself to slow down and think about how to solve problems at a high-level, using natural language.
 
 Pseudocode:
 - gives you a fallback 
@@ -163,7 +163,7 @@ Imagine you were given the following prompt on a technical interview:
 
 
 
-## PIA (Psuedocoding in action)
+## PIA (Pseudocoding in action)
  
 Task: Create your own `filter` function (on `Array.prototype`) to really understand/see how `filter` is working under the hood. You should implement a filter function that is like the `<Array>.filter()` in JavaScript.
 
@@ -231,12 +231,12 @@ function reverseOddWords(words) {
 ``` -->
 
 
->Phase I => (Understand and Plan) Break out the way that you would solve this problem in pseudocode. Remember, psuedocode is _not_ code... but a way to work through the logic of the problem without worrying about syntax.
+>Phase I => (Understand and Plan) Break out the way that you would solve this problem in pseudocode. Remember, pseudocode is _not_ code... but a way to work through the logic of the problem without worrying about syntax.
 
 **Person A: Driver**  
 **Person B: Navigator**  
 
->Phase II => (Solve) Using your psuedocode as a guide (feeling free to make adjustments as necessary) to start to implement your solution in code.
+>Phase II => (Solve) Using your pseudocode as a guide (feeling free to make adjustments as necessary) to start to implement your solution in code.
 
 **Person B: Navigator**  
 **Person A: Driver**  

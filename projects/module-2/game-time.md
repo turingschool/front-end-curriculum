@@ -24,7 +24,7 @@ The rules of your assigned game will serve as the requirements for the spec.
 - Write a program from scratch
 - Synthesize knowledge of OOP, classes, and JS fundamentals to create a playable game
 - Demonstrate good GitHub collaboration and workflow within a large group
-- Write modular, reusable code that follows SRP (Single Responibility Principle)
+- Write modular, reusable code that follows SRP (Single Responsibility Principle)
 - Create a robust test suite that thoroughly tests all functionality of a client-side application
 - Implement array iterator and mutator methods to work with game data
 
@@ -42,7 +42,7 @@ You'll be working with some new technologies for this project:
 |Day           | Status| Deliverables |
 |---           |---    |--- |
 |*Day 1 (Thur Week 3)* | Kick-off| Set up DTR, explore boilerplate repo, design theme/inspiration|
-|*Day 2 (Fri Week 3)* | Setup & Coding| Setup your repository using the instructions in this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) and continue with the instructions in the README. In your project's repo, update the README to include relavent information to your version of the project, a link to your group's DTR, your final wireframes, and any design inspiration|
+|*Day 2 (Fri Week 3)* | Setup & Coding| Setup your repository using the instructions in this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) and continue with the instructions in the README. In your project's repo, update the README to include relevant information to your version of the project, a link to your group's DTR, your final wireframes, and any design inspiration|
 |*Day 6 (Tue Week 4)* | 1st PR | PR due w/instructors tagged|
 
 ### Week 5
@@ -98,7 +98,7 @@ Your testing suite should test all of the functionality of the game, including t
 
 For the purposes of this project, you will keep your state logic completely separate from your view logic. In other words, your business logic (classes/methods) should not handle anything that deals with the UI (DOM Manipulation).
 
-To do this, you will utlize a separate `domUpdates.js` file that handles any DOM manipulation that is triggered by your business logic. This is covered in more depth in the testing lesson, which you can find [here](http://frontend.turing.edu/lessons/module-2/testing-with-chai-spies.html).
+To do this, you will utilize a separate `domUpdates.js` file that handles any DOM manipulation that is triggered by your business logic. This is covered in more depth in the testing lesson, which you can find [here](http://frontend.turing.edu/lessons/module-2/testing-with-chai-spies.html).
 
 <section class="note">
   domUpdates will hold your DOM updating logic. Some of this logic may be called on by methods in your class files. You won't test actual methods in domUpdates, but you will test class methods that call on DOM updates. This is done with [spies](http://frontend.turing.edu/lessons/module-2/testing-with-chai-spies.html).
@@ -179,7 +179,7 @@ Your README should include the following, in this order:
 ### CSS/Sass Style
 
 * [ ] Novice - There are several (10+) instances of duplication and one or two major bugs. Developers write code with unnecessary selectors or tags which do not increase clarity.
-* [ ] Advanced Beginner - There is some duplication (5-10 instances) in the codebase. There may be one to two minor bugs. There may be some unncessary selectors or tags. Application adds organization for the whole stylesheet and within rules.
+* [ ] Advanced Beginner - There is some duplication (5-10 instances) in the codebase. There may be one to two minor bugs. There may be some unnecessary selectors or tags. Application adds organization for the whole stylesheet and within rules.
 * [ ] Proficient - Application is thoughtfully put together with comments to help guide organization. There may be some duplication (fewer than 5 instances) present. Comments are present to assist with organization of code.
 * [ ] Exceptional - Meets all expectations for `Proficient`. The application has exceptionally well-factored CSS/Sass with all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
 
@@ -208,7 +208,7 @@ Your README should include the following, in this order:
 
 * [ ] Novice - Not all presenters speak. Presenters give too much or too little information about the application. Presenters do not use audio/visual aids or media.
 * [ ] Advanced Beginner - Everyone in the group speaks. Presenters do a live demo of the application. The group may speak about the planning/challenges/rewards of the project; however, the delivery does not seem thought out/well-planned.
-* [ ] Proficient - Everyone in the group has an opporunity to speak during the presentation. The group has a visual of the application to demo (e.g. slides, recordings of interactions, live demo). The group talks about the app, speaking to the challenges, rewards, and collaborative aspects of the project.
+* [ ] Proficient - Everyone in the group has an opportunity to speak during the presentation. The group has a visual of the application to demo (e.g. slides, recordings of interactions, live demo). The group talks about the app, speaking to the challenges, rewards, and collaborative aspects of the project.
 * [ ] Exceptional - Meets all expectations of `Proficient`. In addition, the presentation runs smoothly w/no hiccups - indicating that it was planned/rehearsed/polished. The presentation is so engaging that there is no time that the evaluators find themselves checking the time/clock.
 
 
@@ -216,6 +216,6 @@ Your README should include the following, in this order:
 * [ ] Expert - Responds to the question accurately and gracefully. Uses the correct vocabulary when discussing the concept, and is sure of their response. Gives an appropriate amount of detail to thoroughly answer the question, but responds well to any follow-up questions that may arise.
 * [ ] Proficient -  Responds to the question with accuracy, but may be a bit vague or unsure of themselves. May answer the question by describing an example rather than having an eloquent articulation of the concept. May not be able to dig much deeper to respond to follow-up questions that may arise.
 * [ ] Advanced Beginner - Cannot respond to the question with accuracy. May discuss related ideas, but does not quite stay on topic for the question we're asking. May ramble a bit until they throw out the correct term, looking to the interviewer for signs of being on the right track.
-* [ ] Novice - Cannot respond to the question with accuracy. Interviewer may reprhase the question several times or pivot to ask a simpler question. May find a way to gracefully say "I don't know".
+* [ ] Novice - Cannot respond to the question with accuracy. Interviewer may rephrase the question several times or pivot to ask a simpler question. May find a way to gracefully say "I don't know".
 
 If the evaluator is left wanting a bit more from your response, they may choose to continue to ask follow-up question to you - or they may open it up to volunteers in the group to assist.

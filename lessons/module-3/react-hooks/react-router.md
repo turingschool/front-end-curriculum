@@ -519,7 +519,7 @@ It's because we didn't specify the `exact` attribute in our `/unicorns` route, s
 
 Ok back to business!
 
-We passed through the `match` prop and console logged it, let's take a look. Notice that the `params` property contains an object with our defined paramter `id`, and it is equal to the ID we linked to in the URL!
+We passed through the `match` prop and console logged it, let's take a look. Notice that the `params` property contains an object with our defined parameter `id`, and it is equal to the ID we linked to in the URL!
 
 Now all we have to do is modify our route to render the correct data.
 

@@ -37,7 +37,7 @@ Questions:
  * What is gitignore and why would we want this in such a basic application?
 
 <!--
-  * Should ignore node modules - they don't want this pushed to GitHub. Keeps git history clean and repo size small (no commiting of dev dependencies) 
+  * Should ignore node modules - they don't want this pushed to GitHub. Keeps git history clean and repo size small (no committing of dev dependencies) 
 -->
 
 ---

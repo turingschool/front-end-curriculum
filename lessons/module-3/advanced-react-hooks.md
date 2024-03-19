@@ -384,7 +384,7 @@ import Form from './Form';
 import ThemeContext from './ThemeContext'
 import './App.css';
 
-const initalState = {
+const initialState = {
   ideas: [],
   theme: 'dark'
 }
@@ -405,7 +405,7 @@ const reducer = (state, action) => {
 }
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, initalState)
+  const [state, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
     document.title = `Ideabox (${state.ideas.length})`
@@ -461,7 +461,7 @@ Consider the following code example:
  import AppContext from './AppContext'
  import './App.css';
 
- const initalState = {
+ const initialState = {
    ideas: [],
    theme: 'dark'
  }
@@ -482,7 +482,7 @@ Consider the following code example:
  }
 
  function App() {
-   const [state, dispatch] = useReducer(reducer, initalState)
+   const [state, dispatch] = useReducer(reducer, initialState)
 
    useEffect(() => {
      document.title = `Ideabox (${state.ideas.length})`

@@ -702,7 +702,7 @@ Remember that `setTitle` and `setDescription` are now functions that can be call
 Let's break this syntax down a little bit:
 
 * We add an `onChange` attribute to our input element (think back to Mod 1 and your standard HTML skills - this is just an attribute you can add to your HTML elements)
-* We assign it to an arrow function (the entire arrow function must be wrapped in curley braces - remember a function is JavaScript so we need to tell React to treat anything within the curlies as pure JavaScript rather than literal HTML)
+* We assign it to an arrow function (the entire arrow function must be wrapped in curly braces - remember a function is JavaScript so we need to tell React to treat anything within the curlies as pure JavaScript rather than literal HTML)
 * Our arrow function gives us access to an event object that will help us grab the input value from that element (again, think back to Mod 1 when you added event listeners to your elements)
 * Our arrow function kicks off a new named function (e.g. `handleTitleChange`) that takes in the event object as an argument
 * We now must create these two functions `handleTitleChange` and `handleDescriptionChange` in order to make our state changes:

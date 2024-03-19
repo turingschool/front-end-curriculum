@@ -244,7 +244,7 @@ Now that we've identified some user flows, let's get to testing (finally)! First
 * Assert that the email input field [should](https://docs.cypress.io/api/commands/should.html#Syntax){:target='blank'} have the same value as whatever you typed into it.
 * Take note of any errors that you get in the `Test Body` of the **Command Log**.
 
-This test might feel a bit unneccesary and overly simple - but it's valuable.  Thinking about controlled forms, what are we actually testing here?
+This test might feel a bit unnecessary and overly simple - but it's valuable.  Thinking about controlled forms, what are we actually testing here?
 <!-- Here is a link to [commonly used assertions](https://docs.cypress.io/guides/references/assertions.html#Common-Assertions) in Cypress! -->
 
 <section class="note">
@@ -417,7 +417,7 @@ As you can see by digging through `App.js` and `Dashboard.js`, the way this code
 
 ### Automating our login
 
-As we saw in our `login_spec.js` file, logging in takes a few steps. We have to find the inputs, type the appropiate data in, and click our login button.
+As we saw in our `login_spec.js` file, logging in takes a few steps. We have to find the inputs, type the appropriate data in, and click our login button.
 
 We can actually automate this process by creating a custom [Cypress command](https://docs.cypress.io/api/cypress-api/custom-commands){:target='blank'}.
 

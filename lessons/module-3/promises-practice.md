@@ -206,11 +206,11 @@ OK, so it looks like we want to dig into the `.bio` from the data that gets retu
 ### With a Partner
 - Discuss a way we could access the data of each member of the staff
 - Since we will have to utilize `fetch` for each staff member's info, what will be returned from these `fetch` requests?
-- Write some psuedocode for how you could approach this problem!
+- Write some pseudocode for how you could approach this problem!
 </section>
 
 <section class="answer">
-### Possible Psuedocode Pt. I
+### Possible Pseudocode Pt. I
 1. Make initial fetch to `http://localhost:3001/api/frontend-staff` in `componentDidMount`
 2. Iterate using `.map()` over the array of staff members
   - `fetch` from each endpoint within the `.map`

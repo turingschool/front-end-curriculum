@@ -136,7 +136,7 @@ Here, I've added a `text` property to the styles StyleSheet, and I'm passing tha
 
 ### Lets actually build something
 
-Having an app running on our device is neat, but we want to do more than that.  Our app is called ConceptBox, and we want to build something that can display user inputed 'concepts'. Clever huh?
+Having an app running on our device is neat, but we want to do more than that. Our app is called ConceptBox, and we want to build something that can display user inputted 'concepts'. Clever huh?
 
 To start, we'll need to use the
 [TextInput](https://facebook.github.io/react-native/docs/textinput) component from the React Native library. Modify your App.js to look like what I have below:
@@ -207,7 +207,7 @@ This is just a taste of what you could do with React Native, but you should real
 <section class="checks-for-understanding">
 ### Checks For Understanding
 
-- What are some of the advantages & disadvantages of using React Native? (list atleast 2 for each)
+- What are some of the advantages & disadvantages of using React Native? (list at least 2 for each)
 - What are 3 React Native components and explain their purpose and functionality in as much detail as you can.
 </section>
 

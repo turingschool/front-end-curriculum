@@ -41,7 +41,7 @@ After setting it up and running it, check through the code.  Much of it should f
 
 ### A Closer Look
 
-Looking at the application, you may have noticed how the `App` component keeps track of which `Profile` needs to be displayed.  In it's state, we can see that *selectedId* starts out as null (due to noone selecting a user at the start).  The method that updates this part of state is *selectUser*.  Take a look at where that method gets passed down.
+Looking at the application, you may have noticed how the `App` component keeps track of which `Profile` needs to be displayed.  In it's state, we can see that *selectedId* starts out as null (due to no one selecting a user at the start).  The method that updates this part of state is *selectUser*.  Take a look at where that method gets passed down.
 
 ```jsx
 // components/CoWorkerTab

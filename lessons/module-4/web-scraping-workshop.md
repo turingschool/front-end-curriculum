@@ -73,13 +73,13 @@ For a number of reasons, debugging browser automation is kind of painful.
 2. There could be a lot of things going wrong, but if it's a misspelled selector, you're going to get mad at yourself
 3. If you are running a script over and over and over on a website, you risk the website detecting that behavior as a bot (it kind of is) and blocking you from using the site.
 
-So when you plan out browser automation, you want to start with psuedo-code.
+So when you plan out browser automation, you want to start with pseudo-code.
 
 Get an idea in your head, like, I'm going to order Panera for myself at lunch.
 
 Open your browser, make sure you're logged out and the cookies/cache/etc is cleared.
 
-And walk through the process with psuedo code and by finding the selectors.
+And walk through the process with pseudo code and by finding the selectors.
 
 ```js
 
@@ -107,7 +107,7 @@ Spend the next pomodoro working by yourself to come up with an idea for somethin
 
 If you finish early, come up with another idea or study up more of vanilla DOM manipulation.
 
-Don't write any actual code though. Just psuedo code.
+Don't write any actual code though. Just pseudo code.
 
 Follow the following steps to get started:
 
@@ -128,7 +128,7 @@ cd webscraping-workshop
 
 5. Create a `README.md`
 
-    As you work, put your script files in this folder. Link to helpful blog posts/tutorials/docs that helped you along your way in the README. It may also be a good idea to put your 'road map' of psuedocode in that README as well.
+    As you work, put your script files in this folder. Link to helpful blog posts/tutorials/docs that helped you along your way in the README. It may also be a good idea to put your 'road map' of pseudocode in that README as well.
 
 6. Run `npm i nightmare --save`
 

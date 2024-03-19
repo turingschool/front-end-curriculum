@@ -244,7 +244,7 @@ You may choose **ONE** of the following 3rd party libraries to incorporate into 
 
 ## Rubric
 
-For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency.  These are just *some* examples. 
+For the rubric sections below, you will be scored as **Wow**, **Yes** or **Not Yet** depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstrate competency.  These are just *some* examples. 
 
 <section class="answer">
 ### Does the project demonstrate student understanding of the learning goals & concepts?

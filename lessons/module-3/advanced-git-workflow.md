@@ -72,7 +72,7 @@ npm run lint --silent
 
 ### Pre-Commit: Console.Logs/Accepting User Input
 
-We might also want to check for `console.logs` or `debugger` statements in our code before committing, because embarassing things like <a href="https://twitter.com/CLINT/status/493173618105274369">this</a> might happen. Sometimes (though rarely), you might actually want to include an intentional `console.log`. With the following script, we can allow users to choose whether or not to continue with the commit if any logs are detected:
+We might also want to check for `console.logs` or `debugger` statements in our code before committing, because embarrassing things like <a href="https://twitter.com/CLINT/status/493173618105274369">this</a> might happen. Sometimes (though rarely), you might actually want to include an intentional `console.log`. With the following script, we can allow users to choose whether or not to continue with the commit if any logs are detected:
 
 ```bash
 #!/bin/sh
@@ -163,7 +163,7 @@ if (/^ |\+/) {
 '
 ```
 
-*Note: In order for a hook file to run, it must be made executeable. You can make a file executeable by running:* 
+*Note: In order for a hook file to run, it must be made executable. You can make a file executable by running:* 
 
 ```bash
 chmod +x hooks/filename

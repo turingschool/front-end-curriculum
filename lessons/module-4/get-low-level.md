@@ -179,7 +179,7 @@ module: 4
     <ul>
       <li>which file names sound familiar to you?</li>
       <li>bump up a directory and explore the rest of /src/</li>
-      <li>what other functionaliy lives in the JS engine?</li>
+      <li>what other functionality lives in the JS engine?</li>
     </ul>
   </section>
   <section>

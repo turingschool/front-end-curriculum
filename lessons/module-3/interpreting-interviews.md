@@ -22,7 +22,7 @@ module: 3
 
 ## Thinking Like an Interviewer
 
-**Note - your interviewer won't always say it, but you can and should ask questions throughout the entire proccess. Given a code challenge in a language you aren't familar with? Ask to complete it in Ruby or JS. Unclear about what they are looking for in the challenge? Ask them to clarify.**
+**Note - your interviewer won't always say it, but you can and should ask questions throughout the entire process. Given a code challenge in a language you aren't familiar with? Ask to complete it in Ruby or JS. Unclear about what they are looking for in the challenge? Ask them to clarify.**
 
 Many people approach interviews with the mindset that they need to improvise their answer for every question they are asked. This approach can lead to lots of nerves going into the interviews because you're thinking:  
 *What if I can't think of a good answer on the spot?*  
@@ -58,7 +58,7 @@ We are going to work through some activities to solidify this concept.
 
 First, take 15 minutes to complete part A of [this activity](https://docs.google.com/spreadsheets/d/1UzP9XHcbKWSSG7S49VPCcJyijd9u6FwrJGdaYgI4Z20/edit?usp=sharing) in breakout rooms. Note that you will all want to have your own copy of this document.
 
-Next, take 15 minutes to complete part B of the same activity independently.  As you jot down tangibe examples, remember to leverage the STAR method
+Next, take 15 minutes to complete part B of the same activity independently.  As you jot down tangible examples, remember to leverage the STAR method
 </section>
 
 <section class="call-to-action">

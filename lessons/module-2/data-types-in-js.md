@@ -42,9 +42,9 @@ How do we know what data type we're working with?
 
 Programming languages can fall under two categories, either **dynamically typed** or **statically typed**.  
 
-In a **dynamically typed** language, the interpreter will infer what kind of data type we're working with rather than us having to explicity define that.  This also means that the data type of a given value can change on you!  (which can be a common source of bugs)  
+In a **dynamically typed** language, the interpreter will infer what kind of data type we're working with rather than us having to explicitly define that.  This also means that the data type of a given value can change on you!  (which can be a common source of bugs)  
 
-In contrast, **statically typed** languages expect you to explicity state what data type you would like a particular value to be.
+In contrast, **statically typed** languages expect you to explicitly state what data type you would like a particular value to be.
 
 <section class="answer">
 ### How might you describe these terms in your own words?  Would JavaScript be considered dynamically typed or statically typed?  

@@ -6,12 +6,12 @@ tags: React, Redux, Sagas
 ## Agenda
 
 Now that we've learned about [Generators](es6-generators.html), we're going to
-explore a real use case! Redux Sagas are another popular middlware for handling
+explore a real use case! Redux Sagas are another popular middleware for handling
 side effects in Redux, and as an added bonus, they're super easy to test!
 
 Today, we'll go over:
 
-- A review of what middlware is in Redux
+- A review of what middleware is in Redux
 - What we mean by 'side-effect'
 - What the API of redux saga looks like
 - How to create a listener saga
@@ -44,12 +44,12 @@ of that action by a reducer.
 
 A useful characteristic of middleware is that it's 'composable', meaning that
 you can chain together a lot of different third-party libraries to perform these
-different necessary actions. Redux needs middlware to create a check point
+different necessary actions. Redux needs middleware to create a check point
 between firing off an action and hitting a reducer. There are many different
 Redux middleware libraries for performing familiar tasks such as logging,
 asynchronous API call, and routing, just to name a few.
 
-If you dig into the docs, you'll see an example of handrolling what middlware is
+If you dig into the docs, you'll see an example of handrolling what middleware is
 doing behind the scenes. It looks something like this:
 
 ```js
@@ -79,8 +79,8 @@ const crashReporter = store => next => action => {
 Notice anything familiar about this pattern? It's one of those curried functions
 that we went over. In both cases, we have access to our store, the action
 that was dispatched, as well as function `next`, which allows us to continue on
-to the next middlware, or onto the reducer. For more information on rolling your
-own middlware, check out [this
+to the next middleware, or onto the reducer. For more information on rolling your
+own middleware, check out [this
 post](https://medium.com/netscape/creating-custom-middleware-in-react-redux-961570459ecb)
 
 ### Side Effects
@@ -88,7 +88,7 @@ post](https://medium.com/netscape/creating-custom-middleware-in-react-redux-9615
 [Redux Saga](https://github.com/redux-saga/redux-saga) bills itself as an
 `alternative side effect model for Redux apps`, so what exactly does that mean? 
 
-Side effects are anything asychronous in our applications, such as API calls,
+Side effects are anything asynchronous in our applications, such as API calls,
 fetching information for the browser cache or local storage, or logging
 information to an external service. These kinds of things are error prone, and
 often difficult to test. Sagas aim to make this easier on us as developers.
@@ -101,7 +101,7 @@ gets added to your Redux store when it's created. We're able to do this with a
 helper method that we get from redux, `applyMiddleware()`.
 
 In order to tell Redux to use middleware in the first place, we need to
-implement this method, passing in all the middlware libraries we want to use.
+implement this method, passing in all the middleware libraries we want to use.
 `applyMiddleware` gives each middleware library access to the important Redux
 methods `getState()` and `dispatch()`. 
 
@@ -129,7 +129,7 @@ sagaMiddleware.run(mySaga)
 
 ## Code Along
 
-Alright! Now that we've reviewed what middlware is, and seen how we'd add it to
+Alright! Now that we've reviewed what middleware is, and seen how we'd add it to
 our store, we're ready to start working with Redux-Saga.
 
 ### Getting Started
@@ -173,7 +173,7 @@ We're going to need to import `applyMiddleware` from the redux library, and
 we'll need to import the redux-saga library as `createSagaMiddleware`. 
 
 Also, we're going import a yet to be created saga, `listenForSubmitLoginUser`,
-and we need to tell our saga middlware to run that saga. Don't worry too much
+and we need to tell our saga middleware to run that saga. Don't worry too much
 about what that means just yet, we'll see what it looks like in a minute.
 
 Update your main `index.js` file to match the following:  

@@ -1,7 +1,7 @@
 ---
 title: "Refactoring: HTML & CSS"
 length: 90
-tags: html, css, refacoring
+tags: html, css, refactoring
 ---
 
 ## Learning Goals
@@ -36,13 +36,13 @@ Looking at the definition of refactoring above, why do you think refactoring cod
 ### HTML Rubric
 ✅On Track✅ can look like:
 - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
-- Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kabab-case, ids should be used sparingly
+- Application utilizes consistent naming for HTML classes and IDs, and follows suggested conventions. Example: classes should be named using kebab-case, ids should be used sparingly
 - Application uses an appropriate amount of HTML semantic elements. If <div> or <span> elements are used, they are only for styling purposes.
 
 ✨WOW✨ can look like:
 
 - Developers use BEM, SMACCS, or another set of naming conventions for classes. Note: If going this route, document it in your README and let your project manager know which naming convention will be used.
-- Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using the Chrome Extenstion WAVE audit tool, and 0 errors & 0 contrast errors are expected.
+- Application fully implements HTML that is accessible for individuals with visual disabilities. Note: This will be checked using the Chrome Extension WAVE audit tool, and 0 errors & 0 contrast errors are expected.
 </section>
 
 <section class="answer">

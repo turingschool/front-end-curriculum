@@ -226,7 +226,7 @@ Pair up and work together on implementing the functionality to `fetch` our ideas
 
 As we've noted before, we should use our catch somehow in order to display an error if something goes wrong.  Try stopping your backend server and see what happens.  Your catch should before firing (because the Promise rejected).  Let's do something with that error.
 
-Let's edit our intial state in our `App.js`:
+Let's edit our initial state in our `App.js`:
 
 ```js
 // App.js

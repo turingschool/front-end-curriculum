@@ -31,9 +31,9 @@ Explore what you need for a successful work environment. Where have you been mos
 
 Think back to the Flower Exercise/"What Color is Your Parachute" exercise.
 
-**Come up with 5 of your top requirments for a successful environment.**
+**Come up with 5 of your top requirements for a successful environment.**
 
-### Discuss in your groups what makes you successful (10 mnutes).
+### Discuss in your groups what makes you successful (10 minutes).
 
 ### Form 5 Questions (10 minutes)
 
@@ -41,7 +41,7 @@ Based on your successful environment, what questions would you ask?
 
 You can test if they are too vague if you can ask how/why a couple times until you get to a more tangible question.
 
-For example, "How do you mentor junior developers?" I need to think what about mentorship is important to me? Is it pair programming, code reviews, going to conferences? If it's going to conferences, then I'll ask something like "Tell me about your continuing education policies? Is there a budget for atttending conferences?"
+For example, "How do you mentor junior developers?" I need to think what about mentorship is important to me? Is it pair programming, code reviews, going to conferences? If it's going to conferences, then I'll ask something like "Tell me about your continuing education policies? Is there a budget for attending conferences?"
 
 ### Closing (5 minutes)
 

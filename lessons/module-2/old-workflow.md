@@ -120,7 +120,7 @@ You should have a label for issues that correspond to a bug. You don't have to g
 Use these for issues that you want feedback or discussion on. If you have questions about a feature, this is a good kind of label to add. 
 
 ##### Experience
-These labels are good for when you want particular contributers for your project. Is design or UI/UX your area of expertise? Angular? With these labels, people know where they can contribute the most.
+These labels are good for when you want particular contributors for your project. Is design or UI/UX your area of expertise? Angular? With these labels, people know where they can contribute the most.
 
 
 ##### Improvement / Enhancement
@@ -164,7 +164,7 @@ Feel free to file new issues following this structure as well!
 If `Developer A` submits a bug and then `Developer B` merges it, they are both at fault. PRs can help catch these things before they happen
 
 ##### Recording conversations
-Code reviews can be one of the main interactions you will have with the people on your team. Conversations can be recorded so that you have one centralized place for discussions.  Be it you, other devs, or your project manager, one can read why certain decissions were made months/years later!
+Code reviews can be one of the main interactions you will have with the people on your team. Conversations can be recorded so that you have one centralized place for discussions.  Be it you, other devs, or your project manager, one can read why certain decisions were made months/years later!
 
 -------------------------------------------------------------
 

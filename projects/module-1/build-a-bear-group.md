@@ -230,8 +230,8 @@ To earn a given score, an application must meet the requirements listed in that 
 ### UX/UI
 
 * **4:** Application design incorporates **additional design elements not included in the wireframe** which meaningfully increase the usability of the app. Additional elements that have been added match the visuals established in the comps. Every little detail was built out thoughtfully - from hover states to placeholders, etc. Nothing obstructs usability or is misleading.
-* **3:** Application skillfully translates the wireframe into a usable interface, with thoughtful design that helps the user understand how things work, from hover states to placeholders, etc. It renders correctly on desktop and larger screens (colors, fonts, icons, spacing, alignment, etc). The app design demonstrates a clear understanding of layout, with intentional, consistent spacing and alignmnet of elements. Nothing obstructs usability or is misleading.
-* **2:** Application translates wireframe into a usable interface. It is laid out for desktop only. Nothing osbtucts usability or is misleading.
+* **3:** Application skillfully translates the wireframe into a usable interface, with thoughtful design that helps the user understand how things work, from hover states to placeholders, etc. It renders correctly on desktop and larger screens (colors, fonts, icons, spacing, alignment, etc). The app design demonstrates a clear understanding of layout, with intentional, consistent spacing and alignment of elements. Nothing obstructs usability or is misleading.
+* **2:** Application translates wireframe into a usable interface. It is laid out for desktop only. Nothing obstructs usability or is misleading.
 * **1:** Application translates wireframe into a usable interface. There are some confusing or misleading choices in the UI. There may be some sloppiness leading to reduced usability.
 * **0:** Application does not successfully translate the wireframe into a usable interface. Layout is confusing and obstructs usability.
 

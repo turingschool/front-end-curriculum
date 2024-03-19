@@ -21,7 +21,7 @@ Repeating the module is a great opportunity to solidify your technical AND profe
 You are expected to attend all Gear Up sessions, except for Week 1 which is optional for repeaters.    -->
 
 ## Alternative Learning Opportunities
-We want you to feel empowered to skip some classes if you feel you'd be better served by focusing on another technial concept or part of the curriculum. We trust you to know your needs, but **communication is key!** DM all instructors prior to the start of class to let us know you'll be skipping the lesson and how you'll be spending that time.
+We want you to feel empowered to skip some classes if you feel you'd be better served by focusing on another technical concept or part of the curriculum. We trust you to know your needs, but **communication is key!** DM all instructors prior to the start of class to let us know you'll be skipping the lesson and how you'll be spending that time.
 
 The following lessons are not optional. Repeaters must attend:
 * Meet Your Cohort

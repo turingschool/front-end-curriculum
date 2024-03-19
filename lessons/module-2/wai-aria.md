@@ -268,7 +268,7 @@ yes!
 ```
 
 - Wait, what if there is _already_ descriptive text below my image??
-  - This is one of the only times were you DONT need to supply alt text. Having both would be repetive and redundant for screen reader users. To still be "valid", include an empty alt tag like this `<h3>A round, sleepy cat napping on a bed.</h3><img src="src/cat-pic.jpg" alt="">`
+  - This is one of the only times were you DONT need to supply alt text. Having both would be repetitive and redundant for screen reader users. To still be "valid", include an empty alt tag like this `<h3>A round, sleepy cat napping on a bed.</h3><img src="src/cat-pic.jpg" alt="">`
 - What about background images??
   - Background images are purely for design, and should not be used to display important web content. Because of this, background images do not need alt text.
 

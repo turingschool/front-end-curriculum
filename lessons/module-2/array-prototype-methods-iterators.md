@@ -53,7 +53,7 @@ In Javascript, there are often many different ways to solve something, and many 
 - Offers built-in functionality which in turn, DRYs up code
 - More modern way of writing Javascript
 
-There are _occassional_ times when it makes more sense to use a for loop over something like a forEach. For example:
+There are _occasional_ times when it makes more sense to use a for loop over something like a forEach. For example:
 
 - If you need to run something a specific number of times, you would want to use a `for` loop.  `forEach` always iterates over every element in an array.
 - If you want to stop (`break`) a `for` loop, you can do that.  There is no way to stop a `forEach` loop. 

@@ -179,7 +179,7 @@ const fetch = require('node-fetch')
 #### Exercise
 
 * Create a directory that we can do some practice in 
-* In that directory, create a file and write a function - it can do anyting you want
+* In that directory, create a file and write a function - it can do anything you want
 * Now export that module 
 * Create another file that will require your first module and use that code in some way
 * Use the Node CLI executable to run your code
@@ -280,7 +280,7 @@ Requests and responses also might have a body. For example, when you make a `PAT
 ```js
 fetch('/api/v1/books', {
   method: 'PATCH',
-  body: JSON.strigify({
+  body: JSON.stringify({
     title: 'Oh, the Places Youll Go!',
     author: 'Dr. Seuss'
   })

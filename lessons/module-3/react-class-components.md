@@ -32,7 +32,7 @@ By the end of this lesson, you will be able to:
 
 ## Warm Up
 
-In small groups, answer the following questions. Make sure everyone has an oportunity to share and feel free to share screens.
+In small groups, answer the following questions. Make sure everyone has an opportunity to share and feel free to share screens.
 - What do you know about JS classes?
 - How do you create a class in JS?
 - How do you create an object instance using a class? 

@@ -253,7 +253,7 @@ I wrote a JavaScript to fill a collection with TV shows and episodes. To give yo
 
 #### Nodes
 
-A.K.A Quads. A.K.A. Verticies. These are the resources. Each node can be it's own class, but typically you have several nodes of the same class.
+A.K.A Quads. A.K.A. Vertices. These are the resources. Each node can be it's own class, but typically you have several nodes of the same class.
 
 #### Edges
 

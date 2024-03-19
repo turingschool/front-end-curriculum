@@ -77,7 +77,7 @@ addCost(20)
 
 Take note of the global variable that is keeping track of how much a user has spent.  Can you tell if this function is pure or not?  Experiment running this code in the console and then log the `totalSpent` variable.  Did the value change?  Note that there are actually **TWO** side effects here:
 
-1. Our `addCost` function is dependant on `totalSpent` in order to succesfully perform it's task.  `addCost` will return an error if for some reason `totalSpent` was no longer available.  It is not completely dependant on it's input.
+1. Our `addCost` function is dependant on `totalSpent` in order to successfully perform it's task.  `addCost` will return an error if for some reason `totalSpent` was no longer available.  It is not completely dependant on it's input.
 2. The second side effect is that `addCost` is programmed to mutate the `totalSpent` variable.  It is making an "update to the outside world."
 
 <section class="call-to-action">

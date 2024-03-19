@@ -4,7 +4,7 @@
 
 For this project, you get to be in charge of the eval!  This is a great opportunity to review another person's code and assess something that isn't your own.  This is a common thing you'll do when working on your group projects and when you have a job.  Assessing code and seeing what works and what could potentially be improved on is beneficial for you and your peers!  Here's a rubric with some questions to think about as your partner presents their project and you assess.
 
-Write out atleast three or more points of feedback in each section.  
+Write out at least three or more points of feedback in each section.  
 
 #### Design/Comp Recreation
 
@@ -18,7 +18,7 @@ Write out atleast three or more points of feedback in each section.
 
 * Take a look through the style guide and check if your partner's code follows these rules.
 * Are they using mostly semantic HTML? (staying away from nested divs, using correct elements, etc.)
-* Is the HTML structure clean and stears clear from unnecessary nesting?
+* Is the HTML structure clean and steers clear from unnecessary nesting?
 
 #### CSS Structure/Style
 

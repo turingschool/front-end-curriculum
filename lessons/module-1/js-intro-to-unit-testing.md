@@ -167,7 +167,7 @@ describe('addTwoNumbers', function() {
 
 ## Set Up
 
-When we are testing code, it's usually best to have the implementation code pulled up, as well as the test file. You'll constantly be going back and forth between the two, and need to compare what is in each, so this will make you much more effiecient.
+When we are testing code, it's usually best to have the implementation code pulled up, as well as the test file. You'll constantly be going back and forth between the two, and need to compare what is in each, so this will make you much more efficient.
 
 <img src="./assets/images/testing/test_code.png" alt="Screen shot of two panes in text editor">
 

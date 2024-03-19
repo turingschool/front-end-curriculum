@@ -22,7 +22,7 @@ tags: react, testing
 - `Integration test` - Integration tests build on unit tests by combining the units of code and testing that the resulting combination functions correctly
 - `Acceptance test` - (also known as end-to-end tests) Once an application is ready to use, it undergoes testing in a browser by a user (or automated user) to verify that the features behave normally and meet expectations
 - `Jest` - Jest is a JS framework created by Facebook that is included in React and acts as a test runner, assertion library, and mocking library. It can also be used for snapshot testing.
-- `React Testing Library` - A testing library that allows us to render, find and iteract with elements within Jest
+- `React Testing Library` - A testing library that allows us to render, find and interact with elements within Jest
 - `Mock` - Mocks are created in order to replicate the data or functions you would expect to have or be fired, or when we want to set up a function that runs in place of another function
 ## Why Do We Test? What Should We Test?
 

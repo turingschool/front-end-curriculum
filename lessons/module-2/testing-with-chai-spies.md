@@ -110,10 +110,10 @@ we also sometimes mock out web APIs to bring some of that functionality to
 the terminal. The problem with this is that if anything is wrong with our 
 implementation of `localStorage`, our tests might fail even if our 
 application code isn't actually broken. Alternatively, our tests could pass,
-even though our real code is broken, becuase our mocked implementation doesn't
+even though our real code is broken, because our mocked implementation doesn't
 match the real implementation.
 
-The other concern is that it shouldn't be our responsiblity to 
+The other concern is that it shouldn't be our responsibility to 
 test code that we didn't write. Someone else implemented
 `localStorage`, it's their responsibility to test that it does what it is
 supposed to do. Our responsibility is to test that all of our code uses

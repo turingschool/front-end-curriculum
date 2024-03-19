@@ -88,7 +88,7 @@ In breakout groups, compare and contrast by sharing your GH issues.
 
 1. Let the other members read through your user story.  The person sharing should *NOT* describe or fill in missing details.
 2. While reading through the issue, take notes of what parts are clear and what details are missing.  (Reminder that the issue should not focus on the *HOW*)
-3. Share notes and actionable feedback with each other.  Be prepared to share takeways afterwards.
+3. Share notes and actionable feedback with each other.  Be prepared to share takeaways afterwards.
 </section>
 
 ### Adding Labels To A GH issue
@@ -146,7 +146,7 @@ What are pull requests?  What are their purpose?  Are there any rules that come 
 If `Developer A` submits a bug and then `Developer B` merges it, they are both at fault. PRs can help catch these things before they happen
 
 ##### Recording conversations
-Code reviews can be one of the main interactions you will have with the people on your team. Conversations can be recorded so that you have one centralized place for discussions.  Be it you, other devs, or your project manager, one can read why certain decissions were made months/years later!
+Code reviews can be one of the main interactions you will have with the people on your team. Conversations can be recorded so that you have one centralized place for discussions.  Be it you, other devs, or your project manager, one can read why certain decisions were made months/years later!
 
 ##### ASK QUESTIONS
 Tying into the above, this is an excellent place to ask questions or point out where things could be refactored *before* things are merged in.

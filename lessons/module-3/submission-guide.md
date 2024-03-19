@@ -4,7 +4,7 @@ title: Submission Guide
 
 # Submission Guide
 
-Below is a submission guide from your instructional team. All weekly due dates for the technical and professional development curricula are listed here, week-by-week. If you come across an error, please DM your instructors for clarfication.
+Below is a submission guide from your instructional team. All weekly due dates for the technical and professional development curricula are listed here, week-by-week. If you come across an error, please DM your instructors for clarification.
 
 ## Professional Development Resources
 - [Career Development Curriculum Site](https://careerdev.turing.edu/module_three/)
@@ -22,7 +22,7 @@ Below is a submission guide from your instructional team. All weekly due dates f
   - [ ] Write and upload resume to CV compiler
   - [ ] Upload Turing Alumni Portfolio draft
   - [ ] Make a copy of company research template
-  - [ ] Answer career jounrla questions from week 1
+  - [ ] Answer career journal questions from week 1
 - Friday (_Technical_):
   - [ ] Submit chosen Choose Your Own Adventure focus for the end of the paired project (detailed in the spec)
 
@@ -55,7 +55,7 @@ Below is a submission guide from your instructional team. All weekly due dates f
 
 ### Week 6:
 - Monday (_Technical_):
-  - [ ] Final solo projct due at 9pm
+  - [ ] Final solo project due at 9pm
 - Tuesday (_Technical_):
   - [ ] Final assessment
 - Thursday (_Technical_):

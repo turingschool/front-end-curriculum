@@ -38,7 +38,7 @@ A common question as we get into heavier React app is "Where exactly do I make m
 
 First of all let's revisit a crucial concept of React: "Data Down, Actions/Events Up". In React you should build out your components with the intention of having "one source of truth". Meaning there is one place in your state where data lives and is updated.
 
-This means that, in general, the most parenty-parent component should be in charge of fetching the data and keeping it updated to hand off to child components as needed.  
+This means that, in general, the top most parent component (highest in component hierarchy) should be in charge of fetching the data and keeping it updated to hand off to child components as needed.  
 
 There is a solid consensus about NOT making an initial API call in the `constructor()`, and `componentWillMount()` will be deprecated with React 17... so, we are left with `componentDidMount()` as our best option. 
 

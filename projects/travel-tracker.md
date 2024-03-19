@@ -123,7 +123,7 @@ username: traveler50 (where 50 is the ID of the user)
 password: travel
 ```
 
-  - Upon successfully loggin in, I should see my dashboard.
+  - Upon successfully logging in, I should see my dashboard.
 
 **Refer to the "Get single traveler" section from the endpoints table above!**
 
@@ -212,7 +212,7 @@ The overall project outcome (yes, not yet, wow) is determined by “averaging”
 
 For this project, an average of 0.5 is considered a yes - a passing project that demonstrates good student understanding! An average of 1+ is considered a wow. Anything below a 0.5 is considered a not yet - a project that indicates that the concepts have not been fully understood (see note in the section below). Please note that for this project, iterations 1-3 must be completed without bugs. 
 
-For the rubric sections below, you will be scored as Wow, Yes or Not Yet depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstate competency. The following examples are not checklists to complete! There are just some examples.
+For the rubric sections below, you will be scored as Wow, Yes or Not Yet depending on whether you have demonstrated competency in that area. Each section lists examples of what types of things we may be looking for as demonstrations of competency. Just as there are many ways to approach code, there are many many ways to demonstrate competency. The following examples are not checklists to complete! There are just some examples.
 
 While M2 rubrics do not have a separate section for WOWs like in M1, there are a few WOW examples noted throughout. In addition to these WOW bullets, you can strive for a WOW by demonstrating not just competency, but excellence and thoroughness across the rubric sections.
 </section>

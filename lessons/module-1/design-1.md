@@ -143,7 +143,7 @@ If you said "no" to either of those questions, you should reconsider. Everyone h
 
 ***
 
-> #### *"[Design has moved] from the aesthetic, to the strategic, to the particpatory."* - Allan Chochinov, head of the Products Design graduate program at SVA
+> #### *"[Design has moved] from the aesthetic, to the strategic, to the participatory."* - Allan Chochinov, head of the Products Design graduate program at SVA
 
 ***
 

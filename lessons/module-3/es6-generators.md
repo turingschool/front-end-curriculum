@@ -107,7 +107,7 @@ This is where Generators come in to save the day.
 Generators are functions that can be exited, and then re-entered, and save context (variable bindings) across re-entrances.
 
 ---
-_**Context:** The async/await pattern in ES7 is built on top of the pattern of generators. They were introduced to the language primarily as a way to avoid the 'callback hell' that was prevelant in JavaScript before the introduction of Promises._
+_**Context:** The async/await pattern in ES7 is built on top of the pattern of generators. They were introduced to the language primarily as a way to avoid the 'callback hell' that was prevalent in JavaScript before the introduction of Promises._
 
 ---
 

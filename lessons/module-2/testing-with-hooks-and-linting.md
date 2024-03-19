@@ -13,7 +13,7 @@ length: 90 minutes
 
 Mocha has something called "hooks" that are available for us to use. They are named functions that run according to their name.
 
-Let's look into [the docs for more infromation](https://mochajs.org/#hooks).
+Let's look into [the docs for more information](https://mochajs.org/#hooks).
 
 Hooks live within `describe` blocks in Mocha. Once defined, the hook runs as it's name defines it. When do you think `beforeEach()` runs? And so what? How and why should we take advantage of hooks?
 
@@ -26,7 +26,7 @@ Hooks are not something special only to Mocha. Almost every testing library you 
 - Write the last test. 
 - Write the implementation code to get all of the tests passing.
 
-### Repetiion - A Code Smell...
+### Repetition - A Code Smell...
 
 A term used commonly when developers look at code is a "code smell". [A code smell](https://en.wikipedia.org/wiki/Code_smell) refers to something seen in code that is often a sign of refactoring or code that goes against conventional patterns.
 
@@ -45,7 +45,7 @@ Consider the scenario where we want to add this functionality:
 
 ```js
 it('Can be given a name when the rocket is created', function() {
-  let rocket = creatRocket('Mercury-Redstone 3');
+  let rocket = createRocket('Mercury-Redstone 3');
 
   expect(rocket.name).to.equal('Mercury-Redstone 3');
 });

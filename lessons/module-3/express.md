@@ -227,7 +227,7 @@ This will add in support for parsing JSON.
 
 ### Creating a POST Route
 
-First, lets psuedocode out the steps of what we're trying to accomplish here. If we want to make it possible for new pets to be POSTed, we will need to:
+First, lets pseudocode out the steps of what we're trying to accomplish here. If we want to make it possible for new pets to be POSTed, we will need to:
 - Get the new pet's name and type from the request body sent by the front end.  
 - Create an id for our new pet. We'll use our _super_ secure method of generating random IDs - Date.now()
 - Put those 3 data points into an object

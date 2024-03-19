@@ -36,7 +36,7 @@ With a partner, annotate the `AddToDoForm.js` component and any relevant files t
 
 ### Unit Testing
 
-Unit tests aim to test individual pieces of code as throughly as possible. In React apps, these targeted pieces include classes, functions, components, and helper functions. Unit testing makes your life easier as a developer, and makes it simpler to refactor your code. When testing in Redux, most of our tests will be unit tests.
+Unit tests aim to test individual pieces of code as thoroughly as possible. In React apps, these targeted pieces include classes, functions, components, and helper functions. Unit testing makes your life easier as a developer, and makes it simpler to refactor your code. When testing in Redux, most of our tests will be unit tests.
 
 ### Testing in Redux  
 
@@ -493,7 +493,7 @@ describe('AddTodoFormContainer', () => {
       const mappedProps = mapDispatchToProps(mockDispatch);
       mappedProps.handleSubmit('Learn Redux!', 1);
 
-      // Expectaion
+      // Expectation
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
     });
   });

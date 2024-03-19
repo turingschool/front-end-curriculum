@@ -167,7 +167,7 @@ function logThis() {
 logThis();
 ```
 
-* What is the value of this?  What is one final rule we can add that applys to *this*?
+* What is the value of this?  What is one final rule we can add that applies to *this*?
 </section>
 
 <section class="answer">
@@ -199,7 +199,7 @@ Simply put:
 
 ### Reviewing our rules
 
-For our purposes here, these are the three main rules that *this* follows.  You might find exceptions out there especially when looking at ways that you can explicity change the value of *this* using methods like `call`, `apply`, or `bind`, but we'll cover this another time!
+For our purposes here, these are the three main rules that *this* follows.  You might find exceptions out there especially when looking at ways that you can explicitly change the value of *this* using methods like `call`, `apply`, or `bind`, but we'll cover this another time!
 
 <section class="call-to-action">
 ### On Your Own

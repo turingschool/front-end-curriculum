@@ -54,7 +54,7 @@ Make sure to name it .eslintrc
  -->
 <!-- ## Requirements
 
-Your weather underground API key should not be stored on github. Store it in a seperate file. This file should be added to your `.gitignore` file.
+Your weather underground API key should not be stored on github. Store it in a separate file. This file should be added to your `.gitignore` file.
 
 Your app should have at a minimum the following components.
 
@@ -73,7 +73,7 @@ Your Readme should include wireframes of your app. Use sites like [dribbble](htt
 
 Create your Current Weather component.
 
-<!-- You will create your User Interface using mock data. This will speed up your development time by not waiting for api requests. You can find the mock data [here](https://repl.it/@NathanielFoster/Weatherly-Mock-Data). Copy it into a seperate file that you can then import into your App file.
+<!-- You will create your User Interface using mock data. This will speed up your development time by not waiting for api requests. You can find the mock data [here](https://repl.it/@NathanielFoster/Weatherly-Mock-Data). Copy it into a separate file that you can then import into your App file.
  -->
 Your Current Weather component should display the following information:
 

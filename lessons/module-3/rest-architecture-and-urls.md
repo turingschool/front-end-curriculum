@@ -118,7 +118,7 @@ You and two others will be comparing and contrasting the different types of API 
 These presentations should be short and concise, there's no need to go beyond surface level here. The purpose of this activity is to highlight a few key differences between API designs so you have some ground to start on if presented with an API outside of REST protocol. 
 
 Each short presentation should include: 
-* Data represenation (how is data is formatted and utilized in the API)
+* Data representation (how is data is formatted and utilized in the API)
 * Pros & cons of each design
 * Unique use cases or considerations
 </section>
@@ -130,7 +130,7 @@ Each short presentation should include:
 ### Consider this scenario
 Your team is responsible for maintaining an API endpoint that provides product information: **https://api.example.com/v1/products**. Thousands of businesses use your endpoint for looking up your product information. 
 
-One day, your product manager sends your team a ticket that updates your endpoint to change the shape of your response (i.e. the JSON schema changes: more properies are added, and the keys of some properties are changed).
+One day, your product manager sends your team a ticket that updates your endpoint to change the shape of your response (i.e. the JSON schema changes: more properties are added, and the keys of some properties are changed).
 
 As you finish work on this ticket, a senior developer updates the endpoint that serves this data to **https://api.example.com/v2/products**.
 
@@ -154,6 +154,6 @@ API versioning is a crucial aspect of developing and maintaining APIs. It allows
 In an interview, you might be asked these kinds of questions concerning APIs:
 * What are the different parts of an API URL, and why are they important?
 * What does CRUD stand for and how does it relate to representational state transfer?
-* What are some advantanges/disadvantages of REST/SOAP/GraphQL?
+* What are some advantages/disadvantages of REST/SOAP/GraphQL?
 * Why is versioning your API important?
 </section>

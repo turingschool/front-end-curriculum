@@ -24,7 +24,7 @@ tags: javascript, introduction, foundation, variables
 
 ## What is JavaScript?
 
-JavaScript was created to make the web more dynamic. It is a scripting language made to run inside a host environment - like a web browser! It provides programatic control over the objects in that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
+JavaScript was created to make the web more dynamic. It is a scripting language made to run inside a host environment - like a web browser! It provides programmatic control over the objects in that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
 
 JavaScript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces (e.g. browsers) as well as handle the server-side extensions that connect with a database.
 

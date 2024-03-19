@@ -42,7 +42,7 @@ Let's looks specifically at the set up for this regex pattern.
 | Character | Description                                             |
 |-----------|---------------------------------------------------------|
 | `/`       | Indicates the beginning of a Regex pattern      |
-| `^`       | Anchor: Indicates that the match must be at the begining of the string     |
+| `^`       | Anchor: Indicates that the match must be at the beginning of the string     |
 | `$`       | Anchor: Indicates that the match must reach to the end of the string     |
 | `/`       | Indicates the end of a Regex pattern                    |
 | `g`       | Flag: Outside the regex meaning 'global'. That means it will test the pattern against all possible matches in a string. Without this flag, the regex will only test the first match it finds and then stop.     |
@@ -56,7 +56,7 @@ Let's looks specifically at the set up for this regex pattern.
 
 | Character | Description                                             |
 |-----------|---------------------------------------------------------|
-| `()`      | Specifies the begining of a grouping. For example, `dog|dig` and `d(o|i)g` can both be used to capture `dog` or `dig` strings.        |
+| `()`      | Specifies the beginning  of a grouping. For example, `dog|dig` and `d(o|i)g` can both be used to capture `dog` or `dig` strings.        |
 | `[]`      | Creates a character class     |
 | `-`       | Is a range - therefor...                   |
 | `g`       | Flag: Outside the regex meaning 'global'. That means it will test the pattern against all possible matches in a string. Without this flag, the regex will only test the first match it finds and then stop.     |
@@ -84,12 +84,12 @@ This is a quantifier which targets the capture group and says 'repeat previous t
 
 | Character | Description                                             |
 |-----------|---------------------------------------------------------|
-| `?`       | May include _zero or one_ occurances of the preceding element    |
-| `* `      | May include _zero, one or many_ occurances of the preceding element     |
-| `+`       | Must include _one or many_ occurances of the preceding element            |
+| `?`       | May include _zero or one_ occurrences of the preceding element    |
+| `* `      | May include _zero, one or many_ occurrences of the preceding element     |
+| `+`       | Must include _one or many_ occurrences of the preceding element            |
 | `{n}`     | Must match the preceding element _n times_     |
-| `{min,}`  | Must match the preceding element _atleast min or more times_         |
-| `{min,max}` | Must match the preceding element _atleast min times but not more than max times |
+| `{min,}`  | Must match the preceding element _at least min or more times_         |
+| `{min,max}` | Must match the preceding element _at least min times but not more than max times_ |
 | `{,max}`   | Must match the preceding element _no more that max times_ |
 
 ### Final Breakdown
@@ -98,7 +98,7 @@ This is a quantifier which targets the capture group and says 'repeat previous t
 /^(([a-zA-Z]|[0-9])|([-]|[_]|[.]))+[@](([a-zA-Z0-9])|([-])){2,63}[.](([a-zA-Z0-9]){2,63})+$/gi
 ```
 
-`/^`: Start a Regular Expression at the begining of the string
+`/^`: Start a Regular Expression at the beginning of the string
 
 `(([a-zA-Z]|[0-9])|([-]|[_]|[.]))+`: Match any letter, number or -, _, . one or more times until...
 

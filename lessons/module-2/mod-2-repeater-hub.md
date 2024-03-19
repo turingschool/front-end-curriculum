@@ -27,7 +27,7 @@ Repeating the module is a great opportunity not only to solidify your technical 
 - Make a list of all the iterator and mutator methods, and go over each one’s use cases and syntax every night.  Writing them out on paper or flashcards is more valuable than typing them out. They will stick in your brain better.  
   Pay attention to what each method returns.  Pay attention to which are mutators.
 - Write out your problem solving process in detail.  Post in your channel to classmates what their process is.  Learn from each other.  Submit that written out process to your instructors via DM before the start of the next inning.  
-    - *Hint*  Don't just write `psuedocoding` in your process.  Think about and elaborate on what psuedocoding should look like.  You should be using psuedocode throughout the problem solving process to break the problem down into small, approachable steps/pieces, not just at the beginning when you are digesting the big-picture ask.  
+    - *Hint*  Don't just write `pseudocoding` in your process.  Think about and elaborate on what pseudocoding should look like.  You should be using pseudocode throughout the problem solving process to break the problem down into small, approachable steps/pieces, not just at the beginning when you are digesting the big-picture ask.  
 
 ## FAQs
 

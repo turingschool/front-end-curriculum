@@ -180,7 +180,7 @@ console.log(rent.decRent(1000));
 console.log(rent.incRent(2000)); 
 console.log(rent.getRent()); // returns 9500
 ```
-***Hint:*** `rentPrice` should return a series of functions for updating our confidental rent. Take note of the dot notation used to invoked these private methods. 
+***Hint:*** `rentPrice` should return a series of functions for updating our confidential rent. Take note of the dot notation used to invoked these private methods. 
 
 </section>
 

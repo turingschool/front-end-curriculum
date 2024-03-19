@@ -46,7 +46,7 @@ The HTTP protocol defines a variety of types of requests we can make. These incl
 * `GET` - retrieve information from a server
 * `POST` - send information to a server, creating resources
 * `PUT` - send information to a server, updating entire resources
-* `PATCH` - send informatin to a server, updating partial resources
+* `PATCH` - send information to a server, updating partial resources
 * `DELETE` - remove information from a server
 * And [many others](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods){:target='blank'}
 
@@ -216,7 +216,7 @@ Working with a partner, follow the setup instructions to get the server running.
 Note that this repo will be used for the GET and POST lessons. Be careful to only complete the GET practice today. We'll come back to this repo later when we <a href="https://frontend.turing.edu/lessons/module-2/network-requests-posts.html" target="\__blank">learn how to POST</a>!
 </section>
 
-## Common Misconcepion
+## Common Misconceptions
 
 Let's look at this code:  
 ```js

@@ -31,7 +31,7 @@ __________________________________________
 
 Sometimes browsers implement APIs in different ways. Companies like Google, Mozilla, and Microsoft have "Platform Engineering" teams who are responsible for building Chrome, Firefox, and Internet Explorer, respectively. These engineers are in charge of implementing the features and APIs we use in our web applications -- from HTML tags such as `video` and `audio`, and JavaScript APIs such as `serviceWorkers` and `geolocation`.
 
-Spec writers, API developers and platform engineers have learned the importance of standardizing the usage and behavior of these types of elements and APIs as a means to make cross-browser compat easier for front-end developers. The more closely these engineers abide by standards, the more your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.
+Spec writers, API developers and platform engineers have learned the importance of standardizing the usage and behavior of these types of elements and APIs as a means to make cross-browser compatibility easier for front-end developers. The more closely these engineers abide by standards, the more your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.
 
 These standards bodies didn't always exist to provide definitions for how these features should be implemented. Years ago, browser vendors deliberately provided custom feature implementations in an attempt to gain a competitive advantage. This made developer's jobs incredibly difficult -- getting a single feature working across multiple browsers often meant writing the functionality multiple times, once for each browser that needed to be supported. Eventually we all made up and agreed we were being silly and began to prioritize standardization. (Also, browser companies began to make money in different ways and no longer needed to rely on their browser for financial stability.)
 
@@ -48,7 +48,7 @@ Finally, some companies are hesitant to stop supporting older browsers simply fo
 #### Turn and Talk
 
 * In your own words, describe an API.
-* What are examples of browser APIs that you have used in past projects? Check the browser compatability chart in the documentation. 
+* What are examples of browser APIs that you have used in past projects? Check the browser compatibility chart in the documentation. 
 </section>
 __________________________________________
 
@@ -74,7 +74,7 @@ What are some instances where you might:
 
 ### The Approaches: Progressive Enhancement vs. Graceful Degradation
 
-At a high-level, there are two popular approaches for tackling the cross-compat problem: progressive enhancement and graceful degradation.
+At a high-level, there are two popular approaches for tackling the cross-compatibility problem: progressive enhancement and graceful degradation.
 
 **Progressive enhancement** is a strategy where you build your application to work at a baseline level, perhaps somewhere in the middle of the road. You establish a basic user experience that all browsers you wish to support will be able to provide. Then you progressively build in more advanced functionality that will be available for platforms that can leverage it.
 
@@ -125,7 +125,7 @@ Take the following HTML to present a video:
 In a browser that doesn't recognize the `video` tag, that tag will be completely ignored and will automatically fallback to the flash content we provide within it. If the user has disabled flash, it will fallback even further to the download link for playing the mp4 file. In a browser that *does* support the video tag, we've provided 3 different source types (mp4, webm, ogg) to present the user with the best available option.
 
 ### CSS Vendor Prefixes
-Similar to the HTML example we just looked at, CSS facilitates fallback behaviors as well. CSS3 added many new styling properties that generated quite a few discrepencies between how our applications ended up styled on different browsers. When a browser doesn't recognize a particular CSS property, it will simply skip over it. We can easily provide fallbacks by included a property we know the browser *will* recognize. Take background gradients for example. If we use the [CSS Gradient Generator](http://www.colorzilla.com/gradient-editor/) to create a CSS background, it will spit out something like the following:
+Similar to the HTML example we just looked at, CSS facilitates fallback behaviors as well. CSS3 added many new styling properties that generated quite a few discrepancies between how our applications ended up styled on different browsers. When a browser doesn't recognize a particular CSS property, it will simply skip over it. We can easily provide fallbacks by included a property we know the browser *will* recognize. Take background gradients for example. If we use the [CSS Gradient Generator](http://www.colorzilla.com/gradient-editor/) to create a CSS background, it will spit out something like the following:
 
 ```css
 background: #1e5799;
@@ -152,7 +152,7 @@ Typically vendor prefixes are added to the beginning of the css property value, 
 
 ![form elements in different browsers](https://formalize.me/assets/images/chrome_examples.png)
 
-Every browser applies a slightly different look to native HTML elements. Because of this, many developers will chose to include a reset stylesheet, to start off a project in a more consistant place. The [Meyer Reset](https://meyerweb.com/eric/tools/css/reset/) was one of the first, and is still used today. 
+Every browser applies a slightly different look to native HTML elements. Because of this, many developers will chose to include a reset stylesheet, to start off a project in a more consistent place. The [Meyer Reset](https://meyerweb.com/eric/tools/css/reset/) was one of the first, and is still used today. 
 
 ### Feature Detection
 Feature detection is similar to fallbacks, though it's more about the process of determining whether or not a browser supports a particular piece of code. We can write our own conditional code to detect feature support, and within each condition, provide the best possible user experience for that scenario. For example, some browsers might support the new [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/notification) that allows for mobile-style push notifications from the browser. In an application where we want to provide this functionality, we'd want to detect whether or not the browser recognizes the API with a conditional like this:
@@ -174,7 +174,7 @@ Open your `FitLit` / `Game Time` project's HTML and CSS files and go to the[*HTM
   * Do you need a fallback? Something called a polyfill? Neither?
 </section>
 
-_*Note: Another popular site to check for compatability issues is ["Can I Use"](https://caniuse.com/). This site is nice in that it provides up-to-date browser support tables*_
+_*Note: Another popular site to check for compatibility issues is ["Can I Use"](https://caniuse.com/). This site is nice in that it provides up-to-date browser support tables*_
 
 ### Polyfills & Shims
 

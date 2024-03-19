@@ -69,7 +69,7 @@ Go back to your App and check your console, and you should get an object with mo
 }
 ```
 
-Bummer, this isn't quite what we are looking for.  We are going to have to do another fetch request in order to retrive our data.  Let's do one together and get the rails data.  Create an `apiCalls` file inside of your src directory:
+Bummer, this isn't quite what we are looking for.  We are going to have to do another fetch request in order to retrieve our data.  Let's do one together and get the rails data.  Create an `apiCalls` file inside of your src directory:
 
 ```bash
 touch src/apiCalls.js

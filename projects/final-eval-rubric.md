@@ -5,7 +5,7 @@
 * __Novice:__ Able to create a class and understands the purpose of the constructor function.  Understands the use of arguments/parameters in the constructor function and methods of the class. Uses if/else statements, but has multiple levels of nesting.  Code lacks organization and has multiple issues with syntax/styling.
 * __Advanced Beginner:__ Is able to give default values to a class and can use array indexing to extract data from array or modify array. Uses if/else statements with one level of logic (no nesting).  Code shows effort towards organization but suffers from poorly named variables and requires significant refactoring.
 * __Proficient:__ Able to use array prototype methods and can use documentation to check syntax on methods and examples.  Understands how multiple classes can interact with each other.  Code is logically organized, functions/variables have descriptive names, and there is minimal duplication.
-* __Exceptional:__ Uses array prototype iteratation methods effectively to manipulate data without using documenation as a resource. Code is well-refactored and has excellent syntax/style. Logic handles all situations where user gives incorrect/unexpected input.
+* __Exceptional:__ Uses array prototype iteration methods effectively to manipulate data without using documentation as a resource. Code is well-refactored and has excellent syntax/style. Logic handles all situations where user gives incorrect/unexpected input.
 
 ------------------------------------------------------------------
 

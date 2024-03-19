@@ -52,7 +52,7 @@ You can read more about the differences in these paradigms <a href="https://leve
 # OOP
 Object Oriented Programming (OOP) will be our primary focus for this lesson - which is an approach that structures your code around objects rather than functions and procedures. *(Functional and procedural programming are beyond the scope of this lesson.)*
 
-In OOP, real-world objects are each viewed as seperate entities having their own state which is modified only by built-in procedures, called methods. Because objects operate independently, they are encapsulated into modules which contain both local environments and methods. Communication with an object is done by message passing.
+In OOP, real-world objects are each viewed as separate entities having their own state which is modified only by built-in procedures, called methods. Because objects operate independently, they are encapsulated into modules which contain both local environments and methods. Communication with an object is done by message passing.
 
 ## Benefits
 
@@ -145,7 +145,7 @@ var instructor = new Instructor('Pam', 2, ['funny', 'smart']);
 
 Since 2015, we now have a much cleaner, nicer way to create multiple objects: classes. **Classes** in JavaScript are templates, or blueprints, for creating many objects that share properties and behaviors, but might vary in their values.
 
-*(Nice-to-Know Note: You might hear some people say that 'JavaScript doesnt have classes.' This is technically true, but a moot point. Classes in JavaScript are simply syntactic sugar over constructor functions.)*
+*(Nice-to-Know Note: You might hear some people say that 'JavaScript doesn't have classes.' This is technically true, but a moot point. Classes in JavaScript are simply syntactic sugar over constructor functions.)*
 
 For our Turing application, we can create an Instructor class - which allows to define a constructor and a set of a methods in a single place:
 
@@ -220,7 +220,7 @@ Avoiding these dependencies means following the single responsibility principle 
 
 # The keyword `this` 
 
-The keyword `this` is commonly used inside functions and objects - just as our examples abovehave shown. Since the keyword of `this` can be confusing in JavaScript, here are a couple of definitions to help clarify:
+The keyword `this` is commonly used inside functions and objects - just as our examples above have shown. Since the keyword of `this` can be confusing in JavaScript, here are a couple of definitions to help clarify:
 
 * `this` refers to the current context (or owner) of the code being executed
 * `this` refers to the object on which the current function is called

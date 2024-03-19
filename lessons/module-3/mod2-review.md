@@ -1,6 +1,6 @@
 ---
-title: Module 2 Reivew
-tags: inheritence, fetch, OOP, arrays, prototypes, scope, context, testing
+title: Module 2 Review
+tags: inheritance, fetch, OOP, arrays, prototypes, scope, context, testing
 module: 3
 ---
 

@@ -158,7 +158,7 @@ This uses the ES6 arrow syntax to automatically bind `handleNameChange` to
 That's great for our first input, but what about our second input?
 
 We *could* make another function that specifically handles the description
-change, but that is going to get repitious pretty quickly. Instead, let's use
+change, but that is going to get repetitious pretty quickly. Instead, let's use
 the name property on the input, and take advantage of JavaScript's dynamic key
 assignment, refactoring our `handleNameChange` function to be more generic
 

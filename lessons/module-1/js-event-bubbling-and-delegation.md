@@ -160,7 +160,7 @@ Modify your code from earlier so that instead of logging a description of each e
 - Dig into the event's `target` property.  Look for the following properties: className, classList, id  
   - Look for the target's `parentNode` property.  Look for that parent's parentNode.  Look for *that* parent's parentNode. How far up the DOM tree can you dig into the parent's parents?  
   - Look for the target's `childNodes` property and `children` property. How far down the DOM tree can you dig into the children's children?  
-- Now update your `console.log` to log `event.target`.  Click the grantparent, parent, and then button.  What do you notice about the target?  Do you see any similarties with the diagram we drew out earlier?
+- Now update your `console.log` to log `event.target`.  Click the grandparent, parent, and then button.  What do you notice about the target?  Do you see any similarities with the diagram we drew out earlier?
 </section>
 
 ## Event Delegation

@@ -56,7 +56,7 @@ Below are ways you can get in additional practice throughout the inning. None of
 </section>
 
 <section class="answer">
-### DOM Maniputation, Event Listeners & Event Bubbling
+### DOM Manipulation, Event Listeners & Event Bubbling
 
 * [Puppies + Kittens](https://gist.github.com/kaylagordon/0d5621f9b4cb1c5a0d4da7a0405c8890)
 * [Holiday Card Generator](https://codepen.io/kaylaewood/pen/QWVdOBe)
