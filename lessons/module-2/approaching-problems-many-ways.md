@@ -43,14 +43,14 @@ const ninetiesToys = [
     }
 ];
 ```
-- We will be solving the same challenge three times today. Each time, you will be told with iterator method(s) you're allowed to use.
+- We will be solving the same challenge three times today. Each time, you will be told which iterator method(s) you're allowed to use.
 
 <section class="note">
 ### The Prompt!
 
 Write a function `findCheapToys` that returns an array of toy names that cost less than $20.
 
-Expect output => `[ 'Tamagotchi', 'Super Soaker', 'Pogs' ]`
+Expected output => `[ 'Tamagotchi', 'Super Soaker', 'Pogs' ]`
 </section>
 
 ### Round 1: `forEach`
