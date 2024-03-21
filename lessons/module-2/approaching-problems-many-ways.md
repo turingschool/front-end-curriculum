@@ -56,6 +56,24 @@ Expect output => `[ 'Tamagotchi', 'Super Soaker', 'Pogs' ]`
 ### Round 1: `forEach`
 - Solve the prompt using a `forEach`. You may not use any other iterator methods. 
 
+<section class="answer">
+### Round 1 Sample Solution (don't peek!)
+
+```js
+function findCheapToys() {
+  let cheapToyNames = [];
+
+  ninetiesToys.forEach(toy => {
+    if (toy.price < 20) {
+      cheapToyNames.push(toy.name)
+    }
+  });
+
+  return cheapToyNames;
+}
+```
+</section>
+
 <section class="call-to-action">
 ### Round 1 Reflection
 
@@ -66,6 +84,19 @@ Expect output => `[ 'Tamagotchi', 'Super Soaker', 'Pogs' ]`
 ### Round 2: `filter` and `map`
 - Solve the prompt using a `filter` and `map`. You may not use any other iterator methods. 
 
+<section class="answer">
+### Round 2 Sample Solution (don't peek!)
+
+```js
+function findCheapToys() {
+  let cheapToys = ninetiesToys.filter(toy => toy.price < 20);
+  let cheapToyNames = cheapToys.map(toy => toy.name);
+
+  return cheapToyNames;
+}
+```
+</section>
+
 <section class="call-to-action">
 ### Round 2 Reflection
 
@@ -75,6 +106,21 @@ Expect output => `[ 'Tamagotchi', 'Super Soaker', 'Pogs' ]`
 
 ### Round 3: `reduce`
 - Solve the prompt using a `reduce`. You may not use any other iterator methods. 
+
+<section class="answer">
+### Round 3 Sample Solution (don't peek!)
+
+```js
+function findCheapToys() {
+  return ninetiesToys.reduce((cheapToyNames, toy) => {
+    if (toy.price < 20) {
+      cheapToyNames.push(toy.name);
+    }
+    return cheapToyNames;
+  }, []);
+}
+```
+</section>
 
 <section class="call-to-action">
 ### Round 3 Reflection
