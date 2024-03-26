@@ -52,7 +52,7 @@ When we add Express, there are a couple of additional steps added to the flow of
 
 While the Express flow might look more complex, it actually makes the developer's job a lot easier. In this flow, the developer is only responsible for the "Middleware" part of the process. This replaces the single route handler function that you would write with only Node `http`. Writing middleware for Express is a lot easier to write and more maintainable because of the "Express" step that abstracts the complex logic for us.
 
-[node-only-flow]: /assets/images/lessons/express/node-only-flow.png
+[node-only-flow]: /assets/images/lessons/express/node-only-flow-update.png
 [express-flow]: /assets/images/lessons/express/express-flow.png
 
 ## Routing & Middleware
