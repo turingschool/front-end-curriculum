@@ -142,7 +142,7 @@ const cities = [
 Write a function `reverseMovies(movies)` that takes an array of sorted `movies` by their year and uses the `reverse` method to reverse the order of movies. Return a new array of movies where they are listed from newest to oldest.
 
 ```js
-console.log(reverseMovies(students));
+console.log(reverseMovies(movies));
 // Output: [
 //   { title: 'Inception', director: 'Christopher Nolan', year: 2010 },
 //   { title: 'The Dark Knight', director: 'Christopher Nolan', year: 2008 },
