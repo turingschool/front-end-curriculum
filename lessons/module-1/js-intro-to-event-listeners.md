@@ -59,7 +59,7 @@ Take for example the "heart" icon on CodePen. CodePen has 4 levels of "love" - 0
 
 <img class="medium" src="./assets/images/dom-manipulation-1/codepen-heart-click.gif">
 
-Note: We will get more practice with the following concept in Part 2 of Intro to the [DOM](https://frontend.turing.edu/lessons/module-1/js-intro-to-the-dom.html).
+Note: Refer to the Introduction to the [DOM](https://frontend.turing.edu/lessons/module-1/js-intro-to-the-dom.html) for changing styles based on user interaction..
 
 <section class="call-to-action">
 ### Pair Challenge
