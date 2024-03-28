@@ -155,7 +155,7 @@ const user = {
     zipCode: "12345"
   },
   contact: {
-    email: "john.doe@example.com",
+    emailAddress: "john.doe@example.com",
     phone: "555-123-4567"
   },
   preferences: {
@@ -204,7 +204,7 @@ const newspaperArticles = [
 ];
 ```
 
-*Note that sometimes we get inconsistent data from APIs where information is not always provided such as the image URLs above.  *
+*Note that sometimes we get inconsistent data from APIs where information is not always provided such as the image URLs above.*
 
 * Imagine if we needed to iterate through this data and display them on a page.  What kind of logic might you use for the image URLs that are missing a link?
 </section>
