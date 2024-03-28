@@ -138,32 +138,98 @@ console.log(lastName);
  ```
 </section>
 
-## Assigning to a variable with default:
+<section class="answer">
+### 🌶️ Consider a Spicier Example 🌶️
 
-We can also assign default values to variables whose keys may not exist in the object we want to destructure. This will prevent our variable from having an undefined value being assigned to it. The code below demonstrates this:
+Imagine we have a more complex `user` object and want to destructure properties nested within:
 
 ```js
-const user = {// Object we want to destructure
-  firstName: 'Jon',
-  lastName: 'Doe',
-  dateOfBirth: '1990'
+const user = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  address: {
+    street: "123 Main St",
+    city: "Anytown",
+    state: "CA",
+    zipCode: "12345"
+  },
+  contact: {
+    email: "john.doe@example.com",
+    phone: "555-123-4567"
+  },
+  preferences: {
+    theme: "dark",
+    language: "en",
+    notifications: {
+      email: true,
+      sms: false
+    }
+  }
 };
-// Destructuring the object into variables without 
-// assigning default values 
-
-let { firstName, lastName, country } = user;
-console.log("Without setting default values")
-console.log( firstName, lastName, country);
-
-// Destructuring the object into variables by 
-// assigning default values 
-
-let { firstName = 'default firstName', 
-  lastName = 'default lastName', 
-  country = 'default country' } = user;
-console.log("After setting default values")
-console.log( firstName, lastName, country);
 ```
+
+What would the syntax look like to destructure the `email` and `sms` properties from our user object?
+</section>
+
+## Assigning to a variable with default:
+
+We can also assign default values to variables whose keys may not exist in the object we want to destructure. This will prevent our variable from having an undefined value being assigned to it. Let's take a look at an example!
+
+<section class="call-to-action ">
+### Take a Look At The Data Below: 
+
+```js
+const newspaperArticles = [
+  {
+    name: "COVID-19 Vaccines Rollout",
+    tags: ["COVID-19", "vaccine", "pandemic"],
+    imageUrl: "https://example.com/covid-vaccine.jpg"
+  },
+  {
+    name: "Climate Change Summit",
+    tags: ["climate change", "environment", "summit"],
+    imageUrl: undefined
+  },
+  {
+    name: "Economic Recovery Strategies",
+    tags: ["economy", "recovery", "pandemic"],
+    imageUrl: undefined
+  },
+  {
+    name: "Space Exploration Milestone",
+    tags: ["space exploration", "NASA", "satellite"],
+    imageUrl: "https://example.com/space-exploration.jpg"
+  }
+];
+```
+
+*Note that sometimes we get inconsistent data from APIs where information is not always provided such as the image URLs above.  *
+
+* Imagine if we needed to iterate through this data and display them on a page.  What kind of logic might you use for the image URLs that are missing a link?
+</section>
+
+<section class="answer">
+### Solving This With Destructuring
+
+```js
+// Our goal is to iterate through this array of newspaper articles and display them on a page:
+// Note the logs and how some image URLs are missing a path.
+newspaperArticles.forEach(newspaper => {
+  const { name, description, tags, imageUrl } = newspaper;
+  console.log(imageUrl);
+  section.innerHTML += // Insert articles here
+})
+
+// Let's update this so that we have a default image if no image URL is given 
+
+newspaperArticles.forEach(newspaper => {
+  const { name, description, tags, imageUrl = './images/no-image.svg' } = newspaper;
+  console.log(imageUrl);
+  section.innerHTML += // Insert articles here
+})
+```
+</section>
 
 ## Passing an object as an argument:
 What if you want to destructuring an object as an argument?  
