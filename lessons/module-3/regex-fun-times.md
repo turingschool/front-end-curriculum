@@ -230,6 +230,7 @@ Don't expect to get every test passing during the worktime, and feel free to add
 - [MDN Has an Excellent Guide for JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 - [No but seriously, read this XKCD comic explanation, it's real good](https://www.explainxkcd.com/wiki/index.php/1313:_Regex_Golf)
 - [Regex101](https://regex101.com/)
+- [Cyrilex](https://extendsclass.com/regex-tester.html)
 - [Intro to Regular Expressions by Michael Fitzgeral](
 http://www.amazon.com/Introducing-Regular-Expressions-ebook/dp/B008K9OGDA/ref=sr_1_2?ie=UTF8&qid=1374171971&sr=8-2&keywords=Regular+Expressions)
 - ["Finite State Machines and Regular Expressions" by Eli Bendersky](http://www.gamedev.net/page/resources/_/technical/general-programming/finite-state-machines-and-regular-expressions-r3176)
